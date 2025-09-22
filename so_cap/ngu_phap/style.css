@@ -5,6 +5,7 @@
     z-index: 10000;
 }
 img {
+	  width:300px !important;
       max-width: 100% !important;
       height: auto !important;
       display: block;
