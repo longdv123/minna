@@ -7,7 +7,15 @@
 .tab_container{
 	margin-top:5px !important;
 }
+.tbngoai {
+  table-layout: fixed;
+  width: 100%;
+}
 
+.tbngoai td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 .table-bordered {
     border: 1px solid #ddd;
     border-collapse: separate;
