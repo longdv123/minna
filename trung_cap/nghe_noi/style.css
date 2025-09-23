@@ -4,6 +4,15 @@
     width: 100%;
     z-index: 10000;
 }
+.tab_container{
+	margin-top:5px !important;
+}
+img {
+	  width:300px !important;
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+    }
 .table-bordered {
     border: 1px solid #ddd;
     border-collapse: separate;

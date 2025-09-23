@@ -4,7 +4,15 @@
     width: 100%;
     z-index: 10000;
 }
-
+.tab_container{
+	margin-top:5px !important;
+}
+img {
+	  width:300px !important;
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+    }
 #tuvung{background-image:url(../images/icon/tuvung.png)}
 #nguphap{background-image:url(../images/icon/nguphap.png)}
 #luyendoc{background-image:url(../images/icon/luyendoc.png)}
