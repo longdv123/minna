@@ -5,7 +5,7 @@
     z-index: 10000;
 }
 .tab_container{
-	margin-top:5px
+	margin-top:5px !important;
 }
 img {
 	  width:300px !important;
