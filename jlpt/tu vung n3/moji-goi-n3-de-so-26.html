@@ -1,0 +1,1507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scraped Page</title>
+  <script src="jquery.min.js"></script>
+  <style>
+  #lamlai,#ketqua {
+	  position: sticky;
+	  bottom: 0;
+	}
+  </style>
+</head>
+<body>
+  <div class="contents">
+    <style>
+
+	input[type="radio"]{
+		
+		-webkit-appearance: none;
+
+		width:15px;
+
+		height:15px;
+
+		border:1px solid #19283C !important;
+
+		border-radius:15px !important;
+
+		background:transparent;
+
+		opacity:1;
+
+		margin-bottom: 0px;
+		
+		margin-left:45px;
+
+	}
+
+	input[type="radio"]:checked{
+
+		background:#19283C;
+
+		opacity: 1;
+		
+		border-radius:15px !important;
+
+	}
+	/*Ẩn Phần hình tứ giac sau khi click*/
+	input[type="radio"]:focus {
+	  outline: none;
+	}
+	
+	.cauhoi{
+		color:#0B0B61;
+		font-size: 18px;
+		font-weight:600;
+		margin-left:10px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.luachon{
+		color:#0B0B61;
+		font-size: 17px;
+		font-weight:500;
+	}
+	.luachon_red{
+		color:red;
+		font-size: 17px;
+		font-weight:500;
+	}
+	.luachon_blue{
+		color:navy;
+		font-size: 17px;
+		font-weight:500;
+	}
+	
+	.nghia{
+		margin-top:5px;
+		margin-left:50px;
+	}
+	
+	.table_tracnghiem{
+		margin-top:10px;
+	}
+	.td_tracnghiem{
+		display: block;
+	}
+	
+	/*線*/
+	hr.style-one {
+		border: 0;
+		height: 0;
+		border-top: 0px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+		}
+
+	@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px){
+		input[type="radio"] {
+			margin-left:0px;
+		}
+		.cauhoi{
+			display:block;
+			margin-left:0px;
+			margin-top:5px;
+		}
+		.nghia{
+			margin-left:0px;
+		}
+	}
+</style>
+
+
+<script>
+	//Không cho dùng phím tắt
+	document.onkeydown = function(e) {
+		
+	  //prevent key F12
+	  if(event.keyCode == 123) {
+		return false;
+	  }
+
+	  //prevent CTRL + Shift + I
+	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+		return false;c
+	  }
+
+	  //prevent CTRL + Shift + J
+	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+		return false;
+	  }
+	  
+	  //prevent CTRL + a,s,u,n,c,x,v,j,p
+        if (e.ctrlKey && 
+            (e.keyCode === 65 ||
+			 e.keyCode === 67 ||
+			 e.keyCode === 74 ||
+			 e.keyCode === 78 ||
+			 e.keyCode === 80 ||
+			 e.keyCode === 83 ||
+             e.keyCode === 86 || 
+             e.keyCode === 85 ||
+			 e.keyCode === 88 ||
+             e.keyCode === 117)) {
+            alert('Hạn chế copy dữ liệu!');
+            return false;
+        }
+	}
+</script>
+
+
+<div id="tracnghiemdiv">
+
+<form class="quiz-form" method="post" action="#" name="post">
+
+
+	
+		<br><h4>問題 1  ___のことばの読み方として最もよいものを、１・２・３・４から一つえらびなさい。</h4><br>	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">01:</div><div class="cauhoi"><ruby>息子<rp>（</rp><rt>むすこ</rt><rp>）</rp></ruby>は<ruby>絵<rp>（</rp><rt>え</rt><rp>）</rp></ruby>や<ruby>音楽<rp>（</rp><rt>おんがく</rt><rp>）</rp></ruby>などの<u><ruby>芸術<rp>（</rp><rt style="display: none;">げいじゅつ</rt><rp>）</rp></ruby></u>に<ruby>関心<rp>（</rp><rt>かんしん</rt><rp>）</rp></ruby>があるようだ。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Con trai tôi có niềm quan tâm tới nghệ thật như âm nhạc và hội họa.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_11" type="hidden" name="correct[1]">
+						
+						&nbsp;&nbsp;<input id="answer_11" type="radio" name="answer[1]"><span class="luachon">&nbsp;&nbsp;げいじつ </span><span id="result_question_11"></span> <span id="result_correct_11"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_12" type="hidden" name="correct[1]">
+
+						&nbsp;&nbsp;<input id="answer_12" type="radio" name="answer[1]"><span class="luachon">&nbsp;&nbsp;げいしゅつ </span><span id="result_question_12"></span> <span id="result_correct_12"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_13" type="hidden" name="correct[1]">
+
+						&nbsp;&nbsp;<input id="answer_13" type="radio" name="answer[1]"><span class="luachon">&nbsp;&nbsp;げいじゅつ </span><span id="result_question_13"></span> <span id="result_correct_13"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_14" type="hidden" name="correct[1]">
+
+						&nbsp;&nbsp;<input id="answer_14" type="radio" name="answer[1]"><span class="luachon">&nbsp;&nbsp;げいちゅうつ </span><span id="result_question_14"></span> <span id="result_correct_14"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">02:</div><div class="cauhoi">この<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>は<u><ruby>近日<rp>（</rp><rt style="display: none;">きんじつ</rt><rp>）</rp></ruby></u><ruby>公開<rp>（</rp><rt>こうかい</rt><rp>）</rp></ruby>されます。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Bộ phim này sắp được phát hành.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_21" type="hidden" name="correct[2]">
+						
+						&nbsp;&nbsp;<input id="answer_21" type="radio" name="answer[2]"><span class="luachon">&nbsp;&nbsp;きんび </span><span id="result_question_21"></span> <span id="result_correct_21"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_22" type="hidden" name="correct[2]">
+
+						&nbsp;&nbsp;<input id="answer_22" type="radio" name="answer[2]"><span class="luachon">&nbsp;&nbsp;ちかび </span><span id="result_question_22"></span> <span id="result_correct_22"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_23" type="hidden" name="correct[2]">
+
+						&nbsp;&nbsp;<input id="answer_23" type="radio" name="answer[2]"><span class="luachon">&nbsp;&nbsp;きんじつ </span><span id="result_question_23"></span> <span id="result_correct_23"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_24" type="hidden" name="correct[2]">
+
+						&nbsp;&nbsp;<input id="answer_24" type="radio" name="answer[2]"><span class="luachon">&nbsp;&nbsp;ちかじつ </span><span id="result_question_24"></span> <span id="result_correct_24"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">03:</div><div class="cauhoi">この<ruby>信号<rp>（</rp><rt>しんごう</rt><rp>）</rp></ruby>を<u><ruby>渡<rp>（</rp><rt style="display: none;">わた</rt><rp>）</rp></ruby>って</u>まっすぐ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くと、<ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>があります。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Băng qua đèn tín hiệu này, đi thẳng thì sẽ thấy nhà ga.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_31" type="hidden" name="correct[3]">
+						
+						&nbsp;&nbsp;<input id="answer_31" type="radio" name="answer[3]"><span class="luachon">&nbsp;&nbsp;とおって </span><span id="result_question_31"></span> <span id="result_correct_31"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_32" type="hidden" name="correct[3]">
+
+						&nbsp;&nbsp;<input id="answer_32" type="radio" name="answer[3]"><span class="luachon">&nbsp;&nbsp;まがって </span><span id="result_question_32"></span> <span id="result_correct_32"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_33" type="hidden" name="correct[3]">
+
+						&nbsp;&nbsp;<input id="answer_33" type="radio" name="answer[3]"><span class="luachon">&nbsp;&nbsp;もどって </span><span id="result_question_33"></span> <span id="result_correct_33"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_34" type="hidden" name="correct[3]">
+
+						&nbsp;&nbsp;<input id="answer_34" type="radio" name="answer[3]"><span class="luachon">&nbsp;&nbsp;わたって </span><span id="result_question_34"></span> <span id="result_correct_34"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one"><br><h4>問題 2  ___のことばを漢字で書くとき最もよいものを、１・２・３・４から一つえらびなさい。</h4><br>	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">01:</div><div class="cauhoi"><ruby>大学<rp>（</rp><rt>だいがく</rt><rp>）</rp></ruby>で<u>ほうりつ</u>について<ruby>学<rp>（</rp><rt>まな</rt><rp>）</rp></ruby>びたい。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Tôi muốn học luật ở trường đại học.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_41" type="hidden" name="correct[4]">
+						
+						&nbsp;&nbsp;<input id="answer_41" type="radio" name="answer[4]"><span class="luachon">&nbsp;&nbsp;方立 </span><span id="result_question_41"></span> <span id="result_correct_41"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_42" type="hidden" name="correct[4]">
+
+						&nbsp;&nbsp;<input id="answer_42" type="radio" name="answer[4]"><span class="luachon">&nbsp;&nbsp;方律 </span><span id="result_question_42"></span> <span id="result_correct_42"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_43" type="hidden" name="correct[4]">
+
+						&nbsp;&nbsp;<input id="answer_43" type="radio" name="answer[4]"><span class="luachon">&nbsp;&nbsp;法立 </span><span id="result_question_43"></span> <span id="result_correct_43"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_44" type="hidden" name="correct[4]">
+
+						&nbsp;&nbsp;<input id="answer_44" type="radio" name="answer[4]"><span class="luachon">&nbsp;&nbsp;法律 </span><span id="result_question_44"></span> <span id="result_correct_44"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">02:</div><div class="cauhoi"><ruby>靴<rp>（</rp><rt>くつ</rt><rp>）</rp></ruby>はここで<u>ぬいで</u>ください。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Giày dép vui lòng cởi ra ở đây.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_51" type="hidden" name="correct[5]">
+						
+						&nbsp;&nbsp;<input id="answer_51" type="radio" name="answer[5]"><span class="luachon">&nbsp;&nbsp;悦いで </span><span id="result_question_51"></span> <span id="result_correct_51"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_52" type="hidden" name="correct[5]">
+
+						&nbsp;&nbsp;<input id="answer_52" type="radio" name="answer[5]"><span class="luachon">&nbsp;&nbsp;税いで </span><span id="result_question_52"></span> <span id="result_correct_52"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_53" type="hidden" name="correct[5]">
+
+						&nbsp;&nbsp;<input id="answer_53" type="radio" name="answer[5]"><span class="luachon">&nbsp;&nbsp;脱いで </span><span id="result_question_53"></span> <span id="result_correct_53"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_54" type="hidden" name="correct[5]">
+
+						&nbsp;&nbsp;<input id="answer_54" type="radio" name="answer[5]"><span class="luachon">&nbsp;&nbsp;説いで </span><span id="result_question_54"></span> <span id="result_correct_54"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">03:</div><div class="cauhoi"><u>とうろく</u>をする<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>は、こちらにお<ruby>名前<rp>（</rp><rt>なまえ</rt><rp>）</rp></ruby>をご<ruby>記入<rp>（</rp><rt>きにゅう</rt><rp>）</rp></ruby>ください。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Những người đăng ký hãy điền tên ở đây.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_61" type="hidden" name="correct[6]">
+						
+						&nbsp;&nbsp;<input id="answer_61" type="radio" name="answer[6]"><span class="luachon">&nbsp;&nbsp;登緑 </span><span id="result_question_61"></span> <span id="result_correct_61"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_62" type="hidden" name="correct[6]">
+
+						&nbsp;&nbsp;<input id="answer_62" type="radio" name="answer[6]"><span class="luachon">&nbsp;&nbsp;登録 </span><span id="result_question_62"></span> <span id="result_correct_62"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_63" type="hidden" name="correct[6]">
+
+						&nbsp;&nbsp;<input id="answer_63" type="radio" name="answer[6]"><span class="luachon">&nbsp;&nbsp;発緑 </span><span id="result_question_63"></span> <span id="result_correct_63"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_64" type="hidden" name="correct[6]">
+
+						&nbsp;&nbsp;<input id="answer_64" type="radio" name="answer[6]"><span class="luachon">&nbsp;&nbsp;発録 </span><span id="result_question_64"></span> <span id="result_correct_64"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one"><br><h4>問題 3  ___のことばに意味が最も近いものを、１・２・３・４から一つえらびなさい。</h4><br>	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">01:</div><div class="cauhoi"><ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>の<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>み<ruby>会<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>に<u><ruby>出<rp>（</rp><rt style="display: none;">で</rt><rp>）</rp></ruby>る</u><ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>は<ruby>全部<rp>（</rp><rt>ぜんぶ</rt><rp>）</rp></ruby>で<ruby>何人<rp>（</rp><rt>なんにん</rt><rp>）</rp></ruby>ですか。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Những người tham dự buổi tiệc tuần sau có tất cả bao nhiêu người?</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_71" type="hidden" name="correct[7]">
+						
+						&nbsp;&nbsp;<input id="answer_71" type="radio" name="answer[7]"><span class="luachon">&nbsp;&nbsp;<ruby>入会<rp>（</rp><rt>にゅうかい</rt><rp>）</rp></ruby>する </span><span id="result_question_71"></span> <span id="result_correct_71"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_72" type="hidden" name="correct[7]">
+
+						&nbsp;&nbsp;<input id="answer_72" type="radio" name="answer[7]"><span class="luachon">&nbsp;&nbsp;<ruby>出所<rp>（</rp><rt>しゅっしょ</rt><rp>）</rp></ruby>する </span><span id="result_question_72"></span> <span id="result_correct_72"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_73" type="hidden" name="correct[7]">
+
+						&nbsp;&nbsp;<input id="answer_73" type="radio" name="answer[7]"><span class="luachon">&nbsp;&nbsp;<ruby>参加<rp>（</rp><rt>さんか</rt><rp>）</rp></ruby>する </span><span id="result_question_73"></span> <span id="result_correct_73"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_74" type="hidden" name="correct[7]">
+
+						&nbsp;&nbsp;<input id="answer_74" type="radio" name="answer[7]"><span class="luachon">&nbsp;&nbsp;<ruby>欠席<rp>（</rp><rt>けっせき</rt><rp>）</rp></ruby>する </span><span id="result_question_74"></span> <span id="result_correct_74"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">02:</div><div class="cauhoi"><ruby>去年<rp>（</rp><rt>きょねん</rt><rp>）</rp></ruby>の<u>くれ</u>に<ruby>出産<rp>（</rp><rt>しゅっさん</rt><rp>）</rp></ruby>しました。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Tôi đã sinh con vào cuối năm ngoái.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_81" type="hidden" name="correct[8]">
+						
+						&nbsp;&nbsp;<input id="answer_81" type="radio" name="answer[8]"><span class="luachon">&nbsp;&nbsp;<ruby>１月<rp>（</rp><rt>いちがつ</rt><rp>）</rp></ruby>ごろ </span><span id="result_question_81"></span> <span id="result_correct_81"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_82" type="hidden" name="correct[8]">
+
+						&nbsp;&nbsp;<input id="answer_82" type="radio" name="answer[8]"><span class="luachon">&nbsp;&nbsp;４<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>ごろ </span><span id="result_question_82"></span> <span id="result_correct_82"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_83" type="hidden" name="correct[8]">
+
+						&nbsp;&nbsp;<input id="answer_83" type="radio" name="answer[8]"><span class="luachon">&nbsp;&nbsp;７<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>ごろ </span><span id="result_question_83"></span> <span id="result_correct_83"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_84" type="hidden" name="correct[8]">
+
+						&nbsp;&nbsp;<input id="answer_84" type="radio" name="answer[8]"><span class="luachon">&nbsp;&nbsp;１２<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>ごろ </span><span id="result_question_84"></span> <span id="result_correct_84"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">03:</div><div class="cauhoi"><ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は<ruby>事実<rp>（</rp><rt>じじつ</rt><rp>）</rp></ruby>を<u>かたっている</u>と<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>う。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Tôi nghĩ anh ấy đang kể sự thật.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_91" type="hidden" name="correct[9]">
+						
+						&nbsp;&nbsp;<input id="answer_91" type="radio" name="answer[9]"><span class="luachon">&nbsp;&nbsp;<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>っている </span><span id="result_question_91"></span> <span id="result_correct_91"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_92" type="hidden" name="correct[9]">
+
+						&nbsp;&nbsp;<input id="answer_92" type="radio" name="answer[9]"><span class="luachon">&nbsp;&nbsp;<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いている </span><span id="result_question_92"></span> <span id="result_correct_92"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_93" type="hidden" name="correct[9]">
+
+						&nbsp;&nbsp;<input id="answer_93" type="radio" name="answer[9]"><span class="luachon">&nbsp;&nbsp;<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>っている </span><span id="result_question_93"></span> <span id="result_correct_93"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_94" type="hidden" name="correct[9]">
+
+						&nbsp;&nbsp;<input id="answer_94" type="radio" name="answer[9]"><span class="luachon">&nbsp;&nbsp;かくしている </span><span id="result_question_94"></span> <span id="result_correct_94"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">04:</div><div class="cauhoi"><ruby>困<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>っている<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>を<ruby>助<rp>（</rp><rt>たす</rt><rp>）</rp></ruby>けるのは<u><ruby>当<rp>（</rp><rt style="display: none;">あ</rt><rp>）</rp></ruby>たり<ruby>前<rp>（</rp><rt style="display: none;">まえ</rt><rp>）</rp></ruby>の</u>ことだ。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Việc giúp đỡ người đang gặp khó khăn là một điều đương nhiên.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_101" type="hidden" name="correct[10]">
+						
+						&nbsp;&nbsp;<input id="answer_101" type="radio" name="answer[10]"><span class="luachon">&nbsp;&nbsp;<ruby>普通<rp>（</rp><rt>ふつう</rt><rp>）</rp></ruby>の </span><span id="result_question_101"></span> <span id="result_correct_101"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_102" type="hidden" name="correct[10]">
+
+						&nbsp;&nbsp;<input id="answer_102" type="radio" name="answer[10]"><span class="luachon">&nbsp;&nbsp;<ruby>親切<rp>（</rp><rt>しんせつ</rt><rp>）</rp></ruby>な </span><span id="result_question_102"></span> <span id="result_correct_102"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_103" type="hidden" name="correct[10]">
+
+						&nbsp;&nbsp;<input id="answer_103" type="radio" name="answer[10]"><span class="luachon">&nbsp;&nbsp;<ruby>特別<rp>（</rp><rt>とくべつ</rt><rp>）</rp></ruby>な </span><span id="result_question_103"></span> <span id="result_correct_103"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_104" type="hidden" name="correct[10]">
+
+						&nbsp;&nbsp;<input id="answer_104" type="radio" name="answer[10]"><span class="luachon">&nbsp;&nbsp;<ruby>難<rp>（</rp><rt>むずか</rt><rp>）</rp></ruby>しい </span><span id="result_question_104"></span> <span id="result_correct_104"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one"><br><h4>問題 4  （　　）に入れるのに最もよいものを、１・２・３・４から一つえらびなさい。</h4><br>	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">01:</div><div class="cauhoi">この<ruby>文章<rp>（</rp><rt>ぶんしょう</rt><rp>）</rp></ruby>を（　）ごとにまとめなさい。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Hãy chỉnh lý bài văn này thành những đoạn văn.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_111" type="hidden" name="correct[11]">
+						
+						&nbsp;&nbsp;<input id="answer_111" type="radio" name="answer[11]"><span class="luachon">&nbsp;&nbsp;<ruby>段差<rp>（</rp><rt>だんさ</rt><rp>）</rp></ruby> </span><span id="result_question_111"></span> <span id="result_correct_111"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_112" type="hidden" name="correct[11]">
+
+						&nbsp;&nbsp;<input id="answer_112" type="radio" name="answer[11]"><span class="luachon">&nbsp;&nbsp;<ruby>段落<rp>（</rp><rt>だんらく</rt><rp>）</rp></ruby> </span><span id="result_question_112"></span> <span id="result_correct_112"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_113" type="hidden" name="correct[11]">
+
+						&nbsp;&nbsp;<input id="answer_113" type="radio" name="answer[11]"><span class="luachon">&nbsp;&nbsp;<ruby>段階<rp>（</rp><rt>だんかい</rt><rp>）</rp></ruby> </span><span id="result_question_113"></span> <span id="result_correct_113"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_114" type="hidden" name="correct[11]">
+
+						&nbsp;&nbsp;<input id="answer_114" type="radio" name="answer[11]"><span class="luachon">&nbsp;&nbsp;<ruby>段々<rp>（</rp><rt>だんだん</rt><rp>）</rp></ruby> </span><span id="result_question_114"></span> <span id="result_correct_114"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">02:</div><div class="cauhoi">こちらの<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>は<ruby>会員<rp>（</rp><rt>かいいん</rt><rp>）</rp></ruby>（　）なので、<ruby>会員<rp>（</rp><rt>かいいん</rt><rp>）</rp></ruby>でない<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>はご<ruby>遠慮<rp>（</rp><rt>えんりょ</rt><rp>）</rp></ruby>ください。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Phòng này là phòng dành riêng cho thành viên, những người không phải thành viên xin đừng vào.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_121" type="hidden" name="correct[12]">
+						
+						&nbsp;&nbsp;<input id="answer_121" type="radio" name="answer[12]"><span class="luachon">&nbsp;&nbsp;<ruby>専門<rp>（</rp><rt>せんもん</rt><rp>）</rp></ruby> </span><span id="result_question_121"></span> <span id="result_correct_121"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_122" type="hidden" name="correct[12]">
+
+						&nbsp;&nbsp;<input id="answer_122" type="radio" name="answer[12]"><span class="luachon">&nbsp;&nbsp;<ruby>専用<rp>（</rp><rt>せんよう</rt><rp>）</rp></ruby> </span><span id="result_question_122"></span> <span id="result_correct_122"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_123" type="hidden" name="correct[12]">
+
+						&nbsp;&nbsp;<input id="answer_123" type="radio" name="answer[12]"><span class="luachon">&nbsp;&nbsp;<ruby>固有<rp>（</rp><rt>こゆう</rt><rp>）</rp></ruby> </span><span id="result_question_123"></span> <span id="result_correct_123"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_124" type="hidden" name="correct[12]">
+
+						&nbsp;&nbsp;<input id="answer_124" type="radio" name="answer[12]"><span class="luachon">&nbsp;&nbsp;<ruby>固定<rp>（</rp><rt>こてい</rt><rp>）</rp></ruby> </span><span id="result_question_124"></span> <span id="result_correct_124"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">03:</div><div class="cauhoi">ここは<ruby>駐車<rp>（</rp><rt>ちゅうしゃ</rt><rp>）</rp></ruby>（　）です。<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>を<ruby>止<rp>（</rp><rt>と</rt><rp>）</rp></ruby>めないでください。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Ở đây cấm đổ xe. Không được dừng đổ xe.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_131" type="hidden" name="correct[13]">
+						
+						&nbsp;&nbsp;<input id="answer_131" type="radio" name="answer[13]"><span class="luachon">&nbsp;&nbsp;<ruby>中止<rp>（</rp><rt>ちゅうし</rt><rp>）</rp></ruby> </span><span id="result_question_131"></span> <span id="result_correct_131"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_132" type="hidden" name="correct[13]">
+
+						&nbsp;&nbsp;<input id="answer_132" type="radio" name="answer[13]"><span class="luachon">&nbsp;&nbsp;<ruby>防止<rp>（</rp><rt>ぼうし</rt><rp>）</rp></ruby> </span><span id="result_question_132"></span> <span id="result_correct_132"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_133" type="hidden" name="correct[13]">
+
+						&nbsp;&nbsp;<input id="answer_133" type="radio" name="answer[13]"><span class="luachon">&nbsp;&nbsp;<ruby>停止<rp>（</rp><rt>ていし</rt><rp>）</rp></ruby> </span><span id="result_question_133"></span> <span id="result_correct_133"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_134" type="hidden" name="correct[13]">
+
+						&nbsp;&nbsp;<input id="answer_134" type="radio" name="answer[13]"><span class="luachon">&nbsp;&nbsp;<ruby>禁止<rp>（</rp><rt>きんし</rt><rp>）</rp></ruby> </span><span id="result_question_134"></span> <span id="result_correct_134"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">04:</div><div class="cauhoi"><ruby>貯金<rp>（</rp><rt>ちょきん</rt><rp>）</rp></ruby>がほとんどなく、<ruby>生活<rp>（</rp><rt>せいかつ</rt><rp>）</rp></ruby>が（　）。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Tiền để dành hầu như không có, cuộc sống thật khốn khổ.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_141" type="hidden" name="correct[14]">
+						
+						&nbsp;&nbsp;<input id="answer_141" type="radio" name="answer[14]"><span class="luachon">&nbsp;&nbsp;さむい </span><span id="result_question_141"></span> <span id="result_correct_141"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_142" type="hidden" name="correct[14]">
+
+						&nbsp;&nbsp;<input id="answer_142" type="radio" name="answer[14]"><span class="luachon">&nbsp;&nbsp;にがい </span><span id="result_question_142"></span> <span id="result_correct_142"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_143" type="hidden" name="correct[14]">
+
+						&nbsp;&nbsp;<input id="answer_143" type="radio" name="answer[14]"><span class="luachon">&nbsp;&nbsp;くるしい </span><span id="result_question_143"></span> <span id="result_correct_143"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_144" type="hidden" name="correct[14]">
+
+						&nbsp;&nbsp;<input id="answer_144" type="radio" name="answer[14]"><span class="luachon">&nbsp;&nbsp;さびしい </span><span id="result_question_144"></span> <span id="result_correct_144"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">05:</div><div class="cauhoi">このグラスは<ruby>割<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>れやすいので、（　）<ruby>置<rp>（</rp><rt>お</rt><rp>）</rp></ruby>いてください。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Vì kính này dễ vỡ nên hãy đặt xuống thật nhẹ nhàng.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_151" type="hidden" name="correct[15]">
+						
+						&nbsp;&nbsp;<input id="answer_151" type="radio" name="answer[15]"><span class="luachon">&nbsp;&nbsp;さっと </span><span id="result_question_151"></span> <span id="result_correct_151"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_152" type="hidden" name="correct[15]">
+
+						&nbsp;&nbsp;<input id="answer_152" type="radio" name="answer[15]"><span class="luachon">&nbsp;&nbsp;じっと </span><span id="result_question_152"></span> <span id="result_correct_152"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_153" type="hidden" name="correct[15]">
+
+						&nbsp;&nbsp;<input id="answer_153" type="radio" name="answer[15]"><span class="luachon">&nbsp;&nbsp;そっと </span><span id="result_question_153"></span> <span id="result_correct_153"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_154" type="hidden" name="correct[15]">
+
+						&nbsp;&nbsp;<input id="answer_154" type="radio" name="answer[15]"><span class="luachon">&nbsp;&nbsp;ぽっと </span><span id="result_question_154"></span> <span id="result_correct_154"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">06:</div><div class="cauhoi"><ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>は<ruby>卵<rp>（</rp><rt>たまご</rt><rp>）</rp></ruby>（　）で、<ruby>卵<rp>（</rp><rt>たまご</rt><rp>）</rp></ruby>を<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べると<ruby>体<rp>（</rp><rt>からだ</rt><rp>）</rp></ruby>がかゆくなる。</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Tôi bị dị ứng trứng, nên ăn trứng thì cơ thể sẽ bị ngứa.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_161" type="hidden" name="correct[16]">
+						
+						&nbsp;&nbsp;<input id="answer_161" type="radio" name="answer[16]"><span class="luachon">&nbsp;&nbsp;ショック </span><span id="result_question_161"></span> <span id="result_correct_161"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_162" type="hidden" name="correct[16]">
+
+						&nbsp;&nbsp;<input id="answer_162" type="radio" name="answer[16]"><span class="luachon">&nbsp;&nbsp;アレルギー </span><span id="result_question_162"></span> <span id="result_correct_162"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_163" type="hidden" name="correct[16]">
+
+						&nbsp;&nbsp;<input id="answer_163" type="radio" name="answer[16]"><span class="luachon">&nbsp;&nbsp;エネルギー </span><span id="result_question_163"></span> <span id="result_correct_163"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_164" type="hidden" name="correct[16]">
+
+						&nbsp;&nbsp;<input id="answer_164" type="radio" name="answer[16]"><span class="luachon">&nbsp;&nbsp;リアクション </span><span id="result_question_164"></span> <span id="result_correct_164"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one"><br><h4>問題 5  つぎのことばの使い方として最もよいものを、１・２・３・４から一つえらびなさい。</h4><br>	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">01:</div><div class="cauhoi"><ruby>済<rp>（</rp><rt>す</rt><rp>）</rp></ruby>む</div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Xét nghiệm này xong thì hãy sang phòng bên cạnh.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_171" type="hidden" name="correct[17]">
+						
+						&nbsp;&nbsp;<input id="answer_171" type="radio" name="answer[17]"><span class="luachon">&nbsp;&nbsp;<ruby>雨<rp>（</rp><rt>あめ</rt><rp>）</rp></ruby>は<ruby>昼<rp>（</rp><rt>ひる</rt><rp>）</rp></ruby>になったら<u><ruby>済<rp>（</rp><rt style="display: none;">す</rt><rp>）</rp></ruby>む</u>だろう。 </span><span id="result_question_171"></span> <span id="result_correct_171"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_172" type="hidden" name="correct[17]">
+
+						&nbsp;&nbsp;<input id="answer_172" type="radio" name="answer[17]"><span class="luachon">&nbsp;&nbsp;このニュース<ruby>番組<rp>（</rp><rt>ばんぐみ</rt><rp>）</rp></ruby>は１２<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>に<u><ruby>済<rp>（</rp><rt style="display: none;">す</rt><rp>）</rp></ruby>む</u>。 </span><span id="result_question_172"></span> <span id="result_correct_172"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_173" type="hidden" name="correct[17]">
+
+						&nbsp;&nbsp;<input id="answer_173" type="radio" name="answer[17]"><span class="luachon">&nbsp;&nbsp;<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>が<u><ruby>済<rp>（</rp><rt style="display: none;">す</rt><rp>）</rp></ruby>んだ</u>あとで<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>った。 </span><span id="result_question_173"></span> <span id="result_correct_173"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_174" type="hidden" name="correct[17]">
+
+						&nbsp;&nbsp;<input id="answer_174" type="radio" name="answer[17]"><span class="luachon">&nbsp;&nbsp;この<ruby>検査<rp>（</rp><rt>けんさ</rt><rp>）</rp></ruby>が<u><ruby>済<rp>（</rp><rt style="display: none;">す</rt><rp>）</rp></ruby>んだ</u>ら、<ruby>隣<rp>（</rp><rt>となり</rt><rp>）</rp></ruby>の<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>に<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>てください。 </span><span id="result_question_174"></span> <span id="result_correct_174"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">	
+
+			<div class="tracnghiem">
+
+			<div id="question"><div class="bai_stt">02:</div><div class="cauhoi"><ruby>差別<rp>（</rp><rt>さべつ</rt><rp>）</rp></ruby></div></div>
+
+			<div class="nghia" style="display: none;"><span size="3" color="#3B4161">Dù công việc giống nhau nhưng lương của tôi lại ít hơn so với người khác thì là sự phân biệt đối xử.</span></div>
+
+			<table class="table_tracnghiem">
+
+					<tbody><tr class="tr_tracnghiem">
+						<td class="td_tracnghiem"><input id="answer_correct_181" type="hidden" name="correct[18]">
+						
+						&nbsp;&nbsp;<input id="answer_181" type="radio" name="answer[18]"><span class="luachon">&nbsp;&nbsp;<ruby>同<rp>（</rp><rt>おな</rt><rp>）</rp></ruby>じ<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>をしているのに、<ruby>他<rp>（</rp><rt>ほか</rt><rp>）</rp></ruby>の<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>より<ruby>給料<rp>（</rp><rt>きゅうりょう</rt><rp>）</rp></ruby>が<ruby>安<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>いのは<u><ruby>差別<rp>（</rp><rt style="display: none;">さべつ</rt><rp>）</rp></ruby></u>だ。 </span><span id="result_question_181"></span> <span id="result_correct_181"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_182" type="hidden" name="correct[18]">
+
+						&nbsp;&nbsp;<input id="answer_182" type="radio" name="answer[18]"><span class="luachon">&nbsp;&nbsp;<ruby>同<rp>（</rp><rt>おな</rt><rp>）</rp></ruby>じ<ruby>箱<rp>（</rp><rt>はこ</rt><rp>）</rp></ruby>に<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れたら、<ruby>塩<rp>（</rp><rt>しお</rt><rp>）</rp></ruby>と<ruby>砂糖<rp>（</rp><rt>さとう</rt><rp>）</rp></ruby>の<u><ruby>差別<rp>（</rp><rt style="display: none;">さべつ</rt><rp>）</rp></ruby></u>がつかくなった。 </span><span id="result_question_182"></span> <span id="result_correct_182"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_183" type="hidden" name="correct[18]">
+
+						&nbsp;&nbsp;<input id="answer_183" type="radio" name="answer[18]"><span class="luachon">&nbsp;&nbsp;<ruby>燃<rp>（</rp><rt>も</rt><rp>）</rp></ruby>えるごみと<ruby>燃<rp>（</rp><rt>も</rt><rp>）</rp></ruby>えないごみに<u><ruby>差別<rp>（</rp><rt style="display: none;">さべつ</rt><rp>）</rp></ruby></u>して<ruby>捨<rp>（</rp><rt>す</rt><rp>）</rp></ruby>ててください。 </span><span id="result_question_183"></span> <span id="result_correct_183"></span></td>
+						<td class="td_tracnghiem"><input id="answer_correct_184" type="hidden" name="correct[18]">
+
+						&nbsp;&nbsp;<input id="answer_184" type="radio" name="answer[18]"><span class="luachon">&nbsp;&nbsp;この<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>から<ruby>汚<rp>（</rp><rt>よご</rt><rp>）</rp></ruby>れた<ruby>商品<rp>（</rp><rt>しょうひん</rt><rp>）</rp></ruby>を<u><ruby>差別<rp>（</rp><rt style="display: none;">さべつ</rt><rp>）</rp></ruby></u>して、<ruby>取<rp>（</rp><rt>と</rt><rp>）</rp></ruby>り<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>してください。 </span><span id="result_question_184"></span> <span id="result_correct_184"></span></td>
+					</tr>
+			</tbody></table>
+
+			</div><hr class="style-one">
+
+<hr class="style-one"><script type="text/javascript">var question_count = 18; </script>
+<input type="button" value="Finish" onclick="check_result();" class="btn btn-danger" id="ketqua">
+<input type="button" value="Retry" onclick="reset_result();" class="btn btn-minw btn-square btn-success" id="lamlai">
+<input type="button" value="Dịch nghĩa" class="btn btn-warning" id="dichnghia" data-toggle="tooltip" title="" data-original-title="Bạn chỉ xem được nghĩa khi làm đúng 60% or more correct">
+<input type="button" value="Result" onclick="result_correct();" class="btn btn-minw btn-square btn-primary" id="dapan" data-toggle="tooltip" title="" data-original-title="You can only see the answers when you get 60% or more correct">
+
+</form>
+
+</div>
+
+<!--POPUP SCRIPT -->
+
+<script type="text/javascript">
+
+show_block();
+function show_block() {
+    document.body.classList.toggle( 'ruby_flag' );
+    $('u ruby rt').hide();
+}
+
+var answer_id = new Array();
+
+var answer_correct = new Array();
+
+var your_answer = new Array(
+
+'<img id="img_wrong" style="vertical-align:baseline" src="./../assets/img/favicons/wrong.png">',
+
+'<img id="img_correct" style="vertical-align:baseline" src="./../assets/img/favicons/correct.png">');
+
+var tyledung = 0;
+
+var username = "Admin1";
+
+answer_id[0] = new Array(11,12,13,14);
+
+		answer_correct[0] = 13;answer_id[1] = new Array(21,22,23,24);
+
+		answer_correct[1] = 23;answer_id[2] = new Array(31,32,33,34);
+
+		answer_correct[2] = 34;answer_id[3] = new Array(41,42,43,44);
+
+		answer_correct[3] = 44;answer_id[4] = new Array(51,52,53,54);
+
+		answer_correct[4] = 53;answer_id[5] = new Array(61,62,63,64);
+
+		answer_correct[5] = 62;answer_id[6] = new Array(71,72,73,74);
+
+		answer_correct[6] = 73;answer_id[7] = new Array(81,82,83,84);
+
+		answer_correct[7] = 84;answer_id[8] = new Array(91,92,93,94);
+
+		answer_correct[8] = 91;answer_id[9] = new Array(101,102,103,104);
+
+		answer_correct[9] = 101;answer_id[10] = new Array(111,112,113,114);
+
+		answer_correct[10] = 112;answer_id[11] = new Array(121,122,123,124);
+
+		answer_correct[11] = 122;answer_id[12] = new Array(131,132,133,134);
+
+		answer_correct[12] = 134;answer_id[13] = new Array(141,142,143,144);
+
+		answer_correct[13] = 143;answer_id[14] = new Array(151,152,153,154);
+
+		answer_correct[14] = 153;answer_id[15] = new Array(161,162,163,164);
+
+		answer_correct[15] = 162;answer_id[16] = new Array(171,172,173,174);
+
+		answer_correct[16] = 174;answer_id[17] = new Array(181,182,183,184);
+
+		answer_correct[17] = 181; 
+
+function result_correct(){
+
+	var your_answer_correct = 0;
+
+	for(i=0;i<answer_correct.length;i++){
+
+		if(document.getElementById('answer_'+answer_correct[i]).checked == true){
+
+			your_answer_correct++;
+
+		}	
+
+	}
+
+	tyledung = (your_answer_correct / question_count) * 100;
+
+	if(tyledung >= 60 || username =='Admin'){
+
+		for(i in answer_correct){
+
+			document.getElementById('result_correct_'+answer_correct[i]).innerHTML = your_answer[1];
+
+		}
+
+	}
+
+}
+
+function reset_result(){
+
+	for(i=0;i<answer_id.length;i++){
+
+		for(j=0;j < answer_id[i].length; j++){
+
+			document.getElementById('result_question_' + answer_id[i][j]).innerHTML = '';
+
+			document.getElementById('result_correct_' + answer_id[i][j]).innerHTML = '';
+
+			document.getElementById('answer_'+answer_id[i][j]).disabled=false;
+
+			document.getElementById('answer_'+answer_id[i][j]).checked = false;
+
+		}
+
+	}	
+	
+	$(".td_tracnghiem").find('span').removeClass("luachon_red luachon_blue");
+		
+	$(".td_tracnghiem").find('span').addClass('luachon');
+	
+	$('.nghia').hide();
+
+}
+
+$(function() {
+	$('.nghia').hide();
+	$('#dichnghia').click(function(){
+		
+		var your_answer_correct = 0;
+
+		for(i=0;i<answer_correct.length;i++){
+			if(document.getElementById('answer_'+answer_correct[i]).checked == true){
+				your_answer_correct++;
+			}	
+		}
+
+		tyledung = (your_answer_correct / question_count) * 100;
+		if(tyledung >= 60 || username =='Admin'){
+			$('.nghia').toggle();
+			$('.slide-content').toggle();
+		}
+		
+		
+	});
+
+    $('input[type=radio]').click(function() {
+
+                  var t = $(this);
+
+                    if(t.prop('checked'))
+
+                       t.prop('checked', '');
+
+                    else
+
+                       t.prop('checked', 'checked');
+
+    });
+
+
+    $('table td').click(function() {
+
+        var c = $(this).children('input[type=radio]');
+
+        if(c.prop('checked'))
+
+		c.prop('checked', '');
+
+        else
+
+		c.prop('checked', 'checked');
+
+    });
+
+
+});
+
+$(function(){
+
+    $('td').click(function(){
+
+		$(this).find('span').removeClass("luachon luachon_red luachon_blue");
+		
+		$(this).find('span').addClass('luachon_red');
+		
+		$(this).nextAll().find('span').removeClass("luachon luachon_red luachon_blue");
+		
+		$(this).nextAll().find('span').addClass('luachon_blue');
+		
+		$(this).prevAll().find('span').removeClass("luachon luachon_red luachon_blue");
+		
+		$(this).prevAll().find('span').addClass('luachon_blue');
+
+    });
+
+    $(document).on('contextmenu',function(e){
+		return false;
+	});
+	document.onselectstart = function() {return false;};
+
+});
+
+
+
+
+function check_result(){
+
+var your_answer_correct = 0;
+//var diemdatduoc = 0;
+
+	for(i=0;i<answer_id.length;i++){
+
+		for(j=0;j<answer_id[i].length; j++){
+
+			if(document.getElementById('answer_' + answer_id[i][j]).checked==true){
+
+				document.getElementById('result_question_' + answer_id[i][j]).innerHTML = your_answer[0];
+
+			}
+
+			document.getElementById('answer_'+answer_id[i][j]).disabled=true;
+
+		}
+
+	}		
+
+	for(i=0;i<answer_correct.length;i++){
+
+		if(document.getElementById('answer_'+answer_correct[i]).checked == true){
+
+			document.getElementById('result_question_'+answer_correct[i]).innerHTML = your_answer[1];
+			
+			//diemdatduoc = diemdatduoc + diemso[i];
+
+			your_answer_correct++;
+
+		}	
+
+	}
+
+	if(question_count == your_answer_correct)
+
+		var color = 'green';
+
+	else
+
+		var color = 'red';
+
+// --------------------------------------------------------------------------------
+
+// ドキュメントのクライアント領域のサイズを取得する関数
+
+// --------------------------------------------------------------------------------
+
+function DocumentGetClientSize(document_obj){
+
+	var b = document_obj.body;
+
+	var r = document_obj.documentElement;
+
+	var w = b.clientWidth;
+
+	var h;
+
+	if(w < r.clientWidth)	w = r.clientWidth;
+
+	if(document_obj.compatMode == "BackCompat"){
+
+		h = b.clientHeight;
+
+	}else{
+
+		if(r.clientHeight){
+
+			h = r.clientHeight;
+
+		}else{
+
+			h = b.clientHeight;
+
+		}
+
+	}
+
+	return {
+
+		width :w,
+
+		height:h
+
+	};
+
+}
+
+
+
+// --------------------------------------------------------------------------------
+
+// ウィンドウのスクロール位置を取得する関数
+
+// --------------------------------------------------------------------------------
+
+function WindowGetScrollPosition(window_obj){
+
+	if(window_obj.pageXOffset === undefined){
+
+	}else if(window_obj.pageYOffset === undefined){
+
+	}else{
+
+		return {
+
+			x:window_obj.pageXOffset,
+
+			y:window_obj.pageYOffset
+
+		};
+
+	}
+
+
+
+	var d = window_obj.document;
+
+	return {
+
+		x:(d.documentElement.scrollLeft || d.body.scrollLeft),
+
+		y:(d.documentElement.scrollTop  || d.body.scrollTop )
+
+	};
+
+}
+
+
+
+// --------------------------------------------------------------------------------
+
+// エレメントに文字列をセットして、テキストノードを構築する関数
+
+// --------------------------------------------------------------------------------
+
+function ElementSetTextContent(element,str){
+
+	if(element.textContent !== undefined){
+
+		element.textContent = str;
+
+	}
+
+	if(element.innerText !== undefined){
+
+		element.innerHTML = str;
+
+	}
+
+}
+
+
+
+// --------------------------------------------------------------------------------
+
+// 確認ダイアログ用のコンストラクタ関数
+
+// --------------------------------------------------------------------------------
+
+function AlertDialog(){
+
+
+
+	// --------------------------------------------------------------------------------
+
+	// プライベートな変数
+
+	// --------------------------------------------------------------------------------
+
+	var _this = this;
+
+	var _element_popup = null;
+
+	var _element_bg = null;
+
+
+
+	// --------------------------------------------------------------------------------
+
+	// 終了時に実行するイベント
+
+	// --------------------------------------------------------------------------------
+
+	this.onclose = null;
+
+
+
+	// --------------------------------------------------------------------------------
+
+	// メッセージを設定する
+
+	// --------------------------------------------------------------------------------
+
+	this.setMessage = function (str){
+
+
+
+		// "alert_dialog_message" という ID 属性のエレメントを取得する
+
+		var element_message = document.getElementById("alert_dialog_message");
+
+
+
+		if(element_message){
+
+
+
+			// エレメントに文字列をセットする
+
+			ElementSetTextContent(element_message,str);
+
+		}
+
+	};
+
+
+
+	// --------------------------------------------------------------------------------
+
+	// 幅を設定する
+
+	// --------------------------------------------------------------------------------
+
+	this.setWidth = function (width){
+
+
+
+		// CSSStyleDeclaration オブジェクトを取得
+
+		var style = _element_popup.style;
+
+
+
+		// エレメントを幅を変更
+
+		style.width = (width) + "px";
+
+	};
+
+
+
+	// --------------------------------------------------------------------------------
+
+	// 更新
+
+	// --------------------------------------------------------------------------------
+
+	function update(){
+
+		var style;
+
+
+
+		// ドキュメントのクライアント領域のサイズを取得する
+
+		var client_size = DocumentGetClientSize(document);
+
+
+
+		// 現在のポップアップ用エレメントのバウンディングボックスのサイズを取得
+
+		var rect = _element_popup.getBoundingClientRect();
+
+		var element_width  = rect.right - rect.left;
+
+		var element_height = rect.bottom - rect.top;
+
+
+
+		// 中央に配置するための位置を計算する（クライアント座標系）
+
+		var element_x = (client_size.width  / 2) - (element_width  / 2);
+
+		var element_y = (client_size.height / 2) - (element_height / 2);
+
+
+
+		// ウィンドウのスクロール位置を取得する
+
+		var scroll_pos = WindowGetScrollPosition(window);
+
+
+
+		// 位置をグローバル座標系に変換する
+
+		element_x += scroll_pos.x;
+
+		element_y += scroll_pos.y;
+
+
+
+		// CSSStyleDeclaration オブジェクトを取得
+
+		style = _element_popup.style;
+
+
+
+		// エレメントを位置を修正する
+
+		style.left = (element_x) + "px";
+
+		style.top  = (element_y) + "px";
+
+
+
+		// CSSStyleDeclaration オブジェクトを取得
+
+		style = _element_bg.style;
+
+
+
+		// エレメントを位置を修正する
+
+		style.left = (scroll_pos.x) + "px";
+
+		style.top  = (scroll_pos.y) + "px";
+
+
+
+		// エレメントをサイズを修正する
+
+		style.width  = (client_size.width)  + "px";
+
+		style.height = (client_size.height) + "px";
+
+	}
+
+
+
+	// --------------------------------------------------------------------------------
+
+	// 解放
+
+	// --------------------------------------------------------------------------------
+
+	function release(){
+
+		var parent;
+
+
+
+		// ------------------------------------------------------------
+
+		// イベントのリッスンを終了する
+
+		// ------------------------------------------------------------
+
+		// イベントリスナーに対応している
+
+		if(window.removeEventListener){
+
+
+
+			// リサイズされるたびに実行されるイベント
+
+			window.removeEventListener("resize" , update);
+
+			// スクロールされるたびに実行されるイベント
+
+			window.removeEventListener("scroll" , update);
+
+
+
+		// アタッチイベントに対応している
+
+		}else if(window.detachEvent){
+
+
+
+			// リサイズされるたびに実行されるイベント
+
+			window.detachEvent("onresize" , update);
+
+			// スクロールされるたびに実行されるイベント
+
+			window.detachEvent("onscroll" , update);
+
+		}
+
+
+
+		// ------------------------------------------------------------
+
+		// エレメントを、ノードリストから除外する
+
+		// ------------------------------------------------------------
+
+		parent = _element_popup.parentNode;
+
+		if(parent){
+
+			parent.removeChild(_element_popup);
+
+		}
+
+		parent = _element_bg.parentNode;
+
+		if(parent){
+
+			parent.removeChild(_element_bg);
+
+		}
+
+	}
+
+
+
+	// --------------------------------------------------------------------------------
+
+	// 初期化
+
+	// --------------------------------------------------------------------------------
+
+	(function (){
+
+		var style;
+
+
+
+		// ------------------------------------------------------------
+
+		// 背景用エレメント
+
+		// ------------------------------------------------------------
+
+		// エレメントを作成
+
+		_element_bg = document.createElement("div");
+
+
+
+		// スタイルを設定
+
+		style = _element_bg.style;
+
+		style.position = "absolute";
+
+		style.backgroundColor = "#000";
+
+		var opacity = 0.5;
+
+		style.opacity = opacity;
+
+		style.filter = "alpha(opacity=" + (opacity * 100) + ")";
+
+
+
+		// BODY のノードリストに登録する
+
+		document.body.appendChild(_element_bg);
+
+
+
+		// ------------------------------------------------------------
+
+		// ポップアップ用エレメント
+
+		// ------------------------------------------------------------
+
+		// ポップアップ用エレメントを作成
+
+		_element_popup = document.createElement("div");
+
+
+
+		// スタイルを設定する
+
+		style = _element_popup.style;
+
+		style.position = "absolute";
+
+		style.width  = "300px";
+
+		style.backgroundColor = "#F8FAFA";
+
+		style.border = "4px #5c90d2 solid";
+
+		style.borderRadius = "10px";
+
+		style.boxShadow = "5px 5px 10px #444";
+
+
+
+		// BODY のノードリストに登録する
+
+		document.body.appendChild(_element_popup);
+
+
+
+		// ------------------------------------------------------------
+
+		// HTML 文字列を指定して、DOM オブジェクトをまとめて構築する
+
+		// ------------------------------------------------------------
+
+		_element_popup.innerHTML = '' +
+
+			'<div style="font-weight:bold; background:#5c90d2; color:#fff; padding:8px;">' +
+
+			'	Result' +
+
+			'</div>' +
+
+			'<div id="alert_dialog_message" style="margin:8px; padding:18px; font-size:18px; background:#fff; border:1px solid #888;">' +
+
+			'</div>' +
+
+			'<div style="margin:10px;" align = "right">' +
+
+
+
+			'<input type="button" id="alert_dialog_button" class ="btn btn-minw btn-danger" style="width:30%;" value="Close">' +
+
+			'</div>';
+
+			
+
+		// ------------------------------------------------------------
+
+		// ENTERキーとスペースキーを無効する
+
+		// ------------------------------------------------------------	
+
+		$(function(){
+
+        $("input"). keydown(function(e) {
+
+            if ((e.which && e.which === 13) || (e.keyCode && e.keyCode === 13) || (e.which && e.which === 32) || (e.keyCode && e.keyCode === 32)) {
+
+                return false;
+
+            } else {
+
+                return true;
+
+            }
+
+        });
+
+		});	
+
+				
+
+		// ------------------------------------------------------------
+
+		// クリック時に実行されるイベント
+
+		// ------------------------------------------------------------
+
+		// "alert_dialog_button" という ID 属性のエレメントを取得する
+
+		var element_button = document.getElementById("alert_dialog_button");
+
+		element_button.onclick = function (){
+
+
+
+			// コールバック関数を実行
+
+			if(_this.onclose){
+
+				_this.onclose();
+
+			}
+
+
+
+			// 解放
+
+			release();
+
+		};
+
+
+
+		// ------------------------------------------------------------
+
+		// イベントのリッスンを開始する
+
+		// ------------------------------------------------------------
+
+		// イベントリスナーに対応している
+
+		if(window.addEventListener){
+
+
+
+			// リサイズされるたびに実行されるイベント
+
+			window.addEventListener("resize" , update);
+
+			// スクロールされるたびに実行されるイベント
+
+			window.addEventListener("scroll" , update);
+
+
+
+		// アタッチイベントに対応している
+
+		}else if(window.attachEvent){
+
+
+
+			// リサイズされるたびに実行されるイベント
+
+			window.attachEvent("onresize" , update);
+
+			// スクロールされるたびに実行されるイベント
+
+			window.attachEvent("onscroll" , update);
+
+
+
+		}
+
+
+
+		// 更新
+
+		update();
+
+	})();
+
+}
+
+
+
+// --------------------------------------------------------------------------------
+
+// AlertDialog クラスを使用する
+
+// --------------------------------------------------------------------------------
+
+// 確認用ダイアログを生成
+
+var alert_dialog = new AlertDialog();
+
+
+
+	// 幅を設定する
+
+	alert_dialog.setWidth(300);
+
+
+
+	// メッセージをセット
+
+	var ketqua = ' '+your_answer_correct+'/'+question_count+'  ';
+
+	alert_dialog.setMessage(ketqua);
+
+
+
+	// 終了時に実行されるイベント
+
+	alert_dialog.onclose = function (){
+
+		console.log("Đã Close");
+
+	};
+	
+}
+
+
+
+</script>
+<link rel="stylesheet" href="oneui.css"><link rel="stylesheet" href="bootstrap.css"></div>
+</body>
+</html>
