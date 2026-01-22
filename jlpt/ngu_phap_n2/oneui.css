@@ -11621,3 +11621,7 @@ a:hover.back-to-top {
 		padding-bottom:50px
 	}
 }
+#lamlai,#ketqua {
+	  position: sticky;
+	  bottom: 0;
+}
