@@ -4444,12 +4444,6 @@ margin-right: -66px !important; }
 .autors-widget{
   display:none
 }
-table {
-  width: 100%;
+div {
   max-width: 100%;
-  border-collapse: collapse;
-}
-
-td {
-  width: auto !important;
 }
