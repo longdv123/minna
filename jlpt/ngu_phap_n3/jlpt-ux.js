@@ -1,7 +1,12 @@
 /**
  * JLPT WebView UX overlay.
  * Loaded at the end of each quiz page (script src="jlpt-ux.js").
- * Flutter can also inject this file via runJavaScript after load.
+ *
+ * Language: Flutter should set the user's mother tongue before/at load:
+ *   1) UserScript at document start: window.jlptUxLang = 'en';
+ *   2) URL query: quiz.html?lang=en
+ *   3) After load: controller.runJavaScript("jlptUxSetLang('en')")
+ * Supported: en, vi, ja, zh, zh-TW, ko, th, id. Unknown codes fall back to en.
  */
 (function () {
   if (window.__jlptUxInit) return;
@@ -9,6 +14,7 @@
 
   var STORAGE_ONBOARD = "jlpt_ux_onboard_v1";
   var STORAGE_ONE_Q = "jlpt_ux_one_q";
+  var STORAGE_LANG = "jlpt_ux_lang";
 
   var state = {
     graded: false,
@@ -16,19 +22,483 @@
     currentIndex: 0,
     origCheck: null,
     origReset: null,
-    origResultCorrect: null
+    origResultCorrect: null,
+    lang: "en"
   };
 
-  var INSTRUCTION_HINTS = [
-    { test: /読み方/, hint: "Chọn cách đọc đúng của phần gạch chân." },
-    { test: /漢字で書く/, hint: "Chọn chữ Hán đúng cho phần gạch chân." },
-    { test: /意味が最も近い/, hint: "Chọn từ gần nghĩa nhất với phần gạch chân." },
-    { test: /使い方/, hint: "Chọn câu dùng từ đó đúng nhất." },
-    { test: /（　*　*）に入れる/, hint: "Chọn cụm từ thích hợp để điền vào ngoặc." },
-    { test: /に入れるのに最もよい/, hint: "Chọn cụm từ thích hợp để điền vào chỗ trống." },
-    { test: /★/, hint: "Sắp xếp / chọn cụm thích hợp cho vị trí ★." },
-    { test: /文章を読んで/, hint: "Đọc đoạn văn và chọn đáp án điền vào chỗ trống." }
+  var HINT_RULES = [
+    { test: /読み方/, key: "hintReading" },
+    { test: /漢字で書く/, key: "hintKanji" },
+    { test: /意味が最も近い/, key: "hintSynonym" },
+    { test: /使い方/, key: "hintUsage" },
+    { test: /（　*　*）に入れる/, key: "hintParen" },
+    { test: /に入れるのに最もよい/, key: "hintBlank" },
+    { test: /★/, key: "hintStar" },
+    { test: /文章を読んで/, key: "hintPassage" }
   ];
+
+  var LANG_ALIASES = {
+    vn: "vi",
+    vie: "vi",
+    vietnamese: "vi",
+    "vi-vn": "vi",
+    eng: "en",
+    english: "en",
+    "en-us": "en",
+    "en-gb": "en",
+    jp: "ja",
+    jpn: "ja",
+    japanese: "ja",
+    "ja-jp": "ja",
+    cn: "zh",
+    chi: "zh",
+    chinese: "zh",
+    "zh-cn": "zh",
+    "zh-hans": "zh",
+    "zh-sg": "zh",
+    "zh-tw": "zh-TW",
+    "zh-hk": "zh-TW",
+    "zh-hant": "zh-TW",
+    "zh-mo": "zh-TW",
+    kr: "ko",
+    kor: "ko",
+    korean: "ko",
+    "ko-kr": "ko",
+    thai: "th",
+    "th-th": "th",
+    ind: "id",
+    indonesian: "id",
+    "id-id": "id"
+  };
+
+  var STRINGS = {
+    en: {
+      submit: "Submit",
+      retry: "Retry",
+      reviewWrong: "Review mistakes",
+      close: "Close",
+      cancel: "Cancel",
+      ok: "OK",
+      menu: "Menu",
+      prev: "Previous",
+      next: "Next",
+      moreAll: "Show all questions",
+      moreOne: "One question at a time",
+      meaning: "Meaning",
+      answers: "Answer key",
+      guide: "How to use",
+      result: "Result",
+      meaningLocked: "Submit the quiz to see the translation.",
+      answersLocked: "Submit the quiz to see the answer key.",
+      unanswered: "You still have {n} unanswered questions. Submit anyway?",
+      retryConfirm: "Retry this test? All answers will be cleared.",
+      progressCorrect: "Correct {correct}/{total} ({pct}%)",
+      progressQuestion: "Question {current}/{total} · answered {answered}/{total}",
+      progressAnswered: "Answered {answered}/{total}",
+      testNumber: "Test {n}",
+      scoreCorrect: "Correct {pct}%",
+      hintReading: "Choose the correct reading of the underlined part.",
+      hintKanji: "Choose the correct kanji for the underlined part.",
+      hintSynonym: "Choose the word closest in meaning to the underlined part.",
+      hintUsage: "Choose the sentence that uses the word correctly.",
+      hintParen: "Choose the best option to fill in the parentheses.",
+      hintBlank: "Choose the best option to fill in the blank.",
+      hintStar: "Choose the best phrase for the ★ position.",
+      hintPassage: "Read the passage and choose the best option for each blank.",
+      hintDefault: "Choose one answer (1–4 / A–D) for each question.",
+      onboard1Title: "How to answer",
+      onboard1Body: "Each question has 4 choices (A–D or 1–4). Tap the whole row to select — you do not need to hit the small circle.",
+      onboard2Title: "What to answer",
+      onboard2Body: "The underlined or highlighted word is what the question asks about. A short instruction in your language appears above each section.",
+      onboard3Title: "Submit and retry",
+      onboard3Body: "Use the bottom bar to submit for scoring or retry to clear answers. Open ⋯ to switch to one-question mode — easier when you are starting out.",
+      onboardBack: "Back",
+      onboardNext: "Next",
+      onboardStart: "Start"
+    },
+    vi: {
+      submit: "Nộp bài",
+      retry: "Làm lại",
+      reviewWrong: "Xem lỗi",
+      close: "Đóng",
+      cancel: "Hủy",
+      ok: "Đồng ý",
+      menu: "Menu",
+      prev: "Câu trước",
+      next: "Câu sau",
+      moreAll: "Xem tất cả câu",
+      moreOne: "Làm từng câu",
+      meaning: "Dịch nghĩa",
+      answers: "Đáp án",
+      guide: "Hướng dẫn",
+      result: "Kết quả",
+      meaningLocked: "Nộp bài xong sẽ hiện bản dịch.",
+      answersLocked: "Nộp bài xong mới xem đáp án.",
+      unanswered: "Còn {n} câu chưa chọn. Nộp bài luôn?",
+      retryConfirm: "Làm lại đề này? Mọi câu trả lời sẽ bị xóa.",
+      progressCorrect: "Đúng {correct}/{total} ({pct}%)",
+      progressQuestion: "Câu {current}/{total} · đã chọn {answered}/{total}",
+      progressAnswered: "Đã chọn {answered}/{total}",
+      testNumber: "Đề số {n}",
+      scoreCorrect: "Đúng {pct}%",
+      hintReading: "Chọn cách đọc đúng của phần gạch chân.",
+      hintKanji: "Chọn chữ Hán đúng cho phần gạch chân.",
+      hintSynonym: "Chọn từ gần nghĩa nhất với phần gạch chân.",
+      hintUsage: "Chọn câu dùng từ đó đúng nhất.",
+      hintParen: "Chọn cụm từ thích hợp để điền vào ngoặc.",
+      hintBlank: "Chọn cụm từ thích hợp để điền vào chỗ trống.",
+      hintStar: "Sắp xếp / chọn cụm thích hợp cho vị trí ★.",
+      hintPassage: "Đọc đoạn văn và chọn đáp án điền vào chỗ trống.",
+      hintDefault: "Chọn một đáp án (1–4 / A–D) cho mỗi câu.",
+      onboard1Title: "Cách làm bài",
+      onboard1Body: "Mỗi câu có 4 lựa chọn A–D (hoặc 1–4). Chạm vào cả dòng đáp án để chọn, không cần nhằm đúng nút tròn nhỏ.",
+      onboard2Title: "Phần cần trả lời",
+      onboard2Body: "Từ được gạch chân hoặc tô màu là phần câu hỏi. Ở trên mỗi nhóm có dòng giải thích yêu cầu bằng ngôn ngữ của bạn.",
+      onboard3Title: "Nộp bài và làm lại",
+      onboard3Body: "Thanh dưới cùng: Nộp bài để chấm điểm, Làm lại để xóa đáp án. Bấm ⋯ để làm từng câu một — dễ hơn khi mới bắt đầu.",
+      onboardBack: "Quay lại",
+      onboardNext: "Tiếp",
+      onboardStart: "Bắt đầu"
+    },
+    ja: {
+      submit: "採点する",
+      retry: "やり直す",
+      reviewWrong: "間違いを見る",
+      close: "閉じる",
+      cancel: "キャンセル",
+      ok: "OK",
+      menu: "メニュー",
+      prev: "前の問題",
+      next: "次の問題",
+      moreAll: "全問を表示",
+      moreOne: "1問ずつ解く",
+      meaning: "意味",
+      answers: "正解",
+      guide: "使い方",
+      result: "結果",
+      meaningLocked: "採点後に訳が表示されます。",
+      answersLocked: "採点後に正解を見られます。",
+      unanswered: "未回答が {n} 問あります。このまま採点しますか？",
+      retryConfirm: "やり直しますか？回答はすべて消えます。",
+      progressCorrect: "正解 {correct}/{total}（{pct}%）",
+      progressQuestion: "問題 {current}/{total} · 回答済み {answered}/{total}",
+      progressAnswered: "回答済み {answered}/{total}",
+      testNumber: "第{n}回",
+      scoreCorrect: "正解率 {pct}%",
+      hintReading: "下線部の正しい読み方を選んでください。",
+      hintKanji: "下線部に合う漢字を選んでください。",
+      hintSynonym: "下線部に最も近い意味の語を選んでください。",
+      hintUsage: "その語の正しい使い方の文を選んでください。",
+      hintParen: "（　）に入る最もよいものを選んでください。",
+      hintBlank: "空欄に入る最もよいものを選んでください。",
+      hintStar: "★の位置に入る最もよいものを選んでください。",
+      hintPassage: "文章を読んで、空欄に入る最もよいものを選んでください。",
+      hintDefault: "各問について選択肢（1–4 / A–D）から1つ選んでください。",
+      onboard1Title: "答え方",
+      onboard1Body: "各問は選択肢が4つ（A–D または 1–4）です。丸印だけでなく、行全体をタップして選べます。",
+      onboard2Title: "何を答えるか",
+      onboard2Body: "下線や色付きの語が問題の対象です。各セクションの上に、あなたの言語での短い説明があります。",
+      onboard3Title: "採点とやり直し",
+      onboard3Body: "下のバーで採点するか、やり直して回答を消せます。⋯ から1問ずつモードに切り替えられます。",
+      onboardBack: "戻る",
+      onboardNext: "次へ",
+      onboardStart: "始める"
+    },
+    zh: {
+      submit: "提交",
+      retry: "重做",
+      reviewWrong: "查看错题",
+      close: "关闭",
+      cancel: "取消",
+      ok: "确定",
+      menu: "菜单",
+      prev: "上一题",
+      next: "下一题",
+      moreAll: "显示全部题目",
+      moreOne: "逐题作答",
+      meaning: "释义",
+      answers: "答案",
+      guide: "使用说明",
+      result: "成绩",
+      meaningLocked: "提交后即可查看译文。",
+      answersLocked: "提交后即可查看答案。",
+      unanswered: "还有 {n} 题未作答。确定提交吗？",
+      retryConfirm: "重做本套题？所有作答将被清除。",
+      progressCorrect: "正确 {correct}/{total}（{pct}%）",
+      progressQuestion: "第 {current}/{total} 题 · 已答 {answered}/{total}",
+      progressAnswered: "已答 {answered}/{total}",
+      testNumber: "第 {n} 套",
+      scoreCorrect: "正确率 {pct}%",
+      hintReading: "请选择划线部分的正确读音。",
+      hintKanji: "请选择划线部分对应的正确汉字。",
+      hintSynonym: "请选择与划线部分意思最接近的词。",
+      hintUsage: "请选择该词用法正确的句子。",
+      hintParen: "请选择填入括号的最恰当选项。",
+      hintBlank: "请选择填入空格的最恰当选项。",
+      hintStar: "请选择填入 ★ 位置的最恰当选项。",
+      hintPassage: "请阅读文章，选择填入空格的最恰当选项。",
+      hintDefault: "每题从选项（1–4 / A–D）中选一个答案。",
+      onboard1Title: "如何作答",
+      onboard1Body: "每题有 4 个选项（A–D 或 1–4）。点击整行即可选择，不必对准小圆点。",
+      onboard2Title: "题目问什么",
+      onboard2Body: "下划线或高亮的词就是要考查的部分。每个部分上方有你所用语言的简短说明。",
+      onboard3Title: "提交与重做",
+      onboard3Body: "用底部栏提交评分，或重做以清空答案。点 ⋯ 可改为一次一题，更适合初学者。",
+      onboardBack: "返回",
+      onboardNext: "下一步",
+      onboardStart: "开始"
+    },
+    "zh-TW": {
+      submit: "提交",
+      retry: "重做",
+      reviewWrong: "查看錯題",
+      close: "關閉",
+      cancel: "取消",
+      ok: "確定",
+      menu: "選單",
+      prev: "上一題",
+      next: "下一題",
+      moreAll: "顯示全部題目",
+      moreOne: "逐題作答",
+      meaning: "釋義",
+      answers: "答案",
+      guide: "使用說明",
+      result: "成績",
+      meaningLocked: "提交後即可查看譯文。",
+      answersLocked: "提交後即可查看答案。",
+      unanswered: "還有 {n} 題未作答。確定提交嗎？",
+      retryConfirm: "重做本套題？所有作答將被清除。",
+      progressCorrect: "正確 {correct}/{total}（{pct}%）",
+      progressQuestion: "第 {current}/{total} 題 · 已答 {answered}/{total}",
+      progressAnswered: "已答 {answered}/{total}",
+      testNumber: "第 {n} 套",
+      scoreCorrect: "正確率 {pct}%",
+      hintReading: "請選擇劃線部分的正確讀音。",
+      hintKanji: "請選擇劃線部分對應的正確漢字。",
+      hintSynonym: "請選擇與劃線部分意思最接近的詞。",
+      hintUsage: "請選擇該詞用法正確的句子。",
+      hintParen: "請選擇填入括號的最恰當選項。",
+      hintBlank: "請選擇填入空格的最恰當選項。",
+      hintStar: "請選擇填入 ★ 位置的最恰當選項。",
+      hintPassage: "請閱讀文章，選擇填入空格的最恰當選項。",
+      hintDefault: "每題從選項（1–4 / A–D）中選一個答案。",
+      onboard1Title: "如何作答",
+      onboard1Body: "每題有 4 個選項（A–D 或 1–4）。點整行即可選擇，不必對準小圓點。",
+      onboard2Title: "題目問什麼",
+      onboard2Body: "底線或醒目提示的詞就是要考查的部分。每個部分上方有你所用語言的簡短說明。",
+      onboard3Title: "提交與重做",
+      onboard3Body: "用底部列提交評分，或重做以清空答案。點 ⋯ 可改為一次一題，更適合初學者。",
+      onboardBack: "返回",
+      onboardNext: "下一步",
+      onboardStart: "開始"
+    },
+    ko: {
+      submit: "제출",
+      retry: "다시 풀기",
+      reviewWrong: "틀린 문제 보기",
+      close: "닫기",
+      cancel: "취소",
+      ok: "확인",
+      menu: "메뉴",
+      prev: "이전 문제",
+      next: "다음 문제",
+      moreAll: "모든 문제 보기",
+      moreOne: "한 문제씩 풀기",
+      meaning: "의미",
+      answers: "정답",
+      guide: "사용 방법",
+      result: "결과",
+      meaningLocked: "제출하면 번역을 볼 수 있습니다.",
+      answersLocked: "제출하면 정답을 볼 수 있습니다.",
+      unanswered: "아직 {n}문항이 남아 있습니다. 제출할까요?",
+      retryConfirm: "다시 풀까요? 모든 답이 지워집니다.",
+      progressCorrect: "정답 {correct}/{total} ({pct}%)",
+      progressQuestion: "문제 {current}/{total} · 응답 {answered}/{total}",
+      progressAnswered: "응답 {answered}/{total}",
+      testNumber: "{n}회",
+      scoreCorrect: "정답률 {pct}%",
+      hintReading: "밑줄 친 부분의 올바른 읽기를 고르세요.",
+      hintKanji: "밑줄 친 부분에 맞는 한자를 고르세요.",
+      hintSynonym: "밑줄 친 부분과 가장 가까운 뜻의 단어를 고르세요.",
+      hintUsage: "그 단어를 올바르게 쓴 문장을 고르세요.",
+      hintParen: "괄호에 들어갈 가장 알맞은 것을 고르세요.",
+      hintBlank: "빈칸에 들어갈 가장 알맞은 것을 고르세요.",
+      hintStar: "★ 자리에 들어갈 가장 알맞은 것을 고르세요.",
+      hintPassage: "글을 읽고 빈칸에 들어갈 가장 알맞은 것을 고르세요.",
+      hintDefault: "각 문항에서 보기(1–4 / A–D) 중 하나를 고르세요.",
+      onboard1Title: "푸는 방법",
+      onboard1Body: "각 문항은 보기 4개(A–D 또는 1–4)입니다. 작은 원뿐 아니라 줄 전체를 눌러 선택할 수 있습니다.",
+      onboard2Title: "무엇을 묻나요",
+      onboard2Body: "밑줄이거나 강조된 단어가 문제의 대상입니다. 각 섹션 위에 사용 언어로 짧은 안내가 있습니다.",
+      onboard3Title: "제출과 다시 풀기",
+      onboard3Body: "아래 바로 채점하거나 다시 풀어 답을 지울 수 있습니다. ⋯ 에서 한 문제씩 모드로 바꿀 수 있습니다.",
+      onboardBack: "뒤로",
+      onboardNext: "다음",
+      onboardStart: "시작"
+    },
+    th: {
+      submit: "ส่งคำตอบ",
+      retry: "ทำใหม่",
+      reviewWrong: "ดูข้อที่ผิด",
+      close: "ปิด",
+      cancel: "ยกเลิก",
+      ok: "ตกลง",
+      menu: "เมนู",
+      prev: "ข้อก่อน",
+      next: "ข้อถัดไป",
+      moreAll: "แสดงทุกข้อ",
+      moreOne: "ทำทีละข้อ",
+      meaning: "ความหมาย",
+      answers: "เฉลย",
+      guide: "วิธีใช้",
+      result: "ผลคะแนน",
+      meaningLocked: "ส่งคำตอบแล้วจึงดูคำแปลได้",
+      answersLocked: "ส่งคำตอบแล้วจึงดูเฉลยได้",
+      unanswered: "ยังไม่ได้ตอบ {n} ข้อ ส่งเลยไหม?",
+      retryConfirm: "ทำชุดนี้อีกครั้ง? คำตอบทั้งหมดจะถูกลบ",
+      progressCorrect: "ถูก {correct}/{total} ({pct}%)",
+      progressQuestion: "ข้อ {current}/{total} · ตอบแล้ว {answered}/{total}",
+      progressAnswered: "ตอบแล้ว {answered}/{total}",
+      testNumber: "ชุดที่ {n}",
+      scoreCorrect: "ถูก {pct}%",
+      hintReading: "เลือกวิธีอ่านที่ถูกต้องของส่วนที่ขีดเส้นใต้",
+      hintKanji: "เลือกคันจิที่ถูกต้องของส่วนที่ขีดเส้นใต้",
+      hintSynonym: "เลือกคำที่ความหมายใกล้เคียงส่วนที่ขีดเส้นใต้ที่สุด",
+      hintUsage: "เลือกประโยคที่ใช้คำนั้นได้ถูกต้อง",
+      hintParen: "เลือกตัวเลือกที่เหมาะสมที่สุดสำหรับวงเล็บ",
+      hintBlank: "เลือกตัวเลือกที่เหมาะสมที่สุดสำหรับช่องว่าง",
+      hintStar: "เลือกวลีที่เหมาะสมที่สุดสำหรับตำแหน่ง ★",
+      hintPassage: "อ่านข้อความแล้วเลือกคำตอบสำหรับช่องว่าง",
+      hintDefault: "เลือกคำตอบหนึ่งข้อ (1–4 / A–D) ในแต่ละข้อ",
+      onboard1Title: "วิธีตอบ",
+      onboard1Body: "แต่ละข้อมี 4 ตัวเลือก (A–D หรือ 1–4) แตะทั้งแถวเพื่อเลือก ไม่ต้องเล็งจุดกลมเล็ก",
+      onboard2Title: "ต้องตอบอะไร",
+      onboard2Body: "คำที่ขีดเส้นใต้หรือไฮไลต์คือส่วนที่ถาม ด้านบนแต่ละชุดมีคำอธิบายสั้น ๆ ในภาษาของคุณ",
+      onboard3Title: "ส่งและทำใหม่",
+      onboard3Body: "แถบล่างใช้ส่งเพื่อตรวจคะแนน หรือทำใหม่เพื่อล้างคำตอบ กด ⋯ เพื่อทำทีละข้อ ง่ายกว่าตอนเริ่มเรียน",
+      onboardBack: "ย้อนกลับ",
+      onboardNext: "ถัดไป",
+      onboardStart: "เริ่ม"
+    },
+    id: {
+      submit: "Kirim",
+      retry: "Ulangi",
+      reviewWrong: "Lihat yang salah",
+      close: "Tutup",
+      cancel: "Batal",
+      ok: "OK",
+      menu: "Menu",
+      prev: "Soal sebelumnya",
+      next: "Soal berikutnya",
+      moreAll: "Tampilkan semua soal",
+      moreOne: "Satu soal per layar",
+      meaning: "Arti",
+      answers: "Kunci jawaban",
+      guide: "Cara pakai",
+      result: "Hasil",
+      meaningLocked: "Kirim kuis untuk melihat terjemahan.",
+      answersLocked: "Kirim kuis untuk melihat kunci jawaban.",
+      unanswered: "Masih ada {n} soal belum dijawab. Kirim sekarang?",
+      retryConfirm: "Ulangi tes ini? Semua jawaban akan dihapus.",
+      progressCorrect: "Benar {correct}/{total} ({pct}%)",
+      progressQuestion: "Soal {current}/{total} · terjawab {answered}/{total}",
+      progressAnswered: "Terjawab {answered}/{total}",
+      testNumber: "Tes {n}",
+      scoreCorrect: "Benar {pct}%",
+      hintReading: "Pilih cara baca yang benar untuk bagian yang digarisbawahi.",
+      hintKanji: "Pilih kanji yang benar untuk bagian yang digarisbawahi.",
+      hintSynonym: "Pilih kata yang paling dekat artinya dengan bagian yang digarisbawahi.",
+      hintUsage: "Pilih kalimat yang memakai kata itu dengan benar.",
+      hintParen: "Pilih opsi terbaik untuk mengisi tanda kurung.",
+      hintBlank: "Pilih opsi terbaik untuk mengisi bagian kosong.",
+      hintStar: "Pilih frasa terbaik untuk posisi ★.",
+      hintPassage: "Baca teks dan pilih opsi terbaik untuk setiap bagian kosong.",
+      hintDefault: "Pilih satu jawaban (1–4 / A–D) untuk setiap soal.",
+      onboard1Title: "Cara menjawab",
+      onboard1Body: "Setiap soal punya 4 pilihan (A–D atau 1–4). Ketuk seluruh baris untuk memilih — tidak perlu mengenai lingkaran kecil.",
+      onboard2Title: "Apa yang ditanyakan",
+      onboard2Body: "Kata yang digarisbawahi atau disorot adalah inti soal. Di atas setiap bagian ada petunjuk singkat dalam bahasa Anda.",
+      onboard3Title: "Kirim dan ulangi",
+      onboard3Body: "Bilah bawah untuk mengirim agar dinilai, atau ulangi untuk menghapus jawaban. Buka ⋯ untuk mode satu soal — lebih mudah bagi pemula.",
+      onboardBack: "Kembali",
+      onboardNext: "Lanjut",
+      onboardStart: "Mulai"
+    }
+  };
+
+  function normalizeLang(code) {
+    if (!code) return "en";
+    var raw = String(code).trim().replace(/_/g, "-").toLowerCase();
+    if (LANG_ALIASES[raw]) return LANG_ALIASES[raw];
+    if (raw.indexOf("zh-hant") === 0 || raw === "zh-tw" || raw === "zh-hk") return "zh-TW";
+    var base = raw.split("-")[0];
+    if (base === "zh") return "zh";
+    if (STRINGS[raw]) return raw;
+    if (STRINGS[base]) return base;
+    return "en";
+  }
+
+  function detectLang() {
+    var fromQuery = "";
+    try {
+      var match = String(location.search || "").match(/[?&]lang=([^&]+)/i);
+      if (match) fromQuery = decodeURIComponent(match[1].replace(/\+/g, " "));
+    } catch (e) {}
+    if (fromQuery) return normalizeLang(fromQuery);
+    if (window.jlptUxLang) return normalizeLang(window.jlptUxLang);
+    try {
+      var stored = localStorage.getItem(STORAGE_LANG);
+      if (stored) return normalizeLang(stored);
+    } catch (e2) {}
+    return "en";
+  }
+
+  function formatStr(str, vars) {
+    if (!vars) return str;
+    return String(str).replace(/\{(\w+)\}/g, function (_, key) {
+      return vars[key] != null ? String(vars[key]) : "";
+    });
+  }
+
+  function t(key, vars) {
+    var pack = STRINGS[state.lang] || STRINGS.en;
+    var str = (pack && pack[key]) || STRINGS.en[key] || key;
+    return formatStr(str, vars);
+  }
+
+  function persistLang(code) {
+    state.lang = normalizeLang(code);
+    try {
+      localStorage.setItem(STORAGE_LANG, state.lang);
+    } catch (e) {}
+    window.jlptUxLang = state.lang;
+    try {
+      document.documentElement.setAttribute("lang", state.lang);
+    } catch (e2) {}
+  }
+
+  function applyLang() {
+    var more = qs("#jlpt-more");
+    if (more) more.setAttribute("aria-label", t("menu"));
+    var prev = qs("#jlpt-prev");
+    if (prev) prev.setAttribute("aria-label", t("prev"));
+    var next = qs("#jlpt-next");
+    if (next) next.setAttribute("aria-label", t("next"));
+    var title = qs(".jlpt-topbar-title");
+    if (title) title.textContent = pageTitle();
+    qsa("[data-hint-key]").forEach(function (el) {
+      el.textContent = t(el.getAttribute("data-hint-key"));
+    });
+    var closeBtn = document.getElementById("alert_dialog_button");
+    if (closeBtn) closeBtn.value = t("close");
+    renderBar();
+    updateProgress();
+  }
+
+  window.jlptUxSetLang = function (code) {
+    persistLang(code);
+    applyLang();
+  };
 
   function ready(fn) {
     if (document.readyState === "loading") {
@@ -196,7 +666,10 @@
 
   function pageTitle() {
     var h2 = qs("h2");
-    if (h2 && h2.textContent.trim()) return h2.textContent.trim();
+    var raw = h2 && h2.textContent ? h2.textContent.trim() : "";
+    var num = raw.match(/Đề số\s*0*(\d+)/i) || raw.match(/(\d+)/);
+    if (num) return t("testNumber", { n: num[1] });
+    if (raw) return raw;
     var file = (location.pathname || "").split("/").pop() || "";
     return file.replace(/\.html$/i, "").replace(/-/g, " ") || "JLPT";
   }
@@ -205,21 +678,20 @@
     qsa("h4").forEach(function (h4) {
       if (h4.dataset.jlptHinted) return;
       var text = h4.textContent || "";
-      var hint = "";
-      for (var i = 0; i < INSTRUCTION_HINTS.length; i++) {
-        if (INSTRUCTION_HINTS[i].test.test(text)) {
-          hint = INSTRUCTION_HINTS[i].hint;
+      var key = "";
+      for (var i = 0; i < HINT_RULES.length; i++) {
+        if (HINT_RULES[i].test.test(text)) {
+          key = HINT_RULES[i].key;
           break;
         }
       }
-      if (!hint && /問題/.test(text)) {
-        hint = "Chọn một đáp án (1–4 / A–D) cho mỗi câu.";
-      }
-      if (!hint) return;
+      if (!key && /問題/.test(text)) key = "hintDefault";
+      if (!key) return;
       h4.dataset.jlptHinted = "1";
       var el = document.createElement("div");
       el.className = "jlpt-hint";
-      el.textContent = hint;
+      el.setAttribute("data-hint-key", key);
+      el.textContent = t(key);
       if (h4.nextSibling) h4.parentNode.insertBefore(el, h4.nextSibling);
       else h4.parentNode.appendChild(el);
     });
@@ -263,7 +735,7 @@
       '<div class="jlpt-topbar-progress" id="jlpt-progress-text"></div>' +
       '<div class="jlpt-progress-track"><div class="jlpt-progress-fill" id="jlpt-progress-fill"></div></div>' +
       "</div>" +
-      '<button type="button" class="jlpt-icon-btn" id="jlpt-more" aria-label="Menu">⋯</button>';
+      '<button type="button" class="jlpt-icon-btn" id="jlpt-more" aria-label="">⋯</button>';
     document.body.appendChild(top);
     qs(".jlpt-topbar-title", top).textContent = pageTitle();
 
@@ -271,10 +743,10 @@
     bar.id = "jlpt-bar";
     bar.className = "jlpt-bar";
     bar.innerHTML =
-      '<button type="button" class="nav" id="jlpt-prev" aria-label="Câu trước">‹</button>' +
-      '<button type="button" class="secondary" id="jlpt-secondary">Làm lại</button>' +
-      '<button type="button" class="primary" id="jlpt-primary">Nộp bài</button>' +
-      '<button type="button" class="nav" id="jlpt-next" aria-label="Câu sau">›</button>';
+      '<button type="button" class="nav" id="jlpt-prev" aria-label="">‹</button>' +
+      '<button type="button" class="secondary" id="jlpt-secondary"></button>' +
+      '<button type="button" class="primary" id="jlpt-primary"></button>' +
+      '<button type="button" class="nav" id="jlpt-next" aria-label="">›</button>';
     document.body.appendChild(bar);
 
     document.body.classList.add("jlpt-ux-ready");
@@ -288,6 +760,7 @@
     qs("#jlpt-next").onclick = function () {
       goQuestion(state.currentIndex + 1);
     };
+    applyLang();
   }
 
   function updateProgress() {
@@ -299,11 +772,15 @@
       if (state.graded) {
         var correct = countCorrect();
         var pct = total ? Math.round((correct / total) * 100) : 0;
-        text.textContent = "Đúng " + correct + "/" + total + " (" + pct + "%)";
+        text.textContent = t("progressCorrect", { correct: correct, total: total, pct: pct });
       } else if (state.oneQuestion) {
-        text.textContent = "Câu " + (state.currentIndex + 1) + "/" + total + " · đã chọn " + answered + "/" + total;
+        text.textContent = t("progressQuestion", {
+          current: state.currentIndex + 1,
+          total: total,
+          answered: answered
+        });
       } else {
-        text.textContent = "Đã chọn " + answered + "/" + total;
+        text.textContent = t("progressAnswered", { answered: answered, total: total });
       }
     }
     if (fill) {
@@ -330,14 +807,14 @@
     }
     if (primary && secondary) {
       if (state.graded) {
-        primary.textContent = "Xem lỗi";
+        primary.textContent = t("reviewWrong");
         primary.className = "primary";
-        secondary.textContent = "Làm lại";
+        secondary.textContent = t("retry");
         secondary.className = "secondary";
       } else {
-        primary.textContent = "Nộp bài";
+        primary.textContent = t("submit");
         primary.className = "primary";
-        secondary.textContent = "Làm lại";
+        secondary.textContent = t("retry");
         secondary.className = "secondary";
       }
     }
@@ -421,7 +898,7 @@
     var unanswered = total - countAnswered();
     if (unanswered > 0) {
       showConfirm(
-        "Còn " + unanswered + " câu chưa chọn. Nộp bài luôn?",
+        t("unanswered", { n: unanswered }),
         function () {
           doCheck();
         }
@@ -446,7 +923,7 @@
   }
 
   function retryQuiz() {
-    showConfirm("Làm lại đề này? Mọi câu trả lời sẽ bị xóa.", function () {
+    showConfirm(t("retryConfirm"), function () {
       state.graded = false;
       if (typeof state.origReset === "function") {
         state.origReset.call(window);
@@ -498,8 +975,9 @@
   }
 
   function unlockLearningAids() {
+    var show = state.lang === "vi";
     qsa(".nghia").forEach(function (el) {
-      el.style.display = "block";
+      el.style.display = show ? "block" : "none";
     });
   }
 
@@ -507,7 +985,7 @@
     var finish = document.getElementById("gui_ketqua");
     if (finish) finish.style.setProperty("display", "none", "important");
     var closeBtn = document.getElementById("alert_dialog_button");
-    if (closeBtn) closeBtn.value = "Đóng";
+    if (closeBtn) closeBtn.value = t("close");
 
     var msg = document.getElementById("alert_dialog_message");
     var correct = countCorrect();
@@ -518,9 +996,9 @@
       correct +
       "/" +
       total +
-      '</div><div class="jlpt-score-sub">Đúng ' +
-      pct +
-      "%</div></div>";
+      '</div><div class="jlpt-score-sub">' +
+      t("scoreCorrect", { pct: pct }) +
+      "</div></div>";
 
     if (msg) {
       msg.innerHTML = html;
@@ -548,9 +1026,9 @@
       }
     } else {
       showCenter(
-        "Kết quả",
+        t("result"),
         html,
-        [{ label: "Đóng", primary: true, fn: closeOverlays }]
+        [{ label: t("close"), primary: true, fn: closeOverlays }]
       );
     }
   }
@@ -606,8 +1084,8 @@
 
   function showConfirm(message, onOk) {
     showCenter(message, "", [
-      { label: "Hủy", fn: null },
-      { label: "Đồng ý", primary: true, fn: onOk }
+      { label: t("cancel"), fn: null },
+      { label: t("ok"), primary: true, fn: onOk }
     ]);
   }
 
@@ -619,18 +1097,18 @@
     sheet.className = "jlpt-sheet";
     var items = [];
     items.push({
-      label: state.oneQuestion ? "Xem tất cả câu" : "Làm từng câu",
+      label: state.oneQuestion ? t("moreAll") : t("moreOne"),
       fn: function () {
         setOneQuestion(!state.oneQuestion);
       }
     });
-    if (qs("#dichnghia")) {
+    if (qs("#dichnghia") && state.lang === "vi") {
       items.push({
-        label: "Dịch nghĩa",
+        label: t("meaning"),
         fn: function () {
           if (!state.graded) {
-            showCenter("Dịch nghĩa", "<p>Nộp bài xong sẽ hiện nghĩa tiếng Việt.</p>", [
-              { label: "Đóng", primary: true }
+            showCenter(t("meaning"), "<p>" + t("meaningLocked") + "</p>", [
+              { label: t("close"), primary: true }
             ]);
             return;
           }
@@ -642,11 +1120,11 @@
     }
     if (qs("#dapan")) {
       items.push({
-        label: "Đáp án",
+        label: t("answers"),
         fn: function () {
           if (!state.graded) {
-            showCenter("Đáp án", "<p>Nộp bài xong mới xem đáp án.</p>", [
-              { label: "Đóng", primary: true }
+            showCenter(t("answers"), "<p>" + t("answersLocked") + "</p>", [
+              { label: t("close"), primary: true }
             ]);
             return;
           }
@@ -655,12 +1133,12 @@
       });
     }
     items.push({
-      label: "Hướng dẫn",
+      label: t("guide"),
       fn: function () {
         showOnboarding(true);
       }
     });
-    items.push({ label: "Đóng", fn: null });
+    items.push({ label: t("close"), fn: null });
 
     items.forEach(function (item) {
       var b = document.createElement("button");
@@ -688,18 +1166,9 @@
     if (seen && !force) return;
 
     var steps = [
-      {
-        title: "Cách làm bài",
-        body: "Mỗi câu có 4 lựa chọn A–D (hoặc 1–4). Chạm vào cả dòng đáp án để chọn, không cần nhằm đúng nút tròn nhỏ."
-      },
-      {
-        title: "Phần cần trả lời",
-        body: "Từ được gạch chân hoặc tô xanh là phần câu hỏi. Ở trên mỗi nhóm có dòng tiếng Việt giải thích yêu cầu."
-      },
-      {
-        title: "Nộp bài và làm lại",
-        body: "Thanh dưới cùng: Nộp bài để chấm điểm, Làm lại để xóa đáp án. Bấm ⋯ để làm từng câu một — dễ hơn khi mới bắt đầu."
-      }
+      { title: t("onboard1Title"), body: t("onboard1Body") },
+      { title: t("onboard2Title"), body: t("onboard2Body") },
+      { title: t("onboard3Title"), body: t("onboard3Body") }
     ];
     var step = 0;
 
@@ -720,13 +1189,13 @@
         dots +
         "</div>" +
         '<div class="jlpt-actions">' +
-        (step > 0 ? '<button type="button" class="secondary" id="jlpt-ob-back">Quay lại</button>' : "") +
+        (step > 0 ? '<button type="button" class="secondary" id="jlpt-ob-back"></button>' : "") +
         '<button type="button" class="primary" id="jlpt-ob-next"></button>' +
         "</div></div>";
       qs("h3", wrap).textContent = s.title;
       qs("p", wrap).textContent = s.body;
       var next = qs("#jlpt-ob-next", wrap);
-      next.textContent = step === steps.length - 1 ? "Bắt đầu" : "Tiếp";
+      next.textContent = step === steps.length - 1 ? t("onboardStart") : t("onboardNext");
       next.style.background = "#5c90d2";
       next.style.color = "#fff";
       next.onclick = function () {
@@ -742,6 +1211,7 @@
       };
       var back = qs("#jlpt-ob-back", wrap);
       if (back) {
+        back.textContent = t("onboardBack");
         back.style.background = "#f2f4f7";
         back.onclick = function () {
           step--;
@@ -777,6 +1247,7 @@
       vp.content += ", viewport-fit=cover";
     }
     injectCss();
+    persistLang(detectLang());
     loadPrefs();
     wrapQuizFns();
     translateInstructions();
