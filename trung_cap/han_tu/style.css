@@ -75,7 +75,7 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {background: #fff;	borde
 .slide-title.sl2.active{color:#900}
 .slide-title.sl2:hover{color:#36C3DF; background:#FFFFFF;}
 .slide-title:hover{background:#CCC}
-.slide-title span{display:block; border-top:#FFF 1px solid; border-right:#FFF 1px solid;  padding:5px 10px;}
+.slide-title span{padding:5px 10px;}
 .slide-content{border:#999 1px solid; padding: 10px; border-top:0; background:#FFF; margin-bottom:5px; display:none; border-radius: 0 0 5px 5px}
 .slide-content.sl2{border:0; background:none; padding:0; padding-left:0px}
 .slide-title.sl2 span{ border:0}
