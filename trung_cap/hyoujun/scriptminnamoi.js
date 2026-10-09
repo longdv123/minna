@@ -1,3 +1,5 @@
+function dec_it(data){if(!data)return data;data=data.split('@').join('CAg');data=data.split('!').join('W5');data=data.split('*').join('CAgI');data=data.split('$').join('dGhl');data=data.split('%').join('YXN');data=data.split('&').join('YW');var bin;try{bin=atob(data)}catch(e){return data}try{var bytes=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);return new TextDecoder('utf-8').decode(bytes)}catch(e){try{return decodeURIComponent(escape(bin))}catch(e2){return bin}}}
+
 //Cài đặt cho audio Mới
 ;(function($, window, document, undefined) {
 	if (!$('#ppq-audio-player-style').length) {
