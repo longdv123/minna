@@ -1,0 +1,389 @@
+TestItems item1 = TestItems(
+      title: "Advanced Clause Patterns and Nuanced Grammatical Choices",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-clause-patterns-and-nuanced-grammatical-choices-offline.html')
+  );
+
+TestItems item2 = TestItems(
+      title: "Advanced Conditionality Without “If” Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-conditionality-without-if-exercise-offline.html')
+  );
+
+TestItems item3 = TestItems(
+      title: "Advanced Deduction and Speculation Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-deduction-and-speculation-exercise-offline.html')
+  );
+
+TestItems item4 = TestItems(
+      title: "Advanced Emphasis: Clefts, Fronting, and Inversion Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-emphasis-clefts-fronting-and-inversion-exercise-offline.html')
+  );
+
+TestItems item5 = TestItems(
+      title: "Advanced Future Tense Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-future-tense-exercise-offline.html')
+  );
+
+TestItems item6 = TestItems(
+      title: "Advanced Future Tenses Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-future-tenses-exercise-offline.html')
+  );
+
+TestItems item7 = TestItems(
+      title: "Advanced Future Tenses in Context: Clear Timeline Cues Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-future-tenses-in-context-clear-timeline-cues-exercise-offline.html')
+  );
+
+TestItems item8 = TestItems(
+      title: "Advanced Hedging, Boosting, and Commitment Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-hedging-boosting-and-commitment-exercise-offline.html')
+  );
+
+TestItems item9 = TestItems(
+      title: "Advanced Level Vocabulary Exercise | C2 Vocabulary",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-level-vocabulary-exercise-c2-vocabulary-offline.html')
+  );
+
+TestItems item10 = TestItems(
+      title: "Advanced Mixed Conditionals Across Time Frames Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-mixed-conditionals-across-time-frames-exercise-offline.html')
+  );
+
+TestItems item11 = TestItems(
+      title: "Advanced Modality and Evidential Meaning Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-modality-and-evidential-meaning-exercise-offline.html')
+  );
+
+TestItems item12 = TestItems(
+      title: "Advanced Past Tense Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-past-tense-exercise-offline.html')
+  );
+
+TestItems item13 = TestItems(
+      title: "Advanced Past Tenses in Context: Clear Timeline Cues Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-past-tenses-in-context-clear-timeline-cues-exercise-offline.html')
+  );
+
+TestItems item14 = TestItems(
+      title: "Advanced Prepositional Patterns and Fixed Phrases Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-prepositional-patterns-and-fixed-phrases-exercise-offline.html')
+  );
+
+TestItems item15 = TestItems(
+      title: "Advanced Reporting Frames Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-reporting-frames-exercise-offline.html')
+  );
+
+TestItems item16 = TestItems(
+      title: "Advanced Residual Subjunctive Forms Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-residual-subjunctive-forms-exercise-offline.html')
+  );
+
+TestItems item17 = TestItems(
+      title: "Advanced Stance and Writer Positioning Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/advanced-stance-and-writer-positioning-exercise-offline.html')
+  );
+
+TestItems item18 = TestItems(
+      title: "Allusion in Literary Texts Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/allusion-in-literary-texts-exercise-offline.html')
+  );
+
+TestItems item19 = TestItems(
+      title: "Anaphora in Rhetoric Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/anaphora-in-rhetoric-exercise-offline.html')
+  );
+
+TestItems item20 = TestItems(
+      title: "Aspect Shift for Pragmatic Effect Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/aspect-shift-for-pragmatic-effect-exercise-offline.html')
+  );
+
+TestItems item21 = TestItems(
+      title: "Bound Roots Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/bound-roots-exercise-offline.html')
+  );
+
+TestItems item22 = TestItems(
+      title: "Business Case Language Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/business-case-language-exercise-offline.html')
+  );
+
+TestItems item23 = TestItems(
+      title: "C2 Level Vocabulary Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/c2-level-grammar-exercise-offline.html')
+  );
+
+TestItems item24 = TestItems(
+      title: "C2 Level Vocabulary Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/c2-level-vocabulary-exercise-offline.html')
+  );
+
+TestItems item25 = TestItems(
+      title: "Challenging Deontic Modality in Formal Contexts Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/challenging-deontic-modality-in-formal-contexts-exercise-offline.html')
+  );
+
+TestItems item26 = TestItems(
+      title: "Challenging Remote Past and Counterfactual Meaning Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/challenging-remote-past-and-counterfactual-meaning-exercise-offline.html')
+  );
+
+TestItems item27 = TestItems(
+      title: "Colligation Pattern Recognition Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/colligation-pattern-recognition-exercise-offline.html')
+  );
+
+TestItems item28 = TestItems(
+      title: "Comparing Writer Stance Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/comparing-writer-stance-exercise-offline.html')
+  );
+
+TestItems item29 = TestItems(
+      title: "Complex Conditional Structures Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/complex-conditional-structures-exercise-offline.html')
+  );
+
+TestItems item30 = TestItems(
+      title: "Complex Inversion Structures Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/complex-inversion-structures-exercise-offline.html')
+  );
+
+TestItems item31 = TestItems(
+      title: "Conceptual Metaphor Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/conceptual-metaphor-exercise-offline.html')
+  );
+
+TestItems item32 = TestItems(
+      title: "Conditional Offers Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/conditional-offers-exercise-offline.html')
+  );
+
+TestItems item33 = TestItems(
+      title: "Critical Citation Language Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/critical-citation-language-exercise-offline.html')
+  );
+
+TestItems item34 = TestItems(
+      title: "Difficult Complex Premodification in Dense Prose Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/difficult-complex-premodification-in-dense-prose-exercise-offline.html')
+  );
+
+TestItems item35 = TestItems(
+      title: "Difficult Modal Perfects for Evaluation Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/difficult-modal-perfects-for-evaluation-exercise-offline.html')
+  );
+
+TestItems item36 = TestItems(
+      title: "Difficult Reporting with Layers of Distance and Attribution Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/difficult-reporting-with-layers-of-distance-and-attribution-exercise-offline.html')
+  );
+
+TestItems item37 = TestItems(
+      title: "Difficult Subjunctive and Irrealis Meaning Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/difficult-subjunctive-and-irrealis-meaning-exercise-offline.html')
+  );
+
+TestItems item38 = TestItems(
+      title: "Ellipsis, Scope, and Reference in Complex Sentences",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/ellipsis-scope-and-reference-in-complex-sentences-offline.html')
+  );
+
+TestItems item39 = TestItems(
+      title: "Engineering Constraint Language Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/engineering-constraint-language-exercise-offline.html')
+  );
+
+TestItems item40 = TestItems(
+      title: "Evaluation Language Error Correction Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/evaluation-language-error-correction-exercise-offline.html')
+  );
+
+TestItems item41 = TestItems(
+      title: "Evidential Stance Markers Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/evidential-stance-markers-exercise-offline.html')
+  );
+
+TestItems item42 = TestItems(
+      title: "Fixed Expressions and Idiomatic Collocations Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/fixed-expressions-and-idiomatic-collocations-exercise-offline.html')
+  );
+
+TestItems item43 = TestItems(
+      title: "Frame Markers Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/frame-markers-exercise-offline.html')
+  );
+
+TestItems item44 = TestItems(
+      title: "Functional Language Nuance Review Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/functional-language-nuance-review-exercise-offline.html')
+  );
+
+TestItems item45 = TestItems(
+      title: "Given and New Information Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/given-and-new-information-exercise-offline.html')
+  );
+
+TestItems item46 = TestItems(
+      title: "Hedged Certainty Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/hedged-certainty-exercise-offline.html')
+  );
+
+TestItems item47 = TestItems(
+      title: "Inference and Evaluation Paraphrase Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/inference-and-evaluation-paraphrase-exercise-offline.html')
+  );
+
+TestItems item48 = TestItems(
+      title: "Inflectional Morphology Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/inflectional-morphology-exercise-offline.html')
+  );
+
+TestItems item49 = TestItems(
+      title: "Information Structure Review Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/information-structure-review-exercise-offline.html')
+  );
+
+TestItems item50 = TestItems(
+      title: "Institutional Accountability Language Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/institutional-accountability-language-exercise-offline.html')
+  );
+
+TestItems item51 = TestItems(
+      title: "Interpreting Satirical Texts Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/interpreting-satirical-texts-exercise-offline.html')
+  );
+
+TestItems item52 = TestItems(
+      title: "Inversion in Formal and Literary English Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/inversion-in-formal-and-literary-english-exercise-offline.html')
+  );
+
+TestItems item53 = TestItems(
+      title: "Lexical Nuance and Precision Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/lexical-nuance-and-precision-exercise-offline.html')
+  );
+
+TestItems item54 = TestItems(
+      title: "Macrostructure in Texts Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/macrostructure-in-texts-exercise-offline.html')
+  );
+
+TestItems item55 = TestItems(
+      title: "Managing Disagreement Diplomatically Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/managing-disagreement-diplomatically-exercise-offline.html')
+  );
+
+TestItems item56 = TestItems(
+      title: "Mediating Informal Requests Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/mediating-informal-requests-exercise-offline.html')
+  );
+
+TestItems item57 = TestItems(
+      title: "Near-Synonym Collocations: Precise Word Choice Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/near-synonym-collocations-precise-word-choice-exercise-offline.html')
+  );
+
+TestItems item58 = TestItems(
+      title: "Near-Synonym Vocabulary: Subtle Meaning Differences Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/near-synonym-vocabulary-subtle-meaning-differences-exercise-offline.html')
+  );
+
+TestItems item59 = TestItems(
+      title: "Nuanced Aspect Choice in Complex Contexts Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/nuanced-aspect-choice-in-complex-contexts-exercise-offline.html')
+  );
+
+TestItems item60 = TestItems(
+      title: "Opaque Idioms Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/opaque-idioms-exercise-offline.html')
+  );
+
+TestItems item61 = TestItems(
+      title: "Prepositions in Idiomatic Expressions Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/prepositions-in-idiomatic-expressions-exercise-offline.html')
+  );
+
+TestItems item62 = TestItems(
+      title: "Proofreading for Collocation Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/proofreading-for-collocation-exercise-offline.html')
+  );
+
+TestItems item63 = TestItems(
+      title: "Public Discourse Paraphrase Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/public-discourse-paraphrase-exercise-offline.html')
+  );
+
+TestItems item64 = TestItems(
+      title: "Register and Tone: Diplomatic, Formal, and Critical Language Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/register-and-tone-diplomatic-formal-and-critical-language-exercise-offline.html')
+  );
+
+TestItems item65 = TestItems(
+      title: "Reporting Disagreement Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/reporting-disagreement-exercise-offline.html')
+  );
+
+TestItems item66 = TestItems(
+      title: "Rhetorical Effect Paraphrase Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/rhetorical-effect-paraphrase-exercise-offline.html')
+  );
+
+TestItems item67 = TestItems(
+      title: "Sophisticated Discourse Markers: Argument and Evaluation Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/sophisticated-discourse-markers-argument-and-evaluation-exercise-offline.html')
+  );
+
+TestItems item68 = TestItems(
+      title: "Strategic Turn-Taking Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/strategic-turn-taking-exercise-offline.html')
+  );
+
+TestItems item69 = TestItems(
+      title: "Subtle Tense Choice in High-Level Writing Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/subtle-tense-choice-in-high-level-writing-exercise-offline.html')
+  );
+
+TestItems item70 = TestItems(
+      title: "Synonyms and Antonyms Exercise | C2 Vocabulary",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/synonyms-and-antonyms-exercise-c2-vocabulary-offline.html')
+  );
+
+TestItems item71 = TestItems(
+      title: "Thematic Progression Review Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/thematic-progression-review-exercise-offline.html')
+  );
+
+TestItems item72 = TestItems(
+      title: "Transparent Idioms Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/transparent-idioms-exercise-offline.html')
+  );
+
+TestItems item73 = TestItems(
+      title: "Tricky Epistemic Modality in Academic Prose Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/tricky-epistemic-modality-in-academic-prose-exercise-offline.html')
+  );
+
+TestItems item74 = TestItems(
+      title: "Tricky Fine Distinctions Among Modal Verbs Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/tricky-fine-distinctions-among-modal-verbs-exercise-offline.html')
+  );
+
+TestItems item75 = TestItems(
+      title: "Tricky Inverted Conditionals with Stylistic Variation Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/tricky-inverted-conditionals-with-stylistic-variation-exercise-offline.html')
+  );
+
+TestItems item76 = TestItems(
+      title: "Tricky Run-on Sentence and Comma Splice Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/tricky-run-on-sentence-and-comma-splice-exercise-offline.html')
+  );
+
+TestItems item77 = TestItems(
+      title: "Tricky Supplementive Clauses Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/tricky-supplementive-clauses-exercise-offline.html')
+  );
+
+TestItems item78 = TestItems(
+      title: "Voice Alternation with Causatives Exercise",
+      link: Webview(url: 'https://longdv123.github.io/minna/english_test/c2_new/voice-alternation-with-causatives-exercise-offline.html')
+  );

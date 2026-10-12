@@ -16,7 +16,10 @@
 
   var state = {
     lang: "en",
-    trOn: false
+    trLang: "en",
+    trOn: false,
+    trPack: null,
+    trPackTried: false
   };
 
   var LANG_ALIASES = {
@@ -27,7 +30,25 @@
     "zh-tw": "zh-TW", "zh-hk": "zh-TW", "zh-hant": "zh-TW", "zh-mo": "zh-TW",
     kr: "ko", kor: "ko", korean: "ko", "ko-kr": "ko",
     thai: "th", "th-th": "th",
-    ind: "id", indonesian: "id", "id-id": "id"
+    ind: "id", indonesian: "id", "id-id": "id",
+    england: "en", uk: "en", gb: "en", britain: "en",
+    china: "zh",
+    korea: "ko", "south-korea": "ko",
+    nepal: "ne", nepali: "ne", np: "ne",
+    indonesia: "id",
+    brazil: "pt", portuguese: "pt", "pt-br": "pt", br: "pt",
+    myanmar: "my", burmese: "my", mm: "my",
+    "sri-lanka": "si", srilanka: "si", sinhala: "si", lk: "si",
+    thailand: "th",
+    india: "hi", hindi: "hi",
+    peru: "es", spanish: "es", pe: "es",
+    cambodia: "km", khmer: "km", kh: "km",
+    bangladesh: "bn", bengali: "bn", bd: "bn",
+    pakistan: "ur", urdu: "ur", pk: "ur",
+    mongolia: "mn", mongolian: "mn",
+    taiwan: "zh-TW",
+    ne: "ne", pt: "pt", my: "my", si: "si", hi: "hi", es: "es",
+    km: "km", bn: "bn", ur: "ur", mn: "mn"
   };
 
   var STRINGS = {
@@ -43,6 +64,20 @@
       tabVocab: "Vocabulary",
       tabReading: "Reading",
       tabExtra: "Extra",
+      tabIntro: "Intro",
+      tabOverview: "Overview",
+      tabDetails: "Details",
+      tabPractice: "Practice",
+      tabReadWrite: "Reading & writing",
+      tabSpeakListen: "Speaking & listening",
+      tabGrammarPractice: "Grammar & practice",
+      tabCheckWords: "Check words",
+      tabMondaiListen: "Listening",
+      tabMondaiCombined: "Integrated",
+      tabMondaiReading: "Reading",
+      slideTranslate: "Translation",
+      slideReadingTranslate: "Reading translation",
+      slideAnswers: "Answers",
       tabDialogue: "Dialogue",
       tabDialoguePattern: "Dialogue patterns",
       tabPattern: "Patterns",
@@ -83,6 +118,20 @@
       tabVocab: "Từ vựng",
       tabReading: "Đọc hiểu",
       tabExtra: "Bổ sung",
+      tabIntro: "Mở đầu",
+      tabOverview: "Khái Quát",
+      tabDetails: "Chi Tiết",
+      tabPractice: "Luyện Tập",
+      tabReadWrite: "Đọc viết",
+      tabSpeakListen: "Nói nghe",
+      tabGrammarPractice: "Ngữ pháp luyện tập",
+      tabCheckWords: "Check từ",
+      tabMondaiListen: "Mondai Nghe",
+      tabMondaiCombined: "Mondai Tổng Hợp",
+      tabMondaiReading: "Mondai Đọc Hiểu",
+      slideTranslate: "Dịch",
+      slideReadingTranslate: "Dịch bài đọc",
+      slideAnswers: "Đáp án",
       tabDialogue: "Đàm thoại",
       tabDialoguePattern: "Mẫu đàm thoại",
       tabPattern: "Văn mẫu",
@@ -123,6 +172,20 @@
       tabVocab: "語彙",
       tabReading: "読解",
       tabExtra: "補足",
+      tabIntro: "導入",
+      tabOverview: "概要",
+      tabDetails: "詳細",
+      tabPractice: "練習",
+      tabReadWrite: "読む・書く",
+      tabSpeakListen: "話す・聞く",
+      tabGrammarPractice: "文法・練習",
+      tabCheckWords: "単語チェック",
+      tabMondaiListen: "聴解",
+      tabMondaiCombined: "総合問題",
+      tabMondaiReading: "読解",
+      slideTranslate: "訳",
+      slideReadingTranslate: "本文の訳",
+      slideAnswers: "解答",
       tabDialogue: "会話",
       tabDialoguePattern: "会話例",
       tabPattern: "文型",
@@ -163,6 +226,20 @@
       tabVocab: "词汇",
       tabReading: "阅读",
       tabExtra: "补充",
+      tabIntro: "导入",
+      tabOverview: "概要",
+      tabDetails: "细节",
+      tabPractice: "练习",
+      tabReadWrite: "读・写",
+      tabSpeakListen: "说・听",
+      tabGrammarPractice: "语法・练习",
+      tabCheckWords: "单词检查",
+      tabMondaiListen: "听力",
+      tabMondaiCombined: "综合问题",
+      tabMondaiReading: "阅读理解",
+      slideTranslate: "翻译",
+      slideReadingTranslate: "课文翻译",
+      slideAnswers: "答案",
       tabDialogue: "会话",
       tabDialoguePattern: "会话范例",
       tabPattern: "句型",
@@ -203,6 +280,20 @@
       tabVocab: "詞彙",
       tabReading: "閱讀",
       tabExtra: "補充",
+      tabIntro: "導入",
+      tabOverview: "概要",
+      tabDetails: "細節",
+      tabPractice: "練習",
+      tabReadWrite: "讀・寫",
+      tabSpeakListen: "說・聽",
+      tabGrammarPractice: "文法・練習",
+      tabCheckWords: "單字檢查",
+      tabMondaiListen: "聽力",
+      tabMondaiCombined: "綜合問題",
+      tabMondaiReading: "閱讀理解",
+      slideTranslate: "翻譯",
+      slideReadingTranslate: "課文翻譯",
+      slideAnswers: "答案",
       tabDialogue: "會話",
       tabDialoguePattern: "會話範例",
       tabPattern: "句型",
@@ -243,6 +334,20 @@
       tabVocab: "어휘",
       tabReading: "독해",
       tabExtra: "보충",
+      tabIntro: "도입",
+      tabOverview: "개요",
+      tabDetails: "상세",
+      tabPractice: "연습",
+      tabReadWrite: "읽기・쓰기",
+      tabSpeakListen: "말하기・듣기",
+      tabGrammarPractice: "문법・연습",
+      tabCheckWords: "단어 확인",
+      tabMondaiListen: "청해",
+      tabMondaiCombined: "종합 문제",
+      tabMondaiReading: "독해",
+      slideTranslate: "번역",
+      slideReadingTranslate: "본문 번역",
+      slideAnswers: "정답",
       tabDialogue: "회화",
       tabDialoguePattern: "회화 예",
       tabPattern: "문형",
@@ -283,6 +388,20 @@
       tabVocab: "คำศัพท์",
       tabReading: "อ่านเข้าใจ",
       tabExtra: "เพิ่มเติม",
+      tabIntro: "บทนำ",
+      tabOverview: "ภาพรวม",
+      tabDetails: "รายละเอียด",
+      tabPractice: "ฝึกฝน",
+      tabReadWrite: "อ่าน-เขียน",
+      tabSpeakListen: "พูด-ฟัง",
+      tabGrammarPractice: "ไวยากรณ์-ฝึก",
+      tabCheckWords: "ตรวจคำ",
+      tabMondaiListen: "การฟัง",
+      tabMondaiCombined: "ข้อสอบรวม",
+      tabMondaiReading: "อ่านเข้าใจ",
+      slideTranslate: "คำแปล",
+      slideReadingTranslate: "คำแปลบทอ่าน",
+      slideAnswers: "คำตอบ",
       tabDialogue: "บทสนทนา",
       tabDialoguePattern: "ตัวอย่างสนทนา",
       tabPattern: "รูปประโยค",
@@ -323,6 +442,20 @@
       tabVocab: "Kosakata",
       tabReading: "Membaca",
       tabExtra: "Tambahan",
+      tabIntro: "Pembuka",
+      tabOverview: "Ikhtisar",
+      tabDetails: "Rincian",
+      tabPractice: "Latihan",
+      tabReadWrite: "Membaca & menulis",
+      tabSpeakListen: "Berbicara & mendengar",
+      tabGrammarPractice: "Tata bahasa & latihan",
+      tabCheckWords: "Cek kata",
+      tabMondaiListen: "Mendengar",
+      tabMondaiCombined: "Soal gabungan",
+      tabMondaiReading: "Membaca",
+      slideTranslate: "Terjemahan",
+      slideReadingTranslate: "Terjemahan bacaan",
+      slideAnswers: "Jawaban",
       tabDialogue: "Percakapan",
       tabDialoguePattern: "Pola percakapan",
       tabPattern: "Pola kalimat",
@@ -411,14 +544,146 @@
   }
 
   function persistLang(code) {
-    state.lang = normalizeLang(code);
+    var normalized = normalizeLang(code);
+    state.trLang = normalized;
+    state.lang = STRINGS[normalized] ? normalized : "en";
     try {
-      localStorage.setItem(STORAGE_LANG, state.lang);
+      localStorage.setItem(STORAGE_LANG, normalized);
     } catch (e) {}
-    window.jlptUxLang = state.lang;
+    window.jlptUxLang = normalized;
     try {
-      document.documentElement.setAttribute("lang", state.lang);
+      document.documentElement.setAttribute("lang", normalized);
     } catch (e2) {}
+  }
+
+  function readingPackUrl() {
+    var marker = qs("#minna-i18n");
+    var fromMarker = marker && marker.getAttribute("data-src");
+    if (fromMarker) return fromMarker;
+    try {
+      var file = String(location.pathname || "").split("/").pop() || "";
+      if (/\.html$/i.test(file)) return file.replace(/\.html$/i, ".i18n.json");
+    } catch (e) {}
+    return "";
+  }
+
+  function loadReadingPack(done) {
+    if (state.trPack || state.trPackTried) {
+      done();
+      return;
+    }
+    var marker = qs("#minna-i18n");
+    var inline = marker && (marker.textContent || "").replace(/^\s+|\s+$/g, "");
+    if (inline && inline.charAt(0) === "{") {
+      try {
+        state.trPack = JSON.parse(inline);
+      } catch (e) {}
+      if (state.trPack) {
+        state.trPackTried = true;
+        done();
+        return;
+      }
+    }
+    if (window.MINNA_I18N && typeof window.MINNA_I18N === "object") {
+      state.trPack = window.MINNA_I18N;
+      state.trPackTried = true;
+      done();
+      return;
+    }
+    var src = readingPackUrl();
+    if (!src) {
+      state.trPackTried = true;
+      done();
+      return;
+    }
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", src, true);
+    xhr.onload = function () {
+      state.trPackTried = true;
+      if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 0) {
+        try {
+          state.trPack = JSON.parse(xhr.responseText);
+        } catch (e2) {}
+      }
+      done();
+    };
+    xhr.onerror = function () {
+      state.trPackTried = true;
+      done();
+    };
+    xhr.send();
+  }
+
+  function normTr(s) {
+    return String(s || "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/gi, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/[“”«»]/g, '"')
+      .replace(/\u00a0/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function translationMap() {
+    var pack = state.trPack;
+    if (!pack) return {};
+    var lang = state.trLang;
+    if (lang === "kr") lang = "ko";
+    var base = pack.enMap && typeof pack.enMap === "object" ? pack.enMap : {};
+    var extra = pack[lang + "Map"];
+    if (!extra && pack.map && pack.map[lang]) extra = pack.map[lang];
+    if (!extra || typeof extra !== "object") extra = {};
+    if (lang === "en") {
+      var en = {};
+      Object.keys(base).forEach(function (k) { en[k] = base[k]; });
+      Object.keys(extra).forEach(function (k) { en[k] = extra[k]; });
+      return en;
+    }
+    var out = {};
+    Object.keys(base).forEach(function (k) { out[k] = base[k]; });
+    Object.keys(extra).forEach(function (k) { out[k] = extra[k]; });
+    return out;
+  }
+
+  function applyMappedNode(el, map, arrayVal) {
+    if (!el.getAttribute("data-minna-vi")) {
+      el.setAttribute("data-minna-vi", el.innerHTML);
+    }
+    var vi = el.getAttribute("data-minna-vi");
+    var key = normTr(vi);
+    if (state.trLang === "vi") {
+      el.innerHTML = vi;
+      return true;
+    }
+    if (map[key] != null) {
+      el.textContent = map[key];
+      return true;
+    }
+    if (arrayVal != null) {
+      el.textContent = arrayVal;
+      return true;
+    }
+    el.innerHTML = vi;
+    return false;
+  }
+
+  function applyReadingTranslations() {
+    var map = translationMap();
+    var lines = state.trPack && state.trPack[state.trLang];
+    if (lines && !Array.isArray(lines)) lines = null;
+    qsa(".nddich").forEach(function (el, i) {
+      applyMappedNode(el, map, lines && lines[i] != null ? lines[i] : null);
+    });
+    qsa("p").forEach(function (el) {
+      if (closest(el, ".nddich, script, style")) return;
+      var stored = el.getAttribute("data-minna-vi");
+      var key = normTr(stored || el.innerHTML);
+      if (!stored && map[key] == null) return;
+      applyMappedNode(el, map, null);
+    });
   }
 
   function injectCss() {
@@ -500,6 +765,18 @@
     if (/^Luyện Tập B$/i.test(src)) return t("tabPracticeB");
     if (/^Từ vựng$/i.test(src)) return t("tabVocab");
     if (/^Đọc hiểu$/i.test(src)) return t("tabReading");
+    if (/^Mở [Đđ]ầu$/i.test(src)) return t("tabIntro");
+    if (/^Khái Quát$/i.test(src)) return t("tabOverview");
+    if (/^Chi Tiết$/i.test(src)) return t("tabDetails");
+    if (/^Luyện Tập$/i.test(src)) return t("tabPractice");
+    if (/読む・書く/.test(src)) return t("tabReadWrite");
+    if (/話す・聞く/.test(src)) return t("tabSpeakListen");
+    if (/文法・練習/.test(src)) return t("tabGrammarPractice");
+    if (/^Check\s*từ$/i.test(src)) return t("tabCheckWords");
+    if (/^Mondai Nghe$/i.test(src)) return t("tabMondaiListen");
+    if (/^Mondai Tổng Hợp$/i.test(src)) return t("tabMondaiCombined");
+    if (/^Mondai Đọc Hiểu$/i.test(src)) return t("tabMondaiReading");
+    if (/^Mở [Rr]ộng$/i.test(src)) return t("tabExtra");
     if (/^Bổ sung$/i.test(src)) return t("tabExtra");
     if (/Bài đàm thoại|会話/.test(src)) return t("tabDialogue");
     if (/Mẫu đàm thoại|練習/.test(src) && /C\)|れんしゅう/.test(src)) return t("tabDialoguePattern");
@@ -513,7 +790,10 @@
 
   function mapSlideLabel(src) {
     src = (src || "").replace(/\s+/g, " ").trim();
+    if (/Dịch\s*Bài\s*Đọc/i.test(src)) return t("slideReadingTranslate");
     if (/Đáp\s*Án|Answers/i.test(src) && /[Dd]ịch|[Tt]ranslat/.test(src)) return t("answersTranslate");
+    if (/Đáp\s*Án/i.test(src)) return t("slideAnswers");
+    if (/(^|☞)\s*Dịch\s*$/i.test(src)) return t("slideTranslate");
     if (/Script/i.test(src)) return t("scriptTranslate");
     var part = src.match(/^Phần\s+(\d+)\s*:?(.*)$/i);
     if (part) {
@@ -535,7 +815,10 @@
         a.innerHTML = a.getAttribute("data-minna-html");
         return;
       }
-      var src = (a.textContent || "").replace(/\s+/g, " ").trim();
+      var src = (a.getAttribute("data-minna-html") || a.textContent || "")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
       var out = mapTabLabel(src);
       if (out) a.textContent = out;
     });
@@ -603,7 +886,11 @@
   }
 
   function canShowTranslation() {
-    return state.lang === "vi" && !!qs(".nddich, .kqdich");
+    if (state.trLang === "vi") return true;
+    var map = translationMap();
+    if (map && Object.keys(map).length) return true;
+    if (!qs(".nddich, .kqdich, .vi-line")) return false;
+    return !!(state.trPack && (state.trPack[state.trLang] || state.trPack[state.trLang + "Map"]));
   }
 
   function setTrOn(on) {
@@ -723,7 +1010,12 @@
     translateSlides();
     translateExact();
     applyMeanings();
-    setTrOn(state.trOn && canShowTranslation());
+    applyReadingTranslations();
+    if (state.trPack && state.trPack[state.trLang] && state.trLang !== "vi") {
+      setTrOn(true);
+    } else {
+      setTrOn(state.trOn && canShowTranslation());
+    }
   }
 
   function closeOverlays() {
@@ -826,8 +1118,10 @@
     enhanceAccordions();
     wireTapTranslate();
     interceptSiteNav();
-    applyLang();
-    showOnboarding(false);
+    loadReadingPack(function () {
+      applyLang();
+      showOnboarding(false);
+    });
   }
 
   function start() {
@@ -845,4 +1139,15 @@
   } else {
     setTimeout(start, 80);
   }
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      if (state.trPack) {
+        applyLang();
+        return;
+      }
+      loadReadingPack(function () {
+        applyLang();
+      });
+    }, 50);
+  });
 })();
