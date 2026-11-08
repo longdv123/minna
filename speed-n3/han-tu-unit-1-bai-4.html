@@ -1,0 +1,191 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N3 HANTU - ONE HTML (SEO + nhẹ)
+   >768: giống hình rộng (3 ô header, body nhìn như 3 cột với cột phải trống)
+   <=768 : giống hình mobile (card center + list item JP/VI)
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+/* ===== BODY (ONE LIST) =====
+   Desktop: item là grid 2 cột (JP | VI),
+   và chừa khoảng trống bên phải = cột 3 (blank) để nhìn như mẫu ảnh.
+*/
+.kbody{
+  padding:14px 18px 16px;
+  /* tạo cảm giác có cột phải trống */
+  padding-right: calc(18px + 1fr);
+}
+@media (min-width: 768px){
+  .kbody{
+    padding-right: 18px; /* reset */
+    display:block;
+  }
+  .kbody-inner{
+    /* chừa cột phải trống giống 3 cột: 240 | 260 | blank */
+    padding-right: 0;
+  }
+  .kbody-inner{
+    /* mô phỏng 3 cột bằng cách giới hạn vùng nội dung 2 cột */
+    width: 100%;
+  }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+}
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+  .kbody-inner{ width:auto; }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">現</div></div><div class="kcell k-hv"><span class="vi-tr">hiện</span></div><div class="kcell k-read"><div class="on">ゲン</div><div>あらわーれる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>現<rp>（</rp><rt>あらわ</rt><rp>）</rp></ruby>れる</div><div class="vi"><span class="vi-tr">xuất hiện</span></div></div><div class="kitem"><div class="jp"><ruby>現代<rp>（</rp><rt>げんだい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thời hiện đại</span></div></div><div class="kitem"><div class="jp"><ruby>現金<rp>（</rp><rt>げんきん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tiền mặt</span></div></div><div class="kitem"><div class="jp"><ruby>表現<rp>（</rp><rt>ひょうげん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cách nói</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">在</div></div><div class="kcell k-hv"><span class="vi-tr">tại</span></div><div class="kcell k-read"><div class="on">ザイ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>現在<rp>（</rp><rt>げんざい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hiện tại</span></div></div><div class="kitem"><div class="jp"><ruby>不在<rp>（</rp><rt>ふざい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">không có nhà</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">雑</div></div><div class="kcell k-hv"><span class="vi-tr">tạp</span></div><div class="kcell k-read"><div class="on">ザツ／ザッー</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tạp chí</span></div></div><div class="kitem"><div class="jp"><ruby>雑音<rp>（</rp><rt>ざつおん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tạp âm</span></div></div><div class="kitem"><div class="jp"><ruby>複雑<rp>（</rp><rt>ふくざつ</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">phức tạp</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">眠</div></div><div class="kcell k-hv"><span class="vi-tr">miên</span></div><div class="kcell k-read"><div class="on">ミン</div><div>ねむーる／ねむーい</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>眠<rp>（</rp><rt>ねむ</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">buồn ngủ</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">寝</div></div><div class="kcell k-hv"><span class="vi-tr">tẩm</span></div><div class="kcell k-read"><div>ねーる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>寝<rp>（</rp><rt>ね</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">ngủ</span></div></div><div class="kitem"><div class="jp"><ruby>昼寝<rp>（</rp><rt>ひるね</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngủ trưa</span></div></div><div class="kitem"><div class="jp"><ruby>寝坊<rp>（</rp><rt>ねぼう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">ngủ quên</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">読</div></div><div class="kcell k-hv"><span class="vi-tr">độc</span></div><div class="kcell k-read"><div class="on">ドク</div><div>よーむ／よーみ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>読書<rp>（</rp><rt>どくしょ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đọc sách</span></div></div><div class="kitem"><div class="jp"><ruby>音読<rp>（</rp><rt>おんよ</rt><rp>）</rp></ruby>み</div><div class="vi"><span class="vi-tr">âm hán</span></div></div><div class="kitem"><div class="jp"><ruby>訓読<rp>（</rp><rt>くんよ</rt><rp>）</rp></ruby>み</div><div class="vi"><span class="vi-tr">âm nhật</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">冊</div></div><div class="kcell k-hv"><span class="vi-tr">sách</span></div><div class="kcell k-read"><div class="on">サツ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp">～さつ</div><div class="vi"><span class="vi-tr">quyển</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">覚</div></div><div class="kcell k-hv"><span class="vi-tr">giác</span></div><div class="kcell k-read"><div>さーめる／さーます／－ざーます／おぼえーる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby>が<ruby>覚<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">tỉnh giấc</span></div></div><div class="kitem"><div class="jp"><ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby>を<ruby>覚<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>ます</div><div class="vi"><span class="vi-tr">tỉnh giấc</span></div></div><div class="kitem"><div class="jp"><ruby>覚<rp>（</rp><rt>おぼ</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">nhớ</span></div></div><div class="kitem"><div class="jp"><ruby>目覚<rp>（</rp><rt>めざ</rt><rp>）</rp></ruby>まし<ruby>時計<rp>（</rp><rt>どけい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đồng hồ báo thức</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">代</div></div><div class="kcell k-hv"><span class="vi-tr">đại</span></div><div class="kcell k-read"><div class="on">ダイ</div><div>かわーる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>代<rp>（</rp><rt>か</rt><rp>）</rp></ruby>わる</div><div class="vi"><span class="vi-tr">đổi</span></div></div><div class="kitem"><div class="jp"><ruby>代<rp>（</rp><rt>か</rt><rp>）</rp></ruby>わりに</div><div class="vi">thay</div></div><div class="kitem"><div class="jp"><ruby>時代<rp>（</rp><rt>じだい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thời đại</span></div></div><div class="kitem"><div class="jp"><ruby>代金<rp>（</rp><rt>だいきん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chi phí</span></div></div><div class="kitem"><div class="jp"><ruby>電気代<rp>（</rp><rt>でんきだい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tiền điện</span></div></div></div></div></div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+<p><b>ドリルA</b></p><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. その<u><ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby></u>、おもしろい？</td><td>a. ざっし</td><td>b. ざし</td></tr><tr><td>2. たくさんあるから、<u><ruby>一冊<rp>（</rp><rt>いっさつ</rt><rp>）</rp></ruby></u>あげるよ。</td><td>a. いっさつ</td><td>b. いっさく</td></tr><tr><td>3. <u><ruby>現在<rp>（</rp><rt>げんざい</rt><rp>）</rp></ruby></u>、インターネットはご<ruby>利用<rp>（</rp><rt>りよう</rt><rp>）</rp></ruby>になれません。</td><td>a. げんざい</td><td>b. げんだい</td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>趣味<rp>（</rp><rt>しゅみ</rt><rp>）</rp></ruby>は、<u><ruby>読書<rp>（</rp><rt>どくしょ</rt><rp>）</rp></ruby></u>です。</td><td>a. どっしょ</td><td>b. どくしょ</td></tr><tr><td>5. <ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>の<u><ruby>時代<rp>（</rp><rt>じだい</rt><rp>）</rp></ruby></u>、スマホくらい<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>たないと。</td><td>a. じだい</td><td>b. とけい</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. その<u><ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby></u>、おもしろい？</td><td><b>ざっし</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tạp chí đó có thú vị không?</span></td></tr><tr><td>2. たくさんあるから、<u><ruby>一冊<rp>（</rp><rt>いっさつ</rt><rp>）</rp></ruby></u>あげるよ。</td><td><b>いっさつ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.</span></td></tr><tr><td>3. <u><ruby>現在<rp>（</rp><rt>げんざい</rt><rp>）</rp></ruby></u>、インターネットはご<ruby>利用<rp>（</rp><rt>りよう</rt><rp>）</rp></ruby>になれません。</td><td><b>げんざい</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hiện tại, không thể sử dụng Internet.</span></td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>趣味<rp>（</rp><rt>しゅみ</rt><rp>）</rp></ruby>は、<u><ruby>読書<rp>（</rp><rt>どくしょ</rt><rp>）</rp></ruby></u>です。</td><td><b>どくしょ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Sở thích của tôi là đọc sách.</span></td></tr><tr><td>5. <ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>の<u><ruby>時代<rp>（</rp><rt>じだい</rt><rp>）</rp></ruby></u>、スマホくらい<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>たないと。</td><td><b>じだい</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Trong thời đại này, cần phải có Smart Phone.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルB</b></p><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>ねむ</u>くなってしまった。</td><td>a. 寝</td><td>b. 眼</td><td>c. 眠</td></tr><tr><td>2. <u>げん</u><ruby>金<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>ではらってください。</td><td>a. 原</td><td>b. 現</td><td>c. 元</td></tr><tr><td>3. １<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>、<ruby>昼<rp>（</rp><rt>ひる</rt><rp>）</rp></ruby><u>ね</u>をした。</td><td>a. 寝</td><td>b. 蔡</td><td>c. 宿</td></tr><tr><td>4. <ruby>母<rp>（</rp><rt>はは</rt><rp>）</rp></ruby>の<u>か</u>わりに<ruby>料理<rp>（</rp><rt>りょうり</rt><rp>）</rp></ruby>をした。</td><td>a. 化</td><td>b. 代</td><td>c. 花</td></tr><tr><td>5. この<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>は、<ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby><u>ざつ</u>でむずかしい。</td><td>a. 雑</td><td>b. 難</td><td>c. 集</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>ねむ</u>くなってしまった。</td><td><b>眠</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Đã buồn ngủ mất rồi.</span></td></tr><tr><td>2. <u>げん</u><ruby>金<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>ではらってください。</td><td><b>現</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Xin vui lòng trả bằng tiền mặt.</span></td></tr><tr><td>3. １<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>、<ruby>昼<rp>（</rp><rt>ひる</rt><rp>）</rp></ruby><u>ね</u>をした。</td><td><b>寝</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã ngủ trưa một giờ.</span></td></tr><tr><td>4. <ruby>母<rp>（</rp><rt>はは</rt><rp>）</rp></ruby>の<u>か</u>わりに<ruby>料理<rp>（</rp><rt>りょうり</rt><rp>）</rp></ruby>をした。</td><td><b>代</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã nấu ăn thay mẹ.</span></td></tr><tr><td>5. この<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>は、<ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby><u>ざつ</u>でむずかしい。</td><td><b>雑</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Câu hỏi này phức tạp và khó giải.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルC</b></p><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. （　　　）して、<ruby>授業<rp>（</rp><rt>じゅぎょう</rt><rp>）</rp></ruby>におくれてしまった。</td><td>a. 空気</td><td>b. 寝坊</td></tr><tr><td>2. <ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby>が（　　　）あるか、かぞえてください。</td><td>a. 何本</td><td>b. 何冊</td></tr><tr><td>3. <ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>のため、<ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>はしばらく（　　　）になります。</td><td>a. 代金</td><td>b. 不在</td></tr><tr><td>4. <ruby>雲<rp>（</rp><rt>くも</rt><rp>）</rp></ruby>の<ruby>間<rp>（</rp><rt>あいだ</rt><rp>）</rp></ruby>から<ruby>月<rp>（</rp><rt>つき</rt><rp>）</rp></ruby>が（　　　）。</td><td>a. 現れた</td><td>b. 代わった</td></tr><tr><td>5. <ruby>夜中<rp>（</rp><rt>よなか</rt><rp>）</rp></ruby>の３<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>に<ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby>が（　　　）てしまった。</td><td>a. 覚め</td><td>b. 覚まし</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. （　　　）して、<ruby>授業<rp>（</rp><rt>じゅぎょう</rt><rp>）</rp></ruby>におくれてしまった。</td><td><b>寝坊</b>　(ねぼう)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã ngủ quên nên đã đến muộn giờ học.</span></td></tr><tr><td>2. <ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby>が（　　　）あるか、かぞえてください。</td><td><b>何冊</b>　(なんさつ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy đếm xem có bao nhiêu quyển tạp chí.</span></td></tr><tr><td>3. <ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>のため、<ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>はしばらく（　　　）になります。</td><td><b>不在</b>　(ふざい)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.</span></td></tr><tr><td>4. <ruby>雲<rp>（</rp><rt>くも</rt><rp>）</rp></ruby>の<ruby>間<rp>（</rp><rt>あいだ</rt><rp>）</rp></ruby>から<ruby>月<rp>（</rp><rt>つき</rt><rp>）</rp></ruby>が（　　　）。</td><td><b>現れた</b>　(あらわれた)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Mặt trăng xuất hiện từ giữa những đám mây.</span></td></tr><tr><td>5. <ruby>夜中<rp>（</rp><rt>よなか</rt><rp>）</rp></ruby>の３<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>に<ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby>が（　　　）てしまった。</td><td><b>覚め</b>　(さめ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã tỉnh giấc vào lúc 3 giờ sáng.</span></td></tr></tbody></table></div></div></div>
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed3-1-4"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-1-bai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","hiện":"presently","xuất hiện":"appear","thời hiện đại":"modern","tiền mặt":"cash","cách nói":"parlance","tại":"in","hiện tại":"Present","không có nhà":"no home","tạp":"miscellaneous","tạp chí":"magazine","tạp âm":"noise","phức tạp":"complicated","miên":"hypnotic","buồn ngủ":"asleep","tẩm":"impregnated","ngủ":"Sleep","ngủ trưa":"nap","ngủ quên":"overslept","độc":"toxic","đọc sách":"read a book","âm hán":"Yin Han","âm nhật":"Japanese yin","sách":"book","quyển":"vol","giác":"sense","tỉnh giấc":"wake up","nhớ":"miss","đồng hồ báo thức":"alarm clock","đại":"grand","đổi":"change","thời đại":"time","chi phí":"expense","tiền điện":"electricity bill","☞ Đáp Án + Dịch":"☞ Answer + Translation","Tạp chí đó có thú vị không?":"Is that magazine interesting?","Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.":"I have a lot, I'll give you one.","Hiện tại, không thể sử dụng Internet.":"Currently, it is not possible to use the Internet.","Sở thích của tôi là đọc sách.":"My hobby is reading books.","Trong thời đại này, cần phải có Smart Phone.":"In this era, it is necessary to have a Smart Phone.","Đã buồn ngủ mất rồi.":"Already sleepy.","Xin vui lòng trả bằng tiền mặt.":"Please pay in cash.","Tôi đã ngủ trưa một giờ.":"I took a one-hour nap.","Tôi đã nấu ăn thay mẹ.":"I cooked for my mother.","Câu hỏi này phức tạp và khó giải.":"This question is complex and difficult to solve.","Tôi đã ngủ quên nên đã đến muộn giờ học.":"I overslept so I was late for class.","Hãy đếm xem có bao nhiêu quyển tạp chí.":"Count how many magazines there are.","Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.":"Because of the trip, the director will be absent for a while.","Mặt trăng xuất hiện từ giữa những đám mây.":"The moon appeared from between the clouds.","Tôi đã tỉnh giấc vào lúc 3 giờ sáng.":"I woke up at 3 am.","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","hiện":"sekarang","xuất hiện":"muncul","thời hiện đại":"modern","tiền mặt":"uang tunai","cách nói":"bahasa","tại":"di dalam","hiện tại":"Hadiah","không có nhà":"tidak ada rumah","tạp":"aneka ragam","tạp chí":"majalah","tạp âm":"kebisingan","phức tạp":"rumit","miên":"hipnotis","buồn ngủ":"tertidur","tẩm":"diresapi","ngủ":"Tidur","ngủ trưa":"tidur sebentar","ngủ quên":"ketiduran","độc":"beracun","đọc sách":"membaca buku","âm hán":"Yin Han","âm nhật":"Yin Jepang","sách":"buku","quyển":"jilid","giác":"nalar","tỉnh giấc":"bangun","nhớ":"merindukan","đồng hồ báo thức":"jam alarm","đại":"agung","đổi":"mengubah","thời đại":"waktu","chi phí":"pengeluaran","tiền điện":"tagihan listrik","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Tạp chí đó có thú vị không?":"Apakah majalah itu menarik?","Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.":"Aku punya banyak, aku akan memberimu satu.","Hiện tại, không thể sử dụng Internet.":"Saat ini, Internet tidak dapat digunakan.","Sở thích của tôi là đọc sách.":"Hobi saya adalah membaca buku.","Trong thời đại này, cần phải có Smart Phone.":"Di era sekarang ini sangat diperlukan adanya Ponsel Pintar.","Đã buồn ngủ mất rồi.":"Sudah mengantuk.","Xin vui lòng trả bằng tiền mặt.":"Silakan membayar tunai.","Tôi đã ngủ trưa một giờ.":"Saya tidur siang selama satu jam.","Tôi đã nấu ăn thay mẹ.":"Aku memasak untuk ibuku.","Câu hỏi này phức tạp và khó giải.":"Pertanyaan ini rumit dan sulit dipecahkan.","Tôi đã ngủ quên nên đã đến muộn giờ học.":"Aku ketiduran jadi aku terlambat ke kelas.","Hãy đếm xem có bao nhiêu quyển tạp chí.":"Hitung berapa banyak majalah yang ada.","Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.":"Karena perjalanan tersebut, sutradara akan absen untuk sementara waktu.","Mặt trăng xuất hiện từ giữa những đám mây.":"Bulan muncul dari sela-sela awan.","Tôi đã tỉnh giấc vào lúc 3 giờ sáng.":"Saya bangun jam 3 pagi.","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","hiện":"हाल","xuất hiện":"देखा पर्छन्","thời hiện đại":"आधुनिक","tiền mặt":"नगद","cách nói":"भाषा","tại":"मा","hiện tại":"उपस्थित","không có nhà":"घर छैन","tạp":"विविध","tạp chí":"पत्रिका","tạp âm":"कोलाहल","phức tạp":"जटिल","miên":"सम्मोहन","buồn ngủ":"सुतेको","tẩm":"गर्भवती","ngủ":"सुत्नुहोस्","ngủ trưa":"झपकी","ngủ quên":"अति सुत्यो","độc":"विषाक्त","đọc sách":"एउटा किताब पढ्नुहोस्","âm hán":"यिन हान","âm nhật":"जापानी यिन","sách":"पुस्तक","quyển":"vol","giác":"भावना","tỉnh giấc":"उठ","nhớ":"मिस","đồng hồ báo thức":"अलार्म घडी","đại":"भव्य","đổi":"परिवर्तन","thời đại":"समय","chi phí":"खर्च","tiền điện":"बिजुली बिल","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Tạp chí đó có thú vị không?":"के त्यो पत्रिका रोचक छ?","Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.":"मसँग धेरै छ, म तिमीलाई दिन्छु।","Hiện tại, không thể sử dụng Internet.":"हाल, इन्टरनेट प्रयोग गर्न सम्भव छैन।","Sở thích của tôi là đọc sách.":"मेरो शौक किताब पढ्नु हो ।","Trong thời đại này, cần phải có Smart Phone.":"अहिलेको जमानामा स्मार्ट फोन हुनु जरुरी छ ।","Đã buồn ngủ mất rồi.":"पहिले नै निद्रा लागेको छ।","Xin vui lòng trả bằng tiền mặt.":"कृपया नगद भुक्तानी गर्नुहोस्।","Tôi đã ngủ trưa một giờ.":"मैले एक घन्टा निद्रा लिएँ।","Tôi đã nấu ăn thay mẹ.":"मैले आमाको लागि खाना पकाएको।","Câu hỏi này phức tạp và khó giải.":"यो प्रश्न जटिल र समाधान गर्न गाह्रो छ।","Tôi đã ngủ quên nên đã đến muộn giờ học.":"म धेरै सुतेको कारण म कक्षामा ढिलो भएँ।","Hãy đếm xem có bao nhiêu quyển tạp chí.":"त्यहाँ कतिवटा पत्रिकाहरू छन् गणना गर्नुहोस्।","Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.":"यात्राका कारण निर्देशक केही समय अनुपस्थित रहनेछन् ।","Mặt trăng xuất hiện từ giữa những đám mây.":"बादलको बीचबाट चन्द्रमा देखा पर्‍यो।","Tôi đã tỉnh giấc vào lúc 3 giờ sáng.":"म ३ बजे उठेँ ।","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","hiện":"လောလောဆယ်","xuất hiện":"ပေါ်လာသည်။","thời hiện đại":"ခေတ်မီ","tiền mặt":"ငွေသား","cách nói":"စကားစပ်","tại":"၌","hiện tại":"ပစ္စုပ္ပန်","không có nhà":"အိမ်မရှိ။","tạp":"အထွေထွေ","tạp chí":"မဂ္ဂဇင်း","tạp âm":"ဆူညံသံ","phức tạp":"ရှုပ်ထွေးသည်။","miên":"အိပ်မွေ့ချပါ။","buồn ngủ":"အိပ်ပျော်","tẩm":"ထုံ","ngủ":"အိပ်ပါ။","ngủ trưa":"တစ်ရေးတစ်မော","ngủ quên":"အိပ်မပျော်","độc":"အဆိပ်","đọc sách":"စာအုပ်တစ်အုပ်ဖတ်ပါ။","âm hán":"ယဉ်ဟန်","âm nhật":"ဂျပန်ယင်း","sách":"စာအုပ်","quyển":"vol","giác":"သဘော","tỉnh giấc":"အိပ်ရာထပါ","nhớ":"လွမ်းတယ်","đồng hồ báo thức":"နှိုးစက်နာရီ","đại":"ညား","đổi":"ပြောင်းလဲမှု","thời đại":"အချိန်","chi phí":"ကုန်ကျစရိတ်","tiền điện":"လျှပ်စစ်မီတာခ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Tạp chí đó có thú vị không?":"အဲဒီမဂ္ဂဇင်းက စိတ်ဝင်စားစရာလား။","Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.":"ငါ့မှာ အများကြီးရှိတယ်၊ ငါ မင်းကို တစ်ခုပေးမယ်။","Hiện tại, không thể sử dụng Internet.":"လောလောဆယ် အင်တာနက် သုံးလို့ မရသေးဘူး။","Sở thích của tôi là đọc sách.":"ကျွန်တော့် ဝါသနာက စာအုပ်ဖတ်တာ။","Trong thời đại này, cần phải có Smart Phone.":"ဒီဘက်ခေတ်မှာ Smart Phone တစ်လုံးရှိဖို့ လိုပါတယ်။","Đã buồn ngủ mất rồi.":"အိပ်ချင်နေပြီ။","Xin vui lòng trả bằng tiền mặt.":"ကျေးဇူးပြု၍ ငွေသားဖြင့်ပေးချေပါ။","Tôi đã ngủ trưa một giờ.":"တစ်နာရီလောက် တစ်ရေးတစ်မော အိပ်လိုက်တယ်။","Tôi đã nấu ăn thay mẹ.":"အမေ့အတွက် ဟင်းချက်တယ်။","Câu hỏi này phức tạp và khó giải.":"ဒီမေးခွန်းက ရှုပ်ထွေးပြီး ဖြေရှင်းရခက်ပါတယ်။","Tôi đã ngủ quên nên đã đến muộn giờ học.":"အိပ်ရေးမဝလို့ အတန်းနောက်ကျတယ်။","Hãy đếm xem có bao nhiêu quyển tạp chí.":"မဂ္ဂဇင်း မည်မျှရှိသည်ကို ရေတွက်ပါ။","Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.":"ဒီခရီးစဉ်ကြောင့် ဒါရိုက်တာ ခဏတာ ပျက်ကွက်ခဲ့ပါတယ်။","Mặt trăng xuất hiện từ giữa những đám mây.":"လသည် တိမ်များကြားမှ ပေါ်လာသည်။","Tôi đã tỉnh giấc vào lúc 3 giờ sáng.":"မနက် ၃ နာရီမှာ နိုးတယ်။","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","hiện":"বর্তমানে","xuất hiện":"প্রদর্শিত","thời hiện đại":"আধুনিক","tiền mặt":"নগদ","cách nói":"কথাবার্তা","tại":"মধ্যে","hiện tại":"বর্তমান","không có nhà":"বাড়ি নেই","tạp":"বিবিধ","tạp chí":"পত্রিকা","tạp âm":"গোলমাল","phức tạp":"জটিল","miên":"সম্মোহনী","buồn ngủ":"ঘুমন্ত","tẩm":"impregnated","ngủ":"ঘুম","ngủ trưa":"ঘুম","ngủ quên":"অতিরিক্ত ঘুমানো","độc":"বিষাক্ত","đọc sách":"একটি বই পড়ুন","âm hán":"ইয়িন হান","âm nhật":"জাপানি ইয়িন","sách":"বই","quyển":"ভলিউম","giác":"অনুভূতি","tỉnh giấc":"জেগে ওঠা","nhớ":"মিস","đồng hồ báo thức":"এলার্ম ঘড়ি","đại":"গ্র্যান্ড","đổi":"পরিবর্তন","thời đại":"সময়","chi phí":"খরচ","tiền điện":"বিদ্যুৎ বিল","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Tạp chí đó có thú vị không?":"যে পত্রিকা আকর্ষণীয়?","Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.":"আমার অনেক আছে, আমি তোমাকে একটা দেব।","Hiện tại, không thể sử dụng Internet.":"বর্তমানে ইন্টারনেট ব্যবহার করা সম্ভব নয়।","Sở thích của tôi là đọc sách.":"আমার শখ বই পড়া।","Trong thời đại này, cần phải có Smart Phone.":"এই যুগে স্মার্ট ফোন থাকা জরুরি।","Đã buồn ngủ mất rồi.":"ইতিমধ্যেই ঘুমিয়ে পড়েছে।","Xin vui lòng trả bằng tiền mặt.":"অনুগ্রহ করে নগদ অর্থ প্রদান করুন।","Tôi đã ngủ trưa một giờ.":"আমি এক ঘন্টা ঘুমিয়ে নিলাম।","Tôi đã nấu ăn thay mẹ.":"আমি আমার মায়ের জন্য রান্না করেছি।","Câu hỏi này phức tạp và khó giải.":"এই প্রশ্নটি জটিল এবং সমাধান করা কঠিন।","Tôi đã ngủ quên nên đã đến muộn giờ học.":"আমি অতিরিক্ত ঘুমিয়েছিলাম তাই আমি ক্লাসে দেরি করেছিলাম।","Hãy đếm xem có bao nhiêu quyển tạp chí.":"কতগুলি পত্রিকা আছে তা গণনা করুন।","Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.":"সফরের কারণে পরিচালক কিছুক্ষণ অনুপস্থিত থাকবেন।","Mặt trăng xuất hiện từ giữa những đám mây.":"মেঘের মাঝ থেকে চাঁদ দেখা গেল।","Tôi đã tỉnh giấc vào lúc 3 giờ sáng.":"ঘুম থেকে উঠলাম ৩টায়।","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","hiện":"इस समय","xuất hiện":"के जैसा लगना","thời hiện đại":"आधुनिक","tiền mặt":"नकद","cách nói":"बोल-चाल","tại":"में","hiện tại":"उपस्थित","không có nhà":"कोई घर नहीं","tạp":"मिश्रित","tạp chí":"पत्रिका","tạp âm":"शोर","phức tạp":"उलझा हुआ","miên":"कृत्रिम निद्रावस्था","buồn ngủ":"सो गया","tẩm":"गर्भवती","ngủ":"नींद","ngủ trưa":"झपकी","ngủ quên":"अधिक सोया","độc":"विषाक्त","đọc sách":"एक किताब पढ़ी","âm hán":"यिन हान","âm nhật":"जापानी यिन","sách":"किताब","quyển":"वॉल","giác":"समझ","tỉnh giấc":"जागो","nhớ":"याद","đồng hồ báo thức":"अलार्म घड़ी","đại":"ग्रैंड","đổi":"परिवर्तन","thời đại":"समय","chi phí":"व्यय","tiền điện":"बिजली बिल","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Tạp chí đó có thú vị không?":"क्या वह पत्रिका दिलचस्प है?","Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.":"मेरे पास बहुत कुछ है, मैं तुम्हें एक दूँगा।","Hiện tại, không thể sử dụng Internet.":"फिलहाल इंटरनेट का इस्तेमाल संभव नहीं है.","Sở thích của tôi là đọc sách.":"मेरा शौक किताबें पढ़ना है.","Trong thời đại này, cần phải có Smart Phone.":"इस जमाने में स्मार्ट फोन का होना बहुत जरूरी है।","Đã buồn ngủ mất rồi.":"पहले से ही नींद आ रही है.","Xin vui lòng trả bằng tiền mặt.":"कृपया नकद भुगतान करें.","Tôi đã ngủ trưa một giờ.":"मैंने एक घंटे की झपकी ली.","Tôi đã nấu ăn thay mẹ.":"मैंने अपनी मां के लिए खाना बनाया.","Câu hỏi này phức tạp và khó giải.":"यह प्रश्न जटिल है और हल करना कठिन है।","Tôi đã ngủ quên nên đã đến muộn giờ học.":"मैं ज्यादा सो गया इसलिए मुझे क्लास के लिए देर हो गई।","Hãy đếm xem có bao nhiêu quyển tạp chí.":"गिनें कि कितनी पत्रिकाएँ हैं।","Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.":"यात्रा के कारण निदेशक कुछ समय के लिए अनुपस्थित रहेंगे।","Mặt trăng xuất hiện từ giữa những đám mây.":"बादलों के बीच से चाँद निकला।","Tôi đã tỉnh giấc vào lúc 3 giờ sáng.":"मैं सुबह 3 बजे उठा.","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","hiện":"ปัจจุบัน","xuất hiện":"ปรากฏ","thời hiện đại":"ทันสมัย","tiền mặt":"เงินสด","cách nói":"คำพูด","tại":"ใน","hiện tại":"ปัจจุบัน","không có nhà":"ไม่มีบ้าน","tạp":"เบ็ดเตล็ด","tạp chí":"นิตยสาร","tạp âm":"เสียงรบกวน","phức tạp":"ที่ซับซ้อน","miên":"ถูกสะกดจิต","buồn ngủ":"นอนหลับ","tẩm":"ชุบ","ngủ":"นอน","ngủ trưa":"งีบหลับ","ngủ quên":"นอนเกินเวลา","độc":"พิษ","đọc sách":"อ่านหนังสือ","âm hán":"หยินฮัน","âm nhật":"หยินญี่ปุ่น","sách":"หนังสือ","quyển":"ฉบับที่","giác":"ความรู้สึก","tỉnh giấc":"ตื่น","nhớ":"นางสาว","đồng hồ báo thức":"นาฬิกาปลุก","đại":"ยิ่งใหญ่","đổi":"เปลี่ยน","thời đại":"เวลา","chi phí":"ค่าใช้จ่าย","tiền điện":"ค่าไฟฟ้า","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Tạp chí đó có thú vị không?":"นิตยสารเล่มนั้นน่าสนใจไหม?","Tôi có rất nhiều, tôi sẽ cho bạn một quyển nhé.":"ฉันมีมากฉันจะให้คุณหนึ่ง","Hiện tại, không thể sử dụng Internet.":"ปัจจุบันยังไม่สามารถใช้งานอินเทอร์เน็ตได้","Sở thích của tôi là đọc sách.":"งานอดิเรกของฉันคือการอ่านหนังสือ","Trong thời đại này, cần phải có Smart Phone.":"ในยุคนี้จำเป็นต้องมีสมาร์ทโฟน","Đã buồn ngủ mất rồi.":"ง่วงนอนแล้ว.","Xin vui lòng trả bằng tiền mặt.":"กรุณาชำระเป็นเงินสด","Tôi đã ngủ trưa một giờ.":"ฉันงีบหลับหนึ่งชั่วโมง","Tôi đã nấu ăn thay mẹ.":"ฉันทำอาหารให้แม่","Câu hỏi này phức tạp và khó giải.":"คำถามนี้ซับซ้อนและแก้ไขได้ยาก","Tôi đã ngủ quên nên đã đến muộn giờ học.":"ฉันนอนเกินเลยไปเรียนสาย","Hãy đếm xem có bao nhiêu quyển tạp chí.":"นับว่ามีนิตยสารกี่ฉบับ","Vì có chuyến du lịch nên giám đốc sẽ vắng mặt một thời gian.":"เนื่องจากติดทริป ผอ.จะขาดงานสักพักครับ","Mặt trăng xuất hiện từ giữa những đám mây.":"พระจันทร์ปรากฏจากหมู่เมฆ","Tôi đã tỉnh giấc vào lúc 3 giờ sáng.":"ฉันตื่นนอนตอนตี 3","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

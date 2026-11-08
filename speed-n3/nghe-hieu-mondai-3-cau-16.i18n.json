@@ -1,0 +1,86 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Tại khách sạn, nhân viên nam đang giải thích cho khách hàng.": "At the hotel, a male employee is explaining to customers.",
+    "....Sau đây, chúng tôi sẽ giải thích cho bạn về phòng tắm. Phòng tắm có 2 loại phòng là phòng tắm riêng ở mỗi phòng và nhà tắm công cộng lớn, cả hai đều được sử dụng suối nước nóng. Nhà tắm công cộng dành cho nam nằm ở tầng 2, và dành cho nữ nằm ở tầng 3. Thời gian sử dụng nhà tắm công cộng buổi sáng từ 6:00-10:00, buổi chiều tối từ 16:00-23:00. Vì buổi tối sẽ đóng cửa nhà tắm sớm hơn một chút nên hãy chú ý thời gian sử dụng để không bị nhầm lẫn. Và liên quan đến các bữa ăn, thì chúng tôi sẽ mang bữa tối đến phòng của bạn vào lúc 7 giờ. Bữa sáng vì ăn buffet nên hãy mang theo phiếu ăn của bạn và đến với nhà hàng Sunshine ở tầng 1.": "....Next, we will explain to you about the bathroom. There are two types of bathrooms: private bathrooms in each room and large public baths, both of which have access to hot springs. The public bathroom for men is located on the 2nd floor, and for women is located on the 3rd floor. Public bathroom usage hours are in the morning from 6:00 a.m. to 10:00 a.m., in the evening from 4:00 p.m. to 11:00 p.m. Because the bathroom closes a little earlier in the evening, please pay attention to the usage time to avoid confusion. And regarding meals, we will bring dinner to your room at 7 o'clock. Breakfast is a buffet, so bring your meal voucher and go to Sunshine restaurant on the 1st floor.",
+    "Người đàn ông đã đặc biệt chú ý về cái gì?": "What did the man pay special attention to?",
+    "Thời gian sử dụng phòng tắm.": "Bathroom time.",
+    "Vị trí của phòng tắm.": "Location of the bathroom.",
+    "Việc phòng tắm không phải suối nước nóng.": "The bathroom is not a hot spring.",
+    "Việc bữa ăn tính chi phí riêng.": "Meals are charged separately."
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Tại khách sạn, nhân viên nam đang giải thích cho khách hàng.": "Di hotel, seorang karyawan laki-laki sedang menjelaskan kepada pelanggan.",
+    "....Sau đây, chúng tôi sẽ giải thích cho bạn về phòng tắm. Phòng tắm có 2 loại phòng là phòng tắm riêng ở mỗi phòng và nhà tắm công cộng lớn, cả hai đều được sử dụng suối nước nóng. Nhà tắm công cộng dành cho nam nằm ở tầng 2, và dành cho nữ nằm ở tầng 3. Thời gian sử dụng nhà tắm công cộng buổi sáng từ 6:00-10:00, buổi chiều tối từ 16:00-23:00. Vì buổi tối sẽ đóng cửa nhà tắm sớm hơn một chút nên hãy chú ý thời gian sử dụng để không bị nhầm lẫn. Và liên quan đến các bữa ăn, thì chúng tôi sẽ mang bữa tối đến phòng của bạn vào lúc 7 giờ. Bữa sáng vì ăn buffet nên hãy mang theo phiếu ăn của bạn và đến với nhà hàng Sunshine ở tầng 1.": "....Selanjutnya kami akan menjelaskan kepada Anda tentang kamar mandi. Terdapat dua jenis kamar mandi: kamar mandi pribadi di setiap kamar dan pemandian umum besar, keduanya memiliki akses ke sumber air panas. Kamar mandi umum untuk pria terletak di lantai 2, dan untuk wanita terletak di lantai 3. Jam penggunaan kamar mandi umum adalah pada pagi hari mulai pukul 06.00 hingga 10.00, dan pada sore hari mulai pukul 16.00. sampai 11:00 malam. Karena kamar mandi tutup lebih awal pada malam hari, harap perhatikan waktu penggunaan untuk menghindari kebingungan. Dan mengenai makanan, kami akan membawakan makan malam ke kamar anda pada jam 7 malam. Sarapan disajikan secara prasmanan, jadi bawalah voucher makan Anda dan pergilah ke restoran Sunshine di lantai 1.",
+    "Người đàn ông đã đặc biệt chú ý về cái gì?": "Apa yang menjadi perhatian khusus pria itu?",
+    "Thời gian sử dụng phòng tắm.": "Waktunya kamar mandi.",
+    "Vị trí của phòng tắm.": "Lokasi kamar mandi.",
+    "Việc phòng tắm không phải suối nước nóng.": "Kamar mandinya bukan sumber air panas.",
+    "Việc bữa ăn tính chi phí riêng.": "Makanan dikenakan biaya terpisah."
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Tại khách sạn, nhân viên nam đang giải thích cho khách hàng.": "होटलमा एकजना पुरुष कर्मचारीले ग्राहकलाई बुझाउँदै छन् ।",
+    "....Sau đây, chúng tôi sẽ giải thích cho bạn về phòng tắm. Phòng tắm có 2 loại phòng là phòng tắm riêng ở mỗi phòng và nhà tắm công cộng lớn, cả hai đều được sử dụng suối nước nóng. Nhà tắm công cộng dành cho nam nằm ở tầng 2, và dành cho nữ nằm ở tầng 3. Thời gian sử dụng nhà tắm công cộng buổi sáng từ 6:00-10:00, buổi chiều tối từ 16:00-23:00. Vì buổi tối sẽ đóng cửa nhà tắm sớm hơn một chút nên hãy chú ý thời gian sử dụng để không bị nhầm lẫn. Và liên quan đến các bữa ăn, thì chúng tôi sẽ mang bữa tối đến phòng của bạn vào lúc 7 giờ. Bữa sáng vì ăn buffet nên hãy mang theo phiếu ăn của bạn và đến với nhà hàng Sunshine ở tầng 1.": "....अर्को, हामी तपाईंलाई बाथरूमको बारेमा व्याख्या गर्नेछौं। त्यहाँ दुई प्रकारका बाथरूमहरू छन्: प्रत्येक कोठामा निजी बाथरूम र ठूला सार्वजनिक नुहाउने ठाउँहरू, जसको दुबै तातो पानीको मुहानहरूमा पहुँच छ। पुरुषहरूको लागि सार्वजनिक बाथरूम दोस्रो तलामा अवस्थित छ, र महिलाहरूको लागि तेस्रो तल्लामा अवस्थित छ। सार्वजनिक बाथरूम प्रयोग गर्ने समय बिहान 6:00 बजे देखि 10:00 बजे सम्म, साँझ 4:00 बजे सम्म हुन्छ। 11:00 बजे सम्म किनभने बाथरुम साँझ अलि पहिले बन्द हुन्छ, कृपया भ्रमबाट बच्नको लागि प्रयोगको समयमा ध्यान दिनुहोस्। र खानाको सन्दर्भमा, हामी तपाईंको कोठामा 7 बजे रातको खाना ल्याउँछौं। बिहानको खाजा बुफे हो, त्यसैले आफ्नो खानाको भाउचर ल्याउनुहोस् र पहिलो तलामा रहेको सनशाइन रेस्टुरेन्टमा जानुहोस्।",
+    "Người đàn ông đã đặc biệt chú ý về cái gì?": "मानिसले केमा विशेष ध्यान दिए?",
+    "Thời gian sử dụng phòng tắm.": "बाथरूम समय।",
+    "Vị trí của phòng tắm.": "बाथरूम को स्थान।",
+    "Việc phòng tắm không phải suối nước nóng.": "बाथरूम तातो झरना होइन।",
+    "Việc bữa ăn tính chi phí riêng.": "खाना छुट्टै शुल्क लगाइन्छ।"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Tại khách sạn, nhân viên nam đang giải thích cho khách hàng.": "ဟိုတယ်မှာ အမျိုးသားဝန်ထမ်းတစ်ယောက်က ဖောက်သည်တွေကို ရှင်းပြတယ်။",
+    "....Sau đây, chúng tôi sẽ giải thích cho bạn về phòng tắm. Phòng tắm có 2 loại phòng là phòng tắm riêng ở mỗi phòng và nhà tắm công cộng lớn, cả hai đều được sử dụng suối nước nóng. Nhà tắm công cộng dành cho nam nằm ở tầng 2, và dành cho nữ nằm ở tầng 3. Thời gian sử dụng nhà tắm công cộng buổi sáng từ 6:00-10:00, buổi chiều tối từ 16:00-23:00. Vì buổi tối sẽ đóng cửa nhà tắm sớm hơn một chút nên hãy chú ý thời gian sử dụng để không bị nhầm lẫn. Và liên quan đến các bữa ăn, thì chúng tôi sẽ mang bữa tối đến phòng của bạn vào lúc 7 giờ. Bữa sáng vì ăn buffet nên hãy mang theo phiếu ăn của bạn và đến với nhà hàng Sunshine ở tầng 1.": ".နောက်တော့ ရေချိုးခန်းအကြောင်းရှင်းပြမယ်။ ရေချိုးခန်း အမျိုးအစား နှစ်မျိုးရှိသည်- အခန်းတစ်ခုစီတွင် သီးသန့်ရေချိုးခန်းများနှင့် အများသူငှာရေချိုးခန်း နှစ်ခုလုံးသည် ရေပူစမ်းများသို့ ဝင်ရောက်နိုင်သည်။ အမျိုးသားများအတွက် အများသူငှာ ရေချိုးခန်းသည် ဒုတိယထပ်တွင် တည်ရှိပြီး အမျိုးသမီးများအတွက် တတိယထပ်တွင် တည်ရှိသည်။ အများသူငှာ ရေချိုးခန်းအသုံးပြုချိန်သည် နံနက် ၆း၀၀ မှ ၁၀း၀၀ နာရီအထိ၊ ညနေ ၄း၀၀ နာရီမှ ညနေ ၄း၀၀ နာရီအထိ။ ည ၁၁း၀၀ မှ ရေချိုးခန်းသည် ညနေပိုင်းတွင် အနည်းငယ်စောပိတ်သောကြောင့် ရှုပ်ထွေးမှုများမဖြစ်စေရန် အသုံးပြုချိန်ကို သတိပြုပါ။ ပြီးတော့ အစားအသောက်နဲ့ ပတ်သက်ပြီးတော့ ညစာကို မင်းရဲ့အခန်းကို ည ၇ နာရီမှာ လိုက်ပို့ပေးမယ်။ နံနက်စာသည် ဘူဖေးဖြစ်သောကြောင့် ဘောက်ချာယူဆောင်လာပြီး ပထမထပ်ရှိ Sunshine စားသောက်ဆိုင်သို့ သွားပါ။",
+    "Người đàn ông đã đặc biệt chú ý về cái gì?": "အဲဒီလူက ဘာကို အထူးအာရုံစိုက်ခဲ့သလဲ။",
+    "Thời gian sử dụng phòng tắm.": "ရေချိုးခန်းအချိန်။",
+    "Vị trí của phòng tắm.": "ရေချိုးခန်းတည်နေရာ။",
+    "Việc phòng tắm không phải suối nước nóng.": "ရေချိုးခန်းသည် ရေပူစမ်းမဟုတ်ပါ။",
+    "Việc bữa ăn tính chi phí riêng.": "အစားအသောက်များကို သီးခြားကောက်ခံပါသည်။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Tại khách sạn, nhân viên nam đang giải thích cho khách hàng.": "হোটেলে একজন পুরুষ কর্মচারী গ্রাহকদের বুঝিয়ে দিচ্ছেন।",
+    "....Sau đây, chúng tôi sẽ giải thích cho bạn về phòng tắm. Phòng tắm có 2 loại phòng là phòng tắm riêng ở mỗi phòng và nhà tắm công cộng lớn, cả hai đều được sử dụng suối nước nóng. Nhà tắm công cộng dành cho nam nằm ở tầng 2, và dành cho nữ nằm ở tầng 3. Thời gian sử dụng nhà tắm công cộng buổi sáng từ 6:00-10:00, buổi chiều tối từ 16:00-23:00. Vì buổi tối sẽ đóng cửa nhà tắm sớm hơn một chút nên hãy chú ý thời gian sử dụng để không bị nhầm lẫn. Và liên quan đến các bữa ăn, thì chúng tôi sẽ mang bữa tối đến phòng của bạn vào lúc 7 giờ. Bữa sáng vì ăn buffet nên hãy mang theo phiếu ăn của bạn và đến với nhà hàng Sunshine ở tầng 1.": "....এরপর, আমরা আপনাকে বাথরুম সম্পর্কে ব্যাখ্যা করব। দুটি ধরণের বাথরুম রয়েছে: প্রতিটি ঘরে ব্যক্তিগত বাথরুম এবং বড় পাবলিক বাথ, উভয়েরই গরম স্প্রিংগুলিতে অ্যাক্সেস রয়েছে। পুরুষদের জন্য পাবলিক বাথরুমটি ২য় তলায় এবং মহিলাদের জন্য ৩য় তলায় অবস্থিত। পাবলিক বাথরুম ব্যবহারের সময় সকাল 6:00 টা থেকে 10:00 টা পর্যন্ত, সন্ধ্যায় 4:00 টা থেকে। 11:00 pm থেকে কারণ বাথরুম সন্ধ্যার একটু আগে বন্ধ হয়ে যায়, বিভ্রান্তি এড়াতে অনুগ্রহ করে ব্যবহারের সময় মনোযোগ দিন। এবং খাবারের বিষয়ে, আমরা 7 টায় আপনার রুমে রাতের খাবার নিয়ে আসব। প্রাতঃরাশ একটি বুফে, তাই আপনার খাবারের ভাউচার আনুন এবং 1ম তলায় সানশাইন রেস্টুরেন্টে যান।",
+    "Người đàn ông đã đặc biệt chú ý về cái gì?": "লোকটি কি বিশেষ মনোযোগ দিয়েছিল?",
+    "Thời gian sử dụng phòng tắm.": "বাথরুম সময়.",
+    "Vị trí của phòng tắm.": "বাথরুমের অবস্থান।",
+    "Việc phòng tắm không phải suối nước nóng.": "বাথরুম গরম স্প্রিং নয়।",
+    "Việc bữa ăn tính chi phí riêng.": "খাবার আলাদাভাবে চার্জ করা হয়।"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Tại khách sạn, nhân viên nam đang giải thích cho khách hàng.": "होटल में एक पुरुष कर्मचारी ग्राहकों को समझा रहा है.",
+    "....Sau đây, chúng tôi sẽ giải thích cho bạn về phòng tắm. Phòng tắm có 2 loại phòng là phòng tắm riêng ở mỗi phòng và nhà tắm công cộng lớn, cả hai đều được sử dụng suối nước nóng. Nhà tắm công cộng dành cho nam nằm ở tầng 2, và dành cho nữ nằm ở tầng 3. Thời gian sử dụng nhà tắm công cộng buổi sáng từ 6:00-10:00, buổi chiều tối từ 16:00-23:00. Vì buổi tối sẽ đóng cửa nhà tắm sớm hơn một chút nên hãy chú ý thời gian sử dụng để không bị nhầm lẫn. Và liên quan đến các bữa ăn, thì chúng tôi sẽ mang bữa tối đến phòng của bạn vào lúc 7 giờ. Bữa sáng vì ăn buffet nên hãy mang theo phiếu ăn của bạn và đến với nhà hàng Sunshine ở tầng 1.": "....आगे हम आपको बाथरूम के बारे में समझाएंगे। बाथरूम दो प्रकार के होते हैं: प्रत्येक कमरे में निजी बाथरूम और बड़े सार्वजनिक स्नानघर, दोनों में गर्म झरनों तक पहुंच होती है। पुरुषों के लिए सार्वजनिक स्नानघर दूसरी मंजिल पर और महिलाओं के लिए तीसरी मंजिल पर स्थित है। सार्वजनिक स्नानघर के उपयोग का समय सुबह 6:00 बजे से 10:00 बजे तक, शाम को 4:00 बजे तक है। रात्रि 11:00 बजे तक चूँकि बाथरूम शाम को थोड़ा पहले बंद हो जाता है, कृपया भ्रम से बचने के लिए उपयोग के समय पर ध्यान दें। और भोजन के संबंध में, हम 7 बजे आपके कमरे में रात्रि भोजन लाएंगे। नाश्ता बुफ़े है, इसलिए अपना भोजन वाउचर लाएँ और पहली मंजिल पर सनशाइन रेस्तरां में जाएँ।",
+    "Người đàn ông đã đặc biệt chú ý về cái gì?": "उस आदमी ने किस पर विशेष ध्यान दिया?",
+    "Thời gian sử dụng phòng tắm.": "बाथरूम का समय.",
+    "Vị trí của phòng tắm.": "बाथरूम का स्थान.",
+    "Việc phòng tắm không phải suối nước nóng.": "बाथरूम गर्म पानी का झरना नहीं है.",
+    "Việc bữa ăn tính chi phí riêng.": "भोजन का शुल्क अलग से लिया जाता है।"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Tại khách sạn, nhân viên nam đang giải thích cho khách hàng.": "ที่โรงแรมมีพนักงานชายกำลังอธิบายให้ลูกค้าฟัง",
+    "....Sau đây, chúng tôi sẽ giải thích cho bạn về phòng tắm. Phòng tắm có 2 loại phòng là phòng tắm riêng ở mỗi phòng và nhà tắm công cộng lớn, cả hai đều được sử dụng suối nước nóng. Nhà tắm công cộng dành cho nam nằm ở tầng 2, và dành cho nữ nằm ở tầng 3. Thời gian sử dụng nhà tắm công cộng buổi sáng từ 6:00-10:00, buổi chiều tối từ 16:00-23:00. Vì buổi tối sẽ đóng cửa nhà tắm sớm hơn một chút nên hãy chú ý thời gian sử dụng để không bị nhầm lẫn. Và liên quan đến các bữa ăn, thì chúng tôi sẽ mang bữa tối đến phòng của bạn vào lúc 7 giờ. Bữa sáng vì ăn buffet nên hãy mang theo phiếu ăn của bạn và đến với nhà hàng Sunshine ở tầng 1.": "....ต่อไปเราจะมาอธิบายเกี่ยวกับห้องน้ำกันค่ะ ห้องน้ำมีสองประเภท: ห้องน้ำส่วนตัวในแต่ละห้องและห้องอาบน้ำสาธารณะขนาดใหญ่ ซึ่งทั้งสองประเภทมีทางเข้าถึงบ่อน้ำพุร้อน ห้องน้ำสาธารณะสำหรับผู้ชายตั้งอยู่บนชั้น 2 และสำหรับผู้หญิงตั้งอยู่บนชั้น 3 ห้องน้ำสาธารณะเปิดให้บริการช่วงเช้า เวลา 06.00 น. - 10.00 น. และช่วงเย็น เวลา 16.00 น. ถึง 23.00 น. เนื่องจากห้องน้ำปิดเร็วขึ้นเล็กน้อยในตอนเย็นจึงควรคำนึงถึงเวลาใช้งานเพื่อไม่ให้เกิดความสับสน และในส่วนของมื้ออาหาร เราจะนำอาหารเย็นไปที่ห้องของคุณเวลา 7 โมงเช้า อาหารเช้าเป็นแบบบุฟเฟ่ต์ ดังนั้นควรนำบัตรกำนัลรับประทานอาหารมาที่ร้าน Sunshine ที่ชั้น 1",
+    "Người đàn ông đã đặc biệt chú ý về cái gì?": "ผู้ชายให้ความสนใจเป็นพิเศษกับอะไร?",
+    "Thời gian sử dụng phòng tắm.": "เวลาเข้าห้องน้ำ.",
+    "Vị trí của phòng tắm.": "ตำแหน่งของห้องน้ำ",
+    "Việc phòng tắm không phải suối nước nóng.": "ห้องน้ำไม่ใช่บ่อน้ำพุร้อน",
+    "Việc bữa ăn tính chi phí riêng.": "ค่าอาหารจะคิดค่าบริการแยกต่างหาก"
+  }
+}

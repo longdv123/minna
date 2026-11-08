@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Trên truyền hình, một phụ nữ đang nói.": "On television, a woman was speaking.",
+    "Gần đây, không phân biệt độ tuổi, số người đi bộ vì sức khỏe đang tăng lên. Có nhiều loại giày đi bộ trên thị trường nên hãy chọn loại phù hợp với bàn chân mình để đi bộ thoải mái. Trước đây tôi cũng như vậy, nhưng khi đi bộ dây giày có khi bị tuột không? Tùy chất liệu và kiểu dây mà có loại dễ tuột, nhưng có thể khắc phục bằng cách buộc một chút khéo tay. Hôm nay tôi sẽ giới thiệu vài cách buộc chắc, không dễ tuột. Rất dễ nhớ, nên quý vị khán giả trước TV hãy thử nhé.": "Recently, regardless of age, the number of people walking for health is increasing. There are many types of walking shoes on the market, so choose the one that fits your feet for comfortable walking. I was like that before, but when I walk, do my shoe laces sometimes slip? Depending on the material and type of string, some types can easily slip, but this can be fixed by tying a little skillfully. Today I will introduce some ways to tie it firmly and not easily slip off. It's very easy to remember, so everyone in front of the TV should try it.",
+    "Người phụ nữ đang nói về điều gì?": "What is the woman talking about?",
+    "Tác dụng của việc đi bộ": "Effects of walking",
+    "Cách đi bộ đúng": "The correct way to walk",
+    "Cách chọn giày phù hợp": "How to choose the right shoes",
+    "Cách buộc dây giày": "How to tie shoe laces",
+    "Đáp án đúng": "Correct answer"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Trên truyền hình, một phụ nữ đang nói.": "Di televisi, seorang wanita sedang berbicara.",
+    "Gần đây, không phân biệt độ tuổi, số người đi bộ vì sức khỏe đang tăng lên. Có nhiều loại giày đi bộ trên thị trường nên hãy chọn loại phù hợp với bàn chân mình để đi bộ thoải mái. Trước đây tôi cũng như vậy, nhưng khi đi bộ dây giày có khi bị tuột không? Tùy chất liệu và kiểu dây mà có loại dễ tuột, nhưng có thể khắc phục bằng cách buộc một chút khéo tay. Hôm nay tôi sẽ giới thiệu vài cách buộc chắc, không dễ tuột. Rất dễ nhớ, nên quý vị khán giả trước TV hãy thử nhé.": "Baru-baru ini, tanpa memandang usia, jumlah orang yang berjalan kaki demi kesehatan semakin meningkat. Ada banyak jenis sepatu jalan yang beredar di pasaran, jadi pilihlah yang pas dengan kaki Anda agar nyaman berjalan. Dulu saya juga seperti itu, tapi kalau jalan, apakah tali sepatu saya kadang lepas? Tergantung pada bahan dan jenis tali, beberapa jenis dapat dengan mudah tergelincir, namun hal ini dapat diperbaiki dengan mengikatnya dengan sedikit terampil. Hari ini saya akan memperkenalkan beberapa cara untuk mengikatnya dengan kuat dan tidak mudah lepas. Sangat mudah untuk diingat, jadi semua orang di depan TV harus mencobanya.",
+    "Người phụ nữ đang nói về điều gì?": "Apa yang dibicarakan wanita itu?",
+    "Tác dụng của việc đi bộ": "Efek berjalan kaki",
+    "Cách đi bộ đúng": "Cara berjalan yang benar",
+    "Cách chọn giày phù hợp": "Bagaimana memilih sepatu yang tepat",
+    "Cách buộc dây giày": "Cara mengikat tali sepatu",
+    "Đáp án đúng": "Jawaban yang benar"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Trên truyền hình, một phụ nữ đang nói.": "टेलिभिजनमा एउटी महिला बोलिरहेकी थिइन् ।",
+    "Gần đây, không phân biệt độ tuổi, số người đi bộ vì sức khỏe đang tăng lên. Có nhiều loại giày đi bộ trên thị trường nên hãy chọn loại phù hợp với bàn chân mình để đi bộ thoải mái. Trước đây tôi cũng như vậy, nhưng khi đi bộ dây giày có khi bị tuột không? Tùy chất liệu và kiểu dây mà có loại dễ tuột, nhưng có thể khắc phục bằng cách buộc một chút khéo tay. Hôm nay tôi sẽ giới thiệu vài cách buộc chắc, không dễ tuột. Rất dễ nhớ, nên quý vị khán giả trước TV hãy thử nhé.": "पछिल्लो समय उमेरको ख्याल नगरी स्वास्थ्यका लागि हिँड्नेको संख्या बढ्दै गएको छ । बजारमा धेरै प्रकारका हिड्ने जुत्ताहरू छन्, त्यसैले आरामदायी हिड्नका लागि आफ्नो खुट्टामा फिट हुने जुत्ता छान्नुहोस्। म पहिले त्यस्तै थिएँ, तर हिँड्दा के मेरो जुत्ताको फीता कहिलेकाहीं चिप्लिन्छ? सामग्री र स्ट्रिङको प्रकारमा निर्भर गर्दै, केही प्रकारहरू सजिलै चिप्लन सक्छन्, तर यसलाई अलिकति कुशलतापूर्वक बाँधेर निश्चित गर्न सकिन्छ। आज म यसलाई दृढतापूर्वक बाँध्ने र सजिलै चिप्लिने केही तरिकाहरू प्रस्तुत गर्नेछु। यो सम्झन धेरै सजिलो छ, त्यसैले TV को अगाडि सबैले यो प्रयास गर्नुपर्छ।",
+    "Người phụ nữ đang nói về điều gì?": "के कुरा गरिरहेकी महिला ?",
+    "Tác dụng của việc đi bộ": "हिड्ने प्रभावहरू",
+    "Cách đi bộ đúng": "हिड्ने सही तरिका",
+    "Cách chọn giày phù hợp": "सही जुत्ता कसरी छनौट गर्ने",
+    "Cách buộc dây giày": "जुत्ताको फीता कसरी बाँध्ने",
+    "Đáp án đúng": "सहि उत्तर"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Trên truyền hình, một phụ nữ đang nói.": "ရုပ်မြင်သံကြားတွင် အမျိုးသမီးတစ်ဦး စကားပြောနေသည်။",
+    "Gần đây, không phân biệt độ tuổi, số người đi bộ vì sức khỏe đang tăng lên. Có nhiều loại giày đi bộ trên thị trường nên hãy chọn loại phù hợp với bàn chân mình để đi bộ thoải mái. Trước đây tôi cũng như vậy, nhưng khi đi bộ dây giày có khi bị tuột không? Tùy chất liệu và kiểu dây mà có loại dễ tuột, nhưng có thể khắc phục bằng cách buộc một chút khéo tay. Hôm nay tôi sẽ giới thiệu vài cách buộc chắc, không dễ tuột. Rất dễ nhớ, nên quý vị khán giả trước TV hãy thử nhé.": "မကြာသေးမီက အသက်အရွယ်မရွေး ကျန်းမာရေးအတွက် လမ်းလျှောက်သူဦးရေ တိုးများလာသည်။ စျေးကွက်တွင် လမ်းလျှောက်ဖိနပ်အမျိုးအစားများစွာရှိသောကြောင့် သက်တောင့်သက်သာလမ်းလျှောက်ရန်အတွက် သင့်ခြေထောက်နှင့်လိုက်ဖက်သောဖိနပ်ကို ရွေးချယ်ပါ။ ငါအရင်ကလိုပါပဲ ဒါပေမယ့် လမ်းလျှောက်တဲ့အခါ ဖိနပ်ကြိုးတွေက တစ်ခါတလေ ချော်လဲတတ်လား။ ပစ္စည်းနှင့် ကြိုးအမျိုးအစားပေါ် မူတည်၍ အချို့သော အမျိုးအစားများသည် အလွယ်တကူ ချော်ထွက်နိုင်သော်လည်း အနည်းငယ်ကျွမ်းကျင်စွာ ချည်နှောင်ခြင်းဖြင့် ပြုပြင်နိုင်ပါသည်။ ဒီနေ့တော့ လွယ်လွယ်နဲ့ လွယ်လွယ်နဲ့ ချည်နှောင်ထားရမယ့် နည်းလမ်းလေးတွေကို မိတ်ဆက်ပေးလိုက်ပါတယ်။ မှတ်မိဖို့ အရမ်းလွယ်တာမို့ တီဗွီရှေ့မှာ လူတိုင်း စမ်းကြည့်သင့်ပါတယ်။",
+    "Người phụ nữ đang nói về điều gì?": "မိန်းမက ဘာအကြောင်းပြောနေတာလဲ။",
+    "Tác dụng của việc đi bộ": "လမ်းလျှောက်ခြင်း၏အကျိုးသက်ရောက်မှုများ",
+    "Cách đi bộ đúng": "မှန်ကန်သောလမ်းကို လျှောက်လှမ်းခြင်း။",
+    "Cách chọn giày phù hợp": "မှန်ကန်တဲ့ဖိနပ်ကို ဘယ်လိုရွေးချယ်မလဲ။",
+    "Cách buộc dây giày": "ဖိနပ်ကြိုးချည်နည်း",
+    "Đáp án đúng": "အဖြေမှန်"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Trên truyền hình, một phụ nữ đang nói.": "টেলিভিশনে একজন মহিলা কথা বলছিলেন।",
+    "Gần đây, không phân biệt độ tuổi, số người đi bộ vì sức khỏe đang tăng lên. Có nhiều loại giày đi bộ trên thị trường nên hãy chọn loại phù hợp với bàn chân mình để đi bộ thoải mái. Trước đây tôi cũng như vậy, nhưng khi đi bộ dây giày có khi bị tuột không? Tùy chất liệu và kiểu dây mà có loại dễ tuột, nhưng có thể khắc phục bằng cách buộc một chút khéo tay. Hôm nay tôi sẽ giới thiệu vài cách buộc chắc, không dễ tuột. Rất dễ nhớ, nên quý vị khán giả trước TV hãy thử nhé.": "ইদানীং বয়স নির্বিশেষে স্বাস্থ্যের জন্য হাঁটা মানুষের সংখ্যা বাড়ছে। বাজারে অনেক ধরণের হাঁটার জুতা রয়েছে, তাই আরামদায়ক হাঁটার জন্য আপনার পায়ের সাথে মানানসই একটি বেছে নিন। আমি আগে এমনই ছিলাম, কিন্তু আমি যখন হাঁটছি, আমার জুতার ফিতা কি মাঝে মাঝে পিছলে যায়? উপাদান এবং স্ট্রিং ধরনের উপর নির্ভর করে, কিছু ধরনের সহজেই পিছলে যেতে পারে, কিন্তু একটু দক্ষতার সাথে বেঁধে এটি ঠিক করা যেতে পারে। আজ আমি এটিকে শক্তভাবে বেঁধে এবং সহজে পিছলে না যাওয়ার কিছু উপায় উপস্থাপন করব। এটি মনে রাখা খুব সহজ, তাই টিভির সামনে থাকা প্রত্যেকেরই এটি চেষ্টা করা উচিত।",
+    "Người phụ nữ đang nói về điều gì?": "মহিলা কি কথা বলছেন?",
+    "Tác dụng của việc đi bộ": "হাঁটার প্রভাব",
+    "Cách đi bộ đúng": "হাঁটার সঠিক পথ",
+    "Cách chọn giày phù hợp": "কিভাবে সঠিক জুতা চয়ন",
+    "Cách buộc dây giày": "জুতার ফিতা কিভাবে বাঁধবেন",
+    "Đáp án đúng": "সঠিক উত্তর"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Trên truyền hình, một phụ nữ đang nói.": "टेलीविजन पर एक महिला बोल रही थी.",
+    "Gần đây, không phân biệt độ tuổi, số người đi bộ vì sức khỏe đang tăng lên. Có nhiều loại giày đi bộ trên thị trường nên hãy chọn loại phù hợp với bàn chân mình để đi bộ thoải mái. Trước đây tôi cũng như vậy, nhưng khi đi bộ dây giày có khi bị tuột không? Tùy chất liệu và kiểu dây mà có loại dễ tuột, nhưng có thể khắc phục bằng cách buộc một chút khéo tay. Hôm nay tôi sẽ giới thiệu vài cách buộc chắc, không dễ tuột. Rất dễ nhớ, nên quý vị khán giả trước TV hãy thử nhé.": "हाल ही में, उम्र की परवाह किए बिना, स्वास्थ्य के लिए चलने वाले लोगों की संख्या बढ़ रही है। बाज़ार में कई प्रकार के चलने वाले जूते उपलब्ध हैं, इसलिए वही चुनें जो आरामदायक चलने के लिए आपके पैरों पर फिट बैठे। मैं पहले भी ऐसा ही था, लेकिन जब मैं चलता हूं तो क्या कभी-कभी मेरे जूते के फीते फिसल जाते हैं? सामग्री और डोरी के प्रकार के आधार पर, कुछ प्रकार आसानी से फिसल सकते हैं, लेकिन इसे थोड़ी कुशलता से बांधकर ठीक किया जा सकता है। आज मैं इसे मजबूती से बांधने और आसानी से फिसलने से बचाने के कुछ तरीके बताऊंगा। इसे याद रखना बहुत आसान है, इसलिए टीवी के सामने खड़े हर व्यक्ति को इसे आज़माना चाहिए।",
+    "Người phụ nữ đang nói về điều gì?": "महिला किस बारे में बात कर रही है?",
+    "Tác dụng của việc đi bộ": "चलने का प्रभाव",
+    "Cách đi bộ đúng": "चलने का सही तरीका",
+    "Cách chọn giày phù hợp": "सही जूते कैसे चुनें",
+    "Cách buộc dây giày": "जूते के फीते कैसे बांधें",
+    "Đáp án đúng": "सही जवाब"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Trên truyền hình, một phụ nữ đang nói.": "ในโทรทัศน์ มีผู้หญิงคนหนึ่งกำลังพูดอยู่",
+    "Gần đây, không phân biệt độ tuổi, số người đi bộ vì sức khỏe đang tăng lên. Có nhiều loại giày đi bộ trên thị trường nên hãy chọn loại phù hợp với bàn chân mình để đi bộ thoải mái. Trước đây tôi cũng như vậy, nhưng khi đi bộ dây giày có khi bị tuột không? Tùy chất liệu và kiểu dây mà có loại dễ tuột, nhưng có thể khắc phục bằng cách buộc một chút khéo tay. Hôm nay tôi sẽ giới thiệu vài cách buộc chắc, không dễ tuột. Rất dễ nhớ, nên quý vị khán giả trước TV hãy thử nhé.": "ช่วงนี้ไม่ว่าอายุเท่าไร จำนวนคนเดินเพื่อสุขภาพก็เพิ่มมากขึ้น รองเท้าใส่เดินในท้องตลาดมีหลายประเภท ดังนั้นควรเลือกแบบที่เหมาะกับเท้าของคุณเพื่อการเดินที่สบาย เมื่อก่อนเคยเป็นแบบนั้นแต่เวลาเดินเชือกผูกรองเท้าลื่นหรือเปล่าคะ? เชือกบางชนิดอาจหลุดง่ายขึ้นอยู่กับวัสดุและประเภทของเชือก แต่สามารถแก้ไขได้ด้วยการผูกให้ชำนาญเล็กน้อย วันนี้จะมาแนะนำวิธีผูกให้แน่นไม่หลุดง่ายค่ะ จำได้ง่ายมาก ดังนั้นทุกคนที่อยู่หน้าทีวีจึงควรลองทำดู",
+    "Người phụ nữ đang nói về điều gì?": "ผู้หญิงกำลังพูดถึงอะไร?",
+    "Tác dụng của việc đi bộ": "ผลของการเดิน",
+    "Cách đi bộ đúng": "วิธีเดินที่ถูกต้อง",
+    "Cách chọn giày phù hợp": "วิธีการเลือกรองเท้าให้เหมาะสม",
+    "Cách buộc dây giày": "วิธีผูกเชือกรองเท้า",
+    "Đáp án đúng": "คำตอบที่ถูกต้อง"
+  }
+}

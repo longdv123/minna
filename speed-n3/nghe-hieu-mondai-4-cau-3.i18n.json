@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Ở trường học, hỏi bạn về việc của ngày mai. Thì sẽ hỏi gì?": "At school, ask your friends about tomorrow's work. So what will you ask?",
+    "Ngày mai cũng đến trường phải không?": "Going to school tomorrow too, right?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Ở trường học, hỏi bạn về việc của ngày mai. Thì sẽ hỏi gì?": "Di sekolah, tanyakan pada temanmu tentang pekerjaan besok. Lalu apa yang akan kamu tanyakan?",
+    "Ngày mai cũng đến trường phải không?": "Besok juga berangkat sekolah kan?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Ở trường học, hỏi bạn về việc của ngày mai. Thì sẽ hỏi gì?": "विद्यालयमा, भोलिको कामको बारेमा आफ्ना साथीहरूलाई सोध्नुहोस्। त्यसपछि के सोध्ने ?",
+    "Ngày mai cũng đến trường phải không?": "भोलि पनि स्कुल जाने हो नि ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Ở trường học, hỏi bạn về việc của ngày mai. Thì sẽ hỏi gì?": "ကျောင်းမှာ မနက်ဖြန် အလုပ်အကြောင်း သူငယ်ချင်းတွေကို မေးပါ။ ဒါဆိုရင် မင်းဘာမေးမလဲ။",
+    "Ngày mai cũng đến trường phải không?": "မနက်ဖြန် ကျောင်းသွားရမှာလား"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Ở trường học, hỏi bạn về việc của ngày mai. Thì sẽ hỏi gì?": "স্কুলে, আপনার বন্ধুদের আগামীকালের কাজ সম্পর্কে জিজ্ঞাসা করুন। তাহলে কি জিজ্ঞেস করবে?",
+    "Ngày mai cũng đến trường phải không?": "কালকেও স্কুলে যাবে, তাই না?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Ở trường học, hỏi bạn về việc của ngày mai. Thì sẽ hỏi gì?": "स्कूल में अपने दोस्तों से कल के काम के बारे में पूछें। तो फिर क्या पूछोगे?",
+    "Ngày mai cũng đến trường phải không?": "कल भी स्कूल जाना है ना?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Ở trường học, hỏi bạn về việc của ngày mai. Thì sẽ hỏi gì?": "ที่โรงเรียน ถามเพื่อนของคุณเกี่ยวกับงานวันพรุ่งนี้ แล้วจะถามอะไรล่ะ?",
+    "Ngày mai cũng đến trường phải không?": "พรุ่งนี้ไปโรงเรียนด้วยใช่ไหม?"
+  }
+}

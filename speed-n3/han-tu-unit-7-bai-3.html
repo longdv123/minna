@@ -1,0 +1,191 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N3 HANTU - ONE HTML (SEO + nhẹ)
+   >768: giống hình rộng (3 ô header, body nhìn như 3 cột với cột phải trống)
+   <=768 : giống hình mobile (card center + list item JP/VI)
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+/* ===== BODY (ONE LIST) =====
+   Desktop: item là grid 2 cột (JP | VI),
+   và chừa khoảng trống bên phải = cột 3 (blank) để nhìn như mẫu ảnh.
+*/
+.kbody{
+  padding:14px 18px 16px;
+  /* tạo cảm giác có cột phải trống */
+  padding-right: calc(18px + 1fr);
+}
+@media (min-width: 768px){
+  .kbody{
+    padding-right: 18px; /* reset */
+    display:block;
+  }
+  .kbody-inner{
+    /* chừa cột phải trống giống 3 cột: 240 | 260 | blank */
+    padding-right: 0;
+  }
+  .kbody-inner{
+    /* mô phỏng 3 cột bằng cách giới hạn vùng nội dung 2 cột */
+    width: 100%;
+  }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+}
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+  .kbody-inner{ width:auto; }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">虫</div></div><div class="kcell k-hv"><span class="vi-tr">trùng</span> </div><div class="kcell k-read"><div>むし</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>虫<rp>（</rp><rt>むし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sâu, côn trùng</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">皿</div></div><div class="kcell k-hv"><span class="vi-tr">mãnh</span></div><div class="kcell k-read"><div>さら／ーざら</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>皿<rp>（</rp><rt>さら</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đĩa</span></div></div><div class="kitem"><div class="jp"><ruby>灰皿<rp>（</rp><rt>はいざら</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">gạt tàn</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">鳴</div></div><div class="kcell k-hv">minh</div><div class="kcell k-read"><div>なーく／なーる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp">（～が）<ruby>鳴<rp>（</rp><rt>な</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">~ kêu</span></div></div><div class="kitem"><div class="jp">（～が）<ruby>鳴<rp>（</rp><rt>な</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">~ kêu, vang</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">池</div></div><div class="kcell k-hv"><span class="vi-tr">trì</span></div><div class="kcell k-read"><div class="on">チ</div><div>いけ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>池<rp>（</rp><rt>いけ</rt><rp>）</rp></ruby></div><div class="vi">ao</div></div><div class="kitem"><div class="jp"><ruby>電池<rp>（</rp><rt>でんち</rt><rp>）</rp></ruby></div><div class="vi">pin</div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">毛</div></div><div class="kcell k-hv">mao</div><div class="kcell k-read"><div class="on">モウ</div><div>け</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>毛<rp>（</rp><rt>け</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lông</span></div></div><div class="kitem"><div class="jp"><ruby>髪<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>の<ruby>毛<rp>（</rp><rt>け</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tóc</span></div></div><div class="kitem"><div class="jp"><ruby>毛布<rp>（</rp><rt>もうふ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chăn lông</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">血</div></div><div class="kcell k-hv"><span class="vi-tr">huyết</span></div><div class="kcell k-read"><div class="on">ケツ</div><div>ち</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>血<rp>（</rp><rt>ち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máu</span></div></div><div class="kitem"><div class="jp"><ruby>出血<rp>（</rp><rt>しゅっけつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">chảy máu</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">吸</div></div><div class="kcell k-hv"><span class="vi-tr">hấp</span></div><div class="kcell k-read"><div class="on">キュウ</div><div>すーう</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>吸<rp>（</rp><rt>す</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">hút, hít</span></div></div><div class="kitem"><div class="jp"><ruby>呼吸<rp>（</rp><rt>こきゅう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hít thở</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">命</div></div><div class="kcell k-hv"><span class="vi-tr">mệnh</span></div><div class="kcell k-read"><div class="on">メイ</div><div>いのち</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>命<rp>（</rp><rt>いのち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sinh mệnh, tính mạng</span></div></div><div class="kitem"><div class="jp"><ruby>生命<rp>（</rp><rt>せいめい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sinh mệnh</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">地</div></div><div class="kcell k-hv"><span class="vi-tr">địa</span></div><div class="kcell k-read"><div class="on">チ／ジ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>土地<rp>（</rp><rt>とち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đất đai</span></div></div><div class="kitem"><div class="jp"><ruby>観光地<rp>（</rp><rt>かんこうち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khu du lịch</span></div></div><div class="kitem"><div class="jp"><ruby>産地<rp>（</rp><rt>さんち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nơi sản xuất</span></div></div><div class="kitem"><div class="jp"><ruby>地理<rp>（</rp><rt>ちり</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">địa lý</span></div></div><div class="kitem"><div class="jp"><ruby>空<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>き<ruby>地<rp>（</rp><rt>ち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đất trống</span></div></div><div class="kitem"><div class="jp"><ruby>地方<rp>（</rp><rt>ちほう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">địa phương</span></div></div><div class="kitem"><div class="jp"><ruby>地面<rp>（</rp><rt>じめん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mặt đất</span></div></div><div class="kitem"><div class="jp"><ruby>地味<rp>（</rp><rt>じみ</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">giản dị</span></div></div><div class="kitem"><div class="jp"><ruby>地震<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">động đất</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">他</div></div><div class="kcell k-hv">tha</div><div class="kcell k-read"><div class="on">タ</div><div>ほか</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>他<rp>（</rp><rt>ほか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngoài ra</span></div></div><div class="kitem"><div class="jp"><ruby>他<rp>（</rp><rt>ほか</rt><rp>）</rp></ruby>に</div><div class="vi"><span class="vi-tr">ngoài ra</span></div></div><div class="kitem"><div class="jp">その<ruby>他<rp>（</rp><rt>た</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngoài ra</span></div></div><div class="kitem"><div class="jp"><ruby>他人<rp>（</rp><rt>たにん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">người ngoài</span></div></div></div></div></div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+<p><b>ドリルA</b></p><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<u><ruby>皿<rp>（</rp><rt>さら</rt><rp>）</rp></ruby></u>は、<ruby>友人<rp>（</rp><rt>ゆうじん</rt><rp>）</rp></ruby>の<ruby>手作<rp>（</rp><rt>てづく</rt><rp>）</rp></ruby>りだ。</td><td>a. ち</td><td>b. さら</td></tr><tr><td>2. リモコンの<u><ruby>電池<rp>（</rp><rt>でんち</rt><rp>）</rp></ruby></u>が<ruby>切<rp>（</rp><rt>き</rt><rp>）</rp></ruby>れちゃった。</td><td>a. でんき</td><td>b. でんち</td></tr><tr><td>3. <u><ruby>命<rp>（</rp><rt>いのち</rt><rp>）</rp></ruby></u>の<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>さについて<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>える。</td><td>a. めい</td><td>b. いのち</td></tr><tr><td>4. <ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>か<u><ruby>他<rp>（</rp><rt>ほか</rt><rp>）</rp></ruby></u>に<ruby>質問<rp>（</rp><rt>しつもん</rt><rp>）</rp></ruby>はありませんか。</td><td>a. ほか</td><td>b. た</td></tr><tr><td>5. ここの<u><ruby>空<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>き<ruby>地<rp>（</rp><rt>ち</rt><rp>）</rp></ruby></u>は、<ruby>駐車場<rp>（</rp><rt>ちゅうしゃじょう</rt><rp>）</rp></ruby>になるらしい。</td><td>a. あきじ</td><td>b. あきち</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<u><ruby>皿<rp>（</rp><rt>さら</rt><rp>）</rp></ruby></u>は、<ruby>友人<rp>（</rp><rt>ゆうじん</rt><rp>）</rp></ruby>の<ruby>手作<rp>（</rp><rt>てづく</rt><rp>）</rp></ruby>りだ。</td><td><b>さら</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Cái đĩa này do bạn tôi làm thủ công.</span></td></tr><tr><td>2. リモコンの<u><ruby>電池<rp>（</rp><rt>でんち</rt><rp>）</rp></ruby></u>が<ruby>切<rp>（</rp><rt>き</rt><rp>）</rp></ruby>れちゃった。</td><td><b>でんち</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Pin điều khiển đã hết rồi.</span></td></tr><tr><td>3. <u><ruby>命<rp>（</rp><rt>いのち</rt><rp>）</rp></ruby></u>の<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>さについて<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>える。</td><td><b>いのち</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Suy nghĩ về sự quý giá của sự sống.</span></td></tr><tr><td>4. <ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>か<u><ruby>他<rp>（</rp><rt>ほか</rt><rp>）</rp></ruby></u>に<ruby>質問<rp>（</rp><rt>しつもん</rt><rp>）</rp></ruby>はありませんか。</td><td><b>ほか</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Còn có câu hỏi nào khác không?</span></td></tr><tr><td>5. ここの<u><ruby>空<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>き<ruby>地<rp>（</rp><rt>ち</rt><rp>）</rp></ruby></u>は、<ruby>駐車場<rp>（</rp><rt>ちゅうしゃじょう</rt><rp>）</rp></ruby>になるらしい。</td><td><b>あきち</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルB</b></p><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>いけ</u>で<ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>つりをした。</td><td>a. 地</td><td>b. 池</td><td>c. 他</td></tr><tr><td>2. <ruby>髪<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>の<u>け</u>が<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>くなっちゃった。</td><td>a. 光</td><td>b. 手</td><td>c. 毛</td></tr><tr><td>3. <ruby>指<rp>（</rp><rt>ゆび</rt><rp>）</rp></ruby>、どうしたの？<u>ち</u>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>てるよ。</td><td>a. 値</td><td>b. 血</td><td>c. 地</td></tr><tr><td>4. <ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>の<ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>には<u>むし</u>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td>a. 虫</td><td>b. 牛</td><td>c. 足</td></tr><tr><td>5. <ruby>観光<rp>（</rp><rt>かんこう</rt><rp>）</rp></ruby><u>ち</u>は、いつもにぎやかだ。</td><td>a. 地</td><td>b. 場</td><td>c. 記</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>いけ</u>で<ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>つりをした。</td><td><b>池</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã câu cá ở cái ao.</span></td></tr><tr><td>2. <ruby>髪<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>の<u>け</u>が<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>くなっちゃった。</td><td><b>毛</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tóc của tôi đã dài ra rồi.</span></td></tr><tr><td>3. <ruby>指<rp>（</rp><rt>ゆび</rt><rp>）</rp></ruby>、どうしたの？<u>ち</u>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>てるよ。</td><td><b>血</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Ngón tay sao vậy? Có vết thương chảy máu kìa.</span></td></tr><tr><td>4. <ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>の<ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>には<u>むし</u>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td><b>虫</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Vào mùa hè trên núi có rất nhiều côn trùng.</span></td></tr><tr><td>5. <ruby>観光<rp>（</rp><rt>かんこう</rt><rp>）</rp></ruby><u>ち</u>は、いつもにぎやかだ。</td><td><b>地</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Khu du lịch lúc nào cũng đông đúc.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルC</b></p><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. この<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>は、ちょっと（　　　）かなあ。</td><td>a. 地理</td><td>b. 地味</td></tr><tr><td>2. <ruby>寒<rp>（</rp><rt>さむ</rt><rp>）</rp></ruby>くなったから、（　　　）がほしいなあ。</td><td>a. 毛布</td><td>b. 他人</td></tr><tr><td>3. そうじ<ruby>機<rp>（</rp><rt>き</rt><rp>）</rp></ruby>がごみを（　　　）ない。こわれたかな。</td><td>a. 吸わ</td><td>b. 呼吸し</td></tr><tr><td>4. <ruby>目覚<rp>（</rp><rt>めざ</rt><rp>）</rp></ruby>まし<ruby>時計<rp>（</rp><rt>どけい</rt><rp>）</rp></ruby>が（　　　）いますよ。</td><td>a. 鳴って</td><td>b. 鳴いて</td></tr><tr><td>5. <ruby>猫<rp>（</rp><rt>ねこ</rt><rp>）</rp></ruby>の（　　　）<ruby>声<rp>（</rp><rt>ごえ</rt><rp>）</rp></ruby>がうるさくて<ruby>眠<rp>（</rp><rt>ねむ</rt><rp>）</rp></ruby>れない。</td><td>a. 鳴き</td><td>b. 泣き</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. この<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>は、ちょっと（　　　）かなあ。</td><td><b>地味</b>　(じみ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Màu này có vẻ hơi đơn giản một chút nhỉ.</span></td></tr><tr><td>2. <ruby>寒<rp>（</rp><rt>さむ</rt><rp>）</rp></ruby>くなったから、（　　　）がほしいなあ。</td><td><b>毛布</b>　(もうふ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Trời lạnh rồi, tôi muốn có một chiếc chăn quá.</span></td></tr><tr><td>3. そうじ<ruby>機<rp>（</rp><rt>き</rt><rp>）</rp></ruby>がごみを（　　　）ない。こわれたかな。</td><td><b>吸わ</b>　(すわ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.</span></td></tr><tr><td>4. <ruby>目覚<rp>（</rp><rt>めざ</rt><rp>）</rp></ruby>まし<ruby>時計<rp>（</rp><rt>どけい</rt><rp>）</rp></ruby>が（　　　）いますよ。</td><td><b>鳴って</b>　(なって)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Đồng hồ báo thức đang kêu đấy.</span></td></tr><tr><td>5. <ruby>猫<rp>（</rp><rt>ねこ</rt><rp>）</rp></ruby>の（　　　）<ruby>声<rp>（</rp><rt>ごえ</rt><rp>）</rp></ruby>がうるさくて<ruby>眠<rp>（</rp><rt>ねむ</rt><rp>）</rp></ruby>れない。</td><td><b>鳴き</b>　(なき)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tiếng mèo kêu ồn quá, tôi không thể ngủ được.</span></td></tr></tbody></table></div></div></div>
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed3-7-3"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-7-bai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","trùng":"coincide","sâu, côn trùng":"worms, insects","mãnh":"strong","đĩa":"plate","gạt tàn":"ashtray","~ kêu":"~ cry","~ kêu, vang":"~ ring, echo","trì":"maintain","lông":"hair","tóc":"hair","chăn lông":"feather blanket","huyết":"blood","máu":"blood","chảy máu":"bleed","hấp":"steam","hút, hít":"suck, inhale","hít thở":"breathe","mệnh":"par","sinh mệnh, tính mạng":"life, life","sinh mệnh":"life","địa":"land","đất đai":"land","khu du lịch":"tourist area","nơi sản xuất":"place of production","địa lý":"geography","đất trống":"vacant land","địa phương":"local","mặt đất":"ground","giản dị":"simple","động đất":"earthquake","ngoài ra":"Besides","người ngoài":"outsider","☞ Đáp Án + Dịch":"☞ Answer + Translation","Cái đĩa này do bạn tôi làm thủ công.":"This plate was handmade by my friend.","Pin điều khiển đã hết rồi.":"The controller battery is dead.","Suy nghĩ về sự quý giá của sự sống.":"Think about the preciousness of life.","Còn có câu hỏi nào khác không?":"Any other questions?","Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.":"I heard that the vacant lot here will become a parking lot.","Tôi đã câu cá ở cái ao.":"I was fishing in the pond.","Tóc của tôi đã dài ra rồi.":"My hair has grown longer.","Ngón tay sao vậy? Có vết thương chảy máu kìa.":"What's wrong with your fingers? There's a bleeding wound.","Vào mùa hè trên núi có rất nhiều côn trùng.":"In the summer there are many insects in the mountains.","Khu du lịch lúc nào cũng đông đúc.":"The tourist area is always crowded.","Màu này có vẻ hơi đơn giản một chút nhỉ.":"This color seems a bit simple.","Trời lạnh rồi, tôi muốn có một chiếc chăn quá.":"It's cold, I want a blanket so much.","Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.":"The vacuum cleaner does not suck up trash. Maybe it's broken?","Đồng hồ báo thức đang kêu đấy.":"The alarm clock is ringing.","Tiếng mèo kêu ồn quá, tôi không thể ngủ được.":"The cat's meowing is so loud, I can't sleep.","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","trùng":"bertepatan","sâu, côn trùng":"cacing, serangga","mãnh":"kuat","đĩa":"piring","gạt tàn":"asbak","~ kêu":"~ menangis","~ kêu, vang":"~ dering, gema","trì":"menjaga","lông":"rambut","tóc":"rambut","chăn lông":"selimut bulu","huyết":"darah","máu":"darah","chảy máu":"berdarah","hấp":"uap","hút, hít":"menghisap, menarik napas","hít thở":"bernapas","mệnh":"par","sinh mệnh, tính mạng":"hidup, kehidupan","sinh mệnh":"kehidupan","địa":"tanah","đất đai":"tanah","khu du lịch":"kawasan wisata","nơi sản xuất":"tempat produksi","địa lý":"geografi","đất trống":"lahan kosong","địa phương":"lokal","mặt đất":"tanah","giản dị":"sederhana","động đất":"gempa bumi","ngoài ra":"Di samping itu","người ngoài":"orang luar","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Cái đĩa này do bạn tôi làm thủ công.":"Piring ini buatan tangan teman saya.","Pin điều khiển đã hết rồi.":"Baterai pengontrol sudah mati.","Suy nghĩ về sự quý giá của sự sống.":"Pikirkan tentang betapa berharganya hidup.","Còn có câu hỏi nào khác không?":"Ada pertanyaan lain?","Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.":"Saya dengar lahan kosong di sini akan menjadi tempat parkir.","Tôi đã câu cá ở cái ao.":"Saya sedang memancing di kolam.","Tóc của tôi đã dài ra rồi.":"Rambutku telah tumbuh lebih panjang.","Ngón tay sao vậy? Có vết thương chảy máu kìa.":"Ada apa dengan jarimu? Ada luka berdarah.","Vào mùa hè trên núi có rất nhiều côn trùng.":"Di musim panas banyak serangga di pegunungan.","Khu du lịch lúc nào cũng đông đúc.":"Kawasan wisata ini selalu ramai dikunjungi.","Màu này có vẻ hơi đơn giản một chút nhỉ.":"Warna ini tampak agak sederhana.","Trời lạnh rồi, tôi muốn có một chiếc chăn quá.":"Dingin sekali, aku sangat ingin selimut.","Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.":"Penyedot debu tidak menyedot sampah. Mungkin rusak?","Đồng hồ báo thức đang kêu đấy.":"Jam alarm berdering.","Tiếng mèo kêu ồn quá, tôi không thể ngủ được.":"Mengeong kucing itu sangat keras, aku tidak bisa tidur.","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","trùng":"मिल्छ","sâu, côn trùng":"कीराहरू, कीराहरू","mãnh":"बलियो","đĩa":"प्लेट","gạt tàn":"ऐशट्रे","~ kêu":"~ रुनु","~ kêu, vang":"~ घण्टी, प्रतिध्वनि","trì":"कायम राख्ने","lông":"कपाल","tóc":"कपाल","chăn lông":"प्वाँखको कम्बल","huyết":"रगत","máu":"रगत","chảy máu":"रक्तस्राव","hấp":"भाप","hút, hít":"चुस्नु, सास फेर्नु","hít thở":"सास फेर्न","mệnh":"par","sinh mệnh, tính mạng":"जीवन, जीवन","sinh mệnh":"जीवन","địa":"भूमि","đất đai":"भूमि","khu du lịch":"पर्यटकीय क्षेत्र","nơi sản xuất":"उत्पादन को स्थान","địa lý":"भूगोल","đất trống":"खाली जग्गा","địa phương":"स्थानीय","mặt đất":"जमीन","giản dị":"सरल","động đất":"भूकम्प","ngoài ra":"यसबाहेक","người ngoài":"बाहिरी","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Cái đĩa này do bạn tôi làm thủ công.":"यो प्लेट मेरो साथी द्वारा हस्तनिर्मित थियो।","Pin điều khiển đã hết rồi.":"नियन्त्रक ब्याट्री मरेको छ।","Suy nghĩ về sự quý giá của sự sống.":"जीवनको बहुमूल्यताको बारेमा सोच्नुहोस्।","Còn có câu hỏi nào khác không?":"कुनै अन्य प्रश्न?","Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.":"मैले सुनेको छु कि यहाँ खाली ठाउँ पार्किङ स्थल हुनेछ।","Tôi đã câu cá ở cái ao.":"पोखरीमा माछा मार्दै थिएँ ।","Tóc của tôi đã dài ra rồi.":"मेरो कपाल लामो भयो।","Ngón tay sao vậy? Có vết thương chảy máu kìa.":"तपाईंको औंलाहरूमा के गलत छ? रगत बगेको घाउ छ।","Vào mùa hè trên núi có rất nhiều côn trùng.":"गर्मीमा पहाडमा धेरै कीरा हुन्छन् ।","Khu du lịch lúc nào cũng đông đúc.":"पर्यटकीय क्षेत्र सधैं भीडभाड हुन्छ।","Màu này có vẻ hơi đơn giản một chút nhỉ.":"यो रंग अलि सरल देखिन्छ।","Trời lạnh rồi, tôi muốn có một chiếc chăn quá.":"यो चिसो छ, मलाई कम्बल धेरै चाहिएको छ।","Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.":"भ्याकुम क्लिनरले फोहोर चुस्दैन। सायद यो बिग्रिएको छ?","Đồng hồ báo thức đang kêu đấy.":"अलार्म घडी बजिरहेको छ।","Tiếng mèo kêu ồn quá, tôi không thể ngủ được.":"बिरालोको म्याउभिङ यति ठूलो छ, म निदाउन सक्दिन।","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","trùng":"တိုက်ဆိုင်သည်။","sâu, côn trùng":"ပိုးကောင်များ၊ အင်းဆက်များ","mãnh":"ခိုင်မာတယ်။","đĩa":"ပန်းကန်","gạt tàn":"ပြာခွက်","~ kêu":"~ ငိုပါ။","~ kêu, vang":"~ ပဲ့တင်သံ၊","trì":"ထိန်းသိမ်းပါ။","lông":"ဆံပင်","tóc":"ဆံပင်","chăn lông":"အမွေးစောင်","huyết":"သွေး","máu":"သွေး","chảy máu":"သွေးထွက်","hấp":"ရေနွေးငွေ့","hút, hít":"စုပ်ပါ၊ ရှူသွင်းပါ။","hít thở":"ရှူ","mệnh":"par","sinh mệnh, tính mạng":"ဘဝ၊ ဘဝ","sinh mệnh":"ဘဝ","địa":"မြေ","đất đai":"မြေ","khu du lịch":"ခရီးသွားဧရိယာ","nơi sản xuất":"ထုတ်လုပ်မှုနေရာ","địa lý":"ပထဝီဝင်","đất trống":"မြေလွတ်၊","địa phương":"ပြည်တွင်း","mặt đất":"မြေ","giản dị":"ရိုးရှင်းသော","động đất":"ငလျင်","ngoài ra":"အစုံပါပဲ။","người ngoài":"အပြင်လူ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Cái đĩa này do bạn tôi làm thủ công.":"ဒီပန်းကန်ကို ငါ့သူငယ်ချင်းက လက်လုပ်ထားတာ။","Pin điều khiển đã hết rồi.":"ထိန်းချုပ်သူဘက်ထရီ ဆုံးသွားပါပြီ။","Suy nghĩ về sự quý giá của sự sống.":"ဘဝရဲ့တန်ဖိုးကို တွေးကြည့်ပါ။","Còn có câu hỏi nào khác không?":"အခြားမေးခွန်းများ ရှိပါသလား။","Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.":"ဒီနေရာက လစ်လပ်ကားပါကင် ဖြစ်သွားတော့မယ်လို့ ကြားတယ်။","Tôi đã câu cá ở cái ao.":"ရေကန်ထဲမှာ ငါးမျှားနေခဲ့တယ်။","Tóc của tôi đã dài ra rồi.":"ငါ့ဆံပင်က ပိုရှည်လာပြီ။","Ngón tay sao vậy? Có vết thương chảy máu kìa.":"မင်းလက်ချောင်းတွေ ဘာတွေမှားနေလဲ။ သွေးထွက်သံယို ဒဏ်ရာရှိတယ်။","Vào mùa hè trên núi có rất nhiều côn trùng.":"နွေရာသီတွင် တောင်ပေါ်၌ အင်းဆက်ပိုးမွှားများစွာရှိသည်။","Khu du lịch lúc nào cũng đông đúc.":"ကမ္ဘာလှည့်ခရီးသည်များ အမြဲစည်ကားနေပါသည်။","Màu này có vẻ hơi đơn giản một chút nhỉ.":"ဤအရောင်သည် အနည်းငယ်ရိုးရှင်းပုံရသည်။","Trời lạnh rồi, tôi muốn có một chiếc chăn quá.":"အရမ်းအေးတယ်၊ စောင်အရမ်းလိုချင်တယ်။","Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.":"ဖုန်စုပ်စက်က အမှိုက်ကို စုပ်မပေးပါဘူး။ ကျိုးဖြစ်ရင် ?","Đồng hồ báo thức đang kêu đấy.":"နှိုးစက်နာရီ မြည်လာသည်။","Tiếng mèo kêu ồn quá, tôi không thể ngủ được.":"ကြောင်အော်သံက ကျယ်လောင်လို့ အိပ်မပျော်ဘူး။","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","trùng":"মিলিত","sâu, côn trùng":"কৃমি, পোকামাকড়","mãnh":"শক্তিশালী","đĩa":"প্লেট","gạt tàn":"অ্যাশট্রে","~ kêu":"~ কান্না","~ kêu, vang":"~ রিং, প্রতিধ্বনি","trì":"বজায় রাখা","lông":"চুল","tóc":"চুল","chăn lông":"পালক কম্বল","huyết":"রক্ত","máu":"রক্ত","chảy máu":"রক্তপাত","hấp":"বাষ্প","hút, hít":"চুষা, শ্বাস নেওয়া","hít thở":"শ্বাস ফেলা","mệnh":"সমতুল্য","sinh mệnh, tính mạng":"জীবন, জীবন","sinh mệnh":"জীবন","địa":"জমি","đất đai":"জমি","khu du lịch":"পর্যটন এলাকা","nơi sản xuất":"উৎপাদনের জায়গা","địa lý":"ভূগোল","đất trống":"খালি জমি","địa phương":"স্থানীয়","mặt đất":"স্থল","giản dị":"সহজ","động đất":"ভূমিকম্প","ngoài ra":"এছাড়া","người ngoài":"বহিরাগত","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Cái đĩa này do bạn tôi làm thủ công.":"এই প্লেটটি আমার বন্ধুর হাতে তৈরি করা হয়েছিল।","Pin điều khiển đã hết rồi.":"কন্ট্রোলার ব্যাটারি মারা গেছে।","Suy nghĩ về sự quý giá của sự sống.":"জীবনের মূল্যবান সম্পর্কে চিন্তা করুন।","Còn có câu hỏi nào khác không?":"অন্য কোন প্রশ্ন?","Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.":"শুনলাম এখানকার খালি জায়গাটা পার্কিং লটে পরিণত হবে।","Tôi đã câu cá ở cái ao.":"পুকুরে মাছ ধরছিলাম।","Tóc của tôi đã dài ra rồi.":"আমার চুল লম্বা হয়ে গেছে।","Ngón tay sao vậy? Có vết thương chảy máu kìa.":"আপনার আঙ্গুলের সাথে কি ভুল? রক্তক্ষরণের ক্ষত আছে।","Vào mùa hè trên núi có rất nhiều côn trùng.":"গ্রীষ্মকালে পাহাড়ে অনেক পোকামাকড় থাকে।","Khu du lịch lúc nào cũng đông đúc.":"পর্যটন এলাকা সবসময় জমজমাট।","Màu này có vẻ hơi đơn giản một chút nhỉ.":"এই রং একটু সহজ মনে হয়.","Trời lạnh rồi, tôi muốn có một chiếc chăn quá.":"খুব ঠান্ডা, আমার একটা কম্বল চাই।","Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.":"ভ্যাকুয়াম ক্লিনার আবর্জনা শোষণ করে না। হয়তো ভেঙ্গে গেছে?","Đồng hồ báo thức đang kêu đấy.":"অ্যালার্ম ঘড়ি বাজছে।","Tiếng mèo kêu ồn quá, tôi không thể ngủ được.":"বিড়ালের মাইয়ের আওয়াজ এত জোরে, আমি ঘুমাতে পারি না।","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","trùng":"मेल खाना","sâu, côn trùng":"कीड़े, कीड़े","mãnh":"मज़बूत","đĩa":"थाली","gạt tàn":"राखदानी","~ kêu":"~ रोओ","~ kêu, vang":"~ अंगूठी, प्रतिध्वनि","trì":"बनाए रखना","lông":"बाल","tóc":"बाल","chăn lông":"पंख कंबल","huyết":"खून","máu":"खून","chảy máu":"ब्लीड","hấp":"भाप","hút, hít":"चूसो, साँस लो","hít thở":"साँस लेना","mệnh":"बराबर","sinh mệnh, tính mạng":"जीवन, जीवन","sinh mệnh":"ज़िंदगी","địa":"भूमि","đất đai":"भूमि","khu du lịch":"पर्यटक क्षेत्र","nơi sản xuất":"उत्पादन का स्थान","địa lý":"भूगोल","đất trống":"खाली जमीन","địa phương":"स्थानीय","mặt đất":"मैदान","giản dị":"सरल","động đất":"भूकंप","ngoài ra":"अलावा","người ngoài":"पराया","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Cái đĩa này do bạn tôi làm thủ công.":"यह प्लेट मेरे मित्र द्वारा हस्तनिर्मित थी।","Pin điều khiển đã hết rồi.":"नियंत्रक बैटरी ख़त्म हो गई है.","Suy nghĩ về sự quý giá của sự sống.":"जीवन की बहुमूल्यता के बारे में सोचो.","Còn có câu hỏi nào khác không?":"कोई अन्य प्रश्न?","Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.":"मैंने सुना है कि यहां खाली जगह पार्किंग स्थल बन जाएगी।","Tôi đã câu cá ở cái ao.":"मैं तालाब में मछली पकड़ रहा था.","Tóc của tôi đã dài ra rồi.":"मेरे बाल लंबे हो गए हैं.","Ngón tay sao vậy? Có vết thương chảy máu kìa.":"आपकी उंगलियों में क्या खराबी है? खून बह रहा घाव है.","Vào mùa hè trên núi có rất nhiều côn trùng.":"गर्मियों में पहाड़ों में बहुत सारे कीड़े-मकोड़े होते हैं।","Khu du lịch lúc nào cũng đông đúc.":"पर्यटन क्षेत्र में हमेशा भीड़ रहती है।","Màu này có vẻ hơi đơn giản một chút nhỉ.":"ये कलर थोड़ा सिंपल लगता है.","Trời lạnh rồi, tôi muốn có một chiếc chăn quá.":"ठंड है, कम्बल बहुत चाहिए.","Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.":"वैक्यूम क्लीनर कचरा नहीं सोखता। शायद यह टूट गया है?","Đồng hồ báo thức đang kêu đấy.":"अलार्म घड़ी बज रही है.","Tiếng mèo kêu ồn quá, tôi không thể ngủ được.":"बिल्ली की म्याऊँ इतनी तेज़ है कि मुझे नींद नहीं आ रही।","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","trùng":"ตรงกัน","sâu, côn trùng":"หนอนแมลง","mãnh":"แข็งแกร่ง","đĩa":"จาน","gạt tàn":"ที่เขี่ยบุหรี่","~ kêu":"~ ร้องไห้","~ kêu, vang":"~ แหวนก้อง","trì":"บำรุงรักษา","lông":"ผม","tóc":"ผม","chăn lông":"ผ้าห่มขนนก","huyết":"เลือด","máu":"เลือด","chảy máu":"มีเลือดออก","hấp":"ไอน้ำ","hút, hít":"ดูด หายใจเข้า","hít thở":"หายใจ","mệnh":"พาร์","sinh mệnh, tính mạng":"ชีวิตชีวิต","sinh mệnh":"ชีวิต","địa":"ที่ดิน","đất đai":"ที่ดิน","khu du lịch":"พื้นที่ท่องเที่ยว","nơi sản xuất":"สถานที่ผลิต","địa lý":"ภูมิศาสตร์","đất trống":"ที่ดินเปล่า","địa phương":"ท้องถิ่น","mặt đất":"พื้น","giản dị":"เรียบง่าย","động đất":"แผ่นดินไหว","ngoài ra":"นอกจาก","người ngoài":"คนนอก","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Cái đĩa này do bạn tôi làm thủ công.":"จานนี้เพื่อนของฉันทำเอง","Pin điều khiển đã hết rồi.":"แบตเตอรี่คอนโทรลเลอร์หมด","Suy nghĩ về sự quý giá của sự sống.":"คิดถึงความล้ำค่าของชีวิต","Còn có câu hỏi nào khác không?":"มีคำถามอื่นอีกไหม?","Nghe nói lô đất trống ở đây sẽ trở thành bãi đỗ xe.":"ฉันได้ยินมาว่าที่ว่างที่นี่จะกลายเป็นลานจอดรถ","Tôi đã câu cá ở cái ao.":"ฉันกำลังตกปลาอยู่ในบ่อ","Tóc của tôi đã dài ra rồi.":"ผมของฉันยาวขึ้น","Ngón tay sao vậy? Có vết thương chảy máu kìa.":"นิ้วของคุณมีอะไรผิดปกติ? มีบาดแผลเลือดออก.","Vào mùa hè trên núi có rất nhiều côn trùng.":"ในฤดูร้อนจะมีแมลงมากมายตามภูเขา","Khu du lịch lúc nào cũng đông đúc.":"พื้นที่ท่องเที่ยวมีผู้คนพลุกพล่านอยู่เสมอ","Màu này có vẻ hơi đơn giản một chút nhỉ.":"สีนี้ดูเรียบง่ายไปหน่อย","Trời lạnh rồi, tôi muốn có một chiếc chăn quá.":"หนาวแล้วอยากได้ผ้าห่มจังเลย","Máy hút bụi nó không có hút rác. Có lẽ nó bị hỏng rồi à.":"เครื่องดูดฝุ่นไม่ดูดขยะ บางทีมันอาจจะพัง?","Đồng hồ báo thức đang kêu đấy.":"นาฬิกาปลุกดังขึ้น","Tiếng mèo kêu ồn quá, tôi không thể ngủ được.":"เสียงร้องของแมวดังมากฉันนอนไม่หลับ","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

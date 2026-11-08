@@ -1,0 +1,72 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Ở bệnh viện, bà đang nghe giải thích về thuốc. Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "At the hospital, she was listening to an explanation about the medicine. How many pills and what color should she take after lunch?",
+    "Vì có 4 loại thuốc, xin đừng nhầm lẫn ạ. Trước tiên, hãy uống 2 viên màu trắng trước khi ăn 30 phút. Đây là thuốc dạ dày. Sau khi ăn xong, hãy uống 2 viên màu đỏ và 1 viên màu vàng. Viên màu đỏ là thuốc giảm đau, viên màu vàng là loại thuốc hạ huyết áp. Và viên màu xanh này khi không thể ngủ vào ban đêm thì hãy uống một viên. Nếu có thể ngủ thì không uống cũng được ạ. Bà đã hiểu chưa ạ?": "Because there are 4 types of medicine, please don't get confused. First, take 2 white pills 30 minutes before eating. This is a stomach medicine. After eating, take 2 red pills and 1 yellow pill. The red pill is a pain reliever, the yellow pill is a blood pressure lowering medication. And this blue pill when you can't sleep at night, take one. If you can sleep, it's okay to not drink. Do you understand yet?",
+    "Vâng vâng, cảm ơn ạ. Vậy thì, tôi sẽ về nhà từ bây giờ và cũng sắp đến giờ trưa rồi, nên tôi sẽ uống viên màu trắng ở đây luôn.": "Yes yes, thank you. Well then, I'll go home from now on and it's almost noon, so I'll take the white pill here.",
+    "Bà sẽ làm như thế? Vậy thì, tôi sẽ mang nước đến nhé.": "Would you do that? Well then, I'll bring water.",
+    "Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "How many pills and what color should she take after lunch?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Ở bệnh viện, bà đang nghe giải thích về thuốc. Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "Di rumah sakit, dia mendengarkan penjelasan tentang obatnya. Berapa pil dan warna apa yang harus diminumnya setelah makan siang?",
+    "Vì có 4 loại thuốc, xin đừng nhầm lẫn ạ. Trước tiên, hãy uống 2 viên màu trắng trước khi ăn 30 phút. Đây là thuốc dạ dày. Sau khi ăn xong, hãy uống 2 viên màu đỏ và 1 viên màu vàng. Viên màu đỏ là thuốc giảm đau, viên màu vàng là loại thuốc hạ huyết áp. Và viên màu xanh này khi không thể ngủ vào ban đêm thì hãy uống một viên. Nếu có thể ngủ thì không uống cũng được ạ. Bà đã hiểu chưa ạ?": "Karena obatnya ada 4 jenis, mohon jangan bingung. Pertama, minum 2 pil putih 30 menit sebelum makan. Ini adalah obat perut. Setelah makan, minum 2 pil merah dan 1 pil kuning. Pil merah untuk pereda nyeri, pil kuning untuk obat penurun tekanan darah. Dan pil biru ini ketika Anda tidak bisa tidur di malam hari, minumlah satu. Kalau bisa tidur, tidak apa-apa untuk tidak minum. Apakah kamu sudah mengerti?",
+    "Vâng vâng, cảm ơn ạ. Vậy thì, tôi sẽ về nhà từ bây giờ và cũng sắp đến giờ trưa rồi, nên tôi sẽ uống viên màu trắng ở đây luôn.": "Ya ya, terima kasih. Kalau begitu, aku akan pulang mulai sekarang dan ini sudah hampir tengah hari, jadi aku akan minum pil putih di sini.",
+    "Bà sẽ làm như thế? Vậy thì, tôi sẽ mang nước đến nhé.": "Maukah kamu melakukan itu? Kalau begitu, aku akan membawakan air.",
+    "Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "Berapa pil dan warna apa yang harus diminumnya setelah makan siang?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Ở bệnh viện, bà đang nghe giải thích về thuốc. Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "अस्पतालमा, उनी औषधिको बारेमा व्याख्या सुन्दै थिइन्। खाजा पछि कति चक्की र कुन रंग लिनु पर्छ?",
+    "Vì có 4 loại thuốc, xin đừng nhầm lẫn ạ. Trước tiên, hãy uống 2 viên màu trắng trước khi ăn 30 phút. Đây là thuốc dạ dày. Sau khi ăn xong, hãy uống 2 viên màu đỏ và 1 viên màu vàng. Viên màu đỏ là thuốc giảm đau, viên màu vàng là loại thuốc hạ huyết áp. Và viên màu xanh này khi không thể ngủ vào ban đêm thì hãy uống một viên. Nếu có thể ngủ thì không uống cũng được ạ. Bà đã hiểu chưa ạ?": "किनभने त्यहाँ 4 प्रकारका औषधिहरू छन्, कृपया भ्रममा नपर्नुहोस्। पहिलो, 2 सेतो चक्की खानु अघि 30 मिनेट लिनुहोस्। यो पेट को औषधि हो। खाना खाइसकेपछि २ वटा रातो र १ पहेँलो चक्की खानुहोस् । रातो चक्की दुखाइ कम गर्ने औषधि हो, पहेंलो चक्की रक्तचाप कम गर्ने औषधि हो। र यो निलो चक्की जब तपाईं राती सुत्न सक्नुहुन्न, एक लिनुहोस्। यदि तपाईं सुत्न सक्नुहुन्छ भने, यो पिउन ठीक छ। अझै बुझ्नुहुन्छ ?",
+    "Vâng vâng, cảm ơn ạ. Vậy thì, tôi sẽ về nhà từ bây giờ và cũng sắp đến giờ trưa rồi, nên tôi sẽ uống viên màu trắng ở đây luôn.": "हो हो, धन्यवाद। त्यसो भए, म अब देखि घर जान्छु र लगभग दिउँसो छ, त्यसैले म सेतो चक्की यहाँ लिन्छु।",
+    "Bà sẽ làm như thế? Vậy thì, tôi sẽ mang nước đến nhé.": "के तपाईं त्यसो गर्नुहुन्छ? त्यसो भए म पानी ल्याउँछु।",
+    "Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "खाजा पछि कति चक्की र कुन रंग लिनु पर्छ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Ở bệnh viện, bà đang nghe giải thích về thuốc. Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "ဆေးရုံမှာ ဆေးအကြောင်းရှင်းပြတာကို နားထောင်နေတယ်။ နေ့လည်စာစားပြီးရင် ဆေးဘယ်နှစ်လုံးနဲ့ ဘယ်အရောင်သောက်ရမလဲ။",
+    "Vì có 4 loại thuốc, xin đừng nhầm lẫn ạ. Trước tiên, hãy uống 2 viên màu trắng trước khi ăn 30 phút. Đây là thuốc dạ dày. Sau khi ăn xong, hãy uống 2 viên màu đỏ và 1 viên màu vàng. Viên màu đỏ là thuốc giảm đau, viên màu vàng là loại thuốc hạ huyết áp. Và viên màu xanh này khi không thể ngủ vào ban đêm thì hãy uống một viên. Nếu có thể ngủ thì không uống cũng được ạ. Bà đã hiểu chưa ạ?": "ဆေးအမျိုးအစား ၄ မျိုးရှိတာကြောင့် စိတ်ရှုပ်မခံပါနဲ့။ ပထမဦးစွာ အစာမစားမီ မိနစ် ၃၀ အလိုတွင် အဖြူရောင်ဆေးပြား ၂ ပြားသောက်ပါ။ ဒါက အစာအိမ်ဆေးပါ။ အစာစားပြီးနောက် အနီရောင်ဆေးပြား ၂ ပြားနှင့် အဝါရောင်ဆေး ၁ လုံး သောက်ပါ။ အနီရောင်ဆေးသည် အကိုက်အခဲပျောက်ဆေးဖြစ်ပြီး အဝါရောင်ဆေးသည် သွေးပေါင်ကျဆေးဖြစ်သည်။ ညဘက်အိပ်မပျော်တဲ့အခါ ဒီအပြာရောင်ဆေးပြားတစ်ပြားသောက်ပါ။ အိပ်နိုင်ရင် မသောက်နဲ့နော်။ နားလည်သေးလား?",
+    "Vâng vâng, cảm ơn ạ. Vậy thì, tôi sẽ về nhà từ bây giờ và cũng sắp đến giờ trưa rồi, nên tôi sẽ uống viên màu trắng ở đây luôn.": "ဟုတ်ကဲ့ ဟုတ်ကဲ့ ကျေးဇူးပါ။ အခုမှ အိမ်ပြန်တော့ နေ့လည် နီးနေပြီမို့ ဆေးအဖြူကို ဒီမှာ ယူလိုက်မယ်။",
+    "Bà sẽ làm như thế? Vậy thì, tôi sẽ mang nước đến nhé.": "အဲဒါကို လုပ်မှာလား။ ဒါဆို ရေယူလာပေးမယ်။",
+    "Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "နေ့လယ်စာစားပြီးရင် ဆေးဘယ်နှစ်လုံးနဲ့ ဘယ်အရောင်သောက်ရမလဲ။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Ở bệnh viện, bà đang nghe giải thích về thuốc. Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "হাসপাতালে, তিনি ওষুধ সম্পর্কে একটি ব্যাখ্যা শুনছিলেন। দুপুরের খাবারের পর তাকে কয়টি বড়ি এবং কী রঙ নিতে হবে?",
+    "Vì có 4 loại thuốc, xin đừng nhầm lẫn ạ. Trước tiên, hãy uống 2 viên màu trắng trước khi ăn 30 phút. Đây là thuốc dạ dày. Sau khi ăn xong, hãy uống 2 viên màu đỏ và 1 viên màu vàng. Viên màu đỏ là thuốc giảm đau, viên màu vàng là loại thuốc hạ huyết áp. Và viên màu xanh này khi không thể ngủ vào ban đêm thì hãy uống một viên. Nếu có thể ngủ thì không uống cũng được ạ. Bà đã hiểu chưa ạ?": "কারণ 4 ধরনের ওষুধ আছে, দয়া করে বিভ্রান্ত হবেন না। প্রথমে, খাওয়ার 30 মিনিট আগে 2টি সাদা বড়ি নিন। এটি পেটের ওষুধ। খাওয়ার পর ২টি লাল বড়ি এবং ১টি হলুদ বড়ি খান। লাল বড়ি একটি ব্যথা উপশমকারী, হলুদ বড়ি একটি রক্তচাপ কমানোর ওষুধ। আর এই নীল বড়ি যখন রাতে ঘুমাতে পারবেন না তখন একটা খেয়ে নিন। আপনি যদি ঘুমাতে পারেন তবে পান না করা ঠিক আছে। তুমি কি এখনো বুঝতে পারছ?",
+    "Vâng vâng, cảm ơn ạ. Vậy thì, tôi sẽ về nhà từ bây giờ và cũng sắp đến giờ trưa rồi, nên tôi sẽ uống viên màu trắng ở đây luôn.": "হ্যাঁ হ্যাঁ, আপনাকে ধন্যবাদ. ঠিক আছে, আমি এখন থেকে বাড়ি যাব এবং প্রায় দুপুর হয়ে গেছে, তাই আমি এখানে সাদা বড়ি খাব।",
+    "Bà sẽ làm như thế? Vậy thì, tôi sẽ mang nước đến nhé.": "তুমি কি সেটা করবে? আচ্ছা আমি পানি নিয়ে আসি।",
+    "Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "দুপুরের খাবারের পর তাকে কয়টি বড়ি এবং কী রঙ নিতে হবে?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Ở bệnh viện, bà đang nghe giải thích về thuốc. Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "अस्पताल में वह दवा के बारे में स्पष्टीकरण सुन रही थी। दोपहर के भोजन के बाद उसे कितनी गोलियाँ और कौन सा रंग लेना चाहिए?",
+    "Vì có 4 loại thuốc, xin đừng nhầm lẫn ạ. Trước tiên, hãy uống 2 viên màu trắng trước khi ăn 30 phút. Đây là thuốc dạ dày. Sau khi ăn xong, hãy uống 2 viên màu đỏ và 1 viên màu vàng. Viên màu đỏ là thuốc giảm đau, viên màu vàng là loại thuốc hạ huyết áp. Và viên màu xanh này khi không thể ngủ vào ban đêm thì hãy uống một viên. Nếu có thể ngủ thì không uống cũng được ạ. Bà đã hiểu chưa ạ?": "चूँकि दवाएँ 4 प्रकार की होती हैं, कृपया भ्रमित न हों। सबसे पहले, खाने से 30 मिनट पहले 2 सफेद गोलियां लें। यह पेट की दवा है. खाने के बाद 2 लाल गोली और 1 पीली गोली लें। लाल गोली दर्द निवारक है, पीली गोली रक्तचाप कम करने वाली दवा है। और ये नीली गोली जब रात को नींद ना आये तो एक ले लेना. यदि आप सो सकते हैं, तो शराब न पीना ही ठीक है। क्या आप अभी तक समझे हैं?",
+    "Vâng vâng, cảm ơn ạ. Vậy thì, tôi sẽ về nhà từ bây giờ và cũng sắp đến giờ trưa rồi, nên tôi sẽ uống viên màu trắng ở đây luôn.": "हाँ हाँ, धन्यवाद. तो ठीक है, मैं अब घर जाऊँगा और दोपहर होने को है, इसलिए मैं यहीं सफ़ेद गोली ले लूँगा।",
+    "Bà sẽ làm như thế? Vậy thì, tôi sẽ mang nước đến nhé.": "क्या आप ऐसा करेंगे? तो ठीक है, मैं पानी लेकर आता हूँ।",
+    "Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "दोपहर के भोजन के बाद उसे कितनी गोलियाँ और कौन सा रंग लेना चाहिए?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Ở bệnh viện, bà đang nghe giải thích về thuốc. Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "ที่โรงพยาบาล เธอกำลังฟังคำอธิบายเกี่ยวกับยา หลังอาหารกลางวันควรกินยากี่เม็ดและสีอะไร?",
+    "Vì có 4 loại thuốc, xin đừng nhầm lẫn ạ. Trước tiên, hãy uống 2 viên màu trắng trước khi ăn 30 phút. Đây là thuốc dạ dày. Sau khi ăn xong, hãy uống 2 viên màu đỏ và 1 viên màu vàng. Viên màu đỏ là thuốc giảm đau, viên màu vàng là loại thuốc hạ huyết áp. Và viên màu xanh này khi không thể ngủ vào ban đêm thì hãy uống một viên. Nếu có thể ngủ thì không uống cũng được ạ. Bà đã hiểu chưa ạ?": "เนื่องจากมียาอยู่ 4 ชนิด โปรดอย่าสับสน ขั้นแรกให้รับประทานยาเม็ดขาว 2 เม็ด ก่อนรับประทานอาหาร 30 นาที นี่คือยาแก้ท้องผูก กินข้าวเสร็จให้กินยาแดง 2 เม็ด และยาเหลือง 1 เม็ด เม็ดสีแดงเป็นยาแก้ปวด เม็ดสีเหลืองเป็นยาลดความดันโลหิต และยาเม็ดสีฟ้านี้เมื่อคุณนอนไม่หลับตอนกลางคืน ให้รับประทานเข้าไปหนึ่งเม็ด ถ้านอนได้ก็ไม่ดื่มนะ เข้าใจยัง?",
+    "Vâng vâng, cảm ơn ạ. Vậy thì, tôi sẽ về nhà từ bây giờ và cũng sắp đến giờ trưa rồi, nên tôi sẽ uống viên màu trắng ở đây luôn.": "ใช่แล้ว ขอบคุณ ถ้าอย่างนั้นฉันจะกลับบ้านตั้งแต่ตอนนี้จะเที่ยงแล้วฉันก็เลยเอายาเม็ดขาวมาที่นี่",
+    "Bà sẽ làm như thế? Vậy thì, tôi sẽ mang nước đến nhé.": "คุณจะทำอย่างนั้น? งั้นผมเอาน้ำมาให้",
+    "Bà phải uống bao nhiêu viên thuốc và màu gì sau bữa trưa?": "หลังอาหารกลางวันควรกินยากี่เม็ดและสีอะไร?"
+  }
+}

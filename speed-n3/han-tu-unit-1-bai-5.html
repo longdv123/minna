@@ -1,0 +1,191 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N3 HANTU - ONE HTML (SEO + nhẹ)
+   >768: giống hình rộng (3 ô header, body nhìn như 3 cột với cột phải trống)
+   <=768 : giống hình mobile (card center + list item JP/VI)
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+/* ===== BODY (ONE LIST) =====
+   Desktop: item là grid 2 cột (JP | VI),
+   và chừa khoảng trống bên phải = cột 3 (blank) để nhìn như mẫu ảnh.
+*/
+.kbody{
+  padding:14px 18px 16px;
+  /* tạo cảm giác có cột phải trống */
+  padding-right: calc(18px + 1fr);
+}
+@media (min-width: 768px){
+  .kbody{
+    padding-right: 18px; /* reset */
+    display:block;
+  }
+  .kbody-inner{
+    /* chừa cột phải trống giống 3 cột: 240 | 260 | blank */
+    padding-right: 0;
+  }
+  .kbody-inner{
+    /* mô phỏng 3 cột bằng cách giới hạn vùng nội dung 2 cột */
+    width: 100%;
+  }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+}
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+  .kbody-inner{ width:auto; }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">係</div></div><div class="kcell k-hv"><span class="vi-tr">hệ</span></div><div class="kcell k-read"><div class="on">ケイ</div><div>かかり</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>係<rp>（</rp><rt>かかり</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">người phụ trách</span></div></div><div class="kitem"><div class="jp"><ruby>係員<rp>（</rp><rt>かかりいん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nhân viên phụ trách</span></div></div><div class="kitem"><div class="jp"><ruby>関係<rp>（</rp><rt>かんけい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quan hệ</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">的</div></div><div class="kcell k-hv"><span class="vi-tr">đích</span></div><div class="kcell k-read"><div class="on">テキ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>目的<rp>（</rp><rt>もくてき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mục đích</span></div></div><div class="kitem"><div class="jp"><ruby>世界的<rp>（</rp><rt>せかいてき</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">toàn thế giới</span></div></div><div class="kitem"><div class="jp">～<ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">~ kiểu</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">観</div></div><div class="kcell k-hv">quan</div><div class="kcell k-read"><div class="on">カン</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>観光<rp>（</rp><rt>かんこう</rt><rp>）</rp></ruby></div><div class="vi">tham quan</div></div><div class="kitem"><div class="jp"><ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khán giả</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">修</div></div><div class="kcell k-hv">tu</div><div class="kcell k-read"><div class="on">シュウ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>研修<rp>（</rp><rt>けんしゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thực tập</span></div></div><div class="kitem"><div class="jp"><ruby>修理<rp>（</rp><rt>しゅうり</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sửa chữa</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">留</div></div><div class="kcell k-hv"><span class="vi-tr">lưu</span></div><div class="kcell k-read"><div class="on">ル</div><div>とーまる／とーめる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>留学<rp>（</rp><rt>りゅうがく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">du học</span></div></div><div class="kitem"><div class="jp"><ruby>留守<rp>（</rp><rt>るす</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vắng nhà</span></div></div><div class="kitem"><div class="jp"><ruby>留守番<rp>（</rp><rt>るすばん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trông nhà</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">泊</div></div><div class="kcell k-hv"><span class="vi-tr">bạc</span></div><div class="kcell k-read"><div class="on">ハク／－パク</div><div>とーまる／とーめる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp">（～が）<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まる</div><div class="vi"><span class="vi-tr">ở trọ, nghỉ lại</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">cho ở trọ</span></div></div><div class="kitem"><div class="jp"><ruby>1泊<rp>（</rp><rt>いっぱく</rt><rp>）</rp></ruby><ruby>2日<rp>（</rp><rt>ふつか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hai ngày một đêm</span></div></div><div class="kitem"><div class="jp"><ruby>２泊<rp>（</rp><rt>にはく</rt><rp>）</rp></ruby><ruby>三日<rp>（</rp><rt>みっか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ba ngày hai đêm</span></div></div><div class="kitem"><div class="jp"><ruby>宿泊<rp>（</rp><rt>しゅくはく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">ở trọ</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">片</div></div><div class="kcell k-hv"><span class="vi-tr">phiến</span></div><div class="kcell k-read"><div>かた</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>片方<rp>（</rp><rt>かたほう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">một bên</span></div></div><div class="kitem"><div class="jp"><ruby>片手<rp>（</rp><rt>かたて</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">một tay</span></div></div><div class="kitem"><div class="jp"><ruby>片付<rp>（</rp><rt>かたづ</rt><rp>）</rp></ruby>ける</div><div class="vi"><span class="vi-tr">dọn dẹp</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">両</div></div><div class="kcell k-hv"><span class="vi-tr">lưỡng</span></div><div class="kcell k-read"><div class="on">リョウ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>両方<rp>（</rp><rt>りょうほう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hai bên</span></div></div><div class="kitem"><div class="jp"><ruby>両側<rp>（</rp><rt>りょうがわ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hai phía</span></div></div><div class="kitem"><div class="jp"><ruby>両手<rp>（</rp><rt>りょうて</rt><rp>）</rp></ruby></div><div class="vi">hai tay</div></div><div class="kitem"><div class="jp"><ruby>両親<rp>（</rp><rt>りょうしん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bố mẹ</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">替</div></div><div class="kcell k-hv"><span class="vi-tr">thế</span></div><div class="kcell k-read"><div>かーえる／－がーえる／－がえ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>着替<rp>（</rp><rt>きが</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">thay quần áo</span> </div></div><div class="kitem"><div class="jp"><ruby>両替<rp>（</rp><rt>りょうがえ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đổi tiền</span></div></div></div></div></div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+<p><b>ドリルA</b></p><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u><ruby>両親<rp>（</rp><rt>りょうしん</rt><rp>）</rp></ruby></u>は<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>、<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>です。</td><td>a. りょうしん</td><td>b. りょうおや</td></tr><tr><td>2. <ruby>弟<rp>（</rp><rt>おとうと</rt><rp>）</rp></ruby>はアメリカに<u><ruby>留学<rp>（</rp><rt>りゅうがく</rt><rp>）</rp></ruby></u>しています。</td><td>a. りゅうがく</td><td>b. りゅがく</td></tr><tr><td>3. この<ruby>調査<rp>（</rp><rt>ちょうさ</rt><rp>）</rp></ruby>の<u><ruby>目的<rp>（</rp><rt>もくてき</rt><rp>）</rp></ruby></u>は<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>ですか。</td><td>a. もくてき</td><td>b. めてき</td></tr><tr><td>4. くつしたが<u><ruby>片方<rp>（</rp><rt>かたほう</rt><rp>）</rp></ruby></u><ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>つからない。</td><td>a. かたほう</td><td>b. かたかた</td></tr><tr><td>5. この<ruby>試合<rp>（</rp><rt>しあい</rt><rp>）</rp></ruby>は、<u><ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby></u>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>いね。</td><td>a. けんきゃく</td><td>b. かんきゃく</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u><ruby>両親<rp>（</rp><rt>りょうしん</rt><rp>）</rp></ruby></u>は<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>、<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>です。</td><td><b>りょうしん</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Bố mẹ tôi hiện đang đi du lịch.</span></td></tr><tr><td>2. <ruby>弟<rp>（</rp><rt>おとうと</rt><rp>）</rp></ruby>はアメリカに<u><ruby>留学<rp>（</rp><rt>りゅうがく</rt><rp>）</rp></ruby></u>しています。</td><td><b>りゅうがく</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Em trai tôi đang du học ở Mỹ.</span></td></tr><tr><td>3. この<ruby>調査<rp>（</rp><rt>ちょうさ</rt><rp>）</rp></ruby>の<u><ruby>目的<rp>（</rp><rt>もくてき</rt><rp>）</rp></ruby></u>は<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>ですか。</td><td><b>もくてき</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Mục đích của cuộc khảo sát này là gì?</span></td></tr><tr><td>4. くつしたが<u><ruby>片方<rp>（</rp><rt>かたほう</rt><rp>）</rp></ruby></u><ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>つからない。</td><td><b>かたほう</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi không tìm thấy 1 bên tất còn lại.</span></td></tr><tr><td>5. この<ruby>試合<rp>（</rp><rt>しあい</rt><rp>）</rp></ruby>は、<u><ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby></u>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>いね。</td><td><b>かんきゃく</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Trận đấu này có rất nhiều khán giả xem nhỉ.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルB</b></p><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>かかり</u>の<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>に<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いてみよう。</td><td>a. 住</td><td>b. 係</td><td>c. 作</td></tr><tr><td>2. <ruby>二<rp>（</rp><rt>に</rt><rp>）</rp></ruby><u>はく</u><ruby>三日<rp>（</rp><rt>みっか</rt><rp>）</rp></ruby>で<ruby>温泉<rp>（</rp><rt>おんせん</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ってきた。</td><td>a. 白</td><td>b. 拍</td><td>c. 泊</td></tr><tr><td>3. <ruby>京都<rp>（</rp><rt>きょうと</rt><rp>）</rp></ruby>を<u>かん</u><ruby>光<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>するなら、まず、お<ruby>寺<rp>（</rp><rt>てら</rt><rp>）</rp></ruby>だ。</td><td>a. 観</td><td>b. 感</td><td>c. 勧</td></tr><tr><td>4. <ruby>新入社員<rp>（</rp><rt>しんにゅうしゃいん</rt><rp>）</rp></ruby>のための<ruby>研<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><u>しゅう</u>がある。</td><td>a. 究</td><td>b. 修</td><td>c. 習</td></tr><tr><td>5. ドルを<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>に<ruby>両<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby><u>がえ</u>した。</td><td>a. 買</td><td>b. 返</td><td>c. 替</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>かかり</u>の<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>に<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いてみよう。</td><td><b>係</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy thử hỏi người phụ trách xem.</span></td></tr><tr><td>2. <ruby>二<rp>（</rp><rt>に</rt><rp>）</rp></ruby><u>はく</u><ruby>三日<rp>（</rp><rt>みっか</rt><rp>）</rp></ruby>で<ruby>温泉<rp>（</rp><rt>おんせん</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ってきた。</td><td><b>泊</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.</span></td></tr><tr><td>3. <ruby>京都<rp>（</rp><rt>きょうと</rt><rp>）</rp></ruby>を<u>かん</u><ruby>光<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>するなら、まず、お<ruby>寺<rp>（</rp><rt>てら</rt><rp>）</rp></ruby>だ。</td><td><b>観</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nếu tham quan Kyoto, trước tiên là các ngôi chùa.</span></td></tr><tr><td>4. <ruby>新入社員<rp>（</rp><rt>しんにゅうしゃいん</rt><rp>）</rp></ruby>のための<ruby>研<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><u>しゅう</u>がある。</td><td><b>修</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Có khóa đào tạo dành cho nhân viên mới.</span></td></tr><tr><td>5. ドルを<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>に<ruby>両<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby><u>がえ</u>した。</td><td><b>替</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã đổi đô la sang yên.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルC</b></p><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. こわれた<ruby>洗濯機<rp>（</rp><rt>せんたくき</rt><rp>）</rp></ruby>を（　　　）できますか。</td><td>a. 修理</td><td>b. 関係</td></tr><tr><td>2. もっと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>きやすい<ruby>服<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>に（　　　）てください。</td><td>a. 着替え</td><td>b. 片付け</td></tr><tr><td>3. ケーキもドーナツも、（　　　）<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べたい。</td><td>a. 両側</td><td>b. 両方</td></tr><tr><td>4. サンドイッチは、（　　　）で<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べられて<ruby>便利<rp>（</rp><rt>べんり</rt><rp>）</rp></ruby>だ。</td><td>a. 両手</td><td>b. 片手</td></tr><tr><td>5. <ruby>友達<rp>（</rp><rt>ともだち</rt><rp>）</rp></ruby>をうちに（　　　）てあげた。</td><td>a. 泊め</td><td>b. 泊まっ</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. こわれた<ruby>洗濯機<rp>（</rp><rt>せんたくき</rt><rp>）</rp></ruby>を（　　　）できますか。</td><td><b>修理</b>　(しゅうり)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Bạn có thể sửa máy giặt hỏng được không?</span></td></tr><tr><td>2. もっと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>きやすい<ruby>服<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>に（　　　）てください。</td><td><b>着替え</b>　(きがえ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy thay sang quần áo dễ vận động hơn.</span></td></tr><tr><td>3. ケーキもドーナツも、（　　　）<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べたい。</td><td><b>両方</b>　(りょうほう)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi muốn ăn cả bánh ngọt lẫn bánh donut.</span></td></tr><tr><td>4. サンドイッチは、（　　　）で<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べられて<ruby>便利<rp>（</rp><rt>べんり</rt><rp>）</rp></ruby>だ。</td><td><b>片手</b>　(かたて)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.</span></td></tr><tr><td>5. <ruby>友達<rp>（</rp><rt>ともだち</rt><rp>）</rp></ruby>をうちに（　　　）てあげた。</td><td><b>泊め</b>　(とめ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã cho bạn trọ lại nhà.</span></td></tr></tbody></table></div></div></div>
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed3-1-5"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-1-bai-5.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","hệ":"system","người phụ trách":"person in charge","nhân viên phụ trách":"staff in charge","quan hệ":"relationship","đích":"destination","mục đích":"purpose","toàn thế giới":"worldwide","~ kiểu":"~ style","khán giả":"audiences","thực tập":"internship","sửa chữa":"repair","lưu":"save","du học":"study abroad","vắng nhà":"absent from home","trông nhà":"look after the house","bạc":"silver","ở trọ, nghỉ lại":"stay, stay","cho ở trọ":"room","hai ngày một đêm":"two days and one night","ba ngày hai đêm":"three days and two nights","ở trọ":"accommodation","phiến":"slab","một bên":"one side","một tay":"one hand","dọn dẹp":"clean up","lưỡng":"bisexual","hai bên":"both sides","hai phía":"two sides","bố mẹ":"parents","thế":"position","thay quần áo":"change clothes","đổi tiền":"exchange money","☞ Đáp Án + Dịch":"☞ Answer + Translation","Bố mẹ tôi hiện đang đi du lịch.":"My parents are currently traveling.","Em trai tôi đang du học ở Mỹ.":"My younger brother is studying abroad in America.","Mục đích của cuộc khảo sát này là gì?":"What is the purpose of this survey?","Tôi không tìm thấy 1 bên tất còn lại.":"I can't find the other sock.","Trận đấu này có rất nhiều khán giả xem nhỉ.":"This match had a lot of spectators watching.","Hãy thử hỏi người phụ trách xem.":"Try asking the person in charge.","Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.":"I went to the hot springs for three days and two nights.","Nếu tham quan Kyoto, trước tiên là các ngôi chùa.":"If visiting Kyoto, first go to the temples.","Có khóa đào tạo dành cho nhân viên mới.":"There is training for new employees.","Tôi đã đổi đô la sang yên.":"I changed dollars to yen.","Bạn có thể sửa máy giặt hỏng được không?":"Can you fix a broken washing machine?","Hãy thay sang quần áo dễ vận động hơn.":"Change into clothes that are easier to move in.","Tôi muốn ăn cả bánh ngọt lẫn bánh donut.":"I want to eat both cake and donuts.","Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.":"Sandwiches are convenient because they can be eaten with one hand.","Tôi đã cho bạn trọ lại nhà.":"I let you stay at my house.","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","hệ":"sistem","người phụ trách":"orang yang bertanggung jawab","nhân viên phụ trách":"staf yang bertanggung jawab","quan hệ":"hubungan","đích":"tujuan","mục đích":"tujuan","toàn thế giới":"di seluruh dunia","~ kiểu":"~ gaya","khán giả":"penonton","thực tập":"magang","sửa chữa":"memperbaiki","lưu":"menyimpan","du học":"belajar di luar negeri","vắng nhà":"absen dari rumah","trông nhà":"menjaga rumah","bạc":"perak","ở trọ, nghỉ lại":"tinggal, tinggal","cho ở trọ":"ruang","hai ngày một đêm":"dua hari satu malam","ba ngày hai đêm":"tiga hari dua malam","ở trọ":"akomodasi","phiến":"lempeng","một bên":"satu sisi","một tay":"satu tangan","dọn dẹp":"membersihkan","lưỡng":"biseksual","hai bên":"kedua sisi","hai phía":"dua sisi","bố mẹ":"orang tua","thế":"posisi","thay quần áo":"berganti pakaian","đổi tiền":"penukaran uang","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Bố mẹ tôi hiện đang đi du lịch.":"Orang tuaku sedang bepergian.","Em trai tôi đang du học ở Mỹ.":"Adik laki-laki saya sedang belajar di luar negeri di Amerika.","Mục đích của cuộc khảo sát này là gì?":"Apa tujuan survei ini?","Tôi không tìm thấy 1 bên tất còn lại.":"Saya tidak dapat menemukan kaus kaki lainnya.","Trận đấu này có rất nhiều khán giả xem nhỉ.":"Pertandingan ini disaksikan banyak penonton.","Hãy thử hỏi người phụ trách xem.":"Coba tanyakan pada orang yang bertanggung jawab.","Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.":"Saya pergi ke sumber air panas selama tiga hari dua malam.","Nếu tham quan Kyoto, trước tiên là các ngôi chùa.":"Jika berkunjung ke Kyoto, pertama-tama pergilah ke kuilnya.","Có khóa đào tạo dành cho nhân viên mới.":"Ada pelatihan untuk karyawan baru.","Tôi đã đổi đô la sang yên.":"Saya menukar dolar ke yen.","Bạn có thể sửa máy giặt hỏng được không?":"Bisakah Anda memperbaiki mesin cuci yang rusak?","Hãy thay sang quần áo dễ vận động hơn.":"Gantilah pakaian yang lebih mudah untuk dibawa bergerak.","Tôi muốn ăn cả bánh ngọt lẫn bánh donut.":"Saya ingin makan kue dan donat.","Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.":"Sandwich nyaman karena bisa dimakan dengan satu tangan.","Tôi đã cho bạn trọ lại nhà.":"Aku membiarkanmu tinggal di rumahku.","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","hệ":"प्रणाली","người phụ trách":"जिम्मेवार व्यक्ति","nhân viên phụ trách":"इन्चार्ज कर्मचारी","quan hệ":"सम्बन्ध","đích":"गन्तव्य","mục đích":"उद्देश्य","toàn thế giới":"विश्वव्यापी","~ kiểu":"~ शैली","khán giả":"दर्शकहरू","thực tập":"इन्टर्नशिप","sửa chữa":"मर्मत","lưu":"बचत गर्नुहोस्","du học":"विदेश अध्ययन","vắng nhà":"घरबाट अनुपस्थित","trông nhà":"घर हेरचाह गर्नुहोस्","bạc":"चाँदी","ở trọ, nghỉ lại":"बस्नुहोस्, बस्नुहोस्","cho ở trọ":"कोठा","hai ngày một đêm":"दुई दिन र एक रात","ba ngày hai đêm":"तीन दिन र दुई रात","ở trọ":"आवास","phiến":"स्ल्याब","một bên":"एक पक्ष","một tay":"एक हात","dọn dẹp":"सफा गर्नुहोस्","lưỡng":"उभयलिंगी","hai bên":"दुवै पक्ष","hai phía":"दुई पक्ष","bố mẹ":"आमाबाबु","thế":"स्थिति","thay quần áo":"लुगा बदल्नुहोस्","đổi tiền":"पैसा विनिमय","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Bố mẹ tôi hiện đang đi du lịch.":"मेरा आमाबाबु अहिले यात्रा गर्दै हुनुहुन्छ।","Em trai tôi đang du học ở Mỹ.":"मेरो कान्छो भाइ विदेशमा अमेरिकामा अध्ययन गर्दैछ।","Mục đích của cuộc khảo sát này là gì?":"यो सर्वेक्षणको उद्देश्य के हो?","Tôi không tìm thấy 1 bên tất còn lại.":"मैले अर्को मोजा फेला पार्न सक्दिन।","Trận đấu này có rất nhiều khán giả xem nhỉ.":"यो खेल हेर्न दर्शकहरुको बाक्लो उपस्थिति रहेको थियो ।","Hãy thử hỏi người phụ trách xem.":"जिम्मेवार व्यक्तिलाई सोध्ने प्रयास गर्नुहोस्।","Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.":"म तीन दिन र दुई रात तातो मुहानमा गएँ।","Nếu tham quan Kyoto, trước tiên là các ngôi chùa.":"यदि क्योटो भ्रमण गर्दै हुनुहुन्छ भने, पहिले मन्दिरहरूमा जानुहोस्।","Có khóa đào tạo dành cho nhân viên mới.":"नयाँ कर्मचारीलाई तालिम दिइएको छ ।","Tôi đã đổi đô la sang yên.":"मैले डलरलाई येनमा परिवर्तन गरें।","Bạn có thể sửa máy giặt hỏng được không?":"के तपाईं टुटेको वाशिंग मेसिन ठीक गर्न सक्नुहुन्छ?","Hãy thay sang quần áo dễ vận động hơn.":"भित्र जान सजिलो हुने लुगामा परिवर्तन गर्नुहोस्।","Tôi muốn ăn cả bánh ngọt lẫn bánh donut.":"म केक र डोनट्स दुवै खान चाहन्छु।","Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.":"स्यान्डविचहरू सुविधाजनक छन् किनभने तिनीहरू एक हातले खान सकिन्छ।","Tôi đã cho bạn trọ lại nhà.":"म तिमीलाई मेरो घरमा बस्न दिन्छु।","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","hệ":"စနစ်","người phụ trách":"တာဝန်ခံ","nhân viên phụ trách":"တာဝန်ခံဝန်ထမ်း","quan hệ":"ဆက်ဆံရေး","đích":"ဦးတည်ရာ","mục đích":"ရည်ရွယ်ချက်","toàn thế giới":"ကမ္ဘာတစ်ဝှမ်း","~ kiểu":"~စတိုင်","khán giả":"ပရိသတ်များ","thực tập":"အလုပ်သင်","sửa chữa":"ပြုပြင်ခြင်း။","lưu":"ကယ်တင်ပါ။","du học":"နိုင်ငံခြားမှာ ကျောင်းတက်တယ်။","vắng nhà":"အိမ်မှ မရှိတော့","trông nhà":"အိမ်ကိုလည်း ဂရုစိုက်ပါ။","bạc":"ငွေ","ở trọ, nghỉ lại":"နေနေ၊နေပါ။","cho ở trọ":"အခန်း","hai ngày một đêm":"နှစ်ရက်နှင့်တစ်ည","ba ngày hai đêm":"သုံးရက် နှစ်ည","ở trọ":"နေရာထိုင်ခင်း","phiến":"slab","một bên":"တဘက်","một tay":"လက်တစ်ဖက်","dọn dẹp":"သန့်ရှင်းရေးလုပ်သည်","lưỡng":"bisexual","hai bên":"နှစ်ဖက်စလုံး","hai phía":"နှစ်ဘက်","bố mẹ":"မိဘများ","thế":"ရာထူး","thay quần áo":"အဝတ်ပြောင်း","đổi tiền":"ငွေလဲလှယ်","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Bố mẹ tôi hiện đang đi du lịch.":"ကျွန်တော့်မိဘတွေက လောလောဆယ် ခရီးသွားနေတယ်။","Em trai tôi đang du học ở Mỹ.":"ငါ့ညီက အမေရိကားမှာ ကျောင်းတက်နေတယ်။","Mục đích của cuộc khảo sát này là gì?":"ဒီစစ်တမ်းရဲ့ရည်ရွယ်ချက်ကဘာလဲ။","Tôi không tìm thấy 1 bên tất còn lại.":"တခြားခြေအိတ်ကို ရှာမတွေ့ဘူး။","Trận đấu này có rất nhiều khán giả xem nhỉ.":"ဒီပွဲကို ပရိသတ်အများအပြား ကြည့်ရှုအားပေးခဲ့ကြပါတယ်။","Hãy thử hỏi người phụ trách xem.":"တာဝန်ခံကို မေးကြည့်ပါ။","Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.":"ရေပူစမ်းကို သုံးရက်နှစ်ည သွားခဲ့တယ်။","Nếu tham quan Kyoto, trước tiên là các ngôi chùa.":"ကျိုတိုကိုသွားလည်ရင် ဘုရားကျောင်းတွေကို အရင်သွားပါ။","Có khóa đào tạo dành cho nhân viên mới.":"ဝန်ထမ်းသစ်များအတွက် သင်တန်းများရှိပါသည်။","Tôi đã đổi đô la sang yên.":"ဒေါ်လာကို ယန်းကို ပြောင်းလိုက်တယ်။","Bạn có thể sửa máy giặt hỏng được không?":"ပျက်နေတဲ့ အဝတ်လျှော်စက်ကို ပြင်လို့ရလား။","Hãy thay sang quần áo dễ vận động hơn.":"၀တ်ရလွယ်တဲ့အဝတ်အစားတွေ ပြောင်းဝတ်ပါ။","Tôi muốn ăn cả bánh ngọt lẫn bánh donut.":"ကိတ်မုန့်ရော ဒိုးနပ်တွေရော စားချင်တယ်။","Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.":"အသားညှပ်ပေါင်မုန့်များသည် လက်တစ်ဖက်တည်းဖြင့် စားနိုင်သောကြောင့် အဆင်ပြေသည်။","Tôi đã cho bạn trọ lại nhà.":"မင်းကို ငါ့အိမ်မှာနေခွင့်ပေးတယ်။","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","hệ":"সিস্টেম","người phụ trách":"দায়িত্বে থাকা ব্যক্তি","nhân viên phụ trách":"দায়িত্বে থাকা কর্মীরা","quan hệ":"সম্পর্ক","đích":"গন্তব্য","mục đích":"উদ্দেশ্য","toàn thế giới":"বিশ্বব্যাপী","~ kiểu":"~ শৈলী","khán giả":"শ্রোতা","thực tập":"ইন্টার্নশিপ","sửa chữa":"মেরামত","lưu":"সংরক্ষণ","du học":"বিদেশে পড়াশোনা","vắng nhà":"বাড়ি থেকে অনুপস্থিত","trông nhà":"বাড়ির দেখাশোনা","bạc":"রূপা","ở trọ, nghỉ lại":"থাকুন, থাকুন","cho ở trọ":"রুম","hai ngày một đêm":"দুই দিন এবং এক রাত","ba ngày hai đêm":"তিন দিন দুই রাত","ở trọ":"বাসস্থান","phiến":"স্ল্যাব","một bên":"একপাশে","một tay":"এক হাত","dọn dẹp":"পরিষ্কার করা","lưỡng":"উভকামী","hai bên":"উভয় পক্ষ","hai phía":"দুই পক্ষ","bố mẹ":"পিতামাতা","thế":"অবস্থান","thay quần áo":"কাপড় পরিবর্তন","đổi tiền":"টাকা বিনিময়","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Bố mẹ tôi hiện đang đi du lịch.":"আমার বাবা-মা বর্তমানে ভ্রমণ করছেন।","Em trai tôi đang du học ở Mỹ.":"আমার ছোট ভাই আমেরিকায় বিদেশে পড়াশোনা করছে।","Mục đích của cuộc khảo sát này là gì?":"এই জরিপের উদ্দেশ্য কি?","Tôi không tìm thấy 1 bên tất còn lại.":"আমি অন্য মোজা খুঁজে পাচ্ছি না.","Trận đấu này có rất nhiều khán giả xem nhỉ.":"এই ম্যাচটি দেখতে প্রচুর দর্শক ছিল।","Hãy thử hỏi người phụ trách xem.":"দায়িত্বপ্রাপ্ত ব্যক্তিকে জিজ্ঞাসা করার চেষ্টা করুন।","Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.":"আমি তিন দিন এবং দুই রাতের জন্য উষ্ণ প্রস্রবণে গিয়েছিলাম।","Nếu tham quan Kyoto, trước tiên là các ngôi chùa.":"কিয়োটোতে গেলে প্রথমে মন্দিরে যান।","Có khóa đào tạo dành cho nhân viên mới.":"নতুন কর্মীদের প্রশিক্ষণের ব্যবস্থা রয়েছে।","Tôi đã đổi đô la sang yên.":"আমি ইয়েনে ডলার পরিবর্তন করেছি।","Bạn có thể sửa máy giặt hỏng được không?":"আপনি একটি ভাঙ্গা ওয়াশিং মেশিন ঠিক করতে পারেন?","Hãy thay sang quần áo dễ vận động hơn.":"এমন জামাকাপড় পরিবর্তন করুন যা ভিতরে যাওয়া সহজ।","Tôi muốn ăn cả bánh ngọt lẫn bánh donut.":"আমি কেক এবং ডোনাট দুটোই খেতে চাই।","Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.":"স্যান্ডউইচগুলি সুবিধাজনক কারণ সেগুলি এক হাতে খাওয়া যায়।","Tôi đã cho bạn trọ lại nhà.":"তোমাকে আমার বাসায় থাকতে দিলাম।","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","hệ":"प्रणाली","người phụ trách":"प्रभारी व्यक्ति","nhân viên phụ trách":"स्टाफ प्रभारी","quan hệ":"संबंध","đích":"गंतव्य","mục đích":"उद्देश्य","toàn thế giới":"दुनिया भर में","~ kiểu":"~शैली","khán giả":"ऑडियंस","thực tập":"प्रशिक्षण","sửa chữa":"मरम्मत","lưu":"बचाना","du học":"विदेश में अध्ययन करें","vắng nhà":"घर से अनुपस्थित","trông nhà":"घर की देखभाल करो","bạc":"चाँदी","ở trọ, nghỉ lại":"रहो, रहो","cho ở trọ":"कमरा","hai ngày một đêm":"दो दिन और एक रात","ba ngày hai đêm":"तीन दिन और दो रातें","ở trọ":"आवास","phiến":"पटिया","một bên":"एक तरफ","một tay":"एक हाथ","dọn dẹp":"साफ - सफाई","lưỡng":"उभयलिंगी","hai bên":"दोनों पक्षों","hai phía":"दो पक्षों","bố mẹ":"अभिभावक","thế":"पद","thay quần áo":"कपड़े बदलो","đổi tiền":"विदेशी मुद्रा","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Bố mẹ tôi hiện đang đi du lịch.":"मेरे माता-पिता इस समय यात्रा पर हैं।","Em trai tôi đang du học ở Mỹ.":"मेरा छोटा भाई विदेश अमेरिका में पढ़ रहा है.","Mục đích của cuộc khảo sát này là gì?":"इस सर्वेक्षण का उद्देश्य क्या है?","Tôi không tìm thấy 1 bên tất còn lại.":"मुझे दूसरा मोजा नहीं मिल रहा।","Trận đấu này có rất nhiều khán giả xem nhỉ.":"इस मैच को देखने के लिए काफी संख्या में दर्शक मौजूद थे।","Hãy thử hỏi người phụ trách xem.":"प्रभारी व्यक्ति से पूछने का प्रयास करें।","Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.":"मैं तीन दिन और दो रातों के लिए गर्म झरनों पर गया।","Nếu tham quan Kyoto, trước tiên là các ngôi chùa.":"अगर क्योटो जाएं तो सबसे पहले मंदिरों में जाएं।","Có khóa đào tạo dành cho nhân viên mới.":"नए कर्मचारियों के लिए प्रशिक्षण है।","Tôi đã đổi đô la sang yên.":"मैंने डॉलर को येन में बदल दिया।","Bạn có thể sửa máy giặt hỏng được không?":"क्या आप टूटी हुई वॉशिंग मशीन को ठीक कर सकते हैं?","Hãy thay sang quần áo dễ vận động hơn.":"ऐसे कपड़े बदलें जिनमें आना-जाना आसान हो।","Tôi muốn ăn cả bánh ngọt lẫn bánh donut.":"मैं केक और डोनट्स दोनों खाना चाहता हूं।","Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.":"सैंडविच सुविधाजनक होते हैं क्योंकि इन्हें एक हाथ से खाया जा सकता है।","Tôi đã cho bạn trọ lại nhà.":"मैंने तुम्हें अपने घर पर रहने दिया.","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","hệ":"ระบบ","người phụ trách":"บุคคลที่รับผิดชอบ","nhân viên phụ trách":"พนักงานที่รับผิดชอบ","quan hệ":"ความสัมพันธ์","đích":"ปลายทาง","mục đích":"วัตถุประสงค์","toàn thế giới":"ทั่วโลก","~ kiểu":"~ สไตล์","khán giả":"ผู้ชม","thực tập":"ฝึกงาน","sửa chữa":"ซ่อมแซม","lưu":"บันทึก","du học":"เรียนต่อต่างประเทศ","vắng nhà":"ไม่ออกจากบ้าน","trông nhà":"ดูแลบ้าน","bạc":"เงิน","ở trọ, nghỉ lại":"อยู่อยู่","cho ở trọ":"ห้อง","hai ngày một đêm":"สองวันกับหนึ่งคืน","ba ngày hai đêm":"สามวันสองคืน","ở trọ":"ที่พัก","phiến":"แผ่นคอนกรีต","một bên":"ด้านหนึ่ง","một tay":"มือข้างหนึ่ง","dọn dẹp":"ทำความสะอาด","lưỡng":"กะเทย","hai bên":"ทั้งสองด้าน","hai phía":"สองด้าน","bố mẹ":"ผู้ปกครอง","thế":"ตำแหน่ง","thay quần áo":"เปลี่ยนเสื้อผ้า","đổi tiền":"แลกเปลี่ยนเงิน","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Bố mẹ tôi hiện đang đi du lịch.":"พ่อแม่ของฉันกำลังเดินทางอยู่","Em trai tôi đang du học ở Mỹ.":"น้องชายของฉันกำลังศึกษาต่อที่อเมริกา","Mục đích của cuộc khảo sát này là gì?":"วัตถุประสงค์ของการสำรวจครั้งนี้คืออะไร?","Tôi không tìm thấy 1 bên tất còn lại.":"ฉันหาถุงเท้าอันอื่นไม่เจอ","Trận đấu này có rất nhiều khán giả xem nhỉ.":"นัดนี้มีคนดูเยอะมาก","Hãy thử hỏi người phụ trách xem.":"ลองถามคนที่รับผิดชอบสิ","Tôi đã đi suối nước nóng trong vòng ba ngày hai đêm.":"ฉันไปบ่อน้ำพุร้อนสามวันสองคืน","Nếu tham quan Kyoto, trước tiên là các ngôi chùa.":"ถ้าไปเกียวโตต้องไปวัดก่อน","Có khóa đào tạo dành cho nhân viên mới.":"มีการฝึกอบรมพนักงานใหม่","Tôi đã đổi đô la sang yên.":"ฉันเปลี่ยนดอลลาร์เป็นเยน","Bạn có thể sửa máy giặt hỏng được không?":"คุณสามารถซ่อมเครื่องซักผ้าที่พังได้หรือไม่?","Hãy thay sang quần áo dễ vận động hơn.":"เปลี่ยนเสื้อผ้าให้เคลื่อนไหวได้ง่ายขึ้น","Tôi muốn ăn cả bánh ngọt lẫn bánh donut.":"อยากกินทั้งเค้กและโดนัท","Bánh sandwich thật tiện lợi bởi có thể ăn bằng một tay.":"แซนวิชสะดวกเพราะสามารถรับประทานได้ด้วยมือเดียว","Tôi đã cho bạn trọ lại nhà.":"ฉันให้คุณอยู่ที่บ้านของฉัน","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

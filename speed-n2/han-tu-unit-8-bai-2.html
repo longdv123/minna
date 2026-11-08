@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">液</div></div><div class="kcell k-hv"><span class="vi-tr">dịch</span> </div><div class="kcell k-read"><div class="on">エキ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>液体<rp>（</rp><rt>えきたい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thể lỏng</span> </div></div><div class="kitem"><div class="jp"><ruby>血液<rp>（</rp><rt>けつえき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máu</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">鋭</div></div><div class="kcell k-hv"><span class="vi-tr">duệ</span> </div><div class="kcell k-read"><div>するどーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>鋭<rp>（</rp><rt>するど</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">sắc</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">純</div></div><div class="kcell k-hv"><span class="vi-tr">thuần</span> </div><div class="kcell k-read"><div class="on">ジュン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>純粋<rp>（</rp><rt>じゅんすい</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">trong sáng, thuần khiết</span> </div></div><div class="kitem"><div class="jp"><ruby>単純<rp>（</rp><rt>たんじゅん</rt><rp>）</rp></ruby>（な）　cf．<ruby>複雑<rp>（</rp><rt>ふくざつ</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">đơn giản cf. phức tạp</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">測</div></div><div class="kcell k-hv"><span class="vi-tr">trắc</span> </div><div class="kcell k-read"><div class="on">ソク</div><div>はかーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>測<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">đo</span></div></div><div class="kitem"><div class="jp"><ruby>測定<rp>（</rp><rt>そくてい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đo đạc</span> </div></div><div class="kitem"><div class="jp"><ruby>予測<rp>（</rp><rt>よそく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">dự đoán</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">含</div></div><div class="kcell k-hv"><span class="vi-tr">hàm</span> </div><div class="kcell k-read"><div>ふくーむ／ふくーめる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>含<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">gồm</span> </div></div><div class="kitem"><div class="jp"><ruby>含<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">bao gồm</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">蒸</div></div><div class="kcell k-hv"><span class="vi-tr">chưng</span> </div><div class="kcell k-read"><div class="on">ジョウ</div><div>むーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>蒸<rp>（</rp><rt>む</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">hấp</span>  </div></div><div class="kitem"><div class="jp"><ruby>蒸<rp>（</rp><rt>む</rt><rp>）</rp></ruby>し<ruby>暑<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">oi nóng</span></div></div><div class="kitem"><div class="jp"><ruby>蒸発<rp>（</rp><rt>じょうはつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">bốc hơi</span> </div></div><div class="kitem"><div class="jp"><ruby>蒸気<rp>（</rp><rt>じょうき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hơi nước</span>  </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">溶</div></div><div class="kcell k-hv">dung</div><div class="kcell k-read"><div class="on">ヨウ</div><div>とーける／とーかす／とーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>溶<rp>（</rp><rt>と</rt><rp>）</rp></ruby>ける</div><div class="vi">~ tan </div></div><div class="kitem"><div class="jp">（～を）<ruby>溶<rp>（</rp><rt>と</rt><rp>）</rp></ruby>かす</div><div class="vi"><span class="vi-tr">hòa tan ~</span></div></div><div class="kitem"><div class="jp"><ruby>溶岩<rp>（</rp><rt>ようがん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nham thạch</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">質</div></div><div class="kcell k-hv"><span class="vi-tr">chất</span> </div><div class="kcell k-read"><div class="on">シツ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>質<rp>（</rp><rt>しつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chất lượng</span> </div></div><div class="kitem"><div class="jp"><ruby>物質<rp>（</rp><rt>ぶっしつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vật chất</span> </div></div><div class="kitem"><div class="jp"><ruby>性質<rp>（</rp><rt>せいしつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tính chất</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">固</div></div><div class="kcell k-hv"><span class="vi-tr">cố</span> </div><div class="kcell k-read"><div class="on">コ</div><div>かたーい／かたーまる／かたーめる</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>固<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>まる</div><div class="vi"><span class="vi-tr">~ cứng lại</span> </div></div><div class="kitem"><div class="jp"><ruby>固<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">cứng</span></div></div><div class="kitem"><div class="jp"><ruby>固形<rp>（</rp><rt>こけい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cục</span> </div></div><div class="kitem"><div class="jp"><ruby>固体<rp>（</rp><rt>こたい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thể rắn</span></div></div><div class="kitem"><div class="jp"><ruby>固定<rp>（</rp><rt>こてい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">cố định</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">量</div></div><div class="kcell k-hv"><span class="vi-tr">lượng</span> </div><div class="kcell k-read"><div class="on">リョウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lượng</span></div></div><div class="kitem"><div class="jp"><ruby>数量<rp>（</rp><rt>すうりょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">số lượng</span> </div></div><div class="kitem"><div class="jp"><ruby>音量<rp>（</rp><rt>おんりょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">âm lượng</span> </div></div><div class="kitem"><div class="jp"><ruby>分量<rp>（</rp><rt>ぶんりょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lượng</span> </div></div><div class="kitem"><div class="jp"><ruby>同量<rp>（</rp><rt>どうりょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đồng lượng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">均</div></div><div class="kcell k-hv"><span class="vi-tr">quân</span> </div><div class="kcell k-read"><div class="on">キン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>均一<rp>（</rp><rt>きんいつ</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">đồng nhất</span> </div></div><div class="kitem"><div class="jp"><ruby>平均<rp>（</rp><rt>へいきん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">bình quân</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">鈍</div></div><div class="kcell k-hv"><span class="vi-tr">độn</span> </div><div class="kcell k-read"><div class="on">（ドン）</div><div>にぶーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>鈍<rp>（</rp><rt>にぶ</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">chậm chạp, cùn</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. パソコンの<ruby>画面<rp>（</rp><rt>がめん</rt><rp>）</rp></ruby>が<u><ruby>固<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>まって</u><ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない。</td><td>a. こまって</td><td>b. かたまって</td></tr><tr><td>2. <u><ruby>血液<rp>（</rp><rt>けつえき</rt><rp>）</rp></ruby></u><ruby>検査<rp>（</rp><rt>けんさ</rt><rp>）</rp></ruby>をするので、こちらへ<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>てください。</td><td>a. けつえき</td><td>b. けついき</td></tr><tr><td>3. アイスクリームが<u><ruby>溶<rp>（</rp><rt>と</rt><rp>）</rp></ruby>け</u>ちゃうよ。</td><td>a. こけ</td><td>b. とけ</td></tr><tr><td>4. <ruby>今月<rp>（</rp><rt>こんげつ</rt><rp>）</rp></ruby>は<u><ruby>平均<rp>（</rp><rt>へいきん</rt><rp>）</rp></ruby></u><ruby>気温<rp>（</rp><rt>きおん</rt><rp>）</rp></ruby>が３０<ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>を<ruby>超<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>えている。</td><td>a. へいきん</td><td>b. へいぎん</td></tr><tr><td>5. ガスコンロの<ruby>上<rp>（</rp><rt>うえ</rt><rp>）</rp></ruby>のなべから<u><ruby>蒸気<rp>（</rp><rt>じょうき</rt><rp>）</rp></ruby></u>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>ている。</td><td>a. じょうき</td><td>b. じょき</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. パソコンの<ruby>画面<rp>（</rp><rt>がめん</rt><rp>）</rp></ruby>が<u><ruby>固<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>まって</u><ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない。</td><td><b>かたまって</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <u><ruby>血液<rp>（</rp><rt>けつえき</rt><rp>）</rp></ruby></u><ruby>検査<rp>（</rp><rt>けんさ</rt><rp>）</rp></ruby>をするので、こちらへ<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>てください。</td><td><b>けつえき</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. アイスクリームが<u><ruby>溶<rp>（</rp><rt>と</rt><rp>）</rp></ruby>け</u>ちゃうよ。</td><td><b>とけ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>今月<rp>（</rp><rt>こんげつ</rt><rp>）</rp></ruby>は<u><ruby>平均<rp>（</rp><rt>へいきん</rt><rp>）</rp></ruby></u><ruby>気温<rp>（</rp><rt>きおん</rt><rp>）</rp></ruby>が３０<ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>を<ruby>超<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>えている。</td><td><b>へいきん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. ガスコンロの<ruby>上<rp>（</rp><rt>うえ</rt><rp>）</rp></ruby>のなべから<u><ruby>蒸気<rp>（</rp><rt>じょうき</rt><rp>）</rp></ruby></u>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>ている。</td><td><b>じょうき</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>今年<rp>（</rp><rt>ことし</rt><rp>）</rp></ruby>の<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>は<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby>に<u>む</u>し<ruby>暑<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>い。</td><td>a. 然</td><td>b. 無</td><td>c. 蒸</td></tr><tr><td>2. <ruby>肌<rp>（</rp><rt>はだ</rt><rp>）</rp></ruby>の<ruby>水分量<rp>（</rp><rt>すいぶんりょう</rt><rp>）</rp></ruby>を<u>そく</u><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>してもらった。</td><td>a. 側</td><td>b. 測</td><td>c. 則</td></tr><tr><td>3. <ruby>年<rp>（</rp><rt>とし</rt><rp>）</rp></ruby>をとると、<ruby>味<rp>（</rp><rt>あじ</rt><rp>）</rp></ruby>の<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じ<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>が<u>にぶ</u>くなる。</td><td>a. 遅</td><td>b. 鈍</td><td>c. 鋭</td></tr><tr><td>4. <ruby>地震<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby>に<ruby>備<rp>（</rp><rt>そな</rt><rp>）</rp></ruby>えて、<ruby>家具<rp>（</rp><rt>かぐ</rt><rp>）</rp></ruby>を<u>こ</u><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>した。</td><td>a. 個</td><td>b. 固</td><td>c. 団</td></tr><tr><td>5. <ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><u>じゅん</u>な<ruby>計算<rp>（</rp><rt>けいさん</rt><rp>）</rp></ruby>ミスをしてしまった。</td><td>a. 純</td><td>b. 逆</td><td>c. 鈍</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>今年<rp>（</rp><rt>ことし</rt><rp>）</rp></ruby>の<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>は<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby>に<u>む</u>し<ruby>暑<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>い。</td><td><b>蒸</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>肌<rp>（</rp><rt>はだ</rt><rp>）</rp></ruby>の<ruby>水分量<rp>（</rp><rt>すいぶんりょう</rt><rp>）</rp></ruby>を<u>そく</u><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>してもらった。</td><td><b>測</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>年<rp>（</rp><rt>とし</rt><rp>）</rp></ruby>をとると、<ruby>味<rp>（</rp><rt>あじ</rt><rp>）</rp></ruby>の<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じ<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>が<u>にぶ</u>くなる。</td><td><b>鈍</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>地震<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby>に<ruby>備<rp>（</rp><rt>そな</rt><rp>）</rp></ruby>えて、<ruby>家具<rp>（</rp><rt>かぐ</rt><rp>）</rp></ruby>を<u>こ</u><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>した。</td><td><b>固</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><u>じゅん</u>な<ruby>計算<rp>（</rp><rt>けいさん</rt><rp>）</rp></ruby>ミスをしてしまった。</td><td><b>純</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. プラスチックは<ruby>熱<rp>（</rp><rt>ねつ</rt><rp>）</rp></ruby>で<ruby>柔<rp>（</rp><rt>やわ</rt><rp>）</rp></ruby>らかくなる（　　　）を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>つ。</td><td>a. 性質</td><td>b. 分量</td></tr><tr><td>2. <ruby>旅行代金<rp>（</rp><rt>りょこうだいきん</rt><rp>）</rp></ruby>はホテル<ruby>代<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>も（　　　）４<ruby>万円<rp>（</rp><rt>まんえん</rt><rp>）</rp></ruby>です。</td><td>a. 含めて</td><td>b. 測って</td></tr><tr><td>3. この<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>のサービスは（　　　）が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>い。</td><td>a. 量</td><td>b. 質</td></tr><tr><td>4. <ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>かの（　　　）がこぼれて、<ruby>床<rp>（</rp><rt>ゆか</rt><rp>）</rp></ruby>がぬれている。</td><td>a. 液体</td><td>b. 個体</td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は<ruby>頭<rp>（</rp><rt>あたま</rt><rp>）</rp></ruby>がいい。いつも（　　　）<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>を<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>う。</td><td>a. 鋭い</td><td>b. 鈍い</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. プラスチックは<ruby>熱<rp>（</rp><rt>ねつ</rt><rp>）</rp></ruby>で<ruby>柔<rp>（</rp><rt>やわ</rt><rp>）</rp></ruby>らかくなる（　　　）を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>つ。</td><td><b>性質</b> (せいしつ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>旅行代金<rp>（</rp><rt>りょこうだいきん</rt><rp>）</rp></ruby>はホテル<ruby>代<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>も（　　　）４<ruby>万円<rp>（</rp><rt>まんえん</rt><rp>）</rp></ruby>です。</td><td><b>含めて</b> (ふくめて)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>のサービスは（　　　）が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>い。</td><td><b>質</b> (しつ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>かの（　　　）がこぼれて、<ruby>床<rp>（</rp><rt>ゆか</rt><rp>）</rp></ruby>がぬれている。</td><td><b>液体</b> (えきたい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は<ruby>頭<rp>（</rp><rt>あたま</rt><rp>）</rp></ruby>がいい。いつも（　　　）<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>を<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>う。</td><td><b>鋭い</b> (するどい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-8-2"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-8-bai-2.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","dịch":"pandemic","thể lỏng":"liquid form","máu":"blood","duệ":"descendants","sắc":"sharp","thuần":"pure","trong sáng, thuần khiết":"bright, pure","đơn giản cf. phức tạp":"simple cf. complicated","trắc":"survey","đo":"measure","đo đạc":"measurement","dự đoán":"forecast","hàm":"jaw","gồm":"including","bao gồm":"include","chưng":"distillation","hấp":"steam","oi nóng":"sweltering hot","bốc hơi":"vaporize","hơi nước":"steam","hòa tan ~":"dissolve ~","nham thạch":"lava","chất":"matter","chất lượng":"quality","vật chất":"material","tính chất":"nature","cố":"try","~ cứng lại":"~ harden","cứng":"hard","cục":"lump","thể rắn":"solid body","cố định":"permanent","lượng":"quantity","số lượng":"quantity","âm lượng":"volume","đồng lượng":"equal quantity","quân":"army","đồng nhất":"uniformity","bình quân":"average","độn":"padded","chậm chạp, cùn":"slow, blunt","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","dịch":"pandemi","thể lỏng":"bentuk cair","máu":"darah","duệ":"keturunan","sắc":"tajam","thuần":"murni","trong sáng, thuần khiết":"cerah, murni","đơn giản cf. phức tạp":"sederhana lih. rumit","trắc":"survei","đo":"ukuran","đo đạc":"pengukuran","dự đoán":"ramalan","hàm":"rahang","gồm":"termasuk","bao gồm":"termasuk","chưng":"distilasi","hấp":"uap","oi nóng":"panas terik","bốc hơi":"menguapkan","hơi nước":"uap","hòa tan ~":"larut ~","nham thạch":"lahar","chất":"urusan","chất lượng":"kualitas","vật chất":"bahan","tính chất":"alam","cố":"mencoba","~ cứng lại":"~ mengeras","cứng":"keras","cục":"gumpalan","thể rắn":"tubuh padat","cố định":"permanen","lượng":"kuantitas","số lượng":"kuantitas","âm lượng":"volume","đồng lượng":"kuantitas yang sama","quân":"tentara","đồng nhất":"keseragaman","bình quân":"rata-rata","độn":"empuk","chậm chạp, cùn":"lambat, tumpul","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","dịch":"माहामारी","thể lỏng":"तरल रूप","máu":"रगत","duệ":"सन्तान","sắc":"तीखो","thuần":"शुद्ध","trong sáng, thuần khiết":"उज्यालो, शुद्ध","đơn giản cf. phức tạp":"साधारण cf। जटिल","trắc":"सर्वेक्षण","đo":"मापन","đo đạc":"मापन","dự đoán":"पूर्वानुमान","hàm":"जबडा","gồm":"सहित","bao gồm":"समावेश गर्नुहोस्","chưng":"आसवन","hấp":"भाप","oi nóng":"चर्को तातो","bốc hơi":"वाष्पीकरण","hơi nước":"भाप","hòa tan ~":"विघटन ~","nham thạch":"लाभा","chất":"कुरा","chất lượng":"गुणस्तर","vật chất":"सामग्री","tính chất":"प्रकृति","cố":"प्रयास गर्नुहोस्","~ cứng lại":"~ कडा","cứng":"कडा","cục":"गाँठो","thể rắn":"ठोस शरीर","cố định":"स्थायी","lượng":"मात्रा","số lượng":"मात्रा","âm lượng":"मात्रा","đồng lượng":"बराबर मात्रा","quân":"सेना","đồng nhất":"एकरूपता","bình quân":"औसत","độn":"प्याड गरिएको","chậm chạp, cùn":"ढिलो, धमिलो","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","dịch":"ကမ္ဘာအနှံ့ဖြစ်ပွားသော","thể lỏng":"အရည်ပုံစံ","máu":"သွေး","duệ":"သားစဉ်မြေးဆက်","sắc":"ထက်ထက်","thuần":"စင်","trong sáng, thuần khiết":"တောက်ပ၊ သန့်ရှင်း","đơn giản cf. phức tạp":"ရိုးရှင်းသော cf ။ ရှုပ်ထွေးသည်။","trắc":"စစ်တမ်း","đo":"တိုင်းတာ","đo đạc":"တိုင်းတာခြင်း။","dự đoán":"ခန့်မှန်းချက်","hàm":"မေးရိုး","gồm":"အပါအဝင်","bao gồm":"ပါဝင်ပါတယ်။","chưng":"ပေါင်းခံခြင်း","hấp":"ရေနွေးငွေ့","oi nóng":"ပူပူနွေးနွေး","bốc hơi":"အငွေ့ပျံသည်။","hơi nước":"ရေနွေးငွေ့","hòa tan ~":"~ပျော်သည်။","nham thạch":"ချော်ရည်","chất":"ကိစ္စ","chất lượng":"အရည်အသွေး","vật chất":"ပစ္စည်း","tính chất":"သဘာဝ","cố":"ကြိုးစားပါ။","~ cứng lại":"~ မာကျော","cứng":"ခက်တယ်။","cục":"အဖု","thể rắn":"ခိုင်မာသောခန္ဓာကိုယ်","cố định":"အမြဲတမ်း","lượng":"ပမာဏ","số lượng":"ပမာဏ","âm lượng":"အသံအတိုးအကျယ်","đồng lượng":"တူညီသောပမာဏ","quân":"စစ်တပ်","đồng nhất":"တူညီမှု","bình quân":"ပျမ်းမျှ","độn":"padded","chậm chạp, cùn":"နှေး၊ တုံး","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","dịch":"অতিমারী","thể lỏng":"তরল ফর্ম","máu":"রক্ত","duệ":"বংশধর","sắc":"তীক্ষ্ণ","thuần":"বিশুদ্ধ","trong sáng, thuần khiết":"উজ্জ্বল, খাঁটি","đơn giản cf. phức tạp":"সহজ cf. জটিল","trắc":"জরিপ","đo":"পরিমাপ","đo đạc":"পরিমাপ","dự đoán":"পূর্বাভাস","hàm":"চোয়াল","gồm":"সহ","bao gồm":"অন্তর্ভুক্ত","chưng":"পাতন","hấp":"বাষ্প","oi nóng":"sweltering গরম","bốc hơi":"বাষ্পীভূত করা","hơi nước":"বাষ্প","hòa tan ~":"দ্রবীভূত করা ~","nham thạch":"লাভা","chất":"ব্যাপার","chất lượng":"গুণমান","vật chất":"উপাদান","tính chất":"প্রকৃতি","cố":"চেষ্টা করুন","~ cứng lại":"~ শক্ত করা","cứng":"কঠিন","cục":"পিণ্ড","thể rắn":"কঠিন শরীর","cố định":"স্থায়ী","lượng":"পরিমাণ","số lượng":"পরিমাণ","âm lượng":"আয়তন","đồng lượng":"সমান পরিমাণ","quân":"সেনাবাহিনী","đồng nhất":"অভিন্নতা","bình quân":"গড়","độn":"প্যাডেড","chậm chạp, cùn":"ধীরে, ভোঁতা","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","dịch":"महामारी","thể lỏng":"तरल रूप","máu":"खून","duệ":"वंशज","sắc":"तीखा","thuần":"शुद्ध","trong sáng, thuần khiết":"उज्ज्वल, शुद्ध","đơn giản cf. phức tạp":"सरल सी.एफ. उलझा हुआ","trắc":"सर्वे","đo":"उपाय","đo đạc":"माप","dự đoán":"पूर्वानुमान","hàm":"जबड़ा","gồm":"शामिल","bao gồm":"शामिल करना","chưng":"आसवन","hấp":"भाप","oi nóng":"प्रचंड गर्मी","bốc hơi":"भाप बनकर","hơi nước":"भाप","hòa tan ~":"भंग ~","nham thạch":"लावा","chất":"मामला","chất lượng":"गुणवत्ता","vật chất":"सामग्री","tính chất":"प्रकृति","cố":"कोशिश","~ cứng lại":"~कठोर करना","cứng":"मुश्किल","cục":"पिंड","thể rắn":"ठोस बॉडी","cố định":"स्थायी","lượng":"मात्रा","số lượng":"मात्रा","âm lượng":"आयतन","đồng lượng":"समान मात्रा","quân":"सेना","đồng nhất":"एकरूपता","bình quân":"औसत","độn":"गद्देदार","chậm chạp, cùn":"धीमा, कुंद","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","dịch":"การระบาดใหญ่","thể lỏng":"รูปแบบของเหลว","máu":"เลือด","duệ":"ลูกหลาน","sắc":"คม","thuần":"บริสุทธิ์","trong sáng, thuần khiết":"สดใสและบริสุทธิ์","đơn giản cf. phức tạp":"อ้างอิงง่าย ที่ซับซ้อน","trắc":"สำรวจ","đo":"วัด","đo đạc":"การวัด","dự đoán":"พยากรณ์","hàm":"กราม","gồm":"รวมทั้ง","bao gồm":"รวม","chưng":"การกลั่น","hấp":"ไอน้ำ","oi nóng":"ร้อนระอุ","bốc hơi":"กลายเป็นไอ","hơi nước":"ไอน้ำ","hòa tan ~":"ละลาย~","nham thạch":"ลาวา","chất":"วัตถุ","chất lượng":"คุณภาพ","vật chất":"วัสดุ","tính chất":"ธรรมชาติ","cố":"พยายาม","~ cứng lại":"~ แข็งตัว","cứng":"แข็ง","cục":"ก้อน","thể rắn":"ร่างกายที่มั่นคง","cố định":"ถาวร","lượng":"ปริมาณ","số lượng":"ปริมาณ","âm lượng":"ปริมาณ","đồng lượng":"ปริมาณเท่ากัน","quân":"กองทัพบก","đồng nhất":"ความสม่ำเสมอ","bình quân":"เฉลี่ย","độn":"เบาะ","chậm chạp, cùn":"ช้าทื่อ","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

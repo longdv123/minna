@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">億</div></div><div class="kcell k-hv"><span class="vi-tr">ức</span> </div><div class="kcell k-read"><div class="on">オク</div></div></div><div class="kbody"><div class="kitem"><div class="jp">～<ruby>億<rp>（</rp><rt>おく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trăm triệu</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">達</div></div><div class="kcell k-hv"><span class="vi-tr">đạt</span> </div><div class="kcell k-read"><div class="on">タツ</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～に）<ruby>達<rp>（</rp><rt>たっ</rt><rp>）</rp></ruby>する</div><div class="vi"><span class="vi-tr">đạt tới ~</span></div></div><div class="kitem"><div class="jp"><ruby>発達<rp>（</rp><rt>はったつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">phát triển</span> </div></div><div class="kitem"><div class="jp"><ruby>上達<rp>（</rp><rt>じょうたつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tốt lên</span> </div></div><div class="kitem"><div class="jp"><ruby>配達<rp>（</rp><rt>はいたつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">giao hàng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">誤</div></div><div class="kcell k-hv"><span class="vi-tr">ngộ</span> </div><div class="kcell k-read"><div class="on">ゴ</div><div>あやまーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>誤<rp>（</rp><rt>あやま</rt><rp>）</rp></ruby>り</div><div class="vi"><span class="vi-tr">nhầm lẫn</span> </div></div><div class="kitem"><div class="jp"><ruby>誤解<rp>（</rp><rt>ごかい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hiểu lầm</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">続</div></div><div class="kcell k-hv"><span class="vi-tr">tục</span> </div><div class="kcell k-read"><div class="on">ゾク</div><div>つづーく／つづーける</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>手続<rp>（</rp><rt>てつづ</rt><rp>）</rp></ruby>き</div><div class="vi"><span class="vi-tr">thủ tục</span> </div></div><div class="kitem"><div class="jp"><ruby>連続<rp>（</rp><rt>れんぞく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">liên tục</span> </div></div><div class="kitem"><div class="jp"><ruby>継続<rp>（</rp><rt>けいぞく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tiếp tục</span> </div></div><div class="kitem"><div class="jp"><ruby>接続<rp>（</rp><rt>せつぞく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">kết nối</span> </div></div><div class="kitem"><div class="jp"><ruby>相続<rp>（</rp><rt>そうぞく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thừa kế</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">超</div></div><div class="kcell k-hv"><span class="vi-tr">siêu</span> </div><div class="kcell k-read"><div class="on">チョウ</div><div>こーえる／こーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>超<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">vượt qua</span></div></div><div class="kitem"><div class="jp"><ruby>超<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">vượt</span></div></div><div class="kitem"><div class="jp"><ruby>超過<rp>（</rp><rt>ちょうか</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">quá</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">減</div></div><div class="kcell k-hv"><span class="vi-tr">giảm</span> </div><div class="kcell k-read"><div class="on">ゲン</div><div>へーる／へーらす</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>減<rp>（</rp><rt>へ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">~ giảm</span> </div></div><div class="kitem"><div class="jp">（～を）<ruby>減<rp>（</rp><rt>へ</rt><rp>）</rp></ruby>らす</div><div class="vi"><span class="vi-tr">cắt giảm ~</span></div></div><div class="kitem"><div class="jp"><ruby>減少<rp>（</rp><rt>げんしょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">giảm xuống</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">傾</div></div><div class="kcell k-hv">khuynh </div><div class="kcell k-read"><div class="on">ケイ</div><div>かたむーく／かたむーける</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>傾<rp>（</rp><rt>かたむ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">~ nghiêng</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>傾<rp>（</rp><rt>かたむ</rt><rp>）</rp></ruby>ける</div><div class="vi"><span class="vi-tr">hướng ~</span></div></div><div class="kitem"><div class="jp"><ruby>傾向<rp>（</rp><rt>けいこう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khuynh hướng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">増</div></div><div class="kcell k-hv"><span class="vi-tr">tăng</span></div><div class="kcell k-read"><div class="on">ゾウ</div><div>まーす／ふーえる／ふーやす</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>増<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">~ tăng</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>増<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>やす</div><div class="vi"><span class="vi-tr">tăng ~ lên</span> </div></div><div class="kitem"><div class="jp"><ruby>増加<rp>（</rp><rt>ぞうか</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tăng lên</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">占</div></div><div class="kcell k-hv"><span class="vi-tr">chiêm</span></div><div class="kcell k-read"><div class="on">（セン）</div><div>しーめる／うらなーう</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>占<rp>（</rp><rt>し</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">chiếm</span> </div></div><div class="kitem"><div class="jp"><ruby>占<rp>（</rp><rt>うらな</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">bói</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">兆</div></div><div class="kcell k-hv"><span class="vi-tr">triệu</span> </div><div class="kcell k-read"><div class="on">チョウ</div><div>（きざーし）</div></div></div><div class="kbody"><div class="kitem"><div class="jp">～<ruby>兆<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">1000 tỷ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">率</div></div><div class="kcell k-hv"><span class="vi-tr">suất</span> </div><div class="kcell k-read"><div class="on">リツ／ソツ</div><div>（ひきーいる）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>確率<rp>（</rp><rt>かくりつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">xác suất</span> </div></div><div class="kitem"><div class="jp"><ruby>能率<rp>（</rp><rt>のうりつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">năng suất</span> </div></div><div class="kitem"><div class="jp"><ruby>合格率<rp>（</rp><rt>ごうかくりつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tỉ lệ đỗ</span> </div></div><div class="kitem"><div class="jp"><ruby>率直<rp>（</rp><rt>そっちょく</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">thẳng thắn</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">巨</div></div><div class="kcell k-hv"><span class="vi-tr">cự</span> </div><div class="kcell k-read"><div class="on">キョ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>巨大<rp>（</rp><rt>きょだい</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">khổng lồ</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>音楽祭<rp>（</rp><rt>おんがくさい</rt><rp>）</rp></ruby>のために<u><ruby>巨大<rp>（</rp><rt>きょだい</rt><rp>）</rp></ruby>な</u><ruby>舞台<rp>（</rp><rt>ぶたい</rt><rp>）</rp></ruby>が<ruby>造<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>られた。</td><td>a. きょだいな</td><td>b. きょうだいな</td></tr><tr><td>2. <ruby>参加者<rp>（</rp><rt>さんかしゃ</rt><rp>）</rp></ruby>の8<ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>を<ruby>女性<rp>（</rp><rt>じょせい</rt><rp>）</rp></ruby>が<u><ruby>占<rp>（</rp><rt>し</rt><rp>）</rp></ruby>めて</u>いる。</td><td>a. しめて</td><td>b. しめして</td></tr><tr><td>3. <ruby>地震<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby>によって<ruby>家<rp>（</rp><rt>いえ</rt><rp>）</rp></ruby>が<u><ruby>傾<rp>（</rp><rt>かたむ</rt><rp>）</rp></ruby>いて</u>しまった。</td><td>a. はぶいて</td><td>b. かたむいて</td></tr><tr><td>4. <ruby>図表<rp>（</rp><rt>ずひょう</rt><rp>）</rp></ruby>のデータに<u><ruby>誤<rp>（</rp><rt>あやま</rt><rp>）</rp></ruby>り</u>があります。</td><td>a. あまり</td><td>b. あやまり</td></tr><tr><td>5. <ruby>被害総額<rp>（</rp><rt>ひがいそうがく</rt><rp>）</rp></ruby>は<ruby>一千万円<rp>（</rp><rt>いっせんまんえん</rt><rp>）</rp></ruby>に<u><ruby>達<rp>（</rp><rt>たっ</rt><rp>）</rp></ruby>した</u>。</td><td>a. たっした</td><td>b. たした</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>音楽祭<rp>（</rp><rt>おんがくさい</rt><rp>）</rp></ruby>のために<u><ruby>巨大<rp>（</rp><rt>きょだい</rt><rp>）</rp></ruby>な</u><ruby>舞台<rp>（</rp><rt>ぶたい</rt><rp>）</rp></ruby>が<ruby>造<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>られた。</td><td><b>きょだいな</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>参加者<rp>（</rp><rt>さんかしゃ</rt><rp>）</rp></ruby>の8<ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>を<ruby>女性<rp>（</rp><rt>じょせい</rt><rp>）</rp></ruby>が<u><ruby>占<rp>（</rp><rt>し</rt><rp>）</rp></ruby>めて</u>いる。</td><td><b>しめて</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>地震<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby>によって<ruby>家<rp>（</rp><rt>いえ</rt><rp>）</rp></ruby>が<u><ruby>傾<rp>（</rp><rt>かたむ</rt><rp>）</rp></ruby>いて</u>しまった。</td><td><b>かたむいて</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>図表<rp>（</rp><rt>ずひょう</rt><rp>）</rp></ruby>のデータに<u><ruby>誤<rp>（</rp><rt>あやま</rt><rp>）</rp></ruby>り</u>があります。</td><td><b>あやまり</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>被害総額<rp>（</rp><rt>ひがいそうがく</rt><rp>）</rp></ruby>は<ruby>一千万円<rp>（</rp><rt>いっせんまんえん</rt><rp>）</rp></ruby>に<u><ruby>達<rp>（</rp><rt>たっ</rt><rp>）</rp></ruby>した</u>。</td><td><b>たっした</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><u>つづ</u>きは<ruby>明日<rp>（</rp><rt>あす</rt><rp>）</rp></ruby>までに<ruby>済<rp>（</rp><rt>す</rt><rp>）</rp></ruby>ませてください。</td><td>a. 続</td><td>b. 総</td><td>c. 結</td></tr><tr><td>2. <ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>、<ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby>の<ruby>人数<rp>（</rp><rt>にんずう</rt><rp>）</rp></ruby>が<u>ぞう</u><ruby>加<rp>（</rp><rt>か</rt><rp>）</rp></ruby>してきている。</td><td>a. 億</td><td>b. 増</td><td>c. 贈</td></tr><tr><td>3. <ruby>試験<rp>（</rp><rt>しけん</rt><rp>）</rp></ruby>の<ruby>合格<rp>（</rp><rt>ごうかく</rt><rp>）</rp></ruby><u>りつ</u>は３０％<ruby>程度<rp>（</rp><rt>ていど</rt><rp>）</rp></ruby>だった。</td><td>a. 卒</td><td>b. 傘</td><td>c. 率</td></tr><tr><td>4. <ruby>定員<rp>（</rp><rt>ていいん</rt><rp>）</rp></ruby>を<u>こ</u>える<ruby>申<rp>（</rp><rt>もう</rt><rp>）</rp></ruby>し<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>みがあった。</td><td>a. 超</td><td>b. 追</td><td>c. 逃</td></tr><tr><td>5. オリンピックの<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby>は<ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>３<u>ちょう</u><ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>だそうだ。</td><td>a. 超</td><td>b. 庁</td><td>c. 兆</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><u>つづ</u>きは<ruby>明日<rp>（</rp><rt>あす</rt><rp>）</rp></ruby>までに<ruby>済<rp>（</rp><rt>す</rt><rp>）</rp></ruby>ませてください。</td><td><b>続</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>、<ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby>の<ruby>人数<rp>（</rp><rt>にんずう</rt><rp>）</rp></ruby>が<u>ぞう</u><ruby>加<rp>（</rp><rt>か</rt><rp>）</rp></ruby>してきている。</td><td><b>増</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>試験<rp>（</rp><rt>しけん</rt><rp>）</rp></ruby>の<ruby>合格<rp>（</rp><rt>ごうかく</rt><rp>）</rp></ruby><u>りつ</u>は３０％<ruby>程度<rp>（</rp><rt>ていど</rt><rp>）</rp></ruby>だった。</td><td><b>率</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>定員<rp>（</rp><rt>ていいん</rt><rp>）</rp></ruby>を<u>こ</u>える<ruby>申<rp>（</rp><rt>もう</rt><rp>）</rp></ruby>し<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>みがあった。</td><td><b>超</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. オリンピックの<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby>は<ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>３<u>ちょう</u><ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>だそうだ。</td><td><b>兆</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>医療技術<rp>（</rp><rt>いりょうぎじゅつ</rt><rp>）</rp></ruby>の（　　　）で、<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>くの<ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>が<ruby>治<rp>（</rp><rt>なお</rt><rp>）</rp></ruby>せるようになった。</td><td>a. 発達</td><td>b. 減少</td></tr><tr><td>2. インターネットの（　　　）に<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>が<ruby>生<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>じている。</td><td>a. 連続</td><td>b. 接続</td></tr><tr><td>3. <ruby>荷物<rp>（</rp><rt>にもつ</rt><rp>）</rp></ruby>の<ruby>重<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>さが20キロを（　　　）すると、<ruby>特別料金<rp>（</rp><rt>とくべつりょうきん</rt><rp>）</rp></ruby>が<ruby>発生<rp>（</rp><rt>はっせい</rt><rp>）</rp></ruby>します。</td><td>a. 増加</td><td>b. 超過</td></tr><tr><td>4. ぜひ（　　　）なご<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>をお<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>かせください。</td><td>a. 率直</td><td>b. 能率</td></tr><tr><td>5. <ruby>緊張<rp>（</rp><rt>きんちょう</rt><rp>）</rp></ruby>すると、<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>すスピードが<ruby>速<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>くなる（　　　）がある。</td><td>a. 傾向</td><td>b. 確率</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>医療技術<rp>（</rp><rt>いりょうぎじゅつ</rt><rp>）</rp></ruby>の（　　　）で、<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>くの<ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>が<ruby>治<rp>（</rp><rt>なお</rt><rp>）</rp></ruby>せるようになった。</td><td><b>発達</b> (はったつ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. インターネットの（　　　）に<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>が<ruby>生<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>じている。</td><td><b>接続</b> (せつぞく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>荷物<rp>（</rp><rt>にもつ</rt><rp>）</rp></ruby>の<ruby>重<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>さが20キロを（　　　）すると、<ruby>特別料金<rp>（</rp><rt>とくべつりょうきん</rt><rp>）</rp></ruby>が<ruby>発生<rp>（</rp><rt>はっせい</rt><rp>）</rp></ruby>します。</td><td><b>超過</b> (ちょうか)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. ぜひ（　　　）なご<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>をお<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>かせください。</td><td><b>率直</b> (そっちょく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>緊張<rp>（</rp><rt>きんちょう</rt><rp>）</rp></ruby>すると、<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>すスピードが<ruby>速<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>くなる（　　　）がある。</td><td><b>傾向</b> (けいこう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-9-1"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-9-bai-1.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","ức":"brisket","trăm triệu":"hundred million","đạt":"obtain","đạt tới ~":"reach ~","phát triển":"develop","tốt lên":"get better","giao hàng":"delivery","ngộ":"enlightenment","nhầm lẫn":"mistake","hiểu lầm":"misread","tục":"custom","thủ tục":"procedure","liên tục":"continuous","tiếp tục":"continue","kết nối":"connect","thừa kế":"inherit","siêu":"super","vượt qua":"overcome","vượt":"pass","quá":"too","giảm":"reduce","~ giảm":"~ decrease","cắt giảm ~":"cut ~","giảm xuống":"decreased","~ nghiêng":"~ tilt","hướng ~":"direction ~","khuynh hướng":"trend","tăng":"increase","~ tăng":"~ increased","tăng ~ lên":"increase ~ up","tăng lên":"increase","chiêm":"contemplate","chiếm":"occupy","bói":"fortune telling","triệu":"million","1000 tỷ":"1000 billion","suất":"capacity","xác suất":"probability","năng suất":"productivity","tỉ lệ đỗ":"pass rate","thẳng thắn":"frankly","cự":"resist","khổng lồ":"giant","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","ức":"Sandung lamur","trăm triệu":"ratus juta","đạt":"memperoleh","đạt tới ~":"mencapai ~","phát triển":"mengembangkan","tốt lên":"menjadi lebih baik","giao hàng":"pengiriman","ngộ":"pencerahan","nhầm lẫn":"kesalahan","hiểu lầm":"salah membaca","tục":"kebiasaan","thủ tục":"prosedur","liên tục":"kontinu","tiếp tục":"melanjutkan","kết nối":"menghubungkan","thừa kế":"mewarisi","siêu":"super","vượt qua":"mengatasi","vượt":"lulus","quá":"juga","giảm":"mengurangi","~ giảm":"~ berkurang","cắt giảm ~":"potong ~","giảm xuống":"menurun","~ nghiêng":"~ miring","hướng ~":"arah ~","khuynh hướng":"kecenderungan","tăng":"meningkatkan","~ tăng":"~ meningkat","tăng ~ lên":"meningkat ~ naik","tăng lên":"meningkatkan","chiêm":"merenungkan","chiếm":"menempati","bói":"meramal","triệu":"juta","1000 tỷ":"1000 miliar","suất":"kapasitas","xác suất":"kemungkinan","năng suất":"produktivitas","tỉ lệ đỗ":"tingkat kelulusan","thẳng thắn":"terus terang","cự":"melawan","khổng lồ":"raksasa","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","ức":"ब्रिस्केट","trăm triệu":"सय मिलियन","đạt":"प्राप्त गर्नुहोस्","đạt tới ~":"पुग्न ~","phát triển":"विकास","tốt lên":"राम्रो हुनुहोस्","giao hàng":"डेलिभरी","ngộ":"ज्ञान","nhầm lẫn":"गल्ती","hiểu lầm":"गलत पढियो","tục":"अनुकूलन","thủ tục":"प्रक्रिया","liên tục":"निरन्तर","tiếp tục":"जारी राख्नुहोस्","kết nối":"जडान गर्नुहोस्","thừa kế":"उत्तराधिकार","siêu":"सुपर","vượt qua":"परास्त","vượt":"पास","quá":"पनि","giảm":"घटाउने","~ giảm":"~ कमी","cắt giảm ~":"काट्नुहोस् ~","giảm xuống":"घट्यो","~ nghiêng":"~ झुकाव","hướng ~":"दिशा ~","khuynh hướng":"प्रवृत्ति","tăng":"वृद्धि","~ tăng":"~ बढेको छ","tăng ~ lên":"~ माथि बढाउनुहोस्","tăng lên":"वृद्धि","chiêm":"मनन","chiếm":"कब्जा","bói":"भाग्य बताउने","triệu":"मिलियन","1000 tỷ":"1000 बिलियन","suất":"क्षमता","xác suất":"सम्भावना","năng suất":"उत्पादकता","tỉ lệ đỗ":"पास दर","thẳng thắn":"स्पष्ट रूपमा","cự":"प्रतिरोध","khổng lồ":"विशाल","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","ức":"brisket","trăm triệu":"သိန်းတစ်ရာ","đạt":"ရယူပါ။","đạt tới ~":"ရောက်အောင်~","phát triển":"ဖွံ့ဖြိုးတိုးတက်","tốt lên":"ပိုကောင်းလာ","giao hàng":"ပေးပို့ခြင်း။","ngộ":"ဉာဏ်အလင်း","nhầm lẫn":"အမှား","hiểu lầm":"မှားဖတ်သည်။","tục":"စိတ်ကြိုက်","thủ tục":"လုပ်ထုံးလုပ်နည်း","liên tục":"စဉ်ဆက်မပြတ်","tiếp tục":"ဆက်ရန်","kết nối":"ချိတ်ဆက်ပါ။","thừa kế":"အမွေ","siêu":"စူပါ","vượt qua":"ကျော်လွှား","vượt":"ဖြတ်သန်းပါ။","quá":"ရယ်","giảm":"လျှော့ချပါ။","~ giảm":"~ လျော့ကျခြင်း။","cắt giảm ~":"ဖြတ် ~","giảm xuống":"လျော့နည်းသွားသည်။","~ nghiêng":"~ စောင်း","hướng ~":"ဦးတည်ချက် ~","khuynh hướng":"လမ်းကြောင်းသစ်","tăng":"တိုးမြှင့်လာသည်","~ tăng":"~ တိုးလာတယ်။","tăng ~ lên":"တိုး ~ တက်","tăng lên":"တိုးမြှင့်လာသည်","chiêm":"ဆင်ခြင်ပါ။","chiếm":"သိမ်းပိုက်","bói":"ဗေဒင်ဟောခြင်း။","triệu":"သန်း","1000 tỷ":"ဘီလီယံ ၁၀၀၀","suất":"စွမ်းရည်","xác suất":"ဖြစ်နိုင်ခြေ","năng suất":"ကုန်ထုတ်စွမ်းအား","tỉ lệ đỗ":"pass နှုန်း","thẳng thắn":"အချစ်ရဲ့","cự":"ခုခံ","khổng lồ":"ဧရာ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","ức":"ব্রিসকেট","trăm triệu":"শত মিলিয়ন","đạt":"প্রাপ্ত","đạt tới ~":"পৌঁছানো ~","phát triển":"বিকাশ","tốt lên":"ভাল পেতে","giao hàng":"বিতরণ","ngộ":"জ্ঞানার্জন","nhầm lẫn":"ভুল","hiểu lầm":"ভুল পড়া","tục":"কাস্টম","thủ tục":"পদ্ধতি","liên tục":"একটানা","tiếp tục":"চালিয়ে যান","kết nối":"সংযোগ","thừa kế":"উত্তরাধিকারী","siêu":"সুপার","vượt qua":"পরাস্ত","vượt":"পাস","quá":"খুব","giảm":"হ্রাস করা","~ giảm":"~ হ্রাস","cắt giảm ~":"কাটা ~","giảm xuống":"কমেছে","~ nghiêng":"~ কাত","hướng ~":"দিক ~","khuynh hướng":"প্রবণতা","tăng":"বৃদ্ধি","~ tăng":"~ বেড়েছে","tăng ~ lên":"বৃদ্ধি ~ আপ","tăng lên":"বৃদ্ধি","chiêm":"চিন্তা করা","chiếm":"দখল করা","bói":"ভাগ্য বলা","triệu":"মিলিয়ন","1000 tỷ":"1000 বিলিয়ন","suất":"ক্ষমতা","xác suất":"সম্ভাবনা","năng suất":"উত্পাদনশীলতা","tỉ lệ đỗ":"পাসের হার","thẳng thắn":"স্পষ্টভাবে","cự":"প্রতিরোধ","khổng lồ":"দৈত্য","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","ức":"पशु की छाती","trăm triệu":"सौ करोड़","đạt":"प्राप्त","đạt tới ~":"पहुँच ~","phát triển":"विकास करना","tốt lên":"विजय प्राप्त करना","giao hàng":"वितरण","ngộ":"प्रबोधन","nhầm lẫn":"गलती","hiểu lầm":"पढ़ने में भूलना","tục":"रिवाज़","thủ tục":"प्रक्रिया","liên tục":"निरंतर","tiếp tục":"जारी रखना","kết nối":"जोड़ना","thừa kế":"इनहेरिट","siêu":"बहुत अच्छा","vượt qua":"पर काबू पाने","vượt":"उत्तीर्ण","quá":"बहुत","giảm":"कम करना","~ giảm":"~कमी","cắt giảm ~":"कट ~","giảm xuống":"की कमी हुई","~ nghiêng":"~झुकाव","hướng ~":"दिशा~","khuynh hướng":"रुझान","tăng":"बढ़ोतरी","~ tăng":"~बढ़ गया","tăng ~ lên":"बढ़ाएँ ~ ऊपर","tăng lên":"बढ़ोतरी","chiêm":"मनन","chiếm":"पर कब्जा","bói":"भविष्य कथन","triệu":"दस लाख","1000 tỷ":"1000 अरब","suất":"क्षमता","xác suất":"संभावना","năng suất":"उत्पादकता","tỉ lệ đỗ":"पास दर","thẳng thắn":"सच कहूं","cự":"प्रतिरोध करना","khổng lồ":"बहुत बड़ा","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","ức":"หน้าอก","trăm triệu":"ร้อยล้าน","đạt":"รับ","đạt tới ~":"ถึง ~","phát triển":"พัฒนา","tốt lên":"ดีขึ้น","giao hàng":"จัดส่ง","ngộ":"การตรัสรู้","nhầm lẫn":"ความผิดพลาด","hiểu lầm":"อ่านผิด","tục":"กำหนดเอง","thủ tục":"ขั้นตอน","liên tục":"อย่างต่อเนื่อง","tiếp tục":"ดำเนินการต่อ","kết nối":"เชื่อมต่อ","thừa kế":"สืบทอด","siêu":"สุด ๆ","vượt qua":"เอาชนะ","vượt":"ผ่าน","quá":"ด้วย","giảm":"ลด","~ giảm":"~ ลดลง","cắt giảm ~":"ตัด ~","giảm xuống":"ลดลง","~ nghiêng":"~ เอียง","hướng ~":"ทิศทาง ~","khuynh hướng":"แนวโน้ม","tăng":"เพิ่มขึ้น","~ tăng":"~ เพิ่มขึ้น","tăng ~ lên":"เพิ่มขึ้น ~ ขึ้น","tăng lên":"เพิ่มขึ้น","chiêm":"ครุ่นคิด","chiếm":"ครอบครอง","bói":"ดูดวง","triệu":"ล้าน","1000 tỷ":"1,000 พันล้าน","suất":"ความจุ","xác suất":"ความน่าจะเป็น","năng suất":"ผลผลิต","tỉ lệ đỗ":"อัตราการผ่าน","thẳng thắn":"ตรงไปตรงมา","cự":"ต้านทาน","khổng lồ":"ยักษ์","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

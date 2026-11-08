@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Đang nghe tin nhắn thư thoại.": "Listening to voicemail messages.",
+    "Alo, tôi là Ōno bên cửa hàng NikoNiko Điện Tử. Cảm ơn quý khách đã ghé cửa hàng hôm trước. Chiếc máy tính xách tay quý khách đặt đã về hàng hôm nay nên tôi gọi thông báo. Theo như lần trước thì quý khách sẽ đến lấy ở cửa hàng, nhưng nếu muốn chuyển thành giao tới nhà xin vui lòng gọi lại. Ngoài ra, giờ mở cửa hôm nay đến 9 giờ tối, mong quý khách lưu ý. Xin phép, chào anh/chị.": "Hello, I'm Ōno from NikoNiko Electronics store. Thank you for visiting the store the other day. The laptop you ordered arrived today, so I called to inform you. As before, you will pick it up at the store, but if you want to change it to home delivery, please call again. In addition, today's opening hours are until 9 pm, please note. Please excuse me, hello.",
+    "Tin nhắn này nói về việc gì?": "What is this message about?",
+    "Hàng đã đặt đã về cửa hàng.": "The ordered goods have arrived at the store.",
+    "Hàng đã đặt đã được gửi tới nhà.": "The ordered goods have been sent to your home.",
+    "Muốn kiểm tra lại hàng đã đặt.": "Want to check the ordered goods again.",
+    "Muốn được thông báo thời gian giao hàng.": "Want to be informed of delivery time.",
+    "Đáp án đúng": "Correct answer"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Đang nghe tin nhắn thư thoại.": "Mendengarkan pesan pesan suara.",
+    "Alo, tôi là Ōno bên cửa hàng NikoNiko Điện Tử. Cảm ơn quý khách đã ghé cửa hàng hôm trước. Chiếc máy tính xách tay quý khách đặt đã về hàng hôm nay nên tôi gọi thông báo. Theo như lần trước thì quý khách sẽ đến lấy ở cửa hàng, nhưng nếu muốn chuyển thành giao tới nhà xin vui lòng gọi lại. Ngoài ra, giờ mở cửa hôm nay đến 9 giờ tối, mong quý khách lưu ý. Xin phép, chào anh/chị.": "Halo, saya Ōno dari toko NikoNiko Electronics. Terima kasih telah mengunjungi toko beberapa hari yang lalu. Laptop yang Anda pesan tiba hari ini, jadi saya menelepon untuk memberi tahu Anda. Seperti sebelumnya, Anda akan mengambilnya di toko, tetapi jika Anda ingin mengubahnya menjadi pengiriman ke rumah, silakan hubungi lagi. Selain itu jam buka hari ini sampai jam 9 malam, mohon diperhatikan. Mohon permisi, halo.",
+    "Tin nhắn này nói về việc gì?": "Tentang apa pesan ini?",
+    "Hàng đã đặt đã về cửa hàng.": "Barang pesanan sudah sampai di toko.",
+    "Hàng đã đặt đã được gửi tới nhà.": "Barang pesanan telah dikirim ke rumah Anda.",
+    "Muốn kiểm tra lại hàng đã đặt.": "Mau cek lagi barang pesanannya.",
+    "Muốn được thông báo thời gian giao hàng.": "Ingin diberitahu tentang waktu pengiriman.",
+    "Đáp án đúng": "Jawaban yang benar"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Đang nghe tin nhắn thư thoại.": "भ्वाइस मेल सन्देशहरू सुन्दै।",
+    "Alo, tôi là Ōno bên cửa hàng NikoNiko Điện Tử. Cảm ơn quý khách đã ghé cửa hàng hôm trước. Chiếc máy tính xách tay quý khách đặt đã về hàng hôm nay nên tôi gọi thông báo. Theo như lần trước thì quý khách sẽ đến lấy ở cửa hàng, nhưng nếu muốn chuyển thành giao tới nhà xin vui lòng gọi lại. Ngoài ra, giờ mở cửa hôm nay đến 9 giờ tối, mong quý khách lưu ý. Xin phép, chào anh/chị.": "नमस्ते, म NikoNiko Electronics स्टोरबाट Ōno हुँ। अर्को दिन पसल भ्रमण गर्नुभएकोमा धन्यवाद। तपाईंले अर्डर गर्नुभएको ल्यापटप आज आइपुग्यो, त्यसैले मैले तपाईंलाई जानकारी दिन फोन गरें। पहिले जस्तै, तपाईंले यसलाई स्टोरबाट लिनुहुनेछ, तर यदि तपाईं यसलाई होम डेलिभरीमा परिवर्तन गर्न चाहनुहुन्छ भने, कृपया फेरि कल गर्नुहोस्। साथै, आजको खुल्ने समय बेलुका ९ बजेसम्मको छ, कृपया नोट गर्नुहोस्। कृपया मलाई माफ गर्नुहोस्, नमस्कार।",
+    "Tin nhắn này nói về việc gì?": "यो सन्देश के बारे मा छ?",
+    "Hàng đã đặt đã về cửa hàng.": "अर्डर गरिएको सामान पसलमा आइपुगेको छ।",
+    "Hàng đã đặt đã được gửi tới nhà.": "अर्डर गरिएका सामानहरू तपाईंको घरमा पठाइएका छन्।",
+    "Muốn kiểm tra lại hàng đã đặt.": "अर्डर गरिएका सामानहरू फेरि जाँच गर्न चाहनुहुन्छ।",
+    "Muốn được thông báo thời gian giao hàng.": "वितरण समय सूचित गर्न चाहन्छु।",
+    "Đáp án đúng": "सहि उत्तर"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Đang nghe tin nhắn thư thoại.": "အသံမေးလ် မက်ဆေ့ချ်များကို နားထောင်ခြင်း။",
+    "Alo, tôi là Ōno bên cửa hàng NikoNiko Điện Tử. Cảm ơn quý khách đã ghé cửa hàng hôm trước. Chiếc máy tính xách tay quý khách đặt đã về hàng hôm nay nên tôi gọi thông báo. Theo như lần trước thì quý khách sẽ đến lấy ở cửa hàng, nhưng nếu muốn chuyển thành giao tới nhà xin vui lòng gọi lại. Ngoài ra, giờ mở cửa hôm nay đến 9 giờ tối, mong quý khách lưu ý. Xin phép, chào anh/chị.": "မင်္ဂလာပါ၊ ကျွန်ုပ်သည် NikoNiko အီလက်ထရွန်းနစ်စတိုးမှ Ōno ဖြစ်ပါသည်။ မနေ့တနေ့က ဆိုင်ကိုလာလည်တဲ့အတွက် ကျေးဇူးတင်ပါတယ်။ မင်း ဒီနေ့ မှာထားတဲ့ လက်တော့ပ်က မင်းကို လာနေပြီမို့ မင်းကို ဖုန်းဆက်ပြီး အကြောင်းကြားတယ်။ အရင်အတိုင်းပဲ ဆိုင်မှာ လာယူမှာဖြစ်ပေမယ့် အိမ်အရောက်ပို့ဆောင်မှုအဖြစ် ပြောင်းလဲလိုပါက ထပ်မံခေါ်ဆိုပါ။ ထို့အပြင် ယနေ့ဖွင့်ချိန်သည် ည ၉ နာရီအထိဖြစ်ကြောင်း သတိပြုပါ။ ခွင့်လွှတ်ပါ၊ မင်္ဂလာပါ။",
+    "Tin nhắn này nói về việc gì?": "ဒီမက်ဆေ့ချ်က ဘာအကြောင်းလဲ။",
+    "Hàng đã đặt đã về cửa hàng.": "အော်ဒါမှာထားသော ကုန်ပစ္စည်းများ ဆိုင်သို့ရောက်ပါပြီ။",
+    "Hàng đã đặt đã được gửi tới nhà.": "မှာယူထားသော ကုန်ပစ္စည်းများကို သင့်အိမ်သို့ ပို့ဆောင်ပြီးဖြစ်ပါသည်။",
+    "Muốn kiểm tra lại hàng đã đặt.": "မှာယူထားသော ကုန်ပစ္စည်းများကို ထပ်မံစစ်ဆေးလိုပါသည်။",
+    "Muốn được thông báo thời gian giao hàng.": "ပေးပို့ရမည့်အချိန်ကို အသိပေးလိုပါသည်။",
+    "Đáp án đúng": "အဖြေမှန်"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Đang nghe tin nhắn thư thoại.": "ভয়েসমেইল বার্তা শোনা.",
+    "Alo, tôi là Ōno bên cửa hàng NikoNiko Điện Tử. Cảm ơn quý khách đã ghé cửa hàng hôm trước. Chiếc máy tính xách tay quý khách đặt đã về hàng hôm nay nên tôi gọi thông báo. Theo như lần trước thì quý khách sẽ đến lấy ở cửa hàng, nhưng nếu muốn chuyển thành giao tới nhà xin vui lòng gọi lại. Ngoài ra, giờ mở cửa hôm nay đến 9 giờ tối, mong quý khách lưu ý. Xin phép, chào anh/chị.": "হ্যালো, আমি NikoNiko ইলেকট্রনিক্স দোকান থেকে Ōno. অন্য দিন দোকান পরিদর্শন করার জন্য আপনাকে ধন্যবাদ. আপনার অর্ডার করা ল্যাপটপটি আজ এসেছে, তাই আমি আপনাকে জানানোর জন্য ফোন করেছি। আগের মতই, আপনি এটিকে দোকান থেকে তুলে নেবেন, কিন্তু আপনি যদি এটিকে হোম ডেলিভারিতে পরিবর্তন করতে চান তাহলে অনুগ্রহ করে আবার কল করুন। এছাড়াও, আজকের খোলার সময় রাত 9 টা পর্যন্ত, দয়া করে নোট করুন। আমাকে ক্ষমা করুন, হ্যালো.",
+    "Tin nhắn này nói về việc gì?": "এই বার্তা কি সম্পর্কে?",
+    "Hàng đã đặt đã về cửa hàng.": "অর্ডার করা জিনিসপত্র দোকানে এসে গেছে।",
+    "Hàng đã đặt đã được gửi tới nhà.": "অর্ডারকৃত পণ্য আপনার বাড়িতে পাঠানো হয়েছে.",
+    "Muốn kiểm tra lại hàng đã đặt.": "অর্ডার করা পণ্য আবার চেক করতে চান।",
+    "Muốn được thông báo thời gian giao hàng.": "প্রসবের সময় সম্পর্কে অবহিত করতে চান।",
+    "Đáp án đúng": "সঠিক উত্তর"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Đang nghe tin nhắn thư thoại.": "ध्वनि मेल संदेश सुनना.",
+    "Alo, tôi là Ōno bên cửa hàng NikoNiko Điện Tử. Cảm ơn quý khách đã ghé cửa hàng hôm trước. Chiếc máy tính xách tay quý khách đặt đã về hàng hôm nay nên tôi gọi thông báo. Theo như lần trước thì quý khách sẽ đến lấy ở cửa hàng, nhưng nếu muốn chuyển thành giao tới nhà xin vui lòng gọi lại. Ngoài ra, giờ mở cửa hôm nay đến 9 giờ tối, mong quý khách lưu ý. Xin phép, chào anh/chị.": "नमस्ते, मैं निकोनिको इलेक्ट्रॉनिक्स स्टोर से हूं। दूसरे दिन स्टोर पर आने के लिए धन्यवाद। आपने जो लैपटॉप ऑर्डर किया था वह आज आ गया, इसलिए मैंने आपको सूचित करने के लिए फोन किया। पहले की तरह, आप इसे स्टोर से लेंगे, लेकिन यदि आप इसे होम डिलीवरी में बदलना चाहते हैं, तो कृपया दोबारा कॉल करें। इसके अलावा, आज खुलने का समय रात्रि 9 बजे तक है, कृपया ध्यान दें। कृपया मुझे क्षमा करें, नमस्ते।",
+    "Tin nhắn này nói về việc gì?": "यह संदेश किस बारे में है?",
+    "Hàng đã đặt đã về cửa hàng.": "ऑर्डर किया गया सामान स्टोर पर आ गया है.",
+    "Hàng đã đặt đã được gửi tới nhà.": "ऑर्डर किया गया सामान आपके घर भेज दिया गया है.",
+    "Muốn kiểm tra lại hàng đã đặt.": "ऑर्डर किए गए सामान को दोबारा जांचना चाहते हैं.",
+    "Muốn được thông báo thời gian giao hàng.": "डिलीवरी के समय के बारे में सूचित होना चाहते हैं.",
+    "Đáp án đúng": "सही जवाब"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Đang nghe tin nhắn thư thoại.": "การฟังข้อความเสียง",
+    "Alo, tôi là Ōno bên cửa hàng NikoNiko Điện Tử. Cảm ơn quý khách đã ghé cửa hàng hôm trước. Chiếc máy tính xách tay quý khách đặt đã về hàng hôm nay nên tôi gọi thông báo. Theo như lần trước thì quý khách sẽ đến lấy ở cửa hàng, nhưng nếu muốn chuyển thành giao tới nhà xin vui lòng gọi lại. Ngoài ra, giờ mở cửa hôm nay đến 9 giờ tối, mong quý khách lưu ý. Xin phép, chào anh/chị.": "สวัสดี ฉันชื่อโอโนะจากร้าน NikoNiko Electronics ขอบคุณที่แวะมาที่ร้านเมื่อวันก่อน แล็ปท็อปที่คุณสั่งมาถึงวันนี้ฉันเลยโทรไปแจ้ง เช่นเดิมจะให้มารับที่ร้านแต่ถ้าจะเปลี่ยนเป็นส่งถึงบ้านกรุณาโทรใหม่อีกครั้งครับ นอกจากนี้ โปรดทราบว่าเวลาเปิดทำการของวันนี้คือจนถึง 21.00 น. กรุณาขอโทษด้วยสวัสดี",
+    "Tin nhắn này nói về việc gì?": "ข้อความนี้เกี่ยวกับอะไร?",
+    "Hàng đã đặt đã về cửa hàng.": "สินค้าที่สั่งมาถึงที่ร้านแล้ว",
+    "Hàng đã đặt đã được gửi tới nhà.": "สินค้าที่สั่งได้ถูกส่งไปที่บ้านของคุณแล้ว",
+    "Muốn kiểm tra lại hàng đã đặt.": "ต้องการตรวจสอบสินค้าที่สั่งอีกครั้ง",
+    "Muốn được thông báo thời gian giao hàng.": "ต้องการทราบระยะเวลาในการจัดส่ง",
+    "Đáp án đúng": "คำตอบที่ถูกต้อง"
+  }
+}

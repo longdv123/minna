@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Có việc muốn nhờ trưởng phòng. Thì sẽ nói như thế nào?": "I have something to ask the department head. So what will you say?",
+    "A, thật ra thì hôm nay ông của tôi phải nhập viện gấp, nên tôi muốn trở về từ bây giờ ạ.......": "Ah, actually, my grandfather had to be urgently hospitalized today, so I want to go back now......."
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Có việc muốn nhờ trưởng phòng. Thì sẽ nói như thế nào?": "Ada yang ingin saya tanyakan kepada kepala departemen. Jadi apa yang akan kamu katakan?",
+    "A, thật ra thì hôm nay ông của tôi phải nhập viện gấp, nên tôi muốn trở về từ bây giờ ạ.......": "Ah, sebenarnya kakekku harus segera dirawat di rumah sakit hari ini, jadi aku ingin kembali sekarang......."
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Có việc muốn nhờ trưởng phòng. Thì sẽ nói như thế nào?": "विभाग प्रमुखलाई केही सोध्नु छ । त्यसोभए तपाई के भन्नुहुन्छ?",
+    "A, thật ra thì hôm nay ông của tôi phải nhập viện gấp, nên tôi muốn trở về từ bây giờ ạ.......": "ए, वास्तवमा, मेरो हजुरबुबालाई आज तुरुन्तै अस्पतालमा भर्ना गर्नुपर्‍यो, त्यसैले म अब फर्कन चाहन्छु।"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Có việc muốn nhờ trưởng phòng. Thì sẽ nói như thế nào?": "ဌာနမှူးကို မေးစရာရှိတယ်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "A, thật ra thì hôm nay ông của tôi phải nhập viện gấp, nên tôi muốn trở về từ bây giờ ạ.......": "တကယ်ဆို အဘိုးက ဒီနေ့ အမြန်ဆေးရုံတက်ရတာမို့ အခုပြန်သွားချင်နေပြီ......"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Có việc muốn nhờ trưởng phòng. Thì sẽ nói như thế nào?": "বিভাগীয় প্রধানকে আমার কিছু জিজ্ঞাসা করার আছে। তাহলে কি বলবেন?",
+    "A, thật ra thì hôm nay ông của tôi phải nhập viện gấp, nên tôi muốn trở về từ bây giờ ạ.......": "আহ, আসলে, আমার দাদাকে আজকে জরুরিভাবে হাসপাতালে ভর্তি করতে হয়েছিল, তাই আমি এখন ফিরে যেতে চাই......"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Có việc muốn nhờ trưởng phòng. Thì sẽ nói như thế nào?": "मुझे विभाग प्रमुख से कुछ पूछना है। तो आप क्या कहेंगे?",
+    "A, thật ra thì hôm nay ông của tôi phải nhập viện gấp, nên tôi muốn trở về từ bây giờ ạ.......": "आह, असल में, मेरे दादाजी को आज तत्काल अस्पताल में भर्ती कराना पड़ा, इसलिए मैं अब वापस जाना चाहता हूं......."
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Có việc muốn nhờ trưởng phòng. Thì sẽ nói như thế nào?": "ฉันมีเรื่องจะถามหัวหน้าแผนก แล้วคุณจะว่าอย่างไร?",
+    "A, thật ra thì hôm nay ông của tôi phải nhập viện gấp, nên tôi muốn trở về từ bây giờ ạ.......": "อ่า จริงๆ วันนี้ปู่ของฉันต้องเข้าโรงพยาบาลด่วน เลยอยากกลับตอนนี้เลย......."
+  }
+}

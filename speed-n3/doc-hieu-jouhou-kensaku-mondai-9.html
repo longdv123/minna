@@ -1,0 +1,206 @@
+<meta charset="UTF-8">
+<style>
+
+hr.style-two { border: 0; }
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+input[type="radio"]{ border: unset; }
+input[type="radio"]{
+    -webkit-appearance: none;
+    width:15px;
+    height:15px;
+    border:1px solid #19283C !important;
+    border-radius:15px !important;
+    background:transparent;
+    opacity:0.7;
+    margin-bottom: -2px;
+}
+input[type="radio"]:checked{ background:#19283C; opacity: 1; }
+
+div.benphai,p.benphai{ text-align: right; }
+div.chinhgiua,p.chinhgiua{ text-align: center; }
+div.chuy{ color: #483D8B; }
+
+table { width: 100%; }
+.tracnghiem table,.tracnghiem td,.tracnghiem th { border: none; }
+
+#question { margin-bottom:8px; }
+.nghia{ margin-bottom:8px; }
+
+.doanvan {
+    margin-top: 15px;
+    margin-bottom:20px;
+    padding: 20px 10px 20px 10px;
+    padding-bottom: 20px;
+    background: #f0f7ff;
+    border: dashed 1px #5b8bd0;
+}
+
+.table_luachon{
+    padding:1px 15px 1px 15px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+}
+.tieude{ color: red; margin-top:20px; font-weight: bold; }
+
+hr.style14{
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.thongtin table {display: table !important;}
+.thongtin tr{display: table-row !important;}
+.thongtin td{display: table-cell !important;}
+.thongtindich table {display: table !important;}
+.thongtindich tr{display: table-row !important;}
+.thongtindich td{display: table-cell !important;}
+
+.thongtin,.thongtin div{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* 2) Table bên trong */
+.thongtin table{
+  width: 100%;
+  border-collapse: collapse;
+}
+/* 3) Khi màn nhỏ: cho table giữ kích thước theo nội dung để phải lướt */
+@media (max-width: 1024px){
+  .thongtin table{
+    width: max-content;     /* quan trọng để tạo scroll */
+    min-width: 100%;        /* vẫn phủ đủ khung nếu table nhỏ */
+    white-space: nowrap;    /* giữ ô không xuống dòng nếu muốn giống AI table */
+  }
+  .thongtin th,
+  .thongtin td{
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 767px){
+    .tracnghiem table, .tracnghiem tr, .tracnghiem td{ border-color: #fff; }
+    #mondai1,#mondai3,#mondai2,#mondai4 { width:45px; }
+    .table_luachon{ width: 100% !important; }
+}
+
+[data-f2-reading] .tracnghiem td:hover{background:Bisque;color:MidnightBlue}[data-f2-reading] .slide-content{display:none}[data-f2-reading] .kqdich{display:none;opacity:0}[data-f2-reading] .f2-options{border:none;width:100%}[data-f2-reading] .f2-options tbody{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr))}[data-f2-reading] .f2-options tr,[data-f2-reading] .f2-options td{border:none;display:block}@media (max-width: 720px){[data-f2-reading] .f2-options tbody{grid-template-columns:1fr}}</style>
+<div class="tab_container speed-page">
+<div id="tracnghiemdiv"><form class="quiz-form" method="post" action="#" name="post"><div id="shownoidung" data-legacy-quiz="" data-f2-reading="" data-source="speed-n3-dochieu" data-lesson="4-9" class="vnjp-sh-on"><p class="tieude"> 問題4-9　</p><div class="doanvan">&nbsp;&nbsp;&nbsp;A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんはA<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>、B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんはB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>に<ruby>住<rp>（</rp><rt>す</rt><rp>）</rp></ruby>んでいます。<ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>、<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>で<ruby>東京<rp>（</rp><rt>とうきょう</rt><rp>）</rp></ruby>の<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くことにしました。A<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>とB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>の<ruby>間<rp>（</rp><rt>あいだ</rt><rp>）</rp></ruby>にはTT<ruby>線<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>という<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>が<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>っています。</div><br><div class="tracnghiem" data-item="1372" data-correct="1"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>の<ruby>交通費<rp>（</rp><rt>こうつうひ</rt><rp>）</rp></ruby>の<ruby>合計<rp>（</rp><rt>ごうけい</rt><rp>）</rp></ruby>が<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>安<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>い<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>き<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>はどれか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1372_1" type="radio" name="f21_1372" value="0" aria-label="1"><span style="font-size: 15px"> １　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby><ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。 </span><span id="result_question_f21_1372_1"></span> <span id="result_correct_f21_1372_1"></span></td></tr><tr><td><input id="answer_f21_1372_2" type="radio" name="f21_1372" value="1" aria-label="2"><span style="font-size: 15px"> ２　A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。 </span><span id="result_question_f21_1372_2"></span> <span id="result_correct_f21_1372_2"></span></td></tr><tr><td><input id="answer_f21_1372_3" type="radio" name="f21_1372" value="2" aria-label="3"><span style="font-size: 15px"> ３　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>秋葉原駅<rp>（</rp><rt>あきはばらえき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。 </span><span id="result_question_f21_1372_3"></span> <span id="result_correct_f21_1372_3"></span></td></tr><tr><td><input id="answer_f21_1372_4" type="radio" name="f21_1372" value="3" aria-label="4"><span style="font-size: 15px"> ４　B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがA<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。 </span><span id="result_question_f21_1372_4"></span> <span id="result_correct_f21_1372_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><br><div class="tracnghiem" data-item="1377" data-correct="3"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>っている<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>を<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせたものが<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>短<rp>（</rp><rt>みじか</rt><rp>）</rp></ruby>いのはどれか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1377_1" type="radio" name="f21_1377" value="0" aria-label="1"><span style="font-size: 15px"> １　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>美術館駅<rp>（</rp><rt>びじゅつかんえき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。 </span><span id="result_question_f21_1377_1"></span> <span id="result_correct_f21_1377_1"></span></td></tr><tr><td><input id="answer_f21_1377_2" type="radio" name="f21_1377" value="1" aria-label="2"><span style="font-size: 15px"> ２　A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがB<ruby>市駅<rp>（</rp><rt>しえき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。 </span><span id="result_question_f21_1377_2"></span> <span id="result_correct_f21_1377_2"></span></td></tr><tr><td><input id="answer_f21_1377_3" type="radio" name="f21_1377" value="2" aria-label="3"><span style="font-size: 15px"> ３　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>秋葉原駅<rp>（</rp><rt>あきはばらえき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。 </span><span id="result_question_f21_1377_3"></span> <span id="result_correct_f21_1377_3"></span></td></tr><tr><td><input id="answer_f21_1377_4" type="radio" name="f21_1377" value="3" aria-label="4"><span style="font-size: 15px"> ４　B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがA<ruby>市駅<rp>（</rp><rt>しえき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。 </span><span id="result_question_f21_1377_4"></span> <span id="result_correct_f21_1377_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><div class="thongtin"><p><br></p><div style="border:1px solid black;padding:15px;">
+<p></p>
+<h3><b><ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>案内<rp>(</rp><rt>あんない</rt><rp>)</rp></ruby></b></h3>
+<hr>
+<p>A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>から<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby>までの<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby></p>
+<p><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>：　70<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>　　　　　　<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>：　1450<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></p>
+<p></p>
+<p>　　　　　　☐A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓S<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　◯<ruby>秋葉原<rp>(</rp><rt>あきはばら</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　☐<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby></p>
+<p></p>
+<hr>
+<p>B<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>から<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby>までの<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby></p>
+<p><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>：　95<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>　　　　　　<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>：　1200<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></p>
+<p>　　　
+</p>
+<p>　　　　　　☐ B<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　◯<ruby>上野<rp>(</rp><rt>うえの</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　◯<ruby>秋葉原<rp>(</rp><rt>あきはばら</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　☐<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby></p>
+<p>
+</p><hr>
+<p>A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>とB<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>の<ruby>間<rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby>の<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby></p>
+<p><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>：　10<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>　　　　　　<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>：　130<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></p>
+<p></p>
+<p>　　　　　　☐A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+<p>　　　　　&nbsp; &nbsp;↓↑TT<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　☐B<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+</div></div><hr class="style-one"><div><div class="slide"><div class="slide-title sl2"><span class="vi-tr">Dịch &amp; Giải thích</span></div><div class="slide-content sl2"><div class="doanvan">&nbsp;&nbsp;&nbsp;<div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんはA<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>、B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんはB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>に<ruby>住<rp>（</rp><rt>す</rt><rp>）</rp></ruby>んでいます。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Chị A sống ở thành phố A, chị B sống ở thành phố B.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>、<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>で<ruby>東京<rp>（</rp><rt>とうきょう</rt><rp>）</rp></ruby>の<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くことにしました。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">A<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>とB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>の<ruby>間<rp>（</rp><rt>あいだ</rt><rp>）</rp></ruby>にはTT<ruby>線<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>という<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>が<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>っています。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.</div></div></div></div><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>の<ruby>交通費<rp>（</rp><rt>こうつうひ</rt><rp>）</rp></ruby>の<ruby>合計<rp>（</rp><rt>ごうけい</rt><rp>）</rp></ruby>が<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>安<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>い<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>き<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>はどれか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby><ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1    Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2    Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>秋葉原駅<rp>（</rp><rt>あきはばらえき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3    Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがA<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4    Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.</div></div></div><p></p><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>っている<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>を<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせたものが<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>短<rp>（</rp><rt>みじか</rt><rp>）</rp></ruby>いのはどれか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>美術館駅<rp>（</rp><rt>びじゅつかんえき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1    Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがB<ruby>市駅<rp>（</rp><rt>しえき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2    Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>が<ruby>別々<rp>（</rp><rt>べつべつ</rt><rp>）</rp></ruby>の<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、<ruby>秋葉原駅<rp>（</rp><rt>あきはばらえき</rt><rp>）</rp></ruby>で<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>う。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3    Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　B<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんがA<ruby>市駅<rp>（</rp><rt>しえき</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って、A<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>さんと<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>美術館<rp>（</rp><rt>びじゅつかん</rt><rp>）</rp></ruby>まで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4    Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.</div></div></div><p></p><div class="thongtin"><p><br></p><div style="border:1px solid black;padding:15px;">
+<p></p>
+<h3><b><ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>案内<rp>(</rp><rt>あんない</rt><rp>)</rp></ruby></b></h3>
+<hr>
+<p>A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>から<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby>までの<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby></p>
+<p><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>：　70<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>　　　　　　<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>：　1450<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></p>
+<p></p>
+<p>　　　　　　☐A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓S<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　◯<ruby>秋葉原<rp>(</rp><rt>あきはばら</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　☐<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby></p>
+<p></p>
+<hr>
+<p>B<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>から<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby>までの<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby></p>
+<p><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>：　95<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>　　　　　　<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>：　1200<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></p>
+<p>　　　
+</p>
+<p>　　　　　　☐ B<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　◯<ruby>上野<rp>(</rp><rt>うえの</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　◯<ruby>秋葉原<rp>(</rp><rt>あきはばら</rt><rp>)</rp></ruby></p>
+<p>　　　　　　　↓JR<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　☐<ruby>美術館<rp>(</rp><rt>びじゅつかん</rt><rp>)</rp></ruby></p>
+<p>
+</p><hr>
+<p>A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>とB<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby>の<ruby>間<rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby>の<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby></p>
+<p><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>：　10<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>　　　　　　<ruby>交通<rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>：　130<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></p>
+<p></p>
+<p>　　　　　　☐A<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+<p>　　　　　&nbsp; &nbsp;↓↑TT<ruby>線<rp>(</rp><rt>せん</rt><rp>)</rp></ruby></p>
+<p>　　　　　　☐B<ruby>市<rp>(</rp><rt>し</rt><rp>)</rp></ruby></p>
+</div></div><div class="thongtindich"><p><br></p><div style="border:1px solid black;padding:15px;">
+<h3><b><span class="vi-tr">Hướng dẫn giao thông</span></b></h3>
+<hr>
+<p><span class="vi-tr">Giao thông từ thành phố A đến Bảo tàng mỹ thuật</span></p>
+<p><span class="vi-tr">Thời gian: 70 phút&nbsp; &nbsp; &nbsp;&nbsp;Phí đi lại: 1450 yên</span></p>
+<p></p>
+<p>　　　　　　<span class="vi-tr">☐   Thành phố A</span></p>
+<p>　　　　　　<span class="vi-tr">↓&nbsp; &nbsp;Tuyến S</span>  </p>
+<p>　　　　　　◯   Akihabara</p>
+<p>　　　　　　<span class="vi-tr">↓&nbsp; &nbsp;Tuyến JR</span> </p> 
+<p>　　　　　　<span class="vi-tr">☐    Bảo tàng mỹ thuật</span></p>
+<p></p>
+<hr>
+<p><span class="vi-tr">Giao thông từ thành phố B đến Bảo tàng mỹ thuật</span></p>
+<p><span class="vi-tr">Thời gian: 95 phút&nbsp; &nbsp; &nbsp; Phí đi lại: 1200 yên</span></p>
+<p></p>
+<p>　　　　　　<span class="vi-tr">☐    Thành phố B</span></p>
+<p>　　　　　　<span class="vi-tr">↓&nbsp; &nbsp;Tuyến JR</span></p>
+<p>　　　　　　◯    Ueno</p>
+<p>　　　　　　<span class="vi-tr">↓&nbsp; &nbsp;Tuyến JR</span></p>
+<p>　　　　　　◯    Akihabara</p>
+<p>　　　　　　<span class="vi-tr">↓&nbsp; &nbsp;Tuyến JR</span></p>
+<p>　　　　　　<span class="vi-tr">☐     Bảo tàng mỹ thuật</span></p>
+<p></p>
+<hr>
+<p><span class="vi-tr">Giao thông giữa thành phố A và thành phố B</span></p>
+<p><span class="vi-tr">Thời gian: 10 phút&nbsp; &nbsp; &nbsp;&nbsp;Phí đi lại: 130 yên</span></p>
+<p></p>
+<p>　　　　　　<span class="vi-tr">☐&nbsp; Thành phố A</span></p>
+<p>　　　　　　<span class="vi-tr">↓↑ Tuyến TT</span></p>
+<p>　　　　　　<span class="vi-tr">☐&nbsp; Thành phố B</span></p>
+<p></p>
+</div></div></div></div></div><input type="button" value="Kết Quả" data-quiz-action="check" class="btn btn-danger" id="ketqua"><input type="button" value="Làm Lại" data-quiz-action="reset" class="btn btn-success" id="lamlai"><input type="button" value="Đáp Án" data-quiz-action="reveal" class="btn btn-primary" id="dapan"><div role="status" data-quiz-status=""><span></span></div></div></form></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="doc-hieu-jouhou-kensaku-mondai-9.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Chị A sống ở thành phố A, chị B sống ở thành phố B.":"Ms. A lives in city A, Ms. B lives in city B.","Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.":"The two decided to go to Tokyo's art museum next week.","Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.":"Between cities A and B, there is a train running through, the TT train.","Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?":"What is the cheapest way to total travel costs for both?","1 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.":"1 Two people took two different trains, then met at the art museum station.","2 Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.":"2 Ms. A arrived at city B station, then went with Ms. B to the art museum.","3 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.":"3 The two took two different trains, then met at Akihabara station.","4 Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.":"4 Ms. B arrived at city A station, then went with Ms. A to the art museum.","Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?":"Which way will take the shortest total time for 2 people to get on the train?","Dịch & Giải thích":"Translation & Interpretation","Hướng dẫn giao thông":"Traffic instructions","Giao thông từ thành phố A đến Bảo tàng mỹ thuật":"Traffic from city A to the Fine Arts Museum","Thời gian: 70 phút Phí đi lại: 1450 yên":"Time: 70 minutes Transportation fee: 1450 yen","☐ Thành phố A":"☐ City A","↓ Tuyến S":"↓ S line","↓ Tuyến JR":"↓ JR line","☐ Bảo tàng mỹ thuật":"☐ Museum of Fine Arts","Giao thông từ thành phố B đến Bảo tàng mỹ thuật":"Traffic from city B to the Museum of Fine Arts","Thời gian: 95 phút Phí đi lại: 1200 yên":"Time: 95 minutes Transportation fee: 1200 yen","☐ Thành phố B":"☐ City B","Giao thông giữa thành phố A và thành phố B":"Traffic between city A and city B","Thời gian: 10 phút Phí đi lại: 130 yên":"Time: 10 minutes Transportation fee: 130 yen","↓↑ Tuyến TT":"↓↑ TT route","Kết Quả":"Result","Làm Lại":"Redo","Đáp Án":"Answer"},"idMap":{"Chị A sống ở thành phố A, chị B sống ở thành phố B.":"Nona A tinggal di kota A, Nona B tinggal di kota B.","Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.":"Keduanya memutuskan untuk pergi ke museum seni Tokyo minggu depan.","Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.":"Antara kota A dan B ada kereta api yang melintas yaitu kereta TT.","Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?":"Apa cara termurah untuk total biaya perjalanan untuk keduanya?","1 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.":"1 Dua orang naik dua kereta berbeda, lalu bertemu di stasiun museum seni.","2 Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.":"2 Ibu A pergi ke stasiun kota B, lalu berangkat bersama Ibu B ke museum seni.","3 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.":"3 Keduanya naik dua kereta berbeda, lalu bertemu di stasiun Akihabara.","4 Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.":"4 Ibu B tiba di stasiun kota A, lalu berangkat bersama Ibu A ke museum seni.","Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?":"Jalur manakah yang memerlukan total waktu paling singkat bagi 2 orang untuk naik kereta?","Dịch & Giải thích":"Terjemahan & Interpretasi","Hướng dẫn giao thông":"Petunjuk lalu lintas","Giao thông từ thành phố A đến Bảo tàng mỹ thuật":"Lalu lintas dari kota A ke Museum Seni Rupa","Thời gian: 70 phút Phí đi lại: 1450 yên":"Waktu: 70 menit Biaya transportasi: 1450 yen","☐ Thành phố A":"☐ Kota A","↓ Tuyến S":"↓ garis S","↓ Tuyến JR":"↓ Jalur JR","☐ Bảo tàng mỹ thuật":"☐ Museum Seni Rupa","Giao thông từ thành phố B đến Bảo tàng mỹ thuật":"Lalu lintas dari kota B ke Museum of Fine Arts","Thời gian: 95 phút Phí đi lại: 1200 yên":"Waktu: 95 menit Biaya transportasi: 1200 yen","☐ Thành phố B":"☐ Kota B","Giao thông giữa thành phố A và thành phố B":"Lalu lintas antara kota A dan kota B","Thời gian: 10 phút Phí đi lại: 130 yên":"Waktu: 10 menit Biaya transportasi: 130 yen","↓↑ Tuyến TT":"↓↑ Rute TT","Kết Quả":"Hasil","Làm Lại":"Mengulangi","Đáp Án":"Menjawab"},"neMap":{"Chị A sống ở thành phố A, chị B sống ở thành phố B.":"सुश्री A शहर A मा बस्छ, सुश्री B शहर B मा बस्छिन्।","Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.":"दुबैले अर्को हप्ता टोकियोको कला संग्रहालय जाने निर्णय गरे।","Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.":"A र B सहरहरू बीच, त्यहाँ TT ट्रेन चलिरहेको छ।","Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?":"दुबैको लागि कुल यात्रा लागतको सस्तो तरीका के हो?","1 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.":"1 दुई व्यक्तिले दुई फरक रेलहरू लिए, त्यसपछि कला संग्रहालय स्टेशनमा भेटे।","2 Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.":"2 सुश्री ए शहर बी स्टेशनमा गइन्, त्यसपछि सुश्री बी संग कला संग्रहालयमा गइन्।","3 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.":"3 दुवैले दुई फरक रेल चढे, त्यसपछि अकिहाबारा स्टेशनमा भेटे।","4 Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.":"4 सुश्री बी शहर ए स्टेसनमा आइपुगे, त्यसपछि सुश्री ए संग कला संग्रहालय गए।","Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?":"कुन बाटोले 2 जनालाई ट्रेनमा चढ्नको लागि सबैभन्दा कम समय लिन्छ?","Dịch & Giải thích":"अनुवाद र व्याख्या","Hướng dẫn giao thông":"ट्राफिक निर्देशनहरू","Giao thông từ thành phố A đến Bảo tàng mỹ thuật":"शहर A बाट ललित कला संग्रहालयमा ट्राफिक","Thời gian: 70 phút Phí đi lại: 1450 yên":"समय: 70 मिनेट यातायात शुल्क: 1450 येन","☐ Thành phố A":"☐ शहर ए","↓ Tuyến S":"↓ S लाइन","↓ Tuyến JR":"↓ JR लाइन","☐ Bảo tàng mỹ thuật":"☐ ललित कला संग्रहालय","Giao thông từ thành phố B đến Bảo tàng mỹ thuật":"सहर B बाट ललित कला संग्रहालय सम्म ट्राफिक","Thời gian: 95 phút Phí đi lại: 1200 yên":"समय: 95 मिनेट यातायात शुल्क: 1200 येन","☐ Thành phố B":"☐ शहर बि","Giao thông giữa thành phố A và thành phố B":"सहर क र सहर बी बीचको ट्राफिक","Thời gian: 10 phút Phí đi lại: 130 yên":"समय: 10 मिनेट यातायात शुल्क: 130 येन","↓↑ Tuyến TT":"↓↑ TT मार्ग","Kết Quả":"नतिजा","Làm Lại":"पुन: गर्नुहोस्","Đáp Án":"जवाफ"},"myMap":{"Chị A sống ở thành phố A, chị B sống ở thành phố B.":"မစ္စ A သည် မြို့ A တွင်နေထိုင်ပြီး မစ္စ B သည် မြို့ B တွင်နေထိုင်သည်။","Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.":"၎င်းတို့နှစ်ဦးသည် လာမည့်သီတင်းပတ်တွင် တိုကျိုမြို့ရှိ အနုပညာပြတိုက်သို့ သွားရန် ဆုံးဖြတ်ခဲ့ကြသည်။","Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.":"မြို့ A နှင့် B ကြားတွင် ရထားတစ်စင်း ဖြတ်၍ TT ရထားရှိသည်။","Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?":"နှစ်ခုလုံးအတွက် စုစုပေါင်းခရီးသွားစရိတ်အတွက် အသက်သာဆုံးနည်းလမ်းကဘာလဲ။","1 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.":"1 လူနှစ်ဦးသည် မတူညီသော ရထားနှစ်စင်းကိုစီးကာ အနုပညာပြတိုက် ဘူတာရုံတွင် တွေ့ဆုံခဲ့ကြသည်။","2 Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.":"2 မစ္စ A သည် မြို့တော် B ဘူတာသို့ သွားပြီးနောက် မစ္စ B နှင့်အတူ အနုပညာပြတိုက်သို့ သွားခဲ့သည်။","3 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.":"3 သူတို့နှစ်ဦးသည် မတူညီသောရထားနှစ်စင်းကိုစီးကာ Akihabara ဘူတာရုံတွင် တွေ့ဆုံခဲ့ကြသည်။","4 Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.":"4 မစ္စ B သည် မြို့ A ဘူတာသို့ ရောက်ရှိလာပြီးနောက် မစ္စ A နှင့်အတူ အနုပညာပြတိုက်သို့ သွားခဲ့သည်။","Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?":"ရထားပေါ်တက်ရန် လူ ၂ ဦးအတွက် စုစုပေါင်းအချိန်အတိုဆုံး ဘယ်လမ်းဖြစ်မလဲ။","Dịch & Giải thích":"ဘာသာပြန်နှင့် စကားပြန်","Hướng dẫn giao thông":"လမ်းစည်းကမ်း","Giao thông từ thành phố A đến Bảo tàng mỹ thuật":"မြို့ A မှ အနုသုခုမ ပြတိုက်သို့ အသွားအလာ","Thời gian: 70 phút Phí đi lại: 1450 yên":"အချိန် 70 မိနစ် ပို့ဆောင်ခ 1450 ယန်း","☐ Thành phố A":"☐ မြို","↓ Tuyến S":"↓ S လိုင်း","↓ Tuyến JR":"↓ JR လိုင်း","☐ Bảo tàng mỹ thuật":"☐ အနုပညာပြတိုက်","Giao thông từ thành phố B đến Bảo tàng mỹ thuật":"မြို့တော် B မှ အနုသုခုမ ပြတိုက်သို့ အသွားအလာ","Thời gian: 95 phút Phí đi lại: 1200 yên":"အချိန် - ၉၅ မိနစ် သယ်ယူပို့ဆောင်ခ ယန်း ၁၂၀၀","☐ Thành phố B":"☐ City B ၊","Giao thông giữa thành phố A và thành phố B":"မြို့ A နှင့် မြို့ B ကြား ယာဉ်ကြောပိတ်ဆို့မှု","Thời gian: 10 phút Phí đi lại: 130 yên":"အချိန်- ၁၀ မိနစ် ပို့ဆောင်ခ- ယန်း ၁၃၀","↓↑ Tuyến TT":"↓↑ TT လမ်းကြောင်း","Kết Quả":"ရလဒ်","Làm Lại":"ပြန်လုပ်ပါ။","Đáp Án":"ဖြေ"},"bnMap":{"Chị A sống ở thành phố A, chị B sống ở thành phố B.":"সুশ্রী A শহরের A তে থাকেন, Ms B নগর B তে থাকেন।","Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.":"আগামী সপ্তাহে টোকিওর আর্ট মিউজিয়ামে যাওয়ার সিদ্ধান্ত নেন দুজনে।","Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.":"A এবং B শহরের মধ্যে একটি ট্রেন চলছে, টিটি ট্রেন।","Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?":"উভয়ের জন্য মোট ভ্রমণ খরচের সবচেয়ে সস্তা উপায় কি?","1 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.":"1 দুজন লোক দুটি ভিন্ন ট্রেনে উঠেছিল, তারপর আর্ট মিউজিয়াম স্টেশনে দেখা হয়েছিল।","2 Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.":"2 মিসেস এ সিটি বি স্টেশনে গিয়েছিলেন, তারপর মিসেস বি এর সাথে আর্ট মিউজিয়ামে গিয়েছিলেন।","3 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.":"3 দু'জন দুটি আলাদা ট্রেনে উঠলেন, তারপর আকিহাবারা স্টেশনে দেখা করলেন।","4 Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.":"4 মিসেস বি সিটি এ স্টেশনে এসেছিলেন, তারপর মিসেস এ-এর সাথে আর্ট মিউজিয়ামে যান।","Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?":"কোন পথে 2 জনের ট্রেনে উঠতে সর্বনিম্ন মোট সময় লাগবে?","Dịch & Giải thích":"অনুবাদ ও ব্যাখ্যা","Hướng dẫn giao thông":"ট্রাফিক নির্দেশাবলী","Giao thông từ thành phố A đến Bảo tàng mỹ thuật":"শহর A থেকে চারুকলা যাদুঘরে ট্রাফিক","Thời gian: 70 phút Phí đi lại: 1450 yên":"সময়: 70 মিনিট পরিবহন ফি: 1450 ইয়েন","☐ Thành phố A":"☐ শহর এ","↓ Tuyến S":"↓ S লাইন","↓ Tuyến JR":"↓ জেআর লাইন","☐ Bảo tàng mỹ thuật":"☐ চারুকলার যাদুঘর","Giao thông từ thành phố B đến Bảo tàng mỹ thuật":"শহর বি থেকে চারুকলার যাদুঘরে ট্রাফিক","Thời gian: 95 phút Phí đi lại: 1200 yên":"সময়: 95 মিনিট পরিবহন ফি: 1200 ইয়েন","☐ Thành phố B":"☐ শহর বি","Giao thông giữa thành phố A và thành phố B":"শহর A এবং শহর B এর মধ্যে যানবাহন","Thời gian: 10 phút Phí đi lại: 130 yên":"সময়: 10 মিনিট পরিবহন ফি: 130 ইয়েন","↓↑ Tuyến TT":"↓↑ টিটি রুট","Kết Quả":"ফলাফল","Làm Lại":"আবার করুন","Đáp Án":"উত্তর"},"hiMap":{"Chị A sống ở thành phố A, chị B sống ở thành phố B.":"सुश्री A शहर A में रहती है, सुश्री B शहर B में रहती है।","Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.":"दोनों ने अगले सप्ताह टोक्यो के कला संग्रहालय में जाने का फैसला किया।","Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.":"शहर A और B के बीच, एक ट्रेन चलती है, टीटी ट्रेन।","Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?":"दोनों के लिए कुल यात्रा लागत का सबसे सस्ता तरीका क्या है?","1 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.":"1 दो लोगों ने दो अलग-अलग ट्रेनें लीं, फिर कला संग्रहालय स्टेशन पर मिले।","2 Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.":"2 सुश्री ए शहर बी स्टेशन पर पहुंचीं, फिर सुश्री बी के साथ कला संग्रहालय गईं।","3 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.":"3 दोनों ने दो अलग-अलग ट्रेनें लीं, फिर अकिहबारा स्टेशन पर मिले।","4 Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.":"4 सुश्री बी शहर ए स्टेशन पर पहुंचीं, फिर सुश्री ए के साथ कला संग्रहालय गईं।","Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?":"किस रास्ते से 2 लोगों को ट्रेन में चढ़ने में सबसे कम समय लगेगा?","Dịch & Giải thích":"अनुवाद एवं व्याख्या","Hướng dẫn giao thông":"यातायात निर्देश","Giao thông từ thành phố A đến Bảo tàng mỹ thuật":"शहर ए से ललित कला संग्रहालय तक यातायात","Thời gian: 70 phút Phí đi lại: 1450 yên":"समय: 70 मिनट परिवहन शुल्क: 1450 येन","☐ Thành phố A":"☐ शहर ए","↓ Tuyến S":"↓ एस लाइन","↓ Tuyến JR":"↓ जेआर लाइन","☐ Bảo tàng mỹ thuật":"☐ ललित कला संग्रहालय","Giao thông từ thành phố B đến Bảo tàng mỹ thuật":"शहर बी से ललित कला संग्रहालय तक यातायात","Thời gian: 95 phút Phí đi lại: 1200 yên":"समय: 95 मिनट परिवहन शुल्क: 1200 येन","☐ Thành phố B":"☐ शहर बी","Giao thông giữa thành phố A và thành phố B":"शहर A और शहर B के बीच यातायात","Thời gian: 10 phút Phí đi lại: 130 yên":"समय: 10 मिनट परिवहन शुल्क: 130 येन","↓↑ Tuyến TT":"↓↑ टीटी मार्ग","Kết Quả":"परिणाम","Làm Lại":"फिर से करना","Đáp Án":"उत्तर"},"thMap":{"Chị A sống ở thành phố A, chị B sống ở thành phố B.":"คุณ A อาศัยอยู่ที่เมือง A คุณ B อาศัยอยู่ที่เมือง B","Cả 2 đã quyết định sẽ đến bảo tàng mỹ thuật của Tokyo vào tuần sau.":"ทั้งสองตัดสินใจไปพิพิธภัณฑ์ศิลปะโตเกียวในสัปดาห์หน้า","Giữa hai thành phố A và B có tàu điện chạy qua, là Tàu TT.":"ระหว่างเมือง A และ B มีรถไฟวิ่งผ่าน รถไฟ TT","Cách để tổng chi phí đi lại của cả 2 rẻ nhất là cách đi nào?":"วิธีที่ถูกที่สุดในการรวมค่าเดินทางสำหรับทั้งสองคืออะไร?","1 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga bảo tàng mỹ thuật.":"1 คนสองคนขึ้นรถไฟสองขบวนที่แตกต่างกัน แล้วพบกันที่สถานีพิพิธภัณฑ์ศิลปะ","2 Chị A đến nhà ga thành phố B, rồi cùng với chị B đến bảo tàng mỹ thuật.":"2 นางเอ มาถึงสถานีเมือง B แล้วไปกับนางบีไปที่พิพิธภัณฑ์ศิลปะ","3 Hai người đi 2 chuyến tàu khác nhau, rồi gặp nhau tại nhà ga Akihabara.":"3 ทั้งสองขึ้นรถไฟสองขบวนที่แตกต่างกัน แล้วพบกันที่สถานีอากิฮาบาระ","4 Chị B đến nhà ga thành phố A, rồi cùng với chị A đến bảo tàng mỹ thuật.":"4 นางบี มาถึงสถานีเมือง A แล้วไปกับนางเอไปยังพิพิธภัณฑ์ศิลปะ","Cách đi nào mà tổng thời gian 2 người lên tàu ngắn nhất?":"วิธีใดจะใช้เวลาทั้งหมดสั้นที่สุดในการขึ้นรถไฟ 2 คน?","Dịch & Giải thích":"การแปลและการตีความ","Hướng dẫn giao thông":"คำแนะนำด้านการจราจร","Giao thông từ thành phố A đến Bảo tàng mỹ thuật":"การจราจรจากเมือง A ไปยังพิพิธภัณฑ์วิจิตรศิลป์","Thời gian: 70 phút Phí đi lại: 1450 yên":"ระยะเวลา: 70 นาที ค่าโดยสาร: 1,450 เยน","☐ Thành phố A":"☐ เมือง ก","↓ Tuyến S":"↓ เอสไลน์","↓ Tuyến JR":"↓ สายเจอาร์","☐ Bảo tàng mỹ thuật":"☐ พิพิธภัณฑ์วิจิตรศิลป์","Giao thông từ thành phố B đến Bảo tàng mỹ thuật":"การจราจรจากเมือง B ไปยังพิพิธภัณฑ์วิจิตรศิลป์","Thời gian: 95 phút Phí đi lại: 1200 yên":"ระยะเวลา: 95 นาที ค่าโดยสาร: 1,200 เยน","☐ Thành phố B":"☐ เมืองบี","Giao thông giữa thành phố A và thành phố B":"การจราจรระหว่างเมือง A และเมือง B","Thời gian: 10 phút Phí đi lại: 130 yên":"ระยะเวลา: 10 นาที ค่าโดยสาร: 130 เยน","↓↑ Tuyến TT":"↓↑ เส้นทาง TT","Kết Quả":"ผลลัพธ์","Làm Lại":"ทำซ้ำ","Đáp Án":"คำตอบ"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<script src="speed-quiz.js"></script>
+<link rel="stylesheet" href="style.css">

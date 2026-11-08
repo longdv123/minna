@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">信</div></div><div class="kcell k-hv"><span class="vi-tr">tín</span> </div><div class="kcell k-read"><div class="on">シン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>信<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>じる</div><div class="vi">tin</div></div><div class="kitem"><div class="jp"><ruby>信用<rp>（</rp><rt>しんよう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tin cậy</span> </div></div><div class="kitem"><div class="jp"><ruby>信頼<rp>（</rp><rt>しんらい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tin tưởng</span></div></div><div class="kitem"><div class="jp"><ruby>信号<rp>（</rp><rt>しんごう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tín hiệu</span> </div></div><div class="kitem"><div class="jp"><ruby>自信<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tự tin</span> </div></div><div class="kitem"><div class="jp"><ruby>通信<rp>（</rp><rt>つうしん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thông tin liên lạc, truyền thông</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">机</div></div><div class="kcell k-hv"><span class="vi-tr">kỷ</span></div><div class="kcell k-read"><div>つくえ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>机<rp>（</rp><rt>つくえ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bàn</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">込</div></div><div class="kcell k-hv">vu</div><div class="kcell k-read"><div>こーみ／こーむ／（こーめる）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>き<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">viết vào</span> </div></div><div class="kitem"><div class="jp">～<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">~ vào</span> </div></div><div class="kitem"><div class="jp"><ruby>人込<rp>（</rp><rt>ひとご</rt><rp>）</rp></ruby>み</div><div class="vi"><span class="vi-tr">đám đông</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">版</div></div><div class="kcell k-hv"><span class="vi-tr">bản</span> </div><div class="kcell k-read"><div class="on">ハン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>出版<rp>（</rp><rt>しゅっぱん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">xuất bản</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">著</div></div><div class="kcell k-hv"><span class="vi-tr">trước</span></div><div class="kcell k-read"><div class="on">チョ</div><div>（あらわーす）／（いちじるーしい）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>著者<rp>（</rp><rt>ちょしゃ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tác giả</span></div></div><div class="kitem"><div class="jp"><ruby>著書<rp>（</rp><rt>ちょしょ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sách</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">編</div></div><div class="kcell k-hv"><span class="vi-tr">biên</span> </div><div class="kcell k-read"><div class="on">ヘン</div><div>あーむ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>編<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">đan</span> </div></div><div class="kitem"><div class="jp"><ruby>編<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>み<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đồ len</span></div></div><div class="kitem"><div class="jp"><ruby>編集<rp>（</rp><rt>へんしゅう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">biên tập</span></div></div><div class="kitem"><div class="jp"><ruby>編集者<rp>（</rp><rt>へんしゅうしゃ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">người biên tập</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">章</div></div><div class="kcell k-hv"><span class="vi-tr">chương</span></div><div class="kcell k-read"><div class="on">ショウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>文章<rp>（</rp><rt>ぶんしょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đoạn văn</span> </div></div><div class="kitem"><div class="jp"><ruby>第<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>１<ruby>章<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chương 1</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">主</div></div><div class="kcell k-hv"><span class="vi-tr">chủ</span></div><div class="kcell k-read"><div class="on">シュ</div><div>おも／ぬし</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">chính</span> </div></div><div class="kitem"><div class="jp"><ruby>飼<rp>（</rp><rt>か</rt><rp>）</rp></ruby>い<ruby>主<rp>（</rp><rt>ぬし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chủ nuôi</span></div></div><div class="kitem"><div class="jp"><ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>ち<ruby>主<rp>（</rp><rt>ぬし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chủ</span> </div></div><div class="kitem"><div class="jp"><ruby>主語<rp>（</rp><rt>しゅご</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chủ ngữ</span></div></div><div class="kitem"><div class="jp"><ruby>主張<rp>（</rp><rt>しゅちょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">khẳng định</span></div></div><div class="kitem"><div class="jp"><ruby>主義<rp>（</rp><rt>しゅぎ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chủ nghĩa</span>  </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">述</div></div><div class="kcell k-hv"><span class="vi-tr">thuật</span> </div><div class="kcell k-read"><div class="on">ジュツ</div><div>のーべる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>述<rp>（</rp><rt>の</rt><rp>）</rp></ruby>べる</div><div class="vi"><span class="vi-tr">trình bày</span></div></div><div class="kitem"><div class="jp"><ruby>述語<rp>（</rp><rt>じゅつご</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vị ngữ</span></div></div><div class="kitem"><div class="jp"><ruby>記述<rp>（</rp><rt>きじゅつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">mô tả</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">詞</div></div><div class="kcell k-hv"><span class="vi-tr">từ</span></div><div class="kcell k-read"><div class="on">シ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>名詞<rp>（</rp><rt>めいし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">danh từ</span></div></div><div class="kitem"><div class="jp"><ruby>動詞<rp>（</rp><rt>どうし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">động từ</span></div></div><div class="kitem"><div class="jp"><ruby>形容詞<rp>（</rp><rt>けいようし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tính từ</span></div></div><div class="kitem"><div class="jp"><ruby>助詞<rp>（</rp><rt>じょし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trợ từ</span></div></div><div class="kitem"><div class="jp"><ruby>歌詞<rp>（</rp><rt>かし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ca từ</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>、この<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>の<u><ruby>著者<rp>（</rp><rt>ちょしゃ</rt><rp>）</rp></ruby></u>の<ruby>講演会<rp>（</rp><rt>こうえんかい</rt><rp>）</rp></ruby>がある。</td><td>a. ちょしゃ</td><td>b. ちょうしゃ</td></tr><tr><td>2. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>趣味<rp>（</rp><rt>しゅみ</rt><rp>）</rp></ruby>は<u><ruby>編<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>み<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby></u>です。</td><td>a. あみぶつ</td><td>b. あみもの</td></tr><tr><td>3. あの<ruby>政治家<rp>（</rp><rt>せいじか</rt><rp>）</rp></ruby>の<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いた<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>が<u><ruby>出版<rp>（</rp><rt>しゅっぱん</rt><rp>）</rp></ruby></u>されるそうだ。</td><td>a. しゅっぱん</td><td>b. しゅっぴん</td></tr><tr><td>4. この<u><ruby>文章<rp>（</rp><rt>ぶんしょう</rt><rp>）</rp></ruby></u>のテーマは<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>だと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>いますか。</td><td>a. ぶんしょ</td><td>b. ぶんしょう</td></tr><tr><td>5. <ruby>今回<rp>（</rp><rt>こんかい</rt><rp>）</rp></ruby>の<ruby>失敗<rp>（</rp><rt>しっぱい</rt><rp>）</rp></ruby>の<u><ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby></u>な<ruby>原因<rp>（</rp><rt>げんいん</rt><rp>）</rp></ruby>は<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>不注意<rp>（</rp><rt>ふちゅうい</rt><rp>）</rp></ruby>です。</td><td>a. おもな</td><td>b. もっともな</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>、この<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>の<u><ruby>著者<rp>（</rp><rt>ちょしゃ</rt><rp>）</rp></ruby></u>の<ruby>講演会<rp>（</rp><rt>こうえんかい</rt><rp>）</rp></ruby>がある。</td><td><b>ちょしゃ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>趣味<rp>（</rp><rt>しゅみ</rt><rp>）</rp></ruby>は<u><ruby>編<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>み<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby></u>です。</td><td><b>あみもの</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. あの<ruby>政治家<rp>（</rp><rt>せいじか</rt><rp>）</rp></ruby>の<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いた<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>が<u><ruby>出版<rp>（</rp><rt>しゅっぱん</rt><rp>）</rp></ruby></u>されるそうだ。</td><td><b>しゅっぱん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. この<u><ruby>文章<rp>（</rp><rt>ぶんしょう</rt><rp>）</rp></ruby></u>のテーマは<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>だと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>いますか。</td><td><b>ぶんしょう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>今回<rp>（</rp><rt>こんかい</rt><rp>）</rp></ruby>の<ruby>失敗<rp>（</rp><rt>しっぱい</rt><rp>）</rp></ruby>の<u><ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby></u>な<ruby>原因<rp>（</rp><rt>げんいん</rt><rp>）</rp></ruby>は<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>不注意<rp>（</rp><rt>ふちゅうい</rt><rp>）</rp></ruby>です。</td><td><b>おもな</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. この<u>つくえ</u>を<ruby>講演会会場<rp>（</rp><rt>こうえんかいかいじょう</rt><rp>）</rp></ruby>に<ruby>運<rp>（</rp><rt>はこ</rt><rp>）</rp></ruby>んでください。</td><td>a. 机</td><td>b. 枝</td><td>c. 枚</td></tr><tr><td>2. <ruby>兄<rp>（</rp><rt>あに</rt><rp>）</rp></ruby>は<ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby>の<u>へん</u><ruby>集<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>をしています。</td><td>a. 辺</td><td>b. 変</td><td>c. 編</td></tr><tr><td>3. <ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>た<ruby>感想<rp>（</rp><rt>かんそう</rt><rp>）</rp></ruby>を<u>の</u>べていただけますか。</td><td>a. 伸</td><td>b. 述</td><td>c. 延</td></tr><tr><td>4. 「<ruby>赤<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>い」や「<ruby>静<rp>（</rp><rt>しず</rt><rp>）</rp></ruby>かな」は<ruby>形容<rp>（</rp><rt>けいよう</rt><rp>）</rp></ruby><u>し</u>である。</td><td>a. 誌</td><td>b. 詞</td><td>c. 紙</td></tr><tr><td>5. いい<ruby>資料<rp>（</rp><rt>しりょう</rt><rp>）</rp></ruby>をつくる<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><u>しん</u>がある。</td><td>a. 真</td><td>b. 心</td><td>c. 信</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. この<u>つくえ</u>を<ruby>講演会会場<rp>（</rp><rt>こうえんかいかいじょう</rt><rp>）</rp></ruby>に<ruby>運<rp>（</rp><rt>はこ</rt><rp>）</rp></ruby>んでください。</td><td><b>机</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>兄<rp>（</rp><rt>あに</rt><rp>）</rp></ruby>は<ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby>の<u>へん</u><ruby>集<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>をしています。</td><td><b>編</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>た<ruby>感想<rp>（</rp><rt>かんそう</rt><rp>）</rp></ruby>を<u>の</u>べていただけますか。</td><td><b>述</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. 「<ruby>赤<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>い」や「<ruby>静<rp>（</rp><rt>しず</rt><rp>）</rp></ruby>かな」は<ruby>形容<rp>（</rp><rt>けいよう</rt><rp>）</rp></ruby><u>し</u>である。</td><td><b>詞</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. いい<ruby>資料<rp>（</rp><rt>しりょう</rt><rp>）</rp></ruby>をつくる<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><u>しん</u>がある。</td><td><b>信</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. ここに<ruby>駐車<rp>（</rp><rt>ちゅうしゃ</rt><rp>）</rp></ruby>してある<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>の（　　　）はだれですか。</td><td>a. 飼い主</td><td>b. 持ち主</td></tr><tr><td>2. <ruby>電波<rp>（</rp><rt>でんぱ</rt><rp>）</rp></ruby>が<ruby>弱<rp>（</rp><rt>よわ</rt><rp>）</rp></ruby>くてデータ（　　　）に<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>がかかる。</td><td>a. 通信</td><td>b. 信号</td></tr><tr><td>3. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は、<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>は<ruby>犯人<rp>（</rp><rt>はんにん</rt><rp>）</rp></ruby>ではないと（　　　）している。</td><td>a. 主張</td><td>b. 主義</td></tr><tr><td>4. <ruby>周<rp>（</rp><rt>まわ</rt><rp>）</rp></ruby>りの<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>から（　　　）される<ruby>大人<rp>（</rp><rt>おとな</rt><rp>）</rp></ruby>になりたい。</td><td>a. 信頼</td><td>b. 人込み</td></tr><tr><td>5. <ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>は「<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>が」のような（　　　）を<ruby>略<rp>（</rp><rt>りゃく</rt><rp>）</rp></ruby>すことが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td>a. 述語</td><td>b. 主語</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. ここに<ruby>駐車<rp>（</rp><rt>ちゅうしゃ</rt><rp>）</rp></ruby>してある<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>の（　　　）はだれですか。</td><td><b>持ち主</b> (もちぬし)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>電波<rp>（</rp><rt>でんぱ</rt><rp>）</rp></ruby>が<ruby>弱<rp>（</rp><rt>よわ</rt><rp>）</rp></ruby>くてデータ（　　　）に<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>がかかる。</td><td><b>通信</b> (つうしん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は、<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>は<ruby>犯人<rp>（</rp><rt>はんにん</rt><rp>）</rp></ruby>ではないと（　　　）している。</td><td><b>主張</b> (しゅちょう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>周<rp>（</rp><rt>まわ</rt><rp>）</rp></ruby>りの<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>から（　　　）される<ruby>大人<rp>（</rp><rt>おとな</rt><rp>）</rp></ruby>になりたい。</td><td><b>信頼</b> (しんらい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>は「<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>が」のような（　　　）を<ruby>略<rp>（</rp><rt>りゃく</rt><rp>）</rp></ruby>すことが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td><b>主語</b> (しゅご)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-7-4"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-7-bai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","tín":"credit","tin cậy":"trust","tin tưởng":"trust","tín hiệu":"signal","tự tin":"confident","thông tin liên lạc, truyền thông":"communication and media","kỷ":"century","bàn":"table","viết vào":"write in","~ vào":"~ come in","đám đông":"crowd","bản":"copy","xuất bản":"publish","trước":"before","tác giả":"author","sách":"book","biên":"record","đan":"knit","đồ len":"woolen clothes","biên tập":"editor","người biên tập":"editor","chương":"chapter","đoạn văn":"passage","chương 1":"chapter 1","chủ":"owner","chính":"main","chủ nuôi":"owner","chủ ngữ":"subject","khẳng định":"confirm","chủ nghĩa":"tenet","thuật":"art","trình bày":"present","vị ngữ":"predicate","mô tả":"describe","từ":"from","danh từ":"noun","động từ":"verb","tính từ":"adjective","trợ từ":"particle","ca từ":"lyrics","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","tín":"kredit","tin cậy":"memercayai","tin tưởng":"memercayai","tín hiệu":"sinyal","tự tin":"percaya diri","thông tin liên lạc, truyền thông":"komunikasi dan media","kỷ":"abad","bàn":"meja","viết vào":"menulis","~ vào":"~ masuk","đám đông":"kerumunan","bản":"menyalin","xuất bản":"menerbitkan","trước":"sebelum","tác giả":"pengarang","sách":"buku","biên":"catatan","đan":"merajut","đồ len":"pakaian wol","biên tập":"editor","người biên tập":"editor","chương":"bab","đoạn văn":"jalan","chương 1":"bab 1","chủ":"pemilik","chính":"utama","chủ nuôi":"pemilik","chủ ngữ":"subjek","khẳng định":"mengonfirmasi","chủ nghĩa":"prinsip","thuật":"seni","trình bày":"hadiah","vị ngữ":"predikat","mô tả":"menggambarkan","từ":"dari","danh từ":"kata benda","động từ":"kata kerja","tính từ":"kata sifat","trợ từ":"partikel","ca từ":"lirik","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","tín":"क्रेडिट","tin cậy":"भरोसा","tin tưởng":"भरोसा","tín hiệu":"संकेत","tự tin":"विश्वस्त","thông tin liên lạc, truyền thông":"सञ्चार र मिडिया","kỷ":"शताब्दी","bàn":"तालिका","viết vào":"मा लेख्नुहोस्","~ vào":"~ भित्र आउनुहोस्","đám đông":"भीड","bản":"प्रतिलिपि","xuất bản":"प्रकाशित गर्नुहोस्","trước":"अघि","tác giả":"लेखक","sách":"पुस्तक","biên":"रेकर्ड","đan":"बुन्नु","đồ len":"ऊनी लुगा","biên tập":"सम्पादक","người biên tập":"सम्पादक","chương":"अध्याय","đoạn văn":"बाटो","chương 1":"अध्याय १","chủ":"मालिक","chính":"मुख्य","chủ nuôi":"मालिक","chủ ngữ":"विषय","khẳng định":"पुष्टि गर्नुहोस्","chủ nghĩa":"सिद्धान्त","thuật":"कला","trình bày":"वर्तमान","vị ngữ":"भविष्यवाणी","mô tả":"वर्णन गर्नुहोस्","từ":"बाट","danh từ":"संज्ञा","động từ":"क्रिया","tính từ":"विशेषण","trợ từ":"कण","ca từ":"गीत","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","tín":"credit ပါ။","tin cậy":"ယုံကြည်မှု","tin tưởng":"ယုံကြည်မှု","tín hiệu":"အချက်ပြ","tự tin":"ယုံကြည်ချက်","thông tin liên lạc, truyền thông":"ဆက်သွယ်ရေးနှင့်မီဒီယာ","kỷ":"ရာစု","bàn":"စားပွဲ","viết vào":"ရေးပါ။","~ vào":"~ ဝင်​ပါ။","đám đông":"လူစုလူဝေး","bản":"ကော်ပီ","xuất bản":"ထုတ်ဝေ","trước":"မီ","tác giả":"စာရေးသူ","sách":"စာအုပ်","biên":"မှတ်တမ်း","đan":"ချည်","đồ len":"သိုးမွှေးအဝတ်","biên tập":"အယ်ဒီတာ","người biên tập":"အယ်ဒီတာ","chương":"အခန်း","đoạn văn":"ကျမ်းပိုဒ်","chương 1":"အခန်း ၁","chủ":"ပိုင်ရှင်","chính":"အဓိက","chủ nuôi":"ပိုင်ရှင်","chủ ngữ":"ဘာသာရပ်","khẳng định":"အတည်ပြုပါ။","chủ nghĩa":"သဘောတရား","thuật":"အနုပညာ","trình bày":"ပစ္စုပ္ပန်","vị ngữ":"ကြိုတင်ခန့်မှန်း","mô tả":"ဖော်ပြပါ။","từ":"ထံမှ","danh từ":"နာမ်","động từ":"ကြိယာ","tính từ":"နာမဝိသေသန","trợ từ":"မှုန်","ca từ":"သီချင်းစာသား","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","tín":"ক্রেডিট","tin cậy":"বিশ্বাস","tin tưởng":"বিশ্বাস","tín hiệu":"সংকেত","tự tin":"আত্মবিশ্বাসী","thông tin liên lạc, truyền thông":"যোগাযোগ এবং মিডিয়া","kỷ":"শতাব্দী","bàn":"টেবিল","viết vào":"লিখুন","~ vào":"~ ভেতরে আসুন","đám đông":"ভিড়","bản":"অনুলিপি","xuất bản":"প্রকাশ","trước":"আগে","tác giả":"লেখক","sách":"বই","biên":"রেকর্ড","đan":"বোনা","đồ len":"পশমী কাপড়","biên tập":"সম্পাদক","người biên tập":"সম্পাদক","chương":"অধ্যায়","đoạn văn":"উত্তরণ","chương 1":"অধ্যায় 1","chủ":"মালিক","chính":"প্রধান","chủ nuôi":"মালিক","chủ ngữ":"বিষয়","khẳng định":"নিশ্চিত করুন","chủ nghĩa":"নীতি","thuật":"শিল্প","trình bày":"বর্তমান","vị ngữ":"predicate","mô tả":"বর্ণনা","từ":"থেকে","danh từ":"বিশেষ্য","động từ":"ক্রিয়া","tính từ":"বিশেষণ","trợ từ":"কণা","ca từ":"গানের কথা","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","tín":"श्रेय","tin cậy":"विश्वास","tin tưởng":"विश्वास","tín hiệu":"संकेत","tự tin":"आत्मविश्वासी","thông tin liên lạc, truyền thông":"संचार और मीडिया","kỷ":"शतक","bàn":"मेज़","viết vào":"में लिखें","~ vào":"~ अंदर आओ","đám đông":"भीड़","bản":"कॉपी","xuất bản":"प्रकाशित","trước":"पहले","tác giả":"लेखक","sách":"किताब","biên":"अभिलेख","đan":"Knit","đồ len":"ऊनी कपड़े","biên tập":"संपादक","người biên tập":"संपादक","chương":"अध्याय","đoạn văn":"रास्ता","chương 1":"अध्याय 1","chủ":"मालिक","chính":"मुख्य","chủ nuôi":"मालिक","chủ ngữ":"विषय","khẳng định":"पुष्टि करना","chủ nghĩa":"सिद्धांत","thuật":"कला","trình bày":"उपस्थित","vị ngữ":"विधेय","mô tả":"वर्णन करना","từ":"से","danh từ":"संज्ञा","động từ":"क्रिया","tính từ":"विशेषण","trợ từ":"कण","ca từ":"गीत","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","tín":"เครดิต","tin cậy":"เชื่อมั่น","tin tưởng":"เชื่อมั่น","tín hiệu":"สัญญาณ","tự tin":"มั่นใจ","thông tin liên lạc, truyền thông":"การสื่อสารและสื่อ","kỷ":"ศตวรรษ","bàn":"โต๊ะ","viết vào":"เขียนใน","~ vào":"~ เข้ามา","đám đông":"ฝูงชน","bản":"สำเนา","xuất bản":"เผยแพร่","trước":"ก่อน","tác giả":"ผู้เขียน","sách":"หนังสือ","biên":"บันทึก","đan":"ถัก","đồ len":"เสื้อผ้าทำด้วยผ้าขนสัตว์","biên tập":"บรรณาธิการ","người biên tập":"บรรณาธิการ","chương":"บท","đoạn văn":"ทางเดิน","chương 1":"บทที่ 1","chủ":"เจ้าของ","chính":"หลัก","chủ nuôi":"เจ้าของ","chủ ngữ":"เรื่อง","khẳng định":"ยืนยัน","chủ nghĩa":"ทฤษฎี","thuật":"ศิลปะ","trình bày":"ปัจจุบัน","vị ngữ":"ภาคแสดง","mô tả":"อธิบาย","từ":"จาก","danh từ":"คำนาม","động từ":"กริยา","tính từ":"คุณศัพท์","trợ từ":"อนุภาค","ca từ":"เนื้อเพลง","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

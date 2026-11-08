@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">菓</div></div><div class="kcell k-hv"><span class="vi-tr">quả</span></div><div class="kcell k-read"><div class="on">カ　</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>菓子<rp>（</rp><rt>かし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bánh kẹo</span></div></div><div class="kitem"><div class="jp"><ruby>和菓子<rp>（</rp><rt>わがし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bánh kẹo Nhật</span></div></div><div class="kitem"><div class="jp"><ruby>洋菓子<rp>（</rp><rt>ようがし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bánh kẹo kiểu Âu</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">杯</div></div><div class="kcell k-hv"><span class="vi-tr">bôi</span></div><div class="kcell k-read"><div class="on">ハイ</div><div>さかずき</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>乾杯<rp>（</rp><rt>かんぱい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">cạn li</span></div></div><div class="kitem"><div class="jp">2<ruby>杯<rp>（</rp><rt>はい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">2 cốc</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">制</div></div><div class="kcell k-hv"><span class="vi-tr">chế</span></div><div class="kcell k-read"><div class="on">セイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>制限<rp>（</rp><rt>せいげん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giới hạn</span> </div></div><div class="kitem"><div class="jp"><ruby>制度<rp>（</rp><rt>せいど</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chế độ</span> </div></div><div class="kitem"><div class="jp"><ruby>制服<rp>（</rp><rt>せいふく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đồng phục</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">製</div></div><div class="kcell k-hv"><span class="vi-tr">chế</span></div><div class="kcell k-read"><div class="on">セイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>製品<rp>（</rp><rt>せいひん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sản phẩm</span></div></div><div class="kitem"><div class="jp"><ruby>製造<rp>（</rp><rt>せいぞう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">chế tạo</span> </div></div><div class="kitem"><div class="jp"><ruby>日本製<rp>（</rp><rt>にほんせい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sản phẩm làm tại Nhật</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">甘</div></div><div class="kcell k-hv">cam</div><div class="kcell k-read"><div>あまーい／あま－える／あまーやかす</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>甘<rp>（</rp><rt>あま</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">ngọt</span></div></div><div class="kitem"><div class="jp"><ruby>甘<rp>（</rp><rt>あま</rt><rp>）</rp></ruby>やかす</div><div class="vi"><span class="vi-tr">nuông chiều</span></div></div><div class="kitem"><div class="jp"><ruby>甘口<rp>（</rp><rt>あまくち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vị ngọt</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">湯</div></div><div class="kcell k-hv">thang</div><div class="kcell k-read"><div>ゆ</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（お）<ruby>湯<rp>（</rp><rt>ゆ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nước nóng</span></div></div><div class="kitem"><div class="jp"><ruby>湯気<rp>（</rp><rt>ゆげ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hơi nước nóng</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">沸</div></div><div class="kcell k-hv"><span class="vi-tr">phí</span></div><div class="kcell k-read"><div>わーく／わーかす</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>沸<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">~ sôi</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>沸<rp>（</rp><rt>わか</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">đun sôi ~</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">庫</div></div><div class="kcell k-hv"><span class="vi-tr">khố</span></div><div class="kcell k-read"><div class="on">コ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>金庫<rp>（</rp><rt>きんこ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">két sắt</span></div></div><div class="kitem"><div class="jp"><ruby>車庫<rp>（</rp><rt>しゃこ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ga ra xe ô tô</span></div></div><div class="kitem"><div class="jp"><ruby>冷蔵庫<rp>（</rp><rt>れいぞうこ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tủ lạnh</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">果</div></div><div class="kcell k-hv"><span class="vi-tr">quả</span></div><div class="kcell k-read"><div class="on">カ</div><div>はーたす／はーてる／はーて</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>果物<rp>（</rp><rt>くだもの</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hoa quả</span></div></div><div class="kitem"><div class="jp"><ruby>結果<rp>（</rp><rt>けっか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">kết quả</span></div></div><div class="kitem"><div class="jp"><ruby>効果<rp>（</rp><rt>こうか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hiệu quả</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">皮</div></div><div class="kcell k-hv"><span class="vi-tr">bì</span></div><div class="kcell k-read"><div class="on">ヒ</div><div>かわ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>皮<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby></div><div class="vi">da</div></div><div class="kitem"><div class="jp"><ruby>毛皮<rp>（</rp><rt>けがわ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lông thú</span></div></div><div class="kitem"><div class="jp"><ruby>皮肉<rp>（</rp><rt>ひにく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sự châm biếm</span></div></div><div class="kitem"><div class="jp"><ruby>皮肉<rp>（</rp><rt>ひにく</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">châm biếm</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">凍</div></div><div class="kcell k-hv"><span class="vi-tr">đông</span></div><div class="kcell k-read"><div class="on">トウ</div><div>こおーる／こごーえる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>凍<rp>（</rp><rt>こお</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">đông cứng</span></div></div><div class="kitem"><div class="jp"><ruby>凍<rp>（</rp><rt>こご</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">tê cóng</span></div></div><div class="kitem"><div class="jp"><ruby>冷凍<rp>（</rp><rt>れいとう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">làm đông lạnh</span></div></div><div class="kitem"><div class="jp"><ruby>冷凍食品<rp>（</rp><rt>れいとうしょくひん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thực phẩm đông lạnh</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">氷</div></div><div class="kcell k-hv"><span class="vi-tr">băng</span></div><div class="kcell k-read"><div>こおり</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>氷<rp>（</rp><rt>こおり</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đá</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<u><ruby>車庫<rp>（</rp><rt>しゃこ</rt><rp>）</rp></ruby></u>には、トラックは<ruby>止<rp>（</rp><rt>と</rt><rp>）</rp></ruby>められません。</td><td>a. しゃこう</td><td>b. しゃこ</td></tr><tr><td>2. ラーメンの<u><ruby>湯気<rp>（</rp><rt>ゆげ</rt><rp>）</rp></ruby></u>を<ruby>写真<rp>（</rp><rt>しゃしん</rt><rp>）</rp></ruby>に<ruby>撮<rp>（</rp><rt>と</rt><rp>）</rp></ruby>りたい。</td><td>a. ゆげ</td><td>b. ゆぎ</td></tr><tr><td>3. <u><ruby>皮肉<rp>（</rp><rt>ひにく</rt><rp>）</rp></ruby></u>ばかり<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>う<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>は、<ruby>友<rp>（</rp><rt>とも</rt><rp>）</rp></ruby>だちに<ruby>嫌<rp>（</rp><rt>きら</rt><rp>）</rp></ruby>われる。</td><td>a. ひにく</td><td>b. かにく</td></tr><tr><td>4. <u><ruby>甘<rp>（</rp><rt>あま</rt><rp>）</rp></ruby>い</u><ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べ<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>は、ちょっと<ruby>苦手<rp>（</rp><rt>にがて</rt><rp>）</rp></ruby>だ。</td><td>a. からい</td><td>b. あまい</td></tr><tr><td>5. こちらは<ruby>海外<rp>（</rp><rt>かいがい</rt><rp>）</rp></ruby>の<ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>で<u><ruby>製造<rp>（</rp><rt>せいぞう</rt><rp>）</rp></ruby></u>された<ruby>商品<rp>（</rp><rt>しょうひん</rt><rp>）</rp></ruby>です。</td><td>a. せいぞう</td><td>b. せいさく</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<u><ruby>車庫<rp>（</rp><rt>しゃこ</rt><rp>）</rp></ruby></u>には、トラックは<ruby>止<rp>（</rp><rt>と</rt><rp>）</rp></ruby>められません。</td><td><b>しゃこ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. ラーメンの<u><ruby>湯気<rp>（</rp><rt>ゆげ</rt><rp>）</rp></ruby></u>を<ruby>写真<rp>（</rp><rt>しゃしん</rt><rp>）</rp></ruby>に<ruby>撮<rp>（</rp><rt>と</rt><rp>）</rp></ruby>りたい。</td><td><b>ゆげ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <u><ruby>皮肉<rp>（</rp><rt>ひにく</rt><rp>）</rp></ruby></u>ばかり<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>う<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>は、<ruby>友<rp>（</rp><rt>とも</rt><rp>）</rp></ruby>だちに<ruby>嫌<rp>（</rp><rt>きら</rt><rp>）</rp></ruby>われる。</td><td><b>ひにく</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <u><ruby>甘<rp>（</rp><rt>あま</rt><rp>）</rp></ruby>い</u><ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べ<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>は、ちょっと<ruby>苦手<rp>（</rp><rt>にがて</rt><rp>）</rp></ruby>だ。</td><td><b>あまい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. こちらは<ruby>海外<rp>（</rp><rt>かいがい</rt><rp>）</rp></ruby>の<ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>で<u><ruby>製造<rp>（</rp><rt>せいぞう</rt><rp>）</rp></ruby></u>された<ruby>商品<rp>（</rp><rt>しょうひん</rt><rp>）</rp></ruby>です。</td><td><b>せいぞう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. コーヒーを<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><u>ぱい</u>いかがですか。</td><td>a. 沸</td><td>b. 凍</td><td>c. 杯</td></tr><tr><td>2. この<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>み<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>は<u>こおり</u>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるとおいしい。</td><td>a. 凍</td><td>b. 泳</td><td>c. 氷</td></tr><tr><td>3. リンゴの<u>かわ</u>をむいてくれないかな。</td><td>a. 革</td><td>b. 皮</td><td>c. 果</td></tr><tr><td>4. <ruby>彼女<rp>（</rp><rt>かのじょ</rt><rp>）</rp></ruby>はよく<ruby>手作<rp>（</rp><rt>てづく</rt><rp>）</rp></ruby>りのお<u>か</u><ruby>子<rp>（</rp><rt>し</rt><rp>）</rp></ruby>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>っている。</td><td>a. 果</td><td>b. 単</td><td>c. 菓</td></tr><tr><td>5. <ruby>学校<rp>（</rp><rt>がっこう</rt><rp>）</rp></ruby>の<u>せい</u><ruby>服<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>をクリーニングに<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>した。</td><td>a. 制</td><td>b. 製</td><td>c. 生</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. コーヒーを<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><u>ぱい</u>いかがですか。</td><td><b>杯</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. この<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>み<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>は<u>こおり</u>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるとおいしい。</td><td><b>氷</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. リンゴの<u>かわ</u>をむいてくれないかな。</td><td><b>皮</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>彼女<rp>（</rp><rt>かのじょ</rt><rp>）</rp></ruby>はよく<ruby>手作<rp>（</rp><rt>てづく</rt><rp>）</rp></ruby>りのお<u>か</u><ruby>子<rp>（</rp><rt>し</rt><rp>）</rp></ruby>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>っている。</td><td><b>菓</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>学校<rp>（</rp><rt>がっこう</rt><rp>）</rp></ruby>の<u>せい</u><ruby>服<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>をクリーニングに<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>した。</td><td><b>制</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>を（　　　）のは、<ruby>教育上<rp>（</rp><rt>きょういくじょう</rt><rp>）</rp></ruby>、よくない。</td><td>a. 甘やかす</td><td>b. 凍える</td></tr><tr><td>2. この<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>み<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>は、<ruby>体<rp>（</rp><rt>からだ</rt><rp>）</rp></ruby>を<ruby>温<rp>（</rp><rt>あたた</rt><rp>）</rp></ruby>める（　　　）が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>いそうだ。</td><td>a. 効果</td><td>b. 結果</td></tr><tr><td>3. <ruby>近所<rp>（</rp><rt>きんじょ</rt><rp>）</rp></ruby>のスーパーで（　　　）<ruby>食品<rp>（</rp><rt>しょくひん</rt><rp>）</rp></ruby>の<ruby>安売<rp>（</rp><rt>やすう</rt><rp>）</rp></ruby>りをしていた。</td><td>a. 果物</td><td>b. 冷凍</td></tr><tr><td>4. お<ruby>湯<rp>（</rp><rt>ゆ</rt><rp>）</rp></ruby>を（　　　）お<ruby>茶<rp>（</rp><rt>ちゃ</rt><rp>）</rp></ruby>にしましょう。</td><td>a. 沸かして</td><td>b. 沸いて</td></tr><tr><td>5. <ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>の<ruby>教育<rp>（</rp><rt>きょういく</rt><rp>）</rp></ruby>（　　　）では、<ruby>中学校<rp>（</rp><rt>ちゅうがっこう</rt><rp>）</rp></ruby>は３<ruby>年間<rp>（</rp><rt>ねんかん</rt><rp>）</rp></ruby>である。</td><td>a. 制限</td><td>b. 制度</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>を（　　　）のは、<ruby>教育上<rp>（</rp><rt>きょういくじょう</rt><rp>）</rp></ruby>、よくない。</td><td><b>甘やかす</b> (あまやかす)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. この<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>み<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>は、<ruby>体<rp>（</rp><rt>からだ</rt><rp>）</rp></ruby>を<ruby>温<rp>（</rp><rt>あたた</rt><rp>）</rp></ruby>める（　　　）が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>いそうだ。</td><td><b>効果</b> (こうか)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>近所<rp>（</rp><rt>きんじょ</rt><rp>）</rp></ruby>のスーパーで（　　　）<ruby>食品<rp>（</rp><rt>しょくひん</rt><rp>）</rp></ruby>の<ruby>安売<rp>（</rp><rt>やすう</rt><rp>）</rp></ruby>りをしていた。</td><td><b>冷凍</b> (れいとう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. お<ruby>湯<rp>（</rp><rt>ゆ</rt><rp>）</rp></ruby>を（　　　）お<ruby>茶<rp>（</rp><rt>ちゃ</rt><rp>）</rp></ruby>にしましょう。</td><td><b>沸かして</b> (わかして)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>の<ruby>教育<rp>（</rp><rt>きょういく</rt><rp>）</rp></ruby>（　　　）では、<ruby>中学校<rp>（</rp><rt>ちゅうがっこう</rt><rp>）</rp></ruby>は３<ruby>年間<rp>（</rp><rt>ねんかん</rt><rp>）</rp></ruby>である。</td><td><b>制度</b> (せいど)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-1-4"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-1-bai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","quả":"fruit","bánh kẹo":"confectionery","bánh kẹo Nhật":"Japanese candy","bánh kẹo kiểu Âu":"European-style confectionery","bôi":"apply","cạn li":"exhausted","2 cốc":"2 cups","chế":"mechanism","giới hạn":"limit","chế độ":"regime","đồng phục":"uniform","sản phẩm":"product","chế tạo":"manufacturing","sản phẩm làm tại Nhật":"Products made in Japan","ngọt":"sweet","nuông chiều":"pamper","vị ngọt":"sweet taste","nước nóng":"hot water","hơi nước nóng":"hot steam","phí":"fee","~ sôi":"~ boiling","đun sôi ~":"boil ~","khố":"loincloth","két sắt":"safe","ga ra xe ô tô":"car garage","tủ lạnh":"fridge","hoa quả":"fruit","kết quả":"result","hiệu quả":"effective","bì":"packaging","lông thú":"fur","sự châm biếm":"irony","châm biếm":"sarcastic","đông":"winter","đông cứng":"freeze","tê cóng":"numb","làm đông lạnh":"freeze","thực phẩm đông lạnh":"frozen food","băng":"ice","đá":"stone","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","quả":"buah","bánh kẹo":"gula-gula","bánh kẹo Nhật":"permen Jepang","bánh kẹo kiểu Âu":"Kembang gula ala Eropa","bôi":"menerapkan","cạn li":"lelah","2 cốc":"2 cangkir","chế":"mekanisme","giới hạn":"membatasi","chế độ":"rezim","đồng phục":"seragam","sản phẩm":"produk","chế tạo":"manufaktur","sản phẩm làm tại Nhật":"Produk buatan Jepang","ngọt":"manis","nuông chiều":"terlalu memanjakan","vị ngọt":"rasa manis","nước nóng":"air panas","hơi nước nóng":"uap panas","phí":"biaya","~ sôi":"~ mendidih","đun sôi ~":"mendidih ~","khố":"cawat","két sắt":"aman","ga ra xe ô tô":"garasi mobil","tủ lạnh":"kulkas","hoa quả":"buah","kết quả":"hasil","hiệu quả":"efektif","bì":"kemasan","lông thú":"bulu","sự châm biếm":"ironi","châm biếm":"sarkastik","đông":"musim dingin","đông cứng":"membekukan","tê cóng":"mati rasa","làm đông lạnh":"membekukan","thực phẩm đông lạnh":"makanan beku","băng":"es","đá":"batu","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","quả":"फल","bánh kẹo":"कन्फेक्शनरी","bánh kẹo Nhật":"जापानी मिठाई","bánh kẹo kiểu Âu":"युरोपेली शैली मिठाई","bôi":"लागू गर्नुहोस्","cạn li":"थकित","2 cốc":"२ कप","chế":"संयन्त्र","giới hạn":"सीमा","chế độ":"शासन","đồng phục":"वर्दी","sản phẩm":"उत्पादन","chế tạo":"निर्माण","sản phẩm làm tại Nhật":"जापानमा बनेका उत्पादनहरू","ngọt":"मीठो","nuông chiều":"लाड","vị ngọt":"मीठो स्वाद","nước nóng":"तातो पानी","hơi nước nóng":"तातो भाप","phí":"शुल्क","~ sôi":"~ उमाल्दै","đun sôi ~":"उमाले ~","khố":"लङ्क्लोथ","két sắt":"सुरक्षित","ga ra xe ô tô":"कार ग्यारेज","tủ lạnh":"फ्रिज","hoa quả":"फल","kết quả":"परिणाम","hiệu quả":"प्रभावकारी","bì":"प्याकेजिङ","lông thú":"फर","sự châm biếm":"विडंबना","châm biếm":"व्यंग्यात्मक","đông":"जाडो","đông cứng":"फ्रिज","tê cóng":"सुन्न","làm đông lạnh":"फ्रिज","thực phẩm đông lạnh":"जमेको खाना","băng":"बरफ","đá":"ढुङ्गा","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","quả":"အသီး","bánh kẹo":"မုန့်များ","bánh kẹo Nhật":"ဂျပန်သကြားလုံး","bánh kẹo kiểu Âu":"ဥရောပစတိုင်မုန့်များ","bôi":"လျှောက်ထားပါ။","cạn li":"မောဟိုက်သည်။","2 cốc":"2 ခွက်","chế":"ယန္တရား","giới hạn":"ကန့်သတ်ချက်","chế độ":"စစ်အုပ်စု","đồng phục":"ယူနီဖောင်း","sản phẩm":"ထုတ်ကုန်","chế tạo":"ကုန်ထုတ်လုပ်မှု","sản phẩm làm tại Nhật":"ဂျပန်နိုင်ငံမှထုတ်လုပ်သောထုတ်ကုန်များ","ngọt":"ချိုတယ်။","nuông chiều":"ကျေနပ်သည်။","vị ngọt":"ချိုသောအရသာ","nước nóng":"ရေနွေး","hơi nước nóng":"ရေနွေးငွေ့","phí":"အခကြေးငွေ","~ sôi":"~ဆူ","đun sôi ~":"~ ပြုတ်","khố":"လန်ကွတ်တီ","két sắt":"ဘေးကင်းသည်။","ga ra xe ô tô":"ကားဂိုဒေါင်","tủ lạnh":"ရေခဲသေတ္တာ","hoa quả":"အသီး","kết quả":"ရလဒ်","hiệu quả":"ထိရောက်သည်။","bì":"ထုပ်ပိုးမှု","lông thú":"သားမွေး","sự châm biếm":"အထေ့အငေါ့","châm biếm":"ရွဲ့","đông":"ဆောင်းရာသီ","đông cứng":"အေးခဲ","tê cóng":"ထုံ","làm đông lạnh":"အေးခဲ","thực phẩm đông lạnh":"အေးခဲထားသောအစားအစာ","băng":"ရေခဲ","đá":"ကျောက်","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","quả":"ফল","bánh kẹo":"মিষ্টান্ন","bánh kẹo Nhật":"জাপানি মিছরি","bánh kẹo kiểu Âu":"ইউরোপীয়-শৈলী মিষ্টান্ন","bôi":"আবেদন","cạn li":"ক্লান্ত","2 cốc":"2 কাপ","chế":"প্রক্রিয়া","giới hạn":"সীমা","chế độ":"শাসন","đồng phục":"ইউনিফর্ম","sản phẩm":"পণ্য","chế tạo":"উত্পাদন","sản phẩm làm tại Nhật":"জাপানে তৈরি পণ্য","ngọt":"মিষ্টি","nuông chiều":"প্যাম্পার","vị ngọt":"মিষ্টি স্বাদ","nước nóng":"গরম জল","hơi nước nóng":"গরম বাষ্প","phí":"ফি","~ sôi":"~ ফুটন্ত","đun sôi ~":"ফোঁড়া ~","khố":"কটি","két sắt":"নিরাপদ","ga ra xe ô tô":"গাড়ির গ্যারেজ","tủ lạnh":"ফ্রিজ","hoa quả":"ফল","kết quả":"ফলাফল","hiệu quả":"কার্যকর","bì":"প্যাকেজিং","lông thú":"পশম","sự châm biếm":"বিদ্রুপ","châm biếm":"ব্যঙ্গাত্মক","đông":"শীতকাল","đông cứng":"জমা","tê cóng":"অসাড়","làm đông lạnh":"জমা","thực phẩm đông lạnh":"হিমায়িত খাবার","băng":"বরফ","đá":"পাথর","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","quả":"फल","bánh kẹo":"हलवाई की दुकान","bánh kẹo Nhật":"जापानी कैंडी","bánh kẹo kiểu Âu":"यूरोपीय शैली की हलवाई की दुकान","bôi":"आवेदन करना","cạn li":"थका हुआ","2 cốc":"2 कप","chế":"तंत्र","giới hạn":"आप LIMIT","chế độ":"प्रशासन","đồng phục":"वर्दी","sản phẩm":"उत्पाद","chế tạo":"उत्पादन","sản phẩm làm tại Nhật":"जापान में बने उत्पाद","ngọt":"मिठाई","nuông chiều":"संतुष्ट करना","vị ngọt":"मधुर स्वाद","nước nóng":"गरम पानी","hơi nước nóng":"गरम भाप","phí":"शुल्क","~ sôi":"~उबलना","đun sôi ~":"उबाल~","khố":"लंगोटी","két sắt":"सुरक्षित","ga ra xe ô tô":"कार गैराज","tủ lạnh":"फ़्रिज","hoa quả":"फल","kết quả":"परिणाम","hiệu quả":"असरदार","bì":"पैकेजिंग","lông thú":"छाल","sự châm biếm":"विडंबना","châm biếm":"व्यंग्यात्मक","đông":"सर्दी","đông cứng":"जमाना","tê cóng":"सुन्न","làm đông lạnh":"जमाना","thực phẩm đông lạnh":"जमा हुआ भोजन","băng":"बर्फ़","đá":"पत्थर","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","quả":"ผลไม้","bánh kẹo":"ลูกกวาด","bánh kẹo Nhật":"ลูกอมญี่ปุ่น","bánh kẹo kiểu Âu":"ขนมสไตล์ยุโรป","bôi":"นำมาใช้","cạn li":"เหนื่อย","2 cốc":"2 ถ้วย","chế":"กลไก","giới hạn":"ขีด จำกัด","chế độ":"ระบอบการปกครอง","đồng phục":"เครื่องแบบ","sản phẩm":"ผลิตภัณฑ์","chế tạo":"การผลิต","sản phẩm làm tại Nhật":"สินค้าผลิตในประเทศญี่ปุ่น","ngọt":"หวาน","nuông chiều":"ปรนเปรอ","vị ngọt":"รสหวาน","nước nóng":"น้ำร้อน","hơi nước nóng":"ไอน้ำร้อน","phí":"ค่าธรรมเนียม","~ sôi":"~เดือด","đun sôi ~":"ต้ม ~","khố":"ผ้าขาวม้า","két sắt":"ปลอดภัย","ga ra xe ô tô":"โรงจอดรถ","tủ lạnh":"ตู้เย็น","hoa quả":"ผลไม้","kết quả":"ผลลัพธ์","hiệu quả":"มีประสิทธิภาพ","bì":"บรรจุภัณฑ์","lông thú":"ขน","sự châm biếm":"ประชด","châm biếm":"ประชดประชัน","đông":"ฤดูหนาว","đông cứng":"แช่แข็ง","tê cóng":"มึนงง","làm đông lạnh":"แช่แข็ง","thực phẩm đông lạnh":"อาหารแช่แข็ง","băng":"น้ำแข็ง","đá":"หิน","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

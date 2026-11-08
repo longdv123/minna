@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">政</div></div><div class="kcell k-hv"><span class="vi-tr">chính</span></div><div class="kcell k-read"><div class="on">セイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>政治<rp>（</rp><rt>せいじ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chính trị</span> </div></div><div class="kitem"><div class="jp"><ruby>政治家<rp>（</rp><rt>せいじか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chính trị gia</span></div></div><div class="kitem"><div class="jp"><ruby>政府<rp>（</rp><rt>せいふ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chính phủ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">副</div></div><div class="kcell k-hv"><span class="vi-tr">phó</span> </div><div class="kcell k-read"><div class="on">フク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>副首相<rp>（</rp><rt>ふくしゅしょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phó thủ tướng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">税</div></div><div class="kcell k-hv"><span class="vi-tr">thuế</span></div><div class="kcell k-read"><div class="on">ゼイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>税<rp>（</rp><rt>ぜい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thuế</span></div></div><div class="kitem"><div class="jp"><ruby>税金<rp>（</rp><rt>ぜいきん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tiền thuế</span></div></div><div class="kitem"><div class="jp"><ruby>税関<rp>（</rp><rt>ぜいかん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hải quan</span> </div></div><div class="kitem"><div class="jp"><ruby>課税<rp>（</rp><rt>かぜい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đánh thuế</span></div></div><div class="kitem"><div class="jp"><ruby>消費税<rp>（</rp><rt>しょうひぜい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thuế tiêu thụ</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">党</div></div><div class="kcell k-hv"><span class="vi-tr">đảng</span></div><div class="kcell k-read"><div class="on">トウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>政党<rp>（</rp><rt>せいとう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chính đảng</span> </div></div><div class="kitem"><div class="jp"><ruby>社会党<rp>（</rp><rt>しゃかいとう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Đảng Xã hội</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">補</div></div><div class="kcell k-hv"><span class="vi-tr">bổ</span> </div><div class="kcell k-read"><div class="on">ホ</div><div>おぎなーう</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>補<rp>（</rp><rt>おぎな</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">bù đắp</span></div></div><div class="kitem"><div class="jp"><ruby>補足<rp>（</rp><rt>ほそく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thêm vào</span></div></div><div class="kitem"><div class="jp"><ruby>候補<rp>（</rp><rt>こうほ</rt><rp>）</rp></ruby>（<ruby>者<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>）</div><div class="vi"><span class="vi-tr">ứng cử viên</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">選</div></div><div class="kcell k-hv"><span class="vi-tr">tuyển</span> </div><div class="kcell k-read"><div class="on">セン</div><div>えらーぶ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>選挙<rp>（</rp><rt>せんきょ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">bầu cử</span></div></div><div class="kitem"><div class="jp"><ruby>選手<rp>（</rp><rt>せんしゅ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tuyển thủ</span> </div></div><div class="kitem"><div class="jp"><ruby>選択<rp>（</rp><rt>せんたく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">lựa chọn</span> </div></div><div class="kitem"><div class="jp"><ruby>当選<rp>（</rp><rt>とうせん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">trúng cử</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">相</div></div><div class="kcell k-hv"><span class="vi-tr">tương</span></div><div class="kcell k-read"><div class="on">ソウ／ショウ</div><div>あい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>相手<rp>（</rp><rt>あいて</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đối phương</span></div></div><div class="kitem"><div class="jp"><ruby>相変<rp>（</rp><rt>あいか</rt><rp>）</rp></ruby>わらず</div><div class="vi"><span class="vi-tr">vẫn thế, không thay đổi</span></div></div><div class="kitem"><div class="jp"><ruby>相談<rp>（</rp><rt>そうだん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tư vấn</span> </div></div><div class="kitem"><div class="jp"><ruby>首相<rp>（</rp><rt>しゅしょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thủ tướng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">臣</div></div><div class="kcell k-hv"><span class="vi-tr">thần</span> </div><div class="kcell k-read"><div class="on">ジン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>大臣<rp>（</rp><rt>だいじん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bộ trưởng</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">民</div></div><div class="kcell k-hv"><span class="vi-tr">dân</span> </div><div class="kcell k-read"><div class="on">ミン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>民主主義<rp>（</rp><rt>みんしゅしゅぎ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chủ nghĩa dân chủ</span></div></div><div class="kitem"><div class="jp"><ruby>民間<rp>（</rp><rt>みんかん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tư nhân</span> </div></div><div class="kitem"><div class="jp"><ruby>国民<rp>（</rp><rt>こくみん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quốc dân</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">省</div></div><div class="kcell k-hv"><span class="vi-tr">tỉnh</span> </div><div class="kcell k-read"><div class="on">ショウ／セイ</div><div>（かえりーみる）／はぶーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>省<rp>（</rp><rt>はぶ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">bớt</span> </div></div><div class="kitem"><div class="jp"><ruby>省略<rp>（</rp><rt>しょうりゃく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">rút gọn</span> </div></div><div class="kitem"><div class="jp"><ruby>環境省<rp>（</rp><rt>かんきょうしょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bộ môi trường</span></div></div><div class="kitem"><div class="jp"><ruby>反省<rp>（</rp><rt>はんせい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">rút kinh nghiệm</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">総</div></div><div class="kcell k-hv"><span class="vi-tr">tổng</span> </div><div class="kcell k-read"><div class="on">ソウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>総理大臣<rp>（</rp><rt>そうりだいじん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thủ tướng</span> </div></div><div class="kitem"><div class="jp"><ruby>総合<rp>（</rp><rt>そうごう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tổng hợp</span> </div></div><div class="kitem"><div class="jp"><ruby>総復習<rp>（</rp><rt>そうふくしゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tổng ôn tập</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u><ruby>首相<rp>（</rp><rt>しゅしょう</rt><rp>）</rp></ruby></u>は<ruby>国際会議<rp>（</rp><rt>こくさいかいぎ</rt><rp>）</rp></ruby>に<ruby>出席<rp>（</rp><rt>しゅっせき</rt><rp>）</rp></ruby>するため<ruby>渡米<rp>（</rp><rt>とべい</rt><rp>）</rp></ruby>した。</td><td>a. しゅそう</td><td>b. しゅしょう</td></tr><tr><td>2. <ruby>細<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>かいことは<u><ruby>省<rp>（</rp><rt>はぶ</rt><rp>）</rp></ruby>いて</u>、<ruby>要点<rp>（</rp><rt>ようてん</rt><rp>）</rp></ruby>だけ<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>してください。</td><td>a. のぞいて</td><td>b. はぶいて</td></tr><tr><td>3. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>の<ruby>代表<rp>（</rp><rt>だいひょう</rt><rp>）</rp></ruby>は<u><ruby>民主的<rp>（</rp><rt>みんしゅてき</rt><rp>）</rp></ruby></u>に<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>ばれるべきだ。</td><td>a. みんしゅ</td><td>b. めんしゅう</td></tr><tr><td>4. <ruby>事故<rp>（</rp><rt>じこ</rt><rp>）</rp></ruby>について、<u><ruby>政府<rp>（</rp><rt>せいふ</rt><rp>）</rp></ruby></u>がコメントを<ruby>発表<rp>（</rp><rt>はっぴょう</rt><rp>）</rp></ruby>した。</td><td>a. せいじ</td><td>b. せいふ</td></tr><tr><td>5. すみませんでした。<ruby>大変<rp>（</rp><rt>たいへん</rt><rp>）</rp></ruby><u><ruby>反省<rp>（</rp><rt>はんせい</rt><rp>）</rp></ruby></u>しています。</td><td>a. はんせい</td><td>b. はんじょう</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u><ruby>首相<rp>（</rp><rt>しゅしょう</rt><rp>）</rp></ruby></u>は<ruby>国際会議<rp>（</rp><rt>こくさいかいぎ</rt><rp>）</rp></ruby>に<ruby>出席<rp>（</rp><rt>しゅっせき</rt><rp>）</rp></ruby>するため<ruby>渡米<rp>（</rp><rt>とべい</rt><rp>）</rp></ruby>した。</td><td><b>しゅしょう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>細<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>かいことは<u><ruby>省<rp>（</rp><rt>はぶ</rt><rp>）</rp></ruby>いて</u>、<ruby>要点<rp>（</rp><rt>ようてん</rt><rp>）</rp></ruby>だけ<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>してください。</td><td><b>はぶいて</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>の<ruby>代表<rp>（</rp><rt>だいひょう</rt><rp>）</rp></ruby>は<u><ruby>民主的<rp>（</rp><rt>みんしゅてき</rt><rp>）</rp></ruby></u>に<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>ばれるべきだ。</td><td><b>みんしゅ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>事故<rp>（</rp><rt>じこ</rt><rp>）</rp></ruby>について、<u><ruby>政府<rp>（</rp><rt>せいふ</rt><rp>）</rp></ruby></u>がコメントを<ruby>発表<rp>（</rp><rt>はっぴょう</rt><rp>）</rp></ruby>した。</td><td><b>せいふ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. すみませんでした。<ruby>大変<rp>（</rp><rt>たいへん</rt><rp>）</rp></ruby><u><ruby>反省<rp>（</rp><rt>はんせい</rt><rp>）</rp></ruby></u>しています。</td><td><b>はんせい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. この<ruby>政<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><u>とう</u>の<ruby>人気<rp>（</rp><rt>にんき</rt><rp>）</rp></ruby>が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>まってきている。</td><td>a. 党</td><td>b. 常</td><td>c. 労</td></tr><tr><td>2. <ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>に<ruby>代<rp>（</rp><rt>か</rt><rp>）</rp></ruby>わって<u>ふく</u><ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>が<ruby>挨拶<rp>（</rp><rt>あいさつ</rt><rp>）</rp></ruby>した。</td><td>a. 福</td><td>b. 副</td><td>c. 複</td></tr><tr><td>3. <ruby>試合会場<rp>（</rp><rt>しあいかいじょう</rt><rp>）</rp></ruby>は<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>の<u>そう</u><ruby>合体育館<rp>（</rp><rt>ごうたいいくかん</rt><rp>）</rp></ruby>だ。</td><td>a. 集</td><td>b. 総</td><td>c. 統</td></tr><tr><td>4. <ruby>国営<rp>（</rp><rt>こくえい</rt><rp>）</rp></ruby>だった<ruby>企業<rp>（</rp><rt>きぎょう</rt><rp>）</rp></ruby>が<u>みん</u><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>の<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>になった。</td><td>a. 氏</td><td>b. 眠</td><td>c. 民</td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>の<ruby>結婚式<rp>（</rp><rt>けっこんしき</rt><rp>）</rp></ruby>では<ruby>大<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><u>じん</u>がスピーチしたんだよ。</td><td>a. 巨</td><td>b. 臣</td><td>c. 匹</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. この<ruby>政<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><u>とう</u>の<ruby>人気<rp>（</rp><rt>にんき</rt><rp>）</rp></ruby>が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>まってきている。</td><td><b>党</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>に<ruby>代<rp>（</rp><rt>か</rt><rp>）</rp></ruby>わって<u>ふく</u><ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>が<ruby>挨拶<rp>（</rp><rt>あいさつ</rt><rp>）</rp></ruby>した。</td><td><b>副</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>試合会場<rp>（</rp><rt>しあいかいじょう</rt><rp>）</rp></ruby>は<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>の<u>そう</u><ruby>合体育館<rp>（</rp><rt>ごうたいいくかん</rt><rp>）</rp></ruby>だ。</td><td><b>総</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>国営<rp>（</rp><rt>こくえい</rt><rp>）</rp></ruby>だった<ruby>企業<rp>（</rp><rt>きぎょう</rt><rp>）</rp></ruby>が<u>みん</u><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>の<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>になった。</td><td><b>民</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>の<ruby>結婚式<rp>（</rp><rt>けっこんしき</rt><rp>）</rp></ruby>では<ruby>大<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><u>じん</u>がスピーチしたんだよ。</td><td><b>臣</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>以上<rp>（</rp><rt>いじょう</rt><rp>）</rp></ruby>の<ruby>説明<rp>（</rp><rt>せつめい</rt><rp>）</rp></ruby>に<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>か（　　　）すべきことがありますか。</td><td>a. 補足</td><td>b. 当選</td></tr><tr><td>2. （　　　）の<ruby>結果<rp>（</rp><rt>けっか</rt><rp>）</rp></ruby>、<ruby>新年<rp>（</rp><rt>しんねん</rt><rp>）</rp></ruby><ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>の<ruby>委員<rp>（</rp><rt>いいん</rt><rp>）</rp></ruby>が<ruby>決<rp>（</rp><rt>き</rt><rp>）</rp></ruby>まった。</td><td>a. 選挙</td><td>b. 官庁</td></tr><tr><td>3. <ruby>文学賞<rp>（</rp><rt>ぶんがくしょう</rt><rp>）</rp></ruby>の（　　　）として５<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>の<ruby>小説家<rp>（</rp><rt>しょうせつか</rt><rp>）</rp></ruby>が<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>ばれた。</td><td>a. 相手</td><td>b. 候補</td></tr><tr><td>4. <ruby>収入<rp>（</rp><rt>しゅうにゅう</rt><rp>）</rp></ruby>が<ruby>増<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>えると、（　　　）される<ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>も<ruby>増<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>える。</td><td>a. 相談</td><td>b. 課税</td></tr><tr><td>5. <ruby>空港<rp>（</rp><rt>くうこう</rt><rp>）</rp></ruby>の（　　　）で<ruby>荷物<rp>（</rp><rt>にもつ</rt><rp>）</rp></ruby>を<ruby>検査<rp>（</rp><rt>けんさ</rt><rp>）</rp></ruby>された。</td><td>a. 税関</td><td>b. 税金</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>以上<rp>（</rp><rt>いじょう</rt><rp>）</rp></ruby>の<ruby>説明<rp>（</rp><rt>せつめい</rt><rp>）</rp></ruby>に<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>か（　　　）すべきことがありますか。</td><td><b>補足</b> (ほそく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. （　　　）の<ruby>結果<rp>（</rp><rt>けっか</rt><rp>）</rp></ruby>、<ruby>新年<rp>（</rp><rt>しんねん</rt><rp>）</rp></ruby><ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>の<ruby>委員<rp>（</rp><rt>いいん</rt><rp>）</rp></ruby>が<ruby>決<rp>（</rp><rt>き</rt><rp>）</rp></ruby>まった。</td><td><b>選挙</b> (せんきょ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>文学賞<rp>（</rp><rt>ぶんがくしょう</rt><rp>）</rp></ruby>の（　　　）として５<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>の<ruby>小説家<rp>（</rp><rt>しょうせつか</rt><rp>）</rp></ruby>が<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>ばれた。</td><td><b>候補</b> (こうほ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>収入<rp>（</rp><rt>しゅうにゅう</rt><rp>）</rp></ruby>が<ruby>増<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>えると、（　　　）される<ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>も<ruby>増<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>える。</td><td><b>課税</b> (かぜい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>空港<rp>（</rp><rt>くうこう</rt><rp>）</rp></ruby>の（　　　）で<ruby>荷物<rp>（</rp><rt>にもつ</rt><rp>）</rp></ruby>を<ruby>検査<rp>（</rp><rt>けんさ</rt><rp>）</rp></ruby>された。</td><td><b>税関</b> (ぜいかん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-7-1"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-7-bai-1.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","chính":"main","chính trị":"politics","chính trị gia":"politician","chính phủ":"government","phó":"deputy","phó thủ tướng":"Deputy Prime Minister","thuế":"tax","tiền thuế":"tax money","hải quan":"custom","đánh thuế":"tax","thuế tiêu thụ":"consumption tax","đảng":"party","chính đảng":"political party","Đảng Xã hội":"Socialist Party","bổ":"nutritious","bù đắp":"offset","thêm vào":"add","ứng cử viên":"candidate","tuyển":"recruitment","bầu cử":"elector","tuyển thủ":"player","lựa chọn":"select","trúng cử":"elected","tương":"soy sauce","đối phương":"enemy","vẫn thế, không thay đổi":"still the same, no change","tư vấn":"advise","thủ tướng":"prime minister","thần":"god","bộ trưởng":"minister","dân":"people","chủ nghĩa dân chủ":"democracy","tư nhân":"private","quốc dân":"national","tỉnh":"conscious","bớt":"less","rút gọn":"abbreviated","bộ môi trường":"Ministry of Environment","rút kinh nghiệm":"learn from experience","tổng":"total","tổng hợp":"synthetic","tổng ôn tập":"total review","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","chính":"utama","chính trị":"politik","chính trị gia":"politikus","chính phủ":"pemerintah","phó":"wakil","phó thủ tướng":"Wakil Perdana Menteri","thuế":"pajak","tiền thuế":"uang pajak","hải quan":"kebiasaan","đánh thuế":"pajak","thuế tiêu thụ":"pajak konsumsi","đảng":"berpesta","chính đảng":"partai politik","Đảng Xã hội":"Partai Sosialis","bổ":"bergizi","bù đắp":"mengimbangi","thêm vào":"menambahkan","ứng cử viên":"calon","tuyển":"perekrutan","bầu cử":"pemilih","tuyển thủ":"pemain","lựa chọn":"memilih","trúng cử":"terpilih","tương":"kecap","đối phương":"musuh","vẫn thế, không thay đổi":"masih sama, tidak ada perubahan","tư vấn":"menasihati","thủ tướng":"Perdana Menteri","thần":"Tuhan","bộ trưởng":"menteri","dân":"rakyat","chủ nghĩa dân chủ":"demokrasi","tư nhân":"pribadi","quốc dân":"nasional","tỉnh":"sadar","bớt":"lebih sedikit","rút gọn":"disingkat","bộ môi trường":"Kementerian Lingkungan Hidup","rút kinh nghiệm":"belajar dari pengalaman","tổng":"total","tổng hợp":"sintetis","tổng ôn tập":"ulasan keseluruhan","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","chính":"मुख्य","chính trị":"राजनीति","chính trị gia":"राजनीतिज्ञ","chính phủ":"सरकार","phó":"उप","phó thủ tướng":"उपप्रधानमन्त्री","thuế":"कर","tiền thuế":"कर पैसा","hải quan":"अनुकूलन","đánh thuế":"कर","thuế tiêu thụ":"उपभोग कर","đảng":"पार्टी","chính đảng":"राजनीतिक दल","Đảng Xã hội":"समाजवादी पार्टी","bổ":"पौष्टिक","bù đắp":"अफसेट","thêm vào":"थप्नुहोस्","ứng cử viên":"उम्मेदवार","tuyển":"भर्ती","bầu cử":"निर्वाचक","tuyển thủ":"खेलाडी","lựa chọn":"चयन गर्नुहोस्","trúng cử":"निर्वाचित","tương":"सोया सस","đối phương":"शत्रु","vẫn thế, không thay đổi":"अझै उस्तै छ, परिवर्तन छैन","tư vấn":"सल्लाह","thủ tướng":"प्रधानमन्त्री","thần":"भगवान","bộ trưởng":"मन्त्री","dân":"मानिसहरू","chủ nghĩa dân chủ":"लोकतन्त्र","tư nhân":"निजी","quốc dân":"राष्ट्रिय","tỉnh":"सचेत","bớt":"कम","rút gọn":"संक्षिप्त","bộ môi trường":"वातावरण मन्त्रालय","rút kinh nghiệm":"अनुभवबाट सिक्नुहोस्","tổng":"कुल","tổng hợp":"सिंथेटिक","tổng ôn tập":"कुल समीक्षा","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","chính":"အဓိက","chính trị":"နိုင်ငံရေး","chính trị gia":"နိုင်ငံရေးသမား","chính phủ":"အစိုးရ","phó":"ဒု","phó thủ tướng":"ဒုဝန်ကြီးချုပ်","thuế":"အခွန်","tiền thuế":"အခွန်ငွေ","hải quan":"စိတ်ကြိုက်","đánh thuế":"အခွန်","thuế tiêu thụ":"စားသုံးခွန်","đảng":"ပါတီ","chính đảng":"နိုင်ငံရေး ပါတီ","Đảng Xã hội":"ဆိုရှယ်လစ်ပါတီ","bổ":"အာဟာရပြည့်ဝသော","bù đắp":"နှိမ်သည်။","thêm vào":"ထည့်ပါ။","ứng cử viên":"ကိုယ်စားလှယ်လောင်း","tuyển":"စုဆောင်းရေး","bầu cử":"ရွေးကောက်ပွဲ","tuyển thủ":"ကစားသမား","lựa chọn":"ရွေးချယ်ပါ။","trúng cử":"ရွေးကောက်ခံ","tương":"ပဲငံပြာရည်","đối phương":"ရန်သူ","vẫn thế, không thay đổi":"အတူတူပါပဲ၊ မပြောင်းလဲပါဘူး။","tư vấn":"အကြံပေး","thủ tướng":"ဝန်ကြီးချုပ်","thần":"ဘုရား","bộ trưởng":"ဝန်ကြီး","dân":"လူတွေ","chủ nghĩa dân chủ":"ဒီမိုကရေစီ","tư nhân":"သီးသန့်","quốc dân":"အမျိုးသား","tỉnh":"သတိရှိ","bớt":"နည်းသော","rút gọn":"အတိုကောက်","bộ môi trường":"ပတ်ဝန်းကျင် ထိန်းသိမ်းရေး ဝန်ကြီးဌာန","rút kinh nghiệm":"အတွေ့အကြုံကနေ သင်ယူပါ။","tổng":"စုစုပေါင်း","tổng hợp":"ဓာတုပစ္စည်း","tổng ôn tập":"စုစုပေါင်းသုံးသပ်ချက်","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","chính":"প্রধান","chính trị":"রাজনীতি","chính trị gia":"রাজনীতিবিদ","chính phủ":"সরকার","phó":"ডেপুটি","phó thủ tướng":"উপ-প্রধানমন্ত্রী","thuế":"ট্যাক্স","tiền thuế":"ট্যাক্সের টাকা","hải quan":"কাস্টম","đánh thuế":"ট্যাক্স","thuế tiêu thụ":"ভোগ কর","đảng":"পার্টি","chính đảng":"রাজনৈতিক দল","Đảng Xã hội":"সমাজতান্ত্রিক দল","bổ":"পুষ্টিকর","bù đắp":"অফসেট","thêm vào":"যোগ করুন","ứng cử viên":"প্রার্থী","tuyển":"নিয়োগ","bầu cử":"নির্বাচক","tuyển thủ":"খেলোয়াড়","lựa chọn":"নির্বাচন করুন","trúng cử":"নির্বাচিত","tương":"সয়া সস","đối phương":"শত্রু","vẫn thế, không thay đổi":"এখনও একই, কোন পরিবর্তন নেই","tư vấn":"পরামর্শ","thủ tướng":"প্রধানমন্ত্রী","thần":"ঈশ্বর","bộ trưởng":"মন্ত্রী","dân":"মানুষ","chủ nghĩa dân chủ":"গণতন্ত্র","tư nhân":"ব্যক্তিগত","quốc dân":"জাতীয়","tỉnh":"সচেতন","bớt":"কম","rút gọn":"সংক্ষিপ্ত","bộ môi trường":"পরিবেশ মন্ত্রণালয়","rút kinh nghiệm":"অভিজ্ঞতা থেকে শিখুন","tổng":"মোট","tổng hợp":"সিন্থেটিক","tổng ôn tập":"মোট পর্যালোচনা","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","chính":"मुख्य","chính trị":"राजनीति","chính trị gia":"राजनीतिक","chính phủ":"सरकार","phó":"उप","phó thủ tướng":"उप प्रधानमंत्री","thuế":"कर","tiền thuế":"कर का धन","hải quan":"रिवाज़","đánh thuế":"कर","thuế tiêu thụ":"खपत कर","đảng":"दल","chính đảng":"राजनीतिक दल","Đảng Xã hội":"सोशलिस्ट पार्टी","bổ":"पौष्टिक","bù đắp":"ओफ़्सेट","thêm vào":"जोड़ना","ứng cử viên":"उम्मीदवार","tuyển":"भर्ती","bầu cử":"निर्वाचक","tuyển thủ":"खिलाड़ी","lựa chọn":"चुनना","trúng cử":"चुने हुए","tương":"सोया सॉस","đối phương":"दुश्मन","vẫn thế, không thay đổi":"अभी भी वैसा ही है, कोई बदलाव नहीं","tư vấn":"सलाह देना","thủ tướng":"प्रधान मंत्री","thần":"ईश्वर","bộ trưởng":"मंत्री","dân":"लोग","chủ nghĩa dân chủ":"प्रजातंत्र","tư nhân":"निजी","quốc dân":"राष्ट्रीय","tỉnh":"सचेत","bớt":"कम","rút gọn":"संक्षिप्त","bộ môi trường":"पर्यावरण मंत्रालय","rút kinh nghiệm":"अनुभव से सीखें","tổng":"कुल","tổng hợp":"कृत्रिम","tổng ôn tập":"कुल समीक्षा","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","chính":"หลัก","chính trị":"การเมือง","chính trị gia":"นักการเมือง","chính phủ":"รัฐบาล","phó":"รอง","phó thủ tướng":"รองนายกรัฐมนตรี","thuế":"ภาษี","tiền thuế":"เงินภาษี","hải quan":"กำหนดเอง","đánh thuế":"ภาษี","thuế tiêu thụ":"ภาษีการบริโภค","đảng":"งานสังสรรค์","chính đảng":"พรรคการเมือง","Đảng Xã hội":"พรรคสังคมนิยม","bổ":"มีคุณค่าทางโภชนาการ","bù đắp":"ชดเชย","thêm vào":"เพิ่ม","ứng cử viên":"ผู้สมัคร","tuyển":"การสรรหาบุคลากร","bầu cử":"ผู้มีสิทธิเลือกตั้ง","tuyển thủ":"ผู้เล่น","lựa chọn":"เลือก","trúng cử":"ได้รับเลือก","tương":"ซอสถั่วเหลือง","đối phương":"ศัตรู","vẫn thế, không thay đổi":"ยังคงเหมือนเดิมไม่เปลี่ยนแปลง","tư vấn":"ให้คำแนะนำ","thủ tướng":"นายกรัฐมนตรี","thần":"พระเจ้า","bộ trưởng":"รัฐมนตรี","dân":"ประชากร","chủ nghĩa dân chủ":"ประชาธิปไตย","tư nhân":"ส่วนตัว","quốc dân":"ระดับชาติ","tỉnh":"มีสติ","bớt":"น้อย","rút gọn":"ย่อ","bộ môi trường":"กระทรวงสิ่งแวดล้อม","rút kinh nghiệm":"เรียนรู้จากประสบการณ์","tổng":"ทั้งหมด","tổng hợp":"สังเคราะห์","tổng ôn tập":"รีวิวทั้งหมด","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

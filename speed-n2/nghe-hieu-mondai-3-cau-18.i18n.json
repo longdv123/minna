@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Một người đàn ông đang nói tại buổi thuyết trình.": "A man speaking at a presentation.",
+    "Hiện nay, robot hoạt động trong nhà máy thực hiện những công việc khó đối với con người, thay cho con người và với tốc độ nhanh hơn nhiều. Chúng được dùng trong nhiều quy trình sản xuất của các sản phẩm khác nhau, như chế biến thực phẩm, lắp ráp máy móc hay ô tô. Robot cũng được sử dụng trong các hoạt động cứu hộ tại những nơi xảy ra thiên tai. Trong bối cảnh đó, điều ngày càng được chú ý là robot giúp đỡ trực tiếp từng con người — đóng vai trò làm tay chân cho người khuyết tật hoặc người cao tuổi, hỗ trợ sinh hoạt. Tất nhiên, điều này đòi hỏi những chuyển động và khả năng phán đoán tinh tế hơn, gần gũi với con người hơn trước đây.": "Currently, robots operating in factories perform tasks that are difficult for humans, instead of humans and at a much faster speed. They are used in many production processes of different products, such as food processing, machinery or automobile assembly. Robots are also used in rescue operations at places where natural disasters occur. In that context, what is increasingly being noticed is robots helping individual people directly — acting as limbs for disabled or elderly people, providing living support. Of course, this requires more subtle movements and judgment, closer to human than before.",
+    "Trong tương lai, người ta kỳ vọng gì ở robot?": "In the future, what do people expect from robots?",
+    "Thực hiện tất cả công việc thay cho con người.": "Do all the work on behalf of humans.",
+    "Hỗ trợ cuộc sống cá nhân.": "Personal life support.",
+    "Giúp người khi xảy ra động đất hay hỏa hoạn, v.v.": "Help people when an earthquake or fire occurs, etc.",
+    "Làm việc nhanh hơn và nhiều hơn.": "Work faster and more.",
+    "Đáp án": "Answer"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Một người đàn ông đang nói tại buổi thuyết trình.": "Seorang pria berbicara di sebuah presentasi.",
+    "Hiện nay, robot hoạt động trong nhà máy thực hiện những công việc khó đối với con người, thay cho con người và với tốc độ nhanh hơn nhiều. Chúng được dùng trong nhiều quy trình sản xuất của các sản phẩm khác nhau, như chế biến thực phẩm, lắp ráp máy móc hay ô tô. Robot cũng được sử dụng trong các hoạt động cứu hộ tại những nơi xảy ra thiên tai. Trong bối cảnh đó, điều ngày càng được chú ý là robot giúp đỡ trực tiếp từng con người — đóng vai trò làm tay chân cho người khuyết tật hoặc người cao tuổi, hỗ trợ sinh hoạt. Tất nhiên, điều này đòi hỏi những chuyển động và khả năng phán đoán tinh tế hơn, gần gũi với con người hơn trước đây.": "Saat ini, robot yang beroperasi di pabrik melakukan tugas-tugas yang sulit dilakukan manusia, bukan manusia, dan dengan kecepatan yang jauh lebih cepat. Mereka digunakan dalam banyak proses produksi produk yang berbeda, seperti pengolahan makanan, perakitan mesin atau mobil. Robot juga digunakan dalam operasi penyelamatan di tempat terjadinya bencana alam. Dalam konteks ini, yang semakin diperhatikan adalah robot yang membantu individu secara langsung – bertindak sebagai anggota tubuh bagi penyandang disabilitas atau lanjut usia, serta memberikan dukungan hidup. Tentu saja, hal ini membutuhkan gerakan dan penilaian yang lebih halus, lebih dekat dengan manusia dibandingkan sebelumnya.",
+    "Trong tương lai, người ta kỳ vọng gì ở robot?": "Di masa depan, apa yang diharapkan manusia dari robot?",
+    "Thực hiện tất cả công việc thay cho con người.": "Lakukan semua pekerjaan atas nama manusia.",
+    "Hỗ trợ cuộc sống cá nhân.": "Dukungan kehidupan pribadi.",
+    "Giúp người khi xảy ra động đất hay hỏa hoạn, v.v.": "Membantu orang ketika terjadi gempa bumi atau kebakaran, dll.",
+    "Làm việc nhanh hơn và nhiều hơn.": "Bekerja lebih cepat dan lebih banyak.",
+    "Đáp án": "Menjawab"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Một người đàn ông đang nói tại buổi thuyết trình.": "एक व्यक्ति एक प्रस्तुतीकरण मा बोल्दै।",
+    "Hiện nay, robot hoạt động trong nhà máy thực hiện những công việc khó đối với con người, thay cho con người và với tốc độ nhanh hơn nhiều. Chúng được dùng trong nhiều quy trình sản xuất của các sản phẩm khác nhau, như chế biến thực phẩm, lắp ráp máy móc hay ô tô. Robot cũng được sử dụng trong các hoạt động cứu hộ tại những nơi xảy ra thiên tai. Trong bối cảnh đó, điều ngày càng được chú ý là robot giúp đỡ trực tiếp từng con người — đóng vai trò làm tay chân cho người khuyết tật hoặc người cao tuổi, hỗ trợ sinh hoạt. Tất nhiên, điều này đòi hỏi những chuyển động và khả năng phán đoán tinh tế hơn, gần gũi với con người hơn trước đây.": "हाल, कारखानाहरूमा सञ्चालित रोबोटहरूले मानिसहरूको सट्टा र धेरै छिटो गतिमा मानिसहरूलाई गाह्रो हुने कार्यहरू गर्छन्। तिनीहरू विभिन्न उत्पादनहरूको धेरै उत्पादन प्रक्रियाहरूमा प्रयोग गरिन्छ, जस्तै खाद्य प्रशोधन, मेसिनरी वा अटोमोबाइल असेंबली। प्राकृतिक प्रकोप हुने ठाउँमा उद्धार कार्यमा पनि रोबोटको प्रयोग गरिन्छ। त्यस सन्दर्भमा, रोबोटहरूले व्यक्तिगत व्यक्तिहरूलाई प्रत्यक्ष रूपमा मद्दत गर्ने कुरा - अशक्त वा वृद्ध व्यक्तिहरूको लागि अंगको रूपमा काम गर्ने, जीवित समर्थन प्रदान गर्ने कुरा बढ्दो रूपमा ध्यान दिइन्छ। निस्सन्देह, यसका लागि पहिलेको भन्दा मानवको नजिक धेरै सूक्ष्म आन्दोलन र निर्णय चाहिन्छ।",
+    "Trong tương lai, người ta kỳ vọng gì ở robot?": "भविष्यमा, मानिसहरूले रोबोटबाट के आशा गर्छन्?",
+    "Thực hiện tất cả công việc thay cho con người.": "सबै काम मानिसको तर्फबाट गर।",
+    "Hỗ trợ cuộc sống cá nhân.": "व्यक्तिगत जीवन समर्थन।",
+    "Giúp người khi xảy ra động đất hay hỏa hoạn, v.v.": "भूकम्प वा आगलागी हुँदा मानिसहरूलाई मद्दत गर्नुहोस्, आदि।",
+    "Làm việc nhanh hơn và nhiều hơn.": "छिटो र अधिक काम गर्नुहोस्।",
+    "Đáp án": "जवाफ"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Một người đàn ông đang nói tại buổi thuyết trình.": "မိတ်ဆက်ပွဲတစ်ခုမှာ စကားပြောနေတဲ့ လူတစ်ယောက်။",
+    "Hiện nay, robot hoạt động trong nhà máy thực hiện những công việc khó đối với con người, thay cho con người và với tốc độ nhanh hơn nhiều. Chúng được dùng trong nhiều quy trình sản xuất của các sản phẩm khác nhau, như chế biến thực phẩm, lắp ráp máy móc hay ô tô. Robot cũng được sử dụng trong các hoạt động cứu hộ tại những nơi xảy ra thiên tai. Trong bối cảnh đó, điều ngày càng được chú ý là robot giúp đỡ trực tiếp từng con người — đóng vai trò làm tay chân cho người khuyết tật hoặc người cao tuổi, hỗ trợ sinh hoạt. Tất nhiên, điều này đòi hỏi những chuyển động và khả năng phán đoán tinh tế hơn, gần gũi với con người hơn trước đây.": "လက်ရှိတွင် စက်ရုံများတွင် လည်ပတ်နေသော စက်ရုပ်များသည် လူသားများအစား လူသားများအတွက် ခက်ခဲသော အလုပ်များကို လုပ်ဆောင်ကြပြီး ပိုမိုမြန်ဆန်သော အရှိန်ဖြင့် လုပ်ဆောင်ကြသည်။ ၎င်းတို့ကို အစားအသောက်ပြုပြင်ခြင်း၊ စက်ယန္တရားများ သို့မဟုတ် မော်တော်ယာဥ်တပ်ဆင်ခြင်းကဲ့သို့သော မတူညီသောထုတ်ကုန်များ၏ ထုတ်လုပ်မှုလုပ်ငန်းစဉ်များစွာတွင် အသုံးပြုကြသည်။ စက်ရုပ်များကို သဘာဝဘေးအန္တရာယ် ကျရောက်သည့်နေရာများတွင် ကယ်ဆယ်ရေးလုပ်ငန်းများ ဆောင်ရွက်ရာတွင်လည်း အသုံးပြုကြသည်။ ထိုအခြေအနေတွင်၊ လူတစ်ဦးချင်းစီကို တိုက်ရိုက်ကူညီနေသည့် စက်ရုပ်များသည် မသန်စွမ်းသူများ သို့မဟုတ် သက်ကြီးရွယ်အိုများအတွက် အသက်မွေးဝမ်းကြောင်းဆိုင်ရာ အထောက်အပံ့များ ပေးဆောင်နေသည့် စက်ရုပ်များအဖြစ် ပိုမိုသတိပြုမိလာခြင်းဖြစ်သည်။ ဟုတ်ပါတယ်၊ ဒါက အရင်ကထက် ပိုပြီး သိမ်မွေ့တဲ့ လှုပ်ရှားမှုတွေနဲ့ တရားစီရင်မှုတွေ လိုအပ်တယ်၊ အရင်ကထက် လူသားနဲ့ ပိုနီးစပ်တယ်။",
+    "Trong tương lai, người ta kỳ vọng gì ở robot?": "အနာဂတ်မှာ လူတွေက စက်ရုပ်တွေဆီကနေ ဘာတွေမျှော်လင့်ထားလဲ။",
+    "Thực hiện tất cả công việc thay cho con người.": "လူသားများကိုယ်စား အလုပ်အားလုံးကို လုပ်ပါ။",
+    "Hỗ trợ cuộc sống cá nhân.": "ကိုယ်ရေးကိုယ်တာ အထောက်အပံ့။",
+    "Giúp người khi xảy ra động đất hay hỏa hoạn, v.v.": "မြေငလျင် သို့မဟုတ် မီးလောင်မှု ဖြစ်ပွားသည့်အခါ လူများကို ကူညီပါ ။",
+    "Làm việc nhanh hơn và nhiều hơn.": "အလုပ်ပိုမြန်တယ်။",
+    "Đáp án": "ဖြေ"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Một người đàn ông đang nói tại buổi thuyết trình.": "একজন ব্যক্তি একটি উপস্থাপনায় কথা বলছেন।",
+    "Hiện nay, robot hoạt động trong nhà máy thực hiện những công việc khó đối với con người, thay cho con người và với tốc độ nhanh hơn nhiều. Chúng được dùng trong nhiều quy trình sản xuất của các sản phẩm khác nhau, như chế biến thực phẩm, lắp ráp máy móc hay ô tô. Robot cũng được sử dụng trong các hoạt động cứu hộ tại những nơi xảy ra thiên tai. Trong bối cảnh đó, điều ngày càng được chú ý là robot giúp đỡ trực tiếp từng con người — đóng vai trò làm tay chân cho người khuyết tật hoặc người cao tuổi, hỗ trợ sinh hoạt. Tất nhiên, điều này đòi hỏi những chuyển động và khả năng phán đoán tinh tế hơn, gần gũi với con người hơn trước đây.": "বর্তমানে, কারখানায় কর্মরত রোবটগুলি মানুষের পরিবর্তে এবং অনেক দ্রুত গতিতে মানুষের জন্য কঠিন কাজগুলি সম্পাদন করে। এগুলি বিভিন্ন পণ্যের অনেক উত্পাদন প্রক্রিয়ায় ব্যবহৃত হয়, যেমন খাদ্য প্রক্রিয়াকরণ, যন্ত্রপাতি বা অটোমোবাইল সমাবেশ। প্রাকৃতিক দুর্যোগের সময় উদ্ধারকাজেও রোবট ব্যবহার করা হয়। সেই প্রেক্ষাপটে, ক্রমবর্ধমানভাবে যে বিষয়টি লক্ষ্য করা যাচ্ছে তা হল রোবটগুলি পৃথক ব্যক্তিদের সরাসরি সাহায্য করে - প্রতিবন্ধী বা বয়স্ক ব্যক্তিদের জন্য অঙ্গ হিসাবে কাজ করে, জীবিত সহায়তা প্রদান করে। অবশ্যই, এর জন্য আরও সূক্ষ্ম গতিবিধি এবং বিচার প্রয়োজন, আগের চেয়ে মানুষের কাছাকাছি।",
+    "Trong tương lai, người ta kỳ vọng gì ở robot?": "ভবিষ্যতে রোবট থেকে মানুষ কি আশা করবে?",
+    "Thực hiện tất cả công việc thay cho con người.": "মানুষের পক্ষে সমস্ত কাজ করুন।",
+    "Hỗ trợ cuộc sống cá nhân.": "ব্যক্তিগত জীবন সমর্থন.",
+    "Giúp người khi xảy ra động đất hay hỏa hoạn, v.v.": "ভূমিকম্প বা অগ্নিকাণ্ড ইত্যাদি হলে মানুষকে সাহায্য করুন।",
+    "Làm việc nhanh hơn và nhiều hơn.": "দ্রুত এবং আরো কাজ.",
+    "Đáp án": "উত্তর"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Một người đàn ông đang nói tại buổi thuyết trình.": "एक आदमी एक प्रेजेंटेशन में बोल रहा है।",
+    "Hiện nay, robot hoạt động trong nhà máy thực hiện những công việc khó đối với con người, thay cho con người và với tốc độ nhanh hơn nhiều. Chúng được dùng trong nhiều quy trình sản xuất của các sản phẩm khác nhau, như chế biến thực phẩm, lắp ráp máy móc hay ô tô. Robot cũng được sử dụng trong các hoạt động cứu hộ tại những nơi xảy ra thiên tai. Trong bối cảnh đó, điều ngày càng được chú ý là robot giúp đỡ trực tiếp từng con người — đóng vai trò làm tay chân cho người khuyết tật hoặc người cao tuổi, hỗ trợ sinh hoạt. Tất nhiên, điều này đòi hỏi những chuyển động và khả năng phán đoán tinh tế hơn, gần gũi với con người hơn trước đây.": "वर्तमान में, कारखानों में काम करने वाले रोबोट इंसानों के बजाय इंसानों के लिए कठिन कार्यों को बहुत तेज गति से करते हैं। इनका उपयोग विभिन्न उत्पादों की कई उत्पादन प्रक्रियाओं में किया जाता है, जैसे खाद्य प्रसंस्करण, मशीनरी या ऑटोमोबाइल असेंबली। प्राकृतिक आपदाओं वाले स्थानों पर बचाव कार्यों में भी रोबोट का उपयोग किया जाता है। उस संदर्भ में, जो बात तेजी से देखी जा रही है वह यह है कि रोबोट सीधे तौर पर व्यक्तिगत लोगों की मदद कर रहे हैं - विकलांग या बुजुर्ग लोगों के लिए अंगों के रूप में कार्य कर रहे हैं, जीवनयापन में सहायता प्रदान कर रहे हैं। बेशक, इसके लिए पहले की तुलना में अधिक सूक्ष्म गतिविधियों और निर्णय की आवश्यकता होती है, जो मानव के करीब हो।",
+    "Trong tương lai, người ta kỳ vọng gì ở robot?": "भविष्य में लोग रोबोट से क्या उम्मीद करते हैं?",
+    "Thực hiện tất cả công việc thay cho con người.": "मनुष्य की ओर से सभी कार्य करें।",
+    "Hỗ trợ cuộc sống cá nhân.": "व्यक्तिगत जीवन का समर्थन.",
+    "Giúp người khi xảy ra động đất hay hỏa hoạn, v.v.": "भूकंप या आग आदि लगने पर लोगों की मदद करें।",
+    "Làm việc nhanh hơn và nhiều hơn.": "तेजी से और अधिक काम करें.",
+    "Đáp án": "उत्तर"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Một người đàn ông đang nói tại buổi thuyết trình.": "ชายคนหนึ่งพูดในการนำเสนอ",
+    "Hiện nay, robot hoạt động trong nhà máy thực hiện những công việc khó đối với con người, thay cho con người và với tốc độ nhanh hơn nhiều. Chúng được dùng trong nhiều quy trình sản xuất của các sản phẩm khác nhau, như chế biến thực phẩm, lắp ráp máy móc hay ô tô. Robot cũng được sử dụng trong các hoạt động cứu hộ tại những nơi xảy ra thiên tai. Trong bối cảnh đó, điều ngày càng được chú ý là robot giúp đỡ trực tiếp từng con người — đóng vai trò làm tay chân cho người khuyết tật hoặc người cao tuổi, hỗ trợ sinh hoạt. Tất nhiên, điều này đòi hỏi những chuyển động và khả năng phán đoán tinh tế hơn, gần gũi với con người hơn trước đây.": "ในปัจจุบัน หุ่นยนต์ที่ทำงานในโรงงานจะทำงานที่ยากสำหรับมนุษย์ แทนที่จะเป็นมนุษย์ และด้วยความเร็วที่เร็วกว่ามาก ใช้ในกระบวนการผลิตผลิตภัณฑ์ต่างๆ มากมาย เช่น การแปรรูปอาหาร เครื่องจักร หรือการประกอบรถยนต์ หุ่นยนต์ยังใช้ในการปฏิบัติการกู้ภัยในสถานที่ที่เกิดภัยพิบัติทางธรรมชาติอีกด้วย ในบริบทดังกล่าว สิ่งที่สังเกตเห็นมากขึ้นคือหุ่นยนต์ช่วยเหลือบุคคลโดยตรง โดยทำหน้าที่เป็นแขนขาสำหรับคนพิการหรือผู้สูงอายุที่ให้การสนับสนุนการดำรงชีวิต แน่นอนว่าสิ่งนี้ต้องการการเคลื่อนไหวและการตัดสินที่ละเอียดอ่อนมากขึ้น ใกล้ชิดกับมนุษย์มากขึ้นกว่าเดิม",
+    "Trong tương lai, người ta kỳ vọng gì ở robot?": "ในอนาคตผู้คนคาดหวังอะไรจากหุ่นยนต์?",
+    "Thực hiện tất cả công việc thay cho con người.": "ทำงานทั้งหมดในนามของมนุษย์",
+    "Hỗ trợ cuộc sống cá nhân.": "การช่วยชีวิตส่วนบุคคล",
+    "Giúp người khi xảy ra động đất hay hỏa hoạn, v.v.": "ช่วยเหลือประชาชนเมื่อเกิดแผ่นดินไหวหรือไฟไหม้ ฯลฯ",
+    "Làm việc nhanh hơn và nhiều hơn.": "ทำงานได้เร็วขึ้นและมากขึ้น",
+    "Đáp án": "คำตอบ"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Người đàn ông và người phụ nữ đang nói chuyện. Người phụ nữ sẽ làm gì sau đó?": "Man and woman are talking. What will the woman do then?",
+    "À, đây chẳng phải là nhà hàng gần đây thường xuất hiện trên tạp chí sao?": "Ah, isn't this the restaurant that often appears in magazines lately?",
+    "À, có thể lắm. Hình như đúng thế này. Khá gần ga nhỉ.": "Ah, it's possible. This seems to be true. Quite close to the station.",
+    "Này, vào thử không? Đúng lúc tớ cũng thấy đói rồi. Nếu bây giờ vào thì sẽ không đông lắm đâu.": "Hey, do you want to try it? Right at that moment I also felt hungry. If you come in now, it won't be too crowded.",
+    "Nhưng mà, trông có vẻ đắt đấy. Vừa nãy mới mua nhiều quá rồi. Để lần sau đi.": "But, it looks expensive. Just bought too much just now. Until next time.",
+    "Ơ...,hiếm khi mới có dịp mà, .... Vậy, để tớ mời nhé.": "Eh..., it's rare to have the opportunity, .... So, let me invite you.",
+    "Vậy à? Nếu nói thế thì....": "Really? If so then....",
+    "Cô gái sẽ làm gì sau đó?": "What will the girl do then?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Người đàn ông và người phụ nữ đang nói chuyện. Người phụ nữ sẽ làm gì sau đó?": "Pria dan wanita sedang berbicara. Lalu apa yang akan dilakukan wanita itu?",
+    "À, đây chẳng phải là nhà hàng gần đây thường xuất hiện trên tạp chí sao?": "Ah, bukankah ini restoran yang sering muncul di majalah belakangan ini?",
+    "À, có thể lắm. Hình như đúng thế này. Khá gần ga nhỉ.": "Ah, itu mungkin. Tampaknya ini benar. Cukup dekat dengan stasiun.",
+    "Này, vào thử không? Đúng lúc tớ cũng thấy đói rồi. Nếu bây giờ vào thì sẽ không đông lắm đâu.": "Hei, apakah kamu ingin mencobanya? Tepat pada saat itu saya juga merasa lapar. Jika Anda masuk sekarang, tidak akan terlalu ramai.",
+    "Nhưng mà, trông có vẻ đắt đấy. Vừa nãy mới mua nhiều quá rồi. Để lần sau đi.": "Tapi, kelihatannya mahal. Baru saja membeli terlalu banyak. Sampai waktu berikutnya.",
+    "Ơ...,hiếm khi mới có dịp mà, .... Vậy, để tớ mời nhé.": "Eh..., jarang ada kesempatan,.... Jadi ijinkan aku mengajakmu.",
+    "Vậy à? Nếu nói thế thì....": "Benar-benar? Jika iya maka....",
+    "Cô gái sẽ làm gì sau đó?": "Lalu apa yang akan dilakukan gadis itu?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Người đàn ông và người phụ nữ đang nói chuyện. Người phụ nữ sẽ làm gì sau đó?": "पुरुष र महिला कुरा गर्दै छन्। त्यसपछि महिलाले के गर्ने ?",
+    "À, đây chẳng phải là nhà hàng gần đây thường xuất hiện trên tạp chí sao?": "आह, यो रेस्टुरेन्ट होइन जुन पछिल्लो समय पत्रिकाहरूमा देखा पर्दछ?",
+    "À, có thể lắm. Hình như đúng thế này. Khá gần ga nhỉ.": "ए, यो सम्भव छ। यो सत्य हो जस्तो लाग्छ। स्टेशनको एकदम नजिक।",
+    "Này, vào thử không? Đúng lúc tớ cũng thấy đói rồi. Nếu bây giờ vào thì sẽ không đông lắm đâu.": "हे, तपाईं यसलाई प्रयास गर्न चाहनुहुन्छ? त्यसैबेला मलाई पनि भोक लागेको थियो । यदि तपाईं अहिले भित्र आउनुभयो भने, यो धेरै भीड हुनेछैन।",
+    "Nhưng mà, trông có vẻ đắt đấy. Vừa nãy mới mua nhiều quá rồi. Để lần sau đi.": "तर, महँगो देखिन्छ । भर्खरै धेरै किनेको छ। अर्को पटक सम्म।",
+    "Ơ...,hiếm khi mới có dịp mà, .... Vậy, để tớ mời nhé.": "ए..., यो अवसर पाउनु दुर्लभ छ, .... त्यसैले, म तपाईंलाई निम्तो दिन्छु।",
+    "Vậy à? Nếu nói thế thì....": "साँच्चै? त्यसो हो भने....",
+    "Cô gái sẽ làm gì sau đó?": "त्यसपछि केटीले के गर्ने?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Người đàn ông và người phụ nữ đang nói chuyện. Người phụ nữ sẽ làm gì sau đó?": "ယောက်ျားနဲ့ မိန်းမ စကားပြောနေကြတယ်။ အဲဒီအခါ မိန်းမက ဘာလုပ်မှာလဲ။",
+    "À, đây chẳng phải là nhà hàng gần đây thường xuất hiện trên tạp chí sao?": "အင်း၊ ဒါက လတ်တလော မဂ္ဂဇင်းတွေမှာ ပေါ်လာတတ်တဲ့ စားသောက်ဆိုင် မဟုတ်ဘူးလား။",
+    "À, có thể lắm. Hình như đúng thế này. Khá gần ga nhỉ.": "အင်း ဖြစ်နိုင်တယ်။ ဒါက မှန်ပုံရပါတယ်။ ဘူတာနဲ့ တော်တော်နီးတယ်။",
+    "Này, vào thử không? Đúng lúc tớ cũng thấy đói rồi. Nếu bây giờ vào thì sẽ không đông lắm đâu.": "ဟေ့၊ မင်းစမ်းကြည့်ချင်လား။ အဲဒီအချိန်မှာ ကျွန်တော်လည်း ဗိုက်ဆာတယ်။ အခုဝင်လာရင် အရမ်းမစည်ကားဘူး။",
+    "Nhưng mà, trông có vẻ đắt đấy. Vừa nãy mới mua nhiều quá rồi. Để lần sau đi.": "သို့သော်၊ စျေးကြီးပုံရသည်။ အခုမှ အရမ်းဝယ်ထားတာ။ နောက်တစ်ကြိမ်တိုင်အောင်။",
+    "Ơ...,hiếm khi mới có dịp mà, .... Vậy, để tớ mời nhé.": "အိုး... အခွင့်အရေးဆိုတာ ရှားပါတယ်.... ဒါကြောင့် ဖိတ်ခေါ်ပါရစေ။",
+    "Vậy à? Nếu nói thế thì....": "တကယ်လား? ဒီလိုဆိုရင်....",
+    "Cô gái sẽ làm gì sau đó?": "အဲဒီအခါ ကောင်မလေး ဘာလုပ်မှာလဲ။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Người đàn ông và người phụ nữ đang nói chuyện. Người phụ nữ sẽ làm gì sau đó?": "পুরুষ এবং মহিলা কথা বলছে। মহিলা তখন কি করবে?",
+    "À, đây chẳng phải là nhà hàng gần đây thường xuất hiện trên tạp chí sao?": "আহ, এটি কি সেই রেস্তোরাঁ নয় যা ইদানীং প্রায়ই পত্রিকায় দেখা যায়?",
+    "À, có thể lắm. Hình như đúng thế này. Khá gần ga nhỉ.": "আহ, এটা সম্ভব. এই সত্য বলে মনে হচ্ছে. স্টেশনের বেশ কাছে।",
+    "Này, vào thử không? Đúng lúc tớ cũng thấy đói rồi. Nếu bây giờ vào thì sẽ không đông lắm đâu.": "আরে, আপনি এটা চেষ্টা করতে চান? ঠিক সেই মুহুর্তে আমারও ক্ষুধা লেগেছিল। আপনি যদি এখন ভিতরে আসেন, খুব ভিড় হবে না।",
+    "Nhưng mà, trông có vẻ đắt đấy. Vừa nãy mới mua nhiều quá rồi. Để lần sau đi.": "কিন্তু, এটা ব্যয়বহুল দেখায়. শুধু এখন খুব বেশী কেনা. পরের বার পর্যন্ত।",
+    "Ơ...,hiếm khi mới có dịp mà, .... Vậy, để tớ mời nhé.": "ওহ..., সুযোগ পাওয়া বিরল, .... তাই, আমি আপনাকে আমন্ত্রণ জানাই।",
+    "Vậy à? Nếu nói thế thì....": "সত্যিই? যদি তাই হয়....",
+    "Cô gái sẽ làm gì sau đó?": "মেয়েটা তখন কি করবে?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Người đàn ông và người phụ nữ đang nói chuyện. Người phụ nữ sẽ làm gì sau đó?": "आदमी और औरत बात कर रहे हैं. फिर महिला क्या करेगी?",
+    "À, đây chẳng phải là nhà hàng gần đây thường xuất hiện trên tạp chí sao?": "आह, क्या यह वह रेस्तरां नहीं है जो हाल ही में अक्सर पत्रिकाओं में दिखाई देता है?",
+    "À, có thể lắm. Hình như đúng thế này. Khá gần ga nhỉ.": "आह, यह संभव है. ये सच प्रतीत होता है. स्टेशन के बिल्कुल नजदीक.",
+    "Này, vào thử không? Đúng lúc tớ cũng thấy đói rồi. Nếu bây giờ vào thì sẽ không đông lắm đâu.": "अरे, क्या आप इसे आज़माना चाहते हैं? ठीक उसी वक्त मुझे भूख भी लग गयी. अगर आप अभी अंदर आएंगे तो ज्यादा भीड़ नहीं होगी।",
+    "Nhưng mà, trông có vẻ đắt đấy. Vừa nãy mới mua nhiều quá rồi. Để lần sau đi.": "लेकिन, ये महंगा लगता है. अभी-अभी बहुत ज्यादा खरीदा है। अगली बार तक।",
+    "Ơ...,hiếm khi mới có dịp mà, .... Vậy, để tớ mời nhé.": "एह..., यह अवसर मिलना दुर्लभ है, .... तो, मैं आपको आमंत्रित करता हूँ।",
+    "Vậy à? Nếu nói thế thì....": "वास्तव में? यदि ऐसा है तो....",
+    "Cô gái sẽ làm gì sau đó?": "फिर लड़की क्या करेगी?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Người đàn ông và người phụ nữ đang nói chuyện. Người phụ nữ sẽ làm gì sau đó?": "ชายและหญิงกำลังคุยกัน แล้วผู้หญิงคนนั้นจะทำยังไงล่ะ?",
+    "À, đây chẳng phải là nhà hàng gần đây thường xuất hiện trên tạp chí sao?": "อ่า ช่วงนี้เป็นร้านอาหารที่ลงนิตยสารบ่อยๆไม่ใช่เหรอ?",
+    "À, có thể lắm. Hình như đúng thế này. Khá gần ga nhỉ.": "อ่า มันเป็นไปได้ นี้ดูเหมือนจะเป็นจริง ค่อนข้างใกล้กับสถานี",
+    "Này, vào thử không? Đúng lúc tớ cũng thấy đói rồi. Nếu bây giờ vào thì sẽ không đông lắm đâu.": "เฮ้คุณอยากลองไหม? ในขณะนั้นฉันก็รู้สึกหิวเช่นกัน ถ้าเข้ามาตอนนี้คนไม่เยอะมาก",
+    "Nhưng mà, trông có vẻ đắt đấy. Vừa nãy mới mua nhiều quá rồi. Để lần sau đi.": "แต่มันดูแพง เพิ่งซื้อมาเกินเมื่อกี้ จนกว่าจะถึงครั้งต่อไป",
+    "Ơ...,hiếm khi mới có dịp mà, .... Vậy, để tớ mời nhé.": "เอ่อ...โอกาสหายากครับ .... เลยขอเรียนเชิญครับ",
+    "Vậy à? Nếu nói thế thì....": "จริงหรือ ถ้าอย่างนั้น....",
+    "Cô gái sẽ làm gì sau đó?": "แล้วหญิงสาวจะทำยังไงล่ะ?"
+  }
+}

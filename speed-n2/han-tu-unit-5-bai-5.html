@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">台</div></div><div class="kcell k-hv"><span class="vi-tr">đài</span></div><div class="kcell k-read"><div class="on">ダイ／タイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>台風<rp>（</rp><rt>たいふう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bão</span> </div></div><div class="kitem"><div class="jp"><ruby>舞台<rp>（</rp><rt>ぶたい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sân khấu</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">怖</div></div><div class="kcell k-hv"><span class="vi-tr">bố</span></div><div class="kcell k-read"><div class="on">フ</div><div>こわーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>怖<rp>（</rp><rt>こわ</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">sợ</span> </div></div><div class="kitem"><div class="jp"><ruby>恐怖<rp>（</rp><rt>きょうふ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nỗi sợ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">洪</div></div><div class="kcell k-hv"><span class="vi-tr">hồng</span> </div><div class="kcell k-read"><div class="on">コウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>洪水<rp>（</rp><rt>こうずい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngập lụt</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">報</div></div><div class="kcell k-hv"><span class="vi-tr">báo</span> </div><div class="kcell k-read"><div class="on">ホウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>報告<rp>（</rp><rt>ほうこく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">báo cáo</span> </div></div><div class="kitem"><div class="jp"><ruby>警報<rp>（</rp><rt>けいほう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cảnh báo</span> </div></div><div class="kitem"><div class="jp"><ruby>情報<rp>（</rp><rt>じょうほう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thông tin</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">告</div></div><div class="kcell k-hv"><span class="vi-tr">cáo</span></div><div class="kcell k-read"><div class="on">コク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>広告<rp>（</rp><rt>こうこく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quảng cáo</span></div></div><div class="kitem"><div class="jp"><ruby>予告<rp>（</rp><rt>よこく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">báo trước</span></div></div><div class="kitem"><div class="jp"><ruby>警告<rp>（</rp><rt>けいこく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">cảnh báo</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">風</div></div><div class="kcell k-hv">phong </div><div class="kcell k-read"><div class="on">フウ／フ</div><div>かぜ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>風景<rp>（</rp><rt>ふうけい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phong cảnh</span> </div></div><div class="kitem"><div class="jp"><ruby>強風<rp>（</rp><rt>きょうふう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">gió mạnh</span> </div></div><div class="kitem"><div class="jp"><ruby>和風<rp>（</rp><rt>わふう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">kiểu Nhật</span> </div></div><div class="kitem"><div class="jp"><ruby>扇風機<rp>（</rp><rt>せんぷうき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quạt máy</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">接</div></div><div class="kcell k-hv"><span class="vi-tr">tiếp</span> </div><div class="kcell k-read"><div class="on">セツ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>直接<rp>（</rp><rt>ちょくせつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trực tiếp</span> </div></div><div class="kitem"><div class="jp"><ruby>面接<rp>（</rp><rt>めんせつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">phỏng vấn</span> </div></div><div class="kitem"><div class="jp"><ruby>接近<rp>（</rp><rt>せっきん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tiếp cận</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">勢</div></div><div class="kcell k-hv"><span class="vi-tr">thế</span></div><div class="kcell k-read"><div class="on">セイ</div><div>いきおーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>勢<rp>（</rp><rt>いきお</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">mạnh mẽ</span></div></div><div class="kitem"><div class="jp"><ruby>勢力<rp>（</rp><rt>せいりょく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sức mạnh</span> </div></div><div class="kitem"><div class="jp"><ruby>大勢<rp>（</rp><rt>おおぜい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nhiều, nhiều người</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">被</div></div><div class="kcell k-hv"><span class="vi-tr">bị</span> </div><div class="kcell k-read"><div class="on">ヒ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>被害<rp>（</rp><rt>ひがい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thiệt hại</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">害</div></div><div class="kcell k-hv"><span class="vi-tr">hại</span> </div><div class="kcell k-read"><div class="on">ガイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>公害<rp>（</rp><rt>こうがい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ô nhiễm</span> </div></div><div class="kitem"><div class="jp"><ruby>損害<rp>（</rp><rt>そんがい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tổn hại</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">突</div></div><div class="kcell k-hv"><span class="vi-tr">đột</span> </div><div class="kcell k-read"><div class="on">トツ</div><div>つーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>突<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">đâm, chọc</span> </div></div><div class="kitem"><div class="jp"><ruby>突<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>き<ruby>当<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>たり</div><div class="vi"><span class="vi-tr">đường cụt</span> </div></div><div class="kitem"><div class="jp"><ruby>突然<rp>（</rp><rt>とつぜん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đột nhiên</span> </div></div><div class="kitem"><div class="jp"><ruby>衝突<rp>（</rp><rt>しょうとつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đâm</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">看</div></div><div class="kcell k-hv"><span class="vi-tr">khán</span> </div><div class="kcell k-read"><div class="on">カン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>看板<rp>（</rp><rt>かんばん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">biển hiệu</span> </div></div><div class="kitem"><div class="jp"><ruby>看病<rp>（</rp><rt>かんびょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">chăm sóc người bệnh</span> </div></div><div class="kitem"><div class="jp"><ruby>看護師<rp>（</rp><rt>かんごし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">y tá</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">倒</div></div><div class="kcell k-hv"><span class="vi-tr">đảo</span> </div><div class="kcell k-read"><div class="on">トウ</div><div>たおーれる／たおーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>倒<rp>（</rp><rt>たお</rt><rp>）</rp></ruby>れる</div><div class="vi"><span class="vi-tr">~ đổ</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>倒<rp>（</rp><rt>たお</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">làm đổ ~</span></div></div><div class="kitem"><div class="jp"><ruby>面倒<rp>（</rp><rt>めんどう</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">phiền toái</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. いつか<ruby>俳優<rp>（</rp><rt>はいゆう</rt><rp>）</rp></ruby>になって、ミュージカルの<u><ruby>舞台<rp>（</rp><rt>ぶたい</rt><rp>）</rp></ruby></u>に<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>ちたい。</td><td>a. ぶだい</td><td>b. ぶたい</td></tr><tr><td>2. <ruby>暑<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>くなってきたから、そろそろ<u><ruby>扇風機<rp>（</rp><rt>せんぷうき</rt><rp>）</rp></ruby></u>を<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>そう。</td><td>a. せんふうき</td><td>b. せんぷうき</td></tr><tr><td>3. ホテルのシャワーは<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>の<u><ruby>勢<rp>（</rp><rt>いきお</rt><rp>）</rp></ruby>い</u>が<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>すぎて、<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いにくかった。</td><td>a. いきおい</td><td>b. いきよい</td></tr><tr><td>4. ビリヤードは、<ruby>玉<rp>（</rp><rt>たま</rt><rp>）</rp></ruby>を<ruby>棒<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>で<u><ruby>突<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>く</u>ゲームです。</td><td>a. つつく</td><td>b. つく</td></tr><tr><td>5. <ruby>台風<rp>（</rp><rt>たいふう</rt><rp>）</rp></ruby>のため、<u><ruby>大勢<rp>（</rp><rt>おおぜい</rt><rp>）</rp></ruby></u>の<ruby>住民<rp>（</rp><rt>じゅうみん</rt><rp>）</rp></ruby>が<ruby>避難<rp>（</rp><rt>ひなん</rt><rp>）</rp></ruby>することになった。</td><td>a. おおせい</td><td>b. おおぜい</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. いつか<ruby>俳優<rp>（</rp><rt>はいゆう</rt><rp>）</rp></ruby>になって、ミュージカルの<u><ruby>舞台<rp>（</rp><rt>ぶたい</rt><rp>）</rp></ruby></u>に<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>ちたい。</td><td><b>ぶたい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>暑<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>くなってきたから、そろそろ<u><ruby>扇風機<rp>（</rp><rt>せんぷうき</rt><rp>）</rp></ruby></u>を<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>そう。</td><td><b>せんぷうき</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. ホテルのシャワーは<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>の<u><ruby>勢<rp>（</rp><rt>いきお</rt><rp>）</rp></ruby>い</u>が<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>すぎて、<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いにくかった。</td><td><b>いきおい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. ビリヤードは、<ruby>玉<rp>（</rp><rt>たま</rt><rp>）</rp></ruby>を<ruby>棒<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>で<u><ruby>突<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>く</u>ゲームです。</td><td><b>つく</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>台風<rp>（</rp><rt>たいふう</rt><rp>）</rp></ruby>のため、<u><ruby>大勢<rp>（</rp><rt>おおぜい</rt><rp>）</rp></ruby></u>の<ruby>住民<rp>（</rp><rt>じゅうみん</rt><rp>）</rp></ruby>が<ruby>避難<rp>（</rp><rt>ひなん</rt><rp>）</rp></ruby>することになった。</td><td><b>おおぜい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>とつ</u><ruby>然<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby>、<ruby>彼女<rp>（</rp><rt>かのじょ</rt><rp>）</rp></ruby>が<ruby>泣<rp>（</rp><rt>な</rt><rp>）</rp></ruby>き<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>して<ruby>困<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>ってしまった。</td><td>a. 窓</td><td>b. 究</td><td>c. 突</td></tr><tr><td>2. <ruby>政府<rp>（</rp><rt>せいふ</rt><rp>）</rp></ruby>に<ruby>反対<rp>（</rp><rt>はんたい</rt><rp>）</rp></ruby>する<u>せい</u><ruby>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>が<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>くなってきた。</td><td>a. 政</td><td>b. 執</td><td>c. 勢</td></tr><tr><td>3. この<ruby>地方<rp>（</rp><rt>ちほう</rt><rp>）</rp></ruby>では<ruby>地震<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby>の<u>ひ</u><ruby>害<rp>（</rp><rt>がい</rt><rp>）</rp></ruby>が<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きかった。</td><td>a. 彼</td><td>b. 被</td><td>c. 披</td></tr><tr><td>4. <u>こわ</u>い<ruby>話<rp>（</rp><rt>はなし</rt><rp>）</rp></ruby>を<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いて、<ruby>夜眠<rp>（</rp><rt>よるねむ</rt><rp>）</rp></ruby>れなくなった。</td><td>a. 怖</td><td>b. 怒</td><td>c. 憎</td></tr><tr><td>5. <ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>の<ruby>間<rp>（</rp><rt>あいだ</rt><rp>）</rp></ruby>、<ruby>母<rp>（</rp><rt>はは</rt><rp>）</rp></ruby>がずっと<u>かん</u><ruby>病<rp>（</rp><rt>びょう</rt><rp>）</rp></ruby>してくれた。</td><td>a. 介</td><td>b. 観</td><td>c. 看</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>とつ</u><ruby>然<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby>、<ruby>彼女<rp>（</rp><rt>かのじょ</rt><rp>）</rp></ruby>が<ruby>泣<rp>（</rp><rt>な</rt><rp>）</rp></ruby>き<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>して<ruby>困<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>ってしまった。</td><td><b>突</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>政府<rp>（</rp><rt>せいふ</rt><rp>）</rp></ruby>に<ruby>反対<rp>（</rp><rt>はんたい</rt><rp>）</rp></ruby>する<u>せい</u><ruby>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>が<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>くなってきた。</td><td><b>勢</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<ruby>地方<rp>（</rp><rt>ちほう</rt><rp>）</rp></ruby>では<ruby>地震<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby>の<u>ひ</u><ruby>害<rp>（</rp><rt>がい</rt><rp>）</rp></ruby>が<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きかった。</td><td><b>被</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <u>こわ</u>い<ruby>話<rp>（</rp><rt>はなし</rt><rp>）</rp></ruby>を<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いて、<ruby>夜眠<rp>（</rp><rt>よるねむ</rt><rp>）</rp></ruby>れなくなった。</td><td><b>怖</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>の<ruby>間<rp>（</rp><rt>あいだ</rt><rp>）</rp></ruby>、<ruby>母<rp>（</rp><rt>はは</rt><rp>）</rp></ruby>がずっと<u>かん</u><ruby>病<rp>（</rp><rt>びょう</rt><rp>）</rp></ruby>してくれた。</td><td><b>看</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>台風<rp>（</rp><rt>たいふう</rt><rp>）</rp></ruby>で大きな木が<ruby>何本<rp>（</rp><rt>なんぼん</rt><rp>）</rp></ruby>も（  　）しまった。</td><td>a. 倒して</td><td>b. 倒れて</td></tr><tr><td>2. <ruby>経済<rp>（</rp><rt>けいざい</rt><rp>）</rp></ruby>が<ruby>急激<rp>（</rp><rt>きゅうげき</rt><rp>）</rp></ruby>に<ruby>発展<rp>（</rp><rt>はってん</rt><rp>）</rp></ruby>すると、（　　　）が<ruby>起<rp>（</rp><rt>お</rt><rp>）</rp></ruby>きることがある。</td><td>a. 公害</td><td>b. 警告</td></tr><tr><td>3. <ruby>各自<rp>（</rp><rt>かくじ</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby>を<ruby>課長<rp>（</rp><rt>かちょう</rt><rp>）</rp></ruby>に（　　　）してください。</td><td>a. 報告</td><td>b. 広告</td></tr><tr><td>4. <ruby>大雨<rp>（</rp><rt>おおあめ</rt><rp>）</rp></ruby>が<ruby>続<rp>（</rp><rt>つづ</rt><rp>）</rp></ruby>いて、（　　　）になるかもしれないと<ruby>恐怖<rp>（</rp><rt>きょうふ</rt><rp>）</rp></ruby>を<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じた。</td><td>a. 和風</td><td>b. 洪水</td></tr><tr><td>5. <ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>の<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>に（　　　）しすぎて、<ruby>衝突<rp>（</rp><rt>しょうとつ</rt><rp>）</rp></ruby>しそうになった。</td><td>a. 接近</td><td>b. 面接</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>台風<rp>（</rp><rt>たいふう</rt><rp>）</rp></ruby>で大きな木が<ruby>何本<rp>（</rp><rt>なんぼん</rt><rp>）</rp></ruby>も（  　）しまった。</td><td><b>倒れて</b> (たおれて)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>経済<rp>（</rp><rt>けいざい</rt><rp>）</rp></ruby>が<ruby>急激<rp>（</rp><rt>きゅうげき</rt><rp>）</rp></ruby>に<ruby>発展<rp>（</rp><rt>はってん</rt><rp>）</rp></ruby>すると、（　　　）が<ruby>起<rp>（</rp><rt>お</rt><rp>）</rp></ruby>きることがある。</td><td><b>公害</b> (こうがい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>各自<rp>（</rp><rt>かくじ</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby>を<ruby>課長<rp>（</rp><rt>かちょう</rt><rp>）</rp></ruby>に（　　　）してください。</td><td><b>報告</b> (ほうこく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>大雨<rp>（</rp><rt>おおあめ</rt><rp>）</rp></ruby>が<ruby>続<rp>（</rp><rt>つづ</rt><rp>）</rp></ruby>いて、（　　　）になるかもしれないと<ruby>恐怖<rp>（</rp><rt>きょうふ</rt><rp>）</rp></ruby>を<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じた。</td><td><b>洪水</b> (こうずい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>の<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>に（　　　）しすぎて、<ruby>衝突<rp>（</rp><rt>しょうとつ</rt><rp>）</rp></ruby>しそうになった。</td><td><b>接近</b> (せっきん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-5-5"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-5-bai-5.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","đài":"station","bão":"storm","sân khấu":"stage","bố":"dad","sợ":"scared","nỗi sợ":"fear","hồng":"pink","ngập lụt":"flooding","báo":"newspaper","báo cáo":"report","cảnh báo":"warning","thông tin":"information","cáo":"fox","quảng cáo":"advertisement","báo trước":"notice in advance","phong cảnh":"scenery","gió mạnh":"strong wind","kiểu Nhật":"Japanese style","quạt máy":"fan","tiếp":"next","trực tiếp":"direct","phỏng vấn":"interview","tiếp cận":"approach","thế":"position","mạnh mẽ":"strong","sức mạnh":"power","nhiều, nhiều người":"many, many people","bị":"bag","thiệt hại":"damages","hại":"harmful","ô nhiễm":"polluted","tổn hại":"harm","đột":"suddenly","đâm, chọc":"stab, poke","đường cụt":"dead end","đột nhiên":"suddenly","đâm":"stab","khán":"audience","biển hiệu":"signboard","chăm sóc người bệnh":"care for sick people","y tá":"nurse","đảo":"island","~ đổ":"~ dump","làm đổ ~":"spill ~","phiền toái":"trouble","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","đài":"stasiun","bão":"badai","sân khấu":"panggung","bố":"ayah","sợ":"takut","nỗi sợ":"takut","hồng":"berwarna merah muda","ngập lụt":"banjir","báo":"koran","báo cáo":"laporan","cảnh báo":"peringatan","thông tin":"informasi","cáo":"rubah","quảng cáo":"iklan","báo trước":"perhatikan terlebih dahulu","phong cảnh":"pemandangan","gió mạnh":"angin kencang","kiểu Nhật":"gaya Jepang","quạt máy":"penggemar","tiếp":"Berikutnya","trực tiếp":"langsung","phỏng vấn":"wawancara","tiếp cận":"mendekati","thế":"posisi","mạnh mẽ":"kuat","sức mạnh":"kekuatan","nhiều, nhiều người":"banyak, banyak orang","bị":"tas","thiệt hại":"ganti rugi","hại":"berbahaya","ô nhiễm":"tercemar","tổn hại":"menyakiti","đột":"Tiba-tiba","đâm, chọc":"menusuk, menyodok","đường cụt":"jalan buntu","đột nhiên":"Tiba-tiba","đâm":"menusuk","khán":"hadirin","biển hiệu":"papan nama","chăm sóc người bệnh":"merawat orang sakit","y tá":"perawat","đảo":"pulau","~ đổ":"~ membuang","làm đổ ~":"tumpah ~","phiền toái":"masalah","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","đài":"स्टेशन","bão":"आँधी","sân khấu":"चरण","bố":"बुबा","sợ":"डराएको","nỗi sợ":"डर","hồng":"गुलाबी","ngập lụt":"बाढी","báo":"अखबार","báo cáo":"रिपोर्ट","cảnh báo":"चेतावनी","thông tin":"जानकारी","cáo":"फक्स","quảng cáo":"विज्ञापन","báo trước":"अग्रिम सूचना","phong cảnh":"दृश्यहरू","gió mạnh":"बलियो हावा","kiểu Nhật":"जापानी शैली","quạt máy":"फ्यान","tiếp":"अर्को","trực tiếp":"प्रत्यक्ष","phỏng vấn":"अन्तर्वार्ता","tiếp cận":"दृष्टिकोण","thế":"स्थिति","mạnh mẽ":"बलियो","sức mạnh":"शक्ति","nhiều, nhiều người":"धेरै, धेरै मानिसहरू","bị":"झोला","thiệt hại":"क्षति","hại":"हानिकारक","ô nhiễm":"प्रदूषित","tổn hại":"हानि","đột":"अचानक","đâm, chọc":"प्रहार, प्रहार","đường cụt":"मृत अन्त","đột nhiên":"अचानक","đâm":"छुरा","khán":"दर्शक","biển hiệu":"साइनबोर्ड","chăm sóc người bệnh":"बिरामी मानिसहरूको हेरचाह","y tá":"नर्स","đảo":"टापु","~ đổ":"~ डम्प","làm đổ ~":"फैल ~","phiền toái":"समस्या","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","đài":"ဘူတာရုံ","bão":"မုန်တိုင်း","sân khấu":"စင်မြင့်","bố":"အဖေ","sợ":"ကြောက်တယ်။","nỗi sợ":"ကြောက်ရွံ့ခြင်း။","hồng":"ပန်းရောင်","ngập lụt":"ရေကြီးခြင်း။","báo":"သတင်းစာ","báo cáo":"အစီရင်ခံစာ","cảnh báo":"သတိပေးချက်","thông tin":"အချက်အလက်","cáo":"မြေခွေး","quảng cáo":"ကြော်ငြာ","báo trước":"ကြိုတင်သတိပေးချက်","phong cảnh":"ရှုခင်း","gió mạnh":"လေပြင်း","kiểu Nhật":"ဂျပန်စတိုင်","quạt máy":"ပန်ကာ","tiếp":"နောက်တစ်ခု","trực tiếp":"တိုက်ရိုက်","phỏng vấn":"အင်တာဗျူး","tiếp cận":"ချဉ်းကပ်","thế":"ရာထူး","mạnh mẽ":"ခိုင်မာတယ်။","sức mạnh":"ပါဝါ","nhiều, nhiều người":"အများကြီး၊ အများကြီး","bị":"အိတ်","thiệt hại":"ပျက်စီးမှုများ","hại":"အန္တရာယ်ရှိသော","ô nhiễm":"ညစ်ညမ်းသည်။","tổn hại":"ထိခိုက်မှု","đột":"ရုတ်တရက်","đâm, chọc":"ထိုး၊ ထိုး","đường cụt":"အသေအဆုံး","đột nhiên":"ရုတ်တရက်","đâm":"ဓား","khán":"ပရိသတ်","biển hiệu":"ဆိုင်းဘုတ်","chăm sóc người bệnh":"ဖျားနာတဲ့လူတွေကို ဂရုစိုက်ပါ။","y tá":"သူနာပြု","đảo":"ကျွန်း","~ đổ":"~ အမှိုက်ပုံကြီး","làm đổ ~":"ဖိတ်~","phiền toái":"ဒုက္ခ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","đài":"স্টেশন","bão":"ঝড়","sân khấu":"মঞ্চ","bố":"বাবা","sợ":"ভীত","nỗi sợ":"ভয়","hồng":"গোলাপী","ngập lụt":"বন্যা","báo":"সংবাদপত্র","báo cáo":"রিপোর্ট","cảnh báo":"সতর্কতা","thông tin":"তথ্য","cáo":"শিয়াল","quảng cáo":"বিজ্ঞাপন","báo trước":"আগাম বিজ্ঞপ্তি","phong cảnh":"দৃশ্যাবলী","gió mạnh":"শক্তিশালী বাতাস","kiểu Nhật":"জাপানি শৈলী","quạt máy":"পাখা","tiếp":"পরবর্তী","trực tiếp":"সরাসরি","phỏng vấn":"সাক্ষাৎকার","tiếp cận":"পন্থা","thế":"অবস্থান","mạnh mẽ":"শক্তিশালী","sức mạnh":"ক্ষমতা","nhiều, nhiều người":"অনেক, অনেক মানুষ","bị":"ব্যাগ","thiệt hại":"ক্ষতি","hại":"ক্ষতিকর","ô nhiễm":"দূষিত","tổn hại":"ক্ষতি","đột":"হঠাৎ","đâm, chọc":"ছুরিকাঘাত, খোঁচা","đường cụt":"মৃত শেষ","đột nhiên":"হঠাৎ","đâm":"ছুরিকাঘাত","khán":"দর্শক","biển hiệu":"সাইনবোর্ড","chăm sóc người bệnh":"অসুস্থ মানুষের যত্ন নেওয়া","y tá":"নার্স","đảo":"দ্বীপ","~ đổ":"~ ডাম্প","làm đổ ~":"ছড়ানো ~","phiền toái":"কষ্ট","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","đài":"स्टेशन","bão":"आंधी","sân khấu":"अवस्था","bố":"पापा","sợ":"डरा हुआ","nỗi sợ":"डर","hồng":"गुलाबी","ngập lụt":"बाढ़","báo":"अखबार","báo cáo":"प्रतिवेदन","cảnh báo":"चेतावनी","thông tin":"जानकारी","cáo":"लोमड़ी","quảng cáo":"विज्ञापन","báo trước":"पहले से सूचना दें","phong cảnh":"प्राकृतिक दृश्य","gió mạnh":"तेज़ हवा","kiểu Nhật":"जापानी शैली में","quạt máy":"पंखा","tiếp":"अगला","trực tiếp":"प्रत्यक्ष","phỏng vấn":"साक्षात्कार","tiếp cận":"दृष्टिकोण","thế":"पद","mạnh mẽ":"मज़बूत","sức mạnh":"शक्ति","nhiều, nhiều người":"बहुत सारे लोग","bị":"थैला","thiệt hại":"क्षतियों","hại":"हानिकारक","ô nhiễm":"प्रदूषित","tổn hại":"चोट","đột":"अचानक","đâm, chọc":"छुरा घोंपना, प्रहार करना","đường cụt":"गतिरोध","đột nhiên":"अचानक","đâm":"छूरा भोंकना","khán":"श्रोता","biển hiệu":"नाम का तख़्ता","chăm sóc người bệnh":"बीमार लोगों की देखभाल","y tá":"देखभाल करना","đảo":"द्वीप","~ đổ":"~ डंप","làm đổ ~":"छलकना~","phiền toái":"मुश्किल","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","đài":"สถานี","bão":"พายุ","sân khấu":"เวที","bố":"พ่อ","sợ":"กลัว","nỗi sợ":"กลัว","hồng":"สีชมพู","ngập lụt":"น้ำท่วม","báo":"หนังสือพิมพ์","báo cáo":"รายงาน","cảnh báo":"คำเตือน","thông tin":"ข้อมูล","cáo":"สุนัขจิ้งจอก","quảng cáo":"โฆษณา","báo trước":"แจ้งให้ทราบล่วงหน้า","phong cảnh":"ทิวทัศน์","gió mạnh":"ลมแรง","kiểu Nhật":"สไตล์ญี่ปุ่น","quạt máy":"พัดลม","tiếp":"ต่อไป","trực tiếp":"โดยตรง","phỏng vấn":"สัมภาษณ์","tiếp cận":"เข้าใกล้","thế":"ตำแหน่ง","mạnh mẽ":"แข็งแกร่ง","sức mạnh":"พลัง","nhiều, nhiều người":"หลายคน หลายคน","bị":"ถุง","thiệt hại":"ความเสียหาย","hại":"เป็นอันตราย","ô nhiễm":"ปนเปื้อน","tổn hại":"อันตราย","đột":"กะทันหัน","đâm, chọc":"แทง, โผล่","đường cụt":"ทางตัน","đột nhiên":"กะทันหัน","đâm":"แทง","khán":"ผู้ชม","biển hiệu":"ป้ายบอกทาง","chăm sóc người bệnh":"ดูแลคนป่วย","y tá":"พยาบาล","đảo":"เกาะ","~ đổ":"~ ทิ้ง","làm đổ ~":"หก ~","phiền toái":"ปัญหา","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

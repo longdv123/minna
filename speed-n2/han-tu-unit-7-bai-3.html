@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">境</div></div><div class="kcell k-hv"><span class="vi-tr">cảnh</span> </div><div class="kcell k-read"><div class="on">キョウ</div><div>さかい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>境<rp>（</rp><rt>さかい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ranh giới</span> </div></div><div class="kitem"><div class="jp"><ruby>境界<rp>（</rp><rt>きょうかい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ranh giới</span> </div></div><div class="kitem"><div class="jp"><ruby>環境<rp>（</rp><rt>かんきょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">môi trường</span> </div></div><div class="kitem"><div class="jp"><ruby>国境<rp>（</rp><rt>こっきょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">biên giới</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">律</div></div><div class="kcell k-hv"><span class="vi-tr">luật</span> </div><div class="kcell k-read"><div class="on">リツ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>法律<rp>（</rp><rt>ほうりつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">luật pháp</span> </div></div><div class="kitem"><div class="jp"><ruby>規律<rp>（</rp><rt>きりつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quy tắc</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">兵</div></div><div class="kcell k-hv">binh</div><div class="kcell k-read"><div class="on">ヘイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>兵隊<rp>（</rp><rt>へいたい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">binh lính</span> </div></div><div class="kitem"><div class="jp"><ruby>兵士<rp>（</rp><rt>へいし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">binh sĩ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">軍</div></div><div class="kcell k-hv"><span class="vi-tr">quân</span></div><div class="kcell k-read"><div class="on">グン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>軍隊<rp>（</rp><rt>ぐんたい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quân đội</span> </div></div><div class="kitem"><div class="jp">ローマ<ruby>軍<rp>（</rp><rt>ぐん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Quân đội La Mã</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">武</div></div><div class="kcell k-hv"><span class="vi-tr">vũ</span></div><div class="kcell k-read"><div class="on">ブ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>武器<rp>（</rp><rt>ぶき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vũ khí</span> </div></div><div class="kitem"><div class="jp"><ruby>武士<rp>（</rp><rt>ぶし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">võ sĩ</span> </div></div><div class="kitem"><div class="jp"><ruby>武力<rp>（</rp><rt>ぶりょく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vũ lực</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">領</div></div><div class="kcell k-hv"><span class="vi-tr">lãnh</span></div><div class="kcell k-read"><div class="on">リョウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>領収書<rp>（</rp><rt>りょうしゅうしょ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hóa đơn</span></div></div><div class="kitem"><div class="jp"><ruby>領土<rp>（</rp><rt>りょうど</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lãnh thổ</span></div></div><div class="kitem"><div class="jp"><ruby>大統領<rp>（</rp><rt>だいとうりょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tổng thống</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">争</div></div><div class="kcell k-hv">tranh</div><div class="kcell k-read"><div class="on">ソウ</div><div>あらそーう</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>争<rp>（</rp><rt>あらそ</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">tranh giành</span> </div></div><div class="kitem"><div class="jp"><ruby>戦争<rp>（</rp><rt>せんそう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">chiến tranh</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">絶</div></div><div class="kcell k-hv"><span class="vi-tr">tuyệt</span> </div><div class="kcell k-read"><div class="on">ゼツ</div><div>たーえる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>絶<rp>（</rp><rt>た</rt><rp>）</rp></ruby>えず</div><div class="vi"><span class="vi-tr">không ngừng</span> </div></div><div class="kitem"><div class="jp"><ruby>絶対<rp>（</rp><rt>ぜったい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tuyệt đối</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">解</div></div><div class="kcell k-hv"><span class="vi-tr">giải</span> </div><div class="kcell k-read"><div class="on">カイ</div><div>とーく／とーける</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>解<rp>（</rp><rt>と</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">giải</span></div></div><div class="kitem"><div class="jp"><ruby>解決<rp>（</rp><rt>かいけつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">giải quyết</span> </div></div><div class="kitem"><div class="jp"><ruby>解説<rp>（</rp><rt>かいせつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">giải thích</span> </div></div><div class="kitem"><div class="jp"><ruby>理解<rp>（</rp><rt>りかい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">lí giải</span></div></div><div class="kitem"><div class="jp"><ruby>誤解<rp>（</rp><rt>ごかい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hiểu nhầm</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">機</div></div><div class="kcell k-hv"><span class="vi-tr">cơ</span></div><div class="kcell k-read"><div class="on">キ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>機関<rp>（</rp><rt>きかん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cơ quan</span></div></div><div class="kitem"><div class="jp"><ruby>機械<rp>（</rp><rt>きかい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy móc</span></div></div><div class="kitem"><div class="jp"><ruby>機会<rp>（</rp><rt>きかい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cơ hội</span> </div></div><div class="kitem"><div class="jp"><ruby>機嫌<rp>（</rp><rt>きげん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tâm trạng</span> </div></div><div class="kitem"><div class="jp"><ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy bay</span> </div></div><div class="kitem"><div class="jp"><ruby>扇風機<rp>（</rp><rt>せんぷうき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quạt máy</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">権</div></div><div class="kcell k-hv"><span class="vi-tr">quyền</span> </div><div class="kcell k-read"><div class="on">ケン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>権利<rp>（</rp><rt>けんり</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quyền lợi</span> </div></div><div class="kitem"><div class="jp"><ruby>選挙権<rp>（</rp><rt>せんきょけん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quyền bỏ phiếu</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u>環境</u><ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>は、<ruby>世界<rp>（</rp><rt>せかい</rt><rp>）</rp></ruby>が<ruby>協力<rp>（</rp><rt>きょうりょく</rt><rp>）</rp></ruby>して<ruby>対応<rp>（</rp><rt>たいおう</rt><rp>）</rp></ruby>すべき<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>だ。</td><td>a. かんきょう</td><td>b. かんけい</td></tr><tr><td>2. <ruby>約束<rp>（</rp><rt>やくそく</rt><rp>）</rp></ruby>は<u><ruby>絶対<rp>（</rp><rt>ぜったい</rt><rp>）</rp></ruby></u>に<ruby>守<rp>（</rp><rt>まも</rt><rp>）</rp></ruby>ります。</td><td>a. じったい</td><td>b. ぜったい</td></tr><tr><td>3. <u><ruby>法律<rp>（</rp><rt>ほうりつ</rt><rp>）</rp></ruby></u>に<ruby>反<rp>（</rp><rt>はん</rt><rp>）</rp></ruby>するようなことは<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>もしていない。</td><td>a. ほういつ</td><td>b. ほうりつ</td></tr><tr><td>4. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>には<ruby>教育<rp>（</rp><rt>きょういく</rt><rp>）</rp></ruby>を<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>ける<u><ruby>権利<rp>（</rp><rt>けんり</rt><rp>）</rp></ruby></u>がある。</td><td>a. けんり</td><td>b. きんり</td></tr><tr><td>5. <u><ruby>戦争<rp>（</rp><rt>せんそう</rt><rp>）</rp></ruby></u>を<ruby>避<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>けるために、あらゆる<ruby>努力<rp>（</rp><rt>どりょく</rt><rp>）</rp></ruby>がなされた。</td><td>a. せんそう</td><td>b. せんぞう</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u>環境</u><ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>は、<ruby>世界<rp>（</rp><rt>せかい</rt><rp>）</rp></ruby>が<ruby>協力<rp>（</rp><rt>きょうりょく</rt><rp>）</rp></ruby>して<ruby>対応<rp>（</rp><rt>たいおう</rt><rp>）</rp></ruby>すべき<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>だ。</td><td><b>かんきょう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>約束<rp>（</rp><rt>やくそく</rt><rp>）</rp></ruby>は<u><ruby>絶対<rp>（</rp><rt>ぜったい</rt><rp>）</rp></ruby></u>に<ruby>守<rp>（</rp><rt>まも</rt><rp>）</rp></ruby>ります。</td><td><b>ぜったい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <u><ruby>法律<rp>（</rp><rt>ほうりつ</rt><rp>）</rp></ruby></u>に<ruby>反<rp>（</rp><rt>はん</rt><rp>）</rp></ruby>するようなことは<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>もしていない。</td><td><b>ほうりつ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>には<ruby>教育<rp>（</rp><rt>きょういく</rt><rp>）</rp></ruby>を<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>ける<u><ruby>権利<rp>（</rp><rt>けんり</rt><rp>）</rp></ruby></u>がある。</td><td><b>けんり</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <u><ruby>戦争<rp>（</rp><rt>せんそう</rt><rp>）</rp></ruby></u>を<ruby>避<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>けるために、あらゆる<ruby>努力<rp>（</rp><rt>どりょく</rt><rp>）</rp></ruby>がなされた。</td><td><b>せんそう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>職場<rp>（</rp><rt>しょくば</rt><rp>）</rp></ruby>は、A<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>とB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>の<u>さかい</u>にある。</td><td>a. 界</td><td>b. 領</td><td>c. 境</td></tr><tr><td>2. <ruby>兄弟<rp>（</rp><rt>きょうだい</rt><rp>）</rp></ruby>は、<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>の<ruby>残<rp>（</rp><rt>のこ</rt><rp>）</rp></ruby>した<ruby>土地<rp>（</rp><rt>とち</rt><rp>）</rp></ruby>のことで<u>あらそ</u>っている。</td><td>a. 争</td><td>b. 領</td><td>c. 戦</td></tr><tr><td>3. この<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>に<u>かん</u>してご<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>をお<ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>いします。</td><td>a. 感</td><td>b. 関</td><td>c. 観</td></tr><tr><td>4. <u>ぶ</u><ruby>器<rp>（</rp><rt>き</rt><rp>）</rp></ruby>の<ruby>売買<rp>（</rp><rt>ばいばい</rt><rp>）</rp></ruby>は<ruby>厳<rp>（</rp><rt>きび</rt><rp>）</rp></ruby>しく<ruby>管理<rp>（</rp><rt>かんり</rt><rp>）</rp></ruby>されるべきだ。</td><td>a. 武</td><td>b. 式</td><td>c. 殺</td></tr><tr><td>5. <ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>で<u>りょう</u><ruby>収書<rp>（</rp><rt>しゅうしょ</rt><rp>）</rp></ruby>をもらう<ruby>必要<rp>（</rp><rt>ひつよう</rt><rp>）</rp></ruby>がある。</td><td>a. 量</td><td>b. 領</td><td>c. 両</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>職場<rp>（</rp><rt>しょくば</rt><rp>）</rp></ruby>は、A<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>とB<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>の<u>さかい</u>にある。</td><td><b>境</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>兄弟<rp>（</rp><rt>きょうだい</rt><rp>）</rp></ruby>は、<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>の<ruby>残<rp>（</rp><rt>のこ</rt><rp>）</rp></ruby>した<ruby>土地<rp>（</rp><rt>とち</rt><rp>）</rp></ruby>のことで<u>あらそ</u>っている。</td><td><b>争</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>に<u>かん</u>してご<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>をお<ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>いします。</td><td><b>関</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <u>ぶ</u><ruby>器<rp>（</rp><rt>き</rt><rp>）</rp></ruby>の<ruby>売買<rp>（</rp><rt>ばいばい</rt><rp>）</rp></ruby>は<ruby>厳<rp>（</rp><rt>きび</rt><rp>）</rp></ruby>しく<ruby>管理<rp>（</rp><rt>かんり</rt><rp>）</rp></ruby>されるべきだ。</td><td><b>武</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>で<u>りょう</u><ruby>収書<rp>（</rp><rt>しゅうしょ</rt><rp>）</rp></ruby>をもらう<ruby>必要<rp>（</rp><rt>ひつよう</rt><rp>）</rp></ruby>がある。</td><td><b>領</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>政府<rp>（</rp><rt>せいふ</rt><rp>）</rp></ruby>（　　　）の<ruby>情報管理<rp>（</rp><rt>じょうほうかんり</rt><rp>）</rp></ruby>は<ruby>責任<rp>（</rp><rt>せきにん</rt><rp>）</rp></ruby>が<ruby>重<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い。</td><td>a. 機関</td><td>b. 境界</td></tr><tr><td>2. <ruby>選挙<rp>（</rp><rt>せんきょ</rt><rp>）</rp></ruby>（　　　）が<ruby>得<rp>（</rp><rt>え</rt><rp>）</rp></ruby>られる<ruby>年齢<rp>（</rp><rt>ねんれい</rt><rp>）</rp></ruby>は<ruby>何歳<rp>（</rp><rt>なんさい</rt><rp>）</rp></ruby>ですか。</td><td>a. 権</td><td>b. 軍</td></tr><tr><td>3. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>らはよく<ruby>訓練<rp>（</rp><rt>くんれん</rt><rp>）</rp></ruby>された（　　　）のようだった。</td><td>a. 兵士</td><td>b. 領土</td></tr><tr><td>4. <ruby>最後<rp>（</rp><rt>さいご</rt><rp>）</rp></ruby>の<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>は<ruby>難<rp>（</rp><rt>むずか</rt><rp>）</rp></ruby>しくて、（　　　）ことができなかった。</td><td>a. 解く</td><td>b. 誤解する</td></tr><tr><td>5. ここで<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>られた（　　　）は<ruby>世界各国<rp>（</rp><rt>せかいかっこく</rt><rp>）</rp></ruby>に<ruby>輸出<rp>（</rp><rt>ゆしゅつ</rt><rp>）</rp></ruby>されている。</td><td>a. 機械</td><td>b. 機会</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>政府<rp>（</rp><rt>せいふ</rt><rp>）</rp></ruby>（　　　）の<ruby>情報管理<rp>（</rp><rt>じょうほうかんり</rt><rp>）</rp></ruby>は<ruby>責任<rp>（</rp><rt>せきにん</rt><rp>）</rp></ruby>が<ruby>重<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い。</td><td><b>機関</b> (きかん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>選挙<rp>（</rp><rt>せんきょ</rt><rp>）</rp></ruby>（　　　）が<ruby>得<rp>（</rp><rt>え</rt><rp>）</rp></ruby>られる<ruby>年齢<rp>（</rp><rt>ねんれい</rt><rp>）</rp></ruby>は<ruby>何歳<rp>（</rp><rt>なんさい</rt><rp>）</rp></ruby>ですか。</td><td><b>権</b> (けん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>らはよく<ruby>訓練<rp>（</rp><rt>くんれん</rt><rp>）</rp></ruby>された（　　　）のようだった。</td><td><b>兵士</b> (へいし)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>最後<rp>（</rp><rt>さいご</rt><rp>）</rp></ruby>の<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>は<ruby>難<rp>（</rp><rt>むずか</rt><rp>）</rp></ruby>しくて、（　　　）ことができなかった。</td><td><b>解く</b> (とく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. ここで<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>られた（　　　）は<ruby>世界各国<rp>（</rp><rt>せかいかっこく</rt><rp>）</rp></ruby>に<ruby>輸出<rp>（</rp><rt>ゆしゅつ</rt><rp>）</rp></ruby>されている。</td><td><b>機械</b> (きかい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-7-3"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-7-bai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","cảnh":"scene","ranh giới":"boundary","môi trường":"environment","biên giới":"border","luật":"law","luật pháp":"law","quy tắc":"rules","binh lính":"soldiers","binh sĩ":"soldiers","quân":"army","quân đội":"army","Quân đội La Mã":"Roman army","vũ":"Vu","vũ khí":"weapons","võ sĩ":"boxer","vũ lực":"force","lãnh":"receive","hóa đơn":"bill","lãnh thổ":"territory","tổng thống":"president","tranh giành":"compete","chiến tranh":"war","tuyệt":"great","không ngừng":"continuous","tuyệt đối":"absolute","giải":"prize","giải quyết":"handle","giải thích":"explain","lí giải":"explain","hiểu nhầm":"misunderstood","cơ":"muscle","cơ quan":"agency","máy móc":"machines","cơ hội":"opportunity","tâm trạng":"mood","máy bay":"plane","quạt máy":"fan","quyền":"rights","quyền lợi":"interest","quyền bỏ phiếu":"voting rights","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","cảnh":"pemandangan","ranh giới":"batas","môi trường":"lingkungan","biên giới":"berbatasan","luật":"hukum","luật pháp":"hukum","quy tắc":"aturan","binh lính":"tentara","binh sĩ":"tentara","quân":"tentara","quân đội":"tentara","Quân đội La Mã":"tentara Romawi","vũ":"Vu","vũ khí":"senjata","võ sĩ":"petinju","vũ lực":"memaksa","lãnh":"menerima","hóa đơn":"tagihan","lãnh thổ":"wilayah","tổng thống":"presiden","tranh giành":"bersaing","chiến tranh":"perang","tuyệt":"Besar","không ngừng":"kontinu","tuyệt đối":"mutlak","giải":"hadiah","giải quyết":"menangani","giải thích":"menjelaskan","lí giải":"menjelaskan","hiểu nhầm":"disalahpahami","cơ":"otot","cơ quan":"agen","máy móc":"mesin","cơ hội":"peluang","tâm trạng":"suasana hati","máy bay":"pesawat","quạt máy":"penggemar","quyền":"hak","quyền lợi":"minat","quyền bỏ phiếu":"hak suara","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","cảnh":"दृश्य","ranh giới":"सीमा","môi trường":"वातावरण","biên giới":"सीमाना","luật":"कानून","luật pháp":"कानून","quy tắc":"नियमहरू","binh lính":"सिपाहीहरू","binh sĩ":"सिपाहीहरू","quân":"सेना","quân đội":"सेना","Quân đội La Mã":"रोमन सेना","vũ":"Vu","vũ khí":"हतियारहरू","võ sĩ":"बक्सर","vũ lực":"बल","lãnh":"प्राप्त गर्नुहोस्","hóa đơn":"बिल","lãnh thổ":"क्षेत्र","tổng thống":"राष्ट्रपति","tranh giành":"प्रतिस्पर्धा","chiến tranh":"युद्ध","tuyệt":"महान","không ngừng":"निरन्तर","tuyệt đối":"निरपेक्ष","giải":"पुरस्कार","giải quyết":"ह्यान्डल","giải thích":"व्याख्या गर्नुहोस्","lí giải":"व्याख्या गर्नुहोस्","hiểu nhầm":"गलत बुझियो","cơ":"मांसपेशी","cơ quan":"एजेन्सी","máy móc":"मेसिनहरू","cơ hội":"अवसर","tâm trạng":"मूड","máy bay":"विमान","quạt máy":"फ्यान","quyền":"अधिकार","quyền lợi":"ब्याज","quyền bỏ phiếu":"मतदान अधिकार","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","cảnh":"မြင်ကွင်း","ranh giới":"နယ်နိမိတ်","môi trường":"ပတ်ဝန်းကျင်","biên giới":"နယ်စပ်","luật":"ဥပဒေ","luật pháp":"ဥပဒေ","quy tắc":"စည်းကမ်း","binh lính":"စစ်သားတွေ","binh sĩ":"စစ်သားတွေ","quân":"စစ်တပ်","quân đội":"စစ်တပ်","Quân đội La Mã":"ရောမစစ်တပ်","vũ":"Vu","vũ khí":"လက်နက်များ","võ sĩ":"လက်ဝှေ့သမား","vũ lực":"အင်အား","lãnh":"လက်ခံသည်။","hóa đơn":"ဘေလ်","lãnh thổ":"နယ်မြေ","tổng thống":"သမ္မတ","tranh giành":"ယှဉ်ပြိုင်","chiến tranh":"စစ်ပွဲ","tuyệt":"အရမ်းကောင်းတယ်။","không ngừng":"စဉ်ဆက်မပြတ်","tuyệt đối":"ပကတိ","giải":"ဆု","giải quyết":"ကိုင်တွယ်","giải thích":"ရှင်းပြပါ။","lí giải":"ရှင်းပြပါ။","hiểu nhầm":"နားလည်မှုလွဲ","cơ":"ကြွက်သား","cơ quan":"အေဂျင်စီ","máy móc":"စက်တွေ","cơ hội":"အခွင့်အလမ်း","tâm trạng":"စိတ်ခံစားချက်","máy bay":"လေယာဉ်","quạt máy":"ပန်ကာ","quyền":"အခွင့်အရေး","quyền lợi":"အကျိုးစီးပွား","quyền bỏ phiếu":"မဲပေးပိုင်ခွင့်","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","cảnh":"দৃশ্য","ranh giới":"সীমানা","môi trường":"পরিবেশ","biên giới":"সীমান্ত","luật":"আইন","luật pháp":"আইন","quy tắc":"নিয়ম","binh lính":"সৈন্য","binh sĩ":"সৈন্য","quân":"সেনাবাহিনী","quân đội":"সেনাবাহিনী","Quân đội La Mã":"রোমান সেনাবাহিনী","vũ":"ভু","vũ khí":"অস্ত্র","võ sĩ":"বক্সার","vũ lực":"বল","lãnh":"গ্রহণ","hóa đơn":"বিল","lãnh thổ":"অঞ্চল","tổng thống":"রাষ্ট্রপতি","tranh giành":"প্রতিযোগিতা","chiến tranh":"যুদ্ধ","tuyệt":"মহান","không ngừng":"একটানা","tuyệt đối":"পরম","giải":"পুরস্কার","giải quyết":"হ্যান্ডেল","giải thích":"ব্যাখ্যা","lí giải":"ব্যাখ্যা","hiểu nhầm":"ভুল বোঝাবুঝি","cơ":"পেশী","cơ quan":"সংস্থা","máy móc":"মেশিন","cơ hội":"সুযোগ","tâm trạng":"মেজাজ","máy bay":"সমতল","quạt máy":"পাখা","quyền":"অধিকার","quyền lợi":"সুদ","quyền bỏ phiếu":"ভোটাধিকার","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","cảnh":"दृश्य","ranh giới":"सीमा","môi trường":"पर्यावरण","biên giới":"सीमा","luật":"कानून","luật pháp":"कानून","quy tắc":"नियम","binh lính":"सैनिकों","binh sĩ":"सैनिकों","quân":"सेना","quân đội":"सेना","Quân đội La Mã":"रोमन सेना","vũ":"वु","vũ khí":"हथियार","võ sĩ":"बॉक्सर","vũ lực":"बल","lãnh":"प्राप्त करें","hóa đơn":"बिल","lãnh thổ":"इलाका","tổng thống":"अध्यक्ष","tranh giành":"पूरा","chiến tranh":"युद्ध","tuyệt":"महान","không ngừng":"निरंतर","tuyệt đối":"निरपेक्ष","giải":"पुरस्कार","giải quyết":"सँभालना","giải thích":"व्याख्या करना","lí giải":"व्याख्या करना","hiểu nhầm":"गलत समझा","cơ":"माँसपेशियाँ","cơ quan":"एजेंसी","máy móc":"मशीनों","cơ hội":"अवसर","tâm trạng":"मनोदशा","máy bay":"विमान","quạt máy":"पंखा","quyền":"अधिकार","quyền lợi":"दिलचस्पी","quyền bỏ phiếu":"मतदान अधिकार","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","cảnh":"ฉาก","ranh giới":"ขอบเขต","môi trường":"สิ่งแวดล้อม","biên giới":"ชายแดน","luật":"กฎ","luật pháp":"กฎ","quy tắc":"กฎ","binh lính":"ทหาร","binh sĩ":"ทหาร","quân":"กองทัพบก","quân đội":"กองทัพบก","Quân đội La Mã":"กองทัพโรมัน","vũ":"วู","vũ khí":"อาวุธ","võ sĩ":"นักมวย","vũ lực":"บังคับ","lãnh":"รับ","hóa đơn":"ใบแจ้งหนี้","lãnh thổ":"อาณาเขต","tổng thống":"ประธาน","tranh giành":"แข่งขัน","chiến tranh":"สงคราม","tuyệt":"ยอดเยี่ยม","không ngừng":"อย่างต่อเนื่อง","tuyệt đối":"แน่นอน","giải":"รางวัล","giải quyết":"รับมือ","giải thích":"อธิบาย","lí giải":"อธิบาย","hiểu nhầm":"เข้าใจผิด","cơ":"กล้ามเนื้อ","cơ quan":"เอเจนซี่","máy móc":"เครื่องจักร","cơ hội":"โอกาส","tâm trạng":"อารมณ์","máy bay":"เครื่องบิน","quạt máy":"พัดลม","quyền":"สิทธิ","quyền lợi":"ความสนใจ","quyền bỏ phiếu":"สิทธิในการออกเสียงลงคะแนน","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

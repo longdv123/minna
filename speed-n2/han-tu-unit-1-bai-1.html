@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">季</div></div><div class="kcell k-hv"><span class="vi-tr">quý</span></div><div class="kcell k-read"><div class="on">キ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>季節<rp>（</rp><rt>きせつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mùa</span></div></div><div class="kitem"><div class="jp"><ruby>四季<rp>（</rp><rt>しき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bốn mùa</span></div></div><div class="kitem"><div class="jp"><ruby>雨季<rp>（</rp><rt>うき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mùa mưa</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">肌</div></div><div class="kcell k-hv"><span class="vi-tr">cơ</span></div><div class="kcell k-read"><div>はだ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>肌<rp>（</rp><rt>はだ</rt><rp>）</rp></ruby></div><div class="vi">da</div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">触</div></div><div class="kcell k-hv"><span class="vi-tr">xúc</span></div><div class="kcell k-read"><div class="on">（ショク）</div><div>さわーる／ふーれる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>触<rp>（</rp><rt>さわ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">sờ</span> </div></div><div class="kitem"><div class="jp"><ruby>肌触<rp>（</rp><rt>はだざわ</rt><rp>）</rp></ruby>り</div><div class="vi"><span class="vi-tr">cảm giác khi chạm vào</span></div></div><div class="kitem"><div class="jp"><ruby>触<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>れる</div><div class="vi"><span class="vi-tr">sờ, chạm</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">荒</div></div><div class="kcell k-hv">hoang</div><div class="kcell k-read"><div class="on">コウ</div><div>あらーい／あーれる／（あーらす）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>荒<rp>（</rp><rt>あら</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">thô ráp</span></div></div><div class="kitem"><div class="jp"><ruby>荒<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>れる</div><div class="vi"><span class="vi-tr">(da) nứt nẻ, ( biển) động</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">節</div></div><div class="kcell k-hv"><span class="vi-tr">tiết</span> </div><div class="kcell k-read"><div class="on">セツ</div><div>ふし</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>節約<rp>（</rp><rt>せつやく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tiết kiệm</span> </div></div><div class="kitem"><div class="jp"><ruby>節電<rp>（</rp><rt>せつでん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tiết kiệm điện</span></div></div><div class="kitem"><div class="jp"><ruby>調節<rp>（</rp><rt>ちょうせつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">điều tiết</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">涼</div></div><div class="kcell k-hv"><span class="vi-tr">lương</span></div><div class="kcell k-read"><div class="on">（リョウ）</div><div>すずーしい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>涼<rp>（</rp><rt>すず</rt><rp>）</rp></ruby>しい</div><div class="vi"><span class="vi-tr">mát</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">湿</div></div><div class="kcell k-hv"><span class="vi-tr">thấp</span></div><div class="kcell k-read"><div class="on">シツ</div><div>しめーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>湿<rp>（</rp><rt>しめ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">ẩm</span> </div></div><div class="kitem"><div class="jp"><ruby>湿度<rp>（</rp><rt>しつど</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">độ ẩm</span></div></div><div class="kitem"><div class="jp"><ruby>湿気<rp>（</rp><rt>しっけ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khí ẩm</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">移</div></div><div class="kcell k-hv">di </div><div class="kcell k-read"><div class="on">イ</div><div>うつーる／うつーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>移<rp>（</rp><rt>うつ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">chuyển, lây</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>移<rp>（</rp><rt>うつ</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">di dời, di chuyển</span></div></div><div class="kitem"><div class="jp"><ruby>移動<rp>（</rp><rt>いどう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">di chuyển</span></div></div><div class="kitem"><div class="jp"><ruby>移転<rp>（</rp><rt>いてん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">di dời</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">布</div></div><div class="kcell k-hv"><span class="vi-tr">bố</span></div><div class="kcell k-read"><div class="on">フ</div><div>ぬの</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>布<rp>（</rp><rt>ぬの</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vải</span></div></div><div class="kitem"><div class="jp"><ruby>布団<rp>（</rp><rt>ふとん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chăn</span></div></div><div class="kitem"><div class="jp"><ruby>毛布<rp>（</rp><rt>もうふ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chăn len</span></div></div><div class="kitem"><div class="jp"><ruby>財布<rp>（</rp><rt>さいふ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ví</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">紅</div></div><div class="kcell k-hv"><span class="vi-tr">hồng</span></div><div class="kcell k-read"><div class="on">コウ</div><div>べに</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>口紅<rp>（</rp><rt>くちべに</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">son môi</span></div></div><div class="kitem"><div class="jp"><ruby>紅茶<rp>（</rp><rt>こうちゃ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trà đen</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">葉</div></div><div class="kcell k-hv"><span class="vi-tr">diệp</span> </div><div class="kcell k-read"><div class="on">ヨウ</div><div>は</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>言葉<rp>（</rp><rt>ことば</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">từ, câu nói</span></div></div><div class="kitem"><div class="jp"><ruby>紅葉<rp>（</rp><rt>こうよう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">lá đỏ</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">自</div></div><div class="kcell k-hv"><span class="vi-tr">tự</span></div><div class="kcell k-read"><div class="on">シ／ジ</div><div>みずかーら</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>自<rp>（</rp><rt>みずか</rt><rp>）</rp></ruby>ら</div><div class="vi"><span class="vi-tr">tự bản thân</span> </div></div><div class="kitem"><div class="jp"><ruby>自身<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bản thân</span> </div></div><div class="kitem"><div class="jp"><ruby>自信<rp>（</rp><rt>じしん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tự tin</span> </div></div><div class="kitem"><div class="jp"><ruby>各自<rp>（</rp><rt>かくじ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mỗi người</span></div></div><div class="kitem"><div class="jp"><ruby>自然<rp>（</rp><rt>しぜん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tự nhiên</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>、<ruby>来月<rp>（</rp><rt>らいげつ</rt><rp>）</rp></ruby>となりの<ruby>町<rp>（</rp><rt>まち</rt><rp>）</rp></ruby>に<u><ruby>移転<rp>（</rp><rt>いてん</rt><rp>）</rp></ruby></u>するんだって。</td><td>a. いてん</td><td>b. うてん</td></tr><tr><td>2. <ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>には<ruby>春<rp>（</rp><rt>はる</rt><rp>）</rp></ruby>・<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>・<ruby>秋<rp>（</rp><rt>あき</rt><rp>）</rp></ruby>・<ruby>冬<rp>（</rp><rt>ふゆ</rt><rp>）</rp></ruby>の<u><ruby>四季<rp>（</rp><rt>しき</rt><rp>）</rp></ruby></u>がある。</td><td>a. しき</td><td>b. よき</td></tr><tr><td>3. <ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby><u><ruby>自<rp>（</rp><rt>みずか</rt><rp>）</rp></ruby>ら</u><ruby>自転車<rp>（</rp><rt>じてんしゃ</rt><rp>）</rp></ruby>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>って<ruby>営業活動<rp>（</rp><rt>えいぎょうかつどう</rt><rp>）</rp></ruby>をしている。</td><td>a. みずら</td><td>b. みずから</td></tr><tr><td>4. その<u><ruby>口紅<rp>（</rp><rt>くちべに</rt><rp>）</rp></ruby></u>、きれいな<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>だね。<ruby>似合<rp>（</rp><rt>にあ</rt><rp>）</rp></ruby>ってるよ。</td><td>a. くちべに</td><td>b. くちべみ</td></tr><tr><td>5. では、<ruby>次<rp>（</rp><rt>つぎ</rt><rp>）</rp></ruby>のテーマに<u><ruby>移<rp>（</rp><rt>うつ</rt><rp>）</rp></ruby>り</u>ます。</td><td>a. うつり</td><td>b. かわり</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>、<ruby>来月<rp>（</rp><rt>らいげつ</rt><rp>）</rp></ruby>となりの<ruby>町<rp>（</rp><rt>まち</rt><rp>）</rp></ruby>に<u><ruby>移転<rp>（</rp><rt>いてん</rt><rp>）</rp></ruby></u>するんだって。</td><td><b>いてん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>には<ruby>春<rp>（</rp><rt>はる</rt><rp>）</rp></ruby>・<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>・<ruby>秋<rp>（</rp><rt>あき</rt><rp>）</rp></ruby>・<ruby>冬<rp>（</rp><rt>ふゆ</rt><rp>）</rp></ruby>の<u><ruby>四季<rp>（</rp><rt>しき</rt><rp>）</rp></ruby></u>がある。</td><td><b>しき</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby><u><ruby>自<rp>（</rp><rt>みずか</rt><rp>）</rp></ruby>ら</u><ruby>自転車<rp>（</rp><rt>じてんしゃ</rt><rp>）</rp></ruby>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>って<ruby>営業活動<rp>（</rp><rt>えいぎょうかつどう</rt><rp>）</rp></ruby>をしている。</td><td><b>みずから</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. その<u><ruby>口紅<rp>（</rp><rt>くちべに</rt><rp>）</rp></ruby></u>、きれいな<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>だね。<ruby>似合<rp>（</rp><rt>にあ</rt><rp>）</rp></ruby>ってるよ。</td><td><b>くちべに</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. では、<ruby>次<rp>（</rp><rt>つぎ</rt><rp>）</rp></ruby>のテーマに<u><ruby>移<rp>（</rp><rt>うつ</rt><rp>）</rp></ruby>り</u>ます。</td><td><b>うつり</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>窓<rp>（</rp><rt>まど</rt><rp>）</rp></ruby>を<ruby>開<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>けると、<u>すず</u>しい<ruby>風<rp>（</rp><rt>かぜ</rt><rp>）</rp></ruby>が<ruby>入<rp>（</rp><rt>はい</rt><rp>）</rp></ruby>ってきた。</td><td>a. 悲</td><td>b. 忙</td><td>c. 涼</td></tr><tr><td>2. <ruby>会場<rp>（</rp><rt>かいじょう</rt><rp>）</rp></ruby>の<ruby>作品<rp>（</rp><rt>さくひん</rt><rp>）</rp></ruby>には<u>さわ</u>らないでください。</td><td>a. 触</td><td>b. 机</td><td>c. 移</td></tr><tr><td>3. <ruby>明日<rp>（</rp><rt>あした</rt><rp>）</rp></ruby>は<u>あ</u>れた<ruby>天気<rp>（</rp><rt>てんき</rt><rp>）</rp></ruby>になるそうだ。</td><td>a. 季</td><td>b. 荒</td><td>c. 触</td></tr><tr><td>4. この<ruby>化粧水<rp>（</rp><rt>けしょうすい</rt><rp>）</rp></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うと、<u>はだ</u>がきれいになるよ。</td><td>a. 肌</td><td>b. 葉</td><td>c. 布</td></tr><tr><td>5. <ruby>音<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>の<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きさは、このボタンで<ruby>調<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby><u>せつ</u>できる。</td><td>a. 温</td><td>b. 節</td><td>c. 説</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>窓<rp>（</rp><rt>まど</rt><rp>）</rp></ruby>を<ruby>開<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>けると、<u>すず</u>しい<ruby>風<rp>（</rp><rt>かぜ</rt><rp>）</rp></ruby>が<ruby>入<rp>（</rp><rt>はい</rt><rp>）</rp></ruby>ってきた。</td><td><b>涼</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>会場<rp>（</rp><rt>かいじょう</rt><rp>）</rp></ruby>の<ruby>作品<rp>（</rp><rt>さくひん</rt><rp>）</rp></ruby>には<u>さわ</u>らないでください。</td><td><b>触</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>明日<rp>（</rp><rt>あした</rt><rp>）</rp></ruby>は<u>あ</u>れた<ruby>天気<rp>（</rp><rt>てんき</rt><rp>）</rp></ruby>になるそうだ。</td><td><b>荒</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. この<ruby>化粧水<rp>（</rp><rt>けしょうすい</rt><rp>）</rp></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うと、<u>はだ</u>がきれいになるよ。</td><td><b>肌</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>音<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>の<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きさは、このボタンで<ruby>調<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby><u>せつ</u>できる。</td><td><b>節</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>電気代<rp>（</rp><rt>でんきだい</rt><rp>）</rp></ruby>の（　　　）ため、エアコンの<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いすぎに<ruby>気<rp>（</rp><rt>き</rt><rp>）</rp></ruby>をつけよう。</td><td>a. 節約</td><td>b. 財布</td></tr><tr><td>2. スピーチがうまくできて、<ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>に（　　　）が<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>てた。</td><td>a. 自信</td><td>b. 自身</td></tr><tr><td>3. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>にはベッドがないので、（　　　）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っている。</td><td>a. 布団</td><td>b. 湿度</td></tr><tr><td>4. <ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>が（　　　）して<ruby>赤<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>や<ruby>黄色<rp>（</rp><rt>きいろ</rt><rp>）</rp></ruby>になっている。きれいだなあ。</td><td>a. 季節</td><td>b. 紅葉</td></tr><tr><td>5. <ruby>団体旅行<rp>（</rp><rt>だんたいりょこう</rt><rp>）</rp></ruby>だが、<ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>までは（　　　）で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くことになる。</td><td>a. 各自</td><td>b. 移動</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>電気代<rp>（</rp><rt>でんきだい</rt><rp>）</rp></ruby>の（　　　）ため、エアコンの<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いすぎに<ruby>気<rp>（</rp><rt>き</rt><rp>）</rp></ruby>をつけよう。</td><td><b>節約</b> (せつやく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. スピーチがうまくできて、<ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>に（　　　）が<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>てた。</td><td><b>自信</b> (じしん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>にはベッドがないので、（　　　）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っている。</td><td><b>布団</b> (ふとん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>が（　　　）して<ruby>赤<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>や<ruby>黄色<rp>（</rp><rt>きいろ</rt><rp>）</rp></ruby>になっている。きれいだなあ。</td><td><b>紅葉</b> (こうよう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>団体旅行<rp>（</rp><rt>だんたいりょこう</rt><rp>）</rp></ruby>だが、<ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>までは（　　　）で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くことになる。</td><td><b>各自</b> (かくじ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-1-1"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-1-bai-1.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","quý":"precious","mùa":"season","bốn mùa":"four seasons","mùa mưa":"rainy season","cơ":"muscle","xúc":"contact","sờ":"touch","cảm giác khi chạm vào":"feeling to the touch","sờ, chạm":"touch, touch","thô ráp":"rough","(da) nứt nẻ, ( biển) động":"(skin) cracked, (sea) rough","tiết":"details","tiết kiệm":"save","tiết kiệm điện":"save electricity","điều tiết":"regulation","lương":"wage","mát":"cool","thấp":"short","ẩm":"warm","độ ẩm":"humidity","khí ẩm":"moist air","chuyển, lây":"transfer, spread","di dời, di chuyển":"relocate, move","di chuyển":"move","di dời":"relocate","bố":"dad","vải":"fabric","chăn":"blanket","chăn len":"wool blanket","ví":"wallet","hồng":"pink","son môi":"lipstick","trà đen":"black tea","diệp":"Diep","từ, câu nói":"words, sayings","lá đỏ":"red leaves","tự":"on one's own","tự bản thân":"yourself","bản thân":"self","tự tin":"confident","mỗi người":"each person","tự nhiên":"nature","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","quý":"berharga","mùa":"musim","bốn mùa":"empat musim","mùa mưa":"musim hujan","cơ":"otot","xúc":"kontak","sờ":"menyentuh","cảm giác khi chạm vào":"perasaan saat disentuh","sờ, chạm":"sentuh, sentuh","thô ráp":"kasar","(da) nứt nẻ, ( biển) động":"(kulit) pecah-pecah, (laut) kasar","tiết":"detail","tiết kiệm":"menyimpan","tiết kiệm điện":"menghemat listrik","điều tiết":"peraturan","lương":"gaji","mát":"Dingin","thấp":"pendek","ẩm":"hangat","độ ẩm":"kelembaban","khí ẩm":"udara lembab","chuyển, lây":"mentransfer, menyebar","di dời, di chuyển":"pindah, pindah","di chuyển":"bergerak","di dời":"pindah","bố":"ayah","vải":"kain","chăn":"selimut","chăn len":"selimut wol","ví":"dompet","hồng":"berwarna merah muda","son môi":"lipstik","trà đen":"teh hitam","diệp":"Celupkan","từ, câu nói":"kata-kata, ucapan","lá đỏ":"daun merah","tự":"sendiri","tự bản thân":"dirimu sendiri","bản thân":"diri sendiri","tự tin":"percaya diri","mỗi người":"setiap orang","tự nhiên":"alam","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","quý":"बहुमूल्य","mùa":"सिजन","bốn mùa":"चार सिजन","mùa mưa":"वर्षाको मौसम","cơ":"मांसपेशी","xúc":"सम्पर्क गर्नुहोस्","sờ":"स्पर्श","cảm giác khi chạm vào":"स्पर्शको अनुभूति","sờ, chạm":"स्पर्श, स्पर्श","thô ráp":"नराम्रो","(da) nứt nẻ, ( biển) động":"(छाला) फुटेको, (समुद्री) असभ्य","tiết":"विवरण","tiết kiệm":"बचत गर्नुहोस्","tiết kiệm điện":"बिजुली बचत गर्नुहोस्","điều tiết":"नियमन","lương":"ज्याला","mát":"चिसो","thấp":"छोटो","ẩm":"तातो","độ ẩm":"आर्द्रता","khí ẩm":"आर्द्र हावा","chuyển, lây":"स्थानान्तरण, प्रसार","di dời, di chuyển":"सार्नु, सार्नु","di chuyển":"सार्नुहोस्","di dời":"स्थानान्तरण","bố":"बुबा","vải":"कपडा","chăn":"कम्बल","chăn len":"ऊनी कम्बल","ví":"वालेट","hồng":"गुलाबी","son môi":"लिपस्टिक","trà đen":"कालो चिया","diệp":"डिप","từ, câu nói":"शब्दहरू, भनाइहरू","lá đỏ":"रातो पातहरू","tự":"आफ्नै मा","tự bản thân":"आफैलाई","bản thân":"स्व","tự tin":"विश्वस्त","mỗi người":"प्रत्येक व्यक्ति","tự nhiên":"प्रकृति","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","quý":"အဖိုးတန်","mùa":"ရာသီ","bốn mùa":"လေးရာသီ","mùa mưa":"မိုးရာသီ","cơ":"ကြွက်သား","xúc":"ဆက်သွယ်ရန်","sờ":"ထိပါ။","cảm giác khi chạm vào":"အထိအတွေ့ကို ခံစားရတယ်။","sờ, chạm":"ထိတွေ့၊ ထိပါ။","thô ráp":"ကြမ်းတမ်းသည်။","(da) nứt nẻ, ( biển) động":"(အရေပြား) အက်ကွဲခြင်း၊ (ပင်လယ်) ကြမ်းတမ်းခြင်း။","tiết":"အသေးစိတ်","tiết kiệm":"ကယ်တင်ပါ။","tiết kiệm điện":"လျှပ်စစ်ဓာတ်အားကို ချွေတာပါ။","điều tiết":"စည်းမျဉ်း","lương":"လုပ်အားခ","mát":"အေးတယ်။","thấp":"တိုတို","ẩm":"နွေး","độ ẩm":"စိုထိုင်းဆ","khí ẩm":"စိုစွတ်သောလေ","chuyển, lây":"လွှဲပြောင်း, ဖြန့်","di dời, di chuyển":"နေရာပြောင်း၊ ရွှေ့ပါ။","di chuyển":"ရွှေ့","di dời":"နေရာပြောင်း","bố":"အဖေ","vải":"အထည်","chăn":"စောင်","chăn len":"သိုးမွှေးစောင်","ví":"ပိုက်ဆံအိတ်","hồng":"ပန်းရောင်","son môi":"နှုတ်ခမ်းနီ","trà đen":"အနက်ရောင်လက်ဖက်ရည်","diệp":"Diep","từ, câu nói":"စကား၊ ဆိုရိုးစကား","lá đỏ":"အနီရောင်အရွက်","tự":"တစ်ဦးတစ်ယောက်၏ကိုယ်ပိုင်အပေါ်","tự bản thân":"သင်ကိုယ်တိုင်","bản thân":"မိမိကိုယ်ကို","tự tin":"ယုံကြည်ချက်","mỗi người":"လူတစ်ဦးစီ","tự nhiên":"သဘာဝ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","quý":"মূল্যবান","mùa":"ঋতু","bốn mùa":"চারটি ঋতু","mùa mưa":"বর্ষাকাল","cơ":"পেশী","xúc":"যোগাযোগ","sờ":"স্পর্শ","cảm giác khi chạm vào":"স্পর্শ অনুভূতি","sờ, chạm":"স্পর্শ, স্পর্শ","thô ráp":"রুক্ষ","(da) nứt nẻ, ( biển) động":"(ত্বক) ফাটল, (সমুদ্র) রুক্ষ","tiết":"বিস্তারিত","tiết kiệm":"সংরক্ষণ","tiết kiệm điện":"বিদ্যুৎ সংরক্ষণ করুন","điều tiết":"প্রবিধান","lương":"মজুরি","mát":"শীতল","thấp":"সংক্ষিপ্ত","ẩm":"উষ্ণ","độ ẩm":"আর্দ্রতা","khí ẩm":"আর্দ্র বাতাস","chuyển, lây":"স্থানান্তর, বিস্তার","di dời, di chuyển":"স্থানান্তর করা, সরানো","di chuyển":"সরানো","di dời":"স্থানান্তর","bố":"বাবা","vải":"ফ্যাব্রিক","chăn":"কম্বল","chăn len":"উলের কম্বল","ví":"মানিব্যাগ","hồng":"গোলাপী","son môi":"লিপস্টিক","trà đen":"কালো চা","diệp":"ডিপ","từ, câu nói":"শব্দ, বাণী","lá đỏ":"লাল পাতা","tự":"নিজের উপর","tự bản thân":"নিজেকে","bản thân":"স্ব","tự tin":"আত্মবিশ্বাসী","mỗi người":"প্রতিটি ব্যক্তি","tự nhiên":"প্রকৃতি","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","quý":"कीमती","mùa":"मौसम","bốn mùa":"चार मौसम","mùa mưa":"बरसात का मौसम","cơ":"माँसपेशियाँ","xúc":"संपर्क","sờ":"छूना","cảm giác khi chạm vào":"छूने का एहसास","sờ, chạm":"स्पर्श करें, स्पर्श करें","thô ráp":"किसी न किसी","(da) nứt nẻ, ( biển) động":"(त्वचा) फटी हुई, (समुद्र) खुरदरी","tiết":"विवरण","tiết kiệm":"बचाना","tiết kiệm điện":"बिजली बचाएं","điều tiết":"विनियमन","lương":"वेतन","mát":"ठंडा","thấp":"छोटा","ẩm":"गरम","độ ẩm":"नमी","khí ẩm":"नम हवा","chuyển, lây":"स्थानांतरण, प्रसार","di dời, di chuyển":"स्थानांतरित करना, स्थानांतरित करना","di chuyển":"कदम","di dời":"शरण लेनी","bố":"पापा","vải":"कपड़ा","chăn":"कंबल","chăn len":"ऊनी कम्बल","ví":"बटुआ","hồng":"गुलाबी","son môi":"लिपस्टिक","trà đen":"काली चाय","diệp":"डूबना","từ, câu nói":"शब्द, कहावतें","lá đỏ":"लाल पत्तियां","tự":"अपने आप","tự bản thân":"अपने आप को","bản thân":"खुद","tự tin":"आत्मविश्वासी","mỗi người":"हर व्यक्ति","tự nhiên":"प्रकृति","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","quý":"ล้ำค่า","mùa":"ฤดูกาล","bốn mùa":"สี่ฤดูกาล","mùa mưa":"ฤดูฝน","cơ":"กล้ามเนื้อ","xúc":"ติดต่อ","sờ":"สัมผัส","cảm giác khi chạm vào":"ความรู้สึกต่อการสัมผัส","sờ, chạm":"สัมผัสสัมผัส","thô ráp":"ขรุขระ","(da) nứt nẻ, ( biển) động":"(ผิวหนัง) แตก (ทะเล) หยาบกร้าน","tiết":"รายละเอียด","tiết kiệm":"บันทึก","tiết kiệm điện":"ประหยัดไฟฟ้า","điều tiết":"ระเบียบข้อบังคับ","lương":"ค่าจ้าง","mát":"เย็น","thấp":"สั้น","ẩm":"อบอุ่น","độ ẩm":"ความชื้น","khí ẩm":"อากาศชื้น","chuyển, lây":"โอนแพร่กระจาย","di dời, di chuyển":"ย้ายย้าย","di chuyển":"เคลื่อนไหว","di dời":"ย้าย","bố":"พ่อ","vải":"ผ้า","chăn":"ผ้าห่ม","chăn len":"ผ้าห่มขนสัตว์","ví":"กระเป๋าสตางค์","hồng":"สีชมพู","son môi":"ลิปสติก","trà đen":"ชาดำ","diệp":"ดิ๊บ","từ, câu nói":"คำ, คำพูด","lá đỏ":"ใบไม้สีแดง","tự":"ด้วยตัวเอง","tự bản thân":"ตัวคุณเอง","bản thân":"ตัวเอง","tự tin":"มั่นใจ","mỗi người":"แต่ละคน","tự nhiên":"ธรรมชาติ","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

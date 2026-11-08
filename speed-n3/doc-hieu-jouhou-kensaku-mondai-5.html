@@ -1,0 +1,309 @@
+<meta charset="UTF-8">
+<style>
+
+hr.style-two { border: 0; }
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+input[type="radio"]{ border: unset; }
+input[type="radio"]{
+    -webkit-appearance: none;
+    width:15px;
+    height:15px;
+    border:1px solid #19283C !important;
+    border-radius:15px !important;
+    background:transparent;
+    opacity:0.7;
+    margin-bottom: -2px;
+}
+input[type="radio"]:checked{ background:#19283C; opacity: 1; }
+
+div.benphai,p.benphai{ text-align: right; }
+div.chinhgiua,p.chinhgiua{ text-align: center; }
+div.chuy{ color: #483D8B; }
+
+table { width: 100%; }
+.tracnghiem table,.tracnghiem td,.tracnghiem th { border: none; }
+
+#question { margin-bottom:8px; }
+.nghia{ margin-bottom:8px; }
+
+.doanvan {
+    margin-top: 15px;
+    margin-bottom:20px;
+    padding: 20px 10px 20px 10px;
+    padding-bottom: 20px;
+    background: #f0f7ff;
+    border: dashed 1px #5b8bd0;
+}
+
+.table_luachon{
+    padding:1px 15px 1px 15px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+}
+.tieude{ color: red; margin-top:20px; font-weight: bold; }
+
+hr.style14{
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.thongtin table {display: table !important;}
+.thongtin tr{display: table-row !important;}
+.thongtin td{display: table-cell !important;}
+.thongtindich table {display: table !important;}
+.thongtindich tr{display: table-row !important;}
+.thongtindich td{display: table-cell !important;}
+
+.thongtin,.thongtin div{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* 2) Table bên trong */
+.thongtin table{
+  width: 100%;
+  border-collapse: collapse;
+}
+/* 3) Khi màn nhỏ: cho table giữ kích thước theo nội dung để phải lướt */
+@media (max-width: 1024px){
+  .thongtin table{
+    width: max-content;     /* quan trọng để tạo scroll */
+    min-width: 100%;        /* vẫn phủ đủ khung nếu table nhỏ */
+    white-space: nowrap;    /* giữ ô không xuống dòng nếu muốn giống AI table */
+  }
+  .thongtin th,
+  .thongtin td{
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 767px){
+    .tracnghiem table, .tracnghiem tr, .tracnghiem td{ border-color: #fff; }
+    #mondai1,#mondai3,#mondai2,#mondai4 { width:45px; }
+    .table_luachon{ width: 100% !important; }
+}
+
+[data-f2-reading] .tracnghiem td:hover{background:Bisque;color:MidnightBlue}[data-f2-reading] .slide-content{display:none}[data-f2-reading] .kqdich{display:none;opacity:0}[data-f2-reading] .f2-options{border:none;width:100%}[data-f2-reading] .f2-options tbody{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr))}[data-f2-reading] .f2-options tr,[data-f2-reading] .f2-options td{border:none;display:block}@media (max-width: 720px){[data-f2-reading] .f2-options tbody{grid-template-columns:1fr}}</style>
+<div class="tab_container speed-page">
+<div id="tracnghiemdiv"><form class="quiz-form" method="post" action="#" name="post"><div id="shownoidung" data-legacy-quiz="" data-f2-reading="" data-source="speed-n3-dochieu" data-lesson="4-5" class="vnjp-sh-on"><p class="tieude"> 問題4-5　</p><div class="doanvan">&nbsp;&nbsp;&nbsp;ポーンさんは<ruby>夕飯<rp>（</rp><rt>ゆうはん</rt><rp>）</rp></ruby>の<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>歯<rp>（</rp><rt>は</rt><rp>）</rp></ruby>が<ruby>痛<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>くなりました。<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>きたいのですが、<ruby>今日<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>は<ruby>祝日<rp>（</rp><rt>しゅくじつ</rt><rp>）</rp></ruby>です。そこで、<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>から<ruby>配<rp>（</rp><rt>くば</rt><rp>）</rp></ruby>られた「<ruby>夜<rp>（</rp><rt>や</rt><rp>）</rp></ruby><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>、<ruby>土曜日<rp>（</rp><rt>どようび</rt><rp>）</rp></ruby>、<ruby>休日<rp>（</rp><rt>きゅうじつ</rt><rp>）</rp></ruby><ruby>診療<rp>（</rp><rt>しんりょう</rt><rp>）</rp></ruby>（※１）のお<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>らせ」を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>て、<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>から<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ける<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>を<ruby>探<rp>（</rp><rt>さが</rt><rp>）</rp></ruby>すことにしました。<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>、<ruby>午後<rp>（</rp><rt>ごご</rt><rp>）</rp></ruby>9<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>です。<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>はどこも、ポーンさんの<ruby>家<rp>（</rp><rt>いえ</rt><rp>）</rp></ruby>から20<ruby>分<rp>（</rp><rt>ぷん</rt><rp>）</rp></ruby><ruby>以内<rp>（</rp><rt>いない</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>けます。</div><br><div class="tracnghiem" data-item="1307" data-correct="3"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　ポーンさんが<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ける<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>はどこか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1307_1" type="radio" name="f21_1307" value="0" aria-label="1"><span style="font-size: 15px"> １　<ruby>高橋<rp>（</rp><rt>たかはし</rt><rp>）</rp></ruby><ruby>歯科<rp>（</rp><rt>しか</rt><rp>）</rp></ruby>クリニック </span><span id="result_question_f21_1307_1"></span> <span id="result_correct_f21_1307_1"></span></td></tr><tr><td><input id="answer_f21_1307_2" type="radio" name="f21_1307" value="1" aria-label="2"><span style="font-size: 15px"> ２　<ruby>健康管理<rp>（</rp><rt>けんこうかんり</rt><rp>）</rp></ruby>センター </span><span id="result_question_f21_1307_2"></span> <span id="result_correct_f21_1307_2"></span></td></tr><tr><td><input id="answer_f21_1307_3" type="radio" name="f21_1307" value="2" aria-label="3"><span style="font-size: 15px"> ３　<ruby>第一<rp>（</rp><rt>だいいち</rt><rp>）</rp></ruby><ruby>市民<rp>（</rp><rt>しみん</rt><rp>）</rp></ruby><ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1307_3"></span> <span id="result_correct_f21_1307_3"></span></td></tr><tr><td><input id="answer_f21_1307_4" type="radio" name="f21_1307" value="3" aria-label="4"><span style="font-size: 15px"> ４　<ruby>田中<rp>（</rp><rt>たなか</rt><rp>）</rp></ruby><ruby>歯科<rp>（</rp><rt>しか</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1307_4"></span> <span id="result_correct_f21_1307_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><br><div class="tracnghiem" data-item="1312" data-correct="2"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　ポーンさんが<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くとき、<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>っていかなければならないものは<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>か。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1312_1" type="radio" name="f21_1312" value="0" aria-label="1"><span style="font-size: 15px"> １　<ruby>外国<rp>（</rp><rt>がいこく</rt><rp>）</rp></ruby><ruby>人<rp>（</rp><rt>じん</rt><rp>）</rp></ruby><ruby>登録証<rp>（</rp><rt>とうろくしょう</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1312_1"></span> <span id="result_correct_f21_1312_1"></span></td></tr><tr><td><input id="answer_f21_1312_2" type="radio" name="f21_1312" value="1" aria-label="2"><span style="font-size: 15px"> ２　<ruby>免許証<rp>（</rp><rt>めんきょしょう</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1312_2"></span> <span id="result_correct_f21_1312_2"></span></td></tr><tr><td><input id="answer_f21_1312_3" type="radio" name="f21_1312" value="2" aria-label="3"><span style="font-size: 15px"> ３　<ruby>保険証<rp>（</rp><rt>ほけんしょう</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1312_3"></span> <span id="result_correct_f21_1312_3"></span></td></tr><tr><td><input id="answer_f21_1312_4" type="radio" name="f21_1312" value="3" aria-label="4"><span style="font-size: 15px"> ４　カード </span><span id="result_question_f21_1312_4"></span> <span id="result_correct_f21_1312_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><div class="thongtin"><p><br></p>
+<div style="border:1px solid black;padding:15px;">
+<p><br></p><p style="text-align: center; "><b> 「<ruby>夜間<rp>(</rp><rt>やかん</rt><rp>)</rp></ruby>、<ruby>土曜日<rp>(</rp><rt>どようび</rt><rp>)</rp></ruby>、<ruby>休日<rp>(</rp><rt>きゅうじつ</rt><rp>)</rp></ruby><ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby>のお<ruby>知<rp>(</rp><rt>し</rt><rp>)</rp></ruby>らせ」</b></p><p><br></p>
+<div style="overflow-x:auto;">
+<table class="table table-bordered" style="text-align: center;">
+<tbody><tr>
+<td width="15%"></td>
+<td width="35%"><ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby><ruby>科名<rp>(</rp><rt>かめい</rt><rp>)</rp></ruby></td>
+<td width="25%"><ruby>病院<rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby><ruby>名<rp>(</rp><rt>めい</rt><rp>)</rp></ruby></td>
+<td width="25%"><ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: left;"><ruby>平日<rp>(</rp><rt>へいじつ</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>（※２）・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby><br></td>
+<td style="text-align: left;"><ruby>健康<rp>(</rp><rt>けんこう</rt><rp>)</rp></ruby><ruby>管理<rp>(</rp><rt>かんり</rt><rp>)</rp></ruby>センター<br></td>
+<td style="text-align: left;">21<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～24<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby><br></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>高橋<rp>(</rp><rt>たかはし</rt><rp>)</rp></ruby><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby>クリニック<br></td>
+<td style="text-align: left;">19<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～23<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby><br></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: left;"><ruby>土曜日<rp>(</rp><rt>どようび</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>鈴木<rp>(</rp><rt>すずき</rt><rp>)</rp></ruby><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">15<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～20<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby>・<ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>第<rp>(</rp><rt>だい</rt><rp>)</rp></ruby>一<ruby>市民<rp>(</rp><rt>しみん</rt><rp>)</rp></ruby><ruby>病院<rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">17<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～22<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td rowspan="4" style="text-align: left;"><ruby>日<rp>(</rp><rt>にち</rt><rp>)</rp></ruby>・<ruby>祝<rp>(</rp><rt>しゅく</rt><rp>)</rp></ruby><ruby>休日<rp>(</rp><rt>きゅうじつ</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>石井<rp>(</rp><rt>いしい</rt><rp>)</rp></ruby><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">9<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～12<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby>・<ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>第<rp>(</rp><rt>だい</rt><rp>)</rp></ruby>一<ruby>市民<rp>(</rp><rt>しみん</rt><rp>)</rp></ruby><ruby>病院<rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">9<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～13<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>田中<rp>(</rp><rt>たなか</rt><rp>)</rp></ruby><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">17<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～22<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>健康<rp>(</rp><rt>けんこう</rt><rp>)</rp></ruby><ruby>管理<rp>(</rp><rt>かんり</rt><rp>)</rp></ruby>センター</td>	
+<td style="text-align: left;">15<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～21<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+</tbody></table>
+
+<p><ruby>受付<rp>(</rp><rt>うけつけ</rt><rp>)</rp></ruby>は、<ruby>終了<rp>(</rp><rt>しゅうりょう</rt><rp>)</rp></ruby>15<ruby>分前<rp>(</rp><rt>ふんまえ</rt><rp>)</rp></ruby>までです。</p>
+<p><ruby>現金<rp>(</rp><rt>げんきん</rt><rp>)</rp></ruby>、<ruby>保険<rp>(</rp><rt>ほけん</rt><rp>)</rp></ruby><ruby>証<rp>(</rp><rt>しょう</rt><rp>)</rp></ruby>（※３）をお<ruby>持<rp>(</rp><rt>も</rt><rp>)</rp></ruby>ちください。</p>
+<p><ruby>祝<rp>(</rp><rt>しゅく</rt><rp>)</rp></ruby>・<ruby>休日<rp>(</rp><rt>きゅうじつ</rt><rp>)</rp></ruby>の<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>は「<ruby>医療<rp>(</rp><rt>いりょう</rt><rp>)</rp></ruby>センター（☎12-8888）」にお<ruby>問<rp>(</rp><rt>と</rt><rp>)</rp></ruby>い<ruby>合<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>わせください。</p>
+
+
+</div></div>
+
+<p><br></p><p>（※１）<ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby>：<ruby>患者<rp>(</rp><rt>かんじゃ</rt><rp>)</rp></ruby>を<ruby>診<rp>(</rp><rt>み</rt><rp>)</rp></ruby>て、<ruby>治<rp>(</rp><rt>なお</rt><rp>)</rp></ruby>すこと</p>
+<p>（※２）<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>：<ruby>赤<rp>(</rp><rt>あか</rt><rp>)</rp></ruby>ちゃんや<ruby>幼児<rp>(</rp><rt>ようじ</rt><rp>)</rp></ruby>を<ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby>するところ</p>
+<p>（※３）<ruby>保険<rp>(</rp><rt>ほけん</rt><rp>)</rp></ruby><ruby>証<rp>(</rp><rt>しょう</rt><rp>)</rp></ruby>：<ruby>健康<rp>(</rp><rt>けんこう</rt><rp>)</rp></ruby><ruby>保険<rp>(</rp><rt>ほけん</rt><rp>)</rp></ruby>に<ruby>入<rp>(</rp><rt>はい</rt><rp>)</rp></ruby>っていることの<ruby>証明書<rp>(</rp><rt>しょうめいしょ</rt><rp>)</rp></ruby></p>
+</div><hr class="style-one"><div><div class="slide"><div class="slide-title sl2"><span class="vi-tr">Dịch &amp; Giải thích</span></div><div class="slide-content sl2"><div class="doanvan">&nbsp;&nbsp;&nbsp;<div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">ポーンさんは<ruby>夕飯<rp>（</rp><rt>ゆうはん</rt><rp>）</rp></ruby>の<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>歯<rp>（</rp><rt>は</rt><rp>）</rp></ruby>が<ruby>痛<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>くなりました。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Pawn sau khi ăn tối thì răng trở nên đau nhức.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>きたいのですが、<ruby>今日<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>は<ruby>祝日<rp>（</rp><rt>しゅくじつ</rt><rp>）</rp></ruby>です。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">そこで、<ruby>市<rp>（</rp><rt>し</rt><rp>）</rp></ruby>から<ruby>配<rp>（</rp><rt>くば</rt><rp>）</rp></ruby>られた「<ruby>夜<rp>（</rp><rt>や</rt><rp>）</rp></ruby><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>、<ruby>土曜日<rp>（</rp><rt>どようび</rt><rp>）</rp></ruby>、<ruby>休日<rp>（</rp><rt>きゅうじつ</rt><rp>）</rp></ruby><ruby>診療<rp>（</rp><rt>しんりょう</rt><rp>）</rp></ruby>（※１）のお<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>らせ」を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>て、<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>から<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ける<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>を<ruby>探<rp>（</rp><rt>さが</rt><rp>）</rp></ruby>すことにしました。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Sau đó, Pawn nhìn thấy "Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>、<ruby>午後<rp>（</rp><rt>ごご</rt><rp>）</rp></ruby>9<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>です。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Bây giờ là 9 giờ tối.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>はどこも、ポーンさんの<ruby>家<rp>（</rp><rt>いえ</rt><rp>）</rp></ruby>から20<ruby>分<rp>（</rp><rt>ぷん</rt><rp>）</rp></ruby><ruby>以内<rp>（</rp><rt>いない</rt><rp>）</rp></ruby>で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>けます。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.</div></div></div></div><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　ポーンさんが<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ける<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>はどこか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Bệnh viện mà Pawn có thể đi được là bệnh viện nào?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　<ruby>高橋<rp>（</rp><rt>たかはし</rt><rp>）</rp></ruby><ruby>歯科<rp>（</rp><rt>しか</rt><rp>）</rp></ruby>クリニック</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1    Phòng khám nha khoa Takahashi</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　<ruby>健康管理<rp>（</rp><rt>けんこうかんり</rt><rp>）</rp></ruby>センター</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2    Trung tâm chăm sóc sức khỏe</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　<ruby>第一<rp>（</rp><rt>だいいち</rt><rp>）</rp></ruby><ruby>市民<rp>（</rp><rt>しみん</rt><rp>）</rp></ruby><ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3    Bệnh viện thị dân số 1</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　<ruby>田中<rp>（</rp><rt>たなか</rt><rp>）</rp></ruby><ruby>歯科<rp>（</rp><rt>しか</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4    Nha khoa Tanaka</div></div></div><p></p><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　ポーンさんが<ruby>病院<rp>（</rp><rt>びょういん</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くとき、<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>っていかなければならないものは<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>か。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　<ruby>外国<rp>（</rp><rt>がいこく</rt><rp>）</rp></ruby><ruby>人<rp>（</rp><rt>じん</rt><rp>）</rp></ruby><ruby>登録証<rp>（</rp><rt>とうろくしょう</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1    Thẻ đăng ký người nước ngoài</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　<ruby>免許証<rp>（</rp><rt>めんきょしょう</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2    Giấy phép lái xe</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　<ruby>保険証<rp>（</rp><rt>ほけんしょう</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3    Thẻ bảo hiểm</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　カード</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4    Thẻ</div></div></div><p></p><div class="thongtin"><p><br></p>
+<div style="border:1px solid black;padding:15px;">
+<p><br></p><p style="text-align: center; "><b> 「<ruby>夜間<rp>(</rp><rt>やかん</rt><rp>)</rp></ruby>、<ruby>土曜日<rp>(</rp><rt>どようび</rt><rp>)</rp></ruby>、<ruby>休日<rp>(</rp><rt>きゅうじつ</rt><rp>)</rp></ruby><ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby>のお<ruby>知<rp>(</rp><rt>し</rt><rp>)</rp></ruby>らせ」</b></p><p><br></p>
+<div style="overflow-x:auto;">
+<table class="table table-bordered" style="text-align: center;">
+<tbody><tr>
+<td width="15%"></td>
+<td width="35%"><ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby><ruby>科名<rp>(</rp><rt>かめい</rt><rp>)</rp></ruby></td>
+<td width="25%"><ruby>病院<rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby><ruby>名<rp>(</rp><rt>めい</rt><rp>)</rp></ruby></td>
+<td width="25%"><ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby><ruby>時間<rp>(</rp><rt>じかん</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: left;"><ruby>平日<rp>(</rp><rt>へいじつ</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>（※２）・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby><br></td>
+<td style="text-align: left;"><ruby>健康<rp>(</rp><rt>けんこう</rt><rp>)</rp></ruby><ruby>管理<rp>(</rp><rt>かんり</rt><rp>)</rp></ruby>センター<br></td>
+<td style="text-align: left;">21<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～24<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby><br></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>高橋<rp>(</rp><rt>たかはし</rt><rp>)</rp></ruby><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby>クリニック<br></td>
+<td style="text-align: left;">19<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～23<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby><br></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: left;"><ruby>土曜日<rp>(</rp><rt>どようび</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>鈴木<rp>(</rp><rt>すずき</rt><rp>)</rp></ruby><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">15<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～20<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby>・<ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>第<rp>(</rp><rt>だい</rt><rp>)</rp></ruby>一<ruby>市民<rp>(</rp><rt>しみん</rt><rp>)</rp></ruby><ruby>病院<rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">17<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～22<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td rowspan="4" style="text-align: left;"><ruby>日<rp>(</rp><rt>にち</rt><rp>)</rp></ruby>・<ruby>祝<rp>(</rp><rt>しゅく</rt><rp>)</rp></ruby><ruby>休日<rp>(</rp><rt>きゅうじつ</rt><rp>)</rp></ruby></td>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>石井<rp>(</rp><rt>いしい</rt><rp>)</rp></ruby><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">9<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～12<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>内科<rp>(</rp><rt>ないか</rt><rp>)</rp></ruby>・<ruby>外科<rp>(</rp><rt>げか</rt><rp>)</rp></ruby>・<ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>第<rp>(</rp><rt>だい</rt><rp>)</rp></ruby>一<ruby>市民<rp>(</rp><rt>しみん</rt><rp>)</rp></ruby><ruby>病院<rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">9<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～13<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>田中<rp>(</rp><rt>たなか</rt><rp>)</rp></ruby><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;">17<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～22<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: left;"><ruby>歯科<rp>(</rp><rt>しか</rt><rp>)</rp></ruby></td>	
+<td style="text-align: left;"><ruby>健康<rp>(</rp><rt>けんこう</rt><rp>)</rp></ruby><ruby>管理<rp>(</rp><rt>かんり</rt><rp>)</rp></ruby>センター</td>	
+<td style="text-align: left;">15<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>～21<ruby>時<rp>(</rp><rt>じ</rt><rp>)</rp></ruby></td>
+</tr>
+</tbody></table>
+
+<p><ruby>受付<rp>(</rp><rt>うけつけ</rt><rp>)</rp></ruby>は、<ruby>終了<rp>(</rp><rt>しゅうりょう</rt><rp>)</rp></ruby>15<ruby>分前<rp>(</rp><rt>ふんまえ</rt><rp>)</rp></ruby>までです。</p>
+<p><ruby>現金<rp>(</rp><rt>げんきん</rt><rp>)</rp></ruby>、<ruby>保険<rp>(</rp><rt>ほけん</rt><rp>)</rp></ruby><ruby>証<rp>(</rp><rt>しょう</rt><rp>)</rp></ruby>（※３）をお<ruby>持<rp>(</rp><rt>も</rt><rp>)</rp></ruby>ちください。</p>
+<p><ruby>祝<rp>(</rp><rt>しゅく</rt><rp>)</rp></ruby>・<ruby>休日<rp>(</rp><rt>きゅうじつ</rt><rp>)</rp></ruby>の<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>は「<ruby>医療<rp>(</rp><rt>いりょう</rt><rp>)</rp></ruby>センター（☎12-8888）」にお<ruby>問<rp>(</rp><rt>と</rt><rp>)</rp></ruby>い<ruby>合<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>わせください。</p>
+
+
+</div></div>
+
+<p><br></p><p>（※１）<ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby>：<ruby>患者<rp>(</rp><rt>かんじゃ</rt><rp>)</rp></ruby>を<ruby>診<rp>(</rp><rt>み</rt><rp>)</rp></ruby>て、<ruby>治<rp>(</rp><rt>なお</rt><rp>)</rp></ruby>すこと</p>
+<p>（※２）<ruby>小児科<rp>(</rp><rt>しょうにか</rt><rp>)</rp></ruby>：<ruby>赤<rp>(</rp><rt>あか</rt><rp>)</rp></ruby>ちゃんや<ruby>幼児<rp>(</rp><rt>ようじ</rt><rp>)</rp></ruby>を<ruby>診療<rp>(</rp><rt>しんりょう</rt><rp>)</rp></ruby>するところ</p>
+<p>（※３）<ruby>保険<rp>(</rp><rt>ほけん</rt><rp>)</rp></ruby><ruby>証<rp>(</rp><rt>しょう</rt><rp>)</rp></ruby>：<ruby>健康<rp>(</rp><rt>けんこう</rt><rp>)</rp></ruby><ruby>保険<rp>(</rp><rt>ほけん</rt><rp>)</rp></ruby>に<ruby>入<rp>(</rp><rt>はい</rt><rp>)</rp></ruby>っていることの<ruby>証明書<rp>(</rp><rt>しょうめいしょ</rt><rp>)</rp></ruby></p>
+</div><div class="thongtindich"><p><br></p>
+<div style="border:1px solid black;padding:15px;">
+<p><br></p><p style="text-align: center; "><b>&nbsp; &nbsp;<span class="vi-tr">Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ</span></b><br></p><p><br></p>
+<div style="overflow-x:auto;">
+<table class="table table-bordered" style="text-align: center;">
+<tbody><tr>
+<td width="15%"></td>
+<td width="35%"><span class="vi-tr">Tên lĩnh vực điều trị</span></td>
+<td width="25%"><span class="vi-tr">Tên bệnh viện</span></td>
+<td width="25%"><span class="vi-tr">Thời gian điều trị</span></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: left;"><ruby><span class="vi-tr">Ngày thường</span><rp>)</rp></ruby></td>
+<td style="text-align: left;"><span class="vi-tr">Khoa nội/ Khoa nhi/ Khoa ngoại</span></td>
+<td style="text-align: left;"><span class="vi-tr">Trung tâm chăm sóc sức khỏe</span></td>
+<td style="text-align: left;"><span class="vi-tr">21:00 giờ</span> ～ <span class="vi-tr">24 giờ</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Nha khoa</td>
+<td style="text-align: left;"><span class="vi-tr">Phòng khám nha khoa Takahashi</span></td>
+<td style="text-align: left;"><span class="vi-tr">19 giờ</span> ～ <span class="vi-tr">23 giờ</span></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: left;"><ruby><span class="vi-tr">Thứ 7</span><rp>)</rp></ruby></td>
+<td style="text-align: left;"><span class="vi-tr">Khoa nội/ Khoa nhi/ Khoa ngoại</span></td>	
+<td style="text-align: left;"><span class="vi-tr">Khoa nội/ Khoa ngoại Suzuki</span></td>
+<td style="text-align: left;"><span class="vi-tr">15 giờ</span> ～ <span class="vi-tr">20 giờ</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="vi-tr">Khoa nội/ Khoa ngoại/ Nha khoa</span></td>	
+<td style="text-align: left;"><span class="vi-tr">Bệnh viện thị dân số 1</span> </td>	
+<td style="text-align: left;"><span class="vi-tr">17 giờ</span> ～ <span class="vi-tr">22 giờ</span></td>
+</tr>
+<tr>
+<td rowspan="4" style="text-align: left;"><span class="vi-tr">Chủ nhật, ngày lễ</span></td>
+<td style="text-align: left;"><span class="vi-tr">Khoa nội/ Khoa ngoại</span></td>	
+<td style="text-align: left;"><span class="vi-tr">Khoa nội/ Khoa ngoại bệnh viện Ishii</span></td>	
+<td style="text-align: left;"><span class="vi-tr">9 giờ</span> ～ <span class="vi-tr">12 giờ</span></td>
+
+</tr>
+<tr>
+<td style="text-align: left;"><span class="vi-tr">Khoa nội/ Khoa ngoại/ Nha khoa</span></td>	
+<td style="text-align: left;"><span class="vi-tr">Bệnh viện thị dân số 1</span> </td>
+<td style="text-align: left;"><span class="vi-tr">9 giờ</span> ～ <span class="vi-tr">13 giờ</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Nha khoa</td>
+<td style="text-align: left;"><span class="vi-tr">Nha khoa Tanaka 17 giờ</span> ～ <span class="vi-tr">22 giờ</span></td>	
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Nha khoa </td>	
+<td style="text-align: left;"><span class="vi-tr">Trung tâm chăm sóc sức khỏe</span></td>
+<td style="text-align: left;"><span class="vi-tr">15 giờ</span> ～ <span class="vi-tr">21 giờ</span></td>
+</tr>
+</tbody></table>
+
+<p><span class="vi-tr">Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.</span></p>
+<p><span class="vi-tr">Xin hãy mang theo tiền mặt và thẻ bảo hiểm.</span></p>
+<p><span class="vi-tr">Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ</span> 「<span class="vi-tr">Trung tâm y tế (Điện thoại: 12-8888)</span>」.</p>
+
+
+</div></div>
+
+<p><br></p><p>診療<span class="vi-tr">: Khám và chữa những bệnh nhân (khám chữa bệnh)</span></p>
+<p>小児科<span class="vi-tr">: Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)</span></p>
+<p>保険証<span class="vi-tr">: Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)</span></p>
+</div></div></div></div><input type="button" value="Kết Quả" data-quiz-action="check" class="btn btn-danger" id="ketqua"><input type="button" value="Làm Lại" data-quiz-action="reset" class="btn btn-success" id="lamlai"><input type="button" value="Đáp Án" data-quiz-action="reveal" class="btn btn-primary" id="dapan"><div role="status" data-quiz-status=""><span></span></div></div></form></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="doc-hieu-jouhou-kensaku-mondai-5.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Pawn sau khi ăn tối thì răng trở nên đau nhức.":"Pawn's teeth hurt after dinner.","Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.":"Even though I want to go to the hospital, today is a holiday.","Sau đó, Pawn nhìn thấy \"Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ\" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.":"After that, Pawn saw the \"Notice of medical examination and treatment in the evenings, Saturdays and holidays\" posted in the city, then decided to look for a hospital where he could go from now on.","Bây giờ là 9 giờ tối.":"It's 9 p.m. now.","Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.":"Hospitals are within 20 minutes of Pawn's home.","Bệnh viện mà Pawn có thể đi được là bệnh viện nào?":"Which hospital can Pawn go to?","1 Phòng khám nha khoa Takahashi":"1 Takahashi Dental Clinic","2 Trung tâm chăm sóc sức khỏe":"2 Health care centers","3 Bệnh viện thị dân số 1":"3 Urban Hospital No. 1","4 Nha khoa Tanaka":"4 Tanaka Dental Clinic","Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?":"When going to the hospital, what should Pawn bring?","1 Thẻ đăng ký người nước ngoài":"1 Alien registration card","2 Giấy phép lái xe":"2 Driver's license","3 Thẻ bảo hiểm":"3 Insurance cards","4 Thẻ":"4 Cards","Dịch & Giải thích":"Translation & Interpretation","Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ":"Notice about treatment in the evenings, Saturdays and holidays","Tên lĩnh vực điều trị":"Name of treatment area","Tên bệnh viện":"Hospital name","Thời gian điều trị":"Treatment time","Ngày thường":"Ordinary day","Khoa nội/ Khoa nhi/ Khoa ngoại":"Department of Internal Medicine/ Department of Pediatrics/ Department of Surgery","Trung tâm chăm sóc sức khỏe":"Health care center","21:00 giờ":"21:00 hrs","24 giờ":"24 hours","Phòng khám nha khoa Takahashi":"Takahashi Dental Clinic","19 giờ":"7 p.m","23 giờ":"11 p.m","Thứ 7":"Saturday","Khoa nội/ Khoa ngoại Suzuki":"Suzuki Department of Internal Medicine/Surgical Department","15 giờ":"15 o'clock","20 giờ":"20 hours","Khoa nội/ Khoa ngoại/ Nha khoa":"Internal Medicine/ Surgery/ Dentistry","Bệnh viện thị dân số 1":"Urban Hospital No. 1","17 giờ":"17 o'clock","22 giờ":"10 p.m","Chủ nhật, ngày lễ":"Sunday, holidays","Khoa nội/ Khoa ngoại":"Department of Internal Medicine/ Department of Surgery","Khoa nội/ Khoa ngoại bệnh viện Ishii":"Department of Internal Medicine/Department of Surgery, Ishii Hospital","9 giờ":"9 o'clock","12 giờ":"12 o'clock","13 giờ":"13 o'clock","Nha khoa Tanaka 17 giờ":"Tanaka Dental Clinic 17 hours","21 giờ":"9 p.m","Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.":"Reception counter opens until 15 minutes before closing time.","Xin hãy mang theo tiền mặt và thẻ bảo hiểm.":"Please bring cash and insurance card.","Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ":"For pediatric examination on holidays/holidays, please contact us","Trung tâm y tế (Điện thoại: 12-8888)":"Medical Center (Phone: 12-8888)",": Khám và chữa những bệnh nhân (khám chữa bệnh)":": Examination and treatment of patients (medical examination and treatment)",": Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)":": Place of medical examination and treatment for newborns or children (Pediatrics Department)",": Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)":": Insurance enrollment certificate (Insurance card)","Kết Quả":"Result","Làm Lại":"Redo","Đáp Án":"Answer"},"idMap":{"Pawn sau khi ăn tối thì răng trở nên đau nhức.":"Gigi pion sakit setelah makan malam.","Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.":"Padahal mau ke rumah sakit, hari ini libur.","Sau đó, Pawn nhìn thấy \"Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ\" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.":"Setelah itu, Pion melihat \"Pemberitahuan pemeriksaan kesehatan dan pengobatan di malam hari, Sabtu dan hari libur\" dipasang di kota, lalu memutuskan untuk mencari rumah sakit dimana dia bisa pergi mulai sekarang.","Bây giờ là 9 giờ tối.":"Ini jam 9 malam. Sekarang.","Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.":"Rumah sakit berjarak 20 menit dari rumah Pawn.","Bệnh viện mà Pawn có thể đi được là bệnh viện nào?":"Rumah sakit mana yang bisa dituju oleh Pion?","1 Phòng khám nha khoa Takahashi":"1 Klinik Gigi Takahashi","2 Trung tâm chăm sóc sức khỏe":"2 Pusat layanan kesehatan","3 Bệnh viện thị dân số 1":"3 Rumah Sakit Kota No.1","4 Nha khoa Tanaka":"4 Klinik Gigi Tanaka","Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?":"Saat ke Rumah Sakit, apa saja yang harus dibawa oleh Pion?","1 Thẻ đăng ký người nước ngoài":"1 kartu registrasi orang asing","2 Giấy phép lái xe":"2 Surat Izin Mengemudi","3 Thẻ bảo hiểm":"3 kartu asuransi","4 Thẻ":"4 Kartu","Dịch & Giải thích":"Terjemahan & Interpretasi","Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ":"Pemberitahuan tentang pengobatan pada malam hari, Sabtu dan hari libur","Tên lĩnh vực điều trị":"Nama area perawatan","Tên bệnh viện":"Nama rumah sakit","Thời gian điều trị":"Waktu pengobatan","Ngày thường":"Hari biasa","Khoa nội/ Khoa nhi/ Khoa ngoại":"Departemen Penyakit Dalam/ Departemen Pediatri/ Departemen Bedah","Trung tâm chăm sóc sức khỏe":"Pusat layanan kesehatan","21:00 giờ":"21:00","24 giờ":"24 jam","Phòng khám nha khoa Takahashi":"Klinik Gigi Takahashi","19 giờ":"jam 7 malam","23 giờ":"11 malam","Thứ 7":"Sabtu","Khoa nội/ Khoa ngoại Suzuki":"Departemen Penyakit Dalam/Departemen Bedah Suzuki","15 giờ":"jam 15","20 giờ":"20 jam","Khoa nội/ Khoa ngoại/ Nha khoa":"Penyakit Dalam/Bedah/Kedokteran Gigi","Bệnh viện thị dân số 1":"Rumah Sakit Perkotaan No.1","17 giờ":"jam 17","22 giờ":"jam 10 malam","Chủ nhật, ngày lễ":"Minggu, hari libur","Khoa nội/ Khoa ngoại":"Departemen Penyakit Dalam/ Departemen Bedah","Khoa nội/ Khoa ngoại bệnh viện Ishii":"Departemen Penyakit Dalam/Departemen Bedah, Rumah Sakit Ishii","9 giờ":"jam 9","12 giờ":"jam 12","13 giờ":"jam 13","Nha khoa Tanaka 17 giờ":"Klinik Gigi Tanaka 17 jam","21 giờ":"jam 9 malam","Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.":"Konter resepsionis buka hingga 15 menit sebelum waktu tutup.","Xin hãy mang theo tiền mặt và thẻ bảo hiểm.":"Harap membawa uang tunai dan kartu asuransi.","Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ":"Untuk pemeriksaan anak pada hari libur/hari libur silahkan menghubungi kami","Trung tâm y tế (Điện thoại: 12-8888)":"Pusat Medis (Telepon: 12-8888)",": Khám và chữa những bệnh nhân (khám chữa bệnh)":": Pemeriksaan dan pengobatan pasien (pemeriksaan dan pengobatan kesehatan)",": Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)":": Tempat pemeriksaan kesehatan dan pengobatan bayi baru lahir atau anak (Bagian Pediatri)",": Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)":": Surat keterangan pendaftaran asuransi (Kartu asuransi)","Kết Quả":"Hasil","Làm Lại":"Mengulangi","Đáp Án":"Menjawab"},"neMap":{"Pawn sau khi ăn tối thì răng trở nên đau nhức.":"बेलुकाको खाना खाएपछि प्यादाको दाँत दुख्यो।","Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.":"अस्पताल जान मन लागे पनि आज बिदा छ ।","Sau đó, Pawn nhìn thấy \"Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ\" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.":"त्यसपछि, प्यानले सहरमा पोस्ट गरिएको \"साँझ, शनिबार र बिदामा स्वास्थ्य परीक्षण र उपचारको सूचना\" देखे, त्यसपछि उनी अबबाट जान सक्ने अस्पताल खोज्ने निर्णय गरे।","Bây giờ là 9 giờ tối.":"रातको ९ बजेको छ । अहिले।","Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.":"अस्पतालहरू प्यानको घरबाट 20 मिनेट भित्र छन्।","Bệnh viện mà Pawn có thể đi được là bệnh viện nào?":"प्यान कुन अस्पताल जान सक्छ?","1 Phòng khám nha khoa Takahashi":"१ ताकाहाशी डेन्टल क्लिनिक","2 Trung tâm chăm sóc sức khỏe":"2 स्वास्थ्य सेवा केन्द्रहरू","3 Bệnh viện thị dân số 1":"३ अर्बन अस्पताल नम्बर १","4 Nha khoa Tanaka":"4 तानाका डेन्टल क्लिनिक","Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?":"अस्पताल जाँदा प्यानले के ल्याउनुपर्छ?","1 Thẻ đăng ký người nước ngoài":"1 विदेशी दर्ता कार्ड","2 Giấy phép lái xe":"2 चालक अनुमतिपत्र","3 Thẻ bảo hiểm":"3 बीमा कार्डहरू","4 Thẻ":"4 कार्डहरू","Dịch & Giải thích":"अनुवाद र व्याख्या","Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ":"साँझ, शनिबार र बिदामा उपचारको बारेमा सूचना","Tên lĩnh vực điều trị":"उपचार क्षेत्रको नाम","Tên bệnh viện":"अस्पतालको नाम","Thời gian điều trị":"उपचार समय","Ngày thường":"सामान्य दिन","Khoa nội/ Khoa nhi/ Khoa ngoại":"आन्तरिक चिकित्सा विभाग / बाल रोग विभाग / शल्य चिकित्सा विभाग","Trung tâm chăm sóc sức khỏe":"स्वास्थ्य सेवा केन्द्र","21:00 giờ":"21:00 बजे","24 giờ":"24 घण्टा","Phòng khám nha khoa Takahashi":"ताकाहाशी डेन्टल क्लिनिक","19 giờ":"बेलुका ७ बजे","23 giờ":"११ बजे","Thứ 7":"शनिबार","Khoa nội/ Khoa ngoại Suzuki":"सुजुकी आन्तरिक चिकित्सा / शल्य चिकित्सा विभाग","15 giờ":"१५ बजे","20 giờ":"20 घण्टा","Khoa nội/ Khoa ngoại/ Nha khoa":"आन्तरिक चिकित्सा / शल्य चिकित्सा / दन्त चिकित्सा","Bệnh viện thị dân số 1":"अर्बन अस्पताल नम्बर १","17 giờ":"17 बजे","22 giờ":"राति १० बजे","Chủ nhật, ngày lễ":"आइतबार, बिदा","Khoa nội/ Khoa ngoại":"आन्तरिक चिकित्सा विभाग / शल्य चिकित्सा विभाग","Khoa nội/ Khoa ngoại bệnh viện Ishii":"आन्तरिक चिकित्सा विभाग / शल्य चिकित्सा विभाग, Ishii अस्पताल","9 giờ":"९ बजे","12 giờ":"12 बजे","13 giờ":"13 बजे","Nha khoa Tanaka 17 giờ":"Tanaka डेन्टल क्लिनिक 17 घण्टा","21 giờ":"राति ९ बजे","Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.":"रिसेप्शन काउन्टर बन्द समय भन्दा 15 मिनेट अघि सम्म खुल्छ।","Xin hãy mang theo tiền mặt và thẻ bảo hiểm.":"कृपया नगद र बीमा कार्ड ल्याउनुहोस्।","Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ":"बिदा/बिदाहरूमा बाल चिकित्सा परीक्षाको लागि, कृपया हामीलाई सम्पर्क गर्नुहोस्","Trung tâm y tế (Điện thoại: 12-8888)":"मेडिकल सेन्टर (फोन: १२-८८८८)",": Khám và chữa những bệnh nhân (khám chữa bệnh)":": बिरामीको परीक्षण र उपचार (चिकित्सा परीक्षण र उपचार)",": Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)":": नवजात शिशु वा बच्चाहरूको लागि चिकित्सा परीक्षण र उपचार गर्ने ठाउँ (बाल रोग विभाग)",": Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)":": बीमा नामांकन प्रमाणपत्र (बीमा कार्ड)","Kết Quả":"नतिजा","Làm Lại":"पुन: गर्नुहोस्","Đáp Án":"जवाफ"},"myMap":{"Pawn sau khi ăn tối thì răng trở nên đau nhức.":"ညစာစားပြီးနောက် Pawn ၏သွားများနာကျင်သည်။","Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.":"ဆေးရုံသွားချင်ပေမယ့် ဒီနေ့က အားလပ်ရက်။","Sau đó, Pawn nhìn thấy \"Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ\" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.":"ထို့နောက်တွင်၊ Pawn သည် \"ညနေပိုင်း၊ စနေနေ့နှင့်အားလပ်ရက်များတွင်ဆေးစစ်ခြင်းနှင့်ဆေးကုသမှုဆိုင်ရာသတိပေးချက်\" ကိုတွေ့မြင်ပြီးနောက်ယခုမှသွားနိုင်သည့်ဆေးရုံကိုရှာဖွေရန်ဆုံးဖြတ်ခဲ့သည်။","Bây giờ là 9 giờ tối.":"ည ၉ နာရီရှိပြီ။ ယခု","Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.":"ဆေးရုံများသည် Pawn ၏အိမ်မှမိနစ် 20 အတွင်းဖြစ်သည်။","Bệnh viện mà Pawn có thể đi được là bệnh viện nào?":"Pawn က ဘယ်ဆေးရုံကို သွားလို့ရလဲ။","1 Phòng khám nha khoa Takahashi":"Takahashi သွားဘက်ဆိုင်ရာဆေးခန်း ၁","2 Trung tâm chăm sóc sức khỏe":"ကျန်းမာရေးစောင့်ရှောက်မှုဌာန ၂ ခု","3 Bệnh viện thị dân số 1":"၃ မြို့ပြဆေးရုံ အမှတ် ၁","4 Nha khoa Tanaka":"4 Tanaka သွားနှင့်ခံတွင်းဆေးခန်း","Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?":"ဆေးရုံသွားတဲ့အခါ Pawn ဘာတွေ ယူလာရမလဲ။","1 Thẻ đăng ký người nước ngoài":"နိုင်ငံခြားသား မှတ်ပုံတင်ကတ် ၁","2 Giấy phép lái xe":"ယာဉ်မောင်းလိုင်စင် ၂","3 Thẻ bảo hiểm":"အာမခံကတ် ၃ ကတ်","4 Thẻ":"4 ကတ်များ","Dịch & Giải thích":"ဘာသာပြန်နှင့် စကားပြန်","Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ":"ညနေပိုင်း၊ စနေ၊ ရုံးပိတ်ရက်များတွင် ကုသမှုအကြောင်း အသိပေးချက်","Tên lĩnh vực điều trị":"ကုသမှုဧရိယာအမည်","Tên bệnh viện":"ဆေးရုံနာမည်","Thời gian điều trị":"ကုသမှုအချိန်","Ngày thường":"သာမာန်နေ့","Khoa nội/ Khoa nhi/ Khoa ngoại":"ပြည်တွင်းဆေးပညာဌာန/ ကလေးအထူးကုဌာန/ ခွဲစိတ်မှုဌာန","Trung tâm chăm sóc sức khỏe":"ကျန်းမာရေးစောင့်ရှောက်မှုစင်တာ","21:00 giờ":"21:00 နာရီ","24 giờ":"၂၄ နာရီ","Phòng khám nha khoa Takahashi":"Takahashi သွားဘက်ဆိုင်ရာဆေးခန်း","19 giờ":"ည ၇ နာရီ","23 giờ":"ည ၁၁ နာရီ","Thứ 7":"စနေနေ့","Khoa nội/ Khoa ngoại Suzuki":"ဆူဇူကီးပြည်တွင်းဆေးပညာဌာန/ခွဲစိတ်မှုဌာန","15 giờ":"၁၅ နာရီ","20 giờ":"20 နာရီ","Khoa nội/ Khoa ngoại/ Nha khoa":"အတွင်းဆေး/ ခွဲစိတ်မှု/ သွားဘက်ဆိုင်ရာ","Bệnh viện thị dân số 1":"မြို့ပြဆေးရုံ အမှတ် ၁","17 giờ":"၁၇ နာရီ","22 giờ":"ည ၁၀ နာရီ","Chủ nhật, ngày lễ":"တနင်္ဂနွေ၊ ရုံးပိတ်ရက်","Khoa nội/ Khoa ngoại":"ပြည်တွင်းဆေးပညာဌာန/ ခွဲစိတ်မှုဌာန","Khoa nội/ Khoa ngoại bệnh viện Ishii":"ပြည်တွင်းဆေးပညာဌာန/ ခွဲစိတ်မှုဌာန၊ Ishii ဆေးရုံ","9 giờ":"၉ နာရီ","12 giờ":"၁၂ နာရီ","13 giờ":"၁၃ နာရီ","Nha khoa Tanaka 17 giờ":"Tanaka သွားနှင့်ခံတွင်းဆေးခန်း ၁၇ နာရီ","21 giờ":"ည ၉ နာရီ","Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.":"ဧည့်ခံကောင်တာ မပိတ်မီ 15 မိနစ်အထိ ဖွင့်သည်။","Xin hãy mang theo tiền mặt và thẻ bảo hiểm.":"ငွေသားနှင့် အာမခံကတ်ကို ယူဆောင်လာပါ။","Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ":"အားလပ်ရက်/အားလပ်ရက်များတွင် ကလေးကျန်းမာရေးစစ်ဆေးမှုအတွက် ကျေးဇူးပြု၍ ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ။","Trung tâm y tế (Điện thoại: 12-8888)":"ဆေးဘက်ဆိုင်ရာဌာန (ဖုန်း: ၁၂-၈၈၈၈)၊",": Khám và chữa những bệnh nhân (khám chữa bệnh)":"လူနာများအား စစ်ဆေးခြင်းနှင့် ကုသခြင်း (ဆေးစစ်ခြင်းနှင့် ကုသခြင်း)",": Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)":"မွေးကင်းစကလေးငယ်များအတွက် ဆေးစစ်ခြင်းနှင့် ကုသခြင်းနေရာ (ကလေးအထူးကုဌာန)",": Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)":": အာမခံစာရင်းသွင်းလက်မှတ် (အာမခံကတ်)","Kết Quả":"ရလဒ်","Làm Lại":"ပြန်လုပ်ပါ။","Đáp Án":"ဖြေ"},"bnMap":{"Pawn sau khi ăn tối thì răng trở nên đau nhức.":"রাতের খাবারের পর প্যানের দাঁত ব্যাথা।","Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.":"হাসপাতালে যেতে চাইলেও আজ ছুটির দিন।","Sau đó, Pawn nhìn thấy \"Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ\" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.":"তারপরে, প্যান শহরে পোস্ট করা \"সন্ধ্যা, শনিবার এবং ছুটির দিনে ডাক্তারি পরীক্ষা এবং চিকিত্সার নোটিশ\" দেখেছিলেন, তারপরে তিনি এখন থেকে যেখানে যেতে পারেন সেখানে একটি হাসপাতালে খোঁজার সিদ্ধান্ত নেন।","Bây giờ là 9 giờ tối.":"রাত ৯টা বাজে এখন","Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.":"হাসপাতালগুলি প্যানের বাড়ির 20 মিনিটের মধ্যে।","Bệnh viện mà Pawn có thể đi được là bệnh viện nào?":"প্যান কোন হাসপাতালে যেতে পারে?","1 Phòng khám nha khoa Takahashi":"1 তাকাহাশি ডেন্টাল ক্লিনিক","2 Trung tâm chăm sóc sức khỏe":"2 স্বাস্থ্যসেবা কেন্দ্র","3 Bệnh viện thị dân số 1":"3 আরবান হাসপাতাল নং 1","4 Nha khoa Tanaka":"4 তানাকা ডেন্টাল ক্লিনিক","Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?":"হাসপাতালে যাওয়ার সময় প্যানকে কী আনতে হবে?","1 Thẻ đăng ký người nước ngoài":"1 এলিয়েন রেজিস্ট্রেশন কার্ড","2 Giấy phép lái xe":"2 চালকের লাইসেন্স","3 Thẻ bảo hiểm":"3 বীমা কার্ড","4 Thẻ":"4 কার্ড","Dịch & Giải thích":"অনুবাদ ও ব্যাখ্যা","Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ":"সন্ধ্যা, শনিবার এবং ছুটির দিনে চিকিত্সা সম্পর্কে বিজ্ঞপ্তি","Tên lĩnh vực điều trị":"চিকিত্সা এলাকার নাম","Tên bệnh viện":"হাসপাতালের নাম","Thời gian điều trị":"চিকিৎসার সময়","Ngày thường":"সাধারণ দিন","Khoa nội/ Khoa nhi/ Khoa ngoại":"অভ্যন্তরীণ মেডিসিন বিভাগ/ শিশুরোগ বিভাগ/ সার্জারি বিভাগ","Trung tâm chăm sóc sức khỏe":"স্বাস্থ্যসেবা কেন্দ্র","21:00 giờ":"21:00 ঘন্টা","24 giờ":"24 ঘন্টা","Phòng khám nha khoa Takahashi":"তাকাহাশি ডেন্টাল ক্লিনিক","19 giờ":"সন্ধ্যা ৭টা","23 giờ":"রাত ১১টা","Thứ 7":"শনিবার","Khoa nội/ Khoa ngoại Suzuki":"সুজুকি ডিপার্টমেন্ট অফ ইন্টারনাল মেডিসিন/সার্জিক্যাল ডিপার্টমেন্ট","15 giờ":"15 বাজে","20 giờ":"20 ঘন্টা","Khoa nội/ Khoa ngoại/ Nha khoa":"অভ্যন্তরীণ মেডিসিন/ সার্জারি/ ডেন্টিস্ট্রি","Bệnh viện thị dân số 1":"আরবান হাসপাতাল নং 1","17 giờ":"17 বাজে","22 giờ":"রাত ১০টা","Chủ nhật, ngày lễ":"রবিবার, ছুটির দিন","Khoa nội/ Khoa ngoại":"অভ্যন্তরীণ মেডিসিন বিভাগ/ সার্জারি বিভাগ","Khoa nội/ Khoa ngoại bệnh viện Ishii":"অভ্যন্তরীণ মেডিসিন বিভাগ/ সার্জারি বিভাগ, ইশি হাসপাতাল","9 giờ":"9 টা বাজে","12 giờ":"12 টা","13 giờ":"13 টা বাজে","Nha khoa Tanaka 17 giờ":"তানাকা ডেন্টাল ক্লিনিক 17 ঘন্টা","21 giờ":"রাত ৯টা","Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.":"রিসেপশন কাউন্টার বন্ধ হওয়ার 15 মিনিট আগে পর্যন্ত খোলা থাকে।","Xin hãy mang theo tiền mặt và thẻ bảo hiểm.":"অনুগ্রহ করে নগদ এবং বীমা কার্ড আনুন।","Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ":"ছুটির দিনে/ছুটির দিনে শিশুরোগ পরীক্ষার জন্য, অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন","Trung tâm y tế (Điện thoại: 12-8888)":"মেডিকেল সেন্টার (ফোন: 12-8888)",": Khám và chữa những bệnh nhân (khám chữa bệnh)":": রোগীদের পরীক্ষা ও চিকিৎসা (চিকিৎসা পরীক্ষা ও চিকিৎসা)",": Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)":": নবজাতক বা শিশুদের চিকিৎসা পরীক্ষা ও চিকিৎসার স্থান (শিশুরোগ বিভাগ)",": Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)":": বীমা তালিকাভুক্তি শংসাপত্র (বীমা কার্ড)","Kết Quả":"ফলাফল","Làm Lại":"আবার করুন","Đáp Án":"উত্তর"},"hiMap":{"Pawn sau khi ăn tối thì răng trở nên đau nhức.":"रात के खाने के बाद प्यादे के दाँत दुखने लगे।","Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.":"हालाँकि मैं अस्पताल जाना चाहता हूँ, आज छुट्टी है।","Sau đó, Pawn nhìn thấy \"Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ\" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.":"उसके बाद, पॉन ने शहर में लगे \"शाम, शनिवार और छुट्टियों में चिकित्सा परीक्षण और उपचार की सूचना\" देखी, फिर एक अस्पताल की तलाश करने का फैसला किया जहां वह अब से जा सके।","Bây giờ là 9 giờ tối.":"रात के 9 बजे हैं अब।","Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.":"अस्पताल पॉन के घर से 20 मिनट के भीतर हैं।","Bệnh viện mà Pawn có thể đi được là bệnh viện nào?":"प्यादा किस अस्पताल में जा सकता है?","1 Phòng khám nha khoa Takahashi":"1 ताकाहाशी डेंटल क्लिनिक","2 Trung tâm chăm sóc sức khỏe":"2 स्वास्थ्य देखभाल केंद्र","3 Bệnh viện thị dân số 1":"3 शहरी अस्पताल नंबर 1","4 Nha khoa Tanaka":"4 तनाका डेंटल क्लिनिक","Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?":"अस्पताल जाते समय प्यादा को क्या लाना चाहिए?","1 Thẻ đăng ký người nước ngoài":"1 विदेशी पंजीकरण कार्ड","2 Giấy phép lái xe":"2 ड्राइवर का लाइसेंस","3 Thẻ bảo hiểm":"3 बीमा कार्ड","4 Thẻ":"4 कार्ड","Dịch & Giải thích":"अनुवाद एवं व्याख्या","Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ":"शाम, शनिवार और छुट्टियों में उपचार के बारे में सूचना","Tên lĩnh vực điều trị":"उपचार क्षेत्र का नाम","Tên bệnh viện":"अस्पताल का नाम","Thời gian điều trị":"उपचार का समय","Ngày thường":"साधारण दिन","Khoa nội/ Khoa nhi/ Khoa ngoại":"आंतरिक चिकित्सा विभाग/बाल रोग विभाग/सर्जरी विभाग","Trung tâm chăm sóc sức khỏe":"स्वास्थ्य देखभाल केंद्र","21:00 giờ":"21:00 बजे","24 giờ":"24 घंटे","Phòng khám nha khoa Takahashi":"ताकाहाशी डेंटल क्लिनिक","19 giờ":"शाम 7 बजे","23 giờ":"रात्रि 11 बजे","Thứ 7":"शनिवार","Khoa nội/ Khoa ngoại Suzuki":"सुज़ुकी आंतरिक चिकित्सा विभाग/सर्जिकल विभाग","15 giờ":"15 बजे","20 giờ":"20 घंटे","Khoa nội/ Khoa ngoại/ Nha khoa":"आंतरिक चिकित्सा/सर्जरी/दंत चिकित्सा","Bệnh viện thị dân số 1":"शहरी अस्पताल नंबर 1","17 giờ":"17 बजे","22 giờ":"रात्रि 10 बजे","Chủ nhật, ngày lễ":"रविवार, छुट्टियाँ","Khoa nội/ Khoa ngoại":"आंतरिक चिकित्सा विभाग/सर्जरी विभाग","Khoa nội/ Khoa ngoại bệnh viện Ishii":"आंतरिक चिकित्सा विभाग/सर्जरी विभाग, इशी अस्पताल","9 giờ":"9 बजे","12 giờ":"12 बजे","13 giờ":"13 बजे","Nha khoa Tanaka 17 giờ":"तनाका डेंटल क्लिनिक 17 घंटे","21 giờ":"रात 9 बजे","Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.":"रिसेप्शन काउंटर बंद होने के समय से 15 मिनट पहले तक खुलता है।","Xin hãy mang theo tiền mặt và thẻ bảo hiểm.":"कृपया नकदी और बीमा कार्ड लाएँ।","Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ":"छुट्टियों/छुट्टियों पर बाल चिकित्सा परीक्षण के लिए कृपया हमसे संपर्क करें","Trung tâm y tế (Điện thoại: 12-8888)":"मेडिकल सेंटर (फ़ोन: 12-8888)",": Khám và chữa những bệnh nhân (khám chữa bệnh)":": मरीजों की जांच एवं उपचार (चिकित्सा परीक्षण एवं उपचार)",": Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)":": नवजात शिशुओं या बच्चों के लिए चिकित्सा परीक्षण और उपचार का स्थान (बाल रोग विभाग)",": Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)":": बीमा नामांकन प्रमाणपत्र (बीमा कार्ड)","Kết Quả":"परिणाम","Làm Lại":"फिर से करना","Đáp Án":"उत्तर"},"thMap":{"Pawn sau khi ăn tối thì răng trở nên đau nhức.":"ฟันของจำนำเจ็บหลังอาหารเย็น","Mặc dù muốn đến bệnh viện, nhưng hôm nay là ngày lễ.":"แม้ว่าฉันต้องการไปโรงพยาบาล แต่วันนี้เป็นวันหยุด","Sau đó, Pawn nhìn thấy \"Thông báo khám và chữa bệnh vào buổi tối, thứ bảy và ngày nghỉ\" được phát ở thành phố, rồi quyết định tìm kiếm bệnh viện có thể đi từ bây giờ.":"หลังจากนั้น จำนำเห็นโพสต์ “ประกาศตรวจสุขภาพและรักษาในช่วงเย็น วันเสาร์ และวันหยุดนักขัตฤกษ์” ในเมือง จึงตัดสินใจมองหาโรงพยาบาลที่จะไปต่อจากนี้ไป","Bây giờ là 9 giờ tối.":"21.00 น. ตอนนี้.","Các bệnh viện đều có thể đi được trong 20 phút từ nhà của Pawn.":"โรงพยาบาลอยู่ห่างจากบ้านของจำนำไม่เกิน 20 นาที","Bệnh viện mà Pawn có thể đi được là bệnh viện nào?":"จำนำไปโรงพยาบาลไหนได้บ้าง?","1 Phòng khám nha khoa Takahashi":"1 คลินิกทันตกรรมทาคาฮาชิ","2 Trung tâm chăm sóc sức khỏe":"ศูนย์ดูแลสุขภาพ 2 แห่ง","3 Bệnh viện thị dân số 1":"3 โรงพยาบาลในเมืองหมายเลข 1","4 Nha khoa Tanaka":"4 คลินิกทันตกรรมทานาคา","Khi đi bệnh viện, Pawn phải mang theo đồ vật gì?":"เมื่อไปโรงพยาบาล จำนำควรเตรียมอะไรบ้าง?","1 Thẻ đăng ký người nước ngoài":"บัตรประจำตัวคนต่างด้าว 1 ใบ","2 Giấy phép lái xe":"2 ใบขับขี่","3 Thẻ bảo hiểm":"บัตรประกัน 3 ใบ","4 Thẻ":"การ์ด 4 ใบ","Dịch & Giải thích":"การแปลและการตีความ","Thông báo về việc điều trị bệnh buổi tối, thứ Bảy và ngày nghỉ":"แจ้งการรักษาในช่วงเย็น วันเสาร์ และวันหยุดนักขัตฤกษ์","Tên lĩnh vực điều trị":"ชื่อบริเวณที่ทำการรักษา","Tên bệnh viện":"ชื่อโรงพยาบาล","Thời gian điều trị":"ระยะเวลาการรักษา","Ngày thường":"วันธรรมดา","Khoa nội/ Khoa nhi/ Khoa ngoại":"ภาควิชาอายุรศาสตร์/ ภาควิชากุมารเวชศาสตร์/ ภาควิชาศัลยศาสตร์","Trung tâm chăm sóc sức khỏe":"ศูนย์ดูแลสุขภาพ","21:00 giờ":"21:00 น","24 giờ":"24 ชม","Phòng khám nha khoa Takahashi":"คลินิกทันตกรรมทาคาฮาชิ","19 giờ":"19.00 น","23 giờ":"23.00 น","Thứ 7":"วันเสาร์","Khoa nội/ Khoa ngoại Suzuki":"แผนกอายุรศาสตร์/ศัลยกรรม ซูซูกิ","15 giờ":"15.00 น","20 giờ":"20 ชม","Khoa nội/ Khoa ngoại/ Nha khoa":"อายุรศาสตร์/ ศัลยกรรม/ ทันตกรรม","Bệnh viện thị dân số 1":"โรงพยาบาลในเมืองหมายเลข 1","17 giờ":"17.00 น","22 giờ":"22.00 น","Chủ nhật, ngày lễ":"วันอาทิตย์ วันหยุด","Khoa nội/ Khoa ngoại":"ภาควิชาอายุรศาสตร์/ ภาควิชาศัลยศาสตร์","Khoa nội/ Khoa ngoại bệnh viện Ishii":"ภาควิชาอายุรศาสตร์/ภาควิชาศัลยศาสตร์ โรงพยาบาลอิชิอิ","9 giờ":"9 โมง","12 giờ":"12.00 น","13 giờ":"13.00 น","Nha khoa Tanaka 17 giờ":"คลินิกทันตกรรมทานาคา 17 ชม","21 giờ":"21.00 น","Quầy tiếp nhận mở đến 15 phút trước giờ kết thúc.":"เคาน์เตอร์แผนกต้อนรับเปิดจนถึง 15 นาทีก่อนเวลาปิดทำการ","Xin hãy mang theo tiền mặt và thẻ bảo hiểm.":"กรุณานำเงินสดและบัตรประกันมาด้วย","Khám khoa nhi ngày lễ/ ngày nghỉ xin hãy liên hệ":"หากต้องการตรวจสุขภาพเด็กในวันหยุดนักขัตฤกษ์ โปรดติดต่อเรา","Trung tâm y tế (Điện thoại: 12-8888)":"ศูนย์การแพทย์ (โทรศัพท์: 12-8888)",": Khám và chữa những bệnh nhân (khám chữa bệnh)":": การตรวจและรักษาผู้ป่วย (การตรวจสุขภาพและการรักษา)",": Nơi khám chữa bệnh cho các bé sơ sinh hay trẻ em (Khoa nhi)":": สถานที่ตรวจและรักษาทารกแรกเกิดหรือเด็ก (แผนกกุมารเวชศาสตร์)",": Giấy chứng nhận việc gia nhập bảo hiểm (Thẻ bảo hiểm)":": ใบรับรองการลงทะเบียนประกันภัย (บัตรประกันภัย)","Kết Quả":"ผลลัพธ์","Làm Lại":"ทำซ้ำ","Đáp Án":"คำตอบ"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<script src="speed-quiz.js"></script>
+<link rel="stylesheet" href="style.css">

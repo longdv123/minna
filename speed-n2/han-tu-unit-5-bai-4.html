@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">農</div></div><div class="kcell k-hv"><span class="vi-tr">nông</span></div><div class="kcell k-read"><div class="on">ノウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>農業<rp>（</rp><rt>のうぎょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nông nghiệp</span> </div></div><div class="kitem"><div class="jp"><ruby>農産物<rp>（</rp><rt>のうさんぶつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nông sản</span> </div></div><div class="kitem"><div class="jp"><ruby>農家<rp>（</rp><rt>のうか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nhà nông</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">河</div></div><div class="kcell k-hv"><span class="vi-tr">hà</span> </div><div class="kcell k-read"><div class="on">カ　</div><div>かわ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>河<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sông</span> </div></div><div class="kitem"><div class="jp"><ruby>運河<rp>（</rp><rt>うんが</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">kênh đào</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">咲</div></div><div class="kcell k-hv"><span class="vi-tr">tiếu</span> </div><div class="kcell k-read"><div>さーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>咲<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">nở</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">枯</div></div><div class="kcell k-hv"><span class="vi-tr">khô</span> </div><div class="kcell k-read"><div>かーれる／かーらす</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>枯<rp>（</rp><rt>か</rt><rp>）</rp></ruby>れる</div><div class="vi"><span class="vi-tr">héo</span> </div></div><div class="kitem"><div class="jp"><ruby>枯葉<rp>（</rp><rt>かれは</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lá khô</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">耕</div></div><div class="kcell k-hv">canh </div><div class="kcell k-read"><div class="on">コウ</div><div>たがやーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>耕<rp>（</rp><rt>たがや</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">canh tác</span></div></div><div class="kitem"><div class="jp"><ruby>耕地<rp>（</rp><rt>こうち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đất canh tác</span></div></div><div class="kitem"><div class="jp"><ruby>耕作<rp>（</rp><rt>こうさく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">canh tác</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">畜</div></div><div class="kcell k-hv"><span class="vi-tr">xúc</span> </div><div class="kcell k-read"><div class="on">チク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>畜産<rp>（</rp><rt>ちくさん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nuôi gia súc</span> </div></div><div class="kitem"><div class="jp"><ruby>家畜<rp>（</rp><rt>かちく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">gia súc</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">候</div></div><div class="kcell k-hv"><span class="vi-tr">hậu</span> </div><div class="kcell k-read"><div class="on">コウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>候補<rp>（</rp><rt>こうほ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ứng viên</span> </div></div><div class="kitem"><div class="jp"><ruby>天候<rp>（</rp><rt>てんこう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thời tiết</span> </div></div><div class="kitem"><div class="jp"><ruby>気候<rp>（</rp><rt>きこう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khí hậu</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">辺</div></div><div class="kcell k-hv"><span class="vi-tr">biên</span> </div><div class="kcell k-read"><div class="on">ヘン</div><div>あたーり</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>辺<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>り</div><div class="vi">xung quanh </div></div><div class="kitem"><div class="jp"><ruby>辺<rp>（</rp><rt>へん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vùng, khu vực</span></div></div><div class="kitem"><div class="jp"><ruby>周辺<rp>（</rp><rt>しゅうへん</rt><rp>）</rp></ruby></div><div class="vi">khu xung quanh </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">盛</div></div><div class="kcell k-hv"><span class="vi-tr">thịnh</span> </div><div class="kcell k-read"><div class="on">（セイ）／（ジョウ）</div><div>もーる／さかーん</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>大盛<rp>（</rp><rt>おおも</rt><rp>）</rp></ruby>り</div><div class="vi"><span class="vi-tr">đầy ắp</span></div></div><div class="kitem"><div class="jp"><ruby>盛<rp>（</rp><rt>さか</rt><rp>）</rp></ruby>ん（な）</div><div class="vi"><span class="vi-tr">phát triển</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">田</div></div><div class="kcell k-hv"><span class="vi-tr">điền</span> </div><div class="kcell k-read"><div class="on">デン</div><div>た</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>田<rp>（</rp><rt>た</rt><rp>）</rp></ruby>んぼ</div><div class="vi"><span class="vi-tr">ruộng</span> </div></div><div class="kitem"><div class="jp"><ruby>水田<rp>（</rp><rt>すいでん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ruộng nước</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">畑</div></div><div class="kcell k-hv"><span class="vi-tr">vườn</span></div><div class="kcell k-read"><div>はたけ／はた</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>畑<rp>（</rp><rt>はたけ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cánh đồng</span> </div></div><div class="kitem"><div class="jp"><ruby>田畑<rp>（</rp><rt>たはた</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ruộng đồng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">豊</div></div><div class="kcell k-hv">phong </div><div class="kcell k-read"><div class="on">ホウ</div><div>ゆたーか</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>豊<rp>（</rp><rt>ゆた</rt><rp>）</rp></ruby>か（な）</div><div class="vi"><span class="vi-tr">phong phú</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">富</div></div><div class="kcell k-hv"><span class="vi-tr">phú</span> </div><div class="kcell k-read"><div class="on">フ</div><div>（とーむ）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>豊富<rp>（</rp><rt>ほうふ</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">phong phú</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">恵</div></div><div class="kcell k-hv"><span class="vi-tr">huệ</span> </div><div class="kcell k-read"><div class="on">エ／（ケイ）</div><div>めぐーむ／めぐーみ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>恵<rp>（</rp><rt>めぐ</rt><rp>）</rp></ruby>まれる</div><div class="vi"><span class="vi-tr">được ưu đãi, được may mắn</span></div></div><div class="kitem"><div class="jp"><ruby>知恵<rp>（</rp><rt>ちえ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trí tuệ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">竹</div></div><div class="kcell k-hv"><span class="vi-tr">trúc</span> </div><div class="kcell k-read"><div>たけ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>竹<rp>（</rp><rt>たけ</rt><rp>）</rp></ruby></div><div class="vi">tre</div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>は<ruby>水資源<rp>（</rp><rt>すいしげん</rt><rp>）</rp></ruby>が<u><ruby>豊<rp>（</rp><rt>ゆた</rt><rp>）</rp></ruby>か</u>な<ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>だ。</td><td>a. ゆたか</td><td>b. よたか</td></tr><tr><td>2. この<u><ruby>辺<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>り</u>は<ruby>静<rp>（</rp><rt>しず</rt><rp>）</rp></ruby>かな<ruby>住宅地<rp>（</rp><rt>じゅうたくち</rt><rp>）</rp></ruby>だ。</td><td>a. へんり</td><td>b. あたり</td></tr><tr><td>3. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>が<ruby>通<rp>（</rp><rt>かよ</rt><rp>）</rp></ruby>っていた<ruby>高校<rp>（</rp><rt>こうこう</rt><rp>）</rp></ruby>はスポーツが<u><ruby>盛<rp>（</rp><rt>さか</rt><rp>）</rp></ruby>ん</u>だった。</td><td>a. もりん</td><td>b. さかん</td></tr><tr><td>4. これは<ruby>畑<rp>（</rp><rt>はたけ</rt><rp>）</rp></ruby>を<u><ruby>耕<rp>（</rp><rt>たがや</rt><rp>）</rp></ruby>す</u>ための<ruby>機械<rp>（</rp><rt>きかい</rt><rp>）</rp></ruby>です。</td><td>a. たがやす</td><td>b. たがす</td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は、<u><ruby>恵<rp>（</rp><rt>めぐ</rt><rp>）</rp></ruby>まれた</u><ruby>家庭<rp>（</rp><rt>かてい</rt><rp>）</rp></ruby>で<ruby>育<rp>（</rp><rt>そだ</rt><rp>）</rp></ruby>った。</td><td>a. はぐくまれた</td><td>b. めぐまれた。</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>は<ruby>水資源<rp>（</rp><rt>すいしげん</rt><rp>）</rp></ruby>が<u><ruby>豊<rp>（</rp><rt>ゆた</rt><rp>）</rp></ruby>か</u>な<ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>だ。</td><td><b>ゆたか</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. この<u><ruby>辺<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>り</u>は<ruby>静<rp>（</rp><rt>しず</rt><rp>）</rp></ruby>かな<ruby>住宅地<rp>（</rp><rt>じゅうたくち</rt><rp>）</rp></ruby>だ。</td><td><b>あたり</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>が<ruby>通<rp>（</rp><rt>かよ</rt><rp>）</rp></ruby>っていた<ruby>高校<rp>（</rp><rt>こうこう</rt><rp>）</rp></ruby>はスポーツが<u><ruby>盛<rp>（</rp><rt>さか</rt><rp>）</rp></ruby>ん</u>だった。</td><td><b>さかん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. これは<ruby>畑<rp>（</rp><rt>はたけ</rt><rp>）</rp></ruby>を<u><ruby>耕<rp>（</rp><rt>たがや</rt><rp>）</rp></ruby>す</u>ための<ruby>機械<rp>（</rp><rt>きかい</rt><rp>）</rp></ruby>です。</td><td><b>たがやす</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は、<u><ruby>恵<rp>（</rp><rt>めぐ</rt><rp>）</rp></ruby>まれた</u><ruby>家庭<rp>（</rp><rt>かてい</rt><rp>）</rp></ruby>で<ruby>育<rp>（</rp><rt>そだ</rt><rp>）</rp></ruby>った。</td><td><b>めぐまれた。</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. この<ruby>土地<rp>（</rp><rt>とち</rt><rp>）</rp></ruby>の<ruby>気<rp>（</rp><rt>き</rt><rp>）</rp></ruby><u>こう</u>は、<ruby>果物<rp>（</rp><rt>くだもの</rt><rp>）</rp></ruby>の<ruby>栽培<rp>（</rp><rt>さいばい</rt><rp>）</rp></ruby>に<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>っている。</td><td>a. 耕</td><td>b. 候</td><td>c. 講</td></tr><tr><td>2. <ruby>水<rp>（</rp><rt>すい</rt><rp>）</rp></ruby><u>でん</u>が<ruby>広<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>がる<ruby>風景<rp>（</rp><rt>ふうけい</rt><rp>）</rp></ruby>が<ruby>美<rp>（</rp><rt>うつく</rt><rp>）</rp></ruby>しい。</td><td>a. 田</td><td>b. 伝</td><td>c. 天</td></tr><tr><td>3. <ruby>運<rp>（</rp><rt>うん</rt><rp>）</rp></ruby><u>が</u>とは、<ruby>船<rp>（</rp><rt>ふね</rt><rp>）</rp></ruby>の<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>き<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>のためにつくられた<ruby>川<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby>のことである。</td><td>a. 川</td><td>b. 河</td><td>c. 可</td></tr><tr><td>4. <u>こう</u><ruby>地<rp>（</rp><rt>ち</rt><rp>）</rp></ruby>の<ruby>面積<rp>（</rp><rt>めんせき</rt><rp>）</rp></ruby>は<ruby>年々減少<rp>（</rp><rt>ねんねんげんしょう</rt><rp>）</rp></ruby>している。</td><td>a. 候</td><td>b. 耕</td><td>c. 向</td></tr><tr><td>5. この<ruby>高校<rp>（</rp><rt>こうこう</rt><rp>）</rp></ruby>では<u>ちく</u><ruby>産<rp>（</rp><rt>さん</rt><rp>）</rp></ruby>を<ruby>学<rp>（</rp><rt>まな</rt><rp>）</rp></ruby>べる。</td><td>a. 畜</td><td>b. 竹</td><td>c. 蓄</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. この<ruby>土地<rp>（</rp><rt>とち</rt><rp>）</rp></ruby>の<ruby>気<rp>（</rp><rt>き</rt><rp>）</rp></ruby><u>こう</u>は、<ruby>果物<rp>（</rp><rt>くだもの</rt><rp>）</rp></ruby>の<ruby>栽培<rp>（</rp><rt>さいばい</rt><rp>）</rp></ruby>に<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>っている。</td><td><b>候</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>水<rp>（</rp><rt>すい</rt><rp>）</rp></ruby><u>でん</u>が<ruby>広<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>がる<ruby>風景<rp>（</rp><rt>ふうけい</rt><rp>）</rp></ruby>が<ruby>美<rp>（</rp><rt>うつく</rt><rp>）</rp></ruby>しい。</td><td><b>田</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>運<rp>（</rp><rt>うん</rt><rp>）</rp></ruby><u>が</u>とは、<ruby>船<rp>（</rp><rt>ふね</rt><rp>）</rp></ruby>の<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>き<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>のためにつくられた<ruby>川<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby>のことである。</td><td><b>河</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <u>こう</u><ruby>地<rp>（</rp><rt>ち</rt><rp>）</rp></ruby>の<ruby>面積<rp>（</rp><rt>めんせき</rt><rp>）</rp></ruby>は<ruby>年々減少<rp>（</rp><rt>ねんねんげんしょう</rt><rp>）</rp></ruby>している。</td><td><b>耕</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. この<ruby>高校<rp>（</rp><rt>こうこう</rt><rp>）</rp></ruby>では<u>ちく</u><ruby>産<rp>（</rp><rt>さん</rt><rp>）</rp></ruby>を<ruby>学<rp>（</rp><rt>まな</rt><rp>）</rp></ruby>べる。</td><td><b>畜</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. この<ruby>海底<rp>（</rp><rt>かいてい</rt><rp>）</rp></ruby>に<ruby>資源<rp>（</rp><rt>しげん</rt><rp>）</rp></ruby>が（　　　）あることがわかった。</td><td>a. 豊富に</td><td>b. 盛んに</td></tr><tr><td>2. この<ruby>花<rp>（</rp><rt>か</rt><rp>）</rp></ruby>びんの<ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>、もう（　　　）いるから、<ruby>捨<rp>（</rp><rt>す</rt><rp>）</rp></ruby>てたほうがいいよ。</td><td>a. 咲いて</td><td>b. 枯れて</td></tr><tr><td>3. この<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>は（　　　）でアルバイトをした。</td><td>a. 農家</td><td>b. 家畜</td></tr><tr><td>4. <ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>は（　　　）が<ruby>不安定<rp>（</rp><rt>ふあんてい</rt><rp>）</rp></ruby>だから、いつ<ruby>雨<rp>（</rp><rt>あめ</rt><rp>）</rp></ruby>が<ruby>降<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>るか、わからない。</td><td>a. 候補</td><td>b. 天候</td></tr><tr><td>5. この（　　　）に、<ruby>食事<rp>（</rp><rt>しょくじ</rt><rp>）</rp></ruby>できるところはありません。</td><td>a. 辺</td><td>b. 竹</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. この<ruby>海底<rp>（</rp><rt>かいてい</rt><rp>）</rp></ruby>に<ruby>資源<rp>（</rp><rt>しげん</rt><rp>）</rp></ruby>が（　　　）あることがわかった。</td><td><b>豊富に</b> (ほうふに)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. この<ruby>花<rp>（</rp><rt>か</rt><rp>）</rp></ruby>びんの<ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>、もう（　　　）いるから、<ruby>捨<rp>（</rp><rt>す</rt><rp>）</rp></ruby>てたほうがいいよ。</td><td><b>枯れて</b> (かれて)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>は（　　　）でアルバイトをした。</td><td><b>農家</b> (のうか)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>は（　　　）が<ruby>不安定<rp>（</rp><rt>ふあんてい</rt><rp>）</rp></ruby>だから、いつ<ruby>雨<rp>（</rp><rt>あめ</rt><rp>）</rp></ruby>が<ruby>降<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>るか、わからない。</td><td><b>天候</b> (てんこう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. この（　　　）に、<ruby>食事<rp>（</rp><rt>しょくじ</rt><rp>）</rp></ruby>できるところはありません。</td><td><b>辺</b> (へん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-5-4"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-5-bai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","nông":"shallow","nông nghiệp":"agriculture","nông sản":"agricultural products","nhà nông":"farmer","hà":"river","sông":"river","kênh đào":"canal","tiếu":"laugh","nở":"bloom","khô":"dried","héo":"wither","lá khô":"dry leaves","canh tác":"farming","đất canh tác":"farming land","xúc":"contact","nuôi gia súc":"raise livestock","gia súc":"cattle","hậu":"post","ứng viên":"candidate","thời tiết":"weather","khí hậu":"climate","biên":"record","vùng, khu vực":"region, area","thịnh":"prosperous","đầy ắp":"full","phát triển":"develop","điền":"fill","ruộng":"field","ruộng nước":"water fields","vườn":"garden","cánh đồng":"field","ruộng đồng":"fields","phong phú":"abundant","phú":"rich","huệ":"Hue","được ưu đãi, được may mắn":"to be favored, to be lucky","trí tuệ":"intelligence","trúc":"bamboo","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","nông":"dangkal","nông nghiệp":"pertanian","nông sản":"produk pertanian","nhà nông":"petani","hà":"sungai","sông":"sungai","kênh đào":"kanal","tiếu":"tertawa","nở":"bunga","khô":"kering","héo":"melayu","lá khô":"daun kering","canh tác":"pertanian","đất canh tác":"lahan pertanian","xúc":"kontak","nuôi gia súc":"memelihara ternak","gia súc":"ternak","hậu":"pos","ứng viên":"calon","thời tiết":"cuaca","khí hậu":"iklim","biên":"catatan","vùng, khu vực":"wilayah, wilayah","thịnh":"makmur","đầy ắp":"penuh","phát triển":"mengembangkan","điền":"mengisi","ruộng":"bidang","ruộng nước":"ladang air","vườn":"kebun","cánh đồng":"bidang","ruộng đồng":"bidang","phong phú":"melimpah","phú":"kaya","huệ":"Warna","được ưu đãi, được may mắn":"untuk disukai, untuk menjadi beruntung","trí tuệ":"intelijen","trúc":"bambu","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","nông":"उथले","nông nghiệp":"कृषि","nông sản":"कृषि उत्पादनहरु","nhà nông":"किसान","hà":"नदी","sông":"नदी","kênh đào":"नहर","tiếu":"हाँस्न","nở":"फुल्नु","khô":"सुकेको","héo":"ओइलाउनु","lá khô":"सुख्खा पातहरू","canh tác":"खेती","đất canh tác":"कृषि भूमि","xúc":"सम्पर्क गर्नुहोस्","nuôi gia súc":"पशुपालन","gia súc":"गाईवस्तु","hậu":"पोस्ट","ứng viên":"उम्मेदवार","thời tiết":"मौसम","khí hậu":"जलवायु","biên":"रेकर्ड","vùng, khu vực":"क्षेत्र, क्षेत्र","thịnh":"समृद्ध","đầy ắp":"पूर्ण","phát triển":"विकास","điền":"भर्नुहोस्","ruộng":"क्षेत्र","ruộng nước":"पानी क्षेत्रहरू","vườn":"बगैचा","cánh đồng":"क्षेत्र","ruộng đồng":"क्षेत्रहरू","phong phú":"प्रचुर मात्रामा","phú":"धनी","huệ":"रङ","được ưu đãi, được may mắn":"अनुग्रहित हुनु, भाग्यमानी हुनु","trí tuệ":"बुद्धि","trúc":"बाँस","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","nông":"တိမ်","nông nghiệp":"စိုက်ပျိုးရေး","nông sản":"စိုက်ပျိုးရေးထွက်ကုန်များ","nhà nông":"လယ်သမား","hà":"မြစ်","sông":"မြစ်","kênh đào":"တူးမြောင်း","tiếu":"ရယ်ပါ။","nở":"ပွင်","khô":"အခြောက်","héo":"ညှိုးနွမ်း","lá khô":"အရွက်ခြောက်","canh tác":"လယ်ယာလုပ်ငန်း","đất canh tác":"လယ်ယာမြေ","xúc":"ဆက်သွယ်ရန်","nuôi gia súc":"တိရစ္ဆာန်မွေးမြူပါ။","gia súc":"နွား","hậu":"ပို့စ်","ứng viên":"ကိုယ်စားလှယ်လောင်း","thời tiết":"ရာသီဥတု","khí hậu":"ရာသီဥတု","biên":"မှတ်တမ်း","vùng, khu vực":"ဒေသ၊ နယ်မြေ","thịnh":"ချမ်းသာ","đầy ắp":"အပြည့်","phát triển":"ဖွံ့ဖြိုးတိုးတက်","điền":"ဖြည့်စွက်","ruộng":"လယ်ကွင်း","ruộng nước":"ရေခင်းများ","vườn":"ဥယျာဉ်","cánh đồng":"လယ်ကွင်း","ruộng đồng":"လယ်ကွင်းများ","phong phú":"ပေါများသည်။","phú":"ချမ်းသာ","huệ":"အသွေး","được ưu đãi, được may mắn":"မျက်နှာသာရရန်၊ ကံကောင်းရန်","trí tuệ":"ထောက်လှမ်းရေး","trúc":"ဝါး","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","nông":"অগভীর","nông nghiệp":"কৃষি","nông sản":"কৃষি পণ্য","nhà nông":"কৃষক","hà":"নদী","sông":"নদী","kênh đào":"খাল","tiếu":"হাসি","nở":"পুষ্প","khô":"শুকনো","héo":"শুকিয়ে যাওয়া","lá khô":"শুকনো পাতা","canh tác":"কৃষিকাজ","đất canh tác":"কৃষি জমি","xúc":"যোগাযোগ","nuôi gia súc":"গবাদি পশু বাড়ান","gia súc":"গবাদি পশু","hậu":"পোস্ট","ứng viên":"প্রার্থী","thời tiết":"আবহাওয়া","khí hậu":"জলবায়ু","biên":"রেকর্ড","vùng, khu vực":"অঞ্চল, এলাকা","thịnh":"সমৃদ্ধ","đầy ắp":"পূর্ণ","phát triển":"বিকাশ","điền":"পূরণ","ruộng":"ক্ষেত্র","ruộng nước":"জল ক্ষেত্র","vườn":"বাগান","cánh đồng":"ক্ষেত্র","ruộng đồng":"ক্ষেত্র","phong phú":"প্রচুর","phú":"ধনী","huệ":"হিউ","được ưu đãi, được may mắn":"to be favored, to be lucky","trí tuệ":"বুদ্ধিমত্তা","trúc":"বাঁশ","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","nông":"उथला","nông nghiệp":"कृषि","nông sản":"कृषि उत्पादों","nhà nông":"किसान","hà":"नदी","sông":"नदी","kênh đào":"नहर","tiếu":"हँसना","nở":"खिलना","khô":"सूख गया","héo":"सूख","lá khô":"सूखे पत्ते","canh tác":"खेती","đất canh tác":"खेती की जमीन","xúc":"संपर्क","nuôi gia súc":"पशुधन बढ़ाओ","gia súc":"पशु","hậu":"डाक","ứng viên":"उम्मीदवार","thời tiết":"मौसम","khí hậu":"जलवायु","biên":"अभिलेख","vùng, khu vực":"क्षेत्र, क्षेत्र","thịnh":"समृद्ध","đầy ắp":"भरा हुआ","phát triển":"विकास करना","điền":"भरना","ruộng":"मैदान","ruộng nước":"जल क्षेत्र","vườn":"बगीचा","cánh đồng":"मैदान","ruộng đồng":"खेत","phong phú":"प्रचुर","phú":"अमीर","huệ":"रंग","được ưu đãi, được may mắn":"इष्ट होना, भाग्यशाली होना","trí tuệ":"बुद्धिमत्ता","trúc":"बांस","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","nông":"ตื้น","nông nghiệp":"เกษตรกรรม","nông sản":"สินค้าเกษตร","nhà nông":"ชาวนา","hà":"แม่น้ำ","sông":"แม่น้ำ","kênh đào":"คลอง","tiếu":"หัวเราะ","nở":"บานสะพรั่ง","khô":"แห้ง","héo":"เหี่ยวเฉา","lá khô":"ใบไม้แห้ง","canh tác":"เกษตรกรรม","đất canh tác":"ที่ดินทำกิน","xúc":"ติดต่อ","nuôi gia súc":"เลี้ยงปศุสัตว์","gia súc":"วัว","hậu":"โพสต์","ứng viên":"ผู้สมัคร","thời tiết":"สภาพอากาศ","khí hậu":"ภูมิอากาศ","biên":"บันทึก","vùng, khu vực":"ภูมิภาค, พื้นที่","thịnh":"รุ่งเรือง","đầy ắp":"เต็ม","phát triển":"พัฒนา","điền":"เติม","ruộng":"สนาม","ruộng nước":"ทุ่งน้ำ","vườn":"สวน","cánh đồng":"สนาม","ruộng đồng":"สาขา","phong phú":"อุดมสมบูรณ์","phú":"รวย","huệ":"เว้","được ưu đãi, được may mắn":"ที่จะได้รับการสนับสนุนให้โชคดี","trí tuệ":"ปัญญา","trúc":"ไม้ไผ่","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

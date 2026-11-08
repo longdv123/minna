@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Nam du học sinh và nữ sinh Nhật Bản đang nói chuyện với nhau. Nam sinh đã đến Nhật Bản để làm gì?": "A male international student and a female Japanese student are talking to each other. What did the male student come to Japan for?",
+    "Nghe nói Lee đã tốt nghiệp ở khoa kinh tế, anh đến Nhật để học kinh tế à?": "I heard that Lee graduated from the economics department. Did you come to Japan to study economics?",
+    "Không phải, tôi rất có hứng thú với văn hóa Nhật Bản.": "No, I'm very interested in Japanese culture.",
+    "Là kịch Kabuki hay kịch No?": "Is it Kabuki theater or No drama?",
+    "Hmm....kịch No thì tôi không biết rõ cho lắm nhưng tôi nghĩ kịch Kabuki khá thú vị. Nhưng mà, tôi thích Anime của Nhật Bản hơn. Vì vậy mà tôi đã tìm một trường cao học có thể nghiên cứu về điện ảnh.": "Hmm....I don't know the No drama very well but I think the Kabuki drama is quite interesting. But, I like Japanese Anime more. That's why I looked for a graduate school that could study film.",
+    "Vậy à? Vậy thì, chuyên ngành hiện tại không phải kinh tế nhỉ?": "Really? So, your current major isn't economics, right?",
+    "Vâng. Tôi cũng có quan tâm đến kinh tế như kinh tế Nhật Bản hay kinh tế quốc tế. Nhưng vì đã đến Nhật Bản nên tôi muốn nghiên cứu sâu hơn về văn hóa Nhật Bản.": "Yes. I am also interested in economics such as Japanese economy or international economics. But since I came to Japan, I wanted to study Japanese culture more deeply.",
+    "Nam sinh đã đến Nhật Bản để làm gì?": "What did the male student come to Japan for?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Nam du học sinh và nữ sinh Nhật Bản đang nói chuyện với nhau. Nam sinh đã đến Nhật Bản để làm gì?": "Seorang siswa internasional laki-laki dan seorang siswa perempuan Jepang sedang berbicara satu sama lain. Untuk apa siswa laki-laki itu datang ke Jepang?",
+    "Nghe nói Lee đã tốt nghiệp ở khoa kinh tế, anh đến Nhật để học kinh tế à?": "Saya mendengar bahwa Lee lulus dari departemen ekonomi. Apakah Anda datang ke Jepang untuk belajar ekonomi?",
+    "Không phải, tôi rất có hứng thú với văn hóa Nhật Bản.": "Tidak, saya sangat tertarik dengan budaya Jepang.",
+    "Là kịch Kabuki hay kịch No?": "Apakah itu teater Kabuki atau bukan drama?",
+    "Hmm....kịch No thì tôi không biết rõ cho lắm nhưng tôi nghĩ kịch Kabuki khá thú vị. Nhưng mà, tôi thích Anime của Nhật Bản hơn. Vì vậy mà tôi đã tìm một trường cao học có thể nghiên cứu về điện ảnh.": "Hmm....Saya kurang begitu paham dengan drama No tapi menurut saya drama Kabuki cukup menarik. Tapi, saya lebih suka Anime Jepang. Itu sebabnya saya mencari sekolah pascasarjana yang bisa mempelajari film.",
+    "Vậy à? Vậy thì, chuyên ngành hiện tại không phải kinh tế nhỉ?": "Benar-benar? Jadi, jurusanmu saat ini bukan ekonomi ya?",
+    "Vâng. Tôi cũng có quan tâm đến kinh tế như kinh tế Nhật Bản hay kinh tế quốc tế. Nhưng vì đã đến Nhật Bản nên tôi muốn nghiên cứu sâu hơn về văn hóa Nhật Bản.": "Ya. Saya juga tertarik pada ilmu ekonomi seperti ekonomi Jepang atau ekonomi internasional. Namun sejak saya datang ke Jepang, saya ingin mempelajari budaya Jepang lebih dalam.",
+    "Nam sinh đã đến Nhật Bản để làm gì?": "Untuk apa siswa laki-laki itu datang ke Jepang?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Nam du học sinh và nữ sinh Nhật Bản đang nói chuyện với nhau. Nam sinh đã đến Nhật Bản để làm gì?": "एक पुरुष अन्तर्राष्ट्रिय विद्यार्थी र एक महिला जापानी विद्यार्थी एकअर्कासँग कुरा गरिरहेका छन्। केका लागि जापान आएका विद्यार्थी ?",
+    "Nghe nói Lee đã tốt nghiệp ở khoa kinh tế, anh đến Nhật để học kinh tế à?": "ली अर्थशास्त्र विभागबाट स्नातक भएको मैले सुनें। के तपाई अर्थशास्त्र पढ्न जापान आउनुभएको हो ?",
+    "Không phải, tôi rất có hứng thú với văn hóa Nhật Bản.": "होइन, मलाई जापानी संस्कृतिमा धेरै रुचि छ।",
+    "Là kịch Kabuki hay kịch No?": "यो काबुकी थिएटर हो कि नाटक होइन?",
+    "Hmm....kịch No thì tôi không biết rõ cho lắm nhưng tôi nghĩ kịch Kabuki khá thú vị. Nhưng mà, tôi thích Anime của Nhật Bản hơn. Vì vậy mà tôi đã tìm một trường cao học có thể nghiên cứu về điện ảnh.": "हम्म....मलाई नो ड्रामा राम्ररी थाहा छैन तर मलाई काबुकी नाटक एकदमै रोचक लाग्छ। तर, मलाई जापानी एनिमे बढी मन पर्छ। त्यसैले मैले फिल्म अध्ययन गर्न सक्ने स्नातक विद्यालय खोजेँ।",
+    "Vậy à? Vậy thì, chuyên ngành hiện tại không phải kinh tế nhỉ?": "साँच्चै? त्यसोभए, तपाईको वर्तमान प्रमुख अर्थशास्त्र होइन, हैन?",
+    "Vâng. Tôi cũng có quan tâm đến kinh tế như kinh tế Nhật Bản hay kinh tế quốc tế. Nhưng vì đã đến Nhật Bản nên tôi muốn nghiên cứu sâu hơn về văn hóa Nhật Bản.": "हो। मलाई जापानी अर्थतन्त्र वा अन्तर्राष्ट्रिय अर्थशास्त्र जस्ता अर्थशास्त्रमा पनि रुचि छ। तर म जापान आएदेखि जापानी संस्कृतिलाई अझ गहिरोसँग अध्ययन गर्न चाहन्थें।",
+    "Nam sinh đã đến Nhật Bản để làm gì?": "केका लागि जापान आएका विद्यार्थी ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Nam du học sinh và nữ sinh Nhật Bản đang nói chuyện với nhau. Nam sinh đã đến Nhật Bản để làm gì?": "နိုင်ငံတကာကျောင်းသား အမျိုးသားတစ်ဦးနှင့် ဂျပန်ကျောင်းသား အမျိုးသမီးတစ်ဦးတို့ စကားပြောနေကြသည်။ ယောက်ျားလေး ကျောင်းသားက ဂျပန်ကို ဘာအတွက် လာတာလဲ။",
+    "Nghe nói Lee đã tốt nghiệp ở khoa kinh tế, anh đến Nhật để học kinh tế à?": "လီက စီးပွားရေးဌာနက ဘွဲ့ရတယ်လို့ ကြားတယ်။ စီးပွားရေးလေ့လာဖို့ ဂျပန်ကိုလာခဲ့တာလား။",
+    "Không phải, tôi rất có hứng thú với văn hóa Nhật Bản.": "မဟုတ်ဘူး၊ ဂျပန်ယဉ်ကျေးမှုကို အရမ်းစိတ်ဝင်စားတယ်။",
+    "Là kịch Kabuki hay kịch No?": "Kabuki ပြဇာတ်လား၊ ဒရာမာ မရှိဘူးလား။",
+    "Hmm....kịch No thì tôi không biết rõ cho lắm nhưng tôi nghĩ kịch Kabuki khá thú vị. Nhưng mà, tôi thích Anime của Nhật Bản hơn. Vì vậy mà tôi đã tìm một trường cao học có thể nghiên cứu về điện ảnh.": "ဟမ်.... No ဒရာမာကို ကောင်းကောင်းမသိပေမယ့် Kabuki ဒရာမာက တော်တော်စိတ်ဝင်စားဖို့ကောင်းတယ်လို့ ထင်ပါတယ်။ ဒါပေမယ့် ဂျပန် Anime ကို ပိုကြိုက်တယ်။ အဲဒါကြောင့် ရုပ်ရှင်လေ့လာလို့ရတဲ့ ဘွဲ့လွန်ကျောင်းကို ရှာခဲ့တယ်။",
+    "Vậy à? Vậy thì, chuyên ngành hiện tại không phải kinh tế nhỉ?": "တကယ်လား? ဒါဆို မင်းရဲ့လက်ရှိအဓိကက စီးပွားရေးမဟုတ်ဘူးလား။",
+    "Vâng. Tôi cũng có quan tâm đến kinh tế như kinh tế Nhật Bản hay kinh tế quốc tế. Nhưng vì đã đến Nhật Bản nên tôi muốn nghiên cứu sâu hơn về văn hóa Nhật Bản.": "ဟုတ်ကဲ့။ ဂျပန်စီးပွားရေး ဒါမှမဟုတ် နိုင်ငံတကာစီးပွားရေးလိုမျိုး စီးပွားရေးကိုလည်း စိတ်ဝင်စားတယ်။ ဒါပေမယ့် ဂျပန်ကို ရောက်ကတည်းက ဂျပန်ယဉ်ကျေးမှုကို ပိုပြီး နက်နက်နဲနဲ လေ့လာချင်ခဲ့တယ်။",
+    "Nam sinh đã đến Nhật Bản để làm gì?": "ယောက်ျားလေး ကျောင်းသားက ဂျပန်ကို ဘာအတွက် လာတာလဲ။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Nam du học sinh và nữ sinh Nhật Bản đang nói chuyện với nhau. Nam sinh đã đến Nhật Bản để làm gì?": "একজন পুরুষ আন্তর্জাতিক ছাত্র এবং একজন মহিলা জাপানি ছাত্র একে অপরের সাথে কথা বলছে। পুরুষ ছাত্র কি জন্য জাপানে এসেছিল?",
+    "Nghe nói Lee đã tốt nghiệp ở khoa kinh tế, anh đến Nhật để học kinh tế à?": "আমি শুনেছি যে লি অর্থনীতি বিভাগ থেকে স্নাতক হয়েছেন। আপনি কি জাপানে অর্থনীতি পড়তে এসেছেন?",
+    "Không phải, tôi rất có hứng thú với văn hóa Nhật Bản.": "না, আমি জাপানি সংস্কৃতিতে খুব আগ্রহী।",
+    "Là kịch Kabuki hay kịch No?": "এটা কি কাবুকি থিয়েটার না নাটক?",
+    "Hmm....kịch No thì tôi không biết rõ cho lắm nhưng tôi nghĩ kịch Kabuki khá thú vị. Nhưng mà, tôi thích Anime của Nhật Bản hơn. Vì vậy mà tôi đã tìm một trường cao học có thể nghiên cứu về điện ảnh.": "হুম....আমি নো ড্রামা খুব ভালোভাবে জানি না কিন্তু আমার মনে হয় কাবুকি নাটকটি বেশ আকর্ষণীয়। তবে, আমি জাপানি অ্যানিমে বেশি পছন্দ করি। এই কারণেই আমি একটি স্নাতক স্কুলের সন্ধান করেছি যেটি ফিল্ম পড়তে পারে।",
+    "Vậy à? Vậy thì, chuyên ngành hiện tại không phải kinh tế nhỉ?": "সত্যিই? সুতরাং, আপনার বর্তমান প্রধান অর্থনীতি নয়, তাই না?",
+    "Vâng. Tôi cũng có quan tâm đến kinh tế như kinh tế Nhật Bản hay kinh tế quốc tế. Nhưng vì đã đến Nhật Bản nên tôi muốn nghiên cứu sâu hơn về văn hóa Nhật Bản.": "হ্যাঁ। আমি জাপানি অর্থনীতি বা আন্তর্জাতিক অর্থনীতির মতো অর্থনীতিতেও আগ্রহী। কিন্তু যেহেতু আমি জাপানে এসেছি, আমি জাপানি সংস্কৃতিকে আরও গভীরভাবে অধ্যয়ন করতে চেয়েছিলাম।",
+    "Nam sinh đã đến Nhật Bản để làm gì?": "পুরুষ ছাত্র কি জন্য জাপানে এসেছিল?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Nam du học sinh và nữ sinh Nhật Bản đang nói chuyện với nhau. Nam sinh đã đến Nhật Bản để làm gì?": "एक पुरुष अंतर्राष्ट्रीय छात्र और एक महिला जापानी छात्रा एक दूसरे से बात कर रहे हैं। पुरुष छात्र जापान किस लिए आया था?",
+    "Nghe nói Lee đã tốt nghiệp ở khoa kinh tế, anh đến Nhật để học kinh tế à?": "मैंने सुना है कि ली ने अर्थशास्त्र विभाग से स्नातक की उपाधि प्राप्त की है, क्या आप अर्थशास्त्र का अध्ययन करने के लिए जापान आए थे?",
+    "Không phải, tôi rất có hứng thú với văn hóa Nhật Bản.": "नहीं, मुझे जापानी संस्कृति में बहुत दिलचस्पी है।",
+    "Là kịch Kabuki hay kịch No?": "क्या यह काबुकी थिएटर है या कोई नाटक नहीं?",
+    "Hmm....kịch No thì tôi không biết rõ cho lắm nhưng tôi nghĩ kịch Kabuki khá thú vị. Nhưng mà, tôi thích Anime của Nhật Bản hơn. Vì vậy mà tôi đã tìm một trường cao học có thể nghiên cứu về điện ảnh.": "हम्म....मैं नो ड्रामा को बहुत अच्छी तरह से नहीं जानता लेकिन मुझे लगता है कि काबुकी ड्रामा काफी दिलचस्प है। लेकिन, मुझे जापानी एनीमे अधिक पसंद है। इसीलिए मैंने एक ऐसे ग्रेजुएट स्कूल की तलाश की जो फिल्म का अध्ययन कर सके।",
+    "Vậy à? Vậy thì, chuyên ngành hiện tại không phải kinh tế nhỉ?": "वास्तव में? तो, आपका वर्तमान प्रमुख विषय अर्थशास्त्र नहीं है, है ना?",
+    "Vâng. Tôi cũng có quan tâm đến kinh tế như kinh tế Nhật Bản hay kinh tế quốc tế. Nhưng vì đã đến Nhật Bản nên tôi muốn nghiên cứu sâu hơn về văn hóa Nhật Bản.": "हाँ। मुझे जापानी अर्थव्यवस्था या अंतर्राष्ट्रीय अर्थशास्त्र जैसे अर्थशास्त्र में भी रुचि है। लेकिन जब से मैं जापान आया, मैं जापानी संस्कृति का अधिक गहराई से अध्ययन करना चाहता था।",
+    "Nam sinh đã đến Nhật Bản để làm gì?": "पुरुष छात्र जापान किस लिए आया था?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Nam du học sinh và nữ sinh Nhật Bản đang nói chuyện với nhau. Nam sinh đã đến Nhật Bản để làm gì?": "นักเรียนต่างชาติชายและนักเรียนญี่ปุ่นหญิงกำลังพูดคุยกัน นักเรียนชายมาญี่ปุ่นเพื่ออะไร?",
+    "Nghe nói Lee đã tốt nghiệp ở khoa kinh tế, anh đến Nhật để học kinh tế à?": "ได้ยินมาว่าลีจบคณะเศรษฐศาสตร์ คุณมาญี่ปุ่นเพื่อเรียนเศรษฐศาสตร์หรือไม่?",
+    "Không phải, tôi rất có hứng thú với văn hóa Nhật Bản.": "ไม่ ฉันสนใจวัฒนธรรมญี่ปุ่นมาก",
+    "Là kịch Kabuki hay kịch No?": "เป็นละครคาบูกิหรือไม่ใช่ละคร?",
+    "Hmm....kịch No thì tôi không biết rõ cho lắm nhưng tôi nghĩ kịch Kabuki khá thú vị. Nhưng mà, tôi thích Anime của Nhật Bản hơn. Vì vậy mà tôi đã tìm một trường cao học có thể nghiên cứu về điện ảnh.": "อืม....ผมไม่รู้จักละครเรื่อง No มากนัก แต่ผมคิดว่าละครคาบูกิก็น่าสนใจทีเดียว แต่ฉันชอบอนิเมะญี่ปุ่นมากกว่า ฉันจึงมองหาบัณฑิตวิทยาลัยที่สามารถเรียนด้านภาพยนตร์ได้",
+    "Vậy à? Vậy thì, chuyên ngành hiện tại không phải kinh tế nhỉ?": "จริงหรือ แล้ววิชาเอกปัจจุบันของคุณไม่ใช่เศรษฐศาสตร์ใช่ไหม?",
+    "Vâng. Tôi cũng có quan tâm đến kinh tế như kinh tế Nhật Bản hay kinh tế quốc tế. Nhưng vì đã đến Nhật Bản nên tôi muốn nghiên cứu sâu hơn về văn hóa Nhật Bản.": "ใช่. ฉันสนใจเศรษฐศาสตร์เช่นเศรษฐกิจญี่ปุ่นหรือเศรษฐศาสตร์ระหว่างประเทศด้วย แต่ตั้งแต่ฉันมาญี่ปุ่น ฉันอยากจะศึกษาวัฒนธรรมญี่ปุ่นให้ลึกซึ้งยิ่งขึ้น",
+    "Nam sinh đã đến Nhật Bản để làm gì?": "นักเรียนชายมาญี่ปุ่นเพื่ออะไร?"
+  }
+}

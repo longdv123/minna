@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Trên TV, một người phụ nữ đang nói.": "On TV, a woman was speaking.",
+    "Người ta thường nói từ xưa rằng mụn là biểu tượng của người trẻ, nhưng điều đó không có nghĩa là việc người trẻ bị mụn là trạng thái bình thường. Vì có mụn, nhiều người mất tự tin và trở nên thu mình. Ở người trẻ, do da mặt nhiều dầu nên dễ nổi mụn là đúng, nhưng không chắc là khi lớn tuổi sẽ khỏi. Có trường hợp vì mụn thời trẻ mà khi lớn tuổi lại phải chịu nhiều vấn đề da khác nhau. Tình trạng có mụn thực sự là một dạng bệnh. Bệnh thì nên được chữa bằng thuốc thích hợp. Vậy những người trước đây không dám trang điểm vì sợ mụn nặng hơn, hãy yên tâm. Sản phẩm 'Kem G' này là thuốc trị mụn ở dạng mỹ phẩm. Trang điểm trở thành phương pháp điều trị, một loại thuốc mang tính đột phá.": "People have said since ancient times that acne is a symbol of youth, but that does not mean that it is normal for young people to have acne. Because of acne, many people lose confidence and become withdrawn. It's true that in young people, because facial skin is oily, it's easy to get acne, but it's unlikely that it will go away when you get older. There are cases where because of acne in youth, when older, they suffer from many different skin problems. Acne is actually a disease. The disease should be treated with appropriate medicine. So those who previously didn't dare to wear makeup because they were afraid their acne would get worse, rest assured. This product 'G Cream' is an acne medication in cosmetic form. Makeup became a treatment, a breakthrough medicine.",
+    "Nói về vấn đề gì?": "The said?",
+    "Nguyên nhân gây mụn": "Causes of acne",
+    "Các bệnh phát sinh do mụn": "Diseases arising from acne",
+    "Mối liên hệ giữa mụn và bệnh về tâm lý": "The relationship between acne and psychological illness",
+    "Thuốc điều trị mụn": "Acne treatment medicine",
+    "Đáp án đúng": "Correct answer"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Trên TV, một người phụ nữ đang nói.": "Di TV, seorang wanita sedang berbicara.",
+    "Người ta thường nói từ xưa rằng mụn là biểu tượng của người trẻ, nhưng điều đó không có nghĩa là việc người trẻ bị mụn là trạng thái bình thường. Vì có mụn, nhiều người mất tự tin và trở nên thu mình. Ở người trẻ, do da mặt nhiều dầu nên dễ nổi mụn là đúng, nhưng không chắc là khi lớn tuổi sẽ khỏi. Có trường hợp vì mụn thời trẻ mà khi lớn tuổi lại phải chịu nhiều vấn đề da khác nhau. Tình trạng có mụn thực sự là một dạng bệnh. Bệnh thì nên được chữa bằng thuốc thích hợp. Vậy những người trước đây không dám trang điểm vì sợ mụn nặng hơn, hãy yên tâm. Sản phẩm 'Kem G' này là thuốc trị mụn ở dạng mỹ phẩm. Trang điểm trở thành phương pháp điều trị, một loại thuốc mang tính đột phá.": "Sejak dahulu kala sudah banyak orang yang mengatakan bahwa jerawat adalah lambang awet muda, namun bukan berarti remaja memiliki jerawat adalah hal yang wajar. Karena jerawat, banyak orang kehilangan kepercayaan diri dan menjadi menarik diri. Memang benar kalau pada usia muda, karena kulit wajah berminyak, maka mudah timbul jerawat, namun kecil kemungkinannya akan hilang seiring bertambahnya usia. Ada kasus di mana karena jerawat di masa muda, ketika bertambah tua, mereka menderita berbagai masalah kulit. Jerawat sebenarnya adalah sebuah penyakit. Penyakit ini harus diobati dengan obat yang tepat. Jadi yang sebelumnya tidak berani memakai riasan karena takut jerawatnya bertambah parah, tenang saja. Produk 'G Cream' ini merupakan obat jerawat dalam bentuk kosmetik. Riasan menjadi pengobatan, obat terobosan.",
+    "Nói về vấn đề gì?": "Katanya?",
+    "Nguyên nhân gây mụn": "Penyebab jerawat",
+    "Các bệnh phát sinh do mụn": "Penyakit yang timbul akibat jerawat",
+    "Mối liên hệ giữa mụn và bệnh về tâm lý": "Hubungan antara jerawat dan penyakit psikologis",
+    "Thuốc điều trị mụn": "Obat pengobatan jerawat",
+    "Đáp án đúng": "Jawaban yang benar"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Trên TV, một người phụ nữ đang nói.": "टिभीमा एउटी महिला बोलिरहेकी थिइन् ।",
+    "Người ta thường nói từ xưa rằng mụn là biểu tượng của người trẻ, nhưng điều đó không có nghĩa là việc người trẻ bị mụn là trạng thái bình thường. Vì có mụn, nhiều người mất tự tin và trở nên thu mình. Ở người trẻ, do da mặt nhiều dầu nên dễ nổi mụn là đúng, nhưng không chắc là khi lớn tuổi sẽ khỏi. Có trường hợp vì mụn thời trẻ mà khi lớn tuổi lại phải chịu nhiều vấn đề da khác nhau. Tình trạng có mụn thực sự là một dạng bệnh. Bệnh thì nên được chữa bằng thuốc thích hợp. Vậy những người trước đây không dám trang điểm vì sợ mụn nặng hơn, hãy yên tâm. Sản phẩm 'Kem G' này là thuốc trị mụn ở dạng mỹ phẩm. Trang điểm trở thành phương pháp điều trị, một loại thuốc mang tính đột phá.": "मानिसहरूले पुरातन समयदेखि नै मुँहासे युवावस्थाको प्रतीक हो भनी भन्दै आएका छन्, तर यसको मतलब यो होइन कि युवाहरूमा मुँहासे हुनु सामान्य कुरा हो। मुँहासेको कारण, धेरै मानिसहरू आत्मविश्वास गुमाउँछन् र फिर्ता लिन्छन्। यो साँचो हो कि युवाहरूमा, अनुहारको छाला तैलीय भएकोले, मुँहासे पाउन सजिलो छ, तर यो सम्भव छैन कि तपाईं बुढो भएपछि यो हट्नेछ। युवावस्थामा मुँहासेको कारण, बूढो हुँदा, छालाको विभिन्न समस्याबाट ग्रस्त हुने केसहरू छन्। मुँहासे वास्तवमा एक रोग हो। रोग लागेमा उपयुक्त औषधिद्वारा उपचार गर्नुपर्छ । त्यसोभए जो पहिले मेकअप लगाउन हिम्मत गर्दैनन् किनभने तिनीहरू डराउँछन् कि उनीहरूको मुँहासे खराब हुनेछन्, आराम गर्नुहोस्। यो उत्पादन 'जी क्रीम' कस्मेटिक रूपमा एक मुँहासे औषधि हो। मेकअप एक उपचार, एक सफलता औषधि भयो।",
+    "Nói về vấn đề gì?": "भन्नुभयो ?",
+    "Nguyên nhân gây mụn": "मुँहासे को कारणहरु",
+    "Các bệnh phát sinh do mụn": "मुँहासेबाट उत्पन्न हुने रोगहरू",
+    "Mối liên hệ giữa mụn và bệnh về tâm lý": "मुँहासे र मनोवैज्ञानिक रोग बीचको सम्बन्ध",
+    "Thuốc điều trị mụn": "मुँहासे उपचार औषधि",
+    "Đáp án đúng": "सहि उत्तर"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Trên TV, một người phụ nữ đang nói.": "တီဗီတွင် အမျိုးသမီးတစ်ဦး စကားပြောနေသည်။",
+    "Người ta thường nói từ xưa rằng mụn là biểu tượng của người trẻ, nhưng điều đó không có nghĩa là việc người trẻ bị mụn là trạng thái bình thường. Vì có mụn, nhiều người mất tự tin và trở nên thu mình. Ở người trẻ, do da mặt nhiều dầu nên dễ nổi mụn là đúng, nhưng không chắc là khi lớn tuổi sẽ khỏi. Có trường hợp vì mụn thời trẻ mà khi lớn tuổi lại phải chịu nhiều vấn đề da khác nhau. Tình trạng có mụn thực sự là một dạng bệnh. Bệnh thì nên được chữa bằng thuốc thích hợp. Vậy những người trước đây không dám trang điểm vì sợ mụn nặng hơn, hãy yên tâm. Sản phẩm 'Kem G' này là thuốc trị mụn ở dạng mỹ phẩm. Trang điểm trở thành phương pháp điều trị, một loại thuốc mang tính đột phá.": "ဝက်ခြံဆိုတာ ငယ်ရွယ်နုပျိုခြင်းရဲ့ သင်္ကေတတစ်ခုလို့ ရှေးခေတ်ကတည်းက လူတွေပြောခဲ့ကြပေမယ့် ဒါဟာ ငယ်ရွယ်သူတွေမှာ ဝက်ခြံပေါက်တာ သာမာန်လို့ မဆိုလိုပါဘူး။ ဝက်ခြံကြောင့် လူတော်တော်များများက ယုံကြည်မှု ပျောက်ဆုံးပြီး ဆုတ်ယုတ်လာကြပါတယ်။ ငယ်ရွယ်သူတွေမှာ မျက်နှာအသားအရေက အဆီပြန်တာကြောင့် ဝက်ခြံပေါက်ဖို့ လွယ်ကူပေမယ့် အသက်ကြီးလာတဲ့အခါ ပျောက်ကင်းဖို့ မဖြစ်နိုင်တာတော့ အမှန်ပါပဲ။ ငယ်ရွယ်စဉ်တွင် ဝက်ခြံကြောင့် အသက်ကြီးလာသောအခါတွင် အရေပြားပြဿနာများစွာကို ခံစားရလေ့ရှိပါသည်။ ဝက်ခြံဆိုတာ တကယ်တော့ ရောဂါတစ်ခုပါ။ ရောဂါကို သင့်လျော်သောဆေးဝါးဖြင့် ကုသသင့်သည်။ ဒါကြောင့် ဝက်ခြံတွေ ပိုဆိုးလာမှာကို စိုးရိမ်တာကြောင့် မိတ်ကပ်မလိမ်းရဲတဲ့ သူတွေ စိတ်ချပါ။ ဤထုတ်ကုန် 'G Cream' သည် အလှကုန်ပုံစံဖြင့် လိမ်းဆေးဖြစ်သည်။ မိတ်ကပ်လိမ်းခြင်းသည် ကုသမှု၊ အောင်မြင်သောဆေးဖြစ်လာသည်။",
+    "Nói về vấn đề gì?": "ပြောတယ်?",
+    "Nguyên nhân gây mụn": "ဝက်ခြံဖြစ်စေသောအကြောင်းရင်းများ",
+    "Các bệnh phát sinh do mụn": "ဝက်ခြံကြောင့်ဖြစ်သောရောဂါများ",
+    "Mối liên hệ giữa mụn và bệnh về tâm lý": "ဝက်ခြံနှင့် စိတ်ပိုင်းဆိုင်ရာရောဂါများကြား ဆက်စပ်မှု",
+    "Thuốc điều trị mụn": "ဝက်ခြံကုသဆေး",
+    "Đáp án đúng": "အဖြေမှန်"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Trên TV, một người phụ nữ đang nói.": "টিভিতে একজন মহিলা কথা বলছিলেন।",
+    "Người ta thường nói từ xưa rằng mụn là biểu tượng của người trẻ, nhưng điều đó không có nghĩa là việc người trẻ bị mụn là trạng thái bình thường. Vì có mụn, nhiều người mất tự tin và trở nên thu mình. Ở người trẻ, do da mặt nhiều dầu nên dễ nổi mụn là đúng, nhưng không chắc là khi lớn tuổi sẽ khỏi. Có trường hợp vì mụn thời trẻ mà khi lớn tuổi lại phải chịu nhiều vấn đề da khác nhau. Tình trạng có mụn thực sự là một dạng bệnh. Bệnh thì nên được chữa bằng thuốc thích hợp. Vậy những người trước đây không dám trang điểm vì sợ mụn nặng hơn, hãy yên tâm. Sản phẩm 'Kem G' này là thuốc trị mụn ở dạng mỹ phẩm. Trang điểm trở thành phương pháp điều trị, một loại thuốc mang tính đột phá.": "মানুষ প্রাচীনকাল থেকেই বলে আসছে যে ব্রণ হল তারুণ্যের প্রতীক, কিন্তু তার মানে এই নয় যে অল্পবয়সিদের ব্রণ হওয়া স্বাভাবিক। ব্রণের কারণে অনেকেই আত্মবিশ্বাস হারিয়ে ফেলেন এবং মুখ ফিরিয়ে নেন। এটা সত্য যে অল্পবয়সিদের মধ্যে, মুখের ত্বক তৈলাক্ত হওয়ায় ব্রণ হওয়া সহজ, কিন্তু বয়স বাড়ার সাথে সাথে এটি দূর হওয়ার সম্ভাবনা কম। এমন কিছু ঘটনা রয়েছে যেখানে যৌবনে ব্রণের কারণে, বড় হলে তারা ত্বকের বিভিন্ন সমস্যায় ভোগে। ব্রণ আসলে একটি রোগ। উপযুক্ত ওষুধ দিয়ে রোগের চিকিৎসা করা উচিত। তাই যারা আগে মেকআপ করার সাহস করেননি কারণ তারা ভয় পান তাদের ব্রণ আরও খারাপ হবে, নিশ্চিন্ত থাকুন। এই পণ্যটি 'জি ক্রিম' প্রসাধনী আকারে একটি ব্রণের ওষুধ। মেকআপ একটি চিকিত্সা, একটি যুগান্তকারী ওষুধ হয়ে উঠেছে।",
+    "Nói về vấn đề gì?": "বললো?",
+    "Nguyên nhân gây mụn": "ব্রণের কারণ",
+    "Các bệnh phát sinh do mụn": "ব্রণ থেকে উদ্ভূত রোগ",
+    "Mối liên hệ giữa mụn và bệnh về tâm lý": "ব্রণ এবং মানসিক অসুস্থতার মধ্যে সম্পর্ক",
+    "Thuốc điều trị mụn": "ব্রণ চিকিৎসার ওষুধ",
+    "Đáp án đúng": "সঠিক উত্তর"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Trên TV, một người phụ nữ đang nói.": "टीवी पर एक महिला बोल रही थी.",
+    "Người ta thường nói từ xưa rằng mụn là biểu tượng của người trẻ, nhưng điều đó không có nghĩa là việc người trẻ bị mụn là trạng thái bình thường. Vì có mụn, nhiều người mất tự tin và trở nên thu mình. Ở người trẻ, do da mặt nhiều dầu nên dễ nổi mụn là đúng, nhưng không chắc là khi lớn tuổi sẽ khỏi. Có trường hợp vì mụn thời trẻ mà khi lớn tuổi lại phải chịu nhiều vấn đề da khác nhau. Tình trạng có mụn thực sự là một dạng bệnh. Bệnh thì nên được chữa bằng thuốc thích hợp. Vậy những người trước đây không dám trang điểm vì sợ mụn nặng hơn, hãy yên tâm. Sản phẩm 'Kem G' này là thuốc trị mụn ở dạng mỹ phẩm. Trang điểm trở thành phương pháp điều trị, một loại thuốc mang tính đột phá.": "लोग प्राचीन काल से ही कहते आए हैं कि मुंहासे युवावस्था का प्रतीक हैं, लेकिन इसका मतलब यह नहीं है कि युवा लोगों में मुंहासे होना सामान्य बात है। मुँहासों के कारण बहुत से लोग आत्मविश्वास खो देते हैं और पीछे हटने लगते हैं। यह सच है कि युवा लोगों में, क्योंकि चेहरे की त्वचा तैलीय होती है, मुँहासा होना आसान है, लेकिन यह संभावना नहीं है कि जब आप बूढ़े हो जायेंगे तो यह दूर हो जायेंगे। ऐसे मामले हैं जहां युवावस्था में मुँहासे के कारण, बड़े होने पर, वे कई अलग-अलग त्वचा समस्याओं से पीड़ित होते हैं। मुँहासा वास्तव में एक बीमारी है। रोग का उपचार उचित औषधि से करना चाहिए। इसलिए जो लोग पहले मेकअप करने की हिम्मत नहीं करते थे क्योंकि उन्हें डर था कि उनके मुँहासे खराब हो जाएंगे, निश्चिंत रहें। यह उत्पाद 'जी क्रीम' कॉस्मेटिक रूप में मुँहासे की दवा है। मेकअप एक उपचार, एक सफल औषधि बन गया।",
+    "Nói về vấn đề gì?": "कहा?",
+    "Nguyên nhân gây mụn": "मुँहासे के कारण",
+    "Các bệnh phát sinh do mụn": "मुँहासों से उत्पन्न होने वाले रोग",
+    "Mối liên hệ giữa mụn và bệnh về tâm lý": "मुँहासे और मनोवैज्ञानिक बीमारी के बीच संबंध",
+    "Thuốc điều trị mụn": "मुँहासे उपचार दवा",
+    "Đáp án đúng": "सही जवाब"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Trên TV, một người phụ nữ đang nói.": "ในทีวีมีผู้หญิงคนหนึ่งกำลังพูดอยู่",
+    "Người ta thường nói từ xưa rằng mụn là biểu tượng của người trẻ, nhưng điều đó không có nghĩa là việc người trẻ bị mụn là trạng thái bình thường. Vì có mụn, nhiều người mất tự tin và trở nên thu mình. Ở người trẻ, do da mặt nhiều dầu nên dễ nổi mụn là đúng, nhưng không chắc là khi lớn tuổi sẽ khỏi. Có trường hợp vì mụn thời trẻ mà khi lớn tuổi lại phải chịu nhiều vấn đề da khác nhau. Tình trạng có mụn thực sự là một dạng bệnh. Bệnh thì nên được chữa bằng thuốc thích hợp. Vậy những người trước đây không dám trang điểm vì sợ mụn nặng hơn, hãy yên tâm. Sản phẩm 'Kem G' này là thuốc trị mụn ở dạng mỹ phẩm. Trang điểm trở thành phương pháp điều trị, một loại thuốc mang tính đột phá.": "ผู้คนพูดกันมาตั้งแต่สมัยโบราณว่าสิวเป็นสัญลักษณ์ของความเยาว์วัย แต่นั่นไม่ได้หมายความว่าเป็นเรื่องปกติสำหรับคนหนุ่มสาวที่จะมีสิว เพราะสิวทำให้หลายคนสูญเสียความมั่นใจและถอนตัว เป็นเรื่องจริงที่คนหนุ่มสาว เนื่องจากผิวหน้ามันจึงเกิดสิวได้ง่าย แต่ก็ไม่น่าจะหายไปเมื่ออายุมากขึ้น มีหลายกรณีที่สิวในวัยเยาว์ เมื่ออายุมากขึ้น พวกเขาประสบปัญหาผิวต่างๆ มากมาย สิวเป็นโรคจริงๆ ควรรักษาโรคด้วยยาที่เหมาะสม ดังนั้นใครที่เมื่อก่อนไม่กล้าแต่งหน้าเพราะกลัวสิวจะแย่ลงมั่นใจได้เลย สินค้าชิ้นนี้ 'จีครีม' เป็นยารักษาสิวในรูปแบบเครื่องสำอาง การแต่งหน้ากลายเป็นยารักษาโรคที่ก้าวหน้า",
+    "Nói về vấn đề gì?": "ที่กล่าวว่า?",
+    "Nguyên nhân gây mụn": "สาเหตุของการเกิดสิว",
+    "Các bệnh phát sinh do mụn": "โรคที่เกิดจากสิว",
+    "Mối liên hệ giữa mụn và bệnh về tâm lý": "ความสัมพันธ์ระหว่างสิวกับการเจ็บป่วยทางจิต",
+    "Thuốc điều trị mụn": "ยารักษาสิว",
+    "Đáp án đúng": "คำตอบที่ถูกต้อง"
+  }
+}

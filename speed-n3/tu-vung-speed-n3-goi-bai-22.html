@@ -1,0 +1,259 @@
+<meta charset="UTF-8">
+<style>
+
+    table.search_result {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table.search_result th {
+        background: #333;
+        color: #fff;
+        font-weight: bold;
+        border: 1px solid #ccc;
+    }
+    table.search_result td,
+    table.search_result th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+    table.search_result th.muctu,
+    table.search_result td.muctu{
+        width: 40%;
+    }
+
+    @media only screen and (max-width: 768px){
+
+        table.search_result, table.search_result thead, table.search_result tbody,
+        table.search_result th, table.search_result td, table.search_result tr {
+            display: block;
+        }
+        table.search_result thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        /* Chỉnh lại trong phần NGỮ PHÁP bị khó nhìn khi màn hình mobile (giữ logic cũ) */
+        table.search_result,table.search_result thead,table.search_result tbody,
+        table.search_result th,table.search_result td,table.search_result tr {
+            border: none !important;
+        }
+        table.search_result{
+            border:1px #CCC solid !important;
+        }
+        table.search_result td{
+            width:auto;
+            height:auto !important;
+            border-bottom:0.5px #eee solid !important;
+        }
+        table.search_result tr td:first-child{
+            border-top:1px #CCC solid !important;
+        }
+        table.search_result tr:last-child td:last-child{
+            border-bottom:none !important;
+        }
+        table.search_result td.muctu{
+            width: 100%;
+        }
+    }
+    </style>
+<div class="tab_container speed-page">
+    <div class="tab_container">
+        <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Từ Vựng</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+            
+
+            <table class="search_result">
+                            <thead>
+                                <tr>
+                                    <th class="muctu"><span class="vi-tr">Mục Từ</span></th>
+                                    <th class="nghia"><span class="vi-tr">Nghĩa</span></th>
+                                </tr>
+                            </thead>
+                            <tbody><tr>
+                                    <td class="muctu"><ruby>自然<rp>（</rp><rt>しぜん</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">Tự nhiên</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b><ruby>動物<rp>（</rp><rt>どうぶつ</rt><rp>）</rp></ruby></b></td>
+                                    <td><b><span class="vi-tr">Động vật</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu">サル</td>
+                                    <td><span class="vi-tr">khỉ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">クマ</td>
+                                    <td><span class="vi-tr">gấu</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">トラ</td>
+                                    <td><span class="vi-tr">hổ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">パンダ</td>
+                                    <td><span class="vi-tr">gấu trúc</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ヒツジ（<ruby>羊<rp>（</rp><rt>ひつじ</rt><rp>）</rp></ruby>）</td>
+                                    <td><span class="vi-tr">cừu</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>群<rp>（</rp><rt>む</rt><rp>）</rp></ruby>れ</td>
+                                    <td><span class="vi-tr">đàn</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ヤギ</td>
+                                    <td><span class="vi-tr">dê</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ヘビ</td>
+                                    <td><span class="vi-tr">rắn</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ワニ</td>
+                                    <td><span class="vi-tr">cá sấu</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ペンギン</td>
+                                    <td><span class="vi-tr">chim cánh cụt</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">イルカ</td>
+                                    <td><span class="vi-tr">cá heo</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">クジラ</td>
+                                    <td><span class="vi-tr">cá voi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">カメ（<ruby>亀<rp>（</rp><rt>かめ</rt><rp>）</rp></ruby>）</td>
+                                    <td><span class="vi-tr">rùa</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">サメ</td>
+                                    <td><span class="vi-tr">cá mập</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">マグロ</td>
+                                    <td><span class="vi-tr">cá ngừ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">サケ</td>
+                                    <td><span class="vi-tr">cá hồi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">スズメ</td>
+                                    <td><span class="vi-tr">chim sẻ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ハト</td>
+                                    <td><span class="vi-tr">chim bồ câu</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">カラス</td>
+                                    <td><span class="vi-tr">quạ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ハエ</td>
+                                    <td><span class="vi-tr">ruồi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>蚊<rp>（</rp><rt>か</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">muỗi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">アリ</td>
+                                    <td><span class="vi-tr">kiến</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ハチ</td>
+                                    <td>ong</td>
+                                  </tr><tr>
+                                    <td class="muctu">しっぽ</td>
+                                    <td><span class="vi-tr">đuôi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>羽<rp>（</rp><rt>はね</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">cánh</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>巣<rp>（</rp><rt>す</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">tổ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b><ruby>植物<rp>（</rp><rt>しょくぶつ</rt><rp>）</rp></ruby></b></td>
+                                    <td><b><span class="vi-tr">Thực vật</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>葉<rp>（</rp><rt>は</rt><rp>）</rp></ruby>（<ruby>葉<rp>（</rp><rt>は</rt><rp>）</rp></ruby>っぱ）</td>
+                                    <td><span class="vi-tr">lá</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>根<rp>（</rp><rt>ね</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">rễ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>芽<rp>（</rp><rt>め</rt><rp>）</rp></ruby>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>る</td>
+                                    <td><span class="vi-tr">nảy mầm</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>が<ruby>咲<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>く</td>
+                                    <td><span class="vi-tr">nở hoa</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>が<ruby>散<rp>（</rp><rt>ち</rt><rp>）</rp></ruby>る</td>
+                                    <td><span class="vi-tr">hoa rụng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>枯<rp>（</rp><rt>か</rt><rp>）</rp></ruby>れる（<ruby>草<rp>（</rp><rt>くさ</rt><rp>）</rp></ruby>・<ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>・<ruby>木<rp>（</rp><rt>き</rt><rp>）</rp></ruby>が）</td>
+                                    <td><span class="vi-tr">héo</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>枝<rp>（</rp><rt>えだ</rt><rp>）</rp></ruby>が<ruby>折<rp>（</rp><rt>お</rt><rp>）</rp></ruby>れる</td>
+                                    <td><span class="vi-tr">cành bị gãy</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>紅葉<rp>（</rp><rt>こうよう</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">lá vàng, lá đỏ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>落<rp>（</rp><rt>お</rt><rp>）</rp></ruby>ち<ruby>葉<rp>（</rp><rt>ば</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">lá rụng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>芝生<rp>（</rp><rt>しばふ</rt><rp>）</rp></ruby>を<ruby>刈<rp>（</rp><rt>か</rt><rp>）</rp></ruby>る</td>
+                                    <td><span class="vi-tr">xén cỏ</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>竹<rp>（</rp><rt>たけ</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">trúc</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">バラ</td>
+                                    <td><span class="vi-tr">hoa hồng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b><ruby>農業<rp>（</rp><rt>のうぎょう</rt><rp>）</rp></ruby></b></td>
+                                    <td><b><span class="vi-tr">Nông nghiệp</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>田<rp>（</rp><rt>た</rt><rp>）</rp></ruby>（<ruby>田<rp>（</rp><rt>た</rt><rp>）</rp></ruby>んぼ）</td>
+                                    <td><span class="vi-tr">ruộng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>稲<rp>（</rp><rt>いね</rt><rp>）</rp></ruby>を<ruby>植<rp>（</rp><rt>う</rt><rp>）</rp></ruby>える</td>
+                                    <td><span class="vi-tr">trồng lúa</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>田植<rp>（</rp><rt>たう</rt><rp>）</rp></ruby>え</td>
+                                    <td><span class="vi-tr">trồng lúa</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>稲<rp>（</rp><rt>いね</rt><rp>）</rp></ruby>を<ruby>刈<rp>（</rp><rt>か</rt><rp>）</rp></ruby>る</td>
+                                    <td><span class="vi-tr">gặt lúa</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>畑<rp>（</rp><rt>はたけ</rt><rp>）</rp></ruby>を<ruby>耕<rp>（</rp><rt>たがや</rt><rp>）</rp></ruby>す</td>
+                                    <td><span class="vi-tr">cuốc đất ruộng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>種<rp>（</rp><rt>たね</rt><rp>）</rp></ruby>をまく</td>
+                                    <td><span class="vi-tr">gieo hạt</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>作物<rp>（</rp><rt>さくもつ</rt><rp>）</rp></ruby>を<ruby>収穫<rp>（</rp><rt>しゅうかく</rt><rp>）</rp></ruby>する</td>
+                                    <td><span class="vi-tr">thu hoạch nông sản</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>草<rp>（</rp><rt>くさ</rt><rp>）</rp></ruby>が<ruby>生<rp>（</rp><rt>は</rt><rp>）</rp></ruby>える</td>
+                                    <td><span class="vi-tr">cỏ mọc</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>雑草<rp>（</rp><rt>ざっそう</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">cỏ dại</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>実<rp>（</rp><rt>み</rt><rp>）</rp></ruby>がなる</td>
+                                    <td><span class="vi-tr">cây ra quả</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b>その<ruby>他<rp>（</rp><rt>た</rt><rp>）</rp></ruby></b></td>
+                                    <td><b><span class="vi-tr">Khác</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>生<rp>（</rp><rt>い</rt><rp>）</rp></ruby>き<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">sinh vật</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>人間<rp>（</rp><rt>にんげん</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">con người</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>毛皮<rp>（</rp><rt>けがわ</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">da thú</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>農薬<rp>（</rp><rt>のうやく</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">thuốc trừ sâu</span> </td>
+                                  </tr>  </tbody>
+                          </table>        </div>
+
+        <div class="tab_content" id="tab2" style="display: none;">
+            
+
+            <p><b style="color:red;">例文</b></p><p>①　　<ruby>週末<rp>(</rp><rt>しゅうまつ</rt><rp>)</rp></ruby>の<ruby>雨<rp>(</rp><rt>あめ</rt><rp>)</rp></ruby>で、<ruby>桜<rp>(</rp><rt>さくら</rt><rp>)</rp></ruby>がだいぶ<b><ruby>散<rp>(</rp><rt>ち</rt><rp>)</rp></ruby>って</b>しまった。</p><p>②　<b>　<ruby>農家<rp>(</rp><rt>のうか</rt><rp>)</rp></ruby></b>の<ruby>人<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>の<ruby>話<rp>(</rp><rt>はなし</rt><rp>)</rp></ruby>によると、<ruby>今年<rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>は<ruby>台風<rp>(</rp><rt>たいふう</rt><rp>)</rp></ruby>の<ruby>影響<rp>(</rp><rt>えいきょう</rt><rp>)</rp></ruby>でりんごの<b><ruby>収穫<rp>(</rp><rt>しゅうかく</rt><rp>)</rp></ruby></b>が<ruby>少<rp>(</rp><rt>すく</rt><rp>)</rp></ruby>ないそうです。</p><p>③　　いつの<ruby>間<rp>(</rp><rt>ま</rt><rp>)</rp></ruby>にか、<ruby>草<rp>(</rp><rt>くさ</rt><rp>)</rp></ruby>がいっぱい<b><ruby>生<rp>(</rp><rt>は</rt><rp>)</rp></ruby>え</b>ちゃったね。そろそろ<b><ruby>刈<rp>(</rp><rt>か</rt><rp>)</rp></ruby>ら</b>ないと。</p><p>④　　カラスは<ruby>賢<rp>(</rp><rt>かしこ</rt><rp>)</rp></ruby>い<ruby>鳥<rp>(</rp><rt>とり</rt><rp>)</rp></ruby>で、<b><ruby>人間<rp>(</rp><rt>にんげん</rt><rp>)</rp></ruby></b>の<ruby>行動<rp>(</rp><rt>こうどう</rt><rp>)</rp></ruby>をよく<ruby>観察<rp>(</rp><rt>かんさつ</rt><rp>)</rp></ruby>している。</p><p>⑤　　<ruby>母<rp>(</rp><rt>はは</rt><rp>)</rp></ruby>も<ruby>年<rp>(</rp><rt>とし</rt><rp>)</rp></ruby>を<ruby>取<rp>(</rp><rt>と</rt><rp>)</rp></ruby>って、<b><ruby>畑<rp>(</rp><rt>はたけ</rt><rp>)</rp></ruby></b>を<b><ruby>耕<rp>(</rp><rt>たがや</rt><rp>)</rp></ruby>し</b>たり<b><ruby>田植<rp>(</rp><rt>たう</rt><rp>)</rp></ruby>え</b>をしたりするのが、<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しつらくなってきたようです。</p><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Dịch</span> </span></div><div class="slide-content sl2"><p>①　　<ruby>週末<rp>(</rp><rt>しゅうまつ</rt><rp>)</rp></ruby>の<ruby>雨<rp>(</rp><rt>あめ</rt><rp>)</rp></ruby>で、<ruby>桜<rp>(</rp><rt>さくら</rt><rp>)</rp></ruby>がだいぶ<b><ruby>散<rp>(</rp><rt>ち</rt><rp>)</rp></ruby>って</b>しまった。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="vi-tr">Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.</span></p><p>②　<b>　<ruby>農家<rp>(</rp><rt>のうか</rt><rp>)</rp></ruby></b>の<ruby>人<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>の<ruby>話<rp>(</rp><rt>はなし</rt><rp>)</rp></ruby>によると、<ruby>今年<rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>は<ruby>台風<rp>(</rp><rt>たいふう</rt><rp>)</rp></ruby>の<ruby>影響<rp>(</rp><rt>えいきょう</rt><rp>)</rp></ruby>でりんごの<b><ruby>収穫<rp>(</rp><rt>しゅうかく</rt><rp>)</rp></ruby></b>が<ruby>少<rp>(</rp><rt>すく</rt><rp>)</rp></ruby>ないそうです。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="vi-tr">Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.</span></p><p>③　　いつの<ruby>間<rp>(</rp><rt>ま</rt><rp>)</rp></ruby>にか、<ruby>草<rp>(</rp><rt>くさ</rt><rp>)</rp></ruby>がいっぱい<b><ruby>生<rp>(</rp><rt>は</rt><rp>)</rp></ruby>え</b>ちゃったね。そろそろ<b><ruby>刈<rp>(</rp><rt>か</rt><rp>)</rp></ruby>ら</b>ないと。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="vi-tr">Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.</span>&nbsp;</p><p>④　　カラスは<ruby>賢<rp>(</rp><rt>かしこ</rt><rp>)</rp></ruby>い<ruby>鳥<rp>(</rp><rt>とり</rt><rp>)</rp></ruby>で、<b><ruby>人間<rp>(</rp><rt>にんげん</rt><rp>)</rp></ruby></b>の<ruby>行動<rp>(</rp><rt>こうどう</rt><rp>)</rp></ruby>をよく<ruby>観察<rp>(</rp><rt>かんさつ</rt><rp>)</rp></ruby>している。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="vi-tr">Quạ là loài chim thông minh, thường quan sát hành động của con người.</span>&nbsp;</p><p>⑤　　<ruby>母<rp>(</rp><rt>はは</rt><rp>)</rp></ruby>も<ruby>年<rp>(</rp><rt>とし</rt><rp>)</rp></ruby>を<ruby>取<rp>(</rp><rt>と</rt><rp>)</rp></ruby>って、<b><ruby>畑<rp>(</rp><rt>はたけ</rt><rp>)</rp></ruby></b>を<b><ruby>耕<rp>(</rp><rt>たがや</rt><rp>)</rp></ruby>し</b>たり<b><ruby>田植<rp>(</rp><rt>たう</rt><rp>)</rp></ruby>え</b>をしたりするのが、<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しつらくなってきたようです。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="vi-tr">Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.</span>&nbsp;</p></div></div><br><p><b style="color:red;">ドリル</b></p><p><b>１）</b></p><p>①　そろそろジャガイモの<ruby>種<rp>(</rp><rt>たね</rt><rp>)</rp></ruby>を（　　　）<ruby>時期<rp>(</rp><rt>じき</rt><rp>)</rp></ruby>です。</p><p>②　せっかくかわいい<ruby>花<rp>(</rp><rt>はな</rt><rp>)</rp></ruby>が<ruby>咲<rp>(</rp><rt>さ</rt><rp>)</rp></ruby>いたのに、<ruby>台風<rp>(</rp><rt>たいふう</rt><rp>)</rp></ruby>で（　　　）しまうかもしれない。</p><p>③　この<ruby>花<rp>(</rp><rt>はな</rt><rp>)</rp></ruby>は、<ruby>毎日<rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>をやらないと、すぐに（　　　）しまうんです。</p><p>④　この<ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>の<ruby>木<rp>(</rp><rt>き</rt><rp>)</rp></ruby>は、おととし<ruby>植<rp>(</rp><rt>う</rt><rp>)</rp></ruby>えたんです。<ruby>今年<rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>は<ruby>実<rp>(</rp><rt>み</rt><rp>)</rp></ruby>が（　　　）といいんですが。</p><table class="table table-bordered"><tbody><tr><td>なる　　　　<ruby>枯<rp>(</rp><rt>か</rt><rp>)</rp></ruby>れる　　　　<ruby>生<rp>(</rp><rt>は</rt><rp>)</rp></ruby>える　　　　まく　　　　<ruby>散<rp>(</rp><rt>ち</rt><rp>)</rp></ruby>る</td></tr></tbody></table><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án</span> </span></div><div class="slide-content sl2"><p>①　そろそろジャガイモの<ruby>種<rp>(</rp><rt>たね</rt><rp>)</rp></ruby>を（　<b>まく</b>　）<ruby>時期<rp>(</rp><rt>じき</rt><rp>)</rp></ruby>です。</p><p>②　せっかくかわいい<ruby>花<rp>(</rp><rt>はな</rt><rp>)</rp></ruby>が<ruby>咲<rp>(</rp><rt>さ</rt><rp>)</rp></ruby>いたのに、<ruby>台風<rp>(</rp><rt>たいふう</rt><rp>)</rp></ruby>で（　　<b><ruby>散<rp>(</rp><rt>ち</rt><rp>)</rp></ruby>って</b>　）しまうかもしれない。</p><p>③　この<ruby>花<rp>(</rp><rt>はな</rt><rp>)</rp></ruby>は、<ruby>毎日<rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>をやらないと、すぐに（　<b><ruby>枯<rp>(</rp><rt>か</rt><rp>)</rp></ruby>れて</b>　）しまうんです。</p><p>④　この<ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>の<ruby>木<rp>(</rp><rt>き</rt><rp>)</rp></ruby>は、おととし<ruby>植<rp>(</rp><rt>う</rt><rp>)</rp></ruby>えたんです。<ruby>今年<rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>は<ruby>実<rp>(</rp><rt>み</rt><rp>)</rp></ruby>が（　<b>なる</b>　）といいんですが。</p></div></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án + Dịch</span> </span></div><div class="slide-content sl2"><p>①　そろそろジャガイモの<ruby>種<rp>(</rp><rt>たね</rt><rp>)</rp></ruby>を（　<b>まく</b>　）<ruby>時期<rp>(</rp><rt>じき</rt><rp>)</rp></ruby>です。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Sắp sửa đến mùa gieo trồng khoai tây.</span>&nbsp;</p><p>②　せっかくかわいい<ruby>花<rp>(</rp><rt>はな</rt><rp>)</rp></ruby>が<ruby>咲<rp>(</rp><rt>さ</rt><rp>)</rp></ruby>いたのに、<ruby>台風<rp>(</rp><rt>たいふう</rt><rp>)</rp></ruby>で（&nbsp;&nbsp;&nbsp;&nbsp;<b><ruby>散<rp>(</rp><rt>ち</rt><rp>)</rp></ruby>って</b>　）しまうかもしれない。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.</span><br></p><p>③　この<ruby>花<rp>(</rp><rt>はな</rt><rp>)</rp></ruby>は、<ruby>毎日<rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>をやらないと、すぐに（　<b><ruby>枯<rp>(</rp><rt>か</rt><rp>)</rp></ruby>れて</b>　）しまうんです。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.</span><br></p><p>④　この<ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>の<ruby>木<rp>(</rp><rt>き</rt><rp>)</rp></ruby>は、おととし<ruby>植<rp>(</rp><rt>う</rt><rp>)</rp></ruby>えたんです。<ruby>今年<rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>は<ruby>実<rp>(</rp><rt>み</rt><rp>)</rp></ruby>が（　<b>なる</b>　）といいんですが。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.</span></p></div></div><br><p><b>２）</b></p><p>①　<ruby>運<rp>(</rp><rt>うん</rt><rp>)</rp></ruby>がよければ、<ruby>船<rp>(</rp><rt>ふね</rt><rp>)</rp></ruby>の<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>からイルカの（　　　）を<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>ることができます。</p><p>②　<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>て！あそこの<ruby>木<rp>(</rp><rt>き</rt><rp>)</rp></ruby>の（　　　）に<ruby>鳥<rp>(</rp><rt>とり</rt><rp>)</rp></ruby>の<ruby>巣<rp>(</rp><rt>す</rt><rp>)</rp></ruby>がある。</p><p>③　<ruby>彼<rp>(</rp><rt>かれ</rt><rp>)</rp></ruby>らは、（　　　）を<ruby>売<rp>(</rp><rt>う</rt><rp>)</rp></ruby>って<ruby>金<rp>(</rp><rt>きん</rt><rp>)</rp></ruby>を<ruby>得<rp>(</rp><rt>え</rt><rp>)</rp></ruby>るために、<ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>に<ruby>動物<rp>(</rp><rt>どうぶつ</rt><rp>)</rp></ruby>を<ruby>殺<rp>(</rp><rt>ころ</rt><rp>)</rp></ruby>しているんです。</p><p>④　<ruby>天気<rp>(</rp><rt>てんき</rt><rp>)</rp></ruby>がいいから、<ruby>公園<rp>(</rp><rt>こうえん</rt><rp>)</rp></ruby>の（　　　）で<ruby>昼寝<rp>(</rp><rt>ひるね</rt><rp>)</rp></ruby>でもしましょうか。</p><table class="table table-bordered"><tbody><tr><td>a.<ruby>毛皮<rp>(</rp><rt>けがわ</rt><rp>)</rp></ruby>　　　　b.<ruby>稲<rp>(</rp><rt>いね</rt><rp>)</rp></ruby>　　　　c.<ruby>群<rp>(</rp><rt>む</rt><rp>)</rp></ruby>れ　　　　d.<ruby>芝生<rp>(</rp><rt>しばふ</rt><rp>)</rp></ruby>　　　　e.<ruby>枝<rp>(</rp><rt>えだ</rt><rp>)</rp></ruby></td></tr></tbody></table><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án</span> </span></div><div class="slide-content sl2"><p>①　<ruby>運<rp>(</rp><rt>うん</rt><rp>)</rp></ruby>がよければ、<ruby>船<rp>(</rp><rt>ふね</rt><rp>)</rp></ruby>の<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>からイルカの（　<b><ruby>群<rp>(</rp><rt>む</rt><rp>)</rp></ruby>れ</b>　）を<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>ることができます。</p><p>②　<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>て！あそこの<ruby>木<rp>(</rp><rt>き</rt><rp>)</rp></ruby>の（　<b><ruby>枝<rp>(</rp><rt>えだ</rt><rp>)</rp></ruby></b>　）に<ruby>鳥<rt>とり</rt></ruby>の<ruby>巣<rt>す</rt></ruby>がある。</p><p>③　<ruby>彼<rp>(</rp><rt>かれ</rt><rp>)</rp></ruby>らは、（　<b><ruby>毛皮<rp>(</rp><rt>けがわ</rt><rp>)</rp></ruby></b>　）を<ruby>売<rp>(</rp><rt>う</rt><rp>)</rp></ruby>って<ruby>金<rp>(</rp><rt>きん</rt><rp>)</rp></ruby>を<ruby>得<rp>(</rp><rt>え</rt><rp>)</rp></ruby>るために、<ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>に<ruby>動物<rp>(</rp><rt>どうぶつ</rt><rp>)</rp></ruby>を<ruby>殺<rp>(</rp><rt>ころ</rt><rp>)</rp></ruby>しているんです。</p><p>④　<ruby>天気<rp>(</rp><rt>てんき</rt><rp>)</rp></ruby>がいいから、<ruby>公園<rp>(</rp><rt>こうえん</rt><rp>)</rp></ruby>の（　<b><ruby>芝生<rp>(</rp><rt>しばふ</rt><rp>)</rp></ruby></b>　）で<ruby>昼寝<rp>(</rp><rt>ひるね</rt><rp>)</rp></ruby>でもしましょうか。</p></div></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án + Dịch</span> </span></div><div class="slide-content sl2"><p>①　<ruby>運<rp>(</rp><rt>うん</rt><rp>)</rp></ruby>がよければ、<ruby>船<rp>(</rp><rt>ふね</rt><rp>)</rp></ruby>の<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>からイルカの（　<b><ruby>群<rp>(</rp><rt>む</rt><rp>)</rp></ruby>れ</b>　）を<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>ることができます。</p><p>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.</span><br></p><p>②　<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>て！あそこの<ruby>木<rp>(</rp><rt>き</rt><rp>)</rp></ruby>の（　<b><ruby>枝<rp>(</rp><rt>えだ</rt><rp>)</rp></ruby></b>　）に<ruby>鳥<rt>とり</rt></ruby>の<ruby>巣<rt>す</rt></ruby>がある。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nhìn kìa! Có một tổ chim trên cành cây đằng kia.</span><br></p><p>③　<ruby>彼<rp>(</rp><rt>かれ</rt><rp>)</rp></ruby>らは、（　<b><ruby>毛皮<rp>(</rp><rt>けがわ</rt><rp>)</rp></ruby></b>　）を<ruby>売<rp>(</rp><rt>う</rt><rp>)</rp></ruby>って<ruby>金<rp>(</rp><rt>きん</rt><rp>)</rp></ruby>を<ruby>得<rp>(</rp><rt>え</rt><rp>)</rp></ruby>るために、<ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>に<ruby>動物<rp>(</rp><rt>どうぶつ</rt><rp>)</rp></ruby>を<ruby>殺<rp>(</rp><rt>ころ</rt><rp>)</rp></ruby>しているんです。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; <span class="vi-tr">Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.</span>&nbsp;</p><p>④　<ruby>天気<rp>(</rp><rt>てんき</rt><rp>)</rp></ruby>がいいから、<ruby>公園<rp>(</rp><rt>こうえん</rt><rp>)</rp></ruby>の（　<b><ruby>芝生<rp>(</rp><rt>しばふ</rt><rp>)</rp></ruby></b>　）で<ruby>昼寝<rp>(</rp><rt>ひるね</rt><rp>)</rp></ruby>でもしましょうか。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.</span>&nbsp;</p></div></div><br>        </div>
+    </div>
+    
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="tu-vung-speed-n3-goi-bai-22.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Từ Vựng":"Vocabulary","Luyện Tập":"Practice","Mục Từ":"Section Words","Nghĩa":"Meaning","Tự nhiên":"Nature","Động vật":"Animal","khỉ":"monkey","gấu":"bear","hổ":"tiger","gấu trúc":"panda","cừu":"sheep","đàn":"piano","dê":"goat","rắn":"snake","cá sấu":"crocodile","chim cánh cụt":"penguin","cá heo":"dolphin","cá voi":"whale","rùa":"turtle","cá mập":"shark","cá ngừ":"tuna","cá hồi":"salmon","chim sẻ":"sparrow","chim bồ câu":"dove","quạ":"crow","ruồi":"flies","muỗi":"mosquito","kiến":"ants","đuôi":"tail","cánh":"wing","tổ":"nest","Thực vật":"Plants","lá":"leaf","rễ":"roots","nảy mầm":"germinate","nở hoa":"bloom","hoa rụng":"fallen flowers","héo":"wither","cành bị gãy":"broken branch","lá vàng, lá đỏ":"yellow leaves, red leaves","lá rụng":"fallen leaves","xén cỏ":"grass clipping","trúc":"bamboo","hoa hồng":"rose","Nông nghiệp":"Agriculture","ruộng":"field","trồng lúa":"rice cultivation","gặt lúa":"harvest","cuốc đất ruộng":"Hoe the field","gieo hạt":"sow seeds","thu hoạch nông sản":"harvest agricultural products","cỏ mọc":"grass grows","cỏ dại":"weed","cây ra quả":"fruit tree","Khác":"Other","sinh vật":"creature","con người":"human","da thú":"skin","thuốc trừ sâu":"pesticides","☞ Dịch":"☞ Pandemic","Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.":"Because of the rainy weekend, a lot of cherry blossoms fell.","Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.":"According to the story of a farmer, this year, due to the impact of the storm, the apple harvest will be small.","Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.":"I didn't notice for a while but the grass was already growing, I had to cut the grass soon.","Quạ là loài chim thông minh, thường quan sát hành động của con người.":"Crows are intelligent birds, often observing human actions.","Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.":"My mother is also getting old, so it seems like plowing the fields and growing rice has become a bit more difficult.","☞ Đáp án":"☞ Answer","☞ Đáp án + Dịch":"☞ Answer + Translation","Sắp sửa đến mùa gieo trồng khoai tây.":"Potato planting season is almost here.","Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.":"Although the lovely flowers have bloomed, they may fall due to storms.","Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.":"If this flower is not watered every day, it will wither immediately.","Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.":"This peach tree was planted two years ago. I hope it bears fruit this year.","Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.":"If you're lucky, you can see the dolphins from the boat.","Nhìn kìa! Có một tổ chim trên cành cây đằng kia.":"Look! There's a bird's nest on that branch over there.","Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.":"Those people easily kill animals because they sell animal skins to make money.","Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.":"Because the weather is nice today, we take a nap on the park's lawn."},"idMap":{"Từ Vựng":"Kosakata","Luyện Tập":"Praktik","Mục Từ":"Kata Bagian","Nghĩa":"Arti","Tự nhiên":"Alam","Động vật":"Hewan","khỉ":"monyet","gấu":"beruang","hổ":"harimau","gấu trúc":"panda","cừu":"domba","đàn":"piano","dê":"kambing","rắn":"ular","cá sấu":"buaya","chim cánh cụt":"penguin","cá heo":"lumba-lumba","cá voi":"paus","rùa":"penyu","cá mập":"hiu","cá ngừ":"ikan tuna","cá hồi":"ikan salmon","chim sẻ":"burung gereja","chim bồ câu":"merpati","quạ":"burung gagak","ruồi":"lalat","muỗi":"nyamuk","kiến":"semut","đuôi":"ekor","cánh":"sayap","tổ":"sarang","Thực vật":"Tanaman","lá":"daun","rễ":"akar","nảy mầm":"berkecambah","nở hoa":"bunga","hoa rụng":"bunga jatuh","héo":"melayu","cành bị gãy":"cabang patah","lá vàng, lá đỏ":"daun kuning, daun merah","lá rụng":"daun-daun berguguran","xén cỏ":"pemotongan rumput","trúc":"bambu","hoa hồng":"mawar","Nông nghiệp":"Pertanian","ruộng":"bidang","trồng lúa":"budidaya padi","gặt lúa":"memanen","cuốc đất ruộng":"Cangkul lapangan","gieo hạt":"menabur benih","thu hoạch nông sản":"memanen hasil pertanian","cỏ mọc":"rumput tumbuh","cỏ dại":"gulma","cây ra quả":"pohon buah-buahan","Khác":"Lainnya","sinh vật":"makhluk","con người":"manusia","da thú":"kulit","thuốc trừ sâu":"pestisida","☞ Dịch":"☞ Pandemi","Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.":"Karena akhir pekan yang hujan, banyak bunga sakura yang berguguran.","Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.":"Menurut cerita seorang petani, tahun ini akibat dampak badai, panen apel akan sedikit.","Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.":"Saya tidak menyadarinya untuk beberapa saat tetapi rumput sudah tumbuh, saya harus segera memotong rumput tersebut.","Quạ là loài chim thông minh, thường quan sát hành động của con người.":"Gagak adalah burung yang cerdas dan sering mengamati tindakan manusia.","Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.":"Ibuku juga semakin tua, jadi sepertinya membajak sawah dan menanam padi menjadi lebih sulit.","☞ Đáp án":"☞ Menjawab","☞ Đáp án + Dịch":"☞ Jawaban + Terjemahan","Sắp sửa đến mùa gieo trồng khoai tây.":"Musim tanam kentang hampir tiba.","Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.":"Meskipun bunga-bunga indah telah mekar, mereka mungkin tumbang karena badai.","Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.":"Jika bunga ini tidak disiram setiap hari maka akan langsung layu.","Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.":"Pohon persik ini ditanam dua tahun lalu. Mudah-mudahan tahun ini membuahkan hasil.","Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.":"Jika beruntung, Anda bisa melihat lumba-lumba dari atas perahu.","Nhìn kìa! Có một tổ chim trên cành cây đằng kia.":"Lihat! Ada sarang burung di dahan sebelah sana.","Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.":"Orang-orang itu dengan mudahnya membunuh hewan karena mereka menjual kulit binatang untuk mendapatkan uang.","Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.":"Karena cuacanya bagus hari ini, kami tidur siang di halaman taman."},"neMap":{"Từ Vựng":"शब्दावली","Luyện Tập":"अभ्यास गर्नुहोस्","Mục Từ":"खण्ड शब्दहरू","Nghĩa":"अर्थ","Tự nhiên":"प्रकृति","Động vật":"जनावर","khỉ":"बाँदर","gấu":"भालु","hổ":"बाघ","gấu trúc":"पाण्डा","cừu":"भेडा","đàn":"पियानो","dê":"बाख्रा","rắn":"सर्प","cá sấu":"गोही","chim cánh cụt":"पेंगुइन","cá heo":"डल्फिन","cá voi":"ह्वेल","rùa":"कछुवा","cá mập":"शार्क","cá ngừ":"टुना","cá hồi":"सामन","chim sẻ":"भँगेरा","chim bồ câu":"ढुकुर","quạ":"काग","ruồi":"उड्छ","muỗi":"लामखुट्टे","kiến":"कमिलाहरू","đuôi":"पुच्छर","cánh":"पखेटा","tổ":"गुँड","Thực vật":"बिरुवाहरू","lá":"पात","rễ":"जरा","nảy mầm":"अंकुरण","nở hoa":"फुल्नु","hoa rụng":"झरेका फूलहरू","héo":"ओइलाउनु","cành bị gãy":"भाँचिएको शाखा","lá vàng, lá đỏ":"पहेंलो पातहरू, रातो पातहरू","lá rụng":"झरेका पातहरू","xén cỏ":"घाँस काट्ने","trúc":"बाँस","hoa hồng":"गुलाब","Nông nghiệp":"कृषि","ruộng":"क्षेत्र","trồng lúa":"धान खेती","gặt lúa":"फसल","cuốc đất ruộng":"मैदान कुर्नुहोस्","gieo hạt":"बीउ छर्न","thu hoạch nông sản":"कृषि उत्पादनहरू फसल","cỏ mọc":"घाँस बढ्छ","cỏ dại":"झार","cây ra quả":"फलफूलको रूख","Khác":"अन्य","sinh vật":"प्राणी","con người":"मानव","da thú":"छाला","thuốc trừ sâu":"कीटनाशकहरू","☞ Dịch":"☞ माहामारी","Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.":"वर्षाको सप्ताहन्तको कारण, धेरै चेरी फूलहरू खसे।","Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.":"एक कृषकको कथा अनुसार यो वर्ष हावाहुरीको प्रभावले स्याउ बाली थोरै हुनेछ ।","Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.":"मैले केही बेर याद गरेन तर घाँस पहिले नै बढिरहेको थियो, मैले चाँडै घाँस काट्नु पर्यो।","Quạ là loài chim thông minh, thường quan sát hành động của con người.":"कागहरू बुद्धिमान पक्षीहरू हुन्, प्रायः मानव कार्यहरू अवलोकन गर्छन्।","Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.":"आमा पनि बुढ्यौली भैरहनुभएको छ, त्यसैले खेत जोत्ने र धान रोप्न अलि गाह्रो भएको छ ।","☞ Đáp án":"☞ जवाफ","☞ Đáp án + Dịch":"☞ उत्तर + अनुवाद","Sắp sửa đến mùa gieo trồng khoai tây.":"आलु रोप्ने सिजन लगभग आइसकेको छ।","Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.":"मनमोहक फूल फुलेका भए पनि हुरीबतासले झर्न सक्छ ।","Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.":"यदि यो फूललाई ​​हरेक दिन पानी दिइएन भने, यो तुरुन्तै ओइलाउँछ।","Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.":"यो आरुको रुख दुई वर्षअघि रोपिएको हो । मलाई आशा छ कि यो वर्ष फल दिन्छ।","Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.":"यदि तपाईं भाग्यशाली हुनुहुन्छ भने, तपाईंले डुङ्गाबाट डल्फिनहरू देख्न सक्नुहुन्छ।","Nhìn kìa! Có một tổ chim trên cành cây đằng kia.":"हेर! त्यही हाँगामा चराको गुँड छ।","Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.":"ती मानिसहरू सजिलैसँग जनावरहरू मार्छन् किनभने तिनीहरू पैसा कमाउनको लागि जनावरको छाला बेच्छन्।","Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.":"किनकी आज मौसम राम्रो छ, हामी पार्कको ल्यानमा सुत्छौं।"},"myMap":{"Từ Vựng":"ဝေါဟာရ","Luyện Tập":"အလေ့အကျင့်","Mục Từ":"ကဏ္ဍမှူ","Nghĩa":"အဓိပ္ပါယ်","Tự nhiên":"သဘာဝတရား","Động vật":"တိရစ္ဆာန်","khỉ":"မျောက်","gấu":"ဝံ","hổ":"ကျား","gấu trúc":"ပန်ဒါ","cừu":"သိုး","đàn":"စန္ဒယား","dê":"ဆိတ်","rắn":"မြွေ","cá sấu":"မိကျောင်း","chim cánh cụt":"ပင်ဂွင်း","cá heo":"လင်းပိုင်","cá voi":"ဝေလငါး","rùa":"လိပ်","cá mập":"ငါးမန်း","cá ngừ":"တူနာငါး","cá hồi":"ဆယ်လ်မွန်","chim sẻ":"စာငှက်","chim bồ câu":"ချိုး","quạ":"ကျီးကန်း","ruồi":"ယင်ကောင်","muỗi":"ခြင်","kiến":"သနပ်ခါး","đuôi":"အမြီး","cánh":"တောင်ပံ","tổ":"အသိုက်","Thực vật":"အပင်များ","lá":"အရွက်","rễ":"အမြစ်များ","nảy mầm":"ပေါက်သည်။","nở hoa":"ပွင်","hoa rụng":"ကြွေကျသောပန်းများ","héo":"ညှိုးနွမ်း","cành bị gãy":"သစ်ကိုင်းကျိုး၊","lá vàng, lá đỏ":"အရွက်၊ အဝါရောင် အရွက်","lá rụng":"ကြွေကျသောအရွက်များ","xén cỏ":"မြက်ရိတ်ခြင်း။","trúc":"ဝါး","hoa hồng":"နှင်းဆီ","Nông nghiệp":"စိုက်ပျိုးရေး","ruộng":"လယ်ကွင်း","trồng lúa":"စပါးစိုက်ပျိုးခြင်း။","gặt lúa":"ရိတ်သိမ်း","cuốc đất ruộng":"ဟိုးကွင်း","gieo hạt":"မျိုးစေ့ကိုကြဲပါ။","thu hoạch nông sản":"စိုက်ပျိုးရေးထွက်ကုန်များ ရိတ်သိမ်းခြင်း။","cỏ mọc":"မြက်ပင်ပေါက်သည်။","cỏ dại":"ပေါင်းပင်","cây ra quả":"သီးပင်","Khác":"တခြား","sinh vật":"သတ္တဝါ","con người":"လူသား","da thú":"အရေပြား","thuốc trừ sâu":"ပိုးသတ်ဆေး","☞ Dịch":"☞ ကမ္ဘာအနှံ့ဖြစ်ပွားသော","Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.":"မိုးရာသီ ပိတ်ရက်တွေကြောင့် ချယ်ရီပန်းတွေ အများကြီး ကြွေကျတယ်။","Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.":"လယ်သမားတစ်ဦး၏ ပုံပြင်အရ ယခုနှစ်တွင် မုန်တိုင်းတိုက်ခတ်မှုကြောင့် ပန်းသီး ရိတ်သိမ်းမှု နည်းပါးသွားမည်ဖြစ်သည်။","Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.":"ခဏတာ သတိမထားမိပေမယ့် မြက်တွေ ပေါက်နေပြီ၊ မကြာခင် မြက်ပင်တွေကို ဖြတ်ရမယ်။","Quạ là loài chim thông minh, thường quan sát hành động của con người.":"ကျီးကန်းများသည် ဉာဏ်ရည်ထက်မြက်သောငှက်များဖြစ်ပြီး မကြာခဏ လူ့လုပ်ရပ်များကို စောင့်ကြည့်လေ့လာကြသည်။","Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.":"အမေလည်း အသက်ကြီးလာပြီဆိုတော့ လယ်ထွန်ရတာနဲ့ စပါးစိုက်ရတာ နည်းနည်း ပိုခက်လာပုံရတယ်။","☞ Đáp án":"☞ ဖြေ","☞ Đáp án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Sắp sửa đến mùa gieo trồng khoai tây.":"အာလူးစိုက်ရာသီရောက်ခါနီးပြီ။","Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.":"ချစ်စရာကောင်းတဲ့ ပန်းလေးတွေ ပွင့်ဖူးပေမယ့် မုန်တိုင်းကြောင့် ကြွေကျနိုင်ပါတယ်။","Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.":"ဒီပန်းကို နေ့တိုင်း ရေမလောင်းရင် ချက်ချင်း ညှိုးနွမ်းသွားလိမ့်မယ်။","Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.":"ဒီမက်မွန်ပင်ကို လွန်ခဲ့တဲ့ ၂ နှစ်က စိုက်ခဲ့တာ။ ဒီနှစ်တော့ အသီးထွက်မယ်လို့ မျှော်လင့်ပါတယ်။","Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.":"ကံကောင်းရင် လှေပေါ်ကနေ လင်းပိုင်တွေကို တွေ့နိုင်ပါတယ်။","Nhìn kìa! Có một tổ chim trên cành cây đằng kia.":"ကြည့်လိုက်! အဲဒီ့သစ်ကိုင်းပေါ်မှာ ငှက်သိုက်ရှိတယ်။","Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.":"တိရစ္ဆာန်အရေခွံများရောင်းပြီး ငွေရှာကြသောကြောင့် တိရစ္ဆာန်များကို အလွယ်တကူ သတ်ကြသည်။","Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.":"ဒီနေ့ ရာသီဥတု သာယာတာကြောင့် ပန်းခြံရဲ့ မြက်ခင်းပြင်မှာ တစ်ရေးတစ်မော အိပ်ကြပါတယ်။"},"bnMap":{"Từ Vựng":"শব্দভান্ডার","Luyện Tập":"অনুশীলন করুন","Mục Từ":"বিভাগ শব্দ","Nghĩa":"অর্থ","Tự nhiên":"প্রকৃতি","Động vật":"পশু","khỉ":"বানর","gấu":"ভালুক","hổ":"বাঘ","gấu trúc":"পান্ডা","cừu":"ভেড়া","đàn":"পিয়ানো","dê":"ছাগল","rắn":"সাপ","cá sấu":"কুমির","chim cánh cụt":"পেঙ্গুইন","cá heo":"ডলফিন","cá voi":"তিমি","rùa":"কচ্ছপ","cá mập":"হাঙ্গর","cá ngừ":"টুনা","cá hồi":"সালমন","chim sẻ":"চড়ুই","chim bồ câu":"ঘুঘু","quạ":"কাক","ruồi":"মাছি","muỗi":"মশা","kiến":"পিঁপড়া","đuôi":"লেজ","cánh":"উইং","tổ":"নীড়","Thực vật":"গাছপালা","lá":"পাতা","rễ":"শিকড়","nảy mầm":"অঙ্কুরিত","nở hoa":"পুষ্প","hoa rụng":"পতিত ফুল","héo":"শুকিয়ে যাওয়া","cành bị gãy":"ভাঙা শাখা","lá vàng, lá đỏ":"হলুদ পাতা, লাল পাতা","lá rụng":"পতিত পাতা","xén cỏ":"ঘাস কাটা","trúc":"বাঁশ","hoa hồng":"গোলাপ","Nông nghiệp":"কৃষি","ruộng":"ক্ষেত্র","trồng lúa":"ধান চাষ","gặt lúa":"ফসল","cuốc đất ruộng":"মাঠ কোদাল","gieo hạt":"বীজ বপন","thu hoạch nông sản":"কৃষি পণ্য সংগ্রহ করা","cỏ mọc":"ঘাস বৃদ্ধি পায়","cỏ dại":"আগাছা","cây ra quả":"ফলের গাছ","Khác":"অন্যান্য","sinh vật":"জীব","con người":"মানব","da thú":"চামড়া","thuốc trừ sâu":"কীটনাশক","☞ Dịch":"☞ অতিমারী","Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.":"বৃষ্টির সপ্তাহান্তে, প্রচুর চেরি ফুল পড়েছিল।","Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.":"এক কৃষকের গল্পে জানা যায়, ঝড়ের প্রভাবে এ বছর আপেলের ফলন কম হবে।","Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.":"আমি কিছুক্ষণ খেয়াল করিনি কিন্তু ঘাস ইতিমধ্যেই বাড়ছে, আমাকে শীঘ্রই ঘাস কাটতে হবে।","Quạ là loài chim thông minh, thường quan sát hành động của con người.":"কাক বুদ্ধিমান পাখি, প্রায়ই মানুষের ক্রিয়া পর্যবেক্ষণ করে।","Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.":"আমার মাও বুড়ো হয়ে যাচ্ছে, তাই মনে হচ্ছে ক্ষেত হাল করা আর ধান কাটাটা একটু বেশিই কঠিন হয়ে গেছে।","☞ Đáp án":"☞ উত্তর","☞ Đáp án + Dịch":"☞ উত্তর + অনুবাদ","Sắp sửa đến mùa gieo trồng khoai tây.":"আলু রোপণের মৌসুম প্রায় চলে এসেছে।","Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.":"সুদৃশ্য ফুল ফুটলেও ঝড়ের কারণে ঝরে যেতে পারে।","Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.":"যদি এই ফুলটি প্রতিদিন জল না দেওয়া হয় তবে এটি অবিলম্বে শুকিয়ে যাবে।","Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.":"দুই বছর আগে এই পীচ গাছ লাগানো হয়েছিল। আশা করি এ বছর ফল আসবে।","Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.":"আপনি ভাগ্যবান হলে, আপনি নৌকা থেকে ডলফিন দেখতে পারেন.","Nhìn kìa! Có một tổ chim trên cành cây đằng kia.":"দেখো! ওই ডালে একটা পাখির বাসা।","Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.":"এই লোকেরা সহজেই পশু হত্যা করে কারণ তারা অর্থ উপার্জনের জন্য পশুর চামড়া বিক্রি করে।","Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.":"কারণ আজ আবহাওয়া চমৎকার, আমরা পার্কের লনে ঘুমিয়ে নিই।"},"hiMap":{"Từ Vựng":"शब्दावली","Luyện Tập":"अभ्यास","Mục Từ":"अनुभाग शब्द","Nghĩa":"अर्थ","Tự nhiên":"प्रकृति","Động vật":"जानवर","khỉ":"बंदर","gấu":"भालू","hổ":"चीता","gấu trúc":"पांडा","cừu":"भेड़","đàn":"पियानो","dê":"बकरी","rắn":"साँप","cá sấu":"मगरमच्छ","chim cánh cụt":"पेंगुइन","cá heo":"डॉल्फिन","cá voi":"व्हेल","rùa":"कछुआ","cá mập":"शार्क","cá ngừ":"टूना","cá hồi":"सैमन","chim sẻ":"गौरैया","chim bồ câu":"कबूतर","quạ":"कौआ","ruồi":"मक्खियों","muỗi":"मच्छर","kiến":"चींटियों","đuôi":"पूँछ","cánh":"विंग","tổ":"घोंसला","Thực vật":"पौधे","lá":"पत्ता","rễ":"जड़ों","nảy mầm":"अंकुरित होना","nở hoa":"खिलना","hoa rụng":"गिरे हुए फूल","héo":"सूख","cành bị gãy":"टूटी हुई शाखा","lá vàng, lá đỏ":"पीले पत्ते, लाल पत्ते","lá rụng":"गिरे हुए पत्ते","xén cỏ":"घास काटना","trúc":"बांस","hoa hồng":"गुलाब","Nông nghiệp":"कृषि","ruộng":"मैदान","trồng lúa":"चावल की खेती","gặt lúa":"फसल","cuốc đất ruộng":"खेत की गुड़ाई करें","gieo hạt":"बीज बोएं","thu hoạch nông sản":"कृषि उत्पादों की कटाई करें","cỏ mọc":"घास उगती है","cỏ dại":"खर-पतवार","cây ra quả":"फलदार वृक्ष","Khác":"अन्य","sinh vật":"प्राणी","con người":"इंसान","da thú":"त्वचा","thuốc trừ sâu":"कीटनाशक","☞ Dịch":"☞ महामारी","Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.":"बरसात के सप्ताहांत के कारण, चेरी के बहुत सारे फूल गिर गए।","Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.":"एक किसान की कहानी के मुताबिक इस साल तूफान के असर से सेब की फसल कम होगी.","Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.":"कुछ देर तक मैंने ध्यान नहीं दिया लेकिन घास पहले से ही बढ़ रही थी, मुझे जल्द ही घास काटनी पड़ी।","Quạ là loài chim thông minh, thường quan sát hành động của con người.":"कौवे बुद्धिमान पक्षी हैं, जो अक्सर मानवीय गतिविधियों पर नज़र रखते हैं।","Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.":"मेरी मां भी बूढ़ी हो रही हैं, इसलिए ऐसा लगता है कि खेतों में हल चलाना और चावल उगाना थोड़ा मुश्किल हो गया है.","☞ Đáp án":"☞ उत्तर","☞ Đáp án + Dịch":"☞ उत्तर + अनुवाद","Sắp sửa đến mùa gieo trồng khoai tây.":"आलू की बुआई का मौसम लगभग आ गया है।","Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.":"हालाँकि प्यारे फूल खिले हैं, तूफान के कारण वे गिर सकते हैं।","Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.":"यदि इस फूल को प्रतिदिन पानी न दिया जाए तो यह तुरंत मुरझा जाएगा।","Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.":"यह आड़ू का पेड़ दो साल पहले लगाया गया था। मुझे आशा है कि इस वर्ष इसका फल मिलेगा।","Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.":"यदि आप भाग्यशाली हैं, तो आप नाव से डॉल्फ़िन देख सकते हैं।","Nhìn kìa! Có một tổ chim trên cành cây đằng kia.":"देखना! वहाँ उस शाखा पर एक पक्षी का घोंसला है।","Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.":"वे लोग जानवरों को आसानी से मार देते हैं क्योंकि वे पैसे कमाने के लिए जानवरों की खाल बेचते हैं।","Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.":"क्योंकि आज मौसम अच्छा है, हम पार्क के लॉन पर झपकी लेते हैं।"},"thMap":{"Từ Vựng":"คำศัพท์","Luyện Tập":"ฝึกฝน","Mục Từ":"คำมาตรา","Nghĩa":"ความหมาย","Tự nhiên":"ธรรมชาติ","Động vật":"สัตว์","khỉ":"ลิง","gấu":"หมี","hổ":"เสือ","gấu trúc":"หมีแพนด้า","cừu":"แกะ","đàn":"เปียโน","dê":"แพะ","rắn":"งู","cá sấu":"จระเข้","chim cánh cụt":"เพนกวิน","cá heo":"ปลาโลมา","cá voi":"วาฬ","rùa":"เต่า","cá mập":"ปลาฉลาม","cá ngừ":"ปลาทูน่า","cá hồi":"ปลาแซลมอน","chim sẻ":"กระจอก","chim bồ câu":"นกพิราบ","quạ":"อีกา","ruồi":"แมลงวัน","muỗi":"ยุง","kiến":"มด","đuôi":"หาง","cánh":"ปีก","tổ":"รัง","Thực vật":"พืช","lá":"ใบไม้","rễ":"ราก","nảy mầm":"งอก","nở hoa":"บานสะพรั่ง","hoa rụng":"ดอกไม้ที่ร่วงหล่น","héo":"เหี่ยวเฉา","cành bị gãy":"สาขาหัก","lá vàng, lá đỏ":"ใบเหลืองใบแดง","lá rụng":"ใบไม้ร่วง","xén cỏ":"การตัดหญ้า","trúc":"ไม้ไผ่","hoa hồng":"ดอกกุหลาบ","Nông nghiệp":"เกษตรกรรม","ruộng":"สนาม","trồng lúa":"การปลูกข้าว","gặt lúa":"เก็บเกี่ยว","cuốc đất ruộng":"จอบสนาม","gieo hạt":"หว่านเมล็ด","thu hoạch nông sản":"เก็บเกี่ยวผลผลิตทางการเกษตร","cỏ mọc":"หญ้าเติบโตขึ้น","cỏ dại":"วัชพืช","cây ra quả":"ไม้ผล","Khác":"อื่น","sinh vật":"สิ่งมีชีวิต","con người":"มนุษย์","da thú":"ผิว","thuốc trừ sâu":"ยาฆ่าแมลง","☞ Dịch":"☞ การระบาดใหญ่","Vì cuối tuần mưa nên hoa Anh đào đã rụng khá nhiều.":"เนื่องจากช่วงสุดสัปดาห์ที่ฝนตก ดอกซากุระจึงร่วงหล่นจำนวนมาก","Theo câu chuyện của một người làm nông thì năm nay, do ảnh hưởng của bão nên vụ thu hoạch táo sẽ ít.":"ตามเรื่องราวของชาวนา ในปีนี้ เนื่องจากผลกระทบของพายุ การเก็บเกี่ยวแอปเปิลจะมีน้อย","Một thời gian không để ý mà cỏ đã mọc đầy, phải cắt cỏ sớm thôi.":"ฉันไม่ได้สังเกตเห็นสักพักแต่หญ้าก็โตแล้ว ฉันต้องตัดหญ้าเร็วๆ นี้","Quạ là loài chim thông minh, thường quan sát hành động của con người.":"อีกาเป็นนกที่ฉลาด มักสังเกตการกระทำของมนุษย์","Mẹ tôi cũng có tuổi rồi nên có vẻ như việc cày ruộng và trồng lúa trở nên khó khăn hơn chút.":"แม่ของฉันก็อายุมากขึ้นเช่นกัน ดูเหมือนว่าการไถนาและปลูกข้าวจะยากขึ้นเล็กน้อย","☞ Đáp án":"☞ คำตอบ","☞ Đáp án + Dịch":"☞ คำตอบ + การแปล","Sắp sửa đến mùa gieo trồng khoai tây.":"ฤดูปลูกมันฝรั่งใกล้จะมาถึงแล้ว","Mặc dù những bông hoa dễ thương đã nở rộ, nhưng chúng có thể bị rụng do bão.":"แม้ว่าดอกไม้แสนสวยจะเบ่งบานแล้ว แต่ก็อาจร่วงหล่นเนื่องจากพายุได้","Bông hoa này nếu không tưới nước hàng ngày, thì nó sẽ khô héo liền.":"หากดอกไม้นี้ไม่รดน้ำทุกวัน ดอกไม้ก็จะเหี่ยวเฉาทันที","Cây đào này được trồng hai năm trước. Tôi hy vọng nó đơm hoa kết trái trong năm nay.":"ต้นพีชต้นนี้ปลูกเมื่อสองปีที่แล้ว ฉันหวังว่ามันจะเกิดผลในปีนี้","Nếu may mắn, thì bạn có thể nhìn thấy đàn cá heo từ trên thuyền.":"หากโชคดีสามารถเห็นโลมาจากบนเรือได้","Nhìn kìa! Có một tổ chim trên cành cây đằng kia.":"ดู! มีรังนกอยู่บนกิ่งไม้ตรงนั้น","Những người đó vì bán da thú kiếm tiền mà dễ dàng giết hại động vật.":"คนเหล่านั้นฆ่าสัตว์ได้ง่ายเพราะพวกเขาขายหนังสัตว์เพื่อหารายได้","Vì hôm nay thời tiết đẹp nên chúng ta cùng ngủ trưa trên bãi cỏ của công viên.":"เพราะวันนี้อากาศดีเราเลยไปงีบหลับบนสนามหญ้าของสวนสาธารณะ"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

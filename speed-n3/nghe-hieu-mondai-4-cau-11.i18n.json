@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Đồng nghiệp đang lo lắng về thời gian kết thúc cuộc họp. Thì sẽ nói gì?": "Colleagues are worried about the meeting's end time. So what will you say?",
+    "Không sao đâu. Cuộc họp sẽ kết thúc vào lúc 2 giờ đấy.": "It's OK. The meeting will end at 2 o'clock."
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Đồng nghiệp đang lo lắng về thời gian kết thúc cuộc họp. Thì sẽ nói gì?": "Rekan kerja khawatir tentang waktu berakhirnya pertemuan. Jadi apa yang akan kamu katakan?",
+    "Không sao đâu. Cuộc họp sẽ kết thúc vào lúc 2 giờ đấy.": "Tidak apa-apa. Rapat akan berakhir pada pukul 2 siang."
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Đồng nghiệp đang lo lắng về thời gian kết thúc cuộc họp. Thì sẽ nói gì?": "सहकर्मीहरू बैठकको अन्तिम समयको बारेमा चिन्तित छन्। त्यसोभए के भन्नुहुन्छ?",
+    "Không sao đâu. Cuộc họp sẽ kết thúc vào lúc 2 giờ đấy.": "यो ठीक छ। बैठक २ बजे समापन हुनेछ ।"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Đồng nghiệp đang lo lắng về thời gian kết thúc cuộc họp. Thì sẽ nói gì?": "လုပ်ဖော်ကိုင်ဖက်များက အစည်းအဝေး ပြီးဆုံးချိန်အတွက် စိုးရိမ်နေကြသည်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Không sao đâu. Cuộc họp sẽ kết thúc vào lúc 2 giờ đấy.": "ရပါတယ်။ အစည်းအဝေးက ၂ နာရီမှာ ပြီးတယ်။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Đồng nghiệp đang lo lắng về thời gian kết thúc cuộc họp. Thì sẽ nói gì?": "সহকর্মীরা মিটিংয়ের শেষ সময় নিয়ে চিন্তিত৷ তাহলে কি বলবেন?",
+    "Không sao đâu. Cuộc họp sẽ kết thúc vào lúc 2 giờ đấy.": "এটা ঠিক আছে. সভা শেষ হবে দুপুর ২টায়।"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Đồng nghiệp đang lo lắng về thời gian kết thúc cuộc họp. Thì sẽ nói gì?": "सहकर्मी बैठक के अंतिम समय को लेकर चिंतित हैं। तो आप क्या कहेंगे?",
+    "Không sao đâu. Cuộc họp sẽ kết thúc vào lúc 2 giờ đấy.": "कोई बात नहीं। बैठक 2 बजे खत्म होगी."
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Đồng nghiệp đang lo lắng về thời gian kết thúc cuộc họp. Thì sẽ nói gì?": "เพื่อนร่วมงานกังวลเกี่ยวกับเวลาสิ้นสุดของการประชุม แล้วคุณจะว่าอย่างไร?",
+    "Không sao đâu. Cuộc họp sẽ kết thúc vào lúc 2 giờ đấy.": "ไม่เป็นไร. การประชุมจะสิ้นสุดเวลา 02.00 น."
+  }
+}

@@ -1,0 +1,226 @@
+<meta charset="UTF-8">
+<style>
+
+    table.search_result {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table.search_result th {
+        background: #333;
+        color: #fff;
+        font-weight: bold;
+        border: 1px solid #ccc;
+    }
+    table.search_result td,
+    table.search_result th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+    table.search_result th.muctu,
+    table.search_result td.muctu{
+        width: 40%;
+    }
+
+    @media only screen and (max-width: 768px){
+
+        table.search_result, table.search_result thead, table.search_result tbody,
+        table.search_result th, table.search_result td, table.search_result tr {
+            display: block;
+        }
+        table.search_result thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        /* Chỉnh lại trong phần NGỮ PHÁP bị khó nhìn khi màn hình mobile (giữ logic cũ) */
+        table.search_result,table.search_result thead,table.search_result tbody,
+        table.search_result th,table.search_result td,table.search_result tr {
+            border: none !important;
+        }
+        table.search_result{
+            border:1px #CCC solid !important;
+        }
+        table.search_result td{
+            width:auto;
+            height:auto !important;
+            border-bottom:0.5px #eee solid !important;
+        }
+        table.search_result tr td:first-child{
+            border-top:1px #CCC solid !important;
+        }
+        table.search_result tr:last-child td:last-child{
+            border-bottom:none !important;
+        }
+        table.search_result td.muctu{
+            width: 100%;
+        }
+    }
+    </style>
+<div class="tab_container speed-page">
+    <div class="tab_container">
+        <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Từ Vựng</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+            
+
+            <table class="search_result">
+                            <thead>
+                                <tr>
+                                    <th class="muctu"><span class="vi-tr">Mục Từ</span></th>
+                                    <th class="nghia"><span class="vi-tr">Nghĩa</span></th>
+                                </tr>
+                            </thead>
+                            <tbody><tr>
+                                    <td class="muctu"><b><ruby>料理<rp>（</rp><rt>りょうり</rt><rp>）</rp></ruby>する</b></td>
+                                    <td><b><span class="vi-tr">Nấu nướng</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu">タマネギを<ruby>刻<rp>（</rp><rt>きざ</rt><rp>）</rp></ruby>む</td>
+                                    <td><span class="vi-tr">thái hành tây</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">りんごの<ruby>皮<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby>をむく</td>
+                                    <td><span class="vi-tr">gọt vỏ táo</span> </td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>を<ruby>焼<rp>（</rp><rt>や</rt><rp>）</rp></ruby>く</td>
+                                    <td><span class="vi-tr">nướng cá</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>肉<rp>（</rp><rt>にく</rt><rp>）</rp></ruby>を<ruby>炒<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>める</td>
+                                    <td><span class="vi-tr">xào thịt</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>野菜<rp>（</rp><rt>やさい</rt><rp>）</rp></ruby>を<ruby>蒸<rp>（</rp><rt>む</rt><rp>）</rp></ruby>す</td>
+                                    <td><span class="vi-tr">hấp rau</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>豆<rp>（</rp><rt>まめ</rt><rp>）</rp></ruby>を<ruby>煮<rp>（</rp><rt>に</rt><rp>）</rp></ruby>る</td>
+                                    <td><span class="vi-tr">ninh đậu</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">たまごをゆでる</td>
+                                    <td><span class="vi-tr">luộc trứng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>油<rp>（</rp><rt>あぶら</rt><rp>）</rp></ruby>で<ruby>揚<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>げる</td>
+                                    <td><span class="vi-tr">rán bằng dầu rán</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">フライパンを<ruby>熱<rp>（</rp><rt>ねっ</rt><rp>）</rp></ruby>する</td>
+                                    <td><span class="vi-tr">làm nóng chảo</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">お<ruby>湯<rp>（</rp><rt>ゆ</rt><rp>）</rp></ruby>を<ruby>注<rp>（</rp><rt>そそ</rt><rp>）</rp></ruby>ぐ</td>
+                                    <td><span class="vi-tr">rót nước sôi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ご<ruby>飯<rp>（</rp><rt>はん</rt><rp>）</rp></ruby>を<ruby>炊<rp>（</rp><rt>た</rt><rp>）</rp></ruby>く</td>
+                                    <td><span class="vi-tr">thổi cơm</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">おゆをわかす</td>
+                                    <td><span class="vi-tr">đun nước sôi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b>温める。<ruby>冷<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>やす</b></td>
+                                    <td><b><span class="vi-tr">Làm nóng,làm lạnh</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>温<rp>（</rp><rt>あたた</rt><rp>）</rp></ruby>める（スープを）</td>
+                                    <td><span class="vi-tr">làm nóng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>温<rp>（</rp><rt>あたた</rt><rp>）</rp></ruby>まる</td>
+                                    <td><span class="vi-tr">nóng lên</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">冷やす（ビールを）</td>
+                                    <td><span class="vi-tr">làm lạnh</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>冷<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>える</td>
+                                    <td><span class="vi-tr">lạnh lên</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>冷<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>める</td>
+                                    <td><span class="vi-tr">nguội</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>冷<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>ます</td>
+                                    <td><span class="vi-tr">làm nguội</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">こげる（<ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>が）</td>
+                                    <td><span class="vi-tr">cháy</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">こがす</td>
+                                    <td><span class="vi-tr">làm cháy</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b><ruby>味<rp>（</rp><rt>あじ</rt><rp>）</rp></ruby></b></td>
+                                    <td><b><span class="vi-tr">Hương vị</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>甘<rp>（</rp><rt>あま</rt><rp>）</rp></ruby>い</td>
+                                    <td><span class="vi-tr">ngọt</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>辛<rp>（</rp><rt>から</rt><rp>）</rp></ruby>い</td>
+                                    <td>cay</td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>塩辛<rp>（</rp><rt>しおから</rt><rp>）</rp></ruby>い</td>
+                                    <td><span class="vi-tr">mặn</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>酸<rp>（</rp><rt>す</rt><rp>）</rp></ruby>っぱい</td>
+                                    <td>chua </td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>苦<rp>（</rp><rt>にが</rt><rp>）</rp></ruby>い</td>
+                                    <td><span class="vi-tr">đắng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>味<rp>（</rp><rt>あじ</rt><rp>）</rp></ruby>が<ruby>濃<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>い</td>
+                                    <td><span class="vi-tr">vị đậm</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>味<rp>（</rp><rt>あじ</rt><rp>）</rp></ruby>が<ruby>薄<rp>（</rp><rt>うす</rt><rp>）</rp></ruby>い</td>
+                                    <td><span class="vi-tr">vị nhạt</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b><ruby>調味料<rp>（</rp><rt>ちょうみりょう</rt><rp>）</rp></ruby></b></td>
+                                    <td><b><span class="vi-tr">Gia vị</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>塩<rp>（</rp><rt>しお</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">muối</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>砂糖<rp>（</rp><rt>さとう</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">đường</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">みそ</td>
+                                    <td><span class="vi-tr">tương miso</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">しょう<ruby>油<rp>（</rp><rt>ゆ</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">xì dầu</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>酢<rp>（</rp><rt>す</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">dấm</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>油<rp>（</rp><rt>あぶら</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">dầu rán</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">こしょう</td>
+                                    <td><span class="vi-tr">hạt tiêu</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">マヨネーズ</td>
+                                    <td><span class="vi-tr">sốt mayonnaise</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">ケチャップ</td>
+                                    <td><span class="vi-tr">tương cà chua</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><b>その<ruby>他<rp>（</rp><rt>た</rt><rp>）</rp></ruby></b></td>
+                                    <td><b><span class="vi-tr">Khác</span></b></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>硬<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>い</td>
+                                    <td><span class="vi-tr">cứng</span></td>
+                                  </tr><tr>
+                                    <td class="muctu">やわらかい</td>
+                                    <td><span class="vi-tr">mềm</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>新鮮<rp>（</rp><rt>しんせん</rt><rp>）</rp></ruby>な</td>
+                                    <td><span class="vi-tr">(rau, hoa v.v...) tươi</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>生<rp>（</rp><rt>なま</rt><rp>）</rp></ruby></td>
+                                    <td><span class="vi-tr">sống</span></td>
+                                  </tr><tr>
+                                    <td class="muctu"><ruby>腐<rp>（</rp><rt>くさ</rt><rp>）</rp></ruby>る</td>
+                                    <td><span class="vi-tr">ôi thối</span> </td>
+                                  </tr>  </tbody>
+                          </table>        </div>
+
+        <div class="tab_content" id="tab2" style="display: none;">
+            
+
+            <p><b style="color:red;">例文</b></p><p>①　「この<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>、ちょっと<b>こげて</b>る」「<b>こげた</b>ところは<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べないほうがいいよ、<ruby>体<rp>(</rp><rt>からだ</rt><rp>)</rp></ruby>によくないから」</p><p>②　&nbsp; だいぶ<b><ruby>煮<rp>(</rp><rt>に</rt><rp>)</rp></ruby>て</b>あるので、<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>はやわらかくなっています。</p><p>③　「このお<ruby>菓子<rp>(</rp><rt>かし</rt><rp>)</rp></ruby>は<b><ruby>油<rp>(</rp><rt>あぶら</rt><rp>)</rp></ruby>で<ruby>揚<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げたも</b>のですか」「いえ、<b><ruby>焼<rp>(</rp><rt>や</rt><rp>)</rp></ruby>いた</b>だけです」</p><p>④　 このお<ruby>茶<rp>(</rp><rt>ちゃ</rt><rp>)</rp></ruby>、とても<ruby>熱<rt>あつ</rt></ruby>いですから、<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>し<b><ruby>冷<rp>(</rp><rt>さ</rt><rp>)</rp></ruby>まして</b>から<ruby>飲<rp>(</rp><rt>の</rt><rp>)</rp></ruby>んでください。</p><p>⑤ 　ジャガイモの<b><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: " open="" sans",="" "helvetica="" neue",="" helvetica,="" arial,="" sans-serif;="" font-size:="" 14px;="" font-style:="" normal;="" font-variant-ligatures:="" font-variant-caps:="" letter-spacing:="" orphans:="" 2;="" text-align:="" start;="" text-indent:="" 0px;="" text-transform:="" none;="" white-space:="" widows:="" word-spacing:="" -webkit-text-stroke-width:="" background-color:="" rgb(255,="" 255,="" 255);="" text-decoration-thickness:="" initial;="" text-decoration-style:="" text-decoration-color:="" initial;"=""><ruby>皮<rp>(</rp><rt>かわ</rt><rp>)</rp></ruby></span>をむいたら</b><ruby>細<rp>(</rp><rt>ほそ</rt><rp>)</rp></ruby>く<b><ruby>切<rp>(</rp><rt>き</rt><rp>)</rp></ruby>って</b>、<ruby>豚肉<rp>(</rp><rt>ぶたにく</rt><rp>)</rp></ruby>と<ruby>一緒<rp>(</rp><rt>いっしょ</rt><rp>)</rp></ruby>に<b><ruby>炒<rp>(</rp><rt>いた</rt><rp>)</rp></ruby>めて</b>ください。</p><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Dịch</span> </span></div><div class="slide-content sl2"><p>①　「この<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>、ちょっと<b>こげて</b>る」「<b>こげた</b>ところは<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べないほうがいいよ、<ruby>体<rp>(</rp><rt>からだ</rt><rp>)</rp></ruby>によくないから」</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="vi-tr">"Cá này hơi bị cháy nhỉ" "Đừng ăn chỗ cháy, không tốt cho cơ thể đâu "</span></p><p>②　&nbsp; だいぶ<b><ruby>煮<rp>(</rp><rt>に</rt><rp>)</rp></ruby>て</b>あるので、<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>はやわらかくなっています.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="vi-tr">Tôi đã ninh khá kỹ nên rau rất mềm.</span></p><p>③　「このお<ruby>菓子<rp>(</rp><rt>かし</rt><rp>)</rp></ruby>は<b><ruby>油<rp>(</rp><rt>あぶら</rt><rp>)</rp></ruby>で<ruby>揚<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げたも</b>のですか」「いえ、<b><ruby>焼<rp>(</rp><rt>や</rt><rp>)</rp></ruby>いた</b>だけです」</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="vi-tr">"Bánh này được chiên bằng dầu à" "Không, tôi chỉ nướng thôi"</span></p><p>④　 このお<ruby>茶<rp>(</rp><rt>ちゃ</rt><rp>)</rp></ruby>、とても<ruby>熱<rt>あつ</rt></ruby>いですから、<ruby>少<rt>すこ</rt></ruby>し<b><ruby>冷<rt>さ</rt></ruby>まして</b>から<ruby>飲<rt>の</rt></ruby>んでください。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; <span class="vi-tr">"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống"</span></p><p>⑤　 ジャガイモの<b><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: " open="" sans",="" "helvetica="" neue",="" helvetica,="" arial,="" sans-serif;="" font-size:="" 14px;="" font-style:="" normal;="" font-variant-ligatures:="" font-variant-caps:="" letter-spacing:="" orphans:="" 2;="" text-align:="" start;="" text-indent:="" 0px;="" text-transform:="" none;="" white-space:="" widows:="" word-spacing:="" -webkit-text-stroke-width:="" background-color:="" rgb(255,="" 255,="" 255);="" text-decoration-thickness:="" initial;="" text-decoration-style:="" text-decoration-color:="" initial;"=""><ruby>皮<rp>(</rp><rt>かわ</rt><rp>)</rp></ruby></span>をむいたら</b><ruby>細<rp>(</rp><rt>ほそ</rt><rp>)</rp></ruby>く<b><ruby>切<rp>(</rp><rt>き</rt><rp>)</rp></ruby>って</b>、<ruby>豚肉<rp>(</rp><rt>ぶたにく</rt><rp>)</rp></ruby>と<ruby>一緒<rp>(</rp><rt>いっしょ</rt><rp>)</rp></ruby>に<b><ruby>炒<rp>(</rp><rt>いた</rt><rp>)</rp></ruby>めて</b>ください。</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="vi-tr">Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn</span>&nbsp;</p></div></div><br><p><b style="color:red;">ドリル</b></p><p><b>１）</b></p><p>①　「てんぷら」は、<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>や<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>などを<ruby>油<rp>(</rp><rt>あぶら</rt><rp>)</rp></ruby>で（　　　）た<ruby>料理<rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>です。</p><p>②　タマネギやニンジンなどを（　　　)　で<ruby>煮<rp>(</rp><rt>に</rt><rp>)</rp></ruby>ただけの<ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>なスープです。</p><p>③　カップラーメンは、お<ruby>湯<rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby>を（　　　）でから３<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>で<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べられます。</p><p>④　パスタは（　　　）すぎるとおいしくないので、<ruby>気<rp>(</rp><rt>き</rt><rp>)</rp></ruby>をつけてください。</p><table class="table table-bordered"><tbody><tr><td><ruby>刻<rp>(</rp><rt>きざ</rt><rp>)</rp></ruby>む　　　　<ruby>注<rp>(</rp><rt>そそ</rt><rp>)</rp></ruby>ぐ　　　　ゆでる　　　　<ruby>揚<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げる　　　　<ruby>炊<rp>(</rp><rt>た</rt><rp>)</rp></ruby>く</td></tr></tbody></table><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án</span> </span></div><div class="slide-content sl2"><p>①　「てんぷら」は、<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>や<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>などを<ruby>油<rp>(</rp><rt>あぶら</rt><rp>)</rp></ruby>で（　<b><ruby>揚<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げ</b>　）た<ruby>料理<rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>です。</p><p>②　タマネギやニンジンなどを（　<b><ruby>刻<rp>(</rp><rt>きざ</rt><rp>)</rp></ruby>ん</b>　)で<ruby>煮<rp>(</rp><rt>に</rt><rp>)</rp></ruby>ただけの<ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>なスープです。</p><p>③　カップラーメンは、お<ruby>湯<rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby>を（　<b><ruby>注<rp>(</rp><rt>そそ</rt><rp>)</rp></ruby>い</b>　）でから３<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>で<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べられます。</p><p>④　パスタは（　<b>ゆで</b>　）すぎるとおいしくないので、<ruby>気<rp>(</rp><rt>き</rt><rp>)</rp></ruby>をつけてください。</p></div></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án + Dịch</span> </span></div><div class="slide-content sl2"><p>①　「てんぷら」は、<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>や<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>などを<ruby>油<rp>(</rp><rt>あぶら</rt><rp>)</rp></ruby>で（　<b><ruby>揚<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げ</b>　）た<ruby>料理<rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>です。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">"Tempura" là một món ăn mà người ta chiên rau củ hay cá trong dầu.</span><br></p><p>②　タマネギやニンジンなどを（　<b><ruby>刻<rp>(</rp><rt>きざ</rt><rp>)</rp></ruby>ん</b>　)で<ruby>煮<rp>(</rp><rt>に</rt><rp>)</rp></ruby>ただけの<ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>なスープです。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.</span><br></p><p>③　カップラーメンは、お<ruby>湯<rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby>を（　<b><ruby>注<rp>(</rp><rt>そそ</rt><rp>)</rp></ruby>い</b>　）でから３<ruby>分<rp>(</rp><rt>ぷん</rt><rp>)</rp></ruby>で<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べられます。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.</span><br></p><p>④　パスタは（　<b>ゆで</b>　）すぎるとおいしくないので、<ruby>気<rp>(</rp><rt>き</rt><rp>)</rp></ruby>をつけてください。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.</span></p></div></div><br><p><b>２）</b></p><p>①　お<ruby>酢<rp>(</rp><rt>す</rt><rp>)</rp></ruby>が<ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>かったみたいです。ちょっと（　　　）ですね。</p><p>②　さっき（　　　）ものを<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べたから、<ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>が<ruby>飲<rp>(</rp><rt>の</rt><rp>)</rp></ruby>みたくなってきた。</p><p>③　このバナナはちょっと（　　　）ですね。あまり<ruby>甘<rp>(</rp><rt>あま</rt><rp>)</rp></ruby>くないかもしれません。</p><p>④　<ruby>海<rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>の<ruby>近<rp>(</rp><rt>ちか</rt><rp>)</rp></ruby>くだから、このお<ruby>店<rp>(</rp><rt>みせ</rt><rp>)</rp></ruby>は<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>が（　　　）ですね。すごくおいしいです。</p><table class="table table-bordered"><tbody><tr><td>a.あまい　　　　b.<ruby>新鮮<rp>(</rp><rt>しんせん</rt><rp>)</rp></ruby>　　　　c.すっぱい　　　　d.<ruby>硬<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>い　　　　e.<ruby>辛<rp>(</rp><rt>から</rt><rp>)</rp></ruby>い</td></tr></tbody></table><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án</span> </span></div><div class="slide-content sl2"><p>①　お<ruby>酢<rp>(</rp><rt>す</rt><rp>)</rp></ruby>が<ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>かったみたいです。ちょっと（　<b>すっぱい</b>　）ですね。</p><p>②　さっき（　<b><ruby>辛<rp>(</rp><rt>から</rt><rp>)</rp></ruby>い</b>　）ものを<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べたから、<ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>が<ruby>飲<rp>(</rp><rt>の</rt><rp>)</rp></ruby>みたくなってきた。</p><p>③　このバナナはちょっと（　<b><ruby>硬<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>い</b>　　）ですね。あまり<ruby>甘<rp>(</rp><rt>あま</rt><rp>)</rp></ruby>くないかもしれません。</p><p>④　<ruby>海<rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>の<ruby>近<rp>(</rp><rt>ちか</rt><rp>)</rp></ruby>くだから、このお<ruby>店<rp>(</rp><rt>みせ</rt><rp>)</rp></ruby>は<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>が（　<b><ruby>新鮮<rp>(</rp><rt>しんせん</rt><rp>)</rp></ruby></b>　）ですね。すごくおいしいです。</p></div></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp án + Dịch</span> </span></div><div class="slide-content sl2"><p>①　お<ruby>酢<rp>(</rp><rt>す</rt><rp>)</rp></ruby>が<ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>かったみたいです。ちょっと（　<b>すっぱい</b>　）ですね。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.</span>&nbsp;</p><p>②　さっき（　<b><ruby>辛<rp>(</rp><rt>から</rt><rp>)</rp></ruby>い</b>　）ものを<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べたから、<ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>が<ruby>飲<rp>(</rp><rt>の</rt><rp>)</rp></ruby>みたくなってきた。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.</span>&nbsp;</p><p>③　このバナナはちょっと（　<b><ruby>硬<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>い</b>　　）ですね。あまり<ruby>甘<rp>(</rp><rt>あま</rt><rp>)</rp></ruby>くないかもしれません。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.</span>&nbsp;</p><p>④　<ruby>海<rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>の<ruby>近<rp>(</rp><rt>ちか</rt><rp>)</rp></ruby>くだから、このお<ruby>店<rp>(</rp><rt>みせ</rt><rp>)</rp></ruby>は<ruby>魚<rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>が（　<b><ruby>新鮮<rp>(</rp><rt>しんせん</rt><rp>)</rp></ruby></b>　）ですね。すごくおいしいです。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.</span>&nbsp;</p></div></div><br>        </div>
+    </div>
+    
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="tu-vung-speed-n3-goi-bai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Từ Vựng":"Vocabulary","Luyện Tập":"Practice","Mục Từ":"Section Words","Nghĩa":"Meaning","Nấu nướng":"Cooking","thái hành tây":"chop onions","gọt vỏ táo":"Peel the apple","nướng cá":"grilled fish","xào thịt":"stir-fry meat","hấp rau":"Steamed vegetables","ninh đậu":"simmer beans","luộc trứng":"boil eggs","rán bằng dầu rán":"fry with frying oil","làm nóng chảo":"Heat the pan","rót nước sôi":"pour boiling water","thổi cơm":"blow rice","đun nước sôi":"boil water","Làm nóng,làm lạnh":"Heating, cooling","làm nóng":"heating","nóng lên":"heat up","làm lạnh":"refrigerant","lạnh lên":"get cold","nguội":"cool","làm nguội":"cool","cháy":"on fire","làm cháy":"burn","Hương vị":"Flavor","ngọt":"sweet","mặn":"salty","đắng":"bitter","vị đậm":"strong taste","vị nhạt":"bland taste","Gia vị":"Spice","muối":"salt","đường":"road","tương miso":"miso sauce","xì dầu":"soy sauce","dấm":"vinegar","dầu rán":"frying oil","hạt tiêu":"pepper","sốt mayonnaise":"mayonnaise","tương cà chua":"tomato sauce","Khác":"Other","cứng":"hard","mềm":"soft","(rau, hoa v.v...) tươi":"(vegetables, flowers, etc.) fresh","sống":"living","ôi thối":"oh rotten","☞ Dịch":"☞ Pandemic","\"Cá này hơi bị cháy nhỉ\" \"Đừng ăn chỗ cháy, không tốt cho cơ thể đâu \"":"\"This fish is a bit burnt\" \"Don't eat the burned part, it's not good for the body\"","Tôi đã ninh khá kỹ nên rau rất mềm.":"I simmered it quite carefully so the vegetables were very tender.","\"Bánh này được chiên bằng dầu à\" \"Không, tôi chỉ nướng thôi\"":"\"Is this cake fried in oil?\" \"No, I just bake it\"","\"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống\"":"\"This tea is very hot, so let it cool a bit before drinking\"","Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn":"After peeling the potatoes, slice them thinly and stir-fry with pork","☞ Đáp án":"☞ Answer","☞ Đáp án + Dịch":"☞ Answer + Translation","\"Tempura\" là một món ăn mà người ta chiên rau củ hay cá trong dầu.":"\"Tempura\" is a dish where people fry vegetables or fish in oil.","Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.":"A simple soup made by stewing chopped onions and carrots.","Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.":"Cup noodles can be eaten after adding boiling water for 3 minutes.","Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.":"Pasta boiled for too long will not taste good, so be careful.","Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.":"Seems like a bit too much vinegar. A little bit sour.","Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.":"Just now, because I ate spicy food, I wanted to drink water.","Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.":"This banana is a bit hard. Maybe not so sweet.","Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.":"Because this store is near the sea, the fish is very fresh. It's very delicious."},"idMap":{"Từ Vựng":"Kosakata","Luyện Tập":"Praktik","Mục Từ":"Kata Bagian","Nghĩa":"Arti","Nấu nướng":"Memasak","thái hành tây":"potong bawang","gọt vỏ táo":"Kupas apelnya","nướng cá":"ikan bakar","xào thịt":"tumis daging","hấp rau":"Sayuran kukus","ninh đậu":"rebus kacang","luộc trứng":"merebus telur","rán bằng dầu rán":"goreng dengan minyak goreng","làm nóng chảo":"Panaskan wajan","rót nước sôi":"tuangkan air mendidih","thổi cơm":"meniup nasi","đun nước sôi":"merebus air","Làm nóng,làm lạnh":"Pemanasan, pendinginan","làm nóng":"pemanas","nóng lên":"memanaskan","làm lạnh":"pendingin","lạnh lên":"menjadi dingin","nguội":"Dingin","làm nguội":"Dingin","cháy":"terbakar","làm cháy":"membakar","Hương vị":"Rasa","ngọt":"manis","mặn":"asin","đắng":"pahit","vị đậm":"rasa yang kuat","vị nhạt":"rasa hambar","Gia vị":"Membumbui","muối":"garam","đường":"jalan","tương miso":"saus miso","xì dầu":"kecap","dấm":"cuka","dầu rán":"minyak goreng","hạt tiêu":"merica","sốt mayonnaise":"mayones","tương cà chua":"saus tomat","Khác":"Lainnya","cứng":"keras","mềm":"lembut","(rau, hoa v.v...) tươi":"(sayuran, bunga, dll) segar","sống":"hidup","ôi thối":"oh busuk","☞ Dịch":"☞ Pandemi","\"Cá này hơi bị cháy nhỉ\" \"Đừng ăn chỗ cháy, không tốt cho cơ thể đâu \"":"“Ikan ini agak gosong” “Jangan dimakan bagian yang gosongnya, tidak baik untuk tubuh”","Tôi đã ninh khá kỹ nên rau rất mềm.":"Saya merebusnya dengan hati-hati agar sayurannya sangat lembut.","\"Bánh này được chiên bằng dầu à\" \"Không, tôi chỉ nướng thôi\"":"“Apakah kue ini digoreng dengan minyak?” \"Tidak, aku hanya memanggangnya\"","\"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống\"":"\"Teh ini sangat panas, jadi biarkan agak dingin sebelum diminum\"","Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn":"Setelah kentang dikupas, iris tipis-tipis dan tumis dengan daging babi","☞ Đáp án":"☞ Menjawab","☞ Đáp án + Dịch":"☞ Jawaban + Terjemahan","\"Tempura\" là một món ăn mà người ta chiên rau củ hay cá trong dầu.":"Tempura adalah hidangan di mana orang menggoreng sayuran atau ikan dengan minyak.","Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.":"Sup sederhana yang dibuat dengan merebus bawang bombay dan wortel cincang.","Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.":"Mie cup bisa dimakan setelah ditambahkan air mendidih selama 3 menit.","Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.":"Pasta yang direbus terlalu lama rasanya tidak enak, jadi berhati-hatilah.","Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.":"Sepertinya terlalu banyak cuka. Sedikit asam.","Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.":"Tadi karena makan pedas, saya ingin minum air putih.","Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.":"Pisang ini agak keras. Mungkin tidak terlalu manis.","Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.":"Karena toko ini dekat laut, ikannya sangat segar. Ini sangat lezat."},"neMap":{"Từ Vựng":"शब्दावली","Luyện Tập":"अभ्यास गर्नुहोस्","Mục Từ":"खण्ड शब्दहरू","Nghĩa":"अर्थ","Nấu nướng":"खाना पकाउने","thái hành tây":"प्याज काट्नुहोस्","gọt vỏ táo":"स्याउ को बोक्रा","nướng cá":"ग्रील्ड माछा","xào thịt":"हलचल मासु","hấp rau":"उमालेको तरकारी","ninh đậu":"सेम उमाले","luộc trứng":"अण्डा उमाल्नुहोस्","rán bằng dầu rán":"फ्राइङ तेल संग फ्राइ","làm nóng chảo":"प्यान तताउनुहोस्","rót nước sôi":"उबलते पानी खन्याउनुहोस्","thổi cơm":"भात उडाउने","đun nước sôi":"पानी उमालेर","Làm nóng,làm lạnh":"ताप, चिसो","làm nóng":"तताउने","nóng lên":"तातो","làm lạnh":"फ्रिज","lạnh lên":"चिसो हुनु","nguội":"चिसो","làm nguội":"चिसो","cháy":"आगोमा","làm cháy":"जलाउनु","Hương vị":"स्वाद","ngọt":"मीठो","mặn":"नमकीन","đắng":"तीतो","vị đậm":"बलियो स्वाद","vị nhạt":"नरम स्वाद","Gia vị":"मसला","muối":"नुन","đường":"सडक","tương miso":"मिसो सस","xì dầu":"सोया सस","dấm":"सिरका","dầu rán":"फ्राइङ तेल","hạt tiêu":"काली मिर्च","sốt mayonnaise":"मेयोनेज","tương cà chua":"टमाटर चटनी","Khác":"अन्य","cứng":"कडा","mềm":"नरम","(rau, hoa v.v...) tươi":"(तरकारी, फूल, आदि) ताजा","sống":"जीवित","ôi thối":"ओह सडेको","☞ Dịch":"☞ माहामारी","\"Cá này hơi bị cháy nhỉ\" \"Đừng ăn chỗ cháy, không tốt cho cơ thể đâu \"":"\"यो माछा अलि जलेको छ\" \"जलेको भाग नखानुहोस्, यो शरीरका लागि राम्रो होइन\"","Tôi đã ninh khá kỹ nên rau rất mềm.":"मैले यसलाई धेरै सावधानीपूर्वक उबालें ताकि तरकारीहरू धेरै नरम थिए।","\"Bánh này được chiên bằng dầu à\" \"Không, tôi chỉ nướng thôi\"":"\"यो केक तेलमा भुटेको हो?\" \"होइन, म मात्र पकाउँछु\"","\"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống\"":"\"यो चिया धेरै तातो छ, त्यसैले पिउनु अघि यसलाई अलिकति चिसो गरौं\"","Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn":"आलु छिलकेपछि, तिनीहरूलाई पातलो टुक्रा पार्नुहोस् र सुँगुरको मासुसँग हलचल गर्नुहोस्","☞ Đáp án":"☞ जवाफ","☞ Đáp án + Dịch":"☞ उत्तर + अनुवाद","\"Tempura\" là một món ăn mà người ta chiên rau củ hay cá trong dầu.":"\"टेम्पुरा\" एक डिश हो जहाँ मानिसहरूले तरकारी वा माछालाई तेलमा भुटेका हुन्छन्।","Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.":"काटेको प्याज र गाजर स्टिभ गरेर बनाइएको साधारण सूप।","Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.":"३ मिनेट उमालेको पानी हालेर कप चाउचाउ खान सकिन्छ।","Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.":"पास्ता धेरै लामो समयसम्म उमालेको स्वाद राम्रो हुँदैन, त्यसैले सावधान रहनुहोस्।","Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.":"अलि धेरै सिरका जस्तो देखिन्छ। अलिकति अमिलो।","Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.":"भर्खर, मैले मसलादार खाना खाएकोले, मलाई पानी पिउन मन लाग्यो।","Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.":"यो केरा अलि कडा छ। सायद त्यति मीठो छैन।","Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.":"यो पसल समुन्द्र नजिक भएकोले माछा एकदमै ताजा छ। यो धेरै स्वादिष्ट छ।"},"myMap":{"Từ Vựng":"ဝေါဟာရ","Luyện Tập":"အလေ့အကျင့်","Mục Từ":"ကဏ္ဍမှူ","Nghĩa":"အဓိပ္ပါယ်","Nấu nướng":"ဟင်းချက်တယ်။","thái hành tây":"ကြက်သွန်နီခုတ်","gọt vỏ táo":"ပန်းသီးကို အခွံခွာပါ။","nướng cá":"ငါးကင်","xào thịt":"မွှေကြော်အသား","hấp rau":"ဟင်းသီးဟင်းရွက်ပြုတ်","ninh đậu":"ပဲပြုတ်","luộc trứng":"ကြက်ဥပြုတ်","rán bằng dầu rán":"ကြော်ဆီနှင့်ကြော်","làm nóng chảo":"ဒယ်အိုးကို အပူပေးပါ။","rót nước sôi":"ပွက်ပွက်ဆူနေသောရေကိုလောင်း","thổi cơm":"ဆန်မှုတ်","đun nước sôi":"ရေပြုတ်","Làm nóng,làm lạnh":"အပူ၊အအေး","làm nóng":"အပူ","nóng lên":"အပူတက်","làm lạnh":"အအေးခန်း","lạnh lên":"အအေးခံပါ။","nguội":"အေးတယ်။","làm nguội":"အေးတယ်။","cháy":"မီးတောက်နေသည်","làm cháy":"မီးရှို့","Hương vị":"အရသာ","ngọt":"ချိုတယ်။","mặn":"ငန်","đắng":"ခါး","vị đậm":"အရသာပြင်းတယ်။","vị nhạt":"အရသာ","Gia vị":"ဟင်းခတ်အမွှေးအကြိုင်","muối":"ဆား","đường":"လမ်း","tương miso":"miso ဆော့စ်","xì dầu":"ပဲငံပြာရည်","dấm":"ရှာလကာရည်","dầu rán":"ကြော်ဆီ","hạt tiêu":"ငရုတ်ကောင်း","sốt mayonnaise":"mayonnaise","tương cà chua":"ခရမ်းချဉ်သီးဆော့စ်","Khác":"တခြား","cứng":"ခက်တယ်။","mềm":"ပျော့ပျောင်း","(rau, hoa v.v...) tươi":"(ဟင်းသီးဟင်းရွက်၊ ပန်း၊ စသည်) လတ်ဆတ်သည်။","sống":"နေထိုင်သည်။","ôi thối":"အိုးပုပ်","☞ Dịch":"☞ ကမ္ဘာအနှံ့ဖြစ်ပွားသော","\"Cá này hơi bị cháy nhỉ\" \"Đừng ăn chỗ cháy, không tốt cho cơ thể đâu \"":"\"ဒီငါးက မီးနည်းနည်းလောင်တယ်\" \"မီးလောင်ထားတဲ့အပိုင်းကို မစားပါနဲ့၊ ခန္ဓာကိုယ်အတွက် မကောင်းပါဘူး\"","Tôi đã ninh khá kỹ nên rau rất mềm.":"သေချာကျိုထားတော့ အသီးအရွက်တွေက အရမ်းပျော့သွားတယ်။","\"Bánh này được chiên bằng dầu à\" \"Không, tôi chỉ nướng thôi\"":"\"ဒီကိတ်မုန့်ဆီကြော်လား\" \"မဟုတ်ဘူး၊ ငါချက်တာဘဲ\"","\"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống\"":"\"ဒီလက်ဖက်ရည်က အရမ်းပူတာမို့ မသောက်ခင် အအေးခံထားပါ\"","Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn":"အာလူးများကို အခွံခွာပြီးပါက ပါးပါးလှီးပြီး ဝက်သားဖြင့် ကြော်ပါ။","☞ Đáp án":"☞ ဖြေ","☞ Đáp án + Dịch":"☞ အဖြေ + ဘာသာပြန်","\"Tempura\" là một món ăn mà người ta chiên rau củ hay cá trong dầu.":"\"Tempura\" သည် အသီးအရွက် သို့မဟုတ် ငါးများကို ဆီဖြင့်ကြော်သည့် ဟင်းဖြစ်သည်။","Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.":"လှီးထားသော ကြက်သွန်နီနှင့် မုန်လာဥနီတို့ကို ပြုတ်ထားသော ရိုးရှင်းသောဟင်းချို။","Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.":"ခေါက်ဆွဲခြောက်ခွက်ကို ရေဆူပွက်ပွက်ဆူအောင်ထည့်ပြီးနောက် ၃ မိနစ်ခန့် စားနိုင်ပါတယ်။","Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.":"ခေါက်ဆွဲကို အကြာကြီးပြုတ်ထားရင် အရသာရှိမှာမဟုတ်တာမို့ သတိထားပါ။","Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.":"ရှာလကာရည် အနည်းငယ် များလွန်းပုံရသည်။ နည်းနည်းချဉ်တယ်။","Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.":"အခုလေးတင် စပ်တဲ့အစာတွေစားပြီး ရေသောက်ချင်လာတယ်။","Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.":"ဒီငှက်ပျောသီးက နည်းနည်းခက်တယ်။ အရမ်းမချိုဘူး။","Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.":"ဒီဆိုင်က ပင်လယ်နဲ့နီးတာကြောင့် ငါးတွေက အရမ်းလတ်ဆတ်တယ်။ အရမ်းအရသာရှိတယ်။"},"bnMap":{"Từ Vựng":"শব্দভান্ডার","Luyện Tập":"অনুশীলন করুন","Mục Từ":"বিভাগ শব্দ","Nghĩa":"অর্থ","Nấu nướng":"রান্না","thái hành tây":"পেঁয়াজ কাটা","gọt vỏ táo":"আপেলের খোসা ছাড়িয়ে নিন","nướng cá":"ভাজা মাছ","xào thịt":"ভাজা মাংস","hấp rau":"ভাপানো সবজি","ninh đậu":"সিদ্ধ মটরশুটি","luộc trứng":"ডিম সিদ্ধ করা","rán bằng dầu rán":"ভাজার তেল দিয়ে ভাজুন","làm nóng chảo":"প্যান গরম করুন","rót nước sôi":"ফুটন্ত জল ঢালা","thổi cơm":"চাল ঘা","đun nước sôi":"জল ফুটান","Làm nóng,làm lạnh":"গরম করা, শীতল করা","làm nóng":"গরম করা","nóng lên":"গরম করা","làm lạnh":"রেফ্রিজারেন্ট","lạnh lên":"ঠান্ডা পেতে","nguội":"শীতল","làm nguội":"শীতল","cháy":"আগুনে","làm cháy":"পোড়া","Hương vị":"স্বাদ","ngọt":"মিষ্টি","mặn":"লবণাক্ত","đắng":"তিক্ত","vị đậm":"শক্তিশালী স্বাদ","vị nhạt":"মসৃণ স্বাদ","Gia vị":"মশলা","muối":"লবণ","đường":"রাস্তা","tương miso":"miso সস","xì dầu":"সয়া সস","dấm":"ভিনেগার","dầu rán":"ভাজার তেল","hạt tiêu":"মরিচ","sốt mayonnaise":"মেয়োনিজ","tương cà chua":"টমেটো সস","Khác":"অন্যান্য","cứng":"কঠিন","mềm":"নরম","(rau, hoa v.v...) tươi":"(সবজি, ফুল, ইত্যাদি) তাজা","sống":"জীবিত","ôi thối":"ওহ পচা","☞ Dịch":"☞ অতিমারী","\"Cá này hơi bị cháy nhỉ\" \"Đừng ăn chỗ cháy, không tốt cho cơ thể đâu \"":"\"এই মাছটা একটু পুড়ে গেছে\" \"পোড়া অংশ খাবেন না, শরীরের জন্য ভালো নয়\"","Tôi đã ninh khá kỹ nên rau rất mềm.":"আমি এটি বেশ সাবধানে সিদ্ধ করেছি যাতে সবজি খুব নরম ছিল।","\"Bánh này được chiên bằng dầu à\" \"Không, tôi chỉ nướng thôi\"":"\"এই কেকটা কি তেলে ভাজা?\" \"না, আমি শুধু বেক করি\"","\"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống\"":"\"এই চা খুব গরম, তাই পান করার আগে একটু ঠান্ডা হতে দিন\"","Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn":"আলু খোসা ছাড়ার পর পাতলা করে কেটে শুকরের মাংস দিয়ে ভাজুন","☞ Đáp án":"☞ উত্তর","☞ Đáp án + Dịch":"☞ উত্তর + অনুবাদ","\"Tempura\" là một món ăn mà người ta chiên rau củ hay cá trong dầu.":"\"টেম্পুরা\" এমন একটি খাবার যেখানে লোকেরা তেলে সবজি বা মাছ ভাজি।","Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.":"কাটা পেঁয়াজ এবং গাজর স্টিভ করে তৈরি একটি সাধারণ স্যুপ।","Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.":"3 মিনিট ফুটন্ত পানি যোগ করার পর কাপ নুডুলস খাওয়া যেতে পারে।","Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.":"পাস্তা বেশিক্ষণ সেদ্ধ করলে স্বাদ ভালো হবে না, তাই সাবধান।","Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.":"মনে হচ্ছে একটু বেশি ভিনেগার। একটু টক।","Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.":"এইমাত্র, আমি মশলাদার খাবার খেয়েছি বলে, আমি জল খেতে চাই।","Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.":"এই কলা একটু শক্ত। হয়তো এত মিষ্টি না।","Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.":"এই দোকানটি সমুদ্রের কাছে হওয়ায় মাছটি খুবই তাজা। এটা খুবই সুস্বাদু।"},"hiMap":{"Từ Vựng":"शब्दावली","Luyện Tập":"अभ्यास","Mục Từ":"अनुभाग शब्द","Nghĩa":"अर्थ","Nấu nướng":"खाना बनाना","thái hành tây":"प्याज काटें","gọt vỏ táo":"सेब को छील लें","nướng cá":"भुनी हुई मछली","xào thịt":"हिलाकर भूनने वाला मांस","hấp rau":"उबली हुई सब्जियाँ","ninh đậu":"बीन्स को उबाल लें","luộc trứng":"अंडे उबालें","rán bằng dầu rán":"तलने वाले तेल में तलें","làm nóng chảo":"पैन गरम करें","rót nước sôi":"उबलता पानी डालें","thổi cơm":"चावल उड़ाओ","đun nước sôi":"गर्म पानी","Làm nóng,làm lạnh":"गर्म करना, ठंडा करना","làm nóng":"गरम करना","nóng lên":"गरम करना","làm lạnh":"शीतल","lạnh lên":"ठंडा हो","nguội":"ठंडा","làm nguội":"ठंडा","cháy":"जलता हुआ","làm cháy":"जलाना","Hương vị":"स्वाद","ngọt":"मिठाई","mặn":"नमकीन","đắng":"कड़वा","vị đậm":"तेज़ स्वाद","vị nhạt":"नीरस स्वाद","Gia vị":"मसाला","muối":"नमक","đường":"सड़क","tương miso":"मिसो सॉस","xì dầu":"सोया सॉस","dấm":"सिरका","dầu rán":"तलने का तेल","hạt tiêu":"काली मिर्च","sốt mayonnaise":"मेयोनेज़","tương cà chua":"टमाटर सॉस","Khác":"अन्य","cứng":"मुश्किल","mềm":"कोमल","(rau, hoa v.v...) tươi":"(सब्जियां, फूल आदि) ताजा","sống":"जीविका","ôi thối":"ओह सड़ा हुआ","☞ Dịch":"☞ महामारी","\"Cá này hơi bị cháy nhỉ\" \"Đừng ăn chỗ cháy, không tốt cho cơ thể đâu \"":"\"यह मछली थोड़ी जली हुई है\" \"जले हुए हिस्से को न खाएं, यह शरीर के लिए अच्छा नहीं है\"","Tôi đã ninh khá kỹ nên rau rất mềm.":"मैंने इसे बहुत सावधानी से उबाला ताकि सब्जियाँ बहुत नरम हो जाएँ।","\"Bánh này được chiên bằng dầu à\" \"Không, tôi chỉ nướng thôi\"":"\"क्या यह केक तेल में तला हुआ है?\" \"नहीं, मैं बस इसे पकाती हूँ\"","\"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống\"":"\"यह चाय बहुत गर्म है, इसलिए पीने से पहले इसे थोड़ा ठंडा होने दें\"","Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn":"आलू छीलने के बाद उन्हें पतले-पतले टुकड़ों में काट लीजिए और पोर्क के साथ चलाते हुए भून लीजिए","☞ Đáp án":"☞ उत्तर","☞ Đáp án + Dịch":"☞ उत्तर + अनुवाद","\"Tempura\" là một món ăn mà người ta chiên rau củ hay cá trong dầu.":"\"टेम्पुरा\" एक ऐसा व्यंजन है जिसमें लोग सब्जियों या मछली को तेल में भूनते हैं।","Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.":"कटे हुए प्याज और गाजर को भूनकर बनाया गया एक साधारण सूप।","Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.":"कप नूडल्स को 3 मिनट तक उबलता पानी डालकर खाया जा सकता है.","Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.":"बहुत देर तक उबाला हुआ पास्ता अच्छा नहीं लगेगा, इसलिए सावधान रहें।","Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.":"ऐसा लगता है कि सिरका कुछ ज्यादा ही हो गया है। थोड़ा सा खट्टा.","Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.":"अभी, क्योंकि मैंने मसालेदार खाना खाया था, मुझे पानी पीने की इच्छा हुई।","Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.":"यह केला थोड़ा सख्त होता है. शायद उतना मीठा नहीं.","Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.":"क्योंकि यह स्टोर समुद्र के पास है, मछली बहुत ताज़ी है। बहुत ही स्वादिष्ट होती है।"},"thMap":{"Từ Vựng":"คำศัพท์","Luyện Tập":"ฝึกฝน","Mục Từ":"คำมาตรา","Nghĩa":"ความหมาย","Nấu nướng":"การทำอาหาร","thái hành tây":"สับหัวหอม","gọt vỏ táo":"ปอกเปลือกแอปเปิ้ล","nướng cá":"ปลาย่าง","xào thịt":"ผัดเนื้อ","hấp rau":"ผักนึ่ง","ninh đậu":"ถั่วต้ม","luộc trứng":"ต้มไข่","rán bằng dầu rán":"ทอดด้วยน้ำมันทอด","làm nóng chảo":"ตั้งกระทะให้ร้อน","rót nước sôi":"เทน้ำเดือด","thổi cơm":"เป่าข้าว","đun nước sôi":"ต้มน้ำ","Làm nóng,làm lạnh":"เครื่องทำความร้อนความเย็น","làm nóng":"เครื่องทำความร้อน","nóng lên":"ร้อนขึ้น","làm lạnh":"สารทำความเย็น","lạnh lên":"หนาว","nguội":"เย็น","làm nguội":"เย็น","cháy":"ไฟไหม้","làm cháy":"เผา","Hương vị":"รสชาติ","ngọt":"หวาน","mặn":"เค็ม","đắng":"ขม","vị đậm":"รสชาติเข้มข้น","vị nhạt":"รสจืดชืด","Gia vị":"เครื่องเทศ","muối":"เกลือ","đường":"ถนน","tương miso":"ซอสมิโซะ","xì dầu":"ซอสถั่วเหลือง","dấm":"น้ำส้มสายชู","dầu rán":"น้ำมันทอด","hạt tiêu":"พริกไทย","sốt mayonnaise":"มายองเนส","tương cà chua":"ซอสมะเขือเทศ","Khác":"อื่น","cứng":"แข็ง","mềm":"อ่อนนุ่ม","(rau, hoa v.v...) tươi":"(ผัก ดอกไม้ ฯลฯ) สด","sống":"การดำรงชีวิต","ôi thối":"โอ้เน่า","☞ Dịch":"☞ การระบาดใหญ่","\"Cá này hơi bị cháy nhỉ\" \"Đừng ăn chỗ cháy, không tốt cho cơ thể đâu \"":"“ปลาตัวนี้ไหม้นิดหน่อย” “อย่ากินส่วนที่ไหม้นะมันไม่ดีต่อร่างกาย”","Tôi đã ninh khá kỹ nên rau rất mềm.":"ฉันเคี่ยวมันอย่างระมัดระวัง ผักจึงนุ่มมาก","\"Bánh này được chiên bằng dầu à\" \"Không, tôi chỉ nướng thôi\"":"“เค้กชิ้นนี้ทอดในน้ำมันหรือเปล่า?” “ไม่ ฉันแค่อบมัน”","\"Trà này rất nóng nên hãy để nguội một chút rồi hãy uống\"":"“ชานี้ร้อนมาก ปล่อยให้เย็นสักหน่อยก่อนดื่ม”","Sau khi gọt vỏ khoai tây hãy thái mỏng rồi xào với thịt lợn":"หลังจากปอกมันฝรั่งแล้ว ให้หั่นบางๆ แล้วผัดกับหมู","☞ Đáp án":"☞ คำตอบ","☞ Đáp án + Dịch":"☞ คำตอบ + การแปล","\"Tempura\" là một món ăn mà người ta chiên rau củ hay cá trong dầu.":"\"เทมปุระ\" เป็นอาหารที่คนทอดผักหรือปลาในน้ำมัน","Món súp đơn giản làm bằng cách hầm hành tây và cà rốt thái nhỏ.":"ซุปง่ายๆ ที่ทำโดยการเคี่ยวหัวหอมสับและแครอท","Mì cốc có thể ăn sau khi cho nước sôi vào 3 phút.":"บะหมี่ถ้วยสามารถรับประทานได้หลังจากเติมน้ำเดือดเป็นเวลา 3 นาที","Mì ống luộc quá lâu sẽ không ngon nên hãy chú ý.":"พาสต้าที่ต้มนานเกินไปจะไม่อร่อย ดังนั้นควรระวัง","Hình như hơi nhiều dấm. Hơi chua một chút nhỉ.":"ดูเหมือนน้ำส้มสายชูจะมากเกินไปหน่อย เปรี้ยวนิดหน่อย.","Vừa nãy vì ăn đồ cay nên tôi muốn uống nước.":"เมื่อกี้นี้เพราะฉันกินข้าวเผ็ดฉันจึงอยากดื่มน้ำ","Quả chuối này hơi cứng nhỉ. Có lẽ không ngọt lắm đâu.":"กล้วยลูกนี้แข็งนิดหน่อย อาจจะไม่หวานเท่าไหร่","Cửa hàng này vì gần biển nên cá rất tươi nhỉ. Rất là ngon ạ.":"เนื่องจากร้านนี้อยู่ใกล้ทะเลปลาจึงสดมาก มันอร่อยมาก"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

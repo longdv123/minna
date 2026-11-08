@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">宇</div></div><div class="kcell k-hv"><span class="vi-tr">vũ</span> </div><div class="kcell k-read"><div class="on">ウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>宇宙<rp>（</rp><rt>うちゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vũ trụ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">陽</div></div><div class="kcell k-hv"><span class="vi-tr">dương</span></div><div class="kcell k-read"><div class="on">ヨウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>陽気<rp>（</rp><rt>ようき</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">tươi tắn</span> </div></div><div class="kitem"><div class="jp"><ruby>太陽<rp>（</rp><rt>たいよう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mặt trời</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">丸</div></div><div class="kcell k-hv"><span class="vi-tr">hoàn</span></div><div class="kcell k-read"><div>まるーい／まる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>丸<rp>（</rp><rt>まる</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">tròn</span></div></div><div class="kitem"><div class="jp"><ruby>丸<rp>（</rp><rt>まる</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hình tròn</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">極</div></div><div class="kcell k-hv"><span class="vi-tr">cực</span></div><div class="kcell k-read"><div class="on">キョク</div><div>（きわーめる）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>北極<rp>（</rp><rt>ほっきょく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Bắc cực</span> </div></div><div class="kitem"><div class="jp"><ruby>南極<rp>（</rp><rt>なんきょく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Nam cực</span> </div></div><div class="kitem"><div class="jp"><ruby>積極的<rp>（</rp><rt>せっきょくてき</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">tích cực</span> </div></div><div class="kitem"><div class="jp"><ruby>消極的<rp>（</rp><rt>しょうきょくてき</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">tiêu cực</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">命</div></div><div class="kcell k-hv"><span class="vi-tr">mệnh</span></div><div class="kcell k-read"><div class="on">メイ／（ミョウ）</div><div>いのち</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>命<rp>（</rp><rt>いのち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sinh mạng</span> </div></div><div class="kitem"><div class="jp"><ruby>命令<rp>（</rp><rt>めいれい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">ra lệnh</span> </div></div><div class="kitem"><div class="jp"><ruby>生命<rp>（</rp><rt>せいめい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sinh mạng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">宙</div></div><div class="kcell k-hv"><span class="vi-tr">trụ</span> </div><div class="kcell k-read"><div class="on">チュウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>宇宙飛行士<rp>（</rp><rt>うちゅうひこうし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nhà du hành vũ trụ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">頂</div></div><div class="kcell k-hv"><span class="vi-tr">đỉnh</span></div><div class="kcell k-read"><div class="on">チョウ</div><div>いただーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>頂<rp>（</rp><rt>いただ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">nhận</span> </div></div><div class="kitem"><div class="jp"><ruby>頂上<rp>（</rp><rt>ちょうじょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đỉnh</span></div></div><div class="kitem"><div class="jp"><ruby>頂点<rp>（</rp><rt>ちょうてん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đỉnh</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">望</div></div><div class="kcell k-hv"><span class="vi-tr">vọng</span> </div><div class="kcell k-read"><div class="on">ボウ</div><div>のぞーむ／のぞーみ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>望<rp>（</rp><rt>のぞ</rt><rp>）</rp></ruby>む</div><div class="vi">mong </div></div><div class="kitem"><div class="jp"><ruby>望<rp>（</rp><rt>のぞ</rt><rp>）</rp></ruby>み</div><div class="vi"><span class="vi-tr">niềm mong đợi</span> </div></div><div class="kitem"><div class="jp"><ruby>希望<rp>（</rp><rt>きぼう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hy vọng</span> </div></div><div class="kitem"><div class="jp"><ruby>望遠鏡<rp>（</rp><rt>ぼうえんきょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">kính viễn vọng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">置</div></div><div class="kcell k-hv"><span class="vi-tr">trí</span> </div><div class="kcell k-read"><div class="on">チ</div><div>おーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>置<rp>（</rp><rt>お</rt><rp>）</rp></ruby>き<ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chỗ để</span></div></div><div class="kitem"><div class="jp"><ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vị trí</span>  </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">星</div></div><div class="kcell k-hv">tinh </div><div class="kcell k-read"><div class="on">（セイ）　</div><div>ほし</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>星<rp>（</rp><rt>ほし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngôi sao</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">球</div></div><div class="kcell k-hv"><span class="vi-tr">cầu</span> </div><div class="kcell k-read"><div class="on">キュウ</div><div>（たま）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>地球<rp>（</rp><rt>ちきゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trái đất</span> </div></div><div class="kitem"><div class="jp"><ruby>電球<rp>（</rp><rt>でんきゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bóng điện</span> </div></div><div class="kitem"><div class="jp"><ruby>野球場<rp>（</rp><rt>やきゅうじょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sân bóng chày</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">曇</div></div><div class="kcell k-hv"><span class="vi-tr">đàm</span> </div><div class="kcell k-read"><div>くもーる／くもーり</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>曇<rp>（</rp><rt>くも</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">trời mây</span></div></div><div class="kitem"><div class="jp"><ruby>曇<rp>（</rp><rt>くも</rt><rp>）</rp></ruby>り</div><div class="vi"><span class="vi-tr">mây</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">晴</div></div><div class="kcell k-hv"><span class="vi-tr">tình</span> </div><div class="kcell k-read"><div class="on">セイ</div><div>はーれる／はーれ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>晴<rp>（</rp><rt>は</rt><rp>）</rp></ruby>れる</div><div class="vi"><span class="vi-tr">trời nắng</span> </div></div><div class="kitem"><div class="jp"><ruby>晴<rp>（</rp><rt>は</rt><rp>）</rp></ruby>れ</div><div class="vi"><span class="vi-tr">nắng</span></div></div><div class="kitem"><div class="jp"><ruby>晴天<rp>（</rp><rt>せいてん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trời quang đãng</span></div></div><div class="kitem"><div class="jp"><ruby>快晴<rp>（</rp><rt>かいせい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trời đẹp</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u><ruby>太陽<rp>（</rp><rt>たいよう</rt><rp>）</rp></ruby></u>の<ruby>光<rp>（</rp><rt>ひかり</rt><rp>）</rp></ruby>を<ruby>浴<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>びると、<ruby>健康<rp>（</rp><rt>けんこう</rt><rp>）</rp></ruby>にいい。</td><td>a. たいよう</td><td>b. だいよう</td></tr><tr><td>2. この<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>、<ruby>暗<rp>（</rp><rt>くら</rt><rp>）</rp></ruby>いね。<u><ruby>電球<rp>（</rp><rt>でんきゅう</rt><rp>）</rp></ruby></u>が<ruby>古<rp>（</rp><rt>ふる</rt><rp>）</rp></ruby>いのかな。</td><td>a. でんき</td><td>b. でんきゅう</td></tr><tr><td>3. <u><ruby>南極<rp>（</rp><rt>なんきょく</rt><rp>）</rp></ruby></u>にはペンギンなどの<ruby>生<rp>（</rp><rt>い</rt><rp>）</rp></ruby>き<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>もいます。</td><td>a. なんごく</td><td>b. なんきょく</td></tr><tr><td>4. このロボットはどんな<u><ruby>命令<rp>（</rp><rt>めいれい</rt><rp>）</rp></ruby></u>でも<ruby>理解<rp>（</rp><rt>りかい</rt><rp>）</rp></ruby>する。</td><td>a. めいれい</td><td>b. めんれい</td></tr><tr><td>5. <ruby>世界中<rp>（</rp><rt>せかいじゅう</rt><rp>）</rp></ruby>が<ruby>平和<rp>（</rp><rt>へいわ</rt><rp>）</rp></ruby>を<u><ruby>望<rp>（</rp><rt>のぞ</rt><rp>）</rp></ruby>んで</u>いる。</td><td>a. のぞんで</td><td>b. まなんで</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <u><ruby>太陽<rp>（</rp><rt>たいよう</rt><rp>）</rp></ruby></u>の<ruby>光<rp>（</rp><rt>ひかり</rt><rp>）</rp></ruby>を<ruby>浴<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>びると、<ruby>健康<rp>（</rp><rt>けんこう</rt><rp>）</rp></ruby>にいい。</td><td><b>たいよう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. この<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>、<ruby>暗<rp>（</rp><rt>くら</rt><rp>）</rp></ruby>いね。<u><ruby>電球<rp>（</rp><rt>でんきゅう</rt><rp>）</rp></ruby></u>が<ruby>古<rp>（</rp><rt>ふる</rt><rp>）</rp></ruby>いのかな。</td><td><b>でんきゅう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <u><ruby>南極<rp>（</rp><rt>なんきょく</rt><rp>）</rp></ruby></u>にはペンギンなどの<ruby>生<rp>（</rp><rt>い</rt><rp>）</rp></ruby>き<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>もいます。</td><td><b>なんきょく</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. このロボットはどんな<u><ruby>命令<rp>（</rp><rt>めいれい</rt><rp>）</rp></ruby></u>でも<ruby>理解<rp>（</rp><rt>りかい</rt><rp>）</rp></ruby>する。</td><td><b>めいれい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>世界中<rp>（</rp><rt>せかいじゅう</rt><rp>）</rp></ruby>が<ruby>平和<rp>（</rp><rt>へいわ</rt><rp>）</rp></ruby>を<u><ruby>望<rp>（</rp><rt>のぞ</rt><rp>）</rp></ruby>んで</u>いる。</td><td><b>のぞんで</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>西<rp>（</rp><rt>にし</rt><rp>）</rp></ruby>の<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>に、<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby>に<ruby>明<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>るい<u>ほし</u>が<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>える。</td><td>a. 宙</td><td>b. 星</td><td>c. 曇</td></tr><tr><td>2. <ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>の<u>いのち</u>は、<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>よりも<ruby>重<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い。</td><td>a. 命</td><td>b. 含</td><td>c. 令</td></tr><tr><td>3. <u>う</u><ruby>宙<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>についてのテレビ<ruby>番組<rp>（</rp><rt>ばんぐみ</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>た。</td><td>a. 字</td><td>b. 守</td><td>c. 宇</td></tr><tr><td>4. <ruby>正<rp>（</rp><rt>ただ</rt><rp>）</rp></ruby>しいものに<u>まる</u>をつけてください。</td><td>a. 又</td><td>b. 刃</td><td>c. 丸</td></tr><tr><td>5. <ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby>の<ruby>席<rp>（</rp><rt>せき</rt><rp>）</rp></ruby>は、<ruby>窓側<rp>（</rp><rt>まどがわ</rt><rp>）</rp></ruby>を<ruby>希<rp>（</rp><rt>き</rt><rp>）</rp></ruby><u>ぼう</u>します。</td><td>a. 忙</td><td>b. 貿</td><td>c. 望</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>西<rp>（</rp><rt>にし</rt><rp>）</rp></ruby>の<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>に、<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby>に<ruby>明<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>るい<u>ほし</u>が<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>える。</td><td><b>星</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>の<u>いのち</u>は、<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby>よりも<ruby>重<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い。</td><td><b>命</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <u>う</u><ruby>宙<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>についてのテレビ<ruby>番組<rp>（</rp><rt>ばんぐみ</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>た。</td><td><b>宇</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>正<rp>（</rp><rt>ただ</rt><rp>）</rp></ruby>しいものに<u>まる</u>をつけてください。</td><td><b>丸</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby>の<ruby>席<rp>（</rp><rt>せき</rt><rp>）</rp></ruby>は、<ruby>窓側<rp>（</rp><rt>まどがわ</rt><rp>）</rp></ruby>を<ruby>希<rp>（</rp><rt>き</rt><rp>）</rp></ruby><u>ぼう</u>します。</td><td><b>望</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>青<rp>（</rp><rt>あお</rt><rp>）</rp></ruby>くてきれいな<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>！<ruby>今日<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>は（　　　）だね。</td><td>a. 生命</td><td>b. 快晴</td></tr><tr><td>2. どんどん（　　　）に<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>を<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>してください。</td><td>a. 積極的</td><td>b. 消極的</td></tr><tr><td>3. <ruby>急<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby>に<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>が（　　　）<ruby>明<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>るくなってきた。</td><td>a. 曇って</td><td>b. 晴れて</td></tr><tr><td>4. （　　　）<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>で<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>美<rp>（</rp><rt>うつく</rt><rp>）</rp></ruby>しい<ruby>場所<rp>（</rp><rt>ばしょ</rt><rp>）</rp></ruby>はどこだろう。</td><td>a. 地球</td><td>b. 野球</td></tr><tr><td>5. <ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>が<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>いる（　　　）を<ruby>地図<rp>（</rp><rt>ちず</rt><rp>）</rp></ruby>で<ruby>確認<rp>（</rp><rt>かくにん</rt><rp>）</rp></ruby>しよう。</td><td>a. 陽気</td><td>b. 位置</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>青<rp>（</rp><rt>あお</rt><rp>）</rp></ruby>くてきれいな<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>！<ruby>今日<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>は（　　　）だね。</td><td><b>快晴</b> (かいせい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. どんどん（　　　）に<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>を<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>してください。</td><td><b>積極的</b> (せっきょくてき)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>急<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby>に<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>が（　　　）<ruby>明<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>るくなってきた。</td><td><b>晴れて</b> (はれて)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. （　　　）<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>で<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>美<rp>（</rp><rt>うつく</rt><rp>）</rp></ruby>しい<ruby>場所<rp>（</rp><rt>ばしょ</rt><rp>）</rp></ruby>はどこだろう。</td><td><b>地球</b> (ちきゅう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>が<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>いる（　　　）を<ruby>地図<rp>（</rp><rt>ちず</rt><rp>）</rp></ruby>で<ruby>確認<rp>（</rp><rt>かくにん</rt><rp>）</rp></ruby>しよう。</td><td><b>位置</b> (いち)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-8-1"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-8-bai-1.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","vũ":"Vu","vũ trụ":"universe","dương":"positive","tươi tắn":"fresh","mặt trời":"sun","hoàn":"complete","tròn":"round","hình tròn":"circle","cực":"pole","Bắc cực":"North Pole","Nam cực":"Antarctica","tích cực":"positive","tiêu cực":"negative","mệnh":"par","sinh mạng":"life","ra lệnh":"commanded","trụ":"pillar","nhà du hành vũ trụ":"astronaut","đỉnh":"top","nhận":"receive","vọng":"hope","niềm mong đợi":"expectation","hy vọng":"hope","kính viễn vọng":"telescope","trí":"mind","chỗ để":"place to put","vị trí":"location","ngôi sao":"star","cầu":"bridge","trái đất":"Earth","bóng điện":"electric bulb","sân bóng chày":"baseball field","đàm":"phlegm","trời mây":"cloudy sky","mây":"cloud","tình":"love","trời nắng":"it's sunny","nắng":"sunny","trời quang đãng":"clear sky","trời đẹp":"beautiful weather","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","vũ":"Vu","vũ trụ":"semesta","dương":"positif","tươi tắn":"segar","mặt trời":"matahari","hoàn":"menyelesaikan","tròn":"bulat","hình tròn":"lingkaran","cực":"tiang","Bắc cực":"Kutub Utara","Nam cực":"Antartika","tích cực":"positif","tiêu cực":"negatif","mệnh":"par","sinh mạng":"kehidupan","ra lệnh":"diperintahkan","trụ":"pilar","nhà du hành vũ trụ":"astronaut","đỉnh":"atas","nhận":"menerima","vọng":"harapan","niềm mong đợi":"ekspektasi","hy vọng":"harapan","kính viễn vọng":"teleskop","trí":"pikiran","chỗ để":"tempat untuk meletakkan","vị trí":"lokasi","ngôi sao":"bintang","cầu":"menjembatani","trái đất":"Bumi","bóng điện":"bola lampu listrik","sân bóng chày":"lapangan bisbol","đàm":"dahak","trời mây":"awan mendung","mây":"awan","tình":"Cinta","trời nắng":"cuacanya cerah","nắng":"cerah","trời quang đãng":"langit cerah","trời đẹp":"cuaca yang indah","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","vũ":"Vu","vũ trụ":"ब्रह्माण्ड","dương":"सकारात्मक","tươi tắn":"ताजा","mặt trời":"सूर्य","hoàn":"पूरा","tròn":"गोल","hình tròn":"सर्कल","cực":"पोल","Bắc cực":"उत्तरी ध्रुव","Nam cực":"अन्टार्कटिका","tích cực":"सकारात्मक","tiêu cực":"नकारात्मक","mệnh":"par","sinh mạng":"जीवन","ra lệnh":"आदेश दिए","trụ":"स्तम्भ","nhà du hành vũ trụ":"अन्तरिक्ष यात्री","đỉnh":"शीर्ष","nhận":"प्राप्त गर्नुहोस्","vọng":"आशा","niềm mong đợi":"अपेक्षा","hy vọng":"आशा","kính viễn vọng":"टेलिस्कोप","trí":"दिमाग","chỗ để":"राख्न को लागी ठाउँ","vị trí":"स्थान","ngôi sao":"तारा","cầu":"पुल","trái đất":"पृथ्वी","bóng điện":"बिजुलीको बल्ब","sân bóng chày":"बेसबल मैदान","đàm":"कफ","trời mây":"बादल लागेको आकाश","mây":"बादल","tình":"प्रेम","trời nắng":"घाम लागेको छ","nắng":"घमाइलो","trời quang đãng":"सफा आकाश","trời đẹp":"सुन्दर मौसम","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","vũ":"Vu","vũ trụ":"စကြဝဠာ","dương":"အပြုသဘော","tươi tắn":"လတ်ဆတ်သော","mặt trời":"နေ","hoàn":"ပြီးပါပြီ။","tròn":"ပတ်ပတ်လည်","hình tròn":"စက်ဝိုင်း","cực":"ဝါးလုံး","Bắc cực":"မြောက်ဝင်ရိုးစွန်း","Nam cực":"အန္တာတိက","tích cực":"အပြုသဘော","tiêu cực":"အနုတ်လက္ခဏာ","mệnh":"par","sinh mạng":"ဘဝ","ra lệnh":"အမိန့်ပေးခဲ့သည်။","trụ":"မှတ်တိုင်","nhà du hành vũ trụ":"အာကာသယာဉ်မှူး","đỉnh":"ထိပ်တန်း","nhận":"လက်ခံသည်။","vọng":"မျှော်လင့်ချက်","niềm mong đợi":"မျှော်လင့်ချက်","hy vọng":"မျှော်လင့်ချက်","kính viễn vọng":"မှန်ပြောင်း","trí":"စိတ်","chỗ để":"တင်ရန်နေရာ","vị trí":"တည်နေရာ","ngôi sao":"ကြယ်ပွင့်","cầu":"တံတား","trái đất":"ကမ္ဘာမြေ","bóng điện":"လျှပ်စစ်မီးသီး","sân bóng chày":"ဘေ့စ်ဘောကွင်း","đàm":"သလိပ်","trời mây":"တိမ်ထူသောကောင်းကင်","mây":"တိမ်တိုက်","tình":"အချစ်","trời nắng":"နေပူနေပါတယ်","nắng":"နေသာသည်။","trời quang đãng":"ကြည်လင်သောကောင်းကင်","trời đẹp":"လှပသောရာသီဥတု","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","vũ":"ভু","vũ trụ":"মহাবিশ্ব","dương":"ইতিবাচক","tươi tắn":"তাজা","mặt trời":"সূর্য","hoàn":"সম্পূর্ণ","tròn":"বৃত্তাকার","hình tròn":"বৃত্ত","cực":"মেরু","Bắc cực":"উত্তর মেরু","Nam cực":"অ্যান্টার্কটিকা","tích cực":"ইতিবাচক","tiêu cực":"নেতিবাচক","mệnh":"সমতুল্য","sinh mạng":"জীবন","ra lệnh":"নির্দেশিত","trụ":"স্তম্ভ","nhà du hành vũ trụ":"মহাকাশচারী","đỉnh":"শীর্ষ","nhận":"গ্রহণ","vọng":"আশা","niềm mong đợi":"প্রত্যাশা","hy vọng":"আশা","kính viễn vọng":"টেলিস্কোপ","trí":"মন","chỗ để":"রাখার জায়গা","vị trí":"অবস্থান","ngôi sao":"তারকা","cầu":"সেতু","trái đất":"পৃথিবী","bóng điện":"বৈদ্যুতিক বাল্ব","sân bóng chày":"বেসবল মাঠ","đàm":"কফ","trời mây":"মেঘলা আকাশ","mây":"মেঘ","tình":"প্রেম","trời nắng":"এটা রোদ","nắng":"রোদ","trời quang đãng":"পরিষ্কার আকাশ","trời đẹp":"সুন্দর আবহাওয়া","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","vũ":"वु","vũ trụ":"ब्रह्मांड","dương":"सकारात्मक","tươi tắn":"ताजा","mặt trời":"सूरज","hoàn":"पूरा","tròn":"गोल","hình tròn":"घेरा","cực":"खंभा","Bắc cực":"उत्तरी ध्रुव","Nam cực":"अंटार्कटिका","tích cực":"सकारात्मक","tiêu cực":"नकारात्मक","mệnh":"बराबर","sinh mạng":"ज़िंदगी","ra lệnh":"आज्ञा","trụ":"स्तंभ","nhà du hành vũ trụ":"अंतरिक्ष यात्री","đỉnh":"शीर्ष","nhận":"प्राप्त करें","vọng":"आशा","niềm mong đợi":"अपेक्षा","hy vọng":"आशा","kính viễn vọng":"दूरबीन","trí":"दिमाग","chỗ để":"रखने की जगह","vị trí":"जगह","ngôi sao":"तारा","cầu":"पुल","trái đất":"धरती","bóng điện":"बिजली का बल्ब","sân bóng chày":"बेसबॉल का मैदान","đàm":"कफ","trời mây":"बादलयुक्त आकाश","mây":"बादल","tình":"प्यार","trời nắng":"धूप निकली हुई है","nắng":"धूप वाला","trời quang đãng":"साफ आकाश","trời đẹp":"खूबसूरत मौसम","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","vũ":"วู","vũ trụ":"จักรวาล","dương":"เชิงบวก","tươi tắn":"สด","mặt trời":"ดวงอาทิตย์","hoàn":"สมบูรณ์","tròn":"กลม","hình tròn":"วงกลม","cực":"เสา","Bắc cực":"ขั้วโลกเหนือ","Nam cực":"แอนตาร์กติกา","tích cực":"เชิงบวก","tiêu cực":"เชิงลบ","mệnh":"พาร์","sinh mạng":"ชีวิต","ra lệnh":"ได้รับคำสั่ง","trụ":"เสา","nhà du hành vũ trụ":"นักบินอวกาศ","đỉnh":"สูงสุด","nhận":"รับ","vọng":"หวัง","niềm mong đợi":"ความคาดหวัง","hy vọng":"หวัง","kính viễn vọng":"กล้องโทรทรรศน์","trí":"จิตใจ","chỗ để":"สถานที่ที่จะวาง","vị trí":"ที่ตั้ง","ngôi sao":"ดาว","cầu":"สะพาน","trái đất":"โลก","bóng điện":"หลอดไฟฟ้า","sân bóng chày":"สนามเบสบอล","đàm":"เสมหะ","trời mây":"ท้องฟ้ามีเมฆมาก","mây":"คลาวด์","tình":"รัก","trời nắng":"มีแดดจัด","nắng":"แดดจัด","trời quang đãng":"ท้องฟ้าแจ่มใส","trời đẹp":"สภาพอากาศที่สวยงาม","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

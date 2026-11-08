@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">資</div></div><div class="kcell k-hv"><span class="vi-tr">tư</span></div><div class="kcell k-read"><div class="on">シ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>資料<rp>（</rp><rt>しりょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tài liệu</span> </div></div><div class="kitem"><div class="jp"><ruby>資源<rp>（</rp><rt>しげん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tài nguyên</span> </div></div><div class="kitem"><div class="jp"><ruby>資本<rp>（</rp><rt>しほん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tư bản</span> </div></div><div class="kitem"><div class="jp"><ruby>資格<rp>（</rp><rt>しかく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tư cách, chứng chỉ</span></div></div><div class="kitem"><div class="jp"><ruby>資金<rp>（</rp><rt>しきん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vốn đầu tư</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">貯</div></div><div class="kcell k-hv"><span class="vi-tr">trữ</span></div><div class="kcell k-read"><div class="on">チョ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>貯金<rp>（</rp><rt>ちょきん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tiết kiệm tiền</span> </div></div><div class="kitem"><div class="jp"><ruby>貯蔵<rp>（</rp><rt>ちょぞう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tích trữ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">硬</div></div><div class="kcell k-hv"><span class="vi-tr">ngạnh</span> </div><div class="kcell k-read"><div class="on">コウ</div><div>かたーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>硬<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">cứng</span> </div></div><div class="kitem"><div class="jp"><ruby>硬貨<rp>（</rp><rt>こうか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tiền xu</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">軟</div></div><div class="kcell k-hv"><span class="vi-tr">nhuyễn</span> </div><div class="kcell k-read"><div class="on">ナン</div><div>やわーらかい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>軟<rp>（</rp><rt>やわ</rt><rp>）</rp></ruby>らかい</div><div class="vi"><span class="vi-tr">mềm</span> </div></div><div class="kitem"><div class="jp"><ruby>柔軟<rp>（</rp><rt>じゅうなん</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">mềm dẻo, linh hoạt</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">抜</div></div><div class="kcell k-hv"><span class="vi-tr">bạt</span> </div><div class="kcell k-read"><div>ぬーく／ぬーける</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～を）<ruby>抜<rp>（</rp><rt>ぬ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">nhổ~</span></div></div><div class="kitem"><div class="jp">（～が）<ruby>抜<rp>（</rp><rt>ぬ</rt><rp>）</rp></ruby>ける</div><div class="vi"><span class="vi-tr">thiếu ~, rụng ~</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">貿</div></div><div class="kcell k-hv"><span class="vi-tr">mậu</span> </div><div class="kcell k-read"><div class="on">ボウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>貿易<rp>（</rp><rt>ぼうえき</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">giao dịch thương mại</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">底</div></div><div class="kcell k-hv"><span class="vi-tr">để</span></div><div class="kcell k-read"><div class="on">テイ</div><div>そこ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>底<rp>（</rp><rt>そこ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đáy</span></div></div><div class="kitem"><div class="jp"><ruby>海底<rp>（</rp><rt>かいてい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đáy biển</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">掘</div></div><div class="kcell k-hv"><span class="vi-tr">quật</span> </div><div class="kcell k-read"><div class="on">（クツ）</div><div>ほーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>掘<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">đào</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">囲</div></div><div class="kcell k-hv">vi </div><div class="kcell k-read"><div class="on">イ</div><div>かこーむ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>囲<rp>（</rp><rt>かこ</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">rào, bao quanh</span></div></div><div class="kitem"><div class="jp"><ruby>周囲<rp>（</rp><rt>しゅうい</rt><rp>）</rp></ruby></div><div class="vi">xung quanh </div></div><div class="kitem"><div class="jp"><ruby>雰囲気<rp>（</rp><rt>ふんいき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">không khí</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">漁</div></div><div class="kcell k-hv"><span class="vi-tr">ngư</span></div><div class="kcell k-read"><div class="on">リョウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>漁師<rp>（</rp><rt>りょうし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngư dân</span> </div></div><div class="kitem"><div class="jp"><ruby>漁業<rp>（</rp><rt>ぎょぎょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngư nghiệp</span> </div></div><div class="kitem"><div class="jp"><ruby>漁船<rp>（</rp><rt>ぎょせん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tàu cá</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">影</div></div><div class="kcell k-hv"><span class="vi-tr">ảnh</span> </div><div class="kcell k-read"><div class="on">エイ</div><div>かげ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>影響<rp>（</rp><rt>えいきょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">ảnh hưởng</span> </div></div><div class="kitem"><div class="jp"><ruby>撮影<rp>（</rp><rt>さつえい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">chụp ảnh</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">埋</div></div><div class="kcell k-hv">mai </div><div class="kcell k-read"><div class="on">（マイ）</div><div>うーまる／うーめる</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>埋<rp>（</rp><rt>う</rt><rp>）</rp></ruby>まる</div><div class="vi"><span class="vi-tr">đầy, lấp đầy~</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>埋<rp>（</rp><rt>う</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">lấp~</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">鉱</div></div><div class="kcell k-hv"><span class="vi-tr">khoáng</span> </div><div class="kcell k-read"><div class="on">コウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>鉱物<rp>（</rp><rt>こうぶつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khoáng sản</span> </div></div><div class="kitem"><div class="jp"><ruby>鉱山<rp>（</rp><rt>こうざん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mỏ khoáng</span> </div></div><div class="kitem"><div class="jp"><ruby>炭鉱<rp>（</rp><rt>たんこう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mỏ than</span>  </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">爆</div></div><div class="kcell k-hv"><span class="vi-tr">bộc</span> </div><div class="kcell k-read"><div class="on">バク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>爆発<rp>（</rp><rt>ばくはつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nổ</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>当<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>てはまる<ruby>答<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>えをマルで<u><ruby>囲<rp>（</rp><rt>かこ</rt><rp>）</rp></ruby>んで</u>ください。</td><td>a. かごんで</td><td>b. かこんで</td></tr><tr><td>2. <ruby>飼<rp>（</rp><rt>か</rt><rp>）</rp></ruby>っていた<ruby>金魚<rp>（</rp><rt>きんぎょ</rt><rp>）</rp></ruby>が<ruby>死<rp>（</rp><rt>し</rt><rp>）</rp></ruby>んでしまったので<ruby>庭<rp>（</rp><rt>にわ</rt><rp>）</rp></ruby>に<u><ruby>埋<rp>（</rp><rt>う</rt><rp>）</rp></ruby>めた</u>。</td><td>a. しずめた</td><td>b. うめた</td></tr><tr><td>3. １<ruby>歳<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>ぐらいの<ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>には<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べ<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<u><ruby>軟<rp>（</rp><rt>やわ</rt><rp>）</rp></ruby>らかく</u>してあげてください。</td><td>a. やわかく</td><td>b. やわらかく</td></tr><tr><td>4. <ruby>土<rp>（</rp><rt>つち</rt><rp>）</rp></ruby>を100ｍ<ruby>以上<rp>（</rp><rt>いじょう</rt><rp>）</rp></ruby><u><ruby>掘<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby>る</u>と、<ruby>温泉<rp>（</rp><rt>おんせん</rt><rp>）</rp></ruby>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>てくることがあるそうだ。</td><td>a. ほる</td><td>b. もる</td></tr><tr><td>5. <ruby>鍋<rp>（</rp><rt>なべ</rt><rp>）</rp></ruby>の<u><ruby>底<rp>（</rp><rt>そこ</rt><rp>）</rp></ruby></u>が<ruby>黒<rp>（</rp><rt>くろ</rt><rp>）</rp></ruby>くこげてしまった。</td><td>a. そこ</td><td>b. てい</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>当<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>てはまる<ruby>答<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>えをマルで<u><ruby>囲<rp>（</rp><rt>かこ</rt><rp>）</rp></ruby>んで</u>ください。</td><td><b>かこんで</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>飼<rp>（</rp><rt>か</rt><rp>）</rp></ruby>っていた<ruby>金魚<rp>（</rp><rt>きんぎょ</rt><rp>）</rp></ruby>が<ruby>死<rp>（</rp><rt>し</rt><rp>）</rp></ruby>んでしまったので<ruby>庭<rp>（</rp><rt>にわ</rt><rp>）</rp></ruby>に<u><ruby>埋<rp>（</rp><rt>う</rt><rp>）</rp></ruby>めた</u>。</td><td><b>うめた</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. １<ruby>歳<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>ぐらいの<ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>には<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べ<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<u><ruby>軟<rp>（</rp><rt>やわ</rt><rp>）</rp></ruby>らかく</u>してあげてください。</td><td><b>やわらかく</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>土<rp>（</rp><rt>つち</rt><rp>）</rp></ruby>を100ｍ<ruby>以上<rp>（</rp><rt>いじょう</rt><rp>）</rp></ruby><u><ruby>掘<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby>る</u>と、<ruby>温泉<rp>（</rp><rt>おんせん</rt><rp>）</rp></ruby>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>てくることがあるそうだ。</td><td><b>ほる</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>鍋<rp>（</rp><rt>なべ</rt><rp>）</rp></ruby>の<u><ruby>底<rp>（</rp><rt>そこ</rt><rp>）</rp></ruby></u>が<ruby>黒<rp>（</rp><rt>くろ</rt><rp>）</rp></ruby>くこげてしまった。</td><td><b>そこ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>昨日<rp>（</rp><rt>きのう</rt><rp>）</rp></ruby>、<ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>でガスが<u>ばく</u><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>する<ruby>事故<rp>（</rp><rt>じこ</rt><rp>）</rp></ruby>があった。</td><td>a. 爆</td><td>b. 暴</td><td>c. 棒</td></tr><tr><td>2. これは<ruby>釘<rp>（</rp><rt>くぎ</rt><rp>）</rp></ruby>を<u>ぬ</u>く<ruby>道具<rp>（</rp><rt>どうぐ</rt><rp>）</rp></ruby>です。</td><td>a. 技</td><td>b. 掘</td><td>c. 抜</td></tr><tr><td>3. <ruby>長崎県<rp>（</rp><rt>ながさきけん</rt><rp>）</rp></ruby>は<u>ぎょ</u><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>が<ruby>盛<rp>（</rp><rt>さか</rt><rp>）</rp></ruby>んです。</td><td>a. 海</td><td>b. 魚</td><td>c. 漁</td></tr><tr><td>4. この<ruby>辺<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>りの<u>こう</u><ruby>山<rp>（</rp><rt>ざん</rt><rp>）</rp></ruby>では<ruby>昔<rp>（</rp><rt>むかし</rt><rp>）</rp></ruby>、<ruby>銅<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>をとっていたそうです。</td><td>a. 工</td><td>b. 硬</td><td>c. 鉱</td></tr><tr><td>5. この<ruby>島<rp>（</rp><rt>しま</rt><rp>）</rp></ruby>の<ruby>近<rp>（</rp><rt>ちか</rt><rp>）</rp></ruby>くで<ruby>海<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>てい</u>の<ruby>調査<rp>（</rp><rt>ちょうさ</rt><rp>）</rp></ruby>が<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>われている。</td><td>a. 低</td><td>b. 底</td><td>c. 抵</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>昨日<rp>（</rp><rt>きのう</rt><rp>）</rp></ruby>、<ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>でガスが<u>ばく</u><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>する<ruby>事故<rp>（</rp><rt>じこ</rt><rp>）</rp></ruby>があった。</td><td><b>爆</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. これは<ruby>釘<rp>（</rp><rt>くぎ</rt><rp>）</rp></ruby>を<u>ぬ</u>く<ruby>道具<rp>（</rp><rt>どうぐ</rt><rp>）</rp></ruby>です。</td><td><b>抜</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>長崎県<rp>（</rp><rt>ながさきけん</rt><rp>）</rp></ruby>は<u>ぎょ</u><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>が<ruby>盛<rp>（</rp><rt>さか</rt><rp>）</rp></ruby>んです。</td><td><b>漁</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. この<ruby>辺<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>りの<u>こう</u><ruby>山<rp>（</rp><rt>ざん</rt><rp>）</rp></ruby>では<ruby>昔<rp>（</rp><rt>むかし</rt><rp>）</rp></ruby>、<ruby>銅<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>をとっていたそうです。</td><td><b>鉱</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. この<ruby>島<rp>（</rp><rt>しま</rt><rp>）</rp></ruby>の<ruby>近<rp>（</rp><rt>ちか</rt><rp>）</rp></ruby>くで<ruby>海<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>てい</u>の<ruby>調査<rp>（</rp><rt>ちょうさ</rt><rp>）</rp></ruby>が<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>われている。</td><td><b>底</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. この<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>は、ワインを（　　　）のにちょうどよかった。</td><td>a. 貯蔵する</td><td>b. 埋める</td></tr><tr><td>2. この<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>は<ruby>山田<rp>（</rp><rt>やまだ</rt><rp>）</rp></ruby><ruby>監督<rp>（</rp><rt>かんとく</rt><rp>）</rp></ruby>の<ruby>作品<rp>（</rp><rt>さくひん</rt><rp>）</rp></ruby>の（　　　）を<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>けている。</td><td>a. 撮影</td><td>b. 影響</td></tr><tr><td>3. <ruby>海<rp>（</rp><rt>うみ</rt><rp>）</rp></ruby>にはたくさんの<ruby>鉱物<rp>（</rp><rt>こうぶつ</rt><rp>）</rp></ruby>（　　　）が<ruby>存在<rp>（</rp><rt>そんざい</rt><rp>）</rp></ruby>する。</td><td>a. 資源</td><td>b. 資本</td></tr><tr><td>4. <ruby>天気<rp>（</rp><rt>てんき</rt><rp>）</rp></ruby>が<ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>かったので、<ruby>湖<rp>（</rp><rt>みずうみ</rt><rp>）</rp></ruby>の（　　　）を<ruby>自転車<rp>（</rp><rt>じてんしゃ</rt><rp>）</rp></ruby>で<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>ることにした。</td><td>a. 周囲</td><td>b. 雰囲気</td></tr><tr><td>5. <ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>までのやり<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>は<ruby>忘<rp>（</rp><rt>わす</rt><rp>）</rp></ruby>れて、もっと（　　　）<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えたらどうかな。</td><td>a. 硬い</td><td>b. 柔軟に</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. この<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>は、ワインを（　　　）のにちょうどよかった。</td><td><b>貯蔵する</b> (ちょぞうする)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. この<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>は<ruby>山田<rp>（</rp><rt>やまだ</rt><rp>）</rp></ruby><ruby>監督<rp>（</rp><rt>かんとく</rt><rp>）</rp></ruby>の<ruby>作品<rp>（</rp><rt>さくひん</rt><rp>）</rp></ruby>の（　　　）を<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>けている。</td><td><b>影響</b> (えいきょう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>海<rp>（</rp><rt>うみ</rt><rp>）</rp></ruby>にはたくさんの<ruby>鉱物<rp>（</rp><rt>こうぶつ</rt><rp>）</rp></ruby>（　　　）が<ruby>存在<rp>（</rp><rt>そんざい</rt><rp>）</rp></ruby>する。</td><td><b>資源</b> (しげん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>天気<rp>（</rp><rt>てんき</rt><rp>）</rp></ruby>が<ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>かったので、<ruby>湖<rp>（</rp><rt>みずうみ</rt><rp>）</rp></ruby>の（　　　）を<ruby>自転車<rp>（</rp><rt>じてんしゃ</rt><rp>）</rp></ruby>で<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>ることにした。</td><td><b>周囲</b> (しゅうい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>までのやり<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>は<ruby>忘<rp>（</rp><rt>わす</rt><rp>）</rp></ruby>れて、もっと（　　　）<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えたらどうかな。</td><td><b>柔軟に</b> (じゅうなんに)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-5-2"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-5-bai-2.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","tư":"private","tài liệu":"document","tài nguyên":"resources","tư bản":"capital","tư cách, chứng chỉ":"qualifications, certificates","vốn đầu tư":"investment capital","trữ":"reserve","tiết kiệm tiền":"save money","tích trữ":"store","ngạnh":"barbs","cứng":"hard","tiền xu":"coins","nhuyễn":"puree","mềm":"soft","mềm dẻo, linh hoạt":"soft, flexible","bạt":"canvas","nhổ~":"spit~","thiếu ~, rụng ~":"missing ~, falling ~","mậu":"Mau","giao dịch thương mại":"commercial transactions","để":"to","đáy":"bottom","đáy biển":"sea ​​bottom","quật":"whip","đào":"dig","rào, bao quanh":"fence, surround","không khí":"air","ngư":"fish","ngư dân":"fisherman","ngư nghiệp":"fishery","tàu cá":"fishing boat","ảnh":"image","ảnh hưởng":"affect","chụp ảnh":"take a photo","đầy, lấp đầy~":"full, filled~","lấp~":"fill~","khoáng":"mineral","khoáng sản":"minerals","mỏ khoáng":"mineral mine","mỏ than":"mine","bộc":"Bo","nổ":"explode","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","tư":"pribadi","tài liệu":"dokumen","tài nguyên":"sumber daya","tư bản":"modal","tư cách, chứng chỉ":"kualifikasi, sertifikat","vốn đầu tư":"modal investasi","trữ":"menyimpan","tiết kiệm tiền":"menghemat uang","tích trữ":"toko","ngạnh":"duri","cứng":"keras","tiền xu":"koin","nhuyễn":"bubur","mềm":"lembut","mềm dẻo, linh hoạt":"lembut, fleksibel","bạt":"kanvas","nhổ~":"meludah~","thiếu ~, rụng ~":"hilang ~, jatuh ~","mậu":"mau","giao dịch thương mại":"transaksi komersial","để":"ke","đáy":"dasar","đáy biển":"dasar laut","quật":"cambuk","đào":"menggali","rào, bao quanh":"pagar, keliling","không khí":"udara","ngư":"ikan","ngư dân":"nelayan","ngư nghiệp":"perikanan","tàu cá":"perahu nelayan","ảnh":"gambar","ảnh hưởng":"memengaruhi","chụp ảnh":"mengambil foto","đầy, lấp đầy~":"penuh, terisi~","lấp~":"isi~","khoáng":"mineral","khoáng sản":"mineral","mỏ khoáng":"tambang mineral","mỏ than":"milikku","bộc":"Bo","nổ":"meledak","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","tư":"निजी","tài liệu":"कागजात","tài nguyên":"स्रोतहरू","tư bản":"पूंजी","tư cách, chứng chỉ":"योग्यता, प्रमाणपत्र","vốn đầu tư":"लगानी पूंजी","trữ":"रिजर्व","tiết kiệm tiền":"पैसा बचत गर्नुहोस्","tích trữ":"स्टोर","ngạnh":"barbs","cứng":"कडा","tiền xu":"सिक्का","nhuyễn":"प्युरी","mềm":"नरम","mềm dẻo, linh hoạt":"नरम, लचिलो","bạt":"क्यानभास","nhổ~":"थुक्नुहोस् ~","thiếu ~, rụng ~":"हराइरहेको ~, झर्दै ~","mậu":"माउ","giao dịch thương mại":"व्यापारिक लेनदेन","để":"को","đáy":"तल","đáy biển":"समुद्र तल","quật":"कोर्रा","đào":"खन्ने","rào, bao quanh":"घेरा, घेरा","không khí":"हावा","ngư":"माछा","ngư dân":"माछा मार्ने","ngư nghiệp":"मत्स्य पालन","tàu cá":"माछा मार्ने डुङ्गा","ảnh":"छवि","ảnh hưởng":"असर गर्छ","chụp ảnh":"फोटो खिच्नुहोस्","đầy, lấp đầy~":"भरिएको, भरिएको ~","lấp~":"भर्नुहोस् ~","khoáng":"खनिज","khoáng sản":"खनिजहरू","mỏ khoáng":"खनिज खानी","mỏ than":"मेरो","bộc":"बो","nổ":"विस्फोट","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","tư":"သီးသန့်","tài liệu":"စာရွက်စာတမ်း","tài nguyên":"အရင်းအမြစ်များ","tư bản":"မြို့တော်","tư cách, chứng chỉ":"အရည်အချင်း၊ လက်မှတ်များ","vốn đầu tư":"အရင်းအနှီး","trữ":"အရံ","tiết kiệm tiền":"ပိုက်ဆံစုပါ။","tích trữ":"စတိုးဆိုင်","ngạnh":"barbs","cứng":"ခက်တယ်။","tiền xu":"ဒင်္ဂါးပြားများ","nhuyễn":"သန့်စင်သော","mềm":"ပျော့ပျောင်း","mềm dẻo, linh hoạt":"ပျော့ပြောင်း၊","bạt":"ပတ္တူ","nhổ~":"တံတွေးထွေး~","thiếu ~, rụng ~":"ပျောက်ဆုံး ~ ၊ ပြုတ်ကျ ~","mậu":"မော","giao dịch thương mại":"ကူးသန်းရောင်းဝယ်ရေး","để":"သို့","đáy":"အောက်ခြေ","đáy biển":"ပင်လယ်အောက်ခြေ","quật":"ကြာပွတ်","đào":"တူးပါ။","rào, bao quanh":"ခြံစည်းရိုး၊","không khí":"လေ","ngư":"ငါး","ngư dân":"တံငါသည်","ngư nghiệp":"ရေလုပ်ငန်း","tàu cá":"ငါးဖမ်းလှေ","ảnh":"ပုံ","ảnh hưởng":"ထိခိုက်သည်။","chụp ảnh":"ဓာတ်ပုံရိုက်ပါ။","đầy, lấp đầy~":"အပြည့်~","lấp~":"ဖြည့် ~","khoáng":"ဓာတ်သတ္တု","khoáng sản":"သတ္တုဓာတ်","mỏ khoáng":"သတ္တုတွင်း","mỏ than":"မိုင်း","bộc":"ဗိုလ်","nổ":"ပေါက်ကွဲ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","tư":"ব্যক্তিগত","tài liệu":"নথি","tài nguyên":"সম্পদ","tư bản":"মূলধন","tư cách, chứng chỉ":"যোগ্যতা, সার্টিফিকেট","vốn đầu tư":"বিনিয়োগ মূলধন","trữ":"রিজার্ভ","tiết kiệm tiền":"টাকা বাঁচান","tích trữ":"দোকান","ngạnh":"বার্বস","cứng":"কঠিন","tiền xu":"মুদ্রা","nhuyễn":"পিউরি","mềm":"নরম","mềm dẻo, linh hoạt":"নরম, নমনীয়","bạt":"ক্যানভাস","nhổ~":"থুতু ~","thiếu ~, rụng ~":"অনুপস্থিত ~, পতন ~","mậu":"মৌ","giao dịch thương mại":"বাণিজ্যিক লেনদেন","để":"থেকে","đáy":"নীচে","đáy biển":"সমুদ্রের নীচে","quật":"চাবুক","đào":"খনন","rào, bao quanh":"বেড়া, চারপাশে","không khí":"বায়ু","ngư":"মাছ","ngư dân":"জেলে","ngư nghiệp":"মৎস্য","tàu cá":"মাছ ধরার নৌকা","ảnh":"ইমেজ","ảnh hưởng":"প্রভাবিত","chụp ảnh":"একটি ছবি তোলা","đầy, lấp đầy~":"পূর্ণ, ভরা ~","lấp~":"পূরণ করুন ~","khoáng":"খনিজ","khoáng sản":"খনিজ","mỏ khoáng":"খনিজ খনি","mỏ than":"আমার","bộc":"বো","nổ":"বিস্ফোরণ","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","tư":"निजी","tài liệu":"दस्तावेज़","tài nguyên":"संसाधन","tư bản":"पूंजी","tư cách, chứng chỉ":"योग्यता, प्रमाण पत्र","vốn đầu tư":"निवेश पूंजी","trữ":"संरक्षित","tiết kiệm tiền":"पैसे बचाएं","tích trữ":"इकट्ठा करना","ngạnh":"अकड़","cứng":"मुश्किल","tiền xu":"सिक्के","nhuyễn":"प्यूरी","mềm":"कोमल","mềm dẻo, linh hoạt":"नरम, लचीला","bạt":"कैनवास","nhổ~":"थूक~","thiếu ~, rụng ~":"गुम~, गिरना~","mậu":"मऊ","giao dịch thương mại":"व्यवसायिक लेनदेन","để":"को","đáy":"तल","đáy biển":"समुद्र तल","quật":"चाबुक","đào":"खोदना","rào, bao quanh":"बाड़ लगाना, घेरना","không khí":"वायु","ngư":"मछली","ngư dân":"मछुआ","ngư nghiệp":"मछली पकड़ना","tàu cá":"मछली पकड़ने की नाव","ảnh":"छवि","ảnh hưởng":"चाहना","chụp ảnh":"एक तस्वीर लें","đầy, lấp đầy~":"पूर्ण, भरा~","lấp~":"भरें~","khoáng":"खनिज","khoáng sản":"खनिज","mỏ khoáng":"खनिज खदान","mỏ than":"मेरा","bộc":"बो","nổ":"विस्फोट","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","tư":"ส่วนตัว","tài liệu":"เอกสาร","tài nguyên":"ทรัพยากร","tư bản":"เมืองหลวง","tư cách, chứng chỉ":"คุณวุฒิใบรับรอง","vốn đầu tư":"เงินลงทุน","trữ":"จอง","tiết kiệm tiền":"ประหยัดเงิน","tích trữ":"เก็บ","ngạnh":"หนาม","cứng":"แข็ง","tiền xu":"เหรียญ","nhuyễn":"น้ำซุปข้น","mềm":"อ่อนนุ่ม","mềm dẻo, linh hoạt":"นุ่มยืดหยุ่น","bạt":"ผ้าใบ","nhổ~":"ถ่มน้ำลาย~","thiếu ~, rụng ~":"หายไป~,ล้ม~","mậu":"เมา","giao dịch thương mại":"ธุรกรรมเชิงพาณิชย์","để":"ถึง","đáy":"ด้านล่าง","đáy biển":"ก้นทะเล","quật":"แส้","đào":"ขุด","rào, bao quanh":"รั้วล้อมรอบ","không khí":"อากาศ","ngư":"ปลา","ngư dân":"ชาวประมง","ngư nghiệp":"ประมง","tàu cá":"เรือประมง","ảnh":"ภาพ","ảnh hưởng":"ส่งผลกระทบ","chụp ảnh":"ถ่ายรูป","đầy, lấp đầy~":"อิ่ม อิ่ม~","lấp~":"เติม~","khoáng":"แร่","khoáng sản":"แร่ธาตุ","mỏ khoáng":"เหมืองแร่","mỏ than":"ของฉัน","bộc":"โบ","nổ":"ระเบิด","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

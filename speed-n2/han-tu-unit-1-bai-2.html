@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">衣</div></div><div class="kcell k-hv">y</div><div class="kcell k-read"><div class="on">イ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>衣類<rp>（</rp><rt>いるい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quần áo</span> </div></div><div class="kitem"><div class="jp"><ruby>衣服<rp>（</rp><rt>いふく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quần áo</span> </div></div><div class="kitem"><div class="jp"><ruby>衣食住<rp>（</rp><rt>いしょくじゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mặc ăn ở</span></div></div><div class="kitem"><div class="jp"><ruby>浴衣<rp>（</rp><rt>ゆかた</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">áo yukata</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">靴</div></div><div class="kcell k-hv">ngoa</div><div class="kcell k-read"><div>くつ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>靴<rp>（</rp><rt>くつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giày</span>  </div></div><div class="kitem"><div class="jp"><ruby>長靴<rp>（</rp><rt>ながぐつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ủng, bốt</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">磨</div></div><div class="kcell k-hv">ma </div><div class="kcell k-read"><div>みがーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>磨<rp>（</rp><rt>みが</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">mài, chải</span></div></div><div class="kitem"><div class="jp"><ruby>歯磨<rp>（</rp><rt>はみが</rt><rp>）</rp></ruby>き（する）</div><div class="vi"><span class="vi-tr">đánh răng</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">綿</div></div><div class="kcell k-hv"><span class="vi-tr">miên</span></div><div class="kcell k-read"><div class="on">メン</div><div>わた</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>綿<rp>（</rp><rt>めん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bông; sợi bông</span></div></div><div class="kitem"><div class="jp"><ruby>綿<rp>（</rp><rt>わた</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bông</span></div></div><div class="kitem"><div class="jp"><ruby>木綿<rp>（</rp><rt>もめん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sợi bông</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">羊</div></div><div class="kcell k-hv"><span class="vi-tr">dương</span></div><div class="kcell k-read"><div class="on">ヨウ</div><div>ひつじ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>羊<rp>（</rp><rt>ひつじ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cừu</span></div></div><div class="kitem"><div class="jp"><ruby>羊毛<rp>（</rp><rt>ようもう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lông cừu</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">毛</div></div><div class="kcell k-hv">mao</div><div class="kcell k-read"><div class="on">モウ</div><div>け</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>髪<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>の<ruby>毛<rp>（</rp><rt>け</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tóc</span></div></div><div class="kitem"><div class="jp"><ruby>毛布<rp>（</rp><rt>もうふ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chăn len</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">濯</div></div><div class="kcell k-hv"><span class="vi-tr">trạc</span></div><div class="kcell k-read"><div class="on">タク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>洗濯<rp>（</rp><rt>せんたく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giặt</span></div></div><div class="kitem"><div class="jp"><ruby>洗濯機<rp>（</rp><rt>せんたくき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy giặt</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">乾</div></div><div class="kcell k-hv">can</div><div class="kcell k-read"><div class="on">カン</div><div>かわーく／かわーかす</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>乾<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">khô</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>乾<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby>かす</div><div class="vi"><span class="vi-tr">sấy khô</span></div></div><div class="kitem"><div class="jp"><ruby>乾電池<rp>（</rp><rt>かんでんち</rt><rp>）</rp></ruby></div><div class="vi">pin</div></div><div class="kitem"><div class="jp"><ruby>乾杯<rp>（</rp><rt>かんぱい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">cạn li</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">燥</div></div><div class="kcell k-hv"><span class="vi-tr">táo</span></div><div class="kcell k-read"><div class="on">ソウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>乾燥<rp>（</rp><rt>かんそう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">khô</span></div></div><div class="kitem"><div class="jp"><ruby>乾燥機<rp>（</rp><rt>かんそうき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy sấy khô</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">干</div></div><div class="kcell k-hv">can</div><div class="kcell k-read"><div class="on">（カン）</div><div>ほーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>干<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">phơi</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">針</div></div><div class="kcell k-hv"><span class="vi-tr">châm</span></div><div class="kcell k-read"><div class="on">シン</div><div>はり</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>針<rp>（</rp><rt>はり</rt><rp>）</rp></ruby></div><div class="vi">kim</div></div><div class="kitem"><div class="jp"><ruby>針路<rp>（</rp><rt>しんろ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phương hướng</span></div></div><div class="kitem"><div class="jp"><ruby>方針<rp>（</rp><rt>ほうしん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phương châm</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">糸</div></div><div class="kcell k-hv"><span class="vi-tr">mịch</span></div><div class="kcell k-read"><div>いと</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>糸<rp>（</rp><rt>いと</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chỉ</span></div></div><div class="kitem"><div class="jp"><ruby>毛糸<rp>（</rp><rt>けいと</rt><rp>）</rp></ruby></div><div class="vi">len</div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">帽</div></div><div class="kcell k-hv"><span class="vi-tr">mạo</span></div><div class="kcell k-read"><div class="on">ボウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>帽子<rp>（</rp><rt>ぼうし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">mũ</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">革</div></div><div class="kcell k-hv"><span class="vi-tr">cách</span></div><div class="kcell k-read"><div class="on">（カク）</div><div>かわ　</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>革<rp>（</rp><rt>かわ</rt><rp>）</rp></ruby></div><div class="vi">da</div></div><div class="kitem"><div class="jp"><ruby>革靴<rp>（</rp><rt>かわぐつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giày da</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>空気<rp>（</rp><rt>くうき</rt><rp>）</rp></ruby>が<u><ruby>乾燥<rp>（</rp><rt>かんそう</rt><rp>）</rp></ruby></u>しているときは、<ruby>風邪<rp>（</rp><rt>かぜ</rt><rp>）</rp></ruby>をひきやすい。</td><td>a. かいそう</td><td>b. かんそう</td></tr><tr><td>2. <u><ruby>浴衣<rp>（</rp><rt>ゆかた</rt><rp>）</rp></ruby></u>を<ruby>着<rp>（</rp><rt>き</rt><rp>）</rp></ruby>て、<ruby>花火<rp>（</rp><rt>はなび</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>った。</td><td>a. ゆたか</td><td>b. ゆかた</td></tr><tr><td>3. リモコンは、<u><ruby>乾電池<rp>（</rp><rt>かんでんち</rt><rp>）</rp></ruby></u>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れないと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かないよ。</td><td>a. かでんち</td><td>b. かんでんち</td></tr><tr><td>4. <u><ruby>木綿<rp>（</rp><rt>もめん</rt><rp>）</rp></ruby></u>のシャツ１<ruby>枚<rp>（</rp><rt>まい</rt><rp>）</rp></ruby>でも<ruby>汗<rp>（</rp><rt>あせ</rt><rp>）</rp></ruby>をかいた。</td><td>a. もめん</td><td>b. もくめん</td></tr><tr><td>5. <ruby>日焼<rp>（</rp><rt>ひや</rt><rp>）</rp></ruby>けしないように<u><ruby>帽子<rp>（</rp><rt>ぼうし</rt><rp>）</rp></ruby></u>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>って<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>こう</td><td>a. ぼうし</td><td>b. ぼし</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>空気<rp>（</rp><rt>くうき</rt><rp>）</rp></ruby>が<u><ruby>乾燥<rp>（</rp><rt>かんそう</rt><rp>）</rp></ruby></u>しているときは、<ruby>風邪<rp>（</rp><rt>かぜ</rt><rp>）</rp></ruby>をひきやすい。</td><td><b>かんそう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <u><ruby>浴衣<rp>（</rp><rt>ゆかた</rt><rp>）</rp></ruby></u>を<ruby>着<rp>（</rp><rt>き</rt><rp>）</rp></ruby>て、<ruby>花火<rp>（</rp><rt>はなび</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>った。</td><td><b>ゆかた</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. リモコンは、<u><ruby>乾電池<rp>（</rp><rt>かんでんち</rt><rp>）</rp></ruby></u>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れないと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かないよ。</td><td><b>かんでんち</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <u><ruby>木綿<rp>（</rp><rt>もめん</rt><rp>）</rp></ruby></u>のシャツ１<ruby>枚<rp>（</rp><rt>まい</rt><rp>）</rp></ruby>でも<ruby>汗<rp>（</rp><rt>あせ</rt><rp>）</rp></ruby>をかいた。</td><td><b>もめん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>日焼<rp>（</rp><rt>ひや</rt><rp>）</rp></ruby>けしないように<u><ruby>帽子<rp>（</rp><rt>ぼうし</rt><rp>）</rp></ruby></u>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>って<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>こう</td><td><b>ぼうし</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. シーツやタオルは、<u>めん</u><ruby>製品<rp>（</rp><rt>せいひん</rt><rp>）</rp></ruby>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td>a. 糸</td><td>b. 綿</td><td>c. 革</td></tr><tr><td>2. <ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>は、<ruby>今度<rp>（</rp><rt>こんど</rt><rp>）</rp></ruby>の<ruby>方<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby><u>しん</u>について<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>すだろう。</td><td>a. 針</td><td>b. 洗</td><td>c. 糸</td></tr><tr><td>3. <ruby>雨<rp>（</rp><rt>あめ</rt><rp>）</rp></ruby>の<ruby>日<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>には<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby><u>ぐつ</u>をはいたほうがいい。</td><td>a. 革</td><td>b. 磨</td><td>c. 靴</td></tr><tr><td>4. <ruby>朝<rp>（</rp><rt>あさ</rt><rp>）</rp></ruby>のうちに<ruby>洗濯物<rp>（</rp><rt>せんたくもの</rt><rp>）</rp></ruby>を、<u>ほ</u>してしまおう。</td><td>a. 千</td><td>b. 干</td><td>c. 王</td></tr><tr><td>5. <ruby>毛<rp>（</rp><rt>け</rt><rp>）</rp></ruby><u>いと</u>でマフラーを<ruby>編<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>んだ。</td><td>a. 針</td><td>b. 糸</td><td>c. 綿</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. シーツやタオルは、<u>めん</u><ruby>製品<rp>（</rp><rt>せいひん</rt><rp>）</rp></ruby>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td><b>綿</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>は、<ruby>今度<rp>（</rp><rt>こんど</rt><rp>）</rp></ruby>の<ruby>方<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby><u>しん</u>について<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>すだろう。</td><td><b>針</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>雨<rp>（</rp><rt>あめ</rt><rp>）</rp></ruby>の<ruby>日<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>には<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby><u>ぐつ</u>をはいたほうがいい。</td><td><b>靴</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>朝<rp>（</rp><rt>あさ</rt><rp>）</rp></ruby>のうちに<ruby>洗濯物<rp>（</rp><rt>せんたくもの</rt><rp>）</rp></ruby>を、<u>ほ</u>してしまおう。</td><td><b>干</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>毛<rp>（</rp><rt>け</rt><rp>）</rp></ruby><u>いと</u>でマフラーを<ruby>編<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>んだ。</td><td><b>糸</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. ドライヤーで、<ruby>髪<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>の<ruby>毛<rp>（</rp><rt>け</rt><rp>）</rp></ruby>を（　　　）。</td><td>a. 乾いた</td><td>b. 乾かした</td></tr><tr><td>2. <ruby>晴<rp>（</rp><rt>は</rt><rp>）</rp></ruby>れているうちにシーツを（　　　）しよう。</td><td>a. 洗濯</td><td>b. 乾杯</td></tr><tr><td>3. この<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>き<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>しには、<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>の（　　　）が<ruby>入<rp>（</rp><rt>はい</rt><rp>）</rp></ruby>っている。</td><td>a. 衣服</td><td>b. 羊毛</td></tr><tr><td>4. （　　　）をしたら、もう<ruby>寝<rp>（</rp><rt>ね</rt><rp>）</rp></ruby>よう。</td><td>a. 歯磨き</td><td>b. 衣食住</td></tr><tr><td>5. <ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>に<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>って<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く（　　　）は<ruby>少<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>ないほうがいいよ。</td><td>a. 衣類</td><td>b. 乾燥機</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. ドライヤーで、<ruby>髪<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>の<ruby>毛<rp>（</rp><rt>け</rt><rp>）</rp></ruby>を（　　　）。</td><td><b>乾かした</b> (かわかした)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>晴<rp>（</rp><rt>は</rt><rp>）</rp></ruby>れているうちにシーツを（　　　）しよう。</td><td><b>洗濯</b> (せんたく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>き<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>しには、<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>の（　　　）が<ruby>入<rp>（</rp><rt>はい</rt><rp>）</rp></ruby>っている。</td><td><b>衣服</b> (いふく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. （　　　）をしたら、もう<ruby>寝<rp>（</rp><rt>ね</rt><rp>）</rp></ruby>よう。</td><td><b>歯磨き</b> (はみがき)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>に<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>って<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く（　　　）は<ruby>少<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>ないほうがいいよ。</td><td><b>衣類</b> (いるい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-1-2"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-1-bai-2.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","quần áo":"clothes","mặc ăn ở":"clothing and accommodation","áo yukata":"yukata shirt","giày":"shoe","ủng, bốt":"boots, boots","mài, chải":"grinding, brushing","đánh răng":"brush one's teeth","miên":"hypnotic","bông; sợi bông":"cotton; cotton yarn","bông":"cotton","sợi bông":"cotton yarn","dương":"positive","cừu":"sheep","lông cừu":"fleece","tóc":"hair","chăn len":"wool blanket","trạc":"Trac","giặt":"wash","máy giặt":"washing machine","khô":"dried","sấy khô":"drying","cạn li":"exhausted","táo":"apple","máy sấy khô":"dryer","phơi":"dry","châm":"needle","phương hướng":"direction","phương châm":"motto","mịch":"quiet","chỉ":"only","mạo":"pretend","mũ":"hat","cách":"way","giày da":"leather shoes","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","quần áo":"pakaian","mặc ăn ở":"pakaian dan akomodasi","áo yukata":"kemeja yukata","giày":"sepatu","ủng, bốt":"sepatu bot, sepatu bot","mài, chải":"menggiling, menyikat","đánh răng":"menyikat gigi","miên":"hipnotis","bông; sợi bông":"kapas; benang katun","bông":"kapas","sợi bông":"benang katun","dương":"positif","cừu":"domba","lông cừu":"bulu domba","tóc":"rambut","chăn len":"selimut wol","trạc":"jalur","giặt":"mencuci","máy giặt":"mesin cuci","khô":"kering","sấy khô":"pengeringan","cạn li":"lelah","táo":"apel","máy sấy khô":"pengering","phơi":"kering","châm":"jarum","phương hướng":"arah","phương châm":"motto","mịch":"diam","chỉ":"hanya","mạo":"berpura-pura","mũ":"topi","cách":"jalan","giày da":"sepatu kulit","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","quần áo":"लुगा","mặc ăn ở":"कपडा र आवास","áo yukata":"yukata शर्ट","giày":"जुत्ता","ủng, bốt":"जुत्ता, जुत्ता","mài, chải":"पीस, ब्रश","đánh răng":"दाँत माझ्नु","miên":"सम्मोहन","bông; sợi bông":"कपास; कपासको धागो","bông":"कपास","sợi bông":"कपासको धागो","dương":"सकारात्मक","cừu":"भेडा","lông cừu":"ऊन","tóc":"कपाल","chăn len":"ऊनी कम्बल","trạc":"ट्र्याक","giặt":"धुनुहोस्","máy giặt":"लुगा धुने मेसिन","khô":"सुकेको","sấy khô":"सुकाउने","cạn li":"थकित","táo":"स्याउ","máy sấy khô":"ड्रायर","phơi":"सुख्खा","châm":"सुई","phương hướng":"दिशा","phương châm":"आदर्श वाक्य","mịch":"शान्त","chỉ":"मात्र","mạo":"बहाना","mũ":"टोपी","cách":"बाटो","giày da":"छालाको जुत्ता","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","quần áo":"အဝတ်","mặc ăn ở":"အဝတ်အစားနှင့် နေရာထိုင်ခင်း","áo yukata":"ယူကာတာအင်္ကျီ","giày":"ဖိနပ်","ủng, bốt":"ဘွတ်ဖိနပ်၊ ဘွတ်ဖိနပ်","mài, chải":"ကြိတ်၊ ကြိတ်","đánh răng":"သွားတိုက်ပါ။","miên":"အိပ်မွေ့ချပါ။","bông; sợi bông":"ဝါဂွမ်း; ချည်ချည်","bông":"ဝါဂွမ်း","sợi bông":"ချည်ချည်","dương":"အပြုသဘော","cừu":"သိုး","lông cừu":"လည်လှီး","tóc":"ဆံပင်","chăn len":"သိုးမွှေးစောင်","trạc":"Trac","giặt":"လက်ဆေးပါ။","máy giặt":"အဝတ်လျှော်စက်","khô":"အခြောက်","sấy khô":"အခြောက်ခံခြင်း။","cạn li":"မောဟိုက်သည်။","táo":"ပန်းသီး","máy sấy khô":"အခြောက်ခံစက်","phơi":"ခြောက်သွေ့","châm":"အပ်","phương hướng":"ဦးတည်ချက်","phương châm":"ဆောင်ပုဒ်","mịch":"တိတ်ဆိတ်","chỉ":"သာ","mạo":"ဟန်ဆောင်","mũ":"ဦးထုပ်","cách":"နည်းလမ်း","giày da":"သားရေဖိနပ်","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","quần áo":"জামাকাপড়","mặc ăn ở":"পোশাক এবং বাসস্থান","áo yukata":"ইউকাটা শার্ট","giày":"জুতা","ủng, bốt":"বুট, বুট","mài, chải":"grinding, brushing","đánh răng":"একজনের দাঁত ব্রাশ করা","miên":"সম্মোহনী","bông; sợi bông":"তুলা; তুলো সুতা","bông":"তুলা","sợi bông":"তুলো সুতা","dương":"ইতিবাচক","cừu":"ভেড়া","lông cừu":"ভেড়া","tóc":"চুল","chăn len":"উলের কম্বল","trạc":"ট্র্যাক","giặt":"ধোয়া","máy giặt":"ওয়াশিং মেশিন","khô":"শুকনো","sấy khô":"শুকানো","cạn li":"ক্লান্ত","táo":"আপেল","máy sấy khô":"ড্রায়ার","phơi":"শুকনো","châm":"সুই","phương hướng":"দিক","phương châm":"নীতিবাক্য","mịch":"শান্ত","chỉ":"শুধুমাত্র","mạo":"ভান","mũ":"টুপি","cách":"উপায়","giày da":"চামড়া জুতা","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","quần áo":"कपड़े","mặc ăn ở":"कपड़े और आवास","áo yukata":"युक्ता शर्ट","giày":"जूता","ủng, bốt":"जूते, जूते","mài, chải":"पीसना, ब्रश करना","đánh răng":"किसी के दाँत तोड़ना","miên":"कृत्रिम निद्रावस्था","bông; sợi bông":"कपास; सूती धागा","bông":"कपास","sợi bông":"सूती धागा","dương":"सकारात्मक","cừu":"भेड़","lông cừu":"ऊन","tóc":"बाल","chăn len":"ऊनी कम्बल","trạc":"ट्रैक","giặt":"धोना","máy giặt":"वॉशिंग मशीन","khô":"सूख गया","sấy khô":"सुखाने","cạn li":"थका हुआ","táo":"सेब","máy sấy khô":"ड्रायर","phơi":"सूखा","châm":"सुई","phương hướng":"दिशा","phương châm":"आदर्श वाक्य","mịch":"शांत","chỉ":"केवल","mạo":"बहाना करना","mũ":"टोपी","cách":"रास्ता","giày da":"चमड़े के जूते","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","quần áo":"เสื้อผ้า","mặc ăn ở":"เสื้อผ้าและที่พัก","áo yukata":"เสื้อยูกาตะ","giày":"รองเท้า","ủng, bốt":"รองเท้าบูท, รองเท้าบูท","mài, chải":"บดแปรง","đánh răng":"แปรงฟัน","miên":"ถูกสะกดจิต","bông; sợi bông":"ฝ้าย; เส้นด้ายฝ้าย","bông":"ฝ้าย","sợi bông":"เส้นด้ายฝ้าย","dương":"เชิงบวก","cừu":"แกะ","lông cừu":"ขนแกะ","tóc":"ผม","chăn len":"ผ้าห่มขนสัตว์","trạc":"แทรค","giặt":"ล้าง","máy giặt":"เครื่องซักผ้า","khô":"แห้ง","sấy khô":"การอบแห้ง","cạn li":"เหนื่อย","táo":"แอปเปิล","máy sấy khô":"เครื่องอบผ้า","phơi":"แห้ง","châm":"เข็ม","phương hướng":"ทิศทาง","phương châm":"ภาษิต","mịch":"เงียบ","chỉ":"เท่านั้น","mạo":"แกล้งทำ","mũ":"หมวก","cách":"ทาง","giày da":"รองเท้าหนัง","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Ở thành phố đang phát thông báo.": "An announcement is being made in the city.",
+    "Tại khu mua sắm Sakura, từ ngày mai trong vòng hai tuần, sẽ diễn ra đợt khuyến mãi tri ân mùa hè": "At Sakura shopping district, from tomorrow for two weeks, a summer appreciation promotion will take place",
+    ". Trong thời gian khuyến mãi thì tất cả các cửa hàng sẽ giảm giá 20% cho mọi mặt hàng, chiết khấu cao nhất lên đến 80%. Hơn nữa, trường hợp mua thực phẩm sẽ nhận được gấp đôi số lượng tem tích điểm. Tem tích điểm của khu mua sắm Sakura vì không có thời hạn sử dụng, lúc nào cũng có thể sử dụng được. Ngoài ra, đối với khách hàng mua từ 5,000 Yên trở lên, chúng tôi chuẩn bị sẵn chương trình bốc thăm thú vị, phần thưởng chẳng hạn như chuyến du lịch Hokkaido. Mời quý khách đến với khu mua sắm Sakura!": ". During the promotion period, all stores will have a 20% discount on all items, with the highest discount up to 80%. Furthermore, when buying food, you will receive double the number of points stamps. Sakura shopping mall's loyalty stamps have no expiration date and can be used at any time. In addition, for customers who purchase 5,000 Yen or more, we have prepared an interesting lottery program with prizes such as a trip to Hokkaido. Welcome to Sakura shopping area!",
+    "Thông báo về điều gì?": "Announcement about what?",
+    "Việc bắt đầu chương trình khuyến mãi.": "The start of the promotion.",
+    "Việc thực phẩm có giá rẻ.": "Food is cheap.",
+    "Thời hạn có thể sử dụng tem tích điểm.": "Time limit for using point stamps.",
+    "Người tham gia có thể nhận được quà.": "Participants can receive gifts."
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Ở thành phố đang phát thông báo.": "Pengumuman sedang dibuat di kota.",
+    "Tại khu mua sắm Sakura, từ ngày mai trong vòng hai tuần, sẽ diễn ra đợt khuyến mãi tri ân mùa hè": "Di kawasan perbelanjaan Sakura, mulai besok selama dua minggu, akan diadakan promosi apresiasi musim panas",
+    ". Trong thời gian khuyến mãi thì tất cả các cửa hàng sẽ giảm giá 20% cho mọi mặt hàng, chiết khấu cao nhất lên đến 80%. Hơn nữa, trường hợp mua thực phẩm sẽ nhận được gấp đôi số lượng tem tích điểm. Tem tích điểm của khu mua sắm Sakura vì không có thời hạn sử dụng, lúc nào cũng có thể sử dụng được. Ngoài ra, đối với khách hàng mua từ 5,000 Yên trở lên, chúng tôi chuẩn bị sẵn chương trình bốc thăm thú vị, phần thưởng chẳng hạn như chuyến du lịch Hokkaido. Mời quý khách đến với khu mua sắm Sakura!": ". Selama masa promosi, semua toko akan mendapatkan diskon 20% untuk semua item, dengan diskon tertinggi hingga 80%. Selanjutnya, saat membeli makanan, Anda akan menerima stempel poin sebanyak dua kali lipat. Stempel loyalitas pusat perbelanjaan Sakura tidak memiliki tanggal kedaluwarsa dan dapat digunakan kapan saja. Selain itu, bagi pelanggan yang membeli 5.000 Yen atau lebih, kami telah menyiapkan program undian menarik berhadiah seperti jalan-jalan ke Hokkaido. Selamat datang di area perbelanjaan Sakura!",
+    "Thông báo về điều gì?": "Pengumuman tentang apa?",
+    "Việc bắt đầu chương trình khuyến mãi.": "Awal promosi.",
+    "Việc thực phẩm có giá rẻ.": "Makanannya murah.",
+    "Thời hạn có thể sử dụng tem tích điểm.": "Batas waktu penggunaan stempel titik.",
+    "Người tham gia có thể nhận được quà.": "Peserta dapat menerima hadiah."
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Ở thành phố đang phát thông báo.": "शहरमा घोषणा भइरहेको छ।",
+    "Tại khu mua sắm Sakura, từ ngày mai trong vòng hai tuần, sẽ diễn ra đợt khuyến mãi tri ân mùa hè": "Sakura किनमेल जिल्ला मा, भोलि देखि दुई हप्ता को लागी, एक गर्मी प्रशंसा पदोन्नति हुनेछ",
+    ". Trong thời gian khuyến mãi thì tất cả các cửa hàng sẽ giảm giá 20% cho mọi mặt hàng, chiết khấu cao nhất lên đến 80%. Hơn nữa, trường hợp mua thực phẩm sẽ nhận được gấp đôi số lượng tem tích điểm. Tem tích điểm của khu mua sắm Sakura vì không có thời hạn sử dụng, lúc nào cũng có thể sử dụng được. Ngoài ra, đối với khách hàng mua từ 5,000 Yên trở lên, chúng tôi chuẩn bị sẵn chương trình bốc thăm thú vị, phần thưởng chẳng hạn như chuyến du lịch Hokkaido. Mời quý khách đến với khu mua sắm Sakura!": "। प्रवर्द्धन अवधिमा, सबै स्टोरहरूले सबै वस्तुहरूमा 20% छुट पाउनेछन्, उच्चतम छुट 80% सम्म। यसबाहेक, खाना खरिद गर्दा, तपाईंले अंक स्ट्याम्पहरूको दोब्बर संख्या प्राप्त गर्नुहुनेछ। साकुरा शपिङ मलको लोयल्टी स्ट्याम्पको म्याद सकिने मिति छैन र जुनसुकै बेला प्रयोग गर्न सकिन्छ। थप रूपमा, 5,000 येन वा सोभन्दा बढी खरिद गर्ने ग्राहकहरूका लागि, हामीले होक्काइडोको यात्रा जस्ता पुरस्कारहरू सहितको रोचक लटरी कार्यक्रम तयार गरेका छौं। Sakura किनमेल क्षेत्रमा स्वागत छ!",
+    "Thông báo về điều gì?": "के को बारेमा घोषणा?",
+    "Việc bắt đầu chương trình khuyến mãi.": "पदोन्नति को शुरुवात।",
+    "Việc thực phẩm có giá rẻ.": "खाना सस्तो छ।",
+    "Thời hạn có thể sử dụng tem tích điểm.": "पोइन्ट स्ट्याम्पहरू प्रयोग गर्नको लागि समय सीमा।",
+    "Người tham gia có thể nhận được quà.": "सहभागीहरूले उपहारहरू प्राप्त गर्न सक्छन्।"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Ở thành phố đang phát thông báo.": "မြို့တော်တွင် ကြေငြာချက်ထုတ်ပြန်ထားသည်။",
+    "Tại khu mua sắm Sakura, từ ngày mai trong vòng hai tuần, sẽ diễn ra đợt khuyến mãi tri ân mùa hè": "Sakura စျေးဝယ်ခရိုင်တွင် မနက်ဖြန် နှစ်ပတ်မှစပြီး နွေရာသီ အထူးလက်ဆောင်ပရိုမိုးရှင်းတစ်ခု ပြုလုပ်ပါမည်။",
+    ". Trong thời gian khuyến mãi thì tất cả các cửa hàng sẽ giảm giá 20% cho mọi mặt hàng, chiết khấu cao nhất lên đến 80%. Hơn nữa, trường hợp mua thực phẩm sẽ nhận được gấp đôi số lượng tem tích điểm. Tem tích điểm của khu mua sắm Sakura vì không có thời hạn sử dụng, lúc nào cũng có thể sử dụng được. Ngoài ra, đối với khách hàng mua từ 5,000 Yên trở lên, chúng tôi chuẩn bị sẵn chương trình bốc thăm thú vị, phần thưởng chẳng hạn như chuyến du lịch Hokkaido. Mời quý khách đến với khu mua sắm Sakura!": ". ပရိုမိုးရှင်းကာလအတွင်း၊ စတိုးဆိုင်များအားလုံးတွင် ကုန်ပစ္စည်းအားလုံးအပေါ် 20% လျှော့စျေးရှိပြီး အမြင့်ဆုံးလျှော့စျေး 80% အထိ ရရှိမည်ဖြစ်သည်။ ထို့အပြင် အစားအသောက်ဝယ်ယူသည့်အခါ အမှတ်တံဆိပ်တုံးများကို နှစ်ဆရရှိမည်ဖြစ်သည်။ Sakura ရှော့ပင်းမောလ်၏ သစ္စာစောင့်သိမှုတံဆိပ်ခေါင်းများသည် သက်တမ်းကုန်ဆုံးရက်မရှိသည့်အပြင် အချိန်မရွေးအသုံးပြုနိုင်ပါသည်။ ထို့အပြင် ယန်း 5,000 နှင့်အထက် ဝယ်ယူသော Customer များအတွက် Hokkaido ခရီးစဉ်ကဲ့သို့သော စိတ်ဝင်စားဖွယ်ရာ ကံစမ်းမဲအစီအစဉ်များကိုလည်း ပြင်ဆင်ထားပါသည်။ Sakura စျေးဝယ်ဧရိယာမှကြိုဆိုပါသည်။",
+    "Thông báo về điều gì?": "ကြေငြာချက်က ဘာလဲ။",
+    "Việc bắt đầu chương trình khuyến mãi.": "ပရိုမိုးရှင်း၏အစ။",
+    "Việc thực phẩm có giá rẻ.": "အစားအသောက်က ဈေးပေါတယ်။",
+    "Thời hạn có thể sử dụng tem tích điểm.": "ပွိုင့်တံဆိပ်ခေါင်းများကို အသုံးပြုရန် အချိန်ကန့်သတ်ချက်။",
+    "Người tham gia có thể nhận được quà.": "ပါဝင်သူများသည် လက်ဆောင်များ ရရှိနိုင်မည်ဖြစ်သည်။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Ở thành phố đang phát thông báo.": "শহরে ঘোষণা করা হচ্ছে।",
+    "Tại khu mua sắm Sakura, từ ngày mai trong vòng hai tuần, sẽ diễn ra đợt khuyến mãi tri ân mùa hè": "সাকুরা শপিং ডিস্ট্রিক্টে, আগামীকাল থেকে দুই সপ্তাহের জন্য, একটি গ্রীষ্মের প্রশংসা প্রচার হবে",
+    ". Trong thời gian khuyến mãi thì tất cả các cửa hàng sẽ giảm giá 20% cho mọi mặt hàng, chiết khấu cao nhất lên đến 80%. Hơn nữa, trường hợp mua thực phẩm sẽ nhận được gấp đôi số lượng tem tích điểm. Tem tích điểm của khu mua sắm Sakura vì không có thời hạn sử dụng, lúc nào cũng có thể sử dụng được. Ngoài ra, đối với khách hàng mua từ 5,000 Yên trở lên, chúng tôi chuẩn bị sẵn chương trình bốc thăm thú vị, phần thưởng chẳng hạn như chuyến du lịch Hokkaido. Mời quý khách đến với khu mua sắm Sakura!": ". প্রচারের সময়কালে, সমস্ত দোকানে সমস্ত আইটেমের উপর 20% ছাড় থাকবে, সর্বোচ্চ 80% পর্যন্ত ছাড় সহ। উপরন্তু, খাবার কেনার সময়, আপনি পয়েন্ট স্ট্যাম্পের দ্বিগুণ সংখ্যা পাবেন। সাকুরা শপিং মলের লয়ালটি স্ট্যাম্পের মেয়াদ শেষ হওয়ার তারিখ নেই এবং যে কোনো সময় ব্যবহার করা যেতে পারে। এছাড়াও, যে সমস্ত গ্রাহকরা 5,000 ইয়েন বা তার বেশি ক্রয় করেন, তাদের জন্য আমরা হোক্কাইডোতে ভ্রমণের মতো পুরস্কার সহ একটি আকর্ষণীয় লটারি প্রোগ্রাম প্রস্তুত করেছি। সাকুরা শপিং এলাকায় স্বাগতম!",
+    "Thông báo về điều gì?": "কী বিষয়ে ঘোষণা?",
+    "Việc bắt đầu chương trình khuyến mãi.": "শুরু হলো প্রচার।",
+    "Việc thực phẩm có giá rẻ.": "খাবার সস্তা।",
+    "Thời hạn có thể sử dụng tem tích điểm.": "পয়েন্ট স্ট্যাম্প ব্যবহার করার সময়সীমা।",
+    "Người tham gia có thể nhận được quà.": "অংশগ্রহণকারীরা উপহার পেতে পারেন।"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Ở thành phố đang phát thông báo.": "शहर में मुनादी कराई जा रही है.",
+    "Tại khu mua sắm Sakura, từ ngày mai trong vòng hai tuần, sẽ diễn ra đợt khuyến mãi tri ân mùa hè": "सकुरा शॉपिंग जिले में, कल से दो सप्ताह के लिए, ग्रीष्मकालीन प्रशंसा प्रचार होगा",
+    ". Trong thời gian khuyến mãi thì tất cả các cửa hàng sẽ giảm giá 20% cho mọi mặt hàng, chiết khấu cao nhất lên đến 80%. Hơn nữa, trường hợp mua thực phẩm sẽ nhận được gấp đôi số lượng tem tích điểm. Tem tích điểm của khu mua sắm Sakura vì không có thời hạn sử dụng, lúc nào cũng có thể sử dụng được. Ngoài ra, đối với khách hàng mua từ 5,000 Yên trở lên, chúng tôi chuẩn bị sẵn chương trình bốc thăm thú vị, phần thưởng chẳng hạn như chuyến du lịch Hokkaido. Mời quý khách đến với khu mua sắm Sakura!": ". प्रमोशन अवधि के दौरान, सभी दुकानों में सभी वस्तुओं पर 20% की छूट होगी, जिसमें अधिकतम छूट 80% तक होगी। इसके अलावा, भोजन खरीदते समय, आपको अंकों की दोगुनी संख्या में टिकटें प्राप्त होंगी। सकुरा शॉपिंग मॉल के लॉयल्टी टिकटों की कोई समाप्ति तिथि नहीं है और इन्हें किसी भी समय इस्तेमाल किया जा सकता है। इसके अलावा, 5,000 येन या उससे अधिक की खरीदारी करने वाले ग्राहकों के लिए, हमने होक्काइडो की यात्रा जैसे पुरस्कारों के साथ एक दिलचस्प लॉटरी कार्यक्रम तैयार किया है। सकुरा शॉपिंग क्षेत्र में आपका स्वागत है!",
+    "Thông báo về điều gì?": "किस बारे में घोषणा?",
+    "Việc bắt đầu chương trình khuyến mãi.": "प्रमोशन की शुरुआत.",
+    "Việc thực phẩm có giá rẻ.": "खाना सस्ता है.",
+    "Thời hạn có thể sử dụng tem tích điểm.": "पॉइंट स्टैम्प का उपयोग करने की समय सीमा.",
+    "Người tham gia có thể nhận được quà.": "प्रतिभागियों को उपहार मिल सकते हैं."
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Ở thành phố đang phát thông báo.": "กำลังมีการประกาศในเมือง",
+    "Tại khu mua sắm Sakura, từ ngày mai trong vòng hai tuần, sẽ diễn ra đợt khuyến mãi tri ân mùa hè": "ที่ย่านช้อปปิ้งซากุระ ตั้งแต่วันพรุ่งนี้เป็นเวลาสองสัปดาห์ จะมีการจัดโปรโมชั่นต้อนรับฤดูร้อน",
+    ". Trong thời gian khuyến mãi thì tất cả các cửa hàng sẽ giảm giá 20% cho mọi mặt hàng, chiết khấu cao nhất lên đến 80%. Hơn nữa, trường hợp mua thực phẩm sẽ nhận được gấp đôi số lượng tem tích điểm. Tem tích điểm của khu mua sắm Sakura vì không có thời hạn sử dụng, lúc nào cũng có thể sử dụng được. Ngoài ra, đối với khách hàng mua từ 5,000 Yên trở lên, chúng tôi chuẩn bị sẵn chương trình bốc thăm thú vị, phần thưởng chẳng hạn như chuyến du lịch Hokkaido. Mời quý khách đến với khu mua sắm Sakura!": ". ในช่วงระยะเวลาโปรโมชั่น ร้านค้าทุกร้านจะมีส่วนลด 20% สำหรับทุกรายการ โดยมีส่วนลดสูงสุดถึง 80% นอกจากนี้เมื่อซื้ออาหารจะได้รับแสตมป์คะแนนเป็นสองเท่า แสตมป์สะสมคะแนนของห้างสรรพสินค้าซากุระไม่มีวันหมดอายุและสามารถใช้ได้ตลอดเวลา นอกจากนี้สำหรับลูกค้าที่ซื้อตั้งแต่ 5,000 เยนขึ้นไป เราได้เตรียมโปรแกรมลอตเตอรี่ที่น่าสนใจพร้อมของรางวัลเช่นทริปฮอกไกโด ยินดีต้อนรับสู่ย่านช้อปปิ้งซากุระ!",
+    "Thông báo về điều gì?": "ประกาศเกี่ยวกับอะไร?",
+    "Việc bắt đầu chương trình khuyến mãi.": "จุดเริ่มต้นของโปรโมชั่น.",
+    "Việc thực phẩm có giá rẻ.": "อาหารมีราคาถูก",
+    "Thời hạn có thể sử dụng tem tích điểm.": "กำหนดเวลาในการใช้การประทับคะแนน",
+    "Người tham gia có thể nhận được quà.": "ผู้เข้าร่วมสามารถรับของขวัญได้"
+  }
+}

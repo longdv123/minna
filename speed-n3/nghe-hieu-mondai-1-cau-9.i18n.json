@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Vừa mới ra khỏi quán bia, hai người đồng nghiệp đang nói chuyện với nhau. Hai người sẽ đi đâu sau đó?": "Just leaving the beer shop, two colleagues were talking to each other. Where will you two go after that?",
+    "Quán bia này khá ổn nhỉ.": "This beer shop is quite good.",
+    "Ừm, với mức giá đó thì đồ ăn cũng ngon đấy.": "Well, for that price, the food is delicious.",
+    "Vẫn còn sớm nhỉ. Này, ở gần đây cũng có quán tên là \"Hisago\", rượu sake ngon lắm đấy. Ghé qua đó một chút không?": "It's still early, isn't it? Hey, there's also a shop called \"Hisago\" nearby, and the sake is really good. Would you like to stop by there for a moment?",
+    "Tửu lượng của cậu mạnh đấy nhỉ. Mình đã uống đủ rồi đấy. Thay vào đó, tớ muốn đi ăn mì ramen rồi về.": "Your tolerance for alcohol is strong, isn't it? I've had enough. Instead, I want to go eat ramen and then go home.",
+    "Ừm, như thế cũng được. Nhưng mà trước khi ăn mì ramen thì ghé qua một chút đi. Cửa hàng gần ngay đây mà.": "Um, that's fine. But before eating ramen, stop by for a bit. The store is near here.",
+    "Đành chịu vậy. Chỉ một chút thôi đấy nhé.": "It can't be helped. Just a little bit.",
+    "Hai người sẽ đi đâu sau đó?": "Where will you two go after that?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Vừa mới ra khỏi quán bia, hai người đồng nghiệp đang nói chuyện với nhau. Hai người sẽ đi đâu sau đó?": "Baru saja meninggalkan toko bir, dua rekannya sedang berbicara satu sama lain. Ke mana kalian berdua akan pergi setelah itu?",
+    "Quán bia này khá ổn nhỉ.": "Toko bir ini cukup bagus.",
+    "Ừm, với mức giá đó thì đồ ăn cũng ngon đấy.": "Yah, untuk harga segitu, makanannya enak.",
+    "Vẫn còn sớm nhỉ. Này, ở gần đây cũng có quán tên là \"Hisago\", rượu sake ngon lắm đấy. Ghé qua đó một chút không?": "Ini masih pagi, bukan? Hei, di dekat sini juga ada toko bernama \"Hisago\", dan sakenya sangat enak. Apakah Anda ingin mampir ke sana sebentar?",
+    "Tửu lượng của cậu mạnh đấy nhỉ. Mình đã uống đủ rồi đấy. Thay vào đó, tớ muốn đi ăn mì ramen rồi về.": "Toleransi Anda terhadap alkohol kuat, bukan? Aku sudah muak. Sebaliknya, saya ingin makan ramen lalu pulang.",
+    "Ừm, như thế cũng được. Nhưng mà trước khi ăn mì ramen thì ghé qua một chút đi. Cửa hàng gần ngay đây mà.": "Um, tidak apa-apa. Namun sebelum makan ramen, mampirlah sebentar. Tokonya dekat sini.",
+    "Đành chịu vậy. Chỉ một chút thôi đấy nhé.": "Mau bagaimana lagi. Sedikit saja.",
+    "Hai người sẽ đi đâu sau đó?": "Ke mana kalian berdua akan pergi setelah itu?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Vừa mới ra khỏi quán bia, hai người đồng nghiệp đang nói chuyện với nhau. Hai người sẽ đi đâu sau đó?": "बियर पसलबाट बाहिर निस्कँदा दुई सहकर्मी आपसमा कुरा गरिरहेका थिए । यसपछि तिमीहरु कहाँ जाने ?",
+    "Quán bia này khá ổn nhỉ.": "यो बियर पसल एकदम राम्रो छ।",
+    "Ừm, với mức giá đó thì đồ ăn cũng ngon đấy.": "खैर, त्यो मूल्यको लागि, खाना स्वादिष्ट छ।",
+    "Vẫn còn sớm nhỉ. Này, ở gần đây cũng có quán tên là \"Hisago\", rượu sake ngon lắm đấy. Ghé qua đó một chút không?": "यो अझै चाँडो छ, हैन? हे, त्यहाँ नजिकै \"हिसागो\" नामक पसल पनि छ, र खातिर साँच्चै राम्रो छ। के तपाईं एक क्षणको लागि त्यहाँ रोकिन चाहनुहुन्छ?",
+    "Tửu lượng của cậu mạnh đấy nhỉ. Mình đã uống đủ rồi đấy. Thay vào đó, tớ muốn đi ăn mì ramen rồi về.": "रक्सीको लागि तपाईंको सहनशीलता बलियो छ, हैन? मसँग पर्याप्त छ। बरु, म रामेन खान गएर घर जान चाहन्छु।",
+    "Ừm, như thế cũng được. Nhưng mà trước khi ăn mì ramen thì ghé qua một chút đi. Cửa hàng gần ngay đây mà.": "उम, त्यो ठीक छ। तर रामेन खानु अघि, केहि समयको लागि रोक्नुहोस्। पसल यहाँ नजिकै छ।",
+    "Đành chịu vậy. Chỉ một chút thôi đấy nhé.": "यसलाई मद्दत गर्न सकिँदैन। थोरै मात्र।",
+    "Hai người sẽ đi đâu sau đó?": "यसपछि तिमीहरु कहाँ जाने ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Vừa mới ra khỏi quán bia, hai người đồng nghiệp đang nói chuyện với nhau. Hai người sẽ đi đâu sau đó?": "ဘီယာဆိုင်က ထွက်လာတော့ လုပ်ဖော်ကိုင်ဖက် နှစ်ယောက် စကားတွေ ပြောဖြစ်ကြသည် ။ မင်းနှစ်​​ယောက်​ ဘယ်​သွားမှာလဲ",
+    "Quán bia này khá ổn nhỉ.": "ဒီဘီယာဆိုင်က တော်တော်ကောင်းပါတယ်။",
+    "Ừm, với mức giá đó thì đồ ăn cũng ngon đấy.": "ဒီဈေးနဲ့ဆိုတော့ အစားအသောက်က အရသာရှိတယ်။",
+    "Vẫn còn sớm nhỉ. Này, ở gần đây cũng có quán tên là \"Hisago\", rượu sake ngon lắm đấy. Ghé qua đó một chút không?": "စောနေသေးတယ်မဟုတ်လား? ဟေး၊ အနီးအနားမှာ \"Hisago\" လို့ ခေါ်တဲ့ ဆိုင်တစ်ဆိုင်လည်း ရှိပြီး ဆာကေးက အရမ်းကောင်းပါတယ်။ အဲဒီနားမှာ ခဏရပ်ချင်လား။",
+    "Tửu lượng của cậu mạnh đấy nhỉ. Mình đã uống đủ rồi đấy. Thay vào đó, tớ muốn đi ăn mì ramen rồi về.": "အရက်အတွက် မင်းရဲ့သည်းခံနိုင်စွမ်းက ပြင်းထန်တယ်မဟုတ်လား? လုံလောက်ပြီပေါ့။ အဲဒီအစား ခေါက်ဆွဲထုပ်စားပြီး အိမ်ပြန်ချင်တယ်။",
+    "Ừm, như thế cũng được. Nhưng mà trước khi ăn mì ramen thì ghé qua một chút đi. Cửa hàng gần ngay đây mà.": "အင်း၊ အဆင်ပြေတယ်။ ဒါပေမယ့် ခေါက်ဆွဲထုပ်မစားခင် ခဏလောက်ရပ်လိုက်ပါ။ ဆိုင်က ဒီနားမှာ။",
+    "Đành chịu vậy. Chỉ một chút thôi đấy nhé.": "မကူညီနိုင်ပါ။ နည်းနည်းလေးပဲ။",
+    "Hai người sẽ đi đâu sau đó?": "မင်းနှစ်​​ယောက်​ ဘယ်​သွားမှာလဲ"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Vừa mới ra khỏi quán bia, hai người đồng nghiệp đang nói chuyện với nhau. Hai người sẽ đi đâu sau đó?": "বিয়ার শপ থেকে বেরোতেই দুই সহকর্মী একে অপরের সঙ্গে কথা বলছিল। এরপর কোথায় যাবেন দুজনে?",
+    "Quán bia này khá ổn nhỉ.": "এই বিয়ার শপটি বেশ ভালো।",
+    "Ừm, với mức giá đó thì đồ ăn cũng ngon đấy.": "ঠিক আছে, সেই দামের জন্য, খাবারটি সুস্বাদু।",
+    "Vẫn còn sớm nhỉ. Này, ở gần đây cũng có quán tên là \"Hisago\", rượu sake ngon lắm đấy. Ghé qua đó một chút không?": "এটা এখনও তাড়াতাড়ি, তাই না? আরে, কাছাকাছি \"হিসাগো\" নামে একটি দোকানও আছে, এবং সেক সত্যিই ভাল। আপনি কি সেখানে কিছুক্ষণের জন্য থামতে চান?",
+    "Tửu lượng của cậu mạnh đấy nhỉ. Mình đã uống đủ rồi đấy. Thay vào đó, tớ muốn đi ăn mì ramen rồi về.": "অ্যালকোহলের প্রতি আপনার সহনশীলতা প্রবল, তাই না? আমি যথেষ্ট ছিল. পরিবর্তে, আমি রামেন খেতে যেতে চাই এবং তারপর বাড়ি যেতে চাই।",
+    "Ừm, như thế cũng được. Nhưng mà trước khi ăn mì ramen thì ghé qua một chút đi. Cửa hàng gần ngay đây mà.": "উম, ঠিক আছে। কিন্তু রামেন খাওয়ার আগে একটু থামুন। দোকান এখানে কাছাকাছি.",
+    "Đành chịu vậy. Chỉ một chút thôi đấy nhé.": "এটা সাহায্য করা যাবে না. সামান্য একটু।",
+    "Hai người sẽ đi đâu sau đó?": "এরপর কোথায় যাবেন দুজনে?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Vừa mới ra khỏi quán bia, hai người đồng nghiệp đang nói chuyện với nhau. Hai người sẽ đi đâu sau đó?": "बीयर की दुकान से निकलते ही दो सहकर्मी आपस में बात कर रहे थे। उसके बाद तुम दोनों कहाँ जाओगे?",
+    "Quán bia này khá ổn nhỉ.": "यह बीयर की दुकान काफी अच्छी है.",
+    "Ừm, với mức giá đó thì đồ ăn cũng ngon đấy.": "ख़ैर, उस कीमत पर, भोजन स्वादिष्ट है।",
+    "Vẫn còn sớm nhỉ. Này, ở gần đây cũng có quán tên là \"Hisago\", rượu sake ngon lắm đấy. Ghé qua đó một chút không?": "यह अभी भी जल्दी है, है ना? अरे, पास में \"हिसागो\" नाम की एक दुकान भी है, और खातिरदारी वास्तव में अच्छी है। क्या आप वहां एक पल के लिए रुकना चाहेंगे?",
+    "Tửu lượng của cậu mạnh đấy nhỉ. Mình đã uống đủ rồi đấy. Thay vào đó, tớ muốn đi ăn mì ramen rồi về.": "शराब के प्रति आपकी सहनशीलता प्रबल है, है ना? मैंने बहुत किया। इसके बजाय, मैं रेमन खाना चाहता हूँ और फिर घर जाना चाहता हूँ।",
+    "Ừm, như thế cũng được. Nhưng mà trước khi ăn mì ramen thì ghé qua một chút đi. Cửa hàng gần ngay đây mà.": "उम्म, यह ठीक है। लेकिन रेमन खाने से पहले थोड़ा रुकें। दुकान यहीं पास में है.",
+    "Đành chịu vậy. Chỉ một chút thôi đấy nhé.": "इसकी मदद नहीं की जा सकती. बस थोड़ा सा.",
+    "Hai người sẽ đi đâu sau đó?": "उसके बाद तुम दोनों कहाँ जाओगे?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Vừa mới ra khỏi quán bia, hai người đồng nghiệp đang nói chuyện với nhau. Hai người sẽ đi đâu sau đó?": "เพิ่งออกจากร้านเบียร์ เพื่อนร่วมงานสองคนก็พูดคุยกัน หลังจากนั้นคุณสองคนจะไปไหน?",
+    "Quán bia này khá ổn nhỉ.": "ร้านเบียร์แห่งนี้ค่อนข้างดี",
+    "Ừm, với mức giá đó thì đồ ăn cũng ngon đấy.": "สำหรับราคานั้นอาหารอร่อย",
+    "Vẫn còn sớm nhỉ. Này, ở gần đây cũng có quán tên là \"Hisago\", rượu sake ngon lắm đấy. Ghé qua đó một chút không?": "มันยังเช้าอยู่ไม่ใช่เหรอ? ใกล้ๆ กันมีร้านชื่อ \"ฮิซาโกะ\" ด้วย และสาเกก็อร่อยมาก คุณอยากจะแวะที่นั่นสักครู่ไหม?",
+    "Tửu lượng của cậu mạnh đấy nhỉ. Mình đã uống đủ rồi đấy. Thay vào đó, tớ muốn đi ăn mì ramen rồi về.": "ความอดทนต่อแอลกอฮอล์ของคุณมีมากใช่ไหม? ฉันพอแล้ว แต่ฉันอยากจะไปกินราเมนแล้วกลับบ้านแทน",
+    "Ừm, như thế cũng được. Nhưng mà trước khi ăn mì ramen thì ghé qua một chút đi. Cửa hàng gần ngay đây mà.": "อืมไม่เป็นไร แต่ก่อนจะกินราเมนก็แวะสักหน่อย ร้านอยู่ใกล้ที่นี่",
+    "Đành chịu vậy. Chỉ một chút thôi đấy nhé.": "มันช่วยไม่ได้ เพียงเล็กน้อย",
+    "Hai người sẽ đi đâu sau đó?": "หลังจากนั้นคุณสองคนจะไปไหน?"
+  }
+}

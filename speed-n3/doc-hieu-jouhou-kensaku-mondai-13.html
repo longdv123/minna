@@ -1,0 +1,150 @@
+<meta charset="UTF-8">
+<style>
+
+hr.style-two { border: 0; }
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+input[type="radio"]{ border: unset; }
+input[type="radio"]{
+    -webkit-appearance: none;
+    width:15px;
+    height:15px;
+    border:1px solid #19283C !important;
+    border-radius:15px !important;
+    background:transparent;
+    opacity:0.7;
+    margin-bottom: -2px;
+}
+input[type="radio"]:checked{ background:#19283C; opacity: 1; }
+
+div.benphai,p.benphai{ text-align: right; }
+div.chinhgiua,p.chinhgiua{ text-align: center; }
+div.chuy{ color: #483D8B; }
+
+table { width: 100%; }
+.tracnghiem table,.tracnghiem td,.tracnghiem th { border: none; }
+
+#question { margin-bottom:8px; }
+.nghia{ margin-bottom:8px; }
+
+.doanvan {
+    margin-top: 15px;
+    margin-bottom:20px;
+    padding: 20px 10px 20px 10px;
+    padding-bottom: 20px;
+    background: #f0f7ff;
+    border: dashed 1px #5b8bd0;
+}
+
+.table_luachon{
+    padding:1px 15px 1px 15px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+}
+.tieude{ color: red; margin-top:20px; font-weight: bold; }
+
+hr.style14{
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.thongtin table {display: table !important;}
+.thongtin tr{display: table-row !important;}
+.thongtin td{display: table-cell !important;}
+.thongtindich table {display: table !important;}
+.thongtindich tr{display: table-row !important;}
+.thongtindich td{display: table-cell !important;}
+
+.thongtin,.thongtin div{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* 2) Table bên trong */
+.thongtin table{
+  width: 100%;
+  border-collapse: collapse;
+}
+/* 3) Khi màn nhỏ: cho table giữ kích thước theo nội dung để phải lướt */
+@media (max-width: 1024px){
+  .thongtin table{
+    width: max-content;     /* quan trọng để tạo scroll */
+    min-width: 100%;        /* vẫn phủ đủ khung nếu table nhỏ */
+    white-space: nowrap;    /* giữ ô không xuống dòng nếu muốn giống AI table */
+  }
+  .thongtin th,
+  .thongtin td{
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 767px){
+    .tracnghiem table, .tracnghiem tr, .tracnghiem td{ border-color: #fff; }
+    #mondai1,#mondai3,#mondai2,#mondai4 { width:45px; }
+    .table_luachon{ width: 100% !important; }
+}
+
+[data-f2-reading] .tracnghiem td:hover{background:Bisque;color:MidnightBlue}[data-f2-reading] .slide-content{display:none}[data-f2-reading] .kqdich{display:none;opacity:0}[data-f2-reading] .f2-options{border:none;width:100%}[data-f2-reading] .f2-options tbody{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr))}[data-f2-reading] .f2-options tr,[data-f2-reading] .f2-options td{border:none;display:block}@media (max-width: 720px){[data-f2-reading] .f2-options tbody{grid-template-columns:1fr}}</style>
+<div class="tab_container speed-page">
+<div id="tracnghiemdiv"><form class="quiz-form" method="post" action="#" name="post"><div id="shownoidung" data-legacy-quiz="" data-f2-reading="" data-source="speed-n3-dochieu" data-lesson="4-13" class="vnjp-sh-on"><p class="tieude"> 問題4-13　</p><br><div class="tracnghiem" data-item="1431" data-correct="1"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　この<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>で8<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby><ruby>5日<rp>（</rp><rt>いつか</rt><rp>）</rp></ruby>に3000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>（<ruby>税込<rp>（</rp><rt>ぜいこみ</rt><rp>）</rp></ruby>）のサンダルを2<ruby>足<rp>（</rp><rt>そく</rt><rp>）</rp></ruby><ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>うと、レジで<ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>う<ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>はいくらか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1431_1" type="radio" name="f21_1431" value="0" aria-label="1"><span style="font-size: 15px"> １　5,400<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1431_1"></span> <span id="result_correct_f21_1431_1"></span></td></tr><tr><td><input id="answer_f21_1431_2" type="radio" name="f21_1431" value="1" aria-label="2"><span style="font-size: 15px"> ２　6,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1431_2"></span> <span id="result_correct_f21_1431_2"></span></td></tr><tr><td><input id="answer_f21_1431_3" type="radio" name="f21_1431" value="2" aria-label="3"><span style="font-size: 15px"> ３　4,800<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1431_3"></span> <span id="result_correct_f21_1431_3"></span></td></tr><tr><td><input id="answer_f21_1431_4" type="radio" name="f21_1431" value="3" aria-label="4"><span style="font-size: 15px"> ４　4,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1431_4"></span> <span id="result_correct_f21_1431_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><br><div class="tracnghiem" data-item="1436" data-correct="2"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　Aさんは8<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby><ruby>8日<rp>（</rp><rt>ようか</rt><rp>）</rp></ruby>にこの<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>でウォーキングシューズを2<ruby>足<rp>（</rp><rt>そく</rt><rp>）</rp></ruby><ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>い、<ruby>合計<rp>（</rp><rt>ごうけい</rt><rp>）</rp></ruby><ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>は<ruby>税込<rp>（</rp><rt>ぜいこ</rt><rp>）</rp></ruby>みで9,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>になった。Aさんがレジで<ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>う<ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>はいくらか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1436_1" type="radio" name="f21_1436" value="0" aria-label="1"><span style="font-size: 15px"> １　9,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1436_1"></span> <span id="result_correct_f21_1436_1"></span></td></tr><tr><td><input id="answer_f21_1436_2" type="radio" name="f21_1436" value="1" aria-label="2"><span style="font-size: 15px"> ２　8,100<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1436_2"></span> <span id="result_correct_f21_1436_2"></span></td></tr><tr><td><input id="answer_f21_1436_3" type="radio" name="f21_1436" value="2" aria-label="3"><span style="font-size: 15px"> ３　7,200<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1436_3"></span> <span id="result_correct_f21_1436_3"></span></td></tr><tr><td><input id="answer_f21_1436_4" type="radio" name="f21_1436" value="3" aria-label="4"><span style="font-size: 15px"> ４　3,600<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1436_4"></span> <span id="result_correct_f21_1436_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><div class="thongtin"><p><br></p><div style="border:1px solid black;padding:15px;">
+<h3><b>ABC<ruby>靴店<rp>(</rp><rt>くつてん</rt><rp>)</rp></ruby>　<font face="Impact">サマーセール</font></b></h3>
+<p style="text-align: right; "><font color="#ffffff" style="background-color: rgb(8, 49, 57);">8/31（<ruby>日<rp>(</rp><rt>にち</rt><rp>)</rp></ruby>）まで</font></p>
+<p></p>
+<p><b>8/1</b>（<ruby>金<rp>(</rp><rt>きん</rt><rp>)</rp></ruby>）　～　<b>8/8</b>（<ruby>金<rp>(</rp><rt>きん</rt><rp>)</rp></ruby>）</p>
+<p>ウォーキングシューズを2<ruby>足<rp>(</rp><rt>そく</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>で</p>
+<p><ruby>合計<rp>(</rp><rt>ごうけい</rt><rp>)</rp></ruby>9,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby>（<ruby>税込<rp>(</rp><rt>ぜいこみ</rt><rp>)</rp></ruby>）<ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>お<ruby>買<rp>(</rp><rt>か</rt><rp>)</rp></ruby>い<ruby>上<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げいただくと、</p>
+<p>レジでさらに<b>20％OFF</b>！</p>
+<p></p>
+<p><b>8/9</b>（<ruby>土<rp>(</rp><rt>ど</rt><rp>)</rp></ruby>）　～　<b>8/17</b>（<ruby>日<rp>(</rp><rt>にち</rt><rp>)</rp></ruby>）</p>
+<p>サンダルを2<ruby>足<rp>(</rp><rt>そく</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>で</p>
+<p><ruby>合計<rp>(</rp><rt>ごうけい</rt><rp>)</rp></ruby>4,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby>（<ruby>税込<rp>(</rp><rt>ぜいこみ</rt><rp>)</rp></ruby>）<ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>お<ruby>買<rp>(</rp><rt>か</rt><rp>)</rp></ruby>い<ruby>上<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げいただくと、</p>
+<p>レジでさらに<b>10％OFF</b>！</p>
+<p></p>
+</div></div><hr class="style-one"><div><div class="slide"><div class="slide-title sl2"><span class="vi-tr">Dịch &amp; Giải thích</span></div><div class="slide-content sl2"><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　この<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>で8<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby><ruby>5日<rp>（</rp><rt>いつか</rt><rp>）</rp></ruby>に3000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>（<ruby>税込<rp>（</rp><rt>ぜいこみ</rt><rp>）</rp></ruby>）のサンダルを2<ruby>足<rp>（</rp><rt>そく</rt><rp>）</rp></ruby><ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>うと、レジで<ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>う<ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>はいくらか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　5,400<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1   5.400 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　6,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2   6.000 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　4,800<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3   4.800 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　4,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4   4.000 yên</div></div></div><p></p><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　Aさんは8<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby><ruby>8日<rp>（</rp><rt>ようか</rt><rp>）</rp></ruby>にこの<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>でウォーキングシューズを2<ruby>足<rp>（</rp><rt>そく</rt><rp>）</rp></ruby><ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>い、<ruby>合計<rp>（</rp><rt>ごうけい</rt><rp>）</rp></ruby><ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>は<ruby>税込<rp>（</rp><rt>ぜいこ</rt><rp>）</rp></ruby>みで9,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>になった。Aさんがレジで<ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>う<ruby>金額<rp>（</rp><rt>きんがく</rt><rp>）</rp></ruby>はいくらか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　9,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1   9.000 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　8,100<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2   8.100 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　7,200<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3   7.200 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　3,600<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4   3.600 yên</div></div></div><p></p><div class="thongtin"><p><br></p><div style="border:1px solid black;padding:15px;">
+<h3><b>ABC<ruby>靴店<rp>(</rp><rt>くつてん</rt><rp>)</rp></ruby>　<font face="Impact">サマーセール</font></b></h3>
+<p style="text-align: right; "><font color="#ffffff" style="background-color: rgb(8, 49, 57);">8/31（<ruby>日<rp>(</rp><rt>にち</rt><rp>)</rp></ruby>）まで</font></p>
+<p></p>
+<p><b>8/1</b>（<ruby>金<rp>(</rp><rt>きん</rt><rp>)</rp></ruby>）　～　<b>8/8</b>（<ruby>金<rp>(</rp><rt>きん</rt><rp>)</rp></ruby>）</p>
+<p>ウォーキングシューズを2<ruby>足<rp>(</rp><rt>そく</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>で</p>
+<p><ruby>合計<rp>(</rp><rt>ごうけい</rt><rp>)</rp></ruby>9,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby>（<ruby>税込<rp>(</rp><rt>ぜいこみ</rt><rp>)</rp></ruby>）<ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>お<ruby>買<rp>(</rp><rt>か</rt><rp>)</rp></ruby>い<ruby>上<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げいただくと、</p>
+<p>レジでさらに<b>20％OFF</b>！</p>
+<p></p>
+<p><b>8/9</b>（<ruby>土<rp>(</rp><rt>ど</rt><rp>)</rp></ruby>）　～　<b>8/17</b>（<ruby>日<rp>(</rp><rt>にち</rt><rp>)</rp></ruby>）</p>
+<p>サンダルを2<ruby>足<rp>(</rp><rt>そく</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>で</p>
+<p><ruby>合計<rp>(</rp><rt>ごうけい</rt><rp>)</rp></ruby>4,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby>（<ruby>税込<rp>(</rp><rt>ぜいこみ</rt><rp>)</rp></ruby>）<ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>お<ruby>買<rp>(</rp><rt>か</rt><rp>)</rp></ruby>い<ruby>上<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>げいただくと、</p>
+<p>レジでさらに<b>10％OFF</b>！</p>
+<p></p>
+</div></div><div class="thongtindich"><p><br></p><div style="border:1px solid black;padding:15px;">
+<h3><b><span class="vi-tr">Cửa hàng giày ABC</span>　<font face="Arial"><span class="vi-tr">Giảm giá mùa hè</span></font></b></h3>
+<p style="text-align: right; "><font color="#ffffff" style="background-color: rgb(8, 49, 57);"><span class="vi-tr">Đến hết ngày 31/8 (Chủ nhật)</span></font></p>
+<p></p>
+<p><b>8/1</b>（<span class="vi-tr">Thứ Sáu</span>）　～　<b>8/8</b>（<span class="vi-tr">Thứ Sáu</span>）</p>
+<p><span class="vi-tr">Khi mua từ 2 đôi giày đi bộ trở lên</span></p>
+<p><span class="vi-tr">với tổng tiền 9.000 yên trở lên (bao gồm thuế),</span></p>
+<p><span class="vi-tr">quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.</span></p>
+<p></p>
+<p><b>8/9</b>（<span class="vi-tr">Thứ Bảy</span>）　～　<b>8/17</b>（<span class="vi-tr">Chủ Nhật</span>）</p>
+<p><span class="vi-tr">Khi mua 2 đôi giày sandal trở lên</span></p>
+<p><span class="vi-tr">với hóa đơn 4.000 yên trở lên (bao gồm thuế),</span></p>
+<p><span class="vi-tr">quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.</span></p>
+<p></p>
+</div></div></div></div></div><input type="button" value="Kết Quả" data-quiz-action="check" class="btn btn-danger" id="ketqua"><input type="button" value="Làm Lại" data-quiz-action="reset" class="btn btn-success" id="lamlai"><input type="button" value="Đáp Án" data-quiz-action="reveal" class="btn btn-primary" id="dapan"><div role="status" data-quiz-status=""><span></span></div></div></form></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="doc-hieu-jouhou-kensaku-mondai-13.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?":"If you buy 2 pairs of Sandals for 3000 yen (including tax) at this store on August 5, how much will you pay at the counter?","1 5.400 yên":"1 5,400 yen","2 6.000 yên":"2 6,000 yen","3 4.800 yên":"3 4,800 yen","4 4.000 yên":"4 4,000 yen","Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?":"Mr. A bought 2 pairs of walking shoes at this store on August 8, the total amount including tax was 9,000 yen. How much did you pay at the counter?","1 9.000 yên":"1 9,000 yen","2 8.100 yên":"2 8,100 yen","3 7.200 yên":"3 7,200 yen","4 3.600 yên":"4 3,600 yen","Dịch & Giải thích":"Translation & Interpretation","Cửa hàng giày ABC":"ABC shoe store","Giảm giá mùa hè":"Summer discount","Đến hết ngày 31/8 (Chủ nhật)":"Until August 31 (Sunday)","Thứ Sáu":"Friday","Khi mua từ 2 đôi giày đi bộ trở lên":"When purchasing 2 or more pairs of walking shoes","với tổng tiền 9.000 yên trở lên (bao gồm thuế),":"for a total of 9,000 yen or more (tax included),","quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.":"You will receive a 20% discount directly at the payment counter.","Thứ Bảy":"Saturday","Chủ Nhật":"Sunday","Khi mua 2 đôi giày sandal trở lên":"When purchasing 2 or more pairs of sandals","với hóa đơn 4.000 yên trở lên (bao gồm thuế),":"with a bill of 4,000 yen or more (tax included),","quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.":"You will receive a 10% discount directly at the payment counter.","Kết Quả":"Result","Làm Lại":"Redo","Đáp Án":"Answer"},"idMap":{"Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?":"Jika Anda membeli 2 pasang Sandal seharga 3000 yen (termasuk pajak) di toko ini pada tanggal 5 Agustus, berapa yang akan Anda bayar di konter?","1 5.400 yên":"15.400 yen","2 6.000 yên":"2 6.000 yen","3 4.800 yên":"3 4.800 yen","4 4.000 yên":"4 4.000 yen","Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?":"Tuan A membeli 2 pasang sepatu jalan di toko ini pada tanggal 8 Agustus, jumlah totalnya termasuk pajak adalah 9.000 yen. Berapa banyak yang Anda bayar di konter?","1 9.000 yên":"19.000 yen","2 8.100 yên":"2 8.100 yen","3 7.200 yên":"3 7.200 yen","4 3.600 yên":"4 3.600 yen","Dịch & Giải thích":"Terjemahan & Interpretasi","Cửa hàng giày ABC":"Toko sepatu ABC","Giảm giá mùa hè":"Diskon musim panas","Đến hết ngày 31/8 (Chủ nhật)":"Hingga 31 Agustus (Minggu)","Thứ Sáu":"Jumat","Khi mua từ 2 đôi giày đi bộ trở lên":"Saat membeli 2 pasang sepatu jalan atau lebih","với tổng tiền 9.000 yên trở lên (bao gồm thuế),":"dengan total 9.000 yen atau lebih (termasuk pajak),","quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.":"Anda akan menerima diskon 20% langsung di konter pembayaran.","Thứ Bảy":"Sabtu","Chủ Nhật":"Minggu","Khi mua 2 đôi giày sandal trở lên":"Saat membeli 2 pasang sandal atau lebih","với hóa đơn 4.000 yên trở lên (bao gồm thuế),":"dengan tagihan 4.000 yen atau lebih (termasuk pajak),","quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.":"Anda akan menerima diskon 10% langsung di konter pembayaran.","Kết Quả":"Hasil","Làm Lại":"Mengulangi","Đáp Án":"Menjawab"},"neMap":{"Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?":"यदि तपाईंले अगस्ट 5 मा यस स्टोरमा 3000 येन (कर सहित) मा 2 जोडी स्यान्डलहरू किन्नुभयो भने, तपाईंले काउन्टरमा कति तिर्नु पर्छ?","1 5.400 yên":"15,400 येन","2 6.000 yên":"26,000 येन","3 4.800 yên":"३४,८०० येन","4 4.000 yên":"४४,००० येन","Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?":"श्री ए ले यस पसलमा अगस्ट 8 मा 2 जोडी हिड्ने जुत्ता किन्नुभयो, कर सहित कुल रकम 9,000 येन थियो। तपाईंले काउन्टरमा कति तिर्नु भयो?","1 9.000 yên":"19,000 येन","2 8.100 yên":"28,100 येन","3 7.200 yên":"३७,२०० येन","4 3.600 yên":"४३,६०० येन","Dịch & Giải thích":"अनुवाद र व्याख्या","Cửa hàng giày ABC":"एबीसी जुत्ता पसल","Giảm giá mùa hè":"गर्मी छूट","Đến hết ngày 31/8 (Chủ nhật)":"अगस्ट ३१ (आइतबार) सम्म","Thứ Sáu":"शुक्रबार","Khi mua từ 2 đôi giày đi bộ trở lên":"हिड्ने जुत्ताको २ वा बढी जोडी खरिद गर्दा","với tổng tiền 9.000 yên trở lên (bao gồm thuế),":"कुल 9,000 येन वा बढीको लागि (कर समावेश),","quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.":"तपाईंले भुक्तानी काउन्टरमा सिधै २०% छुट प्राप्त गर्नुहुनेछ।","Thứ Bảy":"शनिबार","Chủ Nhật":"आइतबार","Khi mua 2 đôi giày sandal trở lên":"२ वा सोभन्दा बढी जोडी चप्पल खरिद गर्दा","với hóa đơn 4.000 yên trở lên (bao gồm thuế),":"4,000 येन वा बढीको बिलको साथ (कर समावेश),","quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.":"तपाईंले भुक्तानी काउन्टरमा 10% छुट प्राप्त गर्नुहुनेछ।","Kết Quả":"नतिजा","Làm Lại":"पुन: गर्नुहोस्","Đáp Án":"जवाफ"},"myMap":{"Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?":"ဩဂုတ်လ 5 ရက်နေ့တွင် ဤဆိုင်တွင် ယန်း 3000 (အခွန်အပါအဝင်) ဖိနပ် ၂ စုံကို ဝယ်ပါက ကောင်တာတွင် မည်မျှပေးချေမည်နည်း။","1 5.400 yên":"၁ ယန်း ၅၄၀၀","2 6.000 yên":"၂ ယန်း ၆၀၀၀","3 4.800 yên":"၃ ယန်း ၄၈၀၀","4 4.000 yên":"၄ ၄၀၀၀ ယန်း","Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?":"မစ္စတာ A သည် သြဂုတ်လ ၈ ရက်နေ့တွင် ဤစတိုးတွင် လမ်းလျှောက်ဖိနပ် ၂ စုံကို ဝယ်ယူခဲ့ပြီး အခွန်အပါအဝင် စုစုပေါင်း ပမာဏမှာ ယန်း ၉၀၀၀ ဖြစ်သည်။ ကောင်တာမှာ မင်းဘယ်လောက်ပေးလဲ။","1 9.000 yên":"၁ ၉၀၀၀ ယန်း","2 8.100 yên":"၂ ယန်း ၈၁၀၀","3 7.200 yên":"၃ ၇၂၀၀ ယန်း","4 3.600 yên":"၄ ယန်း ၃၆၀၀","Dịch & Giải thích":"ဘာသာပြန်နှင့် စကားပြန်","Cửa hàng giày ABC":"ABC ဖိနပ်ဆိုင်","Giảm giá mùa hè":"နွေရာသီလျှော့စျေး","Đến hết ngày 31/8 (Chủ nhật)":"သြဂုတ် ၃၁ ရက် (တနင်္ဂနွေနေ့) အထိ၊","Thứ Sáu":"သောကြာ","Khi mua từ 2 đôi giày đi bộ trở lên":"လမ်းလျှောက်ဖိနပ် ၂ စုံနှင့်အထက်ဝယ်သည့်အခါ","với tổng tiền 9.000 yên trở lên (bao gồm thuế),":"စုစုပေါင်း ယန်း ၉၀၀၀ နှင့်အထက် (အခွန်ပါ၀င်သည်)၊","quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.":"ငွေပေးချေမှုကောင်တာတွင် 20% လျှော့စျေးကို သင် တိုက်ရိုက်ရရှိမည်ဖြစ်သည်။","Thứ Bảy":"စနေနေ့","Chủ Nhật":"တနင်္ဂနွေ","Khi mua 2 đôi giày sandal trở lên":"ခြေညှပ်ဖိနပ် ၂ စုံနှင့်အထက် ဝယ်ယူသည့်အခါ","với hóa đơn 4.000 yên trở lên (bao gồm thuế),":"ယန်း 4,000 နှင့်အထက် (အခွန်ပါ၀င်သည်)၊","quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.":"ငွေပေးချေမှုကောင်တာတွင် 10% လျှော့စျေးကို သင်ရရှိမည်ဖြစ်သည်။","Kết Quả":"ရလဒ်","Làm Lại":"ပြန်လုပ်ပါ။","Đáp Án":"ဖြေ"},"bnMap":{"Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?":"আপনি যদি 5 আগস্ট এই দোকানে 3000 ইয়েনে (ট্যাক্স সহ) 2 জোড়া স্যান্ডেল কেনেন, তাহলে আপনি কাউন্টারে কত টাকা দেবেন?","1 5.400 yên":"1 5,400 ইয়েন","2 6.000 yên":"26,000 ইয়েন","3 4.800 yên":"3 4,800 ইয়েন","4 4.000 yên":"4 4,000 ইয়েন","Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?":"জনাব A 8 আগস্ট এই দোকানে 2 জোড়া হাঁটার জুতা কিনেছিলেন, ট্যাক্স সহ মোট পরিমাণ ছিল 9,000 ইয়েন। আপনি কাউন্টারে কত টাকা দিয়েছেন?","1 9.000 yên":"19,000 ইয়েন","2 8.100 yên":"2 8,100 ইয়েন","3 7.200 yên":"3 7,200 ইয়েন","4 3.600 yên":"4 3,600 ইয়েন","Dịch & Giải thích":"অনুবাদ ও ব্যাখ্যা","Cửa hàng giày ABC":"এবিসি জুতার দোকান","Giảm giá mùa hè":"গ্রীষ্মকালীন ছাড়","Đến hết ngày 31/8 (Chủ nhật)":"৩১ আগস্ট (রবিবার) পর্যন্ত","Thứ Sáu":"শুক্রবার","Khi mua từ 2 đôi giày đi bộ trở lên":"2 বা তার বেশি জোড়া হাঁটার জুতা কেনার সময়","với tổng tiền 9.000 yên trở lên (bao gồm thuế),":"মোট 9,000 ইয়েন বা তার বেশি (ট্যাক্স অন্তর্ভুক্ত),","quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.":"আপনি পেমেন্ট কাউন্টারে সরাসরি 20% ডিসকাউন্ট পাবেন।","Thứ Bảy":"শনিবার","Chủ Nhật":"রবিবার","Khi mua 2 đôi giày sandal trở lên":"2 বা তার বেশি জোড়া স্যান্ডেল কেনার সময়","với hóa đơn 4.000 yên trở lên (bao gồm thuế),":"4,000 ইয়েন বা তার বেশি বিল সহ (ট্যাক্স অন্তর্ভুক্ত),","quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.":"আপনি পেমেন্ট কাউন্টারে সরাসরি 10% ডিসকাউন্ট পাবেন।","Kết Quả":"ফলাফল","Làm Lại":"আবার করুন","Đáp Án":"উত্তর"},"hiMap":{"Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?":"यदि आप 5 अगस्त को इस स्टोर से 3000 येन (टैक्स सहित) के 2 जोड़ी सैंडल खरीदते हैं, तो आप काउंटर पर कितना भुगतान करेंगे?","1 5.400 yên":"1 5,400 येन","2 6.000 yên":"2 6,000 येन","3 4.800 yên":"3 4,800 येन","4 4.000 yên":"4 4,000 येन","Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?":"मिस्टर ए ने 8 अगस्त को इस स्टोर से 2 जोड़ी चलने वाले जूते खरीदे, कर सहित कुल राशि 9,000 येन थी। आपने काउंटर पर कितना भुगतान किया?","1 9.000 yên":"1 9,000 येन","2 8.100 yên":"2 8,100 येन","3 7.200 yên":"3 7,200 येन","4 3.600 yên":"4 3,600 येन","Dịch & Giải thích":"अनुवाद एवं व्याख्या","Cửa hàng giày ABC":"एबीसी जूते की दुकान","Giảm giá mùa hè":"ग्रीष्मकालीन छूट","Đến hết ngày 31/8 (Chủ nhật)":"31 अगस्त (रविवार) तक","Thứ Sáu":"शुक्रवार","Khi mua từ 2 đôi giày đi bộ trở lên":"2 या अधिक जोड़ी चलने वाले जूते खरीदते समय","với tổng tiền 9.000 yên trở lên (bao gồm thuế),":"कुल 9,000 येन या अधिक के लिए (कर शामिल),","quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.":"आपको सीधे पेमेंट काउंटर पर 20% की छूट मिलेगी।","Thứ Bảy":"शनिवार","Chủ Nhật":"रविवार","Khi mua 2 đôi giày sandal trở lên":"2 या अधिक जोड़ी सैंडल खरीदते समय","với hóa đơn 4.000 yên trở lên (bao gồm thuế),":"4,000 येन या अधिक (कर सहित) के बिल के साथ,","quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.":"आपको सीधे पेमेंट काउंटर पर 10% की छूट मिलेगी।","Kết Quả":"परिणाम","Làm Lại":"फिर से करना","Đáp Án":"उत्तर"},"thMap":{"Nếu mua 2 đôi dép Sandal giá 3000 yên (bao gồm thuế) tại cửa hàng này vào ngày mồng 5 tháng 8, thì số tiền thanh toán tại quầy là bao nhiêu?":"หากคุณซื้อรองเท้าแตะ 2 คู่ในราคา 3,000 เยน (รวมภาษี) ที่ร้านนี้ในวันที่ 5 สิงหาคม คุณจะจ่ายเงินที่เคาน์เตอร์เท่าไร?","1 5.400 yên":"1 5,400 เยน","2 6.000 yên":"2 6,000 เยน","3 4.800 yên":"3 4,800 เยน","4 4.000 yên":"4 4,000 เยน","Anh A mua 2 đôi giày đi bộ tại cửa hàng này vào ngày mồng 8 tháng 8, tổng số tiền cả thuế là 9000 yên. Số tiền mà anh trả tại quầy là bao nhiêu?":"นาย A ซื้อรองเท้าเดิน 2 คู่ที่ร้านนี้เมื่อวันที่ 8 สิงหาคม รวมภาษีมูลค่า 9,000 เยน คุณจ่ายเงินที่เคาน์เตอร์เท่าไหร่?","1 9.000 yên":"1 9,000 เยน","2 8.100 yên":"2 8,100 เยน","3 7.200 yên":"3 7,200 เยน","4 3.600 yên":"4 3,600 เยน","Dịch & Giải thích":"การแปลและการตีความ","Cửa hàng giày ABC":"ร้านรองเท้าเอบีซี","Giảm giá mùa hè":"ส่วนลดฤดูร้อน","Đến hết ngày 31/8 (Chủ nhật)":"จนถึงวันที่ 31 สิงหาคม (วันอาทิตย์)","Thứ Sáu":"วันศุกร์","Khi mua từ 2 đôi giày đi bộ trở lên":"เมื่อซื้อรองเท้าเดิน 2 คู่ขึ้นไป","với tổng tiền 9.000 yên trở lên (bao gồm thuế),":"รวมตั้งแต่ 9,000 เยนขึ้นไป (รวมภาษี)","quý khách sẽ được giảm 20% trực tiếp tại quầy thanh toán.":"คุณจะได้รับส่วนลด 20% ที่เคาน์เตอร์ชำระเงินโดยตรง","Thứ Bảy":"วันเสาร์","Chủ Nhật":"วันอาทิตย์","Khi mua 2 đôi giày sandal trở lên":"เมื่อซื้อรองเท้าแตะ 2 คู่ขึ้นไป","với hóa đơn 4.000 yên trở lên (bao gồm thuế),":"ด้วยใบเรียกเก็บเงินตั้งแต่ 4,000 เยนขึ้นไป (รวมภาษี)","quý khách sẽ được giảm 10% trực tiếp tại quầy thanh toán.":"คุณจะได้รับส่วนลด 10% ที่เคาน์เตอร์ชำระเงินโดยตรง","Kết Quả":"ผลลัพธ์","Làm Lại":"ทำซ้ำ","Đáp Án":"คำตอบ"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<script src="speed-quiz.js"></script>
+<link rel="stylesheet" href="style.css">

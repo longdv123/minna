@@ -1,0 +1,273 @@
+<meta charset="UTF-8">
+<style>
+
+hr.style-two { border: 0; }
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+input[type="radio"]{ border: unset; }
+input[type="radio"]{
+    -webkit-appearance: none;
+    width:15px;
+    height:15px;
+    border:1px solid #19283C !important;
+    border-radius:15px !important;
+    background:transparent;
+    opacity:0.7;
+    margin-bottom: -2px;
+}
+input[type="radio"]:checked{ background:#19283C; opacity: 1; }
+
+div.benphai,p.benphai{ text-align: right; }
+div.chinhgiua,p.chinhgiua{ text-align: center; }
+div.chuy{ color: #483D8B; }
+
+table { width: 100%; }
+.tracnghiem table,.tracnghiem td,.tracnghiem th { border: none; }
+
+#question { margin-bottom:8px; }
+.nghia{ margin-bottom:8px; }
+
+.doanvan {
+    margin-top: 15px;
+    margin-bottom:20px;
+    padding: 20px 10px 20px 10px;
+    padding-bottom: 20px;
+    background: #f0f7ff;
+    border: dashed 1px #5b8bd0;
+}
+
+.table_luachon{
+    padding:1px 15px 1px 15px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+}
+.tieude{ color: red; margin-top:20px; font-weight: bold; }
+
+hr.style14{
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.thongtin table {display: table !important;}
+.thongtin tr{display: table-row !important;}
+.thongtin td{display: table-cell !important;}
+.thongtindich table {display: table !important;}
+.thongtindich tr{display: table-row !important;}
+.thongtindich td{display: table-cell !important;}
+
+.thongtin,.thongtin div{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* 2) Table bên trong */
+.thongtin table{
+  width: 100%;
+  border-collapse: collapse;
+}
+/* 3) Khi màn nhỏ: cho table giữ kích thước theo nội dung để phải lướt */
+@media (max-width: 1024px){
+  .thongtin table{
+    width: max-content;     /* quan trọng để tạo scroll */
+    min-width: 100%;        /* vẫn phủ đủ khung nếu table nhỏ */
+    white-space: nowrap;    /* giữ ô không xuống dòng nếu muốn giống AI table */
+  }
+  .thongtin th,
+  .thongtin td{
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 767px){
+    .tracnghiem table, .tracnghiem tr, .tracnghiem td{ border-color: #fff; }
+    #mondai1,#mondai3,#mondai2,#mondai4 { width:45px; }
+    .table_luachon{ width: 100% !important; }
+}
+
+[data-f2-reading] .tracnghiem td:hover{background:Bisque;color:MidnightBlue}[data-f2-reading] .slide-content{display:none}[data-f2-reading] .kqdich{display:none;opacity:0}[data-f2-reading] .f2-options{border:none;width:100%}[data-f2-reading] .f2-options tbody{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr))}[data-f2-reading] .f2-options tr,[data-f2-reading] .f2-options td{border:none;display:block}@media (max-width: 720px){[data-f2-reading] .f2-options tbody{grid-template-columns:1fr}}</style>
+<div class="tab_container speed-page">
+<div id="tracnghiemdiv"><form class="quiz-form" method="post" action="#" name="post"><div id="shownoidung" data-legacy-quiz="" data-f2-reading="" data-source="speed-n3-dochieu" data-lesson="4-4" class="vnjp-sh-on"><p class="tieude"> 問題4-4　</p><div class="doanvan">&nbsp;&nbsp;&nbsp;<ruby>森<rp>（</rp><rt>もり</rt><rp>）</rp></ruby>さんはゴールデンウイーク（※１）に、<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>と<ruby>親<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>せきの<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>どもたちを<ruby>連<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>れて、<ruby>１泊<rp>（</rp><rt>いっぱく</rt><rp>）</rp></ruby>の<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くことにしました。<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>は３<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>ですが、<ruby>今回<rp>（</rp><rt>こんかい</rt><rp>）</rp></ruby>の<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くのは<ruby>森<rp>（</rp><rt>もり</rt><rp>）</rp></ruby>さんと<ruby>奥<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>さん、<ruby>中学生<rp>（</rp><rt>ちゅうがくせい</rt><rp>）</rp></ruby>の<ruby>長女<rp>（</rp><rt>ちょうじょ</rt><rp>）</rp></ruby>、<ruby>小学生<rp>（</rp><rt>しょうがくせい</rt><rp>）</rp></ruby>の<ruby>森<rp>（</rp><rt>もり</rt><rp>）</rp></ruby>さんの<ruby>甥<rp>（</rp><rt>おい</rt><rp>）</rp></ruby>、4<ruby>歳<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>の<ruby>姪<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>です。<ruby>宿泊<rp>（</rp><rt>しゅくはく</rt><rp>）</rp></ruby><ruby>料金<rp>（</rp><rt>りょうきん</rt><rp>）</rp></ruby>の<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby>は、<ruby>全部<rp>（</rp><rt>ぜんぶ</rt><rp>）</rp></ruby>で５<ruby>万円<rp>（</rp><rt>まんえん</rt><rp>）</rp></ruby>です。</div><div class="chuy">（※１）ゴールデンウイーク：4<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>の<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わりから５<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>の<ruby>初<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>めにかけての<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い<ruby>休<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>み</div><br><div class="tracnghiem" data-item="1290" data-correct="1"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby>で<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれるコースはどれか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1290_1" type="radio" name="f21_1290" value="0" aria-label="1"><span style="font-size: 15px"> １　Aコース、Bコース、Cコースに<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。 </span><span id="result_question_f21_1290_1"></span> <span id="result_correct_f21_1290_1"></span></td></tr><tr><td><input id="answer_f21_1290_2" type="radio" name="f21_1290" value="1" aria-label="2"><span style="font-size: 15px"> ２　Eコース<ruby>以外<rp>（</rp><rt>いがい</rt><rp>）</rp></ruby>は<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。 </span><span id="result_question_f21_1290_2"></span> <span id="result_correct_f21_1290_2"></span></td></tr><tr><td><input id="answer_f21_1290_3" type="radio" name="f21_1290" value="2" aria-label="3"><span style="font-size: 15px"> ３　Aコース、Bコースに<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。 </span><span id="result_question_f21_1290_3"></span> <span id="result_correct_f21_1290_3"></span></td></tr><tr><td><input id="answer_f21_1290_4" type="radio" name="f21_1290" value="3" aria-label="4"><span style="font-size: 15px"> ４　Aコースだけ<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。 </span><span id="result_question_f21_1290_4"></span> <span id="result_correct_f21_1290_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><br><div class="tracnghiem" data-item="1295" data-correct="1"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　「Eコース」に<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まる<ruby>場合<rp>（</rp><rt>ばあい</rt><rp>）</rp></ruby>、<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby>はいくら<ruby>足<rp>（</rp><rt>た</rt><rp>）</rp></ruby>りないか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1295_1" type="radio" name="f21_1295" value="0" aria-label="1"><span style="font-size: 15px"> １　15,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1295_1"></span> <span id="result_correct_f21_1295_1"></span></td></tr><tr><td><input id="answer_f21_1295_2" type="radio" name="f21_1295" value="1" aria-label="2"><span style="font-size: 15px"> ２　16,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1295_2"></span> <span id="result_correct_f21_1295_2"></span></td></tr><tr><td><input id="answer_f21_1295_3" type="radio" name="f21_1295" value="2" aria-label="3"><span style="font-size: 15px"> ３　17,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1295_3"></span> <span id="result_correct_f21_1295_3"></span></td></tr><tr><td><input id="answer_f21_1295_4" type="radio" name="f21_1295" value="3" aria-label="4"><span style="font-size: 15px"> ４　18,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1295_4"></span> <span id="result_correct_f21_1295_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><div class="thongtin"><p><br></p>
+<div style="border:1px solid black;padding:15px;">
+<p><br></p><p style="text-align: center; "><b>ゴールデンウイークのご<ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby><ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>（<ruby>大人<rp>(</rp><rt>おとな</rt><rp>)</rp></ruby><ruby>一人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby><ruby>分<rp>(</rp><rt>ぶん</rt><rp>)</rp></ruby>の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>）</b></p><p><br></p>
+<div style="overflow-x:auto;">
+<table class="table table-bordered" style="text-align: center;">
+<tbody><tr>
+<td width="20%"><ruby>部屋<rp>(</rp><rt>へや</rt><rp>)</rp></ruby>サイズ</td>
+<td width="20%">3<ruby>人<rp>(</rp><rt>にん</rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+<td width="20%">4<ruby>人<rp>(</rp><rt>にん<br></rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+<td width="20%">5<ruby>人<rp>(</rp><rt>にん<br></rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+<td width="20%">6<ruby>人<rp>(</rp><rt>にん<br></rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: center;">Aコース	</td>
+<td style="text-align: center;">16,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td style="text-align: center;">13,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">11,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">10,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Bコース	</td>
+<td style="text-align: center;">17,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">14,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">12,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">11,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Cコース</td>	
+<td style="text-align: center;">18,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">15,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">13,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">12,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Dコース</td>	
+<td style="text-align: center;">17,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">14,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">13,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">10,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Eコース</td>	
+<td style="text-align: center;">24,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">20,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">18,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">17,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+</tr>
+</tbody></table>
+<p>■<ruby>子供<rp>(</rp><rt>こども</rt><rp>)</rp></ruby>（<ruby>小学生<rp>(</rp><rt>しょうがくせい</rt><rp>)</rp></ruby>）の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>は、<ruby>大人<rp>(</rp><rt>おとな</rt><rp>)</rp></ruby>の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>の<ruby>半分<rp>(</rp><rt>はんぶん</rt><rp>)</rp></ruby>です。</p>
+<p>■<ruby>幼児<rp>(</rp><rt>ようじ</rt><rp>)</rp></ruby>（3～5<ruby>歳<rp>(</rp><rt>さい</rt><rp>)</rp></ruby>）の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>は、<ruby>一人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>3,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby>です。</p>
+<p>■<ruby>中学生<rp>(</rp><rt>ちゅうがくせい</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>は、<ruby>大人<rp>(</rp><rt>おとな</rt><rp>)</rp></ruby>の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>と<ruby>同<rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じです。</p>
+</div></div></div><hr class="style-one"><div><div class="slide"><div class="slide-title sl2"><span class="vi-tr">Dịch &amp; Giải thích</span></div><div class="slide-content sl2"><div class="doanvan">&nbsp;&nbsp;&nbsp;<div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>森<rp>（</rp><rt>もり</rt><rp>）</rp></ruby>さんはゴールデンウイーク（※１）に、<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>と<ruby>親<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>せきの<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>どもたちを<ruby>連<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>れて、<ruby>１泊<rp>（</rp><rt>いっぱく</rt><rp>）</rp></ruby>の<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くことにしました。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>は３<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>ですが、<ruby>今回<rp>（</rp><rt>こんかい</rt><rp>）</rp></ruby>の<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くのは<ruby>森<rp>（</rp><rt>もり</rt><rp>）</rp></ruby>さんと<ruby>奥<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>さん、<ruby>中学生<rp>（</rp><rt>ちゅうがくせい</rt><rp>）</rp></ruby>の<ruby>長女<rp>（</rp><rt>ちょうじょ</rt><rp>）</rp></ruby>、<ruby>小学生<rp>（</rp><rt>しょうがくせい</rt><rp>）</rp></ruby>の<ruby>森<rp>（</rp><rt>もり</rt><rp>）</rp></ruby>さんの<ruby>甥<rp>（</rp><rt>おい</rt><rp>）</rp></ruby>、4<ruby>歳<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>の<ruby>姪<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>です。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>宿泊<rp>（</rp><rt>しゅくはく</rt><rp>）</rp></ruby><ruby>料金<rp>（</rp><rt>りょうきん</rt><rp>）</rp></ruby>の<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby>は、<ruby>全部<rp>（</rp><rt>ぜんぶ</rt><rp>）</rp></ruby>で５<ruby>万円<rp>（</rp><rt>まんえん</rt><rp>）</rp></ruby>です。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Dự toán tiền trọ lại tổng là 5 vạn yên.</div></div></div></div><div class="chuy"><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">（※１）ゴールデンウイーク：4<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>の<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わりから５<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>の<ruby>初<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>めにかけての<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い<ruby>休<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>み</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)</div></div></div></div><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby>で<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれるコースはどれか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Có thể trọ lại trong số tiền dự toán là gói nào?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　Aコース、Bコース、Cコースに<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1   Có thể trọ lại gói A,B,C.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　Eコース<ruby>以外<rp>（</rp><rt>いがい</rt><rp>）</rp></ruby>は<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2   Ngoài gói E thì đều có thể trọ lại.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　Aコース、Bコースに<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3   Có thể trọ lại gói A, B.</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　Aコースだけ<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まれる。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4   Chỉ có thể trọ lại gói A.</div></div></div><p></p><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　「Eコース」に<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まる<ruby>場合<rp>（</rp><rt>ばあい</rt><rp>）</rp></ruby>、<ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby>はいくら<ruby>足<rp>（</rp><rt>た</rt><rp>）</rp></ruby>りないか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Trường hợp trọ lại ở "gói E", dự toán còn thiếu bao nhiêu?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　15,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1   15,000 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　16,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2   16,000 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　17,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3   17,000 yên</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　18,000<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4   18,000 yên</div></div></div><p></p><div class="thongtin"><p><br></p>
+<div style="border:1px solid black;padding:15px;">
+<p><br></p><p style="text-align: center; "><b>ゴールデンウイークのご<ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby><ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>（<ruby>大人<rp>(</rp><rt>おとな</rt><rp>)</rp></ruby><ruby>一人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby><ruby>分<rp>(</rp><rt>ぶん</rt><rp>)</rp></ruby>の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>）</b></p><p><br></p>
+<div style="overflow-x:auto;">
+<table class="table table-bordered" style="text-align: center;">
+<tbody><tr>
+<td width="20%"><ruby>部屋<rp>(</rp><rt>へや</rt><rp>)</rp></ruby>サイズ</td>
+<td width="20%">3<ruby>人<rp>(</rp><rt>にん</rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+<td width="20%">4<ruby>人<rp>(</rp><rt>にん<br></rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+<td width="20%">5<ruby>人<rp>(</rp><rt>にん<br></rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+<td width="20%">6<ruby>人<rp>(</rp><rt>にん<br></rt><rp>)</rp></ruby><ruby>部屋<rp>(</rp><rt>べや</rt><rp>)</rp></ruby></td>
+</tr>
+<tr>
+<td style="text-align: center;">Aコース	</td>
+<td style="text-align: center;">16,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td style="text-align: center;">13,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">11,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">10,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Bコース	</td>
+<td style="text-align: center;">17,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">14,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">12,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">11,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Cコース</td>	
+<td style="text-align: center;">18,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">15,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">13,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">12,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Dコース</td>	
+<td style="text-align: center;">17,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">14,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">13,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">10,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">Eコース</td>	
+<td style="text-align: center;">24,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">20,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">18,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>	
+<td style="text-align: center;">17,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+</tr>
+</tbody></table>
+<p>■<ruby>子供<rp>(</rp><rt>こども</rt><rp>)</rp></ruby>（<ruby>小学生<rp>(</rp><rt>しょうがくせい</rt><rp>)</rp></ruby>）の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>は、<ruby>大人<rp>(</rp><rt>おとな</rt><rp>)</rp></ruby>の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>の<ruby>半分<rp>(</rp><rt>はんぶん</rt><rp>)</rp></ruby>です。</p>
+<p>■<ruby>幼児<rp>(</rp><rt>ようじ</rt><rp>)</rp></ruby>（3～5<ruby>歳<rp>(</rp><rt>さい</rt><rp>)</rp></ruby>）の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>は、<ruby>一人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>3,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby>です。</p>
+<p>■<ruby>中学生<rp>(</rp><rt>ちゅうがくせい</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>は、<ruby>大人<rp>(</rp><rt>おとな</rt><rp>)</rp></ruby>の<ruby>料金<rp>(</rp><rt>りょうきん</rt><rp>)</rp></ruby>と<ruby>同<rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じです。</p>
+</div></div></div><div class="thongtindich"><p><br></p>
+<div style="border:1px solid black;padding:15px;">
+<p><br></p><p style="text-align: center; "><b><span class="vi-tr">Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)</span></b></p><p><br></p>
+<div style="overflow-x:auto;">
+<table class="table table-bordered" style="text-align: center;">
+<tbody><tr>
+<td width="20%"><span class="vi-tr">Kích thước phòng</span></td>
+<td width="20%"><span class="vi-tr">Phòng 3 người</span></td>
+<td width="20%"><span class="vi-tr">Phòng 4 người</span></td>
+<td width="20%"><span class="vi-tr">Phòng 5 người</span></td>
+<td width="20%"><span class="vi-tr">Phòng 6 người</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="vi-tr">Gói A</span></td>
+<td style="text-align: center;"><span class="vi-tr">16,000 Yên</span></td>
+<td style="text-align: center;"><span class="vi-tr">13,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">11,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">10,000 Yên</span></td>
+
+</tr>
+<tr>
+<td style="text-align: center;"><span class="vi-tr">Gói B</span></td>
+<td style="text-align: center;"><span class="vi-tr">17,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">14,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">12,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">11,000 Yên</span></td>
+
+</tr>
+<tr>
+<td style="text-align: center;"><span class="vi-tr">Gói C</span></td>	
+<td style="text-align: center;"><span class="vi-tr">18,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">15,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">13,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">12,000 Yên</span></td>
+
+</tr>
+<tr>
+<td style="text-align: center;"><span class="vi-tr">Gói D</span></td>	
+<td style="text-align: center;"><span class="vi-tr">17,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">14,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">13,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">10,000 Yên</span></td>
+
+</tr>
+<tr>
+<td style="text-align: center;"><span class="vi-tr">Gói E</span></td>	
+<td style="text-align: center;"><span class="vi-tr">24,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">20,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">18,000 Yên</span></td>	
+<td style="text-align: center;"><span class="vi-tr">17,000 Yên</span></td>
+</tr>
+</tbody></table>
+<p><span class="vi-tr">■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.</span></p>
+<p><span class="vi-tr">■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.</span></p>
+<p><span class="vi-tr">■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.</span></p>
+</div></div></div></div></div></div><input type="button" value="Kết Quả" data-quiz-action="check" class="btn btn-danger" id="ketqua"><input type="button" value="Làm Lại" data-quiz-action="reset" class="btn btn-success" id="lamlai"><input type="button" value="Đáp Án" data-quiz-action="reveal" class="btn btn-primary" id="dapan"><div role="status" data-quiz-status=""><span></span></div></div></form></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="doc-hieu-jouhou-kensaku-mondai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.":"Mr. Mori decided to take his family and relatives on a trip to stay one night during Golden Week.","Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.":"The family consists of 3 people, traveling this time including Mr. Mori, his wife, eldest daughter in high school, grandson in elementary school and 4-year-old granddaughter.","Dự toán tiền trọ lại tổng là 5 vạn yên.":"The estimated total cost of accommodation is 50,000 yen.","(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)":"(※1)ゴールデンウイーク：Long holiday from late April to early May (golden week)","Có thể trọ lại trong số tiền dự toán là gói nào?":"Which package can I stay within the estimated amount?","1 Có thể trọ lại gói A,B,C.":"1 You can stay in packages A, B, C.","2 Ngoài gói E thì đều có thể trọ lại.":"2 Apart from package E, everyone can stay.","3 Có thể trọ lại gói A, B.":"3 You can stay in packages A and B.","4 Chỉ có thể trọ lại gói A.":"4 You can only stay in package A.","Trường hợp trọ lại ở \"gói E\", dự toán còn thiếu bao nhiêu?":"In case of staying in \"package E\", how much is left in the estimate?","1 15,000 yên":"1 15,000 yen","2 16,000 yên":"2 16,000 yen","3 17,000 yên":"3 17,000 yen","4 18,000 yên":"4 18,000 yen","Dịch & Giải thích":"Translation & Interpretation","Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)":"Room rental price for 1 night during Golden Week (price per adult)","Kích thước phòng":"Room size","Phòng 3 người":"Room for 3 people","Phòng 4 người":"Room for 4 people","Phòng 5 người":"Room for 5 people","Phòng 6 người":"Room for 6 people","Gói A":"Package A","16,000 Yên":"16,000 Yen","13,000 Yên":"13,000 Yen","11,000 Yên":"11,000 Yen","10,000 Yên":"10,000 Yen","Gói B":"Package B","17,000 Yên":"17,000 Yen","14,000 Yên":"14,000 Yen","12,000 Yên":"12,000 Yen","Gói C":"Package C","18,000 Yên":"18,000 Yen","15,000 Yên":"15,000 Yen","Gói D":"Package D","Gói E":"Package E","24,000 Yên":"24,000 Yen","20,000 Yên":"20,000 Yen","■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.":"■ The price for children (elementary school students) is half the price for adults.","■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.":"■ Price for young children (3-5 years old), 3000 yen/person.","■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.":"■ Prices for high school students and above are the same as adult prices.","Kết Quả":"Result","Làm Lại":"Redo","Đáp Án":"Answer"},"idMap":{"Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.":"Pak Mori memutuskan untuk mengajak keluarga dan kerabatnya berwisata untuk menginap satu malam selama Golden Week.","Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.":"Keluarga terdiri dari 3 orang, perjalanan kali ini antara lain Pak Mori, istrinya, putri sulungnya yang duduk di bangku SMA, keponakannya yang masih duduk di bangku SD, dan keponakannya yang berusia 4 tahun.","Dự toán tiền trọ lại tổng là 5 vạn yên.":"Perkiraan total biaya akomodasi adalah 50.000 yen.","(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)":"(※1)ゴールデンウイーク：Libur panjang dari akhir April hingga awal Mei (minggu emas)","Có thể trọ lại trong số tiền dự toán là gói nào?":"Paket mana yang bisa saya dapatkan sesuai jumlah perkiraan?","1 Có thể trọ lại gói A,B,C.":"1 Anda bisa menginap di paket A, B, C.","2 Ngoài gói E thì đều có thể trọ lại.":"2 Selain paket E, semua orang bisa menginap.","3 Có thể trọ lại gói A, B.":"3 Anda bisa menginap di paket A dan B.","4 Chỉ có thể trọ lại gói A.":"4 Anda hanya bisa menginap di paket A.","Trường hợp trọ lại ở \"gói E\", dự toán còn thiếu bao nhiêu?":"Jika menginap di \"paket E\", berapa sisa perkiraannya?","1 15,000 yên":"1 15.000 yen","2 16,000 yên":"2 16.000 yen","3 17,000 yên":"3 17.000 yen","4 18,000 yên":"4 18.000 yen","Dịch & Giải thích":"Terjemahan & Interpretasi","Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)":"Harga sewa kamar 1 malam selama Golden Week (harga per dewasa)","Kích thước phòng":"Ukuran kamar","Phòng 3 người":"Kamar untuk 3 orang","Phòng 4 người":"Kamar untuk 4 orang","Phòng 5 người":"Kamar untuk 5 orang","Phòng 6 người":"Kamar untuk 6 orang","Gói A":"Paket A","16,000 Yên":"16.000 yen","13,000 Yên":"13.000 yen","11,000 Yên":"11.000 yen","10,000 Yên":"10.000 yen","Gói B":"Paket B","17,000 Yên":"17.000 yen","14,000 Yên":"14.000 yen","12,000 Yên":"12.000 yen","Gói C":"Paket C","18,000 Yên":"18.000 yen","15,000 Yên":"15.000 yen","Gói D":"Paket D","Gói E":"Paket E","24,000 Yên":"24.000 yen","20,000 Yên":"20.000 yen","■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.":"■ Harga untuk anak-anak (siswa SD) setengah harga dewasa.","■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.":"■ Harga untuk anak kecil (3-5 tahun), 3000 yen/orang.","■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.":"■ Harga untuk pelajar SMA ke atas sama dengan harga dewasa.","Kết Quả":"Hasil","Làm Lại":"Mengulangi","Đáp Án":"Menjawab"},"neMap":{"Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.":"श्री मोरीले आफ्नो परिवार र आफन्तहरूलाई गोल्डेन वीकमा एक रात बस्नको लागि यात्रामा लैजाने निर्णय गरे।","Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.":"श्री मोरी, उनकी श्रीमती, हाईस्कूलमा जेठी छोरी, प्राथमिक विद्यालयमा पढेका भतिजा र ४ वर्षीया भतिजी सहित यस पटक यात्रा गर्दै परिवारमा ३ जना छन्।","Dự toán tiền trọ lại tổng là 5 vạn yên.":"आवासको अनुमानित कुल लागत 50,000 येन छ।","(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)":"(※1) ゴールデンウイーク: लामो बिदा अप्रिलको अन्त्यदेखि मेको शुरुमा (सुनौलो हप्ता)","Có thể trọ lại trong số tiền dự toán là gói nào?":"कुन प्याकेज म अनुमानित रकम भित्र रहन सक्छु?","1 Có thể trọ lại gói A,B,C.":"1 तपाईं प्याकेज A, B, C मा रहन सक्नुहुन्छ।","2 Ngoài gói E thì đều có thể trọ lại.":"२ प्याकेज E बाहेक, सबैजना बस्न सक्छन्।","3 Có thể trọ lại gói A, B.":"3 तपाईं प्याकेज A र B मा रहन सक्नुहुन्छ।","4 Chỉ có thể trọ lại gói A.":"4 तपाईं प्याकेज A मा मात्र रहन सक्नुहुन्छ।","Trường hợp trọ lại ở \"gói E\", dự toán còn thiếu bao nhiêu?":"\"प्याकेज E\" मा रहँदा अनुमानमा कति बाँकी रहन्छ?","1 15,000 yên":"115,000 येन","2 16,000 yên":"216,000 येन","3 17,000 yên":"3 17,000 येन","4 18,000 yên":"4 18,000 येन","Dịch & Giải thích":"अनुवाद र व्याख्या","Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)":"गोल्डेन वीकमा १ रातको लागि कोठा भाडाको मूल्य (प्रति वयस्क मूल्य)","Kích thước phòng":"कोठा आकार","Phòng 3 người":"3 मान्छे को लागि कोठा","Phòng 4 người":"4 मान्छे को लागि कोठा","Phòng 5 người":"5 मान्छे को लागि कोठा","Phòng 6 người":"6 मान्छे को लागि कोठा","Gói A":"प्याकेज ए","16,000 Yên":"१६,००० येन","13,000 Yên":"१३,००० येन","11,000 Yên":"११,००० येन","10,000 Yên":"१०,००० येन","Gói B":"प्याकेज बि","17,000 Yên":"17,000 येन","14,000 Yên":"14,000 येन","12,000 Yên":"12,000 येन","Gói C":"प्याकेज सी","18,000 Yên":"18,000 येन","15,000 Yên":"१५,००० येन","Gói D":"प्याकेज डी","Gói E":"प्याकेज ई","24,000 Yên":"24,000 येन","20,000 Yên":"२०,००० येन","■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.":"■ बच्चाहरूको लागि मूल्य (प्राथमिक विद्यालयका विद्यार्थीहरू) वयस्कहरूको लागि आधा मूल्य हो।","■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.":"■ साना बच्चाहरु को लागि मूल्य (3-5 वर्ष), 3000 येन / व्यक्ति।","■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.":"■ हाई स्कूलका विद्यार्थीहरू र माथिका लागि मूल्यहरू वयस्क मूल्यहरू जस्तै छन्।","Kết Quả":"नतिजा","Làm Lại":"पुन: गर्नुहोस्","Đáp Án":"जवाफ"},"myMap":{"Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.":"မစ္စတာ Mori သည် Golden Week တွင် တစ်ညတည်းခိုရန် ၎င်း၏ မိသားစုနှင့် ဆွေမျိုးများကို ခရီးတစ်ခုတွင် ခေါ်ဆောင်ရန် ဆုံးဖြတ်ခဲ့သည်။","Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.":"မိသားစုတွင် Mr. Mori၊ ၎င်း၏ဇနီး၊ အထက်တန်းကျောင်းမှ အကြီးဆုံးသမီး၊ မူလတန်းကျောင်းမှ တူဖြစ်သူနှင့် ၄ နှစ်အရွယ် တူမတို့ အပါအဝင် လူ ၃ ဦး လိုက်ပါသွားကြသည်။","Dự toán tiền trọ lại tổng là 5 vạn yên.":"တည်းခိုခ စုစုပေါင်း ခန့်မှန်းခြေ ယန်း ၅၀၀၀၀ ဖြစ်သည်။","(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)":"(※1)ゴールデンウイーク： ဧပြီလနှောင်းပိုင်းမှ မေလအစောပိုင်း (ရွှေပတ်) အားလပ်ရက်ရှည်","Có thể trọ lại trong số tiền dự toán là gói nào?":"ခန့်မှန်းခြေငွေပမာဏအတွင်း ဘယ်ပက်ကေ့ချ်မှာနေနိုင်မလဲ။","1 Có thể trọ lại gói A,B,C.":"1 ပက်ကေ့ဂျ် A၊ B၊ C တွင် သင်နေနိုင်သည်။","2 Ngoài gói E thì đều có thể trọ lại.":"2 package E မှလွဲ၍ လူတိုင်းနေနိုင်သည် ။","3 Có thể trọ lại gói A, B.":"3 ပက်ကေ့ဂျ် A နှင့် B တွင် သင်နေနိုင်သည်။","4 Chỉ có thể trọ lại gói A.":"4 သင်သည် package A တွင်သာနေနိုင်သည်။","Trường hợp trọ lại ở \"gói E\", dự toán còn thiếu bao nhiêu?":"\"ပက်ကေ့ဂျ် E\" တွင်ရှိနေပါက ခန့်မှန်းခြေအားဖြင့် မည်မျှကျန်သနည်း။","1 15,000 yên":"၁ ယန်း ၁၅၀၀၀","2 16,000 yên":"၂ ယန်း ၁၆၀၀၀","3 17,000 yên":"ယန်း ၁၇၀၀၀ ၃","4 18,000 yên":"ယန်း ၁၈၀၀၀ ၄","Dịch & Giải thích":"ဘာသာပြန်နှင့် စကားပြန်","Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)":"Golden Week အတွင်း 1 ညအတွက် အခန်းငှားရမ်းခစျေးနှုန်း (လူကြီးတစ်ဦးနှုန်း)","Kích thước phòng":"အခန်းအရွယ်အစား","Phòng 3 người":"လူ ၃ ယောက်အတွက် အခန်း","Phòng 4 người":"လူ ၄ ယောက်အတွက် အခန်း","Phòng 5 người":"လူ 5 ယောက်စာအခန်း","Phòng 6 người":"လူ ၆ ယောက်အတွက် အခန်း","Gói A":"Package A","16,000 Yên":"ယန်း ၁၆၀၀၀","13,000 Yên":"ယန်း ၁၃၀၀၀","11,000 Yên":"ယန်း ၁၁၀၀၀","10,000 Yên":"ယန်း ၁၀၀၀၀","Gói B":"Package B","17,000 Yên":"ယန်း ၁၇၀၀၀","14,000 Yên":"ယန်း ၁၄၀၀၀","12,000 Yên":"ယန်း ၁၂၀၀၀","Gói C":"Package C","18,000 Yên":"ယန်း ၁၈၀၀၀","15,000 Yên":"ယန်း ၁၅၀၀၀","Gói D":"Package D","Gói E":"အထုပ် E","24,000 Yên":"ယန်း ၂၄၀၀၀","20,000 Yên":"ယန်း ၂၀၀၀၀","■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.":"■ ကလေးများအတွက် (မူလတန်းကျောင်းသားများ) ၏စျေးနှုန်းသည်လူကြီးများအတွက်ထက်ဝက်စျေးနှုန်းဖြစ်ပါသည်။","■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.":"■ အသက် ၃ နှစ်မှ ၅ နှစ်ကြား ကလေးများအတွက် ဈေးနှုန်းမှာ ၃၀၀၀ ယန်း။","■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.":"■ အထက်တန်းကျောင်းသားများနှင့်အထက် စျေးနှုန်းများသည် လူကြီးစျေးနှုန်းများနှင့် တူညီပါသည်။","Kết Quả":"ရလဒ်","Làm Lại":"ပြန်လုပ်ပါ။","Đáp Án":"ဖြေ"},"bnMap":{"Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.":"মিঃ মরি গোল্ডেন উইক চলাকালীন এক রাত থাকার জন্য তার পরিবার এবং আত্মীয়দের একটি ভ্রমণে নিয়ে যাওয়ার সিদ্ধান্ত নিয়েছিলেন।","Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.":"পরিবারটি 3 জন নিয়ে গঠিত, মিঃ মরি, তার স্ত্রী, উচ্চ বিদ্যালয়ের বড় মেয়ে, প্রাথমিক বিদ্যালয়ে ভাতিজা এবং 4 বছর বয়সী ভাতিজি সহ এই সময়ে ভ্রমণ করছেন।","Dự toán tiền trọ lại tổng là 5 vạn yên.":"বাসস্থানের আনুমানিক মোট খরচ 50,000 ইয়েন।","(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)":"(※1) ゴールデンウイーク: এপ্রিলের শেষ থেকে মে মাসের প্রথম দিকে দীর্ঘ ছুটি (সোনালী সপ্তাহ)","Có thể trọ lại trong số tiền dự toán là gói nào?":"কোন প্যাকেজ আমি আনুমানিক পরিমাণের মধ্যে থাকতে পারি?","1 Có thể trọ lại gói A,B,C.":"1 আপনি প্যাকেজ A, B, C এ থাকতে পারেন।","2 Ngoài gói E thì đều có thể trọ lại.":"2 প্যাকেজ E ছাড়াও, সবাই থাকতে পারে।","3 Có thể trọ lại gói A, B.":"3 আপনি প্যাকেজ A এবং B এ থাকতে পারেন।","4 Chỉ có thể trọ lại gói A.":"4 আপনি শুধুমাত্র প্যাকেজ A-তে থাকতে পারবেন।","Trường hợp trọ lại ở \"gói E\", dự toán còn thiếu bao nhiêu?":"\"প্যাকেজ ই\" তে থাকার ক্ষেত্রে প্রাক্কলনে কত অবশিষ্ট থাকে?","1 15,000 yên":"115,000 ইয়েন","2 16,000 yên":"2 16,000 ইয়েন","3 17,000 yên":"3 17,000 ইয়েন","4 18,000 yên":"4 18,000 ইয়েন","Dịch & Giải thích":"অনুবাদ ও ব্যাখ্যা","Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)":"গোল্ডেন উইক চলাকালীন 1 রাতের জন্য রুম ভাড়ার মূল্য (প্রাপ্তবয়স্ক প্রতি মূল্য)","Kích thước phòng":"কক্ষের আকার","Phòng 3 người":"3 জনের জন্য রুম","Phòng 4 người":"4 জনের জন্য রুম","Phòng 5 người":"5 জনের জন্য রুম","Phòng 6 người":"6 জনের জন্য রুম","Gói A":"প্যাকেজ এ","16,000 Yên":"16,000 ইয়েন","13,000 Yên":"13,000 ইয়েন","11,000 Yên":"11,000 ইয়েন","10,000 Yên":"10,000 ইয়েন","Gói B":"প্যাকেজ বি","17,000 Yên":"17,000 ইয়েন","14,000 Yên":"14,000 ইয়েন","12,000 Yên":"12,000 ইয়েন","Gói C":"প্যাকেজ সি","18,000 Yên":"18,000 ইয়েন","15,000 Yên":"15,000 ইয়েন","Gói D":"প্যাকেজ ডি","Gói E":"প্যাকেজ ই","24,000 Yên":"24,000 ইয়েন","20,000 Yên":"20,000 ইয়েন","■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.":"■ শিশুদের জন্য মূল্য (প্রাথমিক বিদ্যালয়ের ছাত্র) প্রাপ্তবয়স্কদের জন্য অর্ধেক মূল্য।","■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.":"■ ছোট বাচ্চাদের জন্য মূল্য (3-5 বছর বয়সী), 3000 ইয়েন/ব্যক্তি।","■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.":"■ উচ্চ বিদ্যালয়ের শিক্ষার্থীদের জন্য মূল্য এবং তার উপরে প্রাপ্তবয়স্কদের দামের মতোই।","Kết Quả":"ফলাফল","Làm Lại":"আবার করুন","Đáp Án":"উত্তর"},"hiMap":{"Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.":"श्री मोरी ने गोल्डन वीक के दौरान एक रात रुकने के लिए अपने परिवार और रिश्तेदारों को यात्रा पर ले जाने का फैसला किया।","Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.":"परिवार में 3 लोग शामिल हैं, जो इस बार यात्रा कर रहे हैं, जिनमें श्री मोरी, उनकी पत्नी, हाई स्कूल में पढ़ने वाली बड़ी बेटी, प्राथमिक स्कूल में पढ़ने वाला भतीजा और 4 साल की भतीजी शामिल हैं।","Dự toán tiền trọ lại tổng là 5 vạn yên.":"आवास की अनुमानित कुल लागत 50,000 येन है।","(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)":"(※1)ゴールデンウイーク：अप्रैल के अंत से मई की शुरुआत तक लंबी छुट्टी (सुनहरा सप्ताह)","Có thể trọ lại trong số tiền dự toán là gói nào?":"अनुमानित राशि के भीतर मैं किस पैकेज में रह सकता हूं?","1 Có thể trọ lại gói A,B,C.":"1 आप पैकेज ए, बी, सी में रह सकते हैं।","2 Ngoài gói E thì đều có thể trọ lại.":"2 पैकेज ई के अलावा हर कोई रह सकता है।","3 Có thể trọ lại gói A, B.":"3 आप पैकेज ए और बी में रह सकते हैं।","4 Chỉ có thể trọ lại gói A.":"4 आप केवल पैकेज ए में रह सकते हैं।","Trường hợp trọ lại ở \"gói E\", dự toán còn thiếu bao nhiêu?":"\"पैकेज ई\" में रहने की स्थिति में अनुमान में कितना बचा है?","1 15,000 yên":"1 15,000 येन","2 16,000 yên":"2 16,000 येन","3 17,000 yên":"3 17,000 येन","4 18,000 yên":"4 18,000 येन","Dịch & Giải thích":"अनुवाद एवं व्याख्या","Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)":"गोल्डन वीक के दौरान 1 रात के लिए कमरे का किराया मूल्य (प्रति वयस्क मूल्य)","Kích thước phòng":"कमरे का आकार","Phòng 3 người":"3 लोगों के लिए कमरा","Phòng 4 người":"4 लोगों के लिए कमरा","Phòng 5 người":"5 लोगों के लिए कमरा","Phòng 6 người":"6 लोगों के लिए कमरा","Gói A":"पैकेज ए","16,000 Yên":"16,000 येन","13,000 Yên":"13,000 येन","11,000 Yên":"11,000 येन","10,000 Yên":"10,000 येन","Gói B":"पैकेज बी","17,000 Yên":"17,000 येन","14,000 Yên":"14,000 येन","12,000 Yên":"12,000 येन","Gói C":"पैकेज सी","18,000 Yên":"18,000 येन","15,000 Yên":"15,000 येन","Gói D":"पैकेज डी","Gói E":"पैकेज ई","24,000 Yên":"24,000 येन","20,000 Yên":"20,000 येन","■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.":"■ बच्चों (प्राथमिक विद्यालय के छात्रों) के लिए कीमत वयस्कों के लिए आधी कीमत है।","■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.":"■ छोटे बच्चों (3-5 वर्ष) के लिए मूल्य, 3000 येन/व्यक्ति।","■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.":"■ हाई स्कूल और उससे ऊपर के छात्रों के लिए कीमतें वयस्क कीमतों के समान हैं।","Kết Quả":"परिणाम","Làm Lại":"फिर से करना","Đáp Án":"उत्तर"},"thMap":{"Anh Mori đã quyết định đưa gia đình và con cái họ hàng đi du lịch trọ lại 1 đêm vào tuần lễ vàng.":"คุณโมริตัดสินใจพาครอบครัวและญาติไปเที่ยวพักหนึ่งคืนในช่วงโกลเด้นวีค","Gia đình gồm có 3 người, đi du lịch lần này gồm anh Mori, vợ, con gái lớn học trung học, cháu trai học tiểu học và đứa cháu gái 4 tuổi.":"ครอบครัวนี้มีทั้งหมด 3 คน โดยเดินทางในครั้งนี้ ได้แก่ นายโมริ ภรรยาของเขา ลูกสาวคนโตในโรงเรียนมัธยมปลาย หลานชายในโรงเรียนประถม และหลานสาววัย 4 ขวบ","Dự toán tiền trọ lại tổng là 5 vạn yên.":"ค่าที่พักทั้งหมดโดยประมาณอยู่ที่ 50,000 เยน","(※1)ゴールデンウイーク：Kỳ nghỉ dài ngày từ cuối tháng 4 đến đầu tháng 5 (tuần lễ vàng)":"(*1)ゴールデンウイーク：วันหยุดยาวตั้งแต่ปลายเดือนเมษายนถึงต้นเดือนพฤษภาคม (สัปดาห์ทอง)","Có thể trọ lại trong số tiền dự toán là gói nào?":"แพ็คเกจไหนสามารถเข้าพักได้ตามจำนวนโดยประมาณ?","1 Có thể trọ lại gói A,B,C.":"1 สามารถเข้าพักได้ในแพ็คเกจ A, B, C","2 Ngoài gói E thì đều có thể trọ lại.":"2 นอกจากแพ็คเกจ E ทุกคนสามารถอยู่ได้","3 Có thể trọ lại gói A, B.":"3 คุณสามารถเข้าพักในแพ็คเกจ A และ B","4 Chỉ có thể trọ lại gói A.":"4 เข้าพักได้เฉพาะแพ็คเกจ A เท่านั้น","Trường hợp trọ lại ở \"gói E\", dự toán còn thiếu bao nhiêu?":"กรณีเข้าพัก “แพ็คเกจ E” เหลือประมาณเท่าไร?","1 15,000 yên":"1 15,000 เยน","2 16,000 yên":"2 16,000 เยน","3 17,000 yên":"3 17,000 เยน","4 18,000 yên":"4 18,000 เยน","Dịch & Giải thích":"การแปลและการตีความ","Mức giá thuê phòng trọ lại 1 đêm trong dịp tuần lễ vàng ( giá tiền cho một người lớn)":"ราคาเช่าห้องพัก 1 คืน ช่วง Golden Week (ราคาต่อผู้ใหญ่หนึ่งท่าน)","Kích thước phòng":"ขนาดห้อง","Phòng 3 người":"ห้องพักสำหรับ 3 ท่าน","Phòng 4 người":"ห้องพักสำหรับ 4 คน","Phòng 5 người":"ห้องพักสำหรับ 5 คน","Phòng 6 người":"ห้องพักสำหรับ 6 คน","Gói A":"แพ็คเกจ A","16,000 Yên":"16,000 เยน","13,000 Yên":"13,000 เยน","11,000 Yên":"11,000 เยน","10,000 Yên":"10,000 เยน","Gói B":"แพ็คเกจบี","17,000 Yên":"17,000 เยน","14,000 Yên":"14,000 เยน","12,000 Yên":"12,000 เยน","Gói C":"แพ็คเกจ C","18,000 Yên":"18,000 เยน","15,000 Yên":"15,000 เยน","Gói D":"แพ็คเกจ D","Gói E":"แพ็คเกจ E","24,000 Yên":"24,000 เยน","20,000 Yên":"20,000 เยน","■ Mức giá cho trẻ em (học sinh tiểu học), bằng nửa mức giá dành cho người lớn.":"■ ราคาสำหรับเด็ก (นักเรียนชั้นประถมศึกษา) จะเป็นราคาครึ่งหนึ่งของราคาผู้ใหญ่","■ Mức giá cho trẻ nhỏ (từ 3-5 tuổi), 3000 yên/người.":"■ ราคาเด็กเล็ก (อายุ 3-5 ปี) 3,000 เยน/คน","■ Mức giá cho học sinh trung học trở lên, giống với mức giá người lớn.":"■ ราคาสำหรับนักเรียนมัธยมปลายขึ้นไปจะเป็นราคาเดียวกับราคาผู้ใหญ่","Kết Quả":"ผลลัพธ์","Làm Lại":"ทำซ้ำ","Đáp Án":"คำตอบ"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<script src="speed-quiz.js"></script>
+<link rel="stylesheet" href="style.css">

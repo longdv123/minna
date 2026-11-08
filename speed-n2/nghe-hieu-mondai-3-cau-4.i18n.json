@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Trên TV, một phụ nữ đang nói.": "On TV, a woman was speaking.",
+    "Hôm nay tôi sẽ nói về các loại hạt. Hạt thường được dùng làm nguyên liệu cho đồ ngọt và bánh mì, và cũng thường được bày làm món nhắm khi uống rượu như bia hay whisky. Nhưng có phải nhiều người kiêng vì sợ hạt nhiều calo sẽ làm tăng cân? Thực ra, người ta đã phát hiện hạt giàu vitamin và khoáng chất, có tác dụng ngăn ngừa lão hóa và phòng các bệnh liên quan đến lối sống. Lượng ăn hiệu quả để duy trì sức khỏe là khoảng 10 hạt mỗi ngày. Có nhiều loại hạt như đậu phộng, hạnh nhân và cả hạt dẻ, mỗi loại có thành phần dinh dưỡng khác nhau. Vì vậy nên trộn nhiều loại hạt để ăn. Gợi ý là nghiền nhỏ rồi cho vào salad cùng đậu phụ chẳng hạn. Đơn giản và có thể ăn hàng ngày.": "Today I will talk about nuts. The seeds are often used as an ingredient in sweets and breads, and are also often served as a snack when drinking alcohol such as beer or whiskey. But do many people abstain because they fear that high-calorie nuts will cause weight gain? In fact, people have found that seeds are rich in vitamins and minerals, which help prevent aging and prevent lifestyle-related diseases. An effective intake to maintain health is about 10 seeds per day. There are many types of nuts such as peanuts, almonds and chestnuts, each with different nutritional composition. Therefore, you should mix many types of seeds to eat. The suggestion is to grind it into small pieces and add it to salad with tofu, for example. Simple and can be eaten every day.",
+    "Người phụ nữ đang nói về vấn đề gì?": "What is the woman talking about?",
+    "Dinh dưỡng của các loại hạt": "Nutrition of nuts",
+    "Các loại hạt": "Nuts",
+    "Các món ăn chế biến từ hạt": "Dishes made from seeds",
+    "Giảm cân bằng hạt": "Lose weight with seeds",
+    "Đáp án đúng": "Correct answer"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Trên TV, một phụ nữ đang nói.": "Di TV, seorang wanita sedang berbicara.",
+    "Hôm nay tôi sẽ nói về các loại hạt. Hạt thường được dùng làm nguyên liệu cho đồ ngọt và bánh mì, và cũng thường được bày làm món nhắm khi uống rượu như bia hay whisky. Nhưng có phải nhiều người kiêng vì sợ hạt nhiều calo sẽ làm tăng cân? Thực ra, người ta đã phát hiện hạt giàu vitamin và khoáng chất, có tác dụng ngăn ngừa lão hóa và phòng các bệnh liên quan đến lối sống. Lượng ăn hiệu quả để duy trì sức khỏe là khoảng 10 hạt mỗi ngày. Có nhiều loại hạt như đậu phộng, hạnh nhân và cả hạt dẻ, mỗi loại có thành phần dinh dưỡng khác nhau. Vì vậy nên trộn nhiều loại hạt để ăn. Gợi ý là nghiền nhỏ rồi cho vào salad cùng đậu phụ chẳng hạn. Đơn giản và có thể ăn hàng ngày.": "Hari ini saya akan berbicara tentang kacang. Bijinya sering digunakan sebagai bahan pembuatan manisan dan roti, serta sering dijadikan camilan saat minum minuman beralkohol seperti bir atau wiski. Namun apakah banyak orang yang berpantang karena takut kacang berkalori tinggi akan menyebabkan penambahan berat badan? Faktanya, masyarakat telah menemukan bahwa biji-bijian kaya akan vitamin dan mineral, yang membantu mencegah penuaan dan mencegah penyakit yang berhubungan dengan gaya hidup. Asupan yang efektif untuk menjaga kesehatan adalah sekitar 10 biji per hari. Ada banyak jenis kacang-kacangan seperti kacang tanah, almond, dan chestnut, yang masing-masing memiliki komposisi nutrisi berbeda. Oleh karena itu, sebaiknya campurkan banyak jenis biji-bijian untuk dimakan. Sarannya, potong kecil-kecil dan tambahkan ke salad dengan tahu, misalnya. Sederhana dan bisa dimakan setiap hari.",
+    "Người phụ nữ đang nói về vấn đề gì?": "Apa yang dibicarakan wanita itu?",
+    "Dinh dưỡng của các loại hạt": "Nutrisi kacang-kacangan",
+    "Các loại hạt": "Gila",
+    "Các món ăn chế biến từ hạt": "Hidangan yang terbuat dari biji",
+    "Giảm cân bằng hạt": "Menurunkan berat badan dengan biji",
+    "Đáp án đúng": "Jawaban yang benar"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Trên TV, một phụ nữ đang nói.": "टिभीमा एउटी महिला बोलिरहेकी थिइन् ।",
+    "Hôm nay tôi sẽ nói về các loại hạt. Hạt thường được dùng làm nguyên liệu cho đồ ngọt và bánh mì, và cũng thường được bày làm món nhắm khi uống rượu như bia hay whisky. Nhưng có phải nhiều người kiêng vì sợ hạt nhiều calo sẽ làm tăng cân? Thực ra, người ta đã phát hiện hạt giàu vitamin và khoáng chất, có tác dụng ngăn ngừa lão hóa và phòng các bệnh liên quan đến lối sống. Lượng ăn hiệu quả để duy trì sức khỏe là khoảng 10 hạt mỗi ngày. Có nhiều loại hạt như đậu phộng, hạnh nhân và cả hạt dẻ, mỗi loại có thành phần dinh dưỡng khác nhau. Vì vậy nên trộn nhiều loại hạt để ăn. Gợi ý là nghiền nhỏ rồi cho vào salad cùng đậu phụ chẳng hạn. Đơn giản và có thể ăn hàng ngày.": "आज म नटको बारेमा कुरा गर्नेछु। बीउहरू प्राय: मिठाई र रोटीहरूमा एक घटकको रूपमा प्रयोग गरिन्छ, र बियर वा व्हिस्की जस्ता रक्सी पिउँदा अक्सर खाजाको रूपमा पनि प्रयोग गरिन्छ। तर के धेरै मानिसहरू उच्च क्यालोरी नटहरूले तौल बढाउने डरले टाढै बस्छन्? वास्तवमा, मानिसहरूले फेला पारेका छन् कि बीउहरू भिटामिन र खनिजहरूमा प्रशस्त छन्, जसले उमेरलाई रोक्न र जीवनशैली सम्बन्धी रोगहरू रोक्न मद्दत गर्दछ। स्वास्थ्य कायम राख्न एक प्रभावकारी सेवन प्रति दिन लगभग 10 बीउ हो। बदाम, बदाम र चेस्टनट जस्ता धेरै प्रकारका नटहरू छन्, प्रत्येकको विभिन्न पोषण संरचनाहरू छन्। त्यसैले, तपाईंले धेरै प्रकारका बीउहरू मिसाएर खानैपर्छ। सुझाव यो हो कि यसलाई सानो टुक्राहरूमा पीस्नुहोस् र टोफुको साथ सलादमा थप्नुहोस्, उदाहरणका लागि। सरल र हरेक दिन खान सकिन्छ।",
+    "Người phụ nữ đang nói về vấn đề gì?": "के कुरा गरिरहेकी महिला ?",
+    "Dinh dưỡng của các loại hạt": "नट को पोषण",
+    "Các loại hạt": "नट",
+    "Các món ăn chế biến từ hạt": "बीउबाट बनेको परिकार",
+    "Giảm cân bằng hạt": "बीउ संग वजन कम गर्नुहोस्",
+    "Đáp án đúng": "सहि उत्तर"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Trên TV, một phụ nữ đang nói.": "တီဗီတွင် အမျိုးသမီးတစ်ဦး စကားပြောနေသည်။",
+    "Hôm nay tôi sẽ nói về các loại hạt. Hạt thường được dùng làm nguyên liệu cho đồ ngọt và bánh mì, và cũng thường được bày làm món nhắm khi uống rượu như bia hay whisky. Nhưng có phải nhiều người kiêng vì sợ hạt nhiều calo sẽ làm tăng cân? Thực ra, người ta đã phát hiện hạt giàu vitamin và khoáng chất, có tác dụng ngăn ngừa lão hóa và phòng các bệnh liên quan đến lối sống. Lượng ăn hiệu quả để duy trì sức khỏe là khoảng 10 hạt mỗi ngày. Có nhiều loại hạt như đậu phộng, hạnh nhân và cả hạt dẻ, mỗi loại có thành phần dinh dưỡng khác nhau. Vì vậy nên trộn nhiều loại hạt để ăn. Gợi ý là nghiền nhỏ rồi cho vào salad cùng đậu phụ chẳng hạn. Đơn giản và có thể ăn hàng ngày.": "ဒီနေ့တော့ အခွံမာသီးတွေအကြောင်း ပြောပြချင်ပါတယ်။ အစေ့များကို သကြားလုံးများနှင့် မုန့်များတွင် ပါဝင်ပစ္စည်းအဖြစ် အသုံးပြုလေ့ရှိပြီး ဘီယာ သို့မဟုတ် ဝီစကီကဲ့သို့ အရက်သောက်သည့်အခါတွင်လည်း သရေစာအဖြစ် မကြာခဏ ကျွေးလေ့ရှိသည်။ ဒါပေမယ့် ကယ်လိုရီများတဲ့ အခွံမာသီးတွေက ကိုယ်အလေးချိန်တက်လာမှာကို စိုးရိမ်တာကြောင့် ရှောင်နေကြသလား။ တကယ်တော့၊ အစေ့မှာ ဗီတာမင်နဲ့ သတ္တုဓာတ်တွေ ကြွယ်ဝစွာပါဝင်ပြီး အိုမင်းရင့်ရော်မှုကို တားဆီးပေးပြီး လူနေမှုပုံစံနဲ့ ဆက်နွယ်တဲ့ ရောဂါတွေကို တားဆီးပေးနိုင်တယ်လို့ လူတွေက တွေ့ရှိခဲ့ကြပါတယ်။ ကျန်းမာရေးကို ထိန်းသိမ်းရန် ထိရောက်သော စားသုံးမှုသည် တစ်နေ့လျှင် အစေ့ ၁၀ စေ့ခန့်ဖြစ်သည်။ မြေပဲ၊ ဗာဒံစေ့နှင့် သစ်အယ်သီးစသည့် အခွံမာသီး အမျိုးအစားများစွာရှိပြီး တစ်ခုစီတွင် အာဟာရပါဝင်မှု ကွဲပြားသည်။ ထို့ကြောင့် အစေ့အမျိုးအစားများစွာကို ရောနှောစားသုံးသင့်သည်။ အကြံပြုချက်မှာ ၎င်းကို အတုံးသေးသေးလေးများဖြစ်အောင် ကြိတ်ပြီး ဥပမာ တိုဟူးနဲ့ သုပ်စားပါ။ ရိုးရှင်းပြီး နေ့တိုင်းစားလို့ရပါတယ်။",
+    "Người phụ nữ đang nói về vấn đề gì?": "မိန်းမက ဘာအကြောင်းပြောနေတာလဲ။",
+    "Dinh dưỡng của các loại hạt": "အခွံမာသီး၏အာဟာရ",
+    "Các loại hạt": "အခွံမာသီး",
+    "Các món ăn chế biến từ hạt": "အစေ့မှလုပ်သောဟင်း",
+    "Giảm cân bằng hạt": "အစေ့များဖြင့် ကိုယ်အလေးချိန် လျှော့ချပါ။",
+    "Đáp án đúng": "အဖြေမှန်"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Trên TV, một phụ nữ đang nói.": "টিভিতে একজন মহিলা কথা বলছিলেন।",
+    "Hôm nay tôi sẽ nói về các loại hạt. Hạt thường được dùng làm nguyên liệu cho đồ ngọt và bánh mì, và cũng thường được bày làm món nhắm khi uống rượu như bia hay whisky. Nhưng có phải nhiều người kiêng vì sợ hạt nhiều calo sẽ làm tăng cân? Thực ra, người ta đã phát hiện hạt giàu vitamin và khoáng chất, có tác dụng ngăn ngừa lão hóa và phòng các bệnh liên quan đến lối sống. Lượng ăn hiệu quả để duy trì sức khỏe là khoảng 10 hạt mỗi ngày. Có nhiều loại hạt như đậu phộng, hạnh nhân và cả hạt dẻ, mỗi loại có thành phần dinh dưỡng khác nhau. Vì vậy nên trộn nhiều loại hạt để ăn. Gợi ý là nghiền nhỏ rồi cho vào salad cùng đậu phụ chẳng hạn. Đơn giản và có thể ăn hàng ngày.": "আজ আমি বাদাম সম্পর্কে কথা বলব। বীজগুলি প্রায়শই মিষ্টি এবং রুটিতে একটি উপাদান হিসাবে ব্যবহৃত হয় এবং বিয়ার বা হুইস্কির মতো অ্যালকোহল পান করার সময় প্রায়শই নাস্তা হিসাবে পরিবেশন করা হয়। কিন্তু অনেক লোক কি এড়িয়ে চলেন কারণ তারা ভয় পান যে উচ্চ-ক্যালরি বাদাম ওজন বাড়াবে? প্রকৃতপক্ষে, লোকেরা দেখেছে যে বীজ ভিটামিন এবং খনিজ সমৃদ্ধ, যা বার্ধক্য রোধ করতে এবং জীবনধারা সম্পর্কিত রোগ প্রতিরোধে সহায়তা করে। স্বাস্থ্য বজায় রাখার জন্য একটি কার্যকর গ্রহণ হল প্রতিদিন প্রায় 10টি বীজ। চিনাবাদাম, বাদাম এবং চেস্টনাটের মতো অনেক ধরণের বাদাম রয়েছে, প্রতিটিতে বিভিন্ন পুষ্টির গঠন রয়েছে। তাই খেতে হবে অনেক ধরনের বীজ মেশাতে। পরামর্শ হল এটিকে ছোট ছোট টুকরো করে পিষে টফু দিয়ে সালাদে যোগ করুন, উদাহরণস্বরূপ। সহজ এবং প্রতিদিন খাওয়া যায়।",
+    "Người phụ nữ đang nói về vấn đề gì?": "মহিলা কি কথা বলছেন?",
+    "Dinh dưỡng của các loại hạt": "বাদামের পুষ্টি",
+    "Các loại hạt": "বাদাম",
+    "Các món ăn chế biến từ hạt": "বীজ থেকে তৈরি খাবার",
+    "Giảm cân bằng hạt": "বীজ দিয়ে ওজন কমান",
+    "Đáp án đúng": "সঠিক উত্তর"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Trên TV, một phụ nữ đang nói.": "टीवी पर एक महिला बोल रही थी.",
+    "Hôm nay tôi sẽ nói về các loại hạt. Hạt thường được dùng làm nguyên liệu cho đồ ngọt và bánh mì, và cũng thường được bày làm món nhắm khi uống rượu như bia hay whisky. Nhưng có phải nhiều người kiêng vì sợ hạt nhiều calo sẽ làm tăng cân? Thực ra, người ta đã phát hiện hạt giàu vitamin và khoáng chất, có tác dụng ngăn ngừa lão hóa và phòng các bệnh liên quan đến lối sống. Lượng ăn hiệu quả để duy trì sức khỏe là khoảng 10 hạt mỗi ngày. Có nhiều loại hạt như đậu phộng, hạnh nhân và cả hạt dẻ, mỗi loại có thành phần dinh dưỡng khác nhau. Vì vậy nên trộn nhiều loại hạt để ăn. Gợi ý là nghiền nhỏ rồi cho vào salad cùng đậu phụ chẳng hạn. Đơn giản và có thể ăn hàng ngày.": "आज मैं नट्स के बारे में बात करूंगा. बीजों का उपयोग अक्सर मिठाइयों और ब्रेड में एक घटक के रूप में किया जाता है, और अक्सर बीयर या व्हिस्की जैसी शराब पीते समय नाश्ते के रूप में भी परोसा जाता है। लेकिन क्या बहुत से लोग इसलिए परहेज करते हैं क्योंकि उन्हें डर है कि उच्च कैलोरी वाले नट्स से वजन बढ़ जाएगा? दरअसल, लोगों ने पाया है कि बीज विटामिन और खनिजों से भरपूर होते हैं, जो उम्र बढ़ने से रोकने और जीवनशैली से जुड़ी बीमारियों को रोकने में मदद करते हैं। स्वास्थ्य को बनाए रखने के लिए एक प्रभावी सेवन प्रति दिन लगभग 10 बीज है। मूंगफली, बादाम और चेस्टनट जैसे मेवे कई प्रकार के होते हैं, जिनमें से प्रत्येक की पोषण संरचना अलग-अलग होती है। इसलिए आपको कई तरह के बीजों को मिलाकर खाना चाहिए। सुझाव यह है कि इसे छोटे-छोटे टुकड़ों में पीस लें और उदाहरण के लिए टोफू के साथ सलाद में मिला दें। सरल और हर दिन खाया जा सकता है।",
+    "Người phụ nữ đang nói về vấn đề gì?": "महिला किस बारे में बात कर रही है?",
+    "Dinh dưỡng của các loại hạt": "मेवों का पोषण",
+    "Các loại hạt": "पागल",
+    "Các món ăn chế biến từ hạt": "बीजों से बने व्यंजन",
+    "Giảm cân bằng hạt": "बीज से वजन कम करें",
+    "Đáp án đúng": "सही जवाब"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Trên TV, một phụ nữ đang nói.": "ในทีวีมีผู้หญิงคนหนึ่งกำลังพูดอยู่",
+    "Hôm nay tôi sẽ nói về các loại hạt. Hạt thường được dùng làm nguyên liệu cho đồ ngọt và bánh mì, và cũng thường được bày làm món nhắm khi uống rượu như bia hay whisky. Nhưng có phải nhiều người kiêng vì sợ hạt nhiều calo sẽ làm tăng cân? Thực ra, người ta đã phát hiện hạt giàu vitamin và khoáng chất, có tác dụng ngăn ngừa lão hóa và phòng các bệnh liên quan đến lối sống. Lượng ăn hiệu quả để duy trì sức khỏe là khoảng 10 hạt mỗi ngày. Có nhiều loại hạt như đậu phộng, hạnh nhân và cả hạt dẻ, mỗi loại có thành phần dinh dưỡng khác nhau. Vì vậy nên trộn nhiều loại hạt để ăn. Gợi ý là nghiền nhỏ rồi cho vào salad cùng đậu phụ chẳng hạn. Đơn giản và có thể ăn hàng ngày.": "วันนี้ฉันจะพูดเกี่ยวกับถั่ว เมล็ดมักถูกใช้เป็นส่วนผสมในขนมหวานและขนมปัง และยังมักเสิร์ฟเป็นของว่างเมื่อดื่มแอลกอฮอล์ เช่น เบียร์หรือวิสกี้ แต่หลายๆ คนงดเพราะกลัวว่าถั่วที่มีแคลอรีสูงจะทำให้น้ำหนักเพิ่มขึ้นใช่หรือไม่? ในความเป็นจริง ผู้คนพบว่าเมล็ดพืชอุดมไปด้วยวิตามินและแร่ธาตุ ซึ่งช่วยป้องกันความชราและป้องกันโรคที่เกี่ยวข้องกับวิถีชีวิต การบริโภคที่มีประสิทธิภาพเพื่อรักษาสุขภาพคือประมาณ 10 เมล็ดต่อวัน ถั่วมีหลายประเภท เช่น ถั่วลิสง อัลมอนด์ และเกาลัด ซึ่งแต่ละชนิดมีองค์ประกอบทางโภชนาการที่แตกต่างกัน ดังนั้นควรผสมเมล็ดพืชหลายชนิดมารับประทาน คำแนะนำคือให้บดเป็นชิ้นเล็กๆ แล้วใส่ลงในสลัดกับเต้าหู้ เป็นต้น ง่ายๆและสามารถรับประทานได้ทุกวัน",
+    "Người phụ nữ đang nói về vấn đề gì?": "ผู้หญิงกำลังพูดถึงอะไร?",
+    "Dinh dưỡng của các loại hạt": "โภชนาการของถั่ว",
+    "Các loại hạt": "ถั่ว",
+    "Các món ăn chế biến từ hạt": "อาหารที่ทำจากเมล็ดพืช",
+    "Giảm cân bằng hạt": "ลดน้ำหนักด้วยเมล็ดพืช",
+    "Đáp án đúng": "คำตอบที่ถูกต้อง"
+  }
+}

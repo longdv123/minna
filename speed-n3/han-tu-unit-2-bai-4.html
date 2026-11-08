@@ -1,0 +1,191 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N3 HANTU - ONE HTML (SEO + nhẹ)
+   >768: giống hình rộng (3 ô header, body nhìn như 3 cột với cột phải trống)
+   <=768 : giống hình mobile (card center + list item JP/VI)
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+/* ===== BODY (ONE LIST) =====
+   Desktop: item là grid 2 cột (JP | VI),
+   và chừa khoảng trống bên phải = cột 3 (blank) để nhìn như mẫu ảnh.
+*/
+.kbody{
+  padding:14px 18px 16px;
+  /* tạo cảm giác có cột phải trống */
+  padding-right: calc(18px + 1fr);
+}
+@media (min-width: 768px){
+  .kbody{
+    padding-right: 18px; /* reset */
+    display:block;
+  }
+  .kbody-inner{
+    /* chừa cột phải trống giống 3 cột: 240 | 260 | blank */
+    padding-right: 0;
+  }
+  .kbody-inner{
+    /* mô phỏng 3 cột bằng cách giới hạn vùng nội dung 2 cột */
+    width: 100%;
+  }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+}
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+  .kbody-inner{ width:auto; }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">停</div></div><div class="kcell k-hv"><span class="vi-tr">đình</span></div><div class="kcell k-read"><div class="on">テイ</div><div>とーまる／とーめる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp">（～が）<ruby>停<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まる</div><div class="vi"><span class="vi-tr">đỗ xe</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>停<rp>（</rp><rt>と</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">đỗ, dừng</span></div></div><div class="kitem"><div class="jp"><ruby>停車<rp>（</rp><rt>ていしゃ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đỗ xe</span></div></div><div class="kitem"><div class="jp"><ruby>各駅<rp>（</rp><rt>かくえき</rt><rp>）</rp></ruby><ruby>停車<rp>（</rp><rt>ていしゃ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tàu đỗ từng ga</span></div></div><div class="kitem"><div class="jp">バス<ruby>停<rp>（</rp><rt>てい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bến xe bus</span></div></div><div class="kitem"><div class="jp"><ruby>停留所<rp>（</rp><rt>ていりゅうじょ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bến đỗ xe</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">故</div></div><div class="kcell k-hv"><span class="vi-tr">cố</span></div><div class="kcell k-read"><div class="on">コ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>事故<rp>（</rp><rt>じこ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tai nạn</span></div></div><div class="kitem"><div class="jp"><ruby>交通<rp>（</rp><rt>こうつう</rt><rp>）</rp></ruby><ruby>事故<rp>（</rp><rt>じこ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tai nạn giao thông</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">困</div></div><div class="kcell k-hv"><span class="vi-tr">khốn</span></div><div class="kcell k-read"><div>こまーる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>困<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">khó khăn, khó xử</span></div></div><div class="kitem"><div class="jp"><ruby>困難<rp>（</rp><rt>こんなん</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">khó khăn</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">約</div></div><div class="kcell k-hv"><span class="vi-tr">ước</span></div><div class="kcell k-read"><div class="on">ヤク</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>予約<rp>（</rp><rt>よやく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đặt trước, đặt chỗ</span></div></div><div class="kitem"><div class="jp"><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>１<ruby>万人<rp>（</rp><rt>まんにん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khoảng 10 nghìn người</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">束</div></div><div class="kcell k-hv"><span class="vi-tr">thúc</span></div><div class="kcell k-read"><div class="on">ソク</div><div>たば</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>花束<rp>（</rp><rt>はなたば</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bó hoa</span></div></div><div class="kitem"><div class="jp"><ruby>約束<rp>（</rp><rt>やくそく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hứa</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">遅</div></div><div class="kcell k-hv"><span class="vi-tr">trì</span></div><div class="kcell k-read"><div class="on">チ</div><div>おくーれる／おそーい</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>遅<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>れる</div><div class="vi"><span class="vi-tr">muộn, chậm</span></div></div><div class="kitem"><div class="jp"><ruby>遅<rp>（</rp><rt>おそ</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">chậm, muộn</span></div></div><div class="kitem"><div class="jp"><ruby>遅刻<rp>（</rp><rt>ちこく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đến muộn giờ</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">連</div></div><div class="kcell k-hv"><span class="vi-tr">liên</span></div><div class="kcell k-read"><div class="on">レン</div><div>つーれる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>連<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>れていく</div><div class="vi"><span class="vi-tr">dắt đi</span></div></div><div class="kitem"><div class="jp"><ruby>連<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>れてくる</div><div class="vi"><span class="vi-tr">dắt đến</span></div></div><div class="kitem"><div class="jp"><ruby>連休<rp>（</rp><rt>れんきゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngày nghỉ liên tiếp nhau</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">絡</div></div><div class="kcell k-hv"><span class="vi-tr">lạc</span> </div><div class="kcell k-read"><div class="on">ラク</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">liên lạc</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">全</div></div><div class="kcell k-hv"><span class="vi-tr">toàn</span></div><div class="kcell k-read"><div class="on">ゼン</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>安全<rp>（</rp><rt>あんぜん</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">an toàn</span></div></div><div class="kitem"><div class="jp"><ruby>完全<rp>（</rp><rt>かんぜん</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">hoàn hảo</span></div></div><div class="kitem"><div class="jp"><ruby>全然<rp>（</rp><rt>ぜんぜん</rt><rp>）</rp></ruby>～ない</div><div class="vi"><span class="vi-tr">hoàn toàn không ~</span></div></div><div class="kitem"><div class="jp"><ruby>全員<rp>（</rp><rt>ぜんいん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">toàn bộ mọi người</span></div></div><div class="kitem"><div class="jp"><ruby>全部<rp>（</rp><rt>ぜんぶ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">toàn bộ, tất cả</span></div></div></div></div></div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+<p><b>ドリルA</b></p><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>が<u><ruby>遅<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>れ</u>ています。</td><td>a. おそれ</td><td>b. おくれ</td></tr><tr><td>2. プレゼントに<u><ruby>花束<rp>（</rp><rt>はなたば</rt><rp>）</rp></ruby></u>をもらった。</td><td>a. はなたば</td><td>b. かびん</td></tr><tr><td>3. この<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>は<ruby>各駅<rp>（</rp><rt>かくえき</rt><rp>）</rp></ruby><u><ruby>停車<rp>（</rp><rt>ていしゃ</rt><rp>）</rp></ruby></u>です。</td><td>a. てしゃ</td><td>b.  ていしゃ</td></tr><tr><td>4. クラス<u><ruby>全員<rp>（</rp><rt>ぜんいん</rt><rp>）</rp></ruby></u>で<ruby>歌<rp>（</rp><rt>うた</rt><rp>）</rp></ruby>を<ruby>歌<rp>（</rp><rt>うた</rt><rp>）</rp></ruby>った。</td><td>a. ぜいいん</td><td>b. ぜんいん</td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>にはまだ<u><ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby></u>していません。</td><td>a. れんらく</td><td>b. やくそく</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>が<u><ruby>遅<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>れ</u>ています。</td><td><b>おくれ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tàu điện đang bị chậm trễ.</span></td></tr><tr><td>2. プレゼントに<u><ruby>花束<rp>（</rp><rt>はなたば</rt><rp>）</rp></ruby></u>をもらった。</td><td><b>はなたば</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã nhận món quà là một bó hoa.</span></td></tr><tr><td>3. この<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>は<ruby>各駅<rp>（</rp><rt>かくえき</rt><rp>）</rp></ruby><u><ruby>停車<rp>（</rp><rt>ていしゃ</rt><rp>）</rp></ruby></u>です。</td><td><b> ていしゃ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tàu điện này dừng ở tất cả các ga.</span></td></tr><tr><td>4. クラス<u><ruby>全員<rp>（</rp><rt>ぜんいん</rt><rp>）</rp></ruby></u>で<ruby>歌<rp>（</rp><rt>うた</rt><rp>）</rp></ruby>を<ruby>歌<rp>（</rp><rt>うた</rt><rp>）</rp></ruby>った。</td><td><b>ぜんいん</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Cả lớp đã cùng nhau hát bài hát.</span></td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>にはまだ<u><ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby></u>していません。</td><td><b>れんらく</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi vẫn chưa liên lạc với anh ấy.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルB</b></p><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby>は<u>やく</u>５０００<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>だった。</td><td>a. 紹</td><td>b. 絡</td><td>c. 約</td></tr><tr><td>2. バス<u>てい</u>は、どこですか。</td><td>a. 停</td><td>b. 他</td><td>c. 低</td></tr><tr><td>3. ここは、<ruby>夜<rp>（</rp><rt>よる</rt><rp>）</rp></ruby>に<ruby>外出<rp>（</rp><rt>がいしゅつ</rt><rp>）</rp></ruby>しても<ruby>安<rp>（</rp><rt>あん</rt><rp>）</rp></ruby><u>ぜん</u>だ。</td><td>a. 金</td><td>b. 全</td><td>c. 企</td></tr><tr><td>4. <ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>がわからなくて<u>こま</u>った。</td><td>a. 因</td><td>b. 困</td><td>c. 回</td></tr><tr><td>5. <u>おそ</u>くなって、すみません。</td><td>a. 遅</td><td>b. 連</td><td>c. 選</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby>は<u>やく</u>５０００<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>だった。</td><td><b>約</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Số lượng khán giả là khoảng 5000 người.</span></td></tr><tr><td>2. バス<u>てい</u>は、どこですか。</td><td><b>停</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Trạm xe buýt là ở đâu vậy?</span></td></tr><tr><td>3. ここは、<ruby>夜<rp>（</rp><rt>よる</rt><rp>）</rp></ruby>に<ruby>外出<rp>（</rp><rt>がいしゅつ</rt><rp>）</rp></ruby>しても<ruby>安<rp>（</rp><rt>あん</rt><rp>）</rp></ruby><u>ぜん</u>だ。</td><td><b>全</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Ở đây, dù ra ngoài vào ban đêm cũng an toàn.</span></td></tr><tr><td>4. <ruby>日本語<rp>（</rp><rt>にほんご</rt><rp>）</rp></ruby>がわからなくて<u>こま</u>った。</td><td><b>困</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi gặp khó khăn vì không hiểu tiếng Nhật.</span></td></tr><tr><td>5. <u>おそ</u>くなって、すみません。</td><td><b>遅</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Xin lỗi vì đã đến muộn.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルC</b></p><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. パーティーに<ruby>友達<rp>（</rp><rt>ともだち</rt><rp>）</rp></ruby>を（　　　）<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>きます。</td><td>a. 連れて</td><td>b. 遅れて</td></tr><tr><td>2. <ruby>寝坊<rp>（</rp><rt>ねぼう</rt><rp>）</rp></ruby>して、（　　　）してしまった。</td><td>a. 遅刻</td><td>b. 連休</td></tr><tr><td>3. さっき（　　　）があって、<ruby>道路<rp>（</rp><rt>どうろ</rt><rp>）</rp></ruby>が<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んでいる。</td><td>a. 事故</td><td>b. 約束</td></tr><tr><td>4. テストがあることを（　　　）に<ruby>忘<rp>（</rp><rt>わす</rt><rp>）</rp></ruby>れていた！</td><td>a. 全熱</td><td>b. 完全</td></tr><tr><td>5. <ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>の<ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>に<ruby>新幹線<rp>（</rp><rt>しんかんせん</rt><rp>）</rp></ruby>を（　　　）しておこう。</td><td>a. 予約</td><td>b. 停車</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. パーティーに<ruby>友達<rp>（</rp><rt>ともだち</rt><rp>）</rp></ruby>を（　　　）<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>きます。</td><td><b>連れて</b>　(つれて)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi sẽ</span>　<span class="vi-tr">dẫn bạn bè đến buổi tiệc.</span></td></tr><tr><td>2. <ruby>寝坊<rp>（</rp><rt>ねぼう</rt><rp>）</rp></ruby>して、（　　　）してしまった。</td><td><b>遅刻</b>　(ちこく)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Vì ngủ quên nên tôi đã trễ giờ mất rồi.</span></td></tr><tr><td>3. さっき（　　　）があって、<ruby>道路<rp>（</rp><rt>どうろ</rt><rp>）</rp></ruby>が<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んでいる。</td><td><b>事故</b>　(じこ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.</span></td></tr><tr><td>4. テストがあることを（　　　）に<ruby>忘<rp>（</rp><rt>わす</rt><rp>）</rp></ruby>れていた！</td><td><b>完全</b>　(かんぜん)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi hoàn toàn quên mất là có bài kiểm tra!</span></td></tr><tr><td>5. <ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>の<ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>に<ruby>新幹線<rp>（</rp><rt>しんかんせん</rt><rp>）</rp></ruby>を（　　　）しておこう。</td><td><b>予約</b>　(よやく)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.</span></td></tr></tbody></table></div></div></div>
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed3-2-4"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-2-bai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","đình":"family","đỗ xe":"Parking","đỗ, dừng":"park, stop","tàu đỗ từng ga":"The train stops at each station","bến xe bus":"bus station","bến đỗ xe":"parking lot","cố":"try","tai nạn":"accident","tai nạn giao thông":"traffic accident","khốn":"bastard","khó khăn, khó xử":"difficult, awkward","khó khăn":"hard","ước":"wish","đặt trước, đặt chỗ":"make a reservation, make a reservation","khoảng 10 nghìn người":"about 10 thousand people","thúc":"end","bó hoa":"bouquet","hứa":"promise","trì":"maintain","muộn, chậm":"late, slow","chậm, muộn":"slow, late","đến muộn giờ":"arrived late","liên":"contact","dắt đi":"lead away","dắt đến":"brought","ngày nghỉ liên tiếp nhau":"consecutive days off","lạc":"lost","liên lạc":"contact","toàn":"full","an toàn":"safe","hoàn hảo":"perfect","hoàn toàn không ~":"Absolutely not~","toàn bộ mọi người":"everyone","toàn bộ, tất cả":"all, all","☞ Đáp Án + Dịch":"☞ Answer + Translation","Tàu điện đang bị chậm trễ.":"The train is being delayed.","Tôi đã nhận món quà là một bó hoa.":"I received a bouquet of flowers as a gift.","Tàu điện này dừng ở tất cả các ga.":"This train stops at all stations.","Cả lớp đã cùng nhau hát bài hát.":"The whole class sang the song together.","Tôi vẫn chưa liên lạc với anh ấy.":"I still haven't contacted him.","Số lượng khán giả là khoảng 5000 người.":"The number of spectators is about 5000 people.","Trạm xe buýt là ở đâu vậy?":"Where is the bus station?","Ở đây, dù ra ngoài vào ban đêm cũng an toàn.":"Here, even going out at night is safe.","Tôi gặp khó khăn vì không hiểu tiếng Nhật.":"I had difficulty because I didn't understand Japanese.","Xin lỗi vì đã đến muộn.":"Sorry for being late.","Tôi sẽ":"I will","dẫn bạn bè đến buổi tiệc.":"Bring friends to the party.","Vì ngủ quên nên tôi đã trễ giờ mất rồi.":"Because I overslept, I was already late.","Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.":"There was an accident just now, so the road is blocked.","Tôi hoàn toàn quên mất là có bài kiểm tra!":"I completely forgot there was a test!","Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.":"I will pre-book Shinkansen tickets before traveling.","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","đình":"keluarga","đỗ xe":"Parkir","đỗ, dừng":"parkir, berhenti","tàu đỗ từng ga":"Kereta berhenti di setiap stasiun","bến xe bus":"stasiun bus","bến đỗ xe":"tempat parkir","cố":"mencoba","tai nạn":"kecelakaan","tai nạn giao thông":"kecelakaan lalu lintas","khốn":"bajingan","khó khăn, khó xử":"sulit, canggung","khó khăn":"keras","ước":"mengharapkan","đặt trước, đặt chỗ":"membuat reservasi, membuat reservasi","khoảng 10 nghìn người":"sekitar 10 ribu orang","thúc":"akhir","bó hoa":"buket","hứa":"janji","trì":"menjaga","muộn, chậm":"terlambat, lambat","chậm, muộn":"lambat, terlambat","đến muộn giờ":"tiba terlambat","liên":"kontak","dắt đi":"menuntun pergi","dắt đến":"telah membawa","ngày nghỉ liên tiếp nhau":"hari libur berturut-turut","lạc":"hilang","liên lạc":"kontak","toàn":"penuh","an toàn":"aman","hoàn hảo":"sempurna","hoàn toàn không ~":"Sama sekali tidak~","toàn bộ mọi người":"setiap orang","toàn bộ, tất cả":"semuanya, semuanya","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Tàu điện đang bị chậm trễ.":"Kereta sedang tertunda.","Tôi đã nhận món quà là một bó hoa.":"Saya menerima buket bunga sebagai hadiah.","Tàu điện này dừng ở tất cả các ga.":"Kereta ini berhenti di semua stasiun.","Cả lớp đã cùng nhau hát bài hát.":"Seluruh kelas menyanyikan lagu itu bersama-sama.","Tôi vẫn chưa liên lạc với anh ấy.":"Aku masih belum menghubunginya.","Số lượng khán giả là khoảng 5000 người.":"Jumlah penontonnya sekitar 5000 orang.","Trạm xe buýt là ở đâu vậy?":"Dimana terminal busnya?","Ở đây, dù ra ngoài vào ban đêm cũng an toàn.":"Di sini, keluar malam pun aman.","Tôi gặp khó khăn vì không hiểu tiếng Nhật.":"Saya mengalami kesulitan karena saya tidak mengerti bahasa Jepang.","Xin lỗi vì đã đến muộn.":"Maaf karena terlambat.","Tôi sẽ":"Saya akan","dẫn bạn bè đến buổi tiệc.":"Ajak teman ke pesta.","Vì ngủ quên nên tôi đã trễ giờ mất rồi.":"Karena saya ketiduran, saya sudah terlambat.","Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.":"Tadi ada kecelakaan, jadi jalan diblokir.","Tôi hoàn toàn quên mất là có bài kiểm tra!":"Saya benar-benar lupa ada ujian!","Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.":"Saya akan memesan tiket Shinkansen terlebih dahulu sebelum bepergian.","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","đình":"परिवार","đỗ xe":"पार्किङ","đỗ, dừng":"पार्क, रोक","tàu đỗ từng ga":"ट्रेन प्रत्येक स्टेशनमा रोकिन्छ","bến xe bus":"बस स्टेशन","bến đỗ xe":"पार्किङ स्थल","cố":"प्रयास गर्नुहोस्","tai nạn":"दुर्घटना","tai nạn giao thông":"यातायात दुर्घटना","khốn":"हरामी","khó khăn, khó xử":"गाह्रो, अप्ठ्यारो","khó khăn":"कडा","ước":"इच्छा","đặt trước, đặt chỗ":"आरक्षण गर्नुहोस्, आरक्षण गर्नुहोस्","khoảng 10 nghìn người":"लगभग 10 हजार मान्छे","thúc":"अन्त्य","bó hoa":"गुलदस्ता","hứa":"प्रतिज्ञा","trì":"कायम राख्ने","muộn, chậm":"ढिलो, ढिलो","chậm, muộn":"ढिलो, ढिलो","đến muộn giờ":"ढिलो आयो","liên":"सम्पर्क गर्नुहोस्","dắt đi":"टाढा नेतृत्व","dắt đến":"ल्यायो","ngày nghỉ liên tiếp nhau":"लगातार दिन बिदा","lạc":"हरायो","liên lạc":"सम्पर्क गर्नुहोस्","toàn":"पूर्ण","an toàn":"सुरक्षित","hoàn hảo":"सिद्ध","hoàn toàn không ~":"बिल्कुल होइन ~","toàn bộ mọi người":"सबैजना","toàn bộ, tất cả":"सबै, सबै","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Tàu điện đang bị chậm trễ.":"ट्रेन ढिलो भइरहेको छ।","Tôi đã nhận món quà là một bó hoa.":"मैले उपहार स्वरूप फूलको गुच्छा प्राप्त गरें।","Tàu điện này dừng ở tất cả các ga.":"यो ट्रेन सबै स्टेशनहरूमा रोकिन्छ।","Cả lớp đã cùng nhau hát bài hát.":"सबै कक्षाले मिलेर गीत गाए ।","Tôi vẫn chưa liên lạc với anh ấy.":"मैले अझै उहाँलाई सम्पर्क गरेको छैन।","Số lượng khán giả là khoảng 5000 người.":"दर्शकको संख्या करिब ५ हजार मानिस रहेको छ ।","Trạm xe buýt là ở đâu vậy?":"बस स्टेशन कहाँ छ?","Ở đây, dù ra ngoài vào ban đêm cũng an toàn.":"यहाँ, राति बाहिर निस्कन पनि सुरक्षित छ।","Tôi gặp khó khăn vì không hiểu tiếng Nhật.":"जापानी भाषा नबुझेकोले मलाई गाह्रो भयो।","Xin lỗi vì đã đến muộn.":"ढिलो भएकोमा माफ गर्नुहोस्।","Tôi sẽ":"म गर्नेछु","dẫn bạn bè đến buổi tiệc.":"साथीहरूलाई पार्टीमा ल्याउनुहोस्।","Vì ngủ quên nên tôi đã trễ giờ mất rồi.":"म धेरै सुतेको कारण, म पहिले नै ढिलो भइसकेको थिएँ।","Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.":"भर्खरै दुर्घटना भयो, त्यसैले सडक अवरुद्ध छ।","Tôi hoàn toàn quên mất là có bài kiểm tra!":"मैले पूर्ण रूपमा बिर्सें कि त्यहाँ एक परीक्षा थियो!","Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.":"म यात्रा गर्नु अघि Shinkansen टिकट प्रि-बुक गर्नेछु।","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","đình":"မိသားစု","đỗ xe":"ကားပါကင်","đỗ, dừng":"ပန်းခြံ၊ ရပ်ပါ။","tàu đỗ từng ga":"ရထားက ဘူတာတိုင်းတွင် ရပ်သည်။","bến xe bus":"ကားဂိတ်","bến đỗ xe":"ကားပါကင်","cố":"ကြိုးစားပါ။","tai nạn":"မတော်တဆ","tai nạn giao thông":"ယာဉ်မတော်တဆမှု","khốn":"ခွေးကောင်","khó khăn, khó xử":"ခက်ခဲ၊ အဆင်မပြေ","khó khăn":"ခက်တယ်။","ước":"ဆန္ဒ","đặt trước, đặt chỗ":"booking လုပ်ပါ၊ booking လုပ်ပါ။","khoảng 10 nghìn người":"လူ ၁၀ဝဝဝ လောက်ရှိတယ်။","thúc":"အဆုံး","bó hoa":"ပန်းစည်း","hứa":"ကတိပေးသည်။","trì":"ထိန်းသိမ်းပါ။","muộn, chậm":"နောက်ကျတယ်၊ နှေးတယ်။","chậm, muộn":"နှေးတယ်၊ နောက်ကျတယ်။","đến muộn giờ":"ရောက်တာ နောက်ကျတယ်။","liên":"ဆက်သွယ်ရန်","dắt đi":"ဆောင်သွားပါ။","dắt đến":"ယူဆောင်လာသည်။","ngày nghỉ liên tiếp nhau":"ဆက်တိုက်ပိတ်ရက်","lạc":"ဆုံးရှုံး","liên lạc":"ဆက်သွယ်ရန်","toàn":"အပြည့်","an toàn":"ဘေးကင်းသည်။","hoàn hảo":"ပြီးပြည့်စုံသော","hoàn toàn không ~":"လုံးဝမဟုတ်ပါဘူး~","toàn bộ mọi người":"လူတိုင်း","toàn bộ, tất cả":"အားလုံး၊ အားလုံး","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Tàu điện đang bị chậm trễ.":"ရထားက နှောင့်နှေးနေတယ်။","Tôi đã nhận món quà là một bó hoa.":"လက်ဆောင်အဖြစ် ပန်းစည်းတစ်စည်းကို လက်ခံခဲ့တယ်။","Tàu điện này dừng ở tất cả các ga.":"ဤရထားသည် ဘူတာအားလုံးတွင် ရပ်သည်။","Cả lớp đã cùng nhau hát bài hát.":"တစ်တန်းလုံး အတူတူ သီဆိုကြသည်။","Tôi vẫn chưa liên lạc với anh ấy.":"ကျွန်တော် သူ့ကို မဆက်သွယ်သေးဘူး။","Số lượng khán giả là khoảng 5000 người.":"ကြည့်ရှုသူဦးရေမှာ ၅၀၀၀ ခန့်ရှိသည်။","Trạm xe buýt là ở đâu vậy?":"ကားဂိတ်က ဘယ်မှာလဲ","Ở đây, dù ra ngoài vào ban đêm cũng an toàn.":"ဒီမှာ ညဘက် အပြင်ထွက်တာတောင် အန္တရာယ်ကင်းတယ်။","Tôi gặp khó khăn vì không hiểu tiếng Nhật.":"ဂျပန်စာကို နားမလည်တဲ့အတွက် အခက်အခဲရှိတယ်။","Xin lỗi vì đã đến muộn.":"နောက်ကျတဲ့အတွက် တောင်းပန်ပါတယ်။","Tôi sẽ":"ငါလုပ်မယ်။","dẫn bạn bè đến buổi tiệc.":"သူငယ်ချင်းများကို ပါတီသို့ ခေါ်သွားပါ။","Vì ngủ quên nên tôi đã trễ giờ mất rồi.":"ငါ အိပ်ရေးဝနေလို့ နောက်ကျနေပြီ။","Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.":"အခုတလော ယာဉ်တိုက်မှုဖြစ်တော့ လမ်းက ပိတ်ဆို့နေတယ်။","Tôi hoàn toàn quên mất là có bài kiểm tra!":"စာမေးပွဲတစ်ခုရှိတယ်ဆိုတာ လုံးလုံးမေ့သွားခဲ့တယ်။","Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.":"ခရီးမထွက်ခင် Shinkansen လက်မှတ်တွေကို ကြိုတင်မှာထားမယ်။","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","đình":"পরিবার","đỗ xe":"পার্কিং","đỗ, dừng":"পার্ক, থামা","tàu đỗ từng ga":"প্রতিটি স্টেশনে ট্রেন থামে","bến xe bus":"বাস স্টেশন","bến đỗ xe":"পার্কিং লট","cố":"চেষ্টা করুন","tai nạn":"দুর্ঘটনা","tai nạn giao thông":"ট্রাফিক দুর্ঘটনা","khốn":"জারজ","khó khăn, khó xử":"কঠিন, বিশ্রী","khó khăn":"কঠিন","ước":"ইচ্ছা","đặt trước, đặt chỗ":"একটি সংরক্ষণ করা, একটি সংরক্ষণ করা","khoảng 10 nghìn người":"প্রায় 10 হাজার মানুষ","thúc":"শেষ","bó hoa":"তোড়া","hứa":"প্রতিশ্রুতি","trì":"বজায় রাখা","muộn, chậm":"দেরী, ধীর","chậm, muộn":"ধীর, দেরী","đến muộn giờ":"দেরিতে পৌঁছেছে","liên":"যোগাযোগ","dắt đi":"দূরে নেতৃত্ব","dắt đến":"আনা","ngày nghỉ liên tiếp nhau":"একটানা দিন ছুটি","lạc":"হারিয়ে","liên lạc":"যোগাযোগ","toàn":"পূর্ণ","an toàn":"নিরাপদ","hoàn hảo":"নিখুঁত","hoàn toàn không ~":"একেবারে না~","toàn bộ mọi người":"সবাই","toàn bộ, tất cả":"সব, সব","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Tàu điện đang bị chậm trễ.":"ট্রেন আসতে দেরি হচ্ছে।","Tôi đã nhận món quà là một bó hoa.":"আমি উপহার হিসাবে একটি ফুলের তোড়া পেয়েছি।","Tàu điện này dừng ở tất cả các ga.":"এই ট্রেন সব স্টেশনে থামে।","Cả lớp đã cùng nhau hát bài hát.":"পুরো ক্লাস একসাথে গানটি গেয়েছে।","Tôi vẫn chưa liên lạc với anh ấy.":"আমি এখনও তার সাথে যোগাযোগ করিনি।","Số lượng khán giả là khoảng 5000 người.":"দর্শকের সংখ্যা প্রায় পাঁচ হাজার।","Trạm xe buýt là ở đâu vậy?":"বাস স্টেশন কোথায়?","Ở đây, dù ra ngoài vào ban đêm cũng an toàn.":"এখানে, এমনকি রাতে বাইরে যাওয়া নিরাপদ।","Tôi gặp khó khăn vì không hiểu tiếng Nhật.":"আমি জাপানি বুঝতে পারিনি বলে আমার অসুবিধা হয়েছিল।","Xin lỗi vì đã đến muộn.":"দেরী হওয়ার জন্য দুঃখিত।","Tôi sẽ":"আমি করব","dẫn bạn bè đến buổi tiệc.":"পার্টিতে বন্ধুদের নিয়ে আসুন।","Vì ngủ quên nên tôi đã trễ giờ mất rồi.":"কারণ আমি অতিরিক্ত ঘুমিয়েছিলাম, আমি ইতিমধ্যে দেরি করে ফেলেছিলাম।","Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.":"এইমাত্র একটি দুর্ঘটনা ঘটেছে, তাই রাস্তা অবরুদ্ধ।","Tôi hoàn toàn quên mất là có bài kiểm tra!":"আমি পুরোপুরি ভুলে গিয়েছিলাম যে একটি পরীক্ষা ছিল!","Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.":"আমি ভ্রমণের আগে শিনকানসেনের টিকিট প্রি-বুক করব।","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","đình":"परिवार","đỗ xe":"पार्किंग","đỗ, dừng":"पार्क करो, रुको","tàu đỗ từng ga":"ट्रेन हर स्टेशन पर रुकती है","bến xe bus":"बस स्टेशन","bến đỗ xe":"पार्किंग स्थल","cố":"कोशिश","tai nạn":"दुर्घटना","tai nạn giao thông":"यातायात दुर्घटना","khốn":"हरामी","khó khăn, khó xử":"कठिन, अजीब","khó khăn":"मुश्किल","ước":"इच्छा","đặt trước, đặt chỗ":"आरक्षण करो, आरक्षण करो","khoảng 10 nghìn người":"लगभग 10 हजार लोग","thúc":"अंत","bó hoa":"पुष्प गुच्छ","hứa":"वादा","trì":"बनाए रखना","muộn, chậm":"देर, धीरे","chậm, muộn":"धीरे, देर से","đến muộn giờ":"देर से आए","liên":"संपर्क","dắt đi":"दूर ले चलो","dắt đến":"लाया","ngày nghỉ liên tiếp nhau":"लगातार दिनों की छुट्टी","lạc":"खो गया","liên lạc":"संपर्क","toàn":"भरा हुआ","an toàn":"सुरक्षित","hoàn hảo":"उत्तम","hoàn toàn không ~":"बिल्कुल नहीं~","toàn bộ mọi người":"सब लोग","toàn bộ, tất cả":"सब, सब","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Tàu điện đang bị chậm trễ.":"ट्रेन लेट हो रही है.","Tôi đã nhận món quà là một bó hoa.":"मुझे उपहार के रूप में फूलों का गुलदस्ता मिला।","Tàu điện này dừng ở tất cả các ga.":"यह ट्रेन सभी स्टेशनों पर रुकती है.","Cả lớp đã cùng nhau hát bài hát.":"पूरी कक्षा ने मिलकर गाना गाया।","Tôi vẫn chưa liên lạc với anh ấy.":"मैंने अभी भी उनसे संपर्क नहीं किया है.","Số lượng khán giả là khoảng 5000 người.":"दर्शकों की संख्या करीब 5000 लोग है.","Trạm xe buýt là ở đâu vậy?":"बस स्टेशन कहाँ है?","Ở đây, dù ra ngoài vào ban đêm cũng an toàn.":"यहां रात में बाहर जाना भी सुरक्षित है.","Tôi gặp khó khăn vì không hiểu tiếng Nhật.":"मुझे कठिनाई हुई क्योंकि मैं जापानी नहीं समझता था।","Xin lỗi vì đã đến muộn.":"देर से आने के लिए क्षमा करें।","Tôi sẽ":"मैं करूँगा","dẫn bạn bè đến buổi tiệc.":"दोस्तों को पार्टी में लाएँ.","Vì ngủ quên nên tôi đã trễ giờ mất rồi.":"क्योंकि मैं ज़्यादा सो गया था, मुझे पहले ही देर हो चुकी थी।","Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.":"अभी-अभी एक्सीडेंट हुआ है इसलिए रास्ता बंद है.","Tôi hoàn toàn quên mất là có bài kiểm tra!":"मैं पूरी तरह भूल गया कि कोई परीक्षा थी!","Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.":"मैं यात्रा से पहले शिंकानसेन टिकट प्री-बुक करूंगा।","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","đình":"ตระกูล","đỗ xe":"ที่จอดรถ","đỗ, dừng":"จอดรถ หยุด","tàu đỗ từng ga":"รถไฟจะจอดที่แต่ละสถานี","bến xe bus":"สถานีขนส่ง","bến đỗ xe":"ลานจอดรถ","cố":"พยายาม","tai nạn":"อุบัติเหตุ","tai nạn giao thông":"อุบัติเหตุจราจร","khốn":"ไอ้สารเลว","khó khăn, khó xử":"ยากอึดอัด","khó khăn":"แข็ง","ước":"ปรารถนา","đặt trước, đặt chỗ":"ทำการจอง, ทำการจอง","khoảng 10 nghìn người":"ประมาณ 10,000 คน","thúc":"จบ","bó hoa":"ช่อดอกไม้","hứa":"สัญญา","trì":"บำรุงรักษา","muộn, chậm":"สายช้า","chậm, muộn":"ช้าสาย","đến muộn giờ":"มาถึงช้า","liên":"ติดต่อ","dắt đi":"นำไปสู่","dắt đến":"นำมา","ngày nghỉ liên tiếp nhau":"วันหยุดติดต่อกัน","lạc":"สูญหาย","liên lạc":"ติดต่อ","toàn":"เต็ม","an toàn":"ปลอดภัย","hoàn hảo":"สมบูรณ์แบบ","hoàn toàn không ~":"ไม่เด็ดขาด~","toàn bộ mọi người":"ทุกคน","toàn bộ, tất cả":"ทั้งหมดทั้งหมด","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Tàu điện đang bị chậm trễ.":"รถไฟกำลังล่าช้า","Tôi đã nhận món quà là một bó hoa.":"ฉันได้รับช่อดอกไม้เป็นของขวัญ","Tàu điện này dừng ở tất cả các ga.":"รถไฟขบวนนี้จอดทุกสถานี","Cả lớp đã cùng nhau hát bài hát.":"ทั้งชั้นร้องเพลงร่วมกัน","Tôi vẫn chưa liên lạc với anh ấy.":"ฉันยังไม่ได้ติดต่อกับเขาเลย","Số lượng khán giả là khoảng 5000 người.":"จำนวนผู้ชมประมาณ 5,000 คน","Trạm xe buýt là ở đâu vậy?":"สถานีขนส่งอยู่ที่ไหน?","Ở đây, dù ra ngoài vào ban đêm cũng an toàn.":"ที่นี่แม้จะออกไปข้างนอกตอนกลางคืนก็ปลอดภัย","Tôi gặp khó khăn vì không hiểu tiếng Nhật.":"ฉันมีปัญหาเพราะฉันไม่เข้าใจภาษาญี่ปุ่น","Xin lỗi vì đã đến muộn.":"ขออภัยที่มาช้า.","Tôi sẽ":"ฉันจะ","dẫn bạn bè đến buổi tiệc.":"พาเพื่อนมางานปาร์ตี้","Vì ngủ quên nên tôi đã trễ giờ mất rồi.":"เพราะฉันนอนเกินเลยไปฉันเลยสายไปแล้ว","Vừa nãy có một vụ tai nạn, nên đường đang bị tắc.":"เมื่อสักครู่นี้เกิดอุบัติเหตุจึงปิดถนน","Tôi hoàn toàn quên mất là có bài kiểm tra!":"ฉันลืมไปเลยว่ามีสอบ!","Tôi sẽ đặt trước vé Shinkansen trước khi đi du lịch nhé.":"ฉันจะจองตั๋วชินคันเซ็นล่วงหน้าก่อนการเดินทาง","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

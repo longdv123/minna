@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Xác nhận địa điểm lên tàu. Sẽ nói gì với nhân viên nhà ga?": "Confirm boarding location. What will you say to the station staff?",
+    "Xin lỗi, tàu đi Osaka là sân ga số 5 được không ạ?": "Excuse me, can the train to Osaka be on platform 5?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Xác nhận địa điểm lên tàu. Sẽ nói gì với nhân viên nhà ga?": "Konfirmasikan lokasi keberangkatan. Apa yang akan Anda katakan kepada staf stasiun?",
+    "Xin lỗi, tàu đi Osaka là sân ga số 5 được không ạ?": "Permisi, apakah kereta ke Osaka bisa berada di peron 5?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Xác nhận địa điểm lên tàu. Sẽ nói gì với nhân viên nhà ga?": "बोर्डिङ स्थान पुष्टि गर्नुहोस्। स्टेसन कर्मचारीलाई के भन्नुहुन्छ ?",
+    "Xin lỗi, tàu đi Osaka là sân ga số 5 được không ạ?": "माफ गर्नुहोस्, ओसाका जाने रेल प्लेटफर्म ५ मा हुन सक्छ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Xác nhận địa điểm lên tàu. Sẽ nói gì với nhân viên nhà ga?": "တက်ရမည့်နေရာကို အတည်ပြုပါ။ ဘူတာရုံဝန်ထမ်းကို ဘာပြောမလဲ။",
+    "Xin lỗi, tàu đi Osaka là sân ga số 5 được không ạ?": "ခွင့်လွှတ်ပါ၊ အိုဆာကာသို့ ရထားသည် ပလပ်ဖောင်း 5 တွင် ရှိနိုင်ပါသလား။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Xác nhận địa điểm lên tàu. Sẽ nói gì với nhân viên nhà ga?": "বোর্ডিং অবস্থান নিশ্চিত করুন. স্টেশনের কর্মীদের কী বলবেন?",
+    "Xin lỗi, tàu đi Osaka là sân ga số 5 được không ạ?": "মাফ করবেন, ওসাকা যাওয়ার ট্রেন কি প্ল্যাটফর্ম 5 এ যেতে পারে?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Xác nhận địa điểm lên tàu. Sẽ nói gì với nhân viên nhà ga?": "बोर्डिंग स्थान की पुष्टि करें. आप स्टेशन स्टाफ से क्या कहेंगे?",
+    "Xin lỗi, tàu đi Osaka là sân ga số 5 được không ạ?": "क्षमा करें, क्या ओसाका के लिए ट्रेन प्लेटफार्म 5 पर हो सकती है?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Xác nhận địa điểm lên tàu. Sẽ nói gì với nhân viên nhà ga?": "ยืนยันสถานที่ขึ้นเครื่อง คุณจะพูดอะไรกับเจ้าหน้าที่สถานี?",
+    "Xin lỗi, tàu đi Osaka là sân ga số 5 được không ạ?": "ขอโทษค่ะ รถไฟไปโอซาก้าสามารถขึ้นชานชาลา 5 ได้ไหม"
+  }
+}

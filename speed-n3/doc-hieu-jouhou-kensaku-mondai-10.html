@@ -1,0 +1,240 @@
+<meta charset="UTF-8">
+<style>
+
+hr.style-two { border: 0; }
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+input[type="radio"]{ border: unset; }
+input[type="radio"]{
+    -webkit-appearance: none;
+    width:15px;
+    height:15px;
+    border:1px solid #19283C !important;
+    border-radius:15px !important;
+    background:transparent;
+    opacity:0.7;
+    margin-bottom: -2px;
+}
+input[type="radio"]:checked{ background:#19283C; opacity: 1; }
+
+div.benphai,p.benphai{ text-align: right; }
+div.chinhgiua,p.chinhgiua{ text-align: center; }
+div.chuy{ color: #483D8B; }
+
+table { width: 100%; }
+.tracnghiem table,.tracnghiem td,.tracnghiem th { border: none; }
+
+#question { margin-bottom:8px; }
+.nghia{ margin-bottom:8px; }
+
+.doanvan {
+    margin-top: 15px;
+    margin-bottom:20px;
+    padding: 20px 10px 20px 10px;
+    padding-bottom: 20px;
+    background: #f0f7ff;
+    border: dashed 1px #5b8bd0;
+}
+
+.table_luachon{
+    padding:1px 15px 1px 15px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+}
+.tieude{ color: red; margin-top:20px; font-weight: bold; }
+
+hr.style14{
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.thongtin table {display: table !important;}
+.thongtin tr{display: table-row !important;}
+.thongtin td{display: table-cell !important;}
+.thongtindich table {display: table !important;}
+.thongtindich tr{display: table-row !important;}
+.thongtindich td{display: table-cell !important;}
+
+.thongtin,.thongtin div{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* 2) Table bên trong */
+.thongtin table{
+  width: 100%;
+  border-collapse: collapse;
+}
+/* 3) Khi màn nhỏ: cho table giữ kích thước theo nội dung để phải lướt */
+@media (max-width: 1024px){
+  .thongtin table{
+    width: max-content;     /* quan trọng để tạo scroll */
+    min-width: 100%;        /* vẫn phủ đủ khung nếu table nhỏ */
+    white-space: nowrap;    /* giữ ô không xuống dòng nếu muốn giống AI table */
+  }
+  .thongtin th,
+  .thongtin td{
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 767px){
+    .tracnghiem table, .tracnghiem tr, .tracnghiem td{ border-color: #fff; }
+    #mondai1,#mondai3,#mondai2,#mondai4 { width:45px; }
+    .table_luachon{ width: 100% !important; }
+}
+
+[data-f2-reading] .tracnghiem td:hover{background:Bisque;color:MidnightBlue}[data-f2-reading] .slide-content{display:none}[data-f2-reading] .kqdich{display:none;opacity:0}[data-f2-reading] .f2-options{border:none;width:100%}[data-f2-reading] .f2-options tbody{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr))}[data-f2-reading] .f2-options tr,[data-f2-reading] .f2-options td{border:none;display:block}@media (max-width: 720px){[data-f2-reading] .f2-options tbody{grid-template-columns:1fr}}</style>
+<div class="tab_container speed-page">
+<div id="tracnghiemdiv"><form class="quiz-form" method="post" action="#" name="post"><div id="shownoidung" data-legacy-quiz="" data-f2-reading="" data-source="speed-n3-dochieu" data-lesson="4-10" class="vnjp-sh-on"><p class="tieude"> 問題4-10　</p><div class="doanvan">&nbsp;&nbsp;&nbsp;マリアさんは、<ruby>女<rp>（</rp><rt>おんな</rt><rp>）</rp></ruby><ruby>友<rp>（</rp><rt>とも</rt><rp>）</rp></ruby>だち3<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>と、<ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby><ruby>水曜日<rp>（</rp><rt>すいようび</rt><rp>）</rp></ruby>から<ruby>1泊<rp>（</rp><rt>いっぱく</rt><rp>）</rp></ruby>で<ruby>松本<rp>（</rp><rt>まつもと</rt><rp>）</rp></ruby><ruby>城<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>を<ruby>見学<rp>（</rp><rt>けんがく</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く<ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>画<rp>（</rp><rt>かく</rt><rp>）</rp></ruby>です。<ruby>松本<rp>（</rp><rt>まつもと</rt><rp>）</rp></ruby><ruby>城<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>の<ruby>入場券<rp>（</rp><rt>にゅうじょうけん</rt><rp>）</rp></ruby>は600<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>です。<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby><ruby>会社<rp>（</rp><rt>がいしゃ</rt><rp>）</rp></ruby>がホテルを4つ<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>んでくれました。</div><br><div class="tracnghiem" data-item="1387" data-correct="2"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　<ruby>宿泊<rp>（</rp><rt>しゅくはく</rt><rp>）</rp></ruby>する<ruby>曜日<rp>（</rp><rt>ようび</rt><rp>）</rp></ruby>によって<ruby>費用<rp>（</rp><rt>ひよう</rt><rp>）</rp></ruby>が<u><ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>う</u>のはどれか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1387_1" type="radio" name="f21_1387" value="0" aria-label="1"><span style="font-size: 15px"> １　A　と　B </span><span id="result_question_f21_1387_1"></span> <span id="result_correct_f21_1387_1"></span></td></tr><tr><td><input id="answer_f21_1387_2" type="radio" name="f21_1387" value="1" aria-label="2"><span style="font-size: 15px"> ２　A　と　C </span><span id="result_question_f21_1387_2"></span> <span id="result_correct_f21_1387_2"></span></td></tr><tr><td><input id="answer_f21_1387_3" type="radio" name="f21_1387" value="2" aria-label="3"><span style="font-size: 15px"> ３　B　と　C </span><span id="result_question_f21_1387_3"></span> <span id="result_correct_f21_1387_3"></span></td></tr><tr><td><input id="answer_f21_1387_4" type="radio" name="f21_1387" value="3" aria-label="4"><span style="font-size: 15px"> ４　B　と　D </span><span id="result_question_f21_1387_4"></span> <span id="result_correct_f21_1387_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><br><div class="tracnghiem" data-item="1392" data-correct="3"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　<ruby>費用<rp>（</rp><rt>ひよう</rt><rp>）</rp></ruby>（<ruby>宿泊費<rp>（</rp><rt>しゅくはくひ</rt><rp>）</rp></ruby>、<ruby>入場料<rp>（</rp><rt>にゅうじょうりょう</rt><rp>）</rp></ruby>）　が<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>安<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>くなるのは、どこに<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まった<ruby>場合<rp>（</rp><rt>ばあい</rt><rp>）</rp></ruby>か。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_1392_1" type="radio" name="f21_1392" value="0" aria-label="1"><span style="font-size: 15px"> １　A：<ruby>旅館<rp>（</rp><rt>りょかん</rt><rp>）</rp></ruby><ruby>松本<rp>（</rp><rt>まつもと</rt><rp>）</rp></ruby><ruby>屋<rp>（</rp><rt>や</rt><rp>）</rp></ruby> </span><span id="result_question_f21_1392_1"></span> <span id="result_correct_f21_1392_1"></span></td></tr><tr><td><input id="answer_f21_1392_2" type="radio" name="f21_1392" value="1" aria-label="2"><span style="font-size: 15px"> ２　B：キャッスルホテル </span><span id="result_question_f21_1392_2"></span> <span id="result_correct_f21_1392_2"></span></td></tr><tr><td><input id="answer_f21_1392_3" type="radio" name="f21_1392" value="2" aria-label="3"><span style="font-size: 15px"> ３　C：ホテルアルプス </span><span id="result_question_f21_1392_3"></span> <span id="result_correct_f21_1392_3"></span></td></tr><tr><td><input id="answer_f21_1392_4" type="radio" name="f21_1392" value="3" aria-label="4"><span style="font-size: 15px"> ４　D：しなのや </span><span id="result_question_f21_1392_4"></span> <span id="result_correct_f21_1392_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><div class="thongtin"><p><br></p>
+<div style="overflow-x:auto;">
+<table style="text-align: center;" border="1" width="100%">
+<tbody><tr>
+<td width="30%" style="min-width: 150px;">ホテル・<ruby>旅館<rp>(</rp><rt>りょかん</rt><rp>)</rp></ruby><ruby>名<rp>(</rp><rt>めい</rt><rp>)</rp></ruby></td>
+<td width="10%" style="min-width: 50px;"><ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>（1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>）</td>
+<td width="20%" style="min-width: 170px;"><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td width="40%" style="min-width: 200px;">サービス</td>
+</tr>
+<tr>
+<td>A：　<ruby>旅館<rp>(</rp><rt>りょかん</rt><rp>)</rp></ruby><ruby>松本<rp>(</rp><rt>まつもと</rt><rp>)</rp></ruby><ruby>屋<rp>(</rp><rt>や</rt><rp>)</rp></ruby></td>
+<td>8,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td>4<ruby>人<rp>(</rp><rt>にん</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>の<ruby>場合<rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>1000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>女性客<rp>(</rp><rt>じょせいきゃく</rt><rp>)</rp></ruby>には、<ruby>名物<rp>(</rp><rt>めいぶつ</rt><rp>)</rp></ruby><br>
+の「そば」をおみやげサービス</td>
+</tr>
+<tr>
+<td>B：　キャッスル<br>
+　　　ホテル</td>
+<td>7,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td><ruby>平日<rp>(</rp><rt>へいじつ</rt><rp>)</rp></ruby>の<ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby>は、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>600<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>女性客<rp>(</rp><rt>じょせいきゃく</rt><rp>)</rp></ruby>には、コー<br>
+ヒーとケーキをサービス
+</td>
+
+</tr>
+<tr>
+<td>C：　ホテル<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; アルプス</td>
+<td>7,500<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td><ruby>平日<rp>(</rp><rt>へいじつ</rt><rp>)</rp></ruby>の<ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby>は、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>1000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>食事<rp>(</rp><rt>しょくじ</rt><rp>)</rp></ruby>の<ruby>時<rp>(</rp><rt>とき</rt><rp>)</rp></ruby>、<ruby>飲物<rp>(</rp><rt>のみもの</rt><rp>)</rp></ruby><br>
+を1<ruby>品<rp>(</rp><rt>しな</rt><rp>)</rp></ruby>サービス</td>
+
+</tr>
+<tr>
+<td>D：　しなのや</td>
+<td>7,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td>3<ruby>人<rp>(</rp><rt>にん</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>の<ruby>場合<rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>500<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>松本城<rp>(</rp><rt>まつもとじょう</rt><rp>)</rp></ruby>の<ruby>入場券<rp>(</rp><rt>にゅうじょうけん</rt><rp>)</rp></ruby>を<br>
+サービス</td>
+
+</tr>
+</tbody></table>
+
+</div></div><hr class="style-one"><div><div class="slide"><div class="slide-title sl2"><span class="vi-tr">Dịch &amp; Giải thích</span></div><div class="slide-content sl2"><div class="doanvan">&nbsp;&nbsp;&nbsp;<div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">マリアさんは、<ruby>女<rp>（</rp><rt>おんな</rt><rp>）</rp></ruby><ruby>友<rp>（</rp><rt>とも</rt><rp>）</rp></ruby>だち3<ruby>人<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>と、<ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby><ruby>水曜日<rp>（</rp><rt>すいようび</rt><rp>）</rp></ruby>から<ruby>1泊<rp>（</rp><rt>いっぱく</rt><rp>）</rp></ruby>で<ruby>松本<rp>（</rp><rt>まつもと</rt><rp>）</rp></ruby><ruby>城<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>を<ruby>見学<rp>（</rp><rt>けんがく</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く<ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>画<rp>（</rp><rt>かく</rt><rp>）</rp></ruby>です。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>松本<rp>（</rp><rt>まつもと</rt><rp>）</rp></ruby><ruby>城<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>の<ruby>入場券<rp>（</rp><rt>にゅうじょうけん</rt><rp>）</rp></ruby>は600<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>です。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Vé vào lâu đài Matsumoto có giá 600 yên.</div></div></div><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby><ruby>会社<rp>（</rp><rt>がいしゃ</rt><rp>）</rp></ruby>がホテルを4つ<ruby>選<rp>（</rp><rt>えら</rt><rp>）</rp></ruby>んでくれました。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Họ đã được công ty du lịch chọn cho 4 khách sạn.</div></div></div></div><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>1　<ruby>宿泊<rp>（</rp><rt>しゅくはく</rt><rp>）</rp></ruby>する<ruby>曜日<rp>（</rp><rt>ようび</rt><rp>）</rp></ruby>によって<ruby>費用<rp>（</rp><rt>ひよう</rt><rp>）</rp></ruby>が<u><ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>う</u>のはどれか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Tùy vào ngày sử dụng mà chi phí sẽ <u>khác nhau</u> là cái nào?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　A　と　B</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1   A và B</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　A　と　C</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2   A và C</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　B　と　C</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3   B và C</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　B　と　D</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4   B và D</div></div></div><p></p><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問<rp>（</rp><rt>とい</rt><rp>）</rp></ruby>2　<ruby>費用<rp>（</rp><rt>ひよう</rt><rp>）</rp></ruby>（<ruby>宿泊費<rp>（</rp><rt>しゅくはくひ</rt><rp>）</rp></ruby>、<ruby>入場料<rp>（</rp><rt>にゅうじょうりょう</rt><rp>）</rp></ruby>）　が<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>安<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>くなるのは、どこに<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まった<ruby>場合<rp>（</rp><rt>ばあい</rt><rp>）</rp></ruby>か。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１　A：<ruby>旅館<rp>（</rp><rt>りょかん</rt><rp>）</rp></ruby><ruby>松本<rp>（</rp><rt>まつもと</rt><rp>）</rp></ruby><ruby>屋<rp>（</rp><rt>や</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1   A: Lữ quán Matsumotoya</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２　B：キャッスルホテル</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2   B: Khách sạn Castle</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３　C：ホテルアルプス</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3   C: Khách sạn Alps</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４　D：しなのや</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4   D: Shinanoya</div></div></div><p></p><div class="thongtin"><p><br></p>
+<div style="overflow-x:auto;">
+<table style="text-align: center;" border="1" width="100%">
+<tbody><tr>
+<td width="30%" style="min-width: 150px;">ホテル・<ruby>旅館<rp>(</rp><rt>りょかん</rt><rp>)</rp></ruby><ruby>名<rp>(</rp><rt>めい</rt><rp>)</rp></ruby></td>
+<td width="10%" style="min-width: 50px;"><ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby><ruby>費<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>（1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>）</td>
+<td width="20%" style="min-width: 170px;"><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td width="40%" style="min-width: 200px;">サービス</td>
+</tr>
+<tr>
+<td>A：　<ruby>旅館<rp>(</rp><rt>りょかん</rt><rp>)</rp></ruby><ruby>松本<rp>(</rp><rt>まつもと</rt><rp>)</rp></ruby><ruby>屋<rp>(</rp><rt>や</rt><rp>)</rp></ruby></td>
+<td>8,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td>4<ruby>人<rp>(</rp><rt>にん</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>の<ruby>場合<rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>1000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>女性客<rp>(</rp><rt>じょせいきゃく</rt><rp>)</rp></ruby>には、<ruby>名物<rp>(</rp><rt>めいぶつ</rt><rp>)</rp></ruby><br>
+の「そば」をおみやげサービス</td>
+</tr>
+<tr>
+<td>B：　キャッスル<br>
+　　　ホテル</td>
+<td>7,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td><ruby>平日<rp>(</rp><rt>へいじつ</rt><rp>)</rp></ruby>の<ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby>は、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>600<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>女性客<rp>(</rp><rt>じょせいきゃく</rt><rp>)</rp></ruby>には、コー<br>
+ヒーとケーキをサービス
+</td>
+
+</tr>
+<tr>
+<td>C：　ホテル<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; アルプス</td>
+<td>7,500<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td><ruby>平日<rp>(</rp><rt>へいじつ</rt><rp>)</rp></ruby>の<ruby>宿泊<rp>(</rp><rt>しゅくはく</rt><rp>)</rp></ruby>は、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>1000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>食事<rp>(</rp><rt>しょくじ</rt><rp>)</rp></ruby>の<ruby>時<rp>(</rp><rt>とき</rt><rp>)</rp></ruby>、<ruby>飲物<rp>(</rp><rt>のみもの</rt><rp>)</rp></ruby><br>
+を1<ruby>品<rp>(</rp><rt>しな</rt><rp>)</rp></ruby>サービス</td>
+
+</tr>
+<tr>
+<td>D：　しなのや</td>
+<td>7,000<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby></td>
+<td>3<ruby>人<rp>(</rp><rt>にん</rt><rp>)</rp></ruby><ruby>以上<rp>(</rp><rt>いじょう</rt><rp>)</rp></ruby>の<ruby>場合<rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>、<br>
+1<ruby>人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby>500<ruby>円<rp>(</rp><rt>えん</rt><rp>)</rp></ruby><ruby>割引<rp>(</rp><rt>わりびき</rt><rp>)</rp></ruby></td>
+<td><ruby>松本城<rp>(</rp><rt>まつもとじょう</rt><rp>)</rp></ruby>の<ruby>入場券<rp>(</rp><rt>にゅうじょうけん</rt><rp>)</rp></ruby>を<br>
+サービス</td>
+
+</tr>
+</tbody></table>
+
+</div></div><div class="thongtindich"><br>
+<div style="overflow-x:auto;">
+<table style="text-align: center;" border="" width="100%">
+<tbody><tr>
+<td width="30%" style="min-width: 150px;"><span class="vi-tr">Tên khách sạn/ lữ quán</span></td>
+<td width="10%" style="min-width: 50px;"><span class="vi-tr">Phí trọ lại (1 người)</span></td>
+<td width="20%" style="min-width: 170px;"><span class="vi-tr">Giảm giá</span></td>
+<td width="40%" style="min-width: 200px;"><span class="vi-tr">Dịch vụ</span></td>
+</tr>
+<tr>
+<td>A：<span class="vi-tr">Lữ quán Matsumotoya</span></td>
+<td><span class="vi-tr">8,000Yên</span></td>
+<td><span class="vi-tr">Trường hợp  4 người trở lên, mỗi người được giảm 1000 yên</span></td>
+<td><span class="vi-tr">Với khách là nữ giới, sẽ tặng đặc sản "soba"</span></td>
+</tr>
+<tr>
+<td>B：<span class="vi-tr">Khách sạn Castle</span></td>
+<td><span class="vi-tr">7,000Yên</span></td>
+<td><span class="vi-tr">Trọ lại vào ngày thường, mỗi người được giảm 600 yên</span></td>
+<td><span class="vi-tr">Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt</span></td>
+</tr>
+<tr>
+<td>C：<span class="vi-tr">Khách sạn Alps</span></td>
+<td><span class="vi-tr">7,500Yên</span></td>
+<td><span class="vi-tr">Trọ lại vào ngày thường mỗi người được giảm 1000 yên</span></td>
+<td><span class="vi-tr">Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống</span></td>
+</tr>
+<tr>
+<td>D：Shinanoya</td>
+<td><span class="vi-tr">7,000Yên</span></td>
+<td><span class="vi-tr">Trường hợp 3 người trở lên, mỗi người được giảm 500 yên</span></td>
+<td><span class="vi-tr">Tặng vé vào lâu đài Matsumoto</span></td>
+
+</tr>
+</tbody></table>
+
+</div></div></div></div></div><input type="button" value="Kết Quả" data-quiz-action="check" class="btn btn-danger" id="ketqua"><input type="button" value="Làm Lại" data-quiz-action="reset" class="btn btn-success" id="lamlai"><input type="button" value="Đáp Án" data-quiz-action="reveal" class="btn btn-primary" id="dapan"><div role="status" data-quiz-status=""><span></span></div></div></form></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="doc-hieu-jouhou-kensaku-mondai-10.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.":"Maria and 3 female friends plan to visit Matsumoto castle and stay 1 night next Wednesday.","Vé vào lâu đài Matsumoto có giá 600 yên.":"Admission to Matsumoto Castle costs 600 yen.","Họ đã được công ty du lịch chọn cho 4 khách sạn.":"They were chosen by the travel agency for 4 hotels.","Tùy vào ngày sử dụng mà chi phí sẽ khác nhau là cái nào?":"Depending on the day of use, the cost will be different.","1 A và B":"1 A and B","2 A và C":"2A and C","3 B và C":"3 B and C","4 B và D":"4 B and D","Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?":"In case of staying, where is the cheapest cost (hotel, sightseeing tickets)?","1 A: Lữ quán Matsumotoya":"1 A: Matsumotoya Inn","2 B: Khách sạn Castle":"2B: Castle Hotel","3 C: Khách sạn Alps":"3 C: Alps Hotel","4 D: Shinanoya":"4D: Shinanoya","Dịch & Giải thích":"Translation & Interpretation","Tên khách sạn/ lữ quán":"Name of hotel/guesthouse","Phí trọ lại (1 người)":"Accommodation fee (1 person)","Giảm giá":"Discount","Dịch vụ":"Service","Lữ quán Matsumotoya":"Matsumotoya Inn","8,000Yên":"8,000Yen","Trường hợp 4 người trở lên, mỗi người được giảm 1000 yên":"In case of 4 or more people, each person gets a discount of 1000 yen","Với khách là nữ giới, sẽ tặng đặc sản \"soba\"":"For female guests, the specialty \"soba\" will be given away.","Khách sạn Castle":"Castle Hotel","7,000Yên":"7,000 Yen","Trọ lại vào ngày thường, mỗi người được giảm 600 yên":"If you stay on weekdays, each person gets a 600 yen discount","Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt":"For female guests, coffee and cakes will be given away","Khách sạn Alps":"Alps Hotel","7,500Yên":"7,500yen","Trọ lại vào ngày thường mỗi người được giảm 1000 yên":"If you stay on weekdays, each person will receive a 1,000 yen discount","Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống":"At the time of dining, you will receive 1 free drink","Trường hợp 3 người trở lên, mỗi người được giảm 500 yên":"In case of 3 or more people, each person gets a discount of 500 yen","Tặng vé vào lâu đài Matsumoto":"Free tickets to Matsumoto castle","Kết Quả":"Result","Làm Lại":"Redo","Đáp Án":"Answer"},"idMap":{"Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.":"Maria dan 3 teman wanitanya berencana mengunjungi kastil Matsumoto dan menginap 1 malam pada Rabu depan.","Vé vào lâu đài Matsumoto có giá 600 yên.":"Tiket masuk ke Kastil Matsumoto berharga 600 yen.","Họ đã được công ty du lịch chọn cho 4 khách sạn.":"Mereka dipilih oleh agen perjalanan untuk 4 hotel.","Tùy vào ngày sử dụng mà chi phí sẽ khác nhau là cái nào?":"Tergantung pada hari penggunaan, biayanya akan berbeda.","1 A và B":"1 A dan B","2 A và C":"2A dan C","3 B và C":"3B dan C","4 B và D":"4B dan D","Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?":"Kalau menginap, biaya mana yang paling murah (hotel, tiket tamasya)?","1 A: Lữ quán Matsumotoya":"1A: Penginapan Matsumotoya","2 B: Khách sạn Castle":"2B: Hotel Kastil","3 C: Khách sạn Alps":"3 C: Hotel Pegunungan Alpen","4 D: Shinanoya":"4D: Shinanoya","Dịch & Giải thích":"Terjemahan & Interpretasi","Tên khách sạn/ lữ quán":"Nama hotel/wisma","Phí trọ lại (1 người)":"Biaya akomodasi (1 orang)","Giảm giá":"Diskon","Dịch vụ":"Melayani","Lữ quán Matsumotoya":"Penginapan Matsumotoya","8,000Yên":"8.000 yen","Trường hợp 4 người trở lên, mỗi người được giảm 1000 yên":"Jika terdiri dari 4 orang atau lebih, setiap orang mendapat diskon 1000 yen","Với khách là nữ giới, sẽ tặng đặc sản \"soba\"":"Untuk tamu wanita, spesialisasi \"soba\" akan diberikan.","Khách sạn Castle":"Hotel Kastil","7,000Yên":"7.000 yen","Trọ lại vào ngày thường, mỗi người được giảm 600 yên":"Jika menginap di hari kerja, setiap orang mendapat diskon 600 yen","Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt":"Untuk tamu wanita akan diberikan kopi dan kue","Khách sạn Alps":"Hotel Alpen","7,500Yên":"7.500 yen","Trọ lại vào ngày thường mỗi người được giảm 1000 yên":"Jika Anda menginap di hari kerja, setiap orang akan menerima diskon 1.000 yen","Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống":"Pada saat makan, Anda akan menerima 1 minuman gratis","Trường hợp 3 người trở lên, mỗi người được giảm 500 yên":"Jika terdiri dari 3 orang atau lebih, setiap orang mendapat diskon 500 yen","Tặng vé vào lâu đài Matsumoto":"Tiket gratis ke kastil Matsumoto","Kết Quả":"Hasil","Làm Lại":"Mengulangi","Đáp Án":"Menjawab"},"neMap":{"Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.":"मारिया र 3 महिला साथीहरू मात्सुमोटो महल भ्रमण गर्ने र अर्को बुधबार 1 रात बस्ने योजना बनाउँछन्।","Vé vào lâu đài Matsumoto có giá 600 yên.":"मात्सुमोटो महलमा प्रवेश 600 येन लागत।","Họ đã được công ty du lịch chọn cho 4 khách sạn.":"उनीहरुलाई ट्राभल एजेन्सीले ४ वटा होटलका लागि छनोट गरेको थियो ।","Tùy vào ngày sử dụng mà chi phí sẽ khác nhau là cái nào?":"प्रयोगको दिनमा निर्भर गर्दै, लागत फरक हुनेछ।","1 A và B":"१ ए र बी","2 A và C":"२ ए र सी","3 B và C":"3 B र C","4 B và D":"४ बी र डी","Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?":"बस्ने मामिलामा, सस्तो मूल्य कहाँ छ (होटल, भ्रमण टिकटहरू)?","1 A: Lữ quán Matsumotoya":"१ ए: मात्सुमोटोया इन","2 B: Khách sạn Castle":"2B: क्यासल होटल","3 C: Khách sạn Alps":"3 C: आल्प्स होटल","4 D: Shinanoya":"4D: शिनानोया","Dịch & Giải thích":"अनुवाद र व्याख्या","Tên khách sạn/ lữ quán":"होटल/गेस्ट हाउसको नाम","Phí trọ lại (1 người)":"आवास शुल्क (१ व्यक्ति)","Giảm giá":"छुट","Dịch vụ":"सेवा","Lữ quán Matsumotoya":"मात्सुमोटोया इन","8,000Yên":"8,000 येन","Trường hợp 4 người trở lên, mỗi người được giảm 1000 yên":"४ वा सोभन्दा बढी व्यक्ति भएमा प्रत्येक व्यक्तिले १००० येन छुट पाउँछन्","Với khách là nữ giới, sẽ tặng đặc sản \"soba\"":"महिला पाहुनाहरूको लागि, विशेष \"सोबा\" दिइनेछ।","Khách sạn Castle":"महल होटल","7,000Yên":"7,000 येन","Trọ lại vào ngày thường, mỗi người được giảm 600 yên":"यदि तपाईं हप्ताको दिनमा बस्नुहुन्छ भने, प्रत्येक व्यक्तिले 600 येन छुट पाउँछ","Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt":"महिला पाहुनाहरूलाई कफी र केक दिइनेछ","Khách sạn Alps":"आल्प्स होटल","7,500Yên":"7,500 येन","Trọ lại vào ngày thường mỗi người được giảm 1000 yên":"यदि तपाईं हप्ताको दिनमा बस्नुभयो भने, प्रत्येक व्यक्तिले 1,000 येन छुट प्राप्त गर्नेछ","Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống":"भोजनको समयमा, तपाईंले 1 नि: शुल्क पेय प्राप्त गर्नुहुनेछ","Trường hợp 3 người trở lên, mỗi người được giảm 500 yên":"३ वा सोभन्दा बढी व्यक्ति भएमा प्रत्येक व्यक्तिले ५०० येन छुट पाउँछ","Tặng vé vào lâu đài Matsumoto":"मात्सुमोटो महलमा नि: शुल्क टिकटहरू","Kết Quả":"नतिजा","Làm Lại":"पुन: गर्नुहोस्","Đáp Án":"जवाफ"},"myMap":{"Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.":"Maria နှင့် အမျိုးသမီး သူငယ်ချင်း 3 ယောက်သည် Matsumoto ရဲတိုက်သို့ သွားရောက်ကာ လာမည့် ဗုဒ္ဓဟူးနေ့တွင် တစ်ညတာ တည်းခိုရန် စီစဉ်ထားသည်။","Vé vào lâu đài Matsumoto có giá 600 yên.":"Matsumoto Castle သို့ ဝင်ကြေးမှာ ယန်း ၆၀၀ ဖြစ်သည်။","Họ đã được công ty du lịch chọn cho 4 khách sạn.":"ဟိုတယ် ၄ လုံးအတွက် ခရီးသွားအေဂျင်စီက ရွေးချယ်ခဲ့သည်။","Tùy vào ngày sử dụng mà chi phí sẽ khác nhau là cái nào?":"အသုံးပြုသည့်နေ့ပေါ် မူတည်၍ ကုန်ကျစရိတ် ကွဲပြားပါမည်။","1 A và B":"1 A နှင့် B","2 A và C":"2A နှင့် C","3 B và C":"3 B နှင့် C","4 B và D":"4 B နှင့် D","Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?":"တည်းခိုမယ်ဆိုရင် ဈေးအသက်သာဆုံး (ဟိုတယ်၊ ရှုခင်းလက်မှတ်) ဘယ်မှာလဲ။","1 A: Lữ quán Matsumotoya":"1 A- Matsumotoya Inn","2 B: Khách sạn Castle":"2B: Castle ဟိုတယ်","3 C: Khách sạn Alps":"3 C: Alps ဟိုတယ်","4 D: Shinanoya":"4D: Shinanoya","Dịch & Giải thích":"ဘာသာပြန်နှင့် စကားပြန်","Tên khách sạn/ lữ quán":"ဟိုတယ်/တည်းခိုခန်းအမည်","Phí trọ lại (1 người)":"တည်းခိုခ (၁ယောက်)၊","Giảm giá":"လျှော့စျေး","Dịch vụ":"ဝန်ဆောင်မှု","Lữ quán Matsumotoya":"Matsumotoya အင်း","8,000Yên":"၈၀၀၀ ယန်း","Trường hợp 4 người trở lên, mỗi người được giảm 1000 yên":"လူ 4 ဦး သို့မဟုတ် ထို့ထက်ပိုပါက တစ်ဦးစီသည် ယန်း 1000 လျှော့စျေးရရှိမည်ဖြစ်သည်။","Với khách là nữ giới, sẽ tặng đặc sản \"soba\"":"အမျိုးသမီးဧည့်သည်များအတွက် အထူးသီးသန့် \"ဆိုဘာ\" ကို ပေးအပ်သွားမည်ဖြစ်ပါသည်။","Khách sạn Castle":"Castle ဟိုတယ်","7,000Yên":"ယန်း 7000","Trọ lại vào ngày thường, mỗi người được giảm 600 yên":"အလုပ်ပိတ်ရက်များတွင် တည်းခိုပါက တစ်ဦးလျှင် ယန်း 600 လျှော့စျေး ရရှိမည်ဖြစ်သည်။","Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt":"အမျိုးသမီးဧည့်သည်များအတွက် ကော်ဖီနှင့် ကိတ်မုန့်များ ပေးအပ်သွားမည်ဖြစ်သည်။","Khách sạn Alps":"Alps ဟိုတယ်","7,500Yên":"ယန်း 7500","Trọ lại vào ngày thường mỗi người được giảm 1000 yên":"အလုပ်ပိတ်ရက်များတွင် တည်းခိုပါက တစ်ဦးလျှင် ယန်း 1,000 လျှော့စျေး ရရှိမည်ဖြစ်သည်။","Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống":"ထမင်းစားချိန်တွင် အချိုရည် ၁ ခွက် အခမဲ့ ရရှိမည်ဖြစ်သည်။","Trường hợp 3 người trở lên, mỗi người được giảm 500 yên":"လူ ၃ ယောက် သို့မဟုတ် ထို့ထက်ပိုပါက တစ်ဦးစီသည် ယန်း ၅၀၀ လျှော့စျေးရရှိမည်ဖြစ်သည်။","Tặng vé vào lâu đài Matsumoto":"Matsumoto ရဲတိုက်သို့ အခမဲ့လက်မှတ်များ","Kết Quả":"ရလဒ်","Làm Lại":"ပြန်လုပ်ပါ။","Đáp Án":"ဖြေ"},"bnMap":{"Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.":"মারিয়া এবং 3 জন মহিলা বন্ধু মাতসুমোটো দুর্গে যাওয়ার এবং আগামী বুধবার 1 রাত থাকার পরিকল্পনা করছেন৷","Vé vào lâu đài Matsumoto có giá 600 yên.":"মাতসুমোটো ক্যাসেলে ভর্তির খরচ 600 ইয়েন।","Họ đã được công ty du lịch chọn cho 4 khách sạn.":"তারা 4টি হোটেলের জন্য ট্রাভেল এজেন্সি বেছে নিয়েছিল।","Tùy vào ngày sử dụng mà chi phí sẽ khác nhau là cái nào?":"ব্যবহারের দিনের উপর নির্ভর করে, খরচ ভিন্ন হবে।","1 A và B":"1 A এবং B","2 A và C":"2A এবং C","3 B và C":"3 B এবং C","4 B và D":"4 বি এবং ডি","Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?":"থাকার ক্ষেত্রে, সবচেয়ে সস্তা খরচ কোথায় (হোটেল, দর্শনীয় স্থানের টিকিট)?","1 A: Lữ quán Matsumotoya":"1 এ: মাতসুমোতোয়া ইন","2 B: Khách sạn Castle":"2বি: ক্যাসেল হোটেল","3 C: Khách sạn Alps":"3 সি: আল্পস হোটেল","4 D: Shinanoya":"4D: Shinanoya","Dịch & Giải thích":"অনুবাদ ও ব্যাখ্যা","Tên khách sạn/ lữ quán":"হোটেল/গেস্টহাউসের নাম","Phí trọ lại (1 người)":"আবাসন ফি (1 জন)","Giảm giá":"ছাড়","Dịch vụ":"সেবা","Lữ quán Matsumotoya":"মাতসুমোতোয়া ইন","8,000Yên":"8,000 ইয়েন","Trường hợp 4 người trở lên, mỗi người được giảm 1000 yên":"4 বা তার বেশি লোকের ক্ষেত্রে, প্রতিটি ব্যক্তি 1000 ইয়েন ছাড় পাবেন","Với khách là nữ giới, sẽ tặng đặc sản \"soba\"":"মহিলা অতিথিদের জন্য, বিশেষত্ব \"সোবা\" দেওয়া হবে।","Khách sạn Castle":"ক্যাসেল হোটেল","7,000Yên":"7,000 ইয়েন","Trọ lại vào ngày thường, mỗi người được giảm 600 yên":"আপনি যদি সপ্তাহের দিনগুলিতে থাকেন তবে প্রতিটি ব্যক্তি 600 ইয়েন ছাড় পাবেন","Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt":"মহিলা অতিথিদের জন্য, কফি এবং কেক দেওয়া হবে","Khách sạn Alps":"আল্পস হোটেল","7,500Yên":"7,500 ইয়েন","Trọ lại vào ngày thường mỗi người được giảm 1000 yên":"আপনি যদি সপ্তাহের দিনগুলিতে থাকেন তবে প্রতিটি ব্যক্তি 1,000 ইয়েন ছাড় পাবেন","Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống":"খাওয়ার সময়, আপনি 1টি বিনামূল্যে পানীয় পাবেন","Trường hợp 3 người trở lên, mỗi người được giảm 500 yên":"3 বা তার বেশি লোকের ক্ষেত্রে, প্রতিটি ব্যক্তি 500 ইয়েন ছাড় পাবেন","Tặng vé vào lâu đài Matsumoto":"মাতসুমোটো দুর্গে বিনামূল্যে টিকিট","Kết Quả":"ফলাফল","Làm Lại":"আবার করুন","Đáp Án":"উত্তর"},"hiMap":{"Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.":"मारिया और 3 महिला मित्र मात्सुमोतो महल की यात्रा करने और अगले बुधवार को 1 रात रुकने की योजना बना रही हैं।","Vé vào lâu đài Matsumoto có giá 600 yên.":"मात्सुमोतो कैसल में प्रवेश की लागत 600 येन है।","Họ đã được công ty du lịch chọn cho 4 khách sạn.":"उन्हें ट्रैवल एजेंसी ने 4 होटलों के लिए चुना था।","Tùy vào ngày sử dụng mà chi phí sẽ khác nhau là cái nào?":"उपयोग के दिन के आधार पर लागत अलग-अलग होगी।","1 A và B":"1 ए और बी","2 A và C":"2ए और सी","3 B và C":"3 बी और सी","4 B và D":"4 बी और डी","Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?":"ठहरने के मामले में, सबसे सस्ती लागत (होटल, दर्शनीय स्थलों की यात्रा के टिकट) कहाँ है?","1 A: Lữ quán Matsumotoya":"1 ए: मात्सुमोतोया इन","2 B: Khách sạn Castle":"2बी: कैसल होटल","3 C: Khách sạn Alps":"3 सी: आल्प्स होटल","4 D: Shinanoya":"4डी: शिनानोया","Dịch & Giải thích":"अनुवाद एवं व्याख्या","Tên khách sạn/ lữ quán":"होटल/गेस्टहाउस का नाम","Phí trọ lại (1 người)":"आवास शुल्क (1 व्यक्ति)","Giảm giá":"छूट","Dịch vụ":"सेवा","Lữ quán Matsumotoya":"मात्सुमोतोया इन","8,000Yên":"8,000येन","Trường hợp 4 người trở lên, mỗi người được giảm 1000 yên":"4 या अधिक लोगों के मामले में, प्रत्येक व्यक्ति को 1000 येन की छूट मिलती है","Với khách là nữ giới, sẽ tặng đặc sản \"soba\"":"महिला मेहमानों के लिए विशेष \"सोबा\" दिया जाएगा।","Khách sạn Castle":"कैसल होटल","7,000Yên":"7,000 येन","Trọ lại vào ngày thường, mỗi người được giảm 600 yên":"यदि आप कार्यदिवसों पर रुकते हैं, तो प्रत्येक व्यक्ति को 600 येन की छूट मिलती है","Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt":"महिला मेहमानों के लिए कॉफी और केक दिए जाएंगे","Khách sạn Alps":"आल्प्स होटल","7,500Yên":"7,500येन","Trọ lại vào ngày thường mỗi người được giảm 1000 yên":"यदि आप कार्यदिवसों पर रुकते हैं, तो प्रत्येक व्यक्ति को 1,000 येन की छूट मिलेगी","Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống":"भोजन के समय, आपको 1 पेय निःशुल्क मिलेगा","Trường hợp 3 người trở lên, mỗi người được giảm 500 yên":"3 या अधिक लोगों के मामले में, प्रत्येक व्यक्ति को 500 येन की छूट मिलती है","Tặng vé vào lâu đài Matsumoto":"मात्सुमोतो महल के लिए निःशुल्क टिकट","Kết Quả":"परिणाम","Làm Lại":"फिर से करना","Đáp Án":"उत्तर"},"thMap":{"Maria cùng với 3 bạn nữ có kế hoạch sẽ đi tham quan lâu đài Matsumoto và trọ lại 1 đêm vào thứ tư tuần sau.":"มาเรียและเพื่อนผู้หญิง 3 คนวางแผนจะไปเยี่ยมชมปราสาทมัตสึโมโต้และพัก 1 คืนวันพุธหน้า","Vé vào lâu đài Matsumoto có giá 600 yên.":"ค่าเข้าชมปราสาทมัตสึโมโต้ 600 เยน","Họ đã được công ty du lịch chọn cho 4 khách sạn.":"พวกเขาได้รับการคัดเลือกจากตัวแทนการท่องเที่ยวสำหรับโรงแรม 4 แห่ง","Tùy vào ngày sử dụng mà chi phí sẽ khác nhau là cái nào?":"ค่าใช้จ่ายจะแตกต่างกันขึ้นอยู่กับวันที่ใช้งาน","1 A và B":"1 เอ และ บี","2 A và C":"2A และ C","3 B và C":"3 บี และ ซี","4 B và D":"4 บี และ ดี","Trường hợp trọ lại ở đâu thì có chi phí (tiền khách sạn, tiền vé tham quan) rẻ nhất?":"กรณีเข้าพักช่วงไหนถูกที่สุด (โรงแรม, ตั๋วเที่ยวชมสถานที่)?","1 A: Lữ quán Matsumotoya":"1 A: โรงแรมมัตสึโมโตยะ","2 B: Khách sạn Castle":"2B: โรงแรมแคสเซิล","3 C: Khách sạn Alps":"3 C: โรงแรมแอลป์","4 D: Shinanoya":"4D: ชินาโนยะ","Dịch & Giải thích":"การแปลและการตีความ","Tên khách sạn/ lữ quán":"ชื่อโรงแรม/เกสต์เฮ้าส์","Phí trọ lại (1 người)":"ค่าที่พัก (1 ท่าน)","Giảm giá":"การลดราคา","Dịch vụ":"บริการ","Lữ quán Matsumotoya":"มัตสึโมโตยะ อินน์","8,000Yên":"8,000เยน","Trường hợp 4 người trở lên, mỗi người được giảm 1000 yên":"ในกรณีที่มา 4 คนขึ้นไป แต่ละคนจะได้รับส่วนลด 1,000 เยน","Với khách là nữ giới, sẽ tặng đặc sản \"soba\"":"สำหรับผู้เข้าพักหญิง เราจะแจก \"โซบะ\" ชนิดพิเศษ","Khách sạn Castle":"โรงแรมแคสเซิล","7,000Yên":"7,000 เยน","Trọ lại vào ngày thường, mỗi người được giảm 600 yên":"หากเข้าพักวันธรรมดา แต่ละคนจะได้รับส่วนลด 600 เยน","Với khách là nữ giới, sẽ tặng cà phê và bánh ngọt":"สำหรับผู้เข้าพักหญิง จะมีการแจกกาแฟและเค้ก","Khách sạn Alps":"โรงแรมแอลป์","7,500Yên":"7,500เยน","Trọ lại vào ngày thường mỗi người được giảm 1000 yên":"หากเข้าพักวันธรรมดา แต่ละคนจะได้รับส่วนลด 1,000 เยน","Vào lúc dùng bữa, sẽ được tặng 1 phần đồ uống":"เมื่อรับประทานอาหารคุณจะได้รับเครื่องดื่มฟรี 1 แก้ว","Trường hợp 3 người trở lên, mỗi người được giảm 500 yên":"ในกรณีที่มา 3 คนขึ้นไป แต่ละคนจะได้รับส่วนลด 500 เยน","Tặng vé vào lâu đài Matsumoto":"ตั๋วเข้าชมปราสาทมัตสึโมโต้ฟรี","Kết Quả":"ผลลัพธ์","Làm Lại":"ทำซ้ำ","Đáp Án":"คำตอบ"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<script src="speed-quiz.js"></script>
+<link rel="stylesheet" href="style.css">

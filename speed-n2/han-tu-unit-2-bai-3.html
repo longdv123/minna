@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">応</div></div><div class="kcell k-hv"><span class="vi-tr">ứng</span></div><div class="kcell k-read"><div class="on">オウ</div><div>こたーえる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>応<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">đáp ứng</span></div></div><div class="kitem"><div class="jp"><ruby>応<rp>（</rp><rt>おう</rt><rp>）</rp></ruby>じる</div><div class="vi"><span class="vi-tr">đáp ứng</span></div></div><div class="kitem"><div class="jp"><ruby>応用<rp>（</rp><rt>おうよう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">ứng dụng</span> </div></div><div class="kitem"><div class="jp"><ruby>応援<rp>（</rp><rt>おうえん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hỗ trợ</span> </div></div><div class="kitem"><div class="jp"><ruby>対応<rp>（</rp><rt>たいおう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đối ứng, xử lí</span></div></div><div class="kitem"><div class="jp"><ruby>一応<rp>（</rp><rt>いちおう</rt><rp>）</rp></ruby></div><div class="vi">qua loa </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">泊</div></div><div class="kcell k-hv"><span class="vi-tr">bạc</span></div><div class="kcell k-read"><div class="on">ハク</div><div>とーまる／とーめる</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まる</div><div class="vi"><span class="vi-tr">ở</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>泊<rp>（</rp><rt>と</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">cho ở nhờ</span></div></div><div class="kitem"><div class="jp"><ruby>宿泊<rp>（</rp><rt>しゅくはく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">nghỉ tại</span> </div></div><div class="kitem"><div class="jp">3<ruby>泊<rp>（</rp><rt>ぱく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">ở 3 đêm (từ đếm số đêm ở trọ)</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">景</div></div><div class="kcell k-hv"><span class="vi-tr">cảnh</span></div><div class="kcell k-read"><div class="on">ケイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>景気<rp>（</rp><rt>けいき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tình hình kinh tế</span></div></div><div class="kitem"><div class="jp"><ruby>風景<rp>（</rp><rt>ふうけい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phong cảnh</span> </div></div><div class="kitem"><div class="jp"><ruby>背景<rp>（</rp><rt>はいけい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phông, nền</span></div></div><div class="kitem"><div class="jp"><ruby>景色<rp>（</rp><rt>けしき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cảnh vật</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">航</div></div><div class="kcell k-hv"><span class="vi-tr">hàng</span></div><div class="kcell k-read"><div class="on">コウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>航空<rp>（</rp><rt>こうくう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hàng không</span></div></div><div class="kitem"><div class="jp"><ruby>航空券<rp>（</rp><rt>こうくうけん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vé máy bay</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">異</div></div><div class="kcell k-hv"><span class="vi-tr">dị</span> </div><div class="kcell k-read"><div class="on">イ</div><div>ことーなる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>異<rp>（</rp><rt>こと</rt><rp>）</rp></ruby>なる</div><div class="vi"><span class="vi-tr">khác</span></div></div><div class="kitem"><div class="jp"><ruby>異常<rp>（</rp><rt>いじょう</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">khác thường</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">到</div></div><div class="kcell k-hv"><span class="vi-tr">đáo</span></div><div class="kcell k-read"><div class="on">トウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>到着<rp>（</rp><rt>とうちゃく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đến nơi</span></div></div><div class="kitem"><div class="jp"><ruby>出発<rp>（</rp><rt>しゅっぱつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">xuất phát</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">刻</div></div><div class="kcell k-hv"><span class="vi-tr">khắc</span></div><div class="kcell k-read"><div class="on">コク</div><div>（きざーむ）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>遅刻<rp>（</rp><rt>ちこく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">muộn</span> </div></div><div class="kitem"><div class="jp"><ruby>深刻<rp>（</rp><rt>しんこく</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">nghiêm trọng</span> </div></div><div class="kitem"><div class="jp"><ruby>時刻<rp>（</rp><rt>じこく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giờ</span></div></div><div class="kitem"><div class="jp"><ruby>時刻表<rp>（</rp><rt>じこくひょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bảng giờ</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">浴</div></div><div class="kcell k-hv"><span class="vi-tr">dục</span></div><div class="kcell k-read"><div>あーびる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>浴<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>びる</div><div class="vi"><span class="vi-tr">tắm</span></div></div><div class="kitem"><div class="jp"><ruby>海水浴<rp>（</rp><rt>かいすいよく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tắm biển</span></div></div><div class="kitem"><div class="jp"><ruby>入浴<rp>（</rp><rt>にゅうよく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đi tắm</span></div></div><div class="kitem"><div class="jp"><ruby>浴衣<rp>（</rp><rt>ゆかた</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">áo yukata</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">舟</div></div><div class="kcell k-hv">chu</div><div class="kcell k-read"><div>ふね</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>舟<rp>（</rp><rt>ふね</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thuyền</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">貝</div></div><div class="kcell k-hv"><span class="vi-tr">bối</span></div><div class="kcell k-read"><div>かい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>貝<rp>（</rp><rt>かい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sò</span></div></div><div class="kitem"><div class="jp"><ruby>貝<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>がら</div><div class="vi"><span class="vi-tr">vỏ sò</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">拾</div></div><div class="kcell k-hv"><span class="vi-tr">thập</span></div><div class="kcell k-read"><div>ひろーう</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>拾<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">nhặt</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>の<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>は<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>とは<u><ruby>異<rp>（</rp><rt>こと</rt><rp>）</rp></ruby>なる</u>ものだった。</td><td>a. いなる</td><td>b. ことなる</td></tr><tr><td>2. ここから<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>える<u><ruby>景色<rp>（</rp><rt>けしき</rt><rp>）</rp></ruby></u>はすばらしいね。</td><td>a. けしき</td><td>b. けいしき</td></tr><tr><td>3. <ruby>毎朝<rp>（</rp><rt>まいあさ</rt><rp>）</rp></ruby>、シャワーを<u><ruby>浴<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>びて</u>から<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>かける。</td><td>a. おびて</td><td>b. あびて</td></tr><tr><td>4. <ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby>の<ruby>要望<rp>（</rp><rt>ようぼう</rt><rp>）</rp></ruby>に<u><ruby>応<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>えて</u>、<ruby>営業時間<rp>（</rp><rt>えいぎょうじかん</rt><rp>）</rp></ruby>を１<ruby>時間延<rp>（</rp><rt>じかんの</rt><rp>）</rp></ruby>ばした。</td><td>a. たえて</td><td>b. こたえて</td></tr><tr><td>5. <u><ruby>拾<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>った</u>ものを<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>のものにしてはいけない。</td><td>a. あった</td><td>b. ひろった</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>の<ruby>意見<rp>（</rp><rt>いけん</rt><rp>）</rp></ruby>は<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>とは<u><ruby>異<rp>（</rp><rt>こと</rt><rp>）</rp></ruby>なる</u>ものだった。</td><td><b>ことなる</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. ここから<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>える<u><ruby>景色<rp>（</rp><rt>けしき</rt><rp>）</rp></ruby></u>はすばらしいね。</td><td><b>けしき</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>毎朝<rp>（</rp><rt>まいあさ</rt><rp>）</rp></ruby>、シャワーを<u><ruby>浴<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>びて</u>から<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>かける。</td><td><b>あびて</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby>の<ruby>要望<rp>（</rp><rt>ようぼう</rt><rp>）</rp></ruby>に<u><ruby>応<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>えて</u>、<ruby>営業時間<rp>（</rp><rt>えいぎょうじかん</rt><rp>）</rp></ruby>を１<ruby>時間延<rp>（</rp><rt>じかんの</rt><rp>）</rp></ruby>ばした。</td><td><b>こたえて</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <u><ruby>拾<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>った</u>ものを<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>のものにしてはいけない。</td><td><b>ひろった</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>帰国<rp>（</rp><rt>きこく</rt><rp>）</rp></ruby>するので、<u>こう</u><ruby>空券<rp>（</rp><rt>くうけん</rt><rp>）</rp></ruby>を<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>った。</td><td>a. 飛</td><td>b. 港</td><td>c. 航</td></tr><tr><td>2. <ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby>の<u>とう</u><ruby>着<rp>（</rp><rt>ちゃく</rt><rp>）</rp></ruby>が<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>し<ruby>早<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>くなるようだ。</td><td>a. 到</td><td>b. 倒</td><td>c. 刻</td></tr><tr><td>3. <ruby>今年<rp>（</rp><rt>ことし</rt><rp>）</rp></ruby>の<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>の<ruby>気温<rp>（</rp><rt>きおん</rt><rp>）</rp></ruby>の<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>さは<u>い</u><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>だ。</td><td>a. 以</td><td>b. 異</td><td>c. 違</td></tr><tr><td>4. <ruby>入<rp>（</rp><rt>にゅう</rt><rp>）</rp></ruby><u>よく</u>する<ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>に<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>を<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>んだほうがいい。</td><td>a. 欲</td><td>b. 浴</td><td>c. 容</td></tr><tr><td>5. この<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>の<ruby>背<rp>（</rp><rt>はい</rt><rp>）</rp></ruby><u>けい</u>にはさまざまな<ruby>事情<rp>（</rp><rt>じじょう</rt><rp>）</rp></ruby>がある。</td><td>a. 形</td><td>b. 軽</td><td>c. 景</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>帰国<rp>（</rp><rt>きこく</rt><rp>）</rp></ruby>するので、<u>こう</u><ruby>空券<rp>（</rp><rt>くうけん</rt><rp>）</rp></ruby>を<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>った。</td><td><b>航</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby>の<u>とう</u><ruby>着<rp>（</rp><rt>ちゃく</rt><rp>）</rp></ruby>が<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>し<ruby>早<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>くなるようだ。</td><td><b>到</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>今年<rp>（</rp><rt>ことし</rt><rp>）</rp></ruby>の<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>の<ruby>気温<rp>（</rp><rt>きおん</rt><rp>）</rp></ruby>の<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>さは<u>い</u><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>だ。</td><td><b>異</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>入<rp>（</rp><rt>にゅう</rt><rp>）</rp></ruby><u>よく</u>する<ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>に<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>を<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>んだほうがいい。</td><td><b>浴</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. この<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>の<ruby>背<rp>（</rp><rt>はい</rt><rp>）</rp></ruby><u>けい</u>にはさまざまな<ruby>事情<rp>（</rp><rt>じじょう</rt><rp>）</rp></ruby>がある。</td><td><b>景</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>温暖化<rp>（</rp><rt>おんだんか</rt><rp>）</rp></ruby>は<ruby>世界的<rp>（</rp><rt>せかいてき</rt><rp>）</rp></ruby>に（　　　）<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>だ。</td><td>a. 深刻な</td><td>b. 景気の</td></tr><tr><td>2. <ruby>船<rp>（</rp><rt>ふね</rt><rp>）</rp></ruby>の<ruby>出発<rp>（</rp><rt>しゅっぱつ</rt><rp>）</rp></ruby>（　　　）を<ruby>調<rp>（</rp><rt>しら</rt><rp>）</rp></ruby>べた。</td><td>a. 時刻</td><td>b. 遅刻</td></tr><tr><td>3. <ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>の<ruby>近<rp>（</rp><rt>ちか</rt><rp>）</rp></ruby>くのホテルに（　　　）した。</td><td>a. 宿泊</td><td>b. 浴衣</td></tr><tr><td>4. （　　　）がよくなると、<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>がよく<ruby>売<rp>（</rp><rt>う</rt><rp>）</rp></ruby>れるそうだ。</td><td>a. 景気</td><td>b. 風景</td></tr><tr><td>5. <ruby>店員<rp>（</rp><rt>てんいん</rt><rp>）</rp></ruby>の<ruby>数<rp>（</rp><rt>かず</rt><rp>）</rp></ruby>が<ruby>少<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>ないと、<ruby>注文<rp>（</rp><rt>ちゅうもん</rt><rp>）</rp></ruby>に<ruby>早<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>く（　　　）できない。</td><td>a. 応援</td><td>b. 対応</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>温暖化<rp>（</rp><rt>おんだんか</rt><rp>）</rp></ruby>は<ruby>世界的<rp>（</rp><rt>せかいてき</rt><rp>）</rp></ruby>に（　　　）<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>だ。</td><td><b>深刻な</b> (しんこくな)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>船<rp>（</rp><rt>ふね</rt><rp>）</rp></ruby>の<ruby>出発<rp>（</rp><rt>しゅっぱつ</rt><rp>）</rp></ruby>（　　　）を<ruby>調<rp>（</rp><rt>しら</rt><rp>）</rp></ruby>べた。</td><td><b>時刻</b> (じこく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>の<ruby>近<rp>（</rp><rt>ちか</rt><rp>）</rp></ruby>くのホテルに（　　　）した。</td><td><b>宿泊</b> (しゅくはく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. （　　　）がよくなると、<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>がよく<ruby>売<rp>（</rp><rt>う</rt><rp>）</rp></ruby>れるそうだ。</td><td><b>景気</b> (けいき)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>店員<rp>（</rp><rt>てんいん</rt><rp>）</rp></ruby>の<ruby>数<rp>（</rp><rt>かず</rt><rp>）</rp></ruby>が<ruby>少<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>ないと、<ruby>注文<rp>（</rp><rt>ちゅうもん</rt><rp>）</rp></ruby>に<ruby>早<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>く（　　　）できない。</td><td><b>対応</b> (たいおう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-2-3"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-2-bai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","ứng":"response","đáp ứng":"response","ứng dụng":"application","hỗ trợ":"support","đối ứng, xử lí":"respond and handle","bạc":"silver","ở":"live","cho ở nhờ":"let me stay","nghỉ tại":"stay at","ở 3 đêm (từ đếm số đêm ở trọ)":"Stay 3 nights (from counting the number of nights staying)","cảnh":"scene","tình hình kinh tế":"economic situation","phong cảnh":"scenery","phông, nền":"font, background","cảnh vật":"scene","hàng":"row","hàng không":"air","vé máy bay":"airline tickets","dị":"weird","khác":"other","khác thường":"extraordinary","đáo":"unique","đến nơi":"arrive","xuất phát":"depart","khắc":"notch","muộn":"late","nghiêm trọng":"serious","giờ":"hour","bảng giờ":"time table","dục":"sex","tắm":"take a shower","tắm biển":"swimming","đi tắm":"take a shower","áo yukata":"yukata shirt","thuyền":"boat","bối":"confused","sò":"clam","vỏ sò":"seashells","thập":"cross","nhặt":"picked","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","ứng":"tanggapan","đáp ứng":"tanggapan","ứng dụng":"aplikasi","hỗ trợ":"mendukung","đối ứng, xử lí":"merespons dan menangani","bạc":"perak","ở":"hidup","cho ở nhờ":"biarkan aku tinggal","nghỉ tại":"tinggal di","ở 3 đêm (từ đếm số đêm ở trọ)":"Menginap 3 malam (dihitung dari jumlah malam menginap)","cảnh":"pemandangan","tình hình kinh tế":"situasi ekonomi","phong cảnh":"pemandangan","phông, nền":"fonta, latar belakang","cảnh vật":"pemandangan","hàng":"baris","hàng không":"udara","vé máy bay":"tiket pesawat","dị":"aneh","khác":"lainnya","khác thường":"luar biasa","đáo":"unik","đến nơi":"tiba","xuất phát":"berangkat","khắc":"takik","muộn":"terlambat","nghiêm trọng":"serius","giờ":"jam","bảng giờ":"tabel waktu","dục":"seks","tắm":"mandi","tắm biển":"renang","đi tắm":"mandi","áo yukata":"kemeja yukata","thuyền":"kapal","bối":"bingung","sò":"kerang","vỏ sò":"kerang laut","thập":"menyeberang","nhặt":"dipilih","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","ứng":"प्रतिक्रिया","đáp ứng":"प्रतिक्रिया","ứng dụng":"आवेदन","hỗ trợ":"समर्थन","đối ứng, xử lí":"प्रतिक्रिया र ह्यान्डल","bạc":"चाँदी","ở":"लाइभ","cho ở nhờ":"मलाई बस्न दिनुहोस्","nghỉ tại":"मा रहनुहोस्","ở 3 đêm (từ đếm số đêm ở trọ)":"३ रात बस्नुहोस् (राती बसेको संख्या गणनाबाट)","cảnh":"दृश्य","tình hình kinh tế":"आर्थिक स्थिति","phong cảnh":"दृश्यहरू","phông, nền":"फन्ट, पृष्ठभूमि","cảnh vật":"दृश्य","hàng":"पङ्क्ति","hàng không":"हावा","vé máy bay":"एयरलाइन टिकटहरू","dị":"अनौठो","khác":"अन्य","khác thường":"असाधारण","đáo":"अद्वितीय","đến nơi":"आइपुग्छ","xuất phát":"प्रस्थान","khắc":"खाच","muộn":"ढिलो","nghiêm trọng":"गम्भीर","giờ":"घण्टा","bảng giờ":"समय तालिका","dục":"सेक्स","tắm":"नुहाउने","tắm biển":"पौडी खेल्ने","đi tắm":"नुहाउने","áo yukata":"yukata शर्ट","thuyền":"डुङ्गा","bối":"भ्रमित","sò":"क्लम","vỏ sò":"seashells","thập":"क्रस","nhặt":"उठाएको","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","ứng":"တုံ့ပြန်မှု","đáp ứng":"တုံ့ပြန်မှု","ứng dụng":"လျှောက်လွှာ","hỗ trợ":"ထောက်ခံမှု","đối ứng, xử lí":"တုံ့ပြန်ပြီး ကိုင်တွယ်ပါ။","bạc":"ငွေ","ở":"အသက်ရှင်","cho ở nhờ":"နေပါရစေ","nghỉ tại":"မှာနေပါ။","ở 3 đêm (từ đếm số đêm ở trọ)":"၃ညအိပ် (တည်းခိုသူအရေအတွက်ကို ရေတွက်ခြင်းမှ)","cảnh":"မြင်ကွင်း","tình hình kinh tế":"စီးပွားရေးအခြေအနေ","phong cảnh":"ရှုခင်း","phông, nền":"ဖောင့်၊ နောက်ခံ","cảnh vật":"မြင်ကွင်း","hàng":"အတန်း","hàng không":"လေ","vé máy bay":"လေယာဉ်လက်မှတ်များ","dị":"ထူးဆန်းတယ်။","khác":"အခြား","khác thường":"ထူးခြားသော","đáo":"ထူးခြားသော","đến nơi":"ရောက်ရှိလာ","xuất phát":"ထွက်သွား","khắc":"ထစ်","muộn":"နောက်ကျ","nghiêm trọng":"လေးနက်သည်။","giờ":"နာရီ","bảng giờ":"အချိန်ဇယား","dục":"လိင်","tắm":"ရေချိုးပါ။","tắm biển":"ရေကူး","đi tắm":"ရေချိုးပါ။","áo yukata":"ယူကာတာအင်္ကျီ","thuyền":"လှေ","bối":"ရှုပ်သည်။","sò":"ဂုံး","vỏ sò":"ပင်လယ်ခွံများ","thập":"လက်ဝါးကပ်တိုင်","nhặt":"ခူး","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","ứng":"প্রতিক্রিয়া","đáp ứng":"প্রতিক্রিয়া","ứng dụng":"আবেদন","hỗ trợ":"সমর্থন","đối ứng, xử lí":"প্রতিক্রিয়া এবং পরিচালনা","bạc":"রূপা","ở":"বাস","cho ở nhờ":"আমাকে থাকতে দাও","nghỉ tại":"এ থাকুন","ở 3 đêm (từ đếm số đêm ở trọ)":"3 রাত থাকুন (রাত্রি থাকার সংখ্যা গণনা থেকে)","cảnh":"দৃশ্য","tình hình kinh tế":"অর্থনৈতিক অবস্থা","phong cảnh":"দৃশ্যাবলী","phông, nền":"ফন্ট, ব্যাকগ্রাউন্ড","cảnh vật":"দৃশ্য","hàng":"সারি","hàng không":"বায়ু","vé máy bay":"এয়ারলাইন টিকিট","dị":"অদ্ভুত","khác":"অন্যান্য","khác thường":"অসাধারণ","đáo":"অনন্য","đến nơi":"পৌঁছা","xuất phát":"প্রস্থান","khắc":"খাঁজ","muộn":"দেরী","nghiêm trọng":"গুরুতর","giờ":"ঘন্টা","bảng giờ":"সময় টেবিল","dục":"যৌনতা","tắm":"একটি গোসল করা","tắm biển":"সাঁতার","đi tắm":"একটি গোসল করা","áo yukata":"ইউকাটা শার্ট","thuyền":"নৌকা","bối":"বিভ্রান্ত","sò":"ক্ল্যাম","vỏ sò":"seashells","thập":"ক্রস","nhặt":"বাছাই করা","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","ứng":"प्रतिक्रिया","đáp ứng":"प्रतिक्रिया","ứng dụng":"आवेदन","hỗ trợ":"सहायता","đối ứng, xử lí":"जवाब दो और संभालो","bạc":"चाँदी","ở":"रहना","cho ở nhờ":"मुझे ठहरने दो","nghỉ tại":"पर रहना","ở 3 đêm (từ đếm số đêm ở trọ)":"3 रात रुकें (रहने वाली रातों की संख्या गिनने से)","cảnh":"दृश्य","tình hình kinh tế":"आर्थिक स्थिति","phong cảnh":"प्राकृतिक दृश्य","phông, nền":"फ़ॉन्ट, पृष्ठभूमि","cảnh vật":"दृश्य","hàng":"पंक्ति","hàng không":"वायु","vé máy bay":"एयरलाइन टिकट","dị":"अजीब","khác":"अन्य","khác thường":"असाधारण","đáo":"अद्वितीय","đến nơi":"आना","xuất phát":"प्रस्थान","khắc":"निशान","muộn":"देर","nghiêm trọng":"गंभीर","giờ":"घंटा","bảng giờ":"समय सारणी","dục":"सेक्स","tắm":"शॉवर लें","tắm biển":"तैरना","đi tắm":"शॉवर लें","áo yukata":"युक्ता शर्ट","thuyền":"नाव","bối":"अस्पष्ट","sò":"क्लैम","vỏ sò":"सीप","thập":"पार करना","nhặt":"उठाया","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","ứng":"การตอบสนอง","đáp ứng":"การตอบสนอง","ứng dụng":"แอปพลิเคชัน","hỗ trợ":"สนับสนุน","đối ứng, xử lí":"ตอบสนองและจัดการ","bạc":"เงิน","ở":"สด","cho ở nhờ":"ให้ฉันอยู่","nghỉ tại":"อยู่ที่","ở 3 đêm (từ đếm số đêm ở trọ)":"พัก 3 คืน (จากการนับจำนวนคืนที่เข้าพัก)","cảnh":"ฉาก","tình hình kinh tế":"สถานการณ์ทางเศรษฐกิจ","phong cảnh":"ทิวทัศน์","phông, nền":"แบบอักษรพื้นหลัง","cảnh vật":"ฉาก","hàng":"แถว","hàng không":"อากาศ","vé máy bay":"ตั๋วเครื่องบิน","dị":"แปลก","khác":"อื่น","khác thường":"พิเศษ","đáo":"มีเอกลักษณ์","đến nơi":"มาถึง","xuất phát":"ออกเดินทาง","khắc":"บาก","muộn":"ช้า","nghiêm trọng":"จริงจัง","giờ":"ชั่วโมง","bảng giờ":"ตารางเวลา","dục":"เพศ","tắm":"อาบน้ำ","tắm biển":"การว่ายน้ำ","đi tắm":"อาบน้ำ","áo yukata":"เสื้อยูกาตะ","thuyền":"เรือ","bối":"สับสน","sò":"หอย","vỏ sò":"เปลือกหอย","thập":"ข้าม","nhặt":"เลือก","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

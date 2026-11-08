@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">力</div></div><div class="kcell k-hv"><span class="vi-tr">lực</span> </div><div class="kcell k-read"><div class="on">リョク</div><div>ちから</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>力<rp>（</rp><rt>ちから</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lực</span></div></div><div class="kitem"><div class="jp"><ruby>火力<rp>（</rp><rt>かりょく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hỏa lực</span> </div></div><div class="kitem"><div class="jp"><ruby>重力<rp>（</rp><rt>じゅうりょく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trọng lực</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">偶</div></div><div class="kcell k-hv"><span class="vi-tr">ngẫu</span> </div><div class="kcell k-read"><div class="on">グウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>偶然<rp>（</rp><rt>ぐうぜん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tình cờ</span> </div></div><div class="kitem"><div class="jp"><ruby>偶数<rp>（</rp><rt>ぐうすう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">số chẵn</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">了</div></div><div class="kcell k-hv"><span class="vi-tr">liệu</span> </div><div class="kcell k-read"><div class="on">リョウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>終了<rp>（</rp><rt>しゅうりょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">kết thúc</span></div></div><div class="kitem"><div class="jp"><ruby>完了<rp>（</rp><rt>かんりょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hoàn thành</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">加</div></div><div class="kcell k-hv">gia </div><div class="kcell k-read"><div class="on">カ</div><div>くわーえる／くわーわる</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～を）<ruby>加<rp>（</rp><rt>くわ</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">thêm vào~</span></div></div><div class="kitem"><div class="jp">（～が）<ruby>加<rp>（</rp><rt>くわ</rt><rp>）</rp></ruby>わる</div><div class="vi"><span class="vi-tr">~ được thêm vào</span></div></div><div class="kitem"><div class="jp"><ruby>加熱<rp>（</rp><rt>かねつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đun nóng</span></div></div><div class="kitem"><div class="jp"><ruby>追加<rp>（</rp><rt>ついか</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thêm vào</span> </div></div><div class="kitem"><div class="jp"><ruby>増加<rp>（</rp><rt>ぞうか</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tăng lên</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">向</div></div><div class="kcell k-hv"><span class="vi-tr">hướng</span> </div><div class="kcell k-read"><div class="on">コウ</div><div>むーく／むーける／むーかう／むーこう</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>向<rp>（</rp><rt>む</rt><rp>）</rp></ruby>き</div><div class="vi"><span class="vi-tr">hướng</span></div></div><div class="kitem"><div class="jp"><ruby>逆向<rp>（</rp><rt>ぎゃくむ</rt><rp>）</rp></ruby>き</div><div class="vi"><span class="vi-tr">ngược hướng</span> </div></div><div class="kitem"><div class="jp"><ruby>方向<rp>（</rp><rt>ほうこう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phương hướng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">必</div></div><div class="kcell k-hv"><span class="vi-tr">tất</span></div><div class="kcell k-read"><div class="on">ヒツ</div><div>かならーず</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>必<rp>（</rp><rt>かなら</rt><rp>）</rp></ruby>ず</div><div class="vi"><span class="vi-tr">nhất định</span></div></div><div class="kitem"><div class="jp"><ruby>必要<rp>（</rp><rt>ひつよう</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">cần thiết</span></div></div><div class="kitem"><div class="jp"><ruby>必死<rp>（</rp><rt>ひっし</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">cố hết sức</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">作</div></div><div class="kcell k-hv"><span class="vi-tr">tác</span> </div><div class="kcell k-read"><div class="on">サク／サ</div><div>つくーる／つくーり</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>手作<rp>（</rp><rt>てづく</rt><rp>）</rp></ruby>り</div><div class="vi"><span class="vi-tr">thủ công</span></div></div><div class="kitem"><div class="jp"><ruby>作品<rp>（</rp><rt>さくひん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tác phẩm</span> </div></div><div class="kitem"><div class="jp"><ruby>作業<rp>（</rp><rt>さぎょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">làm việc</span> </div></div><div class="kitem"><div class="jp"><ruby>作用<rp>（</rp><rt>さよう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tác dụng</span> </div></div><div class="kitem"><div class="jp"><ruby>動作<rp>（</rp><rt>どうさ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">động tác</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">引</div></div><div class="kcell k-hv"><span class="vi-tr">dẫn</span> </div><div class="kcell k-read"><div class="on">イン</div><div>ひーく／ひーき</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>く　cf．<ruby>押<rp>（</rp><rt>お</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">kéo cf. đẩy</span> </div></div><div class="kitem"><div class="jp"><ruby>引退<rp>（</rp><rt>いんたい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">giải nghệ</span> </div></div><div class="kitem"><div class="jp"><ruby>引用<rp>（</rp><rt>いんよう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">trích dẫn</span> </div></div><div class="kitem"><div class="jp"><ruby>強引<rp>（</rp><rt>ごういん</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">ép</span>  </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">圧</div></div><div class="kcell k-hv"><span class="vi-tr">áp</span> </div><div class="kcell k-read"><div class="on">アツ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>圧力<rp>（</rp><rt>あつりょく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">áp lực</span> </div></div><div class="kitem"><div class="jp"><ruby>血圧<rp>（</rp><rt>けつあつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">huyết áp</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">離</div></div><div class="kcell k-hv">li </div><div class="kcell k-read"><div class="on">リ</div><div>はなーれる／はなーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>離<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>れる</div><div class="vi">~ xa</div></div><div class="kitem"><div class="jp">（～を）<ruby>離<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">tách rời ~</span></div></div><div class="kitem"><div class="jp"><ruby>離婚<rp>（</rp><rt>りこん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">li hôn</span> </div></div><div class="kitem"><div class="jp"><ruby>距離<rp>（</rp><rt>きょり</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cự li</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">秒</div></div><div class="kcell k-hv"><span class="vi-tr">miểu</span></div><div class="kcell k-read"><div class="on">ビョウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>秒<rp>（</rp><rt>びょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giây</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. ３に６を<u><ruby>加<rp>（</rp><rt>くわ</rt><rp>）</rp></ruby>える</u>と、９になる。</td><td>a. そなえる</td><td>b. くわえる</td></tr><tr><td>2. <ruby>当日<rp>（</rp><rt>とうじつ</rt><rp>）</rp></ruby>までに<u><ruby>必<rp>（</rp><rt>かなら</rt><rp>）</rp></ruby>ず</u><ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby>します。</td><td>a. かららず</td><td>b. かならず</td></tr><tr><td>3. <ruby>月<rp>（</rp><rt>つき</rt><rp>）</rp></ruby>は<ruby>地球<rp>（</rp><rt>ちきゅう</rt><rp>）</rp></ruby>から<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>しずつ<u><ruby>離<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>れて</u>いるそうだ。</td><td>a. はなれて</td><td>b. はずれて</td></tr><tr><td>4. このガスコンロは<u><ruby>火力<rp>（</rp><rt>かりょく</rt><rp>）</rp></ruby></u>が<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>くて<ruby>料理<rp>（</rp><rt>りょうり</rt><rp>）</rp></ruby>がしやすい。</td><td>a. かりく</td><td>b. かりょく</td></tr><tr><td>5. ちゃんと<ruby>相談<rp>（</rp><rt>そうだん</rt><rp>）</rp></ruby>した？<u><ruby>強引<rp>（</rp><rt>ごういん</rt><rp>）</rp></ruby></u>な<ruby>決<rp>（</rp><rt>き</rt><rp>）</rp></ruby>め<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>はよくないよ。</td><td>a. ごういん</td><td>b. ごうひん</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. ３に６を<u><ruby>加<rp>（</rp><rt>くわ</rt><rp>）</rp></ruby>える</u>と、９になる。</td><td><b>くわえる</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>当日<rp>（</rp><rt>とうじつ</rt><rp>）</rp></ruby>までに<u><ruby>必<rp>（</rp><rt>かなら</rt><rp>）</rp></ruby>ず</u><ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby>します。</td><td><b>かならず</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>月<rp>（</rp><rt>つき</rt><rp>）</rp></ruby>は<ruby>地球<rp>（</rp><rt>ちきゅう</rt><rp>）</rp></ruby>から<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>しずつ<u><ruby>離<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>れて</u>いるそうだ。</td><td><b>はなれて</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. このガスコンロは<u><ruby>火力<rp>（</rp><rt>かりょく</rt><rp>）</rp></ruby></u>が<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>くて<ruby>料理<rp>（</rp><rt>りょうり</rt><rp>）</rp></ruby>がしやすい。</td><td><b>かりょく</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. ちゃんと<ruby>相談<rp>（</rp><rt>そうだん</rt><rp>）</rp></ruby>した？<u><ruby>強引<rp>（</rp><rt>ごういん</rt><rp>）</rp></ruby></u>な<ruby>決<rp>（</rp><rt>き</rt><rp>）</rp></ruby>め<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>はよくないよ。</td><td><b>ごういん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>体<rp>（</rp><rt>からだ</rt><rp>）</rp></ruby>の<u>ちから</u>を<ruby>抜<rp>（</rp><rt>ぬ</rt><rp>）</rp></ruby>いてください。</td><td>a. 万</td><td>b. 方</td><td>c. 力</td></tr><tr><td>2. <u>ひっ</u><ruby>死<rp>（</rp><rt>し</rt><rp>）</rp></ruby>に<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>ってやっと<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>に<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>った。</td><td>a. 必</td><td>b. 心</td><td>c. 比</td></tr><tr><td>3. あと３０<u>びょう</u>、<ruby>待<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>ってください。</td><td>a. 秒</td><td>b. 税</td><td>c. 程</td></tr><tr><td>4. <ruby>会議<rp>（</rp><rt>かいぎ</rt><rp>）</rp></ruby>は２<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>ほどで<ruby>終<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><u>りょう</u>した。</td><td>a. 予</td><td>b. 了</td><td>c. 丁</td></tr><tr><td>5. <ruby>毎朝<rp>（</rp><rt>まいあさ</rt><rp>）</rp></ruby>、<ruby>血<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby><u>あつ</u>を<ruby>測定<rp>（</rp><rt>そくてい</rt><rp>）</rp></ruby>しています。</td><td>a. 圧</td><td>b. 厚</td><td>c. 在</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>体<rp>（</rp><rt>からだ</rt><rp>）</rp></ruby>の<u>ちから</u>を<ruby>抜<rp>（</rp><rt>ぬ</rt><rp>）</rp></ruby>いてください。</td><td><b>力</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <u>ひっ</u><ruby>死<rp>（</rp><rt>し</rt><rp>）</rp></ruby>に<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>ってやっと<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>に<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>った。</td><td><b>必</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. あと３０<u>びょう</u>、<ruby>待<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>ってください。</td><td><b>秒</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>会議<rp>（</rp><rt>かいぎ</rt><rp>）</rp></ruby>は２<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>ほどで<ruby>終<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><u>りょう</u>した。</td><td><b>了</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>毎朝<rp>（</rp><rt>まいあさ</rt><rp>）</rp></ruby>、<ruby>血<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby><u>あつ</u>を<ruby>測定<rp>（</rp><rt>そくてい</rt><rp>）</rp></ruby>しています。</td><td><b>圧</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>ではさまざまな（　　　）が<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>われている。</td><td>a. 作品</td><td>b. 作業</td></tr><tr><td>2. <ruby>町<rp>（</rp><rt>まち</rt><rp>）</rp></ruby>で（　　　）、<ruby>先生<rp>（</rp><rt>せんせい</rt><rp>）</rp></ruby>に<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>った。</td><td>a. 偶然</td><td>b. 偶数</td></tr><tr><td>3. そのホテル、<ruby>空港<rp>（</rp><rt>くうこう</rt><rp>）</rp></ruby>からの（　　　）は<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>キロぐらい？</td><td>a. 距離</td><td>b. 向き</td></tr><tr><td>4. <ruby>大好<rp>（</rp><rt>だいす</rt><rp>）</rp></ruby>きだった<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>スターが（　　　）して<ruby>悲<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>しい。</td><td>a. 追加</td><td>b. 引退</td></tr><tr><td>5. <ruby>南<rp>（</rp><rt>みなみ</rt><rp>）</rp></ruby>の（　　　）にあと２キロ<ruby>歩<rp>（</rp><rt>ある</rt><rp>）</rp></ruby>くと<ruby>海<rp>（</rp><rt>うみ</rt><rp>）</rp></ruby>だ。</td><td>a. 方向</td><td>b. 重力</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>ではさまざまな（　　　）が<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>われている。</td><td><b>作業</b> (さぎょう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>町<rp>（</rp><rt>まち</rt><rp>）</rp></ruby>で（　　　）、<ruby>先生<rp>（</rp><rt>せんせい</rt><rp>）</rp></ruby>に<ruby>会<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>った。</td><td><b>偶然</b> (ぐうぜん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. そのホテル、<ruby>空港<rp>（</rp><rt>くうこう</rt><rp>）</rp></ruby>からの（　　　）は<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>キロぐらい？</td><td><b>距離</b> (きょり)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>大好<rp>（</rp><rt>だいす</rt><rp>）</rp></ruby>きだった<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>スターが（　　　）して<ruby>悲<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>しい。</td><td><b>引退</b> (いんたい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>南<rp>（</rp><rt>みなみ</rt><rp>）</rp></ruby>の（　　　）にあと２キロ<ruby>歩<rp>（</rp><rt>ある</rt><rp>）</rp></ruby>くと<ruby>海<rp>（</rp><rt>うみ</rt><rp>）</rp></ruby>だ。</td><td><b>方向</b> (ほうこう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-8-3"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-8-bai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","lực":"force","hỏa lực":"firepower","trọng lực":"gravity","ngẫu":"random","tình cờ":"incidentally","số chẵn":"even number","liệu":"material","kết thúc":"end","hoàn thành":"complete","thêm vào~":"add~","~ được thêm vào":"~ added","đun nóng":"heat up","thêm vào":"add","tăng lên":"increase","hướng":"direction","ngược hướng":"opposite direction","phương hướng":"direction","tất":"socks","nhất định":"certain","cần thiết":"necessary","cố hết sức":"try your best","tác":"work","thủ công":"handmade","tác phẩm":"work","làm việc":"work","tác dụng":"effect","động tác":"movement","dẫn":"guide","kéo cf. đẩy":"pull cf. push","giải nghệ":"retire","trích dẫn":"quote","ép":"squeeze","áp":"pressure","áp lực":"pressure","huyết áp":"blood pressure","tách rời ~":"separate ~","li hôn":"divorce","cự li":"distance","miểu":"Mieu","giây":"second","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","lực":"memaksa","hỏa lực":"daya tembak","trọng lực":"gaya berat","ngẫu":"acak","tình cờ":"secara kebetulan","số chẵn":"bilangan genap","liệu":"bahan","kết thúc":"akhir","hoàn thành":"menyelesaikan","thêm vào~":"tambahkan~","~ được thêm vào":"~ ditambahkan","đun nóng":"memanaskan","thêm vào":"menambahkan","tăng lên":"meningkatkan","hướng":"arah","ngược hướng":"arah berlawanan","phương hướng":"arah","tất":"kaus kaki","nhất định":"yakin","cần thiết":"diperlukan","cố hết sức":"cobalah yang terbaik","tác":"bekerja","thủ công":"buatan tangan","tác phẩm":"bekerja","làm việc":"bekerja","tác dụng":"memengaruhi","động tác":"pergerakan","dẫn":"memandu","kéo cf. đẩy":"tarik lih. dorongan","giải nghệ":"pensiun","trích dẫn":"mengutip","ép":"meremas","áp":"tekanan","áp lực":"tekanan","huyết áp":"tekanan darah","tách rời ~":"terpisah ~","li hôn":"perceraian","cự li":"jarak","miểu":"Mieu","giây":"Kedua","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","lực":"बल","hỏa lực":"फायरपावर","trọng lực":"गुरुत्वाकर्षण","ngẫu":"अनियमित","tình cờ":"संयोगवश","số chẵn":"सम संख्या","liệu":"सामग्री","kết thúc":"अन्त्य","hoàn thành":"पूरा","thêm vào~":"थप्नुहोस् ~","~ được thêm vào":"~ थप्नुभयो","đun nóng":"तातो","thêm vào":"थप्नुहोस्","tăng lên":"वृद्धि","hướng":"दिशा","ngược hướng":"विपरीत दिशा","phương hướng":"दिशा","tất":"मोजा","nhất định":"निश्चित","cần thiết":"आवश्यक","cố hết sức":"आफ्नो सक्दो प्रयास गर्नुहोस्","tác":"काम","thủ công":"हस्तनिर्मित","tác phẩm":"काम","làm việc":"काम","tác dụng":"प्रभाव","động tác":"आन्दोलन","dẫn":"गाइड","kéo cf. đẩy":"cf तान्नुहोस्। धक्का","giải nghệ":"सेवानिवृत्त","trích dẫn":"उद्धरण","ép":"निचोड","áp":"दबाब","áp lực":"दबाब","huyết áp":"रक्तचाप","tách rời ~":"अलग ~","li hôn":"सम्बन्ध विच्छेद","cự li":"दूरी","miểu":"मिउ","giây":"दोस्रो","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","lực":"အင်အား","hỏa lực":"မီးစွမ်းအား","trọng lực":"ဆွဲငင်အား","ngẫu":"ကျပန်း","tình cờ":"စကားမစပ်","số chẵn":"ပင်နံပါတ်","liệu":"ပစ္စည်း","kết thúc":"အဆုံး","hoàn thành":"ပြီးပါပြီ။","thêm vào~":"ထည့်ပါ~","~ được thêm vào":"~ ဆက်ပြောသည်","đun nóng":"အပူတက်","thêm vào":"ထည့်ပါ။","tăng lên":"တိုးမြှင့်လာသည်","hướng":"ဦးတည်ချက်","ngược hướng":"ဆန့်ကျင်ဘက်ဦးတည်ချက်","phương hướng":"ဦးတည်ချက်","tất":"ခြေအိတ်","nhất định":"သေချာပါတယ်။","cần thiết":"လိုအပ်သော","cố hết sức":"အကောင်းဆုံးကြိုးစားပါ။","tác":"အလုပ်","thủ công":"လက်လုပ်","tác phẩm":"အလုပ်","làm việc":"အလုပ်","tác dụng":"အကျိုးသက်ရောက်မှု","động tác":"လှုပ်ရှားမှု","dẫn":"လမ်းညွှန်","kéo cf. đẩy":"cf ဆွဲပါ။ တွန်း","giải nghệ":"အနားယူပါ။","trích dẫn":"ကိုးကား","ép":"ညှစ်","áp":"ဖိအား","áp lực":"ဖိအား","huyết áp":"သွေးပေါင်ချိန်","tách rời ~":"သီးခြား ~","li hôn":"ကွာရှင်းခြင်း။","cự li":"အကွာအဝေး","miểu":"Mieu","giây":"ဒုတိယ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","lực":"বল","hỏa lực":"অগ্নিশক্তি","trọng lực":"মাধ্যাকর্ষণ","ngẫu":"এলোমেলো","tình cờ":"ঘটনাক্রমে","số chẵn":"জোড় সংখ্যা","liệu":"উপাদান","kết thúc":"শেষ","hoàn thành":"সম্পূর্ণ","thêm vào~":"যোগ করুন ~","~ được thêm vào":"~ যোগ করা হয়েছে","đun nóng":"গরম করা","thêm vào":"যোগ করুন","tăng lên":"বৃদ্ধি","hướng":"দিক","ngược hướng":"বিপরীত দিক","phương hướng":"দিক","tất":"মোজা","nhất định":"নিশ্চিত","cần thiết":"প্রয়োজনীয়","cố hết sức":"আপনার যথাসাধ্য চেষ্টা করুন","tác":"কাজ","thủ công":"হস্তনির্মিত","tác phẩm":"কাজ","làm việc":"কাজ","tác dụng":"প্রভাব","động tác":"আন্দোলন","dẫn":"গাইড","kéo cf. đẩy":"সিএফ টান ধাক্কা","giải nghệ":"অবসর","trích dẫn":"উদ্ধৃতি","ép":"চাপা","áp":"চাপ","áp lực":"চাপ","huyết áp":"রক্তচাপ","tách rời ~":"পৃথক ~","li hôn":"বিবাহবিচ্ছেদ","cự li":"দূরত্ব","miểu":"মিউ","giây":"দ্বিতীয়","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","lực":"बल","hỏa lực":"गोलाबारी","trọng lực":"गुरुत्वाकर्षण","ngẫu":"यादृच्छिक","tình cờ":"संयोग से","số chẵn":"सम संख्या","liệu":"सामग्री","kết thúc":"अंत","hoàn thành":"पूरा","thêm vào~":"जोड़ें~","~ được thêm vào":"~ जोड़ा गया","đun nóng":"गरम करना","thêm vào":"जोड़ना","tăng lên":"बढ़ोतरी","hướng":"दिशा","ngược hướng":"विपरीत दिशा","phương hướng":"दिशा","tất":"मोज़े","nhất định":"निश्चित","cần thiết":"ज़रूरी","cố hết sức":"अपने सर्वोत्तम प्रयास कीजिए","tác":"काम","thủ công":"हस्तनिर्मित","tác phẩm":"काम","làm việc":"काम","tác dụng":"प्रभाव","động tác":"आंदोलन","dẫn":"मार्गदर्शक","kéo cf. đẩy":"सीएफ खींचो. धकेलना","giải nghệ":"रिटायर","trích dẫn":"उद्धरण","ép":"निचोड़","áp":"दबाव","áp lực":"दबाव","huyết áp":"रक्तचाप","tách rời ~":"अलग~","li hôn":"तलाक","cự li":"दूरी","miểu":"मिउ","giây":"दूसरा","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","lực":"บังคับ","hỏa lực":"อำนาจการยิง","trọng lực":"แรงโน้มถ่วง","ngẫu":"สุ่ม","tình cờ":"โดยบังเอิญ","số chẵn":"เลขคู่","liệu":"วัสดุ","kết thúc":"จบ","hoàn thành":"สมบูรณ์","thêm vào~":"เพิ่ม~","~ được thêm vào":"~ เพิ่ม","đun nóng":"ร้อนขึ้น","thêm vào":"เพิ่ม","tăng lên":"เพิ่มขึ้น","hướng":"ทิศทาง","ngược hướng":"ทิศทางตรงกันข้าม","phương hướng":"ทิศทาง","tất":"ถุงเท้า","nhất định":"แน่ใจ","cần thiết":"จำเป็น","cố hết sức":"พยายามอย่างเต็มที่","tác":"งาน","thủ công":"ทำด้วยมือ","tác phẩm":"งาน","làm việc":"งาน","tác dụng":"ผล","động tác":"ความเคลื่อนไหว","dẫn":"แนะนำ","kéo cf. đẩy":"ดึง CF ดัน","giải nghệ":"เกษียณอายุ","trích dẫn":"อ้าง","ép":"บีบ","áp":"ความดัน","áp lực":"ความดัน","huyết áp":"ความดันโลหิต","tách rời ~":"แยก~","li hôn":"หย่า","cự li":"ระยะทาง","miểu":"มิอุ","giây":"ที่สอง","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

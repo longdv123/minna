@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Có vẻ người bạn không được khỏe. Thì sẽ nói gì?": "It seems your friend is not feeling well. So what will you say?",
+    "Trông có vẻ khó chịu nhỉ. Cậu có ổn không?": "It looks uncomfortable. Are you okay?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Có vẻ người bạn không được khỏe. Thì sẽ nói gì?": "Sepertinya temanmu sedang tidak enak badan. Jadi apa yang akan kamu katakan?",
+    "Trông có vẻ khó chịu nhỉ. Cậu có ổn không?": "Kelihatannya tidak nyaman. Apakah kamu baik-baik saja?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Có vẻ người bạn không được khỏe. Thì sẽ nói gì?": "तपाईको साथीलाई ठिक छैन जस्तो लाग्छ। त्यसोभए तपाई के भन्नुहुन्छ?",
+    "Trông có vẻ khó chịu nhỉ. Cậu có ổn không?": "यो असहज देखिन्छ। सन्चै हुनुहुन्छ ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Có vẻ người bạn không được khỏe. Thì sẽ nói gì?": "သင့်သူငယ်ချင်း နေမကောင်းပုံရသည်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Trông có vẻ khó chịu nhỉ. Cậu có ổn không?": "ကြည့်ရတာ အဆင်မပြေဘူး။ အဆင်ပြေသလား?"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Có vẻ người bạn không được khỏe. Thì sẽ nói gì?": "মনে হচ্ছে আপনার বন্ধুর মন ভালো নেই। তাহলে কি বলবেন?",
+    "Trông có vẻ khó chịu nhỉ. Cậu có ổn không?": "এটা অস্বস্তিকর দেখায়. তুমি ঠিক আছো?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Có vẻ người bạn không được khỏe. Thì sẽ nói gì?": "ऐसा लगता है कि आपके मित्र की तबीयत ठीक नहीं है. तो आप क्या कहेंगे?",
+    "Trông có vẻ khó chịu nhỉ. Cậu có ổn không?": "यह असुविधाजनक लगता है. तुम ठीक हो?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Có vẻ người bạn không được khỏe. Thì sẽ nói gì?": "ดูเหมือนเพื่อนของคุณจะไม่สบาย แล้วคุณจะว่าอย่างไร?",
+    "Trông có vẻ khó chịu nhỉ. Cậu có ổn không?": "มันดูไม่สบายใจ คุณสบายดีไหม?"
+  }
+}

@@ -1,0 +1,192 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N3 HANTU - ONE HTML (SEO + nhẹ)
+   >768: giống hình rộng (3 ô header, body nhìn như 3 cột với cột phải trống)
+   <=768 : giống hình mobile (card center + list item JP/VI)
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+/* ===== BODY (ONE LIST) =====
+   Desktop: item là grid 2 cột (JP | VI),
+   và chừa khoảng trống bên phải = cột 3 (blank) để nhìn như mẫu ảnh.
+*/
+.kbody{
+  padding:14px 18px 16px;
+  /* tạo cảm giác có cột phải trống */
+  padding-right: calc(18px + 1fr);
+}
+@media (min-width: 768px){
+  .kbody{
+    padding-right: 18px; /* reset */
+    display:block;
+  }
+  .kbody-inner{
+    /* chừa cột phải trống giống 3 cột: 240 | 260 | blank */
+    padding-right: 0;
+  }
+  .kbody-inner{
+    /* mô phỏng 3 cột bằng cách giới hạn vùng nội dung 2 cột */
+    width: 100%;
+  }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+}
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+  .kbody-inner{ width:auto; }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">飛</div></div><div class="kcell k-hv">phi</div><div class="kcell k-read"><div class="on">ヒ</div><div>とーぶ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>飛<rp>（</rp><rt>と</rt><rp>）</rp></ruby>ぶ</div><div class="vi">bay</div></div><div class="kitem"><div class="jp"><ruby>飛行場<rp>（</rp><rt>ひこうじょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sân bay</span> </div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">機</div></div><div class="kcell k-hv"><span class="vi-tr">cơ</span></div><div class="kcell k-read"><div class="on">キ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy bay</span></div></div><div class="kitem"><div class="jp"><ruby>機械<rp>（</rp><rt>きかい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy móc</span></div></div><div class="kitem"><div class="jp"><ruby>洗濯機<rp>（</rp><rt>せんたくき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy giặt</span></div></div><div class="kitem"><div class="jp">コピー<ruby>機<rp>（</rp><rt>き</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">máy photocopy</span></div></div><div class="kitem"><div class="jp"><ruby>機会<rp>（</rp><rt>きかい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cơ hội</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">空</div></div><div class="kcell k-hv"><span class="vi-tr">không</span></div><div class="kcell k-read"><div class="on">クウ</div><div>そら／あーく／あーける</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp">（～が）<ruby>空<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">trống</span></div></div><div class="kitem"><div class="jp">（～を<ruby>空<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>ける）</div><div class="vi"><span class="vi-tr">để trống</span></div></div><div class="kitem"><div class="jp"><ruby>空港<rp>（</rp><rt>くうこう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">sân bay</span></div></div><div class="kitem"><div class="jp"><ruby>空気<rp>（</rp><rt>くうき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">không khí</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">港</div></div><div class="kcell k-hv"><span class="vi-tr">cảng</span></div><div class="kcell k-read"><div class="on">コウ</div><div>みなと</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>港<rp>（</rp><rt>みなと</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cảng</span></div></div><div class="kitem"><div class="jp"><ruby>港町<rp>（</rp><rt>みなとまち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phố cảng</span></div></div><div class="kitem"><div class="jp"><ruby>横浜<rp>（</rp><rt>よこはま</rt><rp>）</rp></ruby><ruby>港<rp>（</rp><rt>こう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cảng Yokohama</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">預</div></div><div class="kcell k-hv"><span class="vi-tr">dự</span></div><div class="kcell k-read"><div class="on">ヨ</div><div>あずーける／あずーかる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>預<rp>（</rp><rt>あず</rt><rp>）</rp></ruby>ける</div><div class="vi"><span class="vi-tr">gửi</span></div></div><div class="kitem"><div class="jp"><ruby>預<rp>（</rp><rt>あず</rt><rp>）</rp></ruby>かる</div><div class="vi"><span class="vi-tr">giữ</span></div></div><div class="kitem"><div class="jp"><ruby>預金<rp>（</rp><rt>よきん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tiền gửi ngân hàng</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">込</div></div><div class="kcell k-hv"><span class="vi-tr">vào</span></div><div class="kcell k-read"><div>こむ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp">（～が）<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">đông</span></div></div><div class="kitem"><div class="jp"><ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>ち<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">mang vào</span></div></div><div class="kitem"><div class="jp"><ruby>申<rp>（</rp><rt>もう</rt><rp>）</rp></ruby>し<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">đăng kí</span></div></div><div class="kitem"><div class="jp"><ruby>申込書<rp>（</rp><rt>もうしこみしょ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phiếu đăng kí</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">荷</div></div><div class="kcell k-hv"><span class="vi-tr">hà, hạ</span></div><div class="kcell k-read"><div>に</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>荷物<rp>（</rp><rt>にもつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hành lý</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">検</div></div><div class="kcell k-hv"><span class="vi-tr">kiểm</span> </div><div class="kcell k-read"><div class="on">ケン</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>検査<rp>（</rp><rt>けんさ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">kiểm tra</span></div></div><div class="kitem"><div class="jp"><ruby>検索<rp>（</rp><rt>けんさく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tìm kiếm</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">査</div></div><div class="kcell k-hv">tra</div><div class="kcell k-read"><div class="on">サ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>調査<rp>（</rp><rt>ちょうさ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">điều tra</span></div></div></div></div></div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+<p><b>ドリルA</b></p><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. ホテルから<u><ruby>空港<rp>（</rp><rt>くうこう</rt><rp>）</rp></ruby></u>までバスで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>こう。</td><td>a. こうくう</td><td>b. くうこう</td></tr><tr><td>2. <u><ruby>荷物<rp>（</rp><rt>にもつ</rt><rp>）</rp></ruby></u>はここにおいてください。</td><td>a. にぶつ</td><td>b. にもつ</td></tr><tr><td>3. かぎはフロントに<u><ruby>預<rp>（</rp><rt>あず</rt><rp>）</rp></ruby>け</u>ました。</td><td>a. あずけ</td><td>b. つづけ</td></tr><tr><td>4. あの<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>はいつも<u><ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んで</u>いる。</td><td>a. かんで</td><td>b. こんで</td></tr><tr><td>5. <u><ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby></u>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>るのはこわいです。</td><td>a. ひこき</td><td>b. ひこうき</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. ホテルから<u><ruby>空港<rp>（</rp><rt>くうこう</rt><rp>）</rp></ruby></u>までバスで<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>こう。</td><td><b>くうこう</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào</span> </td></tr><tr><td>2. <u><ruby>荷物<rp>（</rp><rt>にもつ</rt><rp>）</rp></ruby></u>はここにおいてください。</td><td><b>にもつ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy để hành lý ở đây.</span></td></tr><tr><td>3. かぎはフロントに<u><ruby>預<rp>（</rp><rt>あず</rt><rp>）</rp></ruby>け</u>ました。</td><td><b>あずけ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Chìa khóa đã được gửi ở quầy tiếp tân.</span></td></tr><tr><td>4. あの<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>はいつも<u><ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んで</u>いる。</td><td><b>こんで</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Cửa hàng đó lúc nào cũng đông khách.</span></td></tr><tr><td>5. <u><ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby></u>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>るのはこわいです。</td><td><b>ひこうき</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi sợ khi lên máy bay.</span>
+</td></tr></tbody></table></div></div></div><p><br><b>ドリルB</b></p><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. インターネットでその<ruby>言葉<rp>（</rp><rt>ことば</rt><rp>）</rp></ruby>を<u>けん</u><ruby>索<rp>（</rp><rt>さく</rt><rp>）</rp></ruby>した。</td><td>a. 検</td><td>b. 研</td><td>c. 験</td></tr><tr><td>2. コピー<u>き</u>は、どこにありますか。</td><td>a. 記</td><td>b. 械</td><td>c. 機</td></tr><tr><td>3. アンケート<ruby>調<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby><u>さ</u>をしました。</td><td>a. 査</td><td>b. 且</td><td>c. 相</td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>は<u>みなと</u><ruby>町<rp>（</rp><rt>まち</rt><rp>）</rp></ruby>で<ruby>生<rp>（</rp><rt>う</rt><rp>）</rp></ruby>まれました。</td><td>a. 巷</td><td>b. 南</td><td>c. 港</td></tr><tr><td>5. あの<ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>の<ruby>向<rp>（</rp><rt>む</rt><rp>）</rp></ruby>こうに<u>ひ</u><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>がある。</td><td>a. 飛</td><td>b. 火</td><td>c. 非</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. インターネットでその<ruby>言葉<rp>（</rp><rt>ことば</rt><rp>）</rp></ruby>を<u>けん</u><ruby>索<rp>（</rp><rt>さく</rt><rp>）</rp></ruby>した。</td><td><b>検</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã tìm kiếm từ đó trên Internet.</span></td></tr><tr><td>2. コピー<u>き</u>は、どこにありますか。</td><td><b>機</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Máy photocopy ở đâu nhỉ?</span></td></tr><tr><td>3. アンケート<ruby>調<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby><u>さ</u>をしました。</td><td><b>査</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã tiến hành khảo sát.</span></td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>は<u>みなと</u><ruby>町<rp>（</rp><rt>まち</rt><rp>）</rp></ruby>で<ruby>生<rp>（</rp><rt>う</rt><rp>）</rp></ruby>まれました。</td><td><b>港</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã được sinh ra ở thành phố cảng.</span></td></tr><tr><td>5. あの<ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>の<ruby>向<rp>（</rp><rt>む</rt><rp>）</rp></ruby>こうに<u>ひ</u><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>がある。</td><td><b>飛</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Có một sân bay ở phía bên kia ngọn núi đó.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルC</b></p><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. このスキーツアーに（　　　）なら<ruby>明日<rp>（</rp><rt>あした</rt><rp>）</rp></ruby>までだ。</td><td>a. 申し込む</td><td>b. 持ち込む</td></tr><tr><td>2. たくさんの<ruby>鳥<rp>（</rp><rt>とり</rt><rp>）</rp></ruby>が、<ruby>北<rp>（</rp><rt>きた</rt><rp>）</rp></ruby>の<ruby>方<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby>に（　　　）<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>った。</td><td>a. 空いて</td><td>b. 飛んで</td></tr><tr><td>3. しばらく<ruby>犬<rp>（</rp><rt>いぬ</rt><rp>）</rp></ruby>を（　　　）もらうことにした。</td><td>a. 預かって</td><td>b. 込んで</td></tr><tr><td>4. （　　　）は、もう<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>き<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わりましたか。</td><td>a. 申込書</td><td>b. 預金</td></tr><tr><td>5. （　　　）があったら、ぜひまた<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>たい。</td><td>a. 機械</td><td>b. 機会</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. このスキーツアーに（　　　）なら<ruby>明日<rp>（</rp><rt>あした</rt><rp>）</rp></ruby>までだ。</td><td><b>申し込む</b>　(もうしこむ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.</span></td></tr><tr><td>2. たくさんの<ruby>鳥<rp>（</rp><rt>とり</rt><rp>）</rp></ruby>が、<ruby>北<rp>（</rp><rt>きた</rt><rp>）</rp></ruby>の<ruby>方<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby>に（　　　）<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>った。</td><td><b>飛んで</b>　(とんで)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Rất nhiều con chim đã bay về phía Bắc.</span></td></tr><tr><td>3. しばらく<ruby>犬<rp>（</rp><rt>いぬ</rt><rp>）</rp></ruby>を（　　　）もらうことにした。</td><td><b>預かって</b>　(あずかって)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.</span></td></tr><tr><td>4. （　　　）は、もう<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>き<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わりましたか。</td><td><b>申込書</b>　(もうしこみしょ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Mẫu đơn đã viết xong chưa?</span></td></tr><tr><td>5. （　　　）があったら、ぜひまた<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>たい。</td><td><b>機会</b>　(きかい)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nếu có cơ hội, nhất định tôi muốn đến lại đây.</span></td></tr></tbody></table></div></div></div>
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed3-1-1"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-1-bai-1.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","sân bay":"airport","cơ":"muscle","máy bay":"plane","máy móc":"machines","máy giặt":"washing machine","máy photocopy":"photocopier","cơ hội":"opportunity","không":"Are not","trống":"drum","để trống":"leave blank","không khí":"air","cảng":"port","phố cảng":"port town","cảng Yokohama":"Yokohama port","dự":"attend","gửi":"send","giữ":"hold","tiền gửi ngân hàng":"bank deposits","vào":"enter","đông":"winter","mang vào":"bring in","đăng kí":"register","phiếu đăng kí":"registration form","hà, hạ":"ha, ha","hành lý":"luggage","kiểm":"check","kiểm tra":"check","tìm kiếm":"search","điều tra":"investigate","☞ Đáp Án + Dịch":"☞ Answer + Translation","Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào":"Which bus do we take from the hotel to the airport?","Hãy để hành lý ở đây.":"Please leave your luggage here.","Chìa khóa đã được gửi ở quầy tiếp tân.":"The key has been deposited at the reception desk.","Cửa hàng đó lúc nào cũng đông khách.":"That store is always crowded.","Tôi sợ khi lên máy bay.":"I'm scared to get on a plane.","Tôi đã tìm kiếm từ đó trên Internet.":"I searched that word on the Internet.","Máy photocopy ở đâu nhỉ?":"Where is the photocopier?","Tôi đã tiến hành khảo sát.":"I conducted a survey.","Tôi đã được sinh ra ở thành phố cảng.":"I was born in the port city.","Có một sân bay ở phía bên kia ngọn núi đó.":"There's an airport on the other side of that mountain.","Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.":"If you want to sign up for this ski tour, the deadline is tomorrow.","Rất nhiều con chim đã bay về phía Bắc.":"Many birds flew north.","Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.":"I asked you to keep the dog for me for a while.","Mẫu đơn đã viết xong chưa?":"Has the application form been completed yet?","Nếu có cơ hội, nhất định tôi muốn đến lại đây.":"If I have the chance, I definitely want to come here again.","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","sân bay":"bandara","cơ":"otot","máy bay":"pesawat","máy móc":"mesin","máy giặt":"mesin cuci","máy photocopy":"mesin fotokopi","cơ hội":"peluang","không":"Tidak","trống":"drum","để trống":"biarkan kosong","không khí":"udara","cảng":"pelabuhan","phố cảng":"kota pelabuhan","cảng Yokohama":"Pelabuhan Yokohama","dự":"menghadiri","gửi":"mengirim","giữ":"memegang","tiền gửi ngân hàng":"deposito bank","vào":"memasuki","đông":"musim dingin","mang vào":"mendatangkan","đăng kí":"daftar","phiếu đăng kí":"formulir pendaftaran","hà, hạ":"ha ha","hành lý":"bagasi","kiểm":"memeriksa","kiểm tra":"memeriksa","tìm kiếm":"mencari","điều tra":"menyelidiki","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào":"Bus mana yang kita naiki dari hotel ke bandara?","Hãy để hành lý ở đây.":"Silakan tinggalkan barang bawaan Anda di sini.","Chìa khóa đã được gửi ở quầy tiếp tân.":"Kuncinya sudah dititipkan di meja resepsionis.","Cửa hàng đó lúc nào cũng đông khách.":"Toko itu selalu ramai.","Tôi sợ khi lên máy bay.":"Aku takut untuk naik pesawat.","Tôi đã tìm kiếm từ đó trên Internet.":"Saya mencari kata itu di Internet.","Máy photocopy ở đâu nhỉ?":"Di mana mesin fotokopinya?","Tôi đã tiến hành khảo sát.":"Saya melakukan survei.","Tôi đã được sinh ra ở thành phố cảng.":"Saya lahir di kota pelabuhan.","Có một sân bay ở phía bên kia ngọn núi đó.":"Ada bandara di sisi lain gunung itu.","Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.":"Jika Anda ingin mendaftar wisata ski ini, batas waktunya besok.","Rất nhiều con chim đã bay về phía Bắc.":"Banyak burung terbang ke utara.","Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.":"Saya meminta Anda untuk memelihara anjing itu untuk saya untuk sementara waktu.","Mẫu đơn đã viết xong chưa?":"Formulir lamarannya sudah lengkap belum?","Nếu có cơ hội, nhất định tôi muốn đến lại đây.":"Kalau ada kesempatan pasti ingin kesini lagi.","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","sân bay":"विमानस्थल","cơ":"मांसपेशी","máy bay":"विमान","máy móc":"मेसिनहरू","máy giặt":"लुगा धुने मेसिन","máy photocopy":"फोटोकपी","cơ hội":"अवसर","không":"छैनन्","trống":"ड्रम","để trống":"खाली छोड्नुहोस्","không khí":"हावा","cảng":"पोर्ट","phố cảng":"बन्दरगाह सहर","cảng Yokohama":"योकोहामा पोर्ट","dự":"उपस्थित","gửi":"पठाउनुहोस्","giữ":"होल्ड गर्नुहोस्","tiền gửi ngân hàng":"बैंक निक्षेपहरू","vào":"प्रविष्ट गर्नुहोस्","đông":"जाडो","mang vào":"भित्र ल्याउनुहोस्","đăng kí":"दर्ता गर्नुहोस्","phiếu đăng kí":"दर्ता फारम","hà, hạ":"हा, हा","hành lý":"सामान","kiểm":"जाँच गर्नुहोस्","kiểm tra":"जाँच गर्नुहोस्","tìm kiếm":"खोज","điều tra":"अनुसन्धान गर्नुहोस्","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào":"हामीले होटेलबाट एयरपोर्टसम्म कुन बस चढ्छौं?","Hãy để hành lý ở đây.":"कृपया आफ्नो सामान यहाँ छोड्नुहोस्।","Chìa khóa đã được gửi ở quầy tiếp tân.":"चाबी रिसेप्शन डेस्कमा जम्मा गरिएको छ।","Cửa hàng đó lúc nào cũng đông khách.":"त्यो पसल सधैं भीड हुन्छ।","Tôi sợ khi lên máy bay.":"मलाई विमानमा चढ्न डर लाग्छ।","Tôi đã tìm kiếm từ đó trên Internet.":"मैले त्यो शब्द इन्टरनेटमा खोजेँ।","Máy photocopy ở đâu nhỉ?":"फोटोकपी कहाँ छ?","Tôi đã tiến hành khảo sát.":"मैले सर्वेक्षण गरें।","Tôi đã được sinh ra ở thành phố cảng.":"म बन्दरगाह सहरमा जन्मेको हुँ।","Có một sân bay ở phía bên kia ngọn núi đó.":"त्यो पहाडको अर्को छेउमा एउटा एयरपोर्ट छ।","Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.":"यदि तपाईं यो स्की भ्रमणको लागि साइन अप गर्न चाहनुहुन्छ भने, अन्तिम मिति भोलि हो।","Rất nhiều con chim đã bay về phía Bắc.":"धेरै चराहरू उत्तरतिर उडे।","Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.":"मैले तिमीलाई केही समयको लागि कुकुर राख्न भनें।","Mẫu đơn đã viết xong chưa?":"के आवेदन फारम अझै पूरा भएको छ?","Nếu có cơ hội, nhất định tôi muốn đến lại đây.":"यदि मसँग मौका छ भने, म पक्कै पनि यहाँ आउन चाहन्छु।","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","sân bay":"လေဆိပ်","cơ":"ကြွက်သား","máy bay":"လေယာဉ်","máy móc":"စက်တွေ","máy giặt":"အဝတ်လျှော်စက်","máy photocopy":"မိတ္တူ","cơ hội":"အခွင့်အလမ်း","không":"မဟုတ်ပါလား။","trống":"ဗုံ","để trống":"ကွက်လပ်ထားခဲ့ပါ။","không khí":"လေ","cảng":"ဆိပ်ကမ်း","phố cảng":"ဆိပ်ကမ်းမြို့","cảng Yokohama":"ယိုကိုဟားမားဆိပ်ကမ်း","dự":"တက်ရောက်","gửi":"ပို့ပါ။","giữ":"ကိုင်","tiền gửi ngân hàng":"ဘဏ်အပ်ငွေ","vào":"ဝင်ပါ။","đông":"ဆောင်းရာသီ","mang vào":"ယူလာပါ။","đăng kí":"မှတ်ပုံတင်","phiếu đăng kí":"မှတ်ပုံတင်ပုံစံ","hà, hạ":"ဟား","hành lý":"ခရီးဆောင်အိတ်","kiểm":"စစ်ဆေးပါ။","kiểm tra":"စစ်ဆေးပါ။","tìm kiếm":"ရှာဖွေ","điều tra":"စုံစမ်းပါ။","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào":"ဟိုတယ်ကနေ လေဆိပ်ကို ဘယ်ဘတ်စ်ကားစီးမလဲ။","Hãy để hành lý ở đây.":"သင်၏ ခရီးဆောင်အိတ်ကို ဤနေရာတွင် ထားခဲ့ပါ။","Chìa khóa đã được gửi ở quầy tiếp tân.":"သော့ကို ဧည့်ကြိုကောင်တာတွင် အပ်နှံထားသည်။","Cửa hàng đó lúc nào cũng đông khách.":"အဲဒီဆိုင်က အမြဲတမ်း လူစည်ကားတယ်။","Tôi sợ khi lên máy bay.":"လေယာဉ်ပေါ်တက်ရမှာ ကြောက်တယ်။","Tôi đã tìm kiếm từ đó trên Internet.":"အဲဒီစကားလုံးကို အင်တာနက်မှာ ရှာခဲ့တယ်။","Máy photocopy ở đâu nhỉ?":"ဓာတ်ပုံကော်ပီ ဘယ်မှာလဲ","Tôi đã tiến hành khảo sát.":"စစ်တမ်းတစ်ခုကောက်ယူခဲ့တယ်။","Tôi đã được sinh ra ở thành phố cảng.":"ဆိပ်ကမ်းမြို့မှာ မွေးတယ်။","Có một sân bay ở phía bên kia ngọn núi đó.":"တောင်ရဲ့တစ်ဖက်ခြမ်းမှာ လေဆိပ်တစ်ခုရှိတယ်။","Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.":"ဤစကီးခရီးစဉ်အတွက် စာရင်းသွင်းလိုပါက မနက်ဖြန် နောက်ဆုံးရက်ဖြစ်သည်။","Rất nhiều con chim đã bay về phía Bắc.":"ငှက်များစွာ မြောက်ဘက်သို့ ပျံသန်းသွားကြသည်။","Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.":"ခွေးလေးကို ခဏလောက်စောင့်ခိုင်းလိုက်တယ်။","Mẫu đơn đã viết xong chưa?":"လျှောက်လွှာပုံစံ ပြီးသွားပြီလား။","Nếu có cơ hội, nhất định tôi muốn đến lại đây.":"အခွင့်အရေးရရင် ဒီကို ထပ်လာချင်မှာ သေချာတယ်။","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","sân bay":"বিমানবন্দর","cơ":"পেশী","máy bay":"সমতল","máy móc":"মেশিন","máy giặt":"ওয়াশিং মেশিন","máy photocopy":"ফটোকপিয়ার","cơ hội":"সুযোগ","không":"হয় না","trống":"ড্রাম","để trống":"ফাঁকা ছেড়ে","không khí":"বায়ু","cảng":"বন্দর","phố cảng":"বন্দর শহর","cảng Yokohama":"ইয়োকোহামা বন্দর","dự":"অংশগ্রহণ","gửi":"পাঠান","giữ":"রাখা","tiền gửi ngân hàng":"ব্যাংক আমানত","vào":"প্রবেশ করা","đông":"শীতকাল","mang vào":"আনা","đăng kí":"নিবন্ধন","phiếu đăng kí":"রেজিস্ট্রেশন ফর্ম","hà, hạ":"হা, হা","hành lý":"লাগেজ","kiểm":"চেক","kiểm tra":"চেক","tìm kiếm":"অনুসন্ধান","điều tra":"তদন্ত","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào":"কোন বাসে আমরা হোটেল থেকে বিমানবন্দরে যাব?","Hãy để hành lý ở đây.":"এখানে আপনার লাগেজ ছেড়ে দিন.","Chìa khóa đã được gửi ở quầy tiếp tân.":"চাবি জমা হয়েছে রিসেপশন ডেস্কে।","Cửa hàng đó lúc nào cũng đông khách.":"সেই দোকানে সব সময় ভিড় থাকে।","Tôi sợ khi lên máy bay.":"আমি বিমানে উঠতে ভয় পাই।","Tôi đã tìm kiếm từ đó trên Internet.":"আমি ইন্টারনেটে এই শব্দটি অনুসন্ধান করেছি।","Máy photocopy ở đâu nhỉ?":"ফটোকপিয়ার কোথায়?","Tôi đã tiến hành khảo sát.":"আমি একটি জরিপ পরিচালনা করেছি।","Tôi đã được sinh ra ở thành phố cảng.":"আমার জন্ম বন্দর শহরে।","Có một sân bay ở phía bên kia ngọn núi đó.":"ওই পাহাড়ের ওপারে একটা এয়ারপোর্ট আছে।","Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.":"আপনি যদি এই স্কি সফরের জন্য সাইন আপ করতে চান, তাহলে শেষ তারিখ আগামীকাল।","Rất nhiều con chim đã bay về phía Bắc.":"অনেক পাখি উড়ে গেল উত্তরে।","Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.":"আমি তোমাকে কুকুরটিকে আমার জন্য কিছুক্ষণ রাখতে বলেছি।","Mẫu đơn đã viết xong chưa?":"আবেদনপত্র কি এখনো পূরণ হয়েছে?","Nếu có cơ hội, nhất định tôi muốn đến lại đây.":"আমার যদি সুযোগ থাকে, আমি অবশ্যই এখানে আবার আসতে চাই।","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","sân bay":"एयरपोर्ट","cơ":"माँसपेशियाँ","máy bay":"विमान","máy móc":"मशीनों","máy giặt":"वॉशिंग मशीन","máy photocopy":"फोटोकॉपियर","cơ hội":"अवसर","không":"नहीं हैं","trống":"ड्रम","để trống":"खाली छोड़ें","không khí":"वायु","cảng":"पत्तन","phố cảng":"पत्तन नगर","cảng Yokohama":"योकोहामा बंदरगाह","dự":"भाग लेना","gửi":"भेजना","giữ":"पकड़ना","tiền gửi ngân hàng":"बैंक जमा","vào":"प्रवेश करना","đông":"सर्दी","mang vào":"लाना","đăng kí":"पंजीकरण करवाना","phiếu đăng kí":"पंजीकरण फॉर्म","hà, hạ":"हा, हा","hành lý":"सामान","kiểm":"जाँच करना","kiểm tra":"जाँच करना","tìm kiếm":"खोज","điều tra":"जाँच करना","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào":"हम होटल से हवाई अड्डे तक कौन सी बस लेते हैं?","Hãy để hành lý ở đây.":"कृपया अपना सामान यहीं छोड़ें।","Chìa khóa đã được gửi ở quầy tiếp tân.":"चाबी रिसेप्शन डेस्क पर जमा करा दी गई है।","Cửa hàng đó lúc nào cũng đông khách.":"उस दुकान पर हमेशा भीड़ लगी रहती है.","Tôi sợ khi lên máy bay.":"मुझे हवाई जहाज़ पर चढ़ने से डर लगता है.","Tôi đã tìm kiếm từ đó trên Internet.":"मैंने वह शब्द इंटरनेट पर खोजा.","Máy photocopy ở đâu nhỉ?":"फोटोकॉपियर कहाँ है?","Tôi đã tiến hành khảo sát.":"मैंने एक सर्वेक्षण किया.","Tôi đã được sinh ra ở thành phố cảng.":"मेरा जन्म बंदरगाह शहर में हुआ था।","Có một sân bay ở phía bên kia ngọn núi đó.":"उस पहाड़ के दूसरी ओर एक हवाई अड्डा है।","Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.":"यदि आप इस स्की टूर के लिए साइन अप करना चाहते हैं, तो अंतिम तिथि कल है।","Rất nhiều con chim đã bay về phía Bắc.":"कई पक्षी उत्तर की ओर उड़ गए।","Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.":"मैंने आपसे कुत्ते को कुछ देर के लिए मेरे पास रखने के लिए कहा था।","Mẫu đơn đã viết xong chưa?":"क्या आवेदन पत्र अभी तक पूरा हो गया है?","Nếu có cơ hội, nhất định tôi muốn đến lại đây.":"अगर मुझे मौका मिला तो मैं निश्चित रूप से यहां दोबारा आना चाहूंगा।'","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","sân bay":"สนามบิน","cơ":"กล้ามเนื้อ","máy bay":"เครื่องบิน","máy móc":"เครื่องจักร","máy giặt":"เครื่องซักผ้า","máy photocopy":"เครื่องถ่ายเอกสาร","cơ hội":"โอกาส","không":"ไม่ได้","trống":"กลอง","để trống":"เว้นว่างไว้","không khí":"อากาศ","cảng":"ท่าเรือ","phố cảng":"เมืองท่า","cảng Yokohama":"ท่าเรือโยโกฮาม่า","dự":"เข้าร่วม","gửi":"ส่ง","giữ":"ถือ","tiền gửi ngân hàng":"เงินฝากธนาคาร","vào":"เข้า","đông":"ฤดูหนาว","mang vào":"นำเข้ามา","đăng kí":"ลงทะเบียน","phiếu đăng kí":"แบบฟอร์มลงทะเบียน","hà, hạ":"ฮ่า","hành lý":"กระเป๋าเดินทาง","kiểm":"ตรวจสอบ","kiểm tra":"ตรวจสอบ","tìm kiếm":"ค้นหา","điều tra":"สอบสวน","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Chúng ta đi từ khách sạn đến sân bay bằng xe buýt nào":"เรานั่งรถบัสอะไรจากโรงแรมไปสนามบิน?","Hãy để hành lý ở đây.":"กรุณาฝากสัมภาระไว้ที่นี่","Chìa khóa đã được gửi ở quầy tiếp tân.":"ฝากกุญแจไว้ที่แผนกต้อนรับ","Cửa hàng đó lúc nào cũng đông khách.":"ร้านนั้นคนแน่นตลอด","Tôi sợ khi lên máy bay.":"ฉันกลัวการขึ้นเครื่องบิน","Tôi đã tìm kiếm từ đó trên Internet.":"ฉันค้นหาคำนั้นบนอินเทอร์เน็ต","Máy photocopy ở đâu nhỉ?":"เครื่องถ่ายเอกสารอยู่ที่ไหน?","Tôi đã tiến hành khảo sát.":"ฉันได้ทำการสำรวจ","Tôi đã được sinh ra ở thành phố cảng.":"ฉันเกิดที่เมืองท่า","Có một sân bay ở phía bên kia ngọn núi đó.":"มีสนามบินอยู่อีกด้านหนึ่งของภูเขานั้น","Nếu muốn đăng ký tour trượt tuyết này, thì hạn là đến ngày mai.":"หากคุณต้องการลงทะเบียนทัวร์เล่นสกีนี้ กำหนดเวลาคือพรุ่งนี้","Rất nhiều con chim đã bay về phía Bắc.":"นกหลายตัวบินไปทางเหนือ","Tôi đã nhờ bạn giữ con chó giúp tôi một thời gian.":"ฉันขอให้คุณเก็บสุนัขไว้ให้ฉันสักพัก","Mẫu đơn đã viết xong chưa?":"แบบฟอร์มใบสมัครเสร็จแล้วหรือยัง?","Nếu có cơ hội, nhất định tôi muốn đến lại đây.":"ถ้ามีโอกาสฉันอยากมาที่นี่อีกแน่นอน","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

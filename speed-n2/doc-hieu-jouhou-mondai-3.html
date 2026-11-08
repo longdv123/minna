@@ -1,0 +1,594 @@
+<meta charset="UTF-8">
+<style>
+
+hr.style-two { border: 0; }
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+input[type="radio"]{ border: unset; }
+input[type="radio"]{
+    -webkit-appearance: none;
+    width:15px;
+    height:15px;
+    border:1px solid #19283C !important;
+    border-radius:15px !important;
+    background:transparent;
+    opacity:0.7;
+    margin-bottom: -2px;
+}
+input[type="radio"]:checked{ background:#19283C; opacity: 1; }
+
+div.benphai,p.benphai{ text-align: right; }
+div.chinhgiua,p.chinhgiua{ text-align: center; }
+div.chuy{ color: #483D8B; }
+
+table{ width: 100%; }
+.tracnghiem table,.tracnghiem td,.tracnghiem th { border: none; }
+
+#question{ margin-bottom:8px; }
+.nghia{ margin-bottom:8px; }
+
+.doanvan{
+    margin-top: 15px;
+    margin-bottom:20px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom: 20px;
+    background: #f0f7ff;
+    border: dashed 1px #5b8bd0;
+}
+
+.table_luachon{
+    padding:1px 15px 1px 15px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+}
+
+.tieude{ color: red; margin-top:20px; font-weight: bold; }
+
+hr.style14{
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.thongtin table {display: table !important;}
+.thongtin tr{display: table-row !important;}
+.thongtin td{display: table-cell !important;}
+.thongtindich table {display: table !important;}
+.thongtindich tr{display: table-row !important;}
+.thongtindich td{display: table-cell !important;}
+
+@media only screen and (max-width: 768px){
+    .tracnghiem table, .tracnghiem tr,.tracnghiem td{ border-color: #fff; }
+    #mondai1,#mondai3,#mondai2,#mondai4 { width:45px; }
+    .table_luachon{ width: 100% !important; }
+}
+
+[data-f2-reading] .tracnghiem td:hover{background:Bisque;color:MidnightBlue}[data-f2-reading] .slide-content{display:none}[data-f2-reading] .kqdich{display:none;opacity:0}[data-f2-reading] .f2-options{border:none;width:100%}[data-f2-reading] .f2-options tbody{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr))}[data-f2-reading] .f2-options tr,[data-f2-reading] .f2-options td{border:none;display:block}@media (max-width: 720px){[data-f2-reading] .f2-options tbody{grid-template-columns:1fr}}
+
+.vnjp-dk{
+  max-width:960px;
+  margin:0 auto;
+  line-height:1.8;
+  font-size:16px;
+}
+.vnjp-dk ruby{ ruby-position: over; }
+.vnjp-dk rt{ font-size:11px; opacity:.8; }
+
+.vnjp-dk .table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+
+/* ===== Table base ===== */
+.vnjp-dk table.vnjp-main{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.vnjp-dk table.vnjp-main th,
+.vnjp-dk table.vnjp-main td{
+  border-bottom:1px solid #eef2f7;
+  padding:12px 14px;
+  vertical-align:top;
+  word-break:break-word;
+}
+
+.vnjp-dk table.vnjp-main tr:last-child td,
+.vnjp-dk table.vnjp-main tr:last-child th{ border-bottom:none; }
+
+.vnjp-dk table.vnjp-main th{
+  background:#f8fafc;
+  font-weight:800;
+  text-align:center;
+}
+
+/* ===== Inner table cleanup (table lồng) ===== */
+.vnjp-dk table.vnjp-main table{
+  width:100% !important;
+  border-collapse:separate;
+  border-spacing:0;
+}
+.vnjp-dk table.vnjp-main table,
+.vnjp-dk table.vnjp-main table tr,
+.vnjp-dk table.vnjp-main table td{
+  border:none !important;
+  padding:0 !important;
+}
+
+/* ảnh trong ô */
+.vnjp-dk img{
+  max-width:100% !important;
+  height:auto !important;
+  display:block;
+}
+.vnjp-dk .img-80{
+  width:80px;
+  flex:0 0 80px;
+}
+@media (max-width:480px){
+  .vnjp-dk .img-80{ width:64px; flex-basis:64px; }
+}
+
+/* layout cho ô có text + ảnh (trong table lồng) */
+.vnjp-dk .inner-flex{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+.vnjp-dk .inner-flex .inner-text{ flex:1; min-width:0; }
+
+/* ===== Mobile: 1 cột/card ===== */
+@media (max-width:768px){
+  .vnjp-dk .table-wrap{ overflow-x:visible; }
+  .vnjp-dk table.vnjp-main{
+    border-radius:12px;
+  }
+  .vnjp-dk table.vnjp-main tr{
+    display:block;
+    border-bottom:1px solid #eef2f7;
+  }
+  .vnjp-dk table.vnjp-main tr:last-child{ border-bottom:none; }
+
+  .vnjp-dk table.vnjp-main th{
+    display:none; /* ẩn header hàng đầu */
+  }
+
+  .vnjp-dk table.vnjp-main td{
+    display:block;
+    border-bottom:none;
+    padding:12px 14px;
+  }
+
+  /* label giả cho 2 cột */
+  .vnjp-dk table.vnjp-main td:first-child{
+    font-weight:800;
+    background:#f8fafc;
+    border-bottom:1px solid #eef2f7;
+  }
+  .vnjp-dk table.vnjp-main td:last-child{
+    background:#fff;
+  }
+}
+
+/* hint */
+.vnjp-dk .hint{
+  margin-top:8px;
+  font-size:13px;
+  opacity:.85;
+}
+
+
+.vnjp-dk{
+  max-width:960px;
+  margin:0 auto;
+  line-height:1.8;
+  font-size:16px;
+}
+.vnjp-dk ruby{ ruby-position: over; }
+.vnjp-dk rt{ font-size:11px; opacity:.8; }
+
+.vnjp-dk .table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+
+/* ===== Table base ===== */
+.vnjp-dk table.vnjp-main{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.vnjp-dk table.vnjp-main th,
+.vnjp-dk table.vnjp-main td{
+  border-bottom:1px solid #eef2f7;
+  padding:12px 14px;
+  vertical-align:top;
+  word-break:break-word;
+}
+
+.vnjp-dk table.vnjp-main tr:last-child td,
+.vnjp-dk table.vnjp-main tr:last-child th{ border-bottom:none; }
+
+.vnjp-dk table.vnjp-main th{
+  background:#f8fafc;
+  font-weight:800;
+  text-align:center;
+}
+
+/* ===== Inner table cleanup (table lồng) ===== */
+.vnjp-dk table.vnjp-main table{
+  width:100% !important;
+  border-collapse:separate;
+  border-spacing:0;
+}
+.vnjp-dk table.vnjp-main table,
+.vnjp-dk table.vnjp-main table tr,
+.vnjp-dk table.vnjp-main table td{
+  border:none !important;
+  padding:0 !important;
+}
+
+/* ảnh trong ô */
+.vnjp-dk img{
+  max-width:100% !important;
+  height:auto !important;
+  display:block;
+}
+.vnjp-dk .img-80{
+  width:80px;
+  flex:0 0 80px;
+}
+@media (max-width:480px){
+  .vnjp-dk .img-80{ width:64px; flex-basis:64px; }
+}
+
+/* layout cho ô có text + ảnh (trong table lồng) */
+.vnjp-dk .inner-flex{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+.vnjp-dk .inner-flex .inner-text{ flex:1; min-width:0; }
+
+/* ===== Mobile: 1 cột/card ===== */
+@media (max-width:768px){
+  .vnjp-dk .table-wrap{ overflow-x:visible; }
+  .vnjp-dk table.vnjp-main{
+    border-radius:12px;
+  }
+  .vnjp-dk table.vnjp-main tr{
+    display:block;
+    border-bottom:1px solid #eef2f7;
+  }
+  .vnjp-dk table.vnjp-main tr:last-child{ border-bottom:none; }
+
+  .vnjp-dk table.vnjp-main th{
+    display:none; /* ẩn header hàng đầu */
+  }
+
+  .vnjp-dk table.vnjp-main td{
+    display:block;
+    border-bottom:none;
+    padding:12px 14px;
+  }
+
+  /* label giả cho 2 cột */
+  .vnjp-dk table.vnjp-main td:first-child{
+    font-weight:800;
+    background:#f8fafc;
+    border-bottom:1px solid #eef2f7;
+  }
+  .vnjp-dk table.vnjp-main td:last-child{
+    background:#fff;
+  }
+}
+
+/* hint */
+.vnjp-dk .hint{
+  margin-top:8px;
+  font-size:13px;
+  opacity:.85;
+}
+</style>
+<div class="tab_container speed-page">
+<div id="tracnghiemdiv"><form class="quiz-form" method="post" action="#" name="post"><div id="shownoidung" data-legacy-quiz="" data-f2-reading="" data-source="speed-n2-dochieu" data-lesson="5-3"><p class="tieude"> 問題5-3</p><div class="thongtin"><div class="vnjp-dk">
+  <div class="table-wrap">
+
+    <table class="vnjp-main" aria-label="ポイント解説">
+      <thead>
+        <tr>
+          <th style="width:20%;min-width:80px;">ポイント</th>
+          <th style="width:80%;min-width:350px;"><ruby>解説<rp>(</rp><rt>かいせつ</rt><rp>)</rp></ruby></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><ruby>大<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きさ</td>
+          <td>
+            ほとんどのメーカーの<ruby>製品<rp>(</rp><rt>せいひん</rt><rp>)</rp></ruby>が、
+            <ruby>幅<rp>(</rp><rt>はば</rt><rp>)</rp></ruby>６０㎝、<ruby>高<rp>(</rp><rt>たか</rt><rp>)</rp></ruby>さ１７９㎝です。
+            <ruby>奥行<rp>(</rp><rt>おくゆ</rt><rp>)</rp></ruby>きには<ruby>差<rp>(</rp><rt>さ</rt><rp>)</rp></ruby>があり、
+            A<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>とB<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>が６５ｃｍ、
+            その<ruby>他<rp>(</rp><rt>た</rt><rp>)</rp></ruby>は７０㎝です。
+            キッチンの<ruby>調理台<rp>(</rp><rt>ちょうりだい</rt><rp>)</rp></ruby>や
+            <ruby>流<rp>(</rp><rt>なが</rt><rp>)</rp></ruby>し<ruby>台<rp>(</rp><rt>だい</rt><rp>)</rp></ruby>の
+            <ruby>隣<rp>(</rp><rt>となり</rt><rp>)</rp></ruby>に
+            <ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>を
+            <ruby>置<rp>(</rp><rt>お</rt><rp>)</rp></ruby>く<ruby>場合<rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>は、
+            <ruby>薄<rp>(</rp><rt>うす</rt><rp>)</rp></ruby>い６５㎝タイプがおすすめです。
+          </td>
+        </tr>
+
+        <tr>
+          <td><ruby>電力<rp>(</rp><rt>でんりょく</rt><rp>)</rp></ruby><ruby>消費<rp>(</rp><rt>しょうひ</rt><rp>)</rp></ruby></td>
+          <td>
+            <ruby>年間<rp>(</rp><rt>ねんかん</rt><rp>)</rp></ruby>３４０～３７０キロワット時で
+            <ruby>非常<rp>(</rp><rt>ひじょう</rt><rp>)</rp></ruby>に<ruby>少<rp>(</rp><rt>すく</rt><rp>)</rp></ruby>ないです。
+            どのメーカーもドアの<ruby>内側<rp>(</rp><rt>うちがわ</rt><rp>)</rp></ruby>に
+            <ruby>年間<rp>(</rp><rt>ねんかん</rt><rp>)</rp></ruby><ruby>消費<rp>(</rp><rt>しょうひ</rt><rp>)</rp></ruby>
+            <ruby>電力<rp>(</rp><rt>でんりょく</rt><rp>)</rp></ruby><ruby>量<rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>を
+            <ruby>表示<rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>しているので
+            <ruby>確認<rp>(</rp><rt>かくにん</rt><rp>)</rp></ruby>しましょう
+          </td>
+        </tr>
+
+        <tr>
+          <td><ruby>音<rp>(</rp><rt>おと</rt><rp>)</rp></ruby></td>
+          <td>
+            どのメーカーも２０デシベル<ruby>程度<rp>(</rp><rt>ていど</rt><rp>)</rp></ruby>です。
+            <ruby>置<rp>(</rp><rt>お</rt><rp>)</rp></ruby>く<ruby>場所<rp>(</rp><rt>ばしょ</rt><rp>)</rp></ruby>によっては、
+            <ruby>床<rp>(</rp><rt>ゆか</rt><rp>)</rp></ruby>や<ruby>壁<rp>(</rp><rt>かべ</rt><rp>)</rp></ruby>に
+            <ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>のモーターの
+            <ruby>音<rp>(</rp><rt>おと</rt><rp>)</rp></ruby>が<ruby>伝<rp>(</rp><rt>つた</rt><rp>)</rp></ruby>わって
+            <ruby>響<rp>(</rp><rt>ひび</rt><rp>)</rp></ruby>きますので
+            <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>にゴムシートを
+            <ruby>敷<rp>(</rp><rt>し</rt><rp>)</rp></ruby>くなどして
+            <ruby>対応<rp>(</rp><rt>たいおう</rt><rp>)</rp></ruby>しましょう。
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>・
+            <ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>・
+            <ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby>の
+            <ruby>位置<rp>(</rp><rt>いち</rt><rp>)</rp></ruby>
+          </td>
+          <td>
+            <div class="inner-flex">
+              <div class="inner-text">
+                メーカーによって<ruby>異<rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なります。<br><br>
+                ①<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>が<ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>中央<rp>(</rp><rt>ちゅうおう</rt><rp>)</rp></ruby>が<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby>、
+                <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>が<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby><br>
+                …<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>を<ruby>使<rp>(</rp><rt>つか</rt><rp>)</rp></ruby>うことが
+                <ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>い<ruby>方<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>に
+                <ruby>向<rp>(</rp><rt>む</rt><rp>)</rp></ruby>いています。<br><br>
+
+                ②<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>は<ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>中央<rp>(</rp><rt>ちゅうおう</rt><rp>)</rp></ruby>が<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>が<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby><br>
+                …<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>食品<rp>(</rp><rt>しょくひん</rt><rp>)</rp></ruby>を<ruby>使<rp>(</rp><rt>つか</rt><rp>)</rp></ruby>ったり、
+                <ruby>作<rp>(</rp><rt>つく</rt><rp>)</rp></ruby>った<ruby>料理<rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>を
+                <ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>保存<rp>(</rp><rt>ほぞん</rt><rp>)</rp></ruby>したりすることが
+                <ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>い<ruby>方<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>に
+                <ruby>便利<rp>(</rp><rt>べんり</rt><rp>)</rp></ruby>です。<br><br>
+
+                ➂<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>が<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>中央<rp>(</rp><rt>ちゅうおう</rt><rp>)</rp></ruby>が<ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>が<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby><br>
+                …<ruby>飲<rp>(</rp><rt>の</rt><rp>)</rp></ruby>み<ruby>物<rp>(</rp><rt>もの</rt><rp>)</rp></ruby>や
+                <ruby>調味料<rp>(</rp><rt>ちょうみりょう</rt><rp>)</rp></ruby>の<ruby>種類<rp>(</rp><rt>しゅるい</rt><rp>)</rp></ruby>や
+                <ruby>量<rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>が<ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>い<ruby>方<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>に
+                <ruby>便利<rp>(</rp><rt>べんり</rt><rp>)</rp></ruby>です。<br><br>
+
+                ①は<ruby>全<rp>(</rp><rt>すべ</rt><rp>)</rp></ruby>てのメーカーにあります。
+                <ruby>現在<rp>(</rp><rt>げんざい</rt><rp>)</rp></ruby>、B<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>は②、
+                C<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>は➂を<ruby>生産<rp>(</rp><rt>せいさん</rt><rp>)</rp></ruby>していません。
+              </div>
+
+              <div class="img-80">
+                <img decoding="async" src="https://www.vnjpclub.com/images/speed/n2/dochieu/5-3.jpg" alt="">
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><ruby>内部<rp>(</rp><rt>ないぶ</rt><rp>)</rp></ruby>の<ruby>収納<rp>(</rp><rt>しゅうのう</rt><rp>)</rp></ruby>のしやすさ</td>
+          <td>
+            A<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>の<ruby>製品<rp>(</rp><rt>せいひん</rt><rp>)</rp></ruby>は
+            <ruby>棚<rp>(</rp><rt>たな</rt><rp>)</rp></ruby>の<ruby>仕切<rp>(</rp><rt>しき</rt><rp>)</rp></ruby>りの<ruby>数<rp>(</rp><rt>かず</rt><rp>)</rp></ruby>が
+            <ruby>他<rp>(</rp><rt>ほか</rt><rp>)</rp></ruby>のメーカーの<ruby>物<rp>(</rp><rt>もの</rt><rp>)</rp></ruby>より
+            <ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いので<ruby>使<rp>(</rp><rt>つか</rt><rp>)</rp></ruby>いやすいでしょう。
+            C<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>の<ruby>製品<rp>(</rp><rt>せいひん</rt><rp>)</rp></ruby>は
+            <ruby>棚<rp>(</rp><rt>たな</rt><rp>)</rp></ruby>の<ruby>高<rp>(</rp><rt>たか</rt><rp>)</rp></ruby>さをレバーで
+            <ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>に<ruby>変<rp>(</rp><rt>か</rt><rp>)</rp></ruby>えられます。
+            ただし、<ruby>他社<rp>(</rp><rt>たしゃ</rt><rp>)</rp></ruby>と<ruby>比<rp>(</rp><rt>くら</rt><rp>)</rp></ruby>べて
+            <ruby>容量<rp>(</rp><rt>ようりょう</rt><rp>)</rp></ruby>がやや<ruby>小<rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいです。
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</div><div class="chuy"><ruby>仕切<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>り：<ruby>区切<rp>（</rp><rt>くぎ</rt><rp>）</rp></ruby>るための<ruby>板<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>のようなもの</div><br><div class="tracnghiem" data-item="706" data-correct="2"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>１　メーカーによって<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いがあるのは、どの<ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>か。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_706_1" type="radio" name="f21_706" value="0" aria-label="1"><span style="font-size: 15px"> １．<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>さ、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby>、<ruby>内部<rp>（</rp><rt>ないぶ</rt><rp>）</rp></ruby>の<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby> </span><span id="result_question_f21_706_1"></span> <span id="result_correct_f21_706_1"></span></td></tr><tr><td><input id="answer_f21_706_2" type="radio" name="f21_706" value="1" aria-label="2"><span style="font-size: 15px"> ２．<ruby>奥行<rp>（</rp><rt>おくゆ</rt><rp>）</rp></ruby>き、<ruby>音<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby> </span><span id="result_question_f21_706_2"></span> <span id="result_correct_f21_706_2"></span></td></tr><tr><td><input id="answer_f21_706_3" type="radio" name="f21_706" value="2" aria-label="3"><span style="font-size: 15px"> ３．<ruby>奥行<rp>（</rp><rt>おくゆ</rt><rp>）</rp></ruby>き、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby>、<ruby>内部<rp>（</rp><rt>ないぶ</rt><rp>）</rp></ruby>の<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby> </span><span id="result_question_f21_706_3"></span> <span id="result_correct_f21_706_3"></span></td></tr><tr><td><input id="answer_f21_706_4" type="radio" name="f21_706" value="3" aria-label="4"><span style="font-size: 15px"> ４．<ruby>奥行<rp>（</rp><rt>おくゆ</rt><rp>）</rp></ruby>き、<ruby>電力消費<rp>（</rp><rt>でんりょくしょうひ</rt><rp>）</rp></ruby>、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby>、<ruby>内部<rp>（</rp><rt>ないぶ</rt><rp>）</rp></ruby>の<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby> </span><span id="result_question_f21_706_4"></span> <span id="result_correct_f21_706_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><br><div class="tracnghiem" data-item="711" data-correct="0"><div id="question"><font size="4" color="#0B0B61"><b><ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>２　<ruby>冷凍<rp>（</rp><rt>れいとう</rt><rp>）</rp></ruby><ruby>食品<rp>（</rp><rt>しょくひん</rt><rp>）</rp></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うことが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>く、キッチンの<ruby>調理<rp>（</rp><rt>ちょうり</rt><rp>）</rp></ruby><ruby>台<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>と<ruby>冷蔵庫<rp>（</rp><rt>れいぞうこ</rt><rp>）</rp></ruby>を<ruby>並<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>べたい<ruby>場合<rp>（</rp><rt>ばあい</rt><rp>）</rp></ruby>は、どのメーカーの<ruby>冷蔵庫<rp>（</rp><rt>れいぞうこ</rt><rp>）</rp></ruby>を<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えばよいか。</b></font></div><table class="f2-options"><tbody><tr><td><input id="answer_f21_711_1" type="radio" name="f21_711" value="0" aria-label="1"><span style="font-size: 15px"> １．A<ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby> </span><span id="result_question_f21_711_1"></span> <span id="result_correct_f21_711_1"></span></td></tr><tr><td><input id="answer_f21_711_2" type="radio" name="f21_711" value="1" aria-label="2"><span style="font-size: 15px"> ２．B<ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby> </span><span id="result_question_f21_711_2"></span> <span id="result_correct_f21_711_2"></span></td></tr><tr><td><input id="answer_f21_711_3" type="radio" name="f21_711" value="2" aria-label="3"><span style="font-size: 15px"> ３．C<ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby> </span><span id="result_question_f21_711_3"></span> <span id="result_correct_f21_711_3"></span></td></tr><tr><td><input id="answer_f21_711_4" type="radio" name="f21_711" value="3" aria-label="4"><span style="font-size: 15px"> ４．どのメーカーでもよい </span><span id="result_question_f21_711_4"></span> <span id="result_correct_f21_711_4"></span></td></tr></tbody></table><div class="nghia" hidden="" style="display: none;"></div><div class="giaithich" hidden="" style="display: none;"></div></div><hr class="style-one"><div><div class="slide"><div class="slide-title sl2"><span class="vi-tr">Dịch &amp; Giải thích</span></div><div class="slide-content sl2"><div class="thongtin">
+
+<div class="vnjp-dk">
+  <div class="table-wrap">
+
+    <table class="vnjp-main" aria-label="ポイント解説">
+      <thead>
+        <tr>
+          <th style="width:20%;min-width:80px;">ポイント</th>
+          <th style="width:80%;min-width:350px;"><ruby>解説<rp>(</rp><rt>かいせつ</rt><rp>)</rp></ruby></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><ruby>大<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きさ</td>
+          <td>
+            ほとんどのメーカーの<ruby>製品<rp>(</rp><rt>せいひん</rt><rp>)</rp></ruby>が、
+            <ruby>幅<rp>(</rp><rt>はば</rt><rp>)</rp></ruby>６０㎝、<ruby>高<rp>(</rp><rt>たか</rt><rp>)</rp></ruby>さ１７９㎝です。
+            <ruby>奥行<rp>(</rp><rt>おくゆ</rt><rp>)</rp></ruby>きには<ruby>差<rp>(</rp><rt>さ</rt><rp>)</rp></ruby>があり、
+            A<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>とB<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>が６５ｃｍ、
+            その<ruby>他<rp>(</rp><rt>た</rt><rp>)</rp></ruby>は７０㎝です。
+            キッチンの<ruby>調理台<rp>(</rp><rt>ちょうりだい</rt><rp>)</rp></ruby>や
+            <ruby>流<rp>(</rp><rt>なが</rt><rp>)</rp></ruby>し<ruby>台<rp>(</rp><rt>だい</rt><rp>)</rp></ruby>の
+            <ruby>隣<rp>(</rp><rt>となり</rt><rp>)</rp></ruby>に
+            <ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>を
+            <ruby>置<rp>(</rp><rt>お</rt><rp>)</rp></ruby>く<ruby>場合<rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>は、
+            <ruby>薄<rp>(</rp><rt>うす</rt><rp>)</rp></ruby>い６５㎝タイプがおすすめです。
+          </td>
+        </tr>
+
+        <tr>
+          <td><ruby>電力<rp>(</rp><rt>でんりょく</rt><rp>)</rp></ruby><ruby>消費<rp>(</rp><rt>しょうひ</rt><rp>)</rp></ruby></td>
+          <td>
+            <ruby>年間<rp>(</rp><rt>ねんかん</rt><rp>)</rp></ruby>３４０～３７０キロワット時で
+            <ruby>非常<rp>(</rp><rt>ひじょう</rt><rp>)</rp></ruby>に<ruby>少<rp>(</rp><rt>すく</rt><rp>)</rp></ruby>ないです。
+            どのメーカーもドアの<ruby>内側<rp>(</rp><rt>うちがわ</rt><rp>)</rp></ruby>に
+            <ruby>年間<rp>(</rp><rt>ねんかん</rt><rp>)</rp></ruby><ruby>消費<rp>(</rp><rt>しょうひ</rt><rp>)</rp></ruby>
+            <ruby>電力<rp>(</rp><rt>でんりょく</rt><rp>)</rp></ruby><ruby>量<rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>を
+            <ruby>表示<rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>しているので
+            <ruby>確認<rp>(</rp><rt>かくにん</rt><rp>)</rp></ruby>しましょう
+          </td>
+        </tr>
+
+        <tr>
+          <td><ruby>音<rp>(</rp><rt>おと</rt><rp>)</rp></ruby></td>
+          <td>
+            どのメーカーも２０デシベル<ruby>程度<rp>(</rp><rt>ていど</rt><rp>)</rp></ruby>です。
+            <ruby>置<rp>(</rp><rt>お</rt><rp>)</rp></ruby>く<ruby>場所<rp>(</rp><rt>ばしょ</rt><rp>)</rp></ruby>によっては、
+            <ruby>床<rp>(</rp><rt>ゆか</rt><rp>)</rp></ruby>や<ruby>壁<rp>(</rp><rt>かべ</rt><rp>)</rp></ruby>に
+            <ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>のモーターの
+            <ruby>音<rp>(</rp><rt>おと</rt><rp>)</rp></ruby>が<ruby>伝<rp>(</rp><rt>つた</rt><rp>)</rp></ruby>わって
+            <ruby>響<rp>(</rp><rt>ひび</rt><rp>)</rp></ruby>きますので
+            <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>にゴムシートを
+            <ruby>敷<rp>(</rp><rt>し</rt><rp>)</rp></ruby>くなどして
+            <ruby>対応<rp>(</rp><rt>たいおう</rt><rp>)</rp></ruby>しましょう。
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>・
+            <ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>・
+            <ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby>の
+            <ruby>位置<rp>(</rp><rt>いち</rt><rp>)</rp></ruby>
+          </td>
+          <td>
+            <div class="inner-flex">
+              <div class="inner-text">
+                メーカーによって<ruby>異<rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なります。<br><br>
+                ①<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>が<ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>中央<rp>(</rp><rt>ちゅうおう</rt><rp>)</rp></ruby>が<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby>、
+                <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>が<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby><br>
+                …<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>を<ruby>使<rp>(</rp><rt>つか</rt><rp>)</rp></ruby>うことが
+                <ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>い<ruby>方<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>に
+                <ruby>向<rp>(</rp><rt>む</rt><rp>)</rp></ruby>いています。<br><br>
+
+                ②<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>は<ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>中央<rp>(</rp><rt>ちゅうおう</rt><rp>)</rp></ruby>が<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>が<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby><br>
+                …<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>食品<rp>(</rp><rt>しょくひん</rt><rp>)</rp></ruby>を<ruby>使<rp>(</rp><rt>つか</rt><rp>)</rp></ruby>ったり、
+                <ruby>作<rp>(</rp><rt>つく</rt><rp>)</rp></ruby>った<ruby>料理<rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>を
+                <ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>保存<rp>(</rp><rt>ほぞん</rt><rp>)</rp></ruby>したりすることが
+                <ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>い<ruby>方<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>に
+                <ruby>便利<rp>(</rp><rt>べんり</rt><rp>)</rp></ruby>です。<br><br>
+
+                ➂<ruby>上<rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>が<ruby>冷凍<rp>(</rp><rt>れいとう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>中央<rp>(</rp><rt>ちゅうおう</rt><rp>)</rp></ruby>が<ruby>冷蔵<rp>(</rp><rt>れいぞう</rt><rp>)</rp></ruby><ruby>庫<rp>(</rp><rt>こ</rt><rp>)</rp></ruby>、
+                <ruby>下<rp>(</rp><rt>した</rt><rp>)</rp></ruby>が<ruby>野菜<rp>(</rp><rt>やさい</rt><rp>)</rp></ruby><ruby>室<rp>(</rp><rt>しつ</rt><rp>)</rp></ruby><br>
+                …<ruby>飲<rp>(</rp><rt>の</rt><rp>)</rp></ruby>み<ruby>物<rp>(</rp><rt>もの</rt><rp>)</rp></ruby>や
+                <ruby>調味料<rp>(</rp><rt>ちょうみりょう</rt><rp>)</rp></ruby>の<ruby>種類<rp>(</rp><rt>しゅるい</rt><rp>)</rp></ruby>や
+                <ruby>量<rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>が<ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>い<ruby>方<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>に
+                <ruby>便利<rp>(</rp><rt>べんり</rt><rp>)</rp></ruby>です。<br><br>
+
+                ①は<ruby>全<rp>(</rp><rt>すべ</rt><rp>)</rp></ruby>てのメーカーにあります。
+                <ruby>現在<rp>(</rp><rt>げんざい</rt><rp>)</rp></ruby>、B<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>は②、
+                C<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>は➂を<ruby>生産<rp>(</rp><rt>せいさん</rt><rp>)</rp></ruby>していません。
+              </div>
+
+              <div class="img-80">
+                <img src="https://www.vnjpclub.com/images/speed/n2/dochieu/5-3.jpg" alt="">
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><ruby>内部<rp>(</rp><rt>ないぶ</rt><rp>)</rp></ruby>の<ruby>収納<rp>(</rp><rt>しゅうのう</rt><rp>)</rp></ruby>のしやすさ</td>
+          <td>
+            A<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>の<ruby>製品<rp>(</rp><rt>せいひん</rt><rp>)</rp></ruby>は
+            <ruby>棚<rp>(</rp><rt>たな</rt><rp>)</rp></ruby>の<ruby>仕切<rp>(</rp><rt>しき</rt><rp>)</rp></ruby>りの<ruby>数<rp>(</rp><rt>かず</rt><rp>)</rp></ruby>が
+            <ruby>他<rp>(</rp><rt>ほか</rt><rp>)</rp></ruby>のメーカーの<ruby>物<rp>(</rp><rt>もの</rt><rp>)</rp></ruby>より
+            <ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いので<ruby>使<rp>(</rp><rt>つか</rt><rp>)</rp></ruby>いやすいでしょう。
+            C<ruby>社<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby>の<ruby>製品<rp>(</rp><rt>せいひん</rt><rp>)</rp></ruby>は
+            <ruby>棚<rp>(</rp><rt>たな</rt><rp>)</rp></ruby>の<ruby>高<rp>(</rp><rt>たか</rt><rp>)</rp></ruby>さをレバーで
+            <ruby>簡単<rp>(</rp><rt>かんたん</rt><rp>)</rp></ruby>に<ruby>変<rp>(</rp><rt>か</rt><rp>)</rp></ruby>えられます。
+            ただし、<ruby>他社<rp>(</rp><rt>たしゃ</rt><rp>)</rp></ruby>と<ruby>比<rp>(</rp><rt>くら</rt><rp>)</rp></ruby>べて
+            <ruby>容量<rp>(</rp><rt>ようりょう</rt><rp>)</rp></ruby>がやや<ruby>小<rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいです。
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</div><div class="thongtindich"><div style="overflow-x:auto;">
+<table border="1" width="100%" class="table table-bordered">
+<tbody>
+<tr><td style="text-align: center;width:20%;min-width: 80px;"><span class="vi-tr">Đặc điểm</span></td><td style="text-align: center;width:80%;min-width: 350px;"><span class="vi-tr">Giải thích</span></td></tr>
+<tr><td><span class="vi-tr">Kích cỡ</span></td><td><span class="vi-tr">Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm.&nbsp; Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.</span>
+</td></tr>
+<tr><td><span class="vi-tr">Mức tiêu thụ điện</span></td><td><span class="vi-tr">Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.</span></td></tr>
+<tr><td><span class="vi-tr">Tiếng ồn</span></td><td>&nbsp;<span class="vi-tr">Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.</span></td></tr>
+<tr><td><span class="vi-tr">Vị trí ngăn để rau, ngăn lạnh, ngăn đông</span></td><td><p>
+</p>
+<table border="0" width="100%"><tbody>
+<tr style="border:none;"><td style="border:none;"><p>&nbsp;<span class="vi-tr">Khác nhau tùy theo nhà sản xuất.</span><br>
+<span class="vi-tr">1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông</span><br>
+<span class="vi-tr">…Thích hợp cho người thường xuyên sử dụng rau củ.</span><br>
+<span class="vi-tr">2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ</span><br>
+<span class="vi-tr">…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.</span><br>
+<span class="vi-tr">3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ</span><br>
+<span class="vi-tr">…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.</span><br>
+<span class="vi-tr">Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.</span></p></td>
+<td style="border:none;width: 82px;min-width:82px"><img src="https://www.vnjpclub.com/images/speed/n2/dochieu/5-3.jpg" style="width: 120px;"></td></tr></tbody></table>
+
+</td></tr><tr><td>
+<span class="vi-tr">Sự thuận tiện của ngăn chứa bên trong</span></td><td>
+<span class="vi-tr">Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng.
+Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt.
+Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.</span></td></tr>
+</tbody>
+</table></div>
+<p><span class="vi-tr">Mobile View: Lướt trái phải để xem hết nội dung.</span></p></div><div class="chuy"><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>仕切<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>り：<ruby>区切<rp>（</rp><rt>くぎ</rt><rp>）</rp></ruby>るための<ruby>板<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>のようなもの</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách</div></div></div></div><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>１　メーカーによって<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いがあるのは、どの<ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>か。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１．<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>さ、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby>、<ruby>内部<rp>（</rp><rt>ないぶ</rt><rp>）</rp></ruby>の<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２．<ruby>奥行<rp>（</rp><rt>おくゆ</rt><rp>）</rp></ruby>き、<ruby>音<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2. Chiều sâu, tiếng ồn, vị trí để đồ</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３．<ruby>奥行<rp>（</rp><rt>おくゆ</rt><rp>）</rp></ruby>き、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby>、<ruby>内部<rp>（</rp><rt>ないぶ</rt><rp>）</rp></ruby>の<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４．<ruby>奥行<rp>（</rp><rt>おくゆ</rt><rp>）</rp></ruby>き、<ruby>電力消費<rp>（</rp><rt>でんりょくしょうひ</rt><rp>）</rp></ruby>、<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>を<ruby>入<rp>（</rp><rt>い</rt><rp>）</rp></ruby>れるところの<ruby>位置<rp>（</rp><rt>いち</rt><rp>）</rp></ruby>、<ruby>内部<rp>（</rp><rt>ないぶ</rt><rp>）</rp></ruby>の<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong</div></div></div><p></p><br><div class="tracnghiem"><div id="question"><font size="4" color="#0B0B61"><b><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);"><ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>２　<ruby>冷凍<rp>（</rp><rt>れいとう</rt><rp>）</rp></ruby><ruby>食品<rp>（</rp><rt>しょくひん</rt><rp>）</rp></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うことが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>く、キッチンの<ruby>調理<rp>（</rp><rt>ちょうり</rt><rp>）</rp></ruby><ruby>台<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>と<ruby>冷蔵庫<rp>（</rp><rt>れいぞうこ</rt><rp>）</rp></ruby>を<ruby>並<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>べたい<ruby>場合<rp>（</rp><rt>ばあい</rt><rp>）</rp></ruby>は、どのメーカーの<ruby>冷蔵庫<rp>（</rp><rt>れいぞうこ</rt><rp>）</rp></ruby>を<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えばよいか。</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?</div></div></div></b></font></div></div><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">１．A<ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">1. Công ty A</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">２．B<ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">2. Công ty B</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">３．C<ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby></div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">3. Công ty C</div></div></div><p></p><p><span style="font-size: 15px"></span></p><div class="tudich"><div class="candich" data-vnjp-tip="1" style="background: none; color: rgb(51, 51, 51);">４．どのメーカーでもよい</div><div class="kqdich" style="opacity: 0; display: none;"><div class="nddich">4. Công ty nào cũng được</div></div></div><p></p></div></div></div><input type="button" value="Kết Quả" data-quiz-action="check" class="btn btn-danger" id="ketqua"><input type="button" value="Làm Lại" data-quiz-action="reset" class="btn btn-success" id="lamlai"><input type="button" value="Đáp Án" data-quiz-action="reveal" class="btn btn-primary" id="dapan"><div role="status" data-quiz-status=""><span></span></div></div></form></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="doc-hieu-jouhou-mondai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách":"仕切り(Partition): an object such as a board used to separate","Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?":"Question 1: Are there any differences depending on the manufacturer?","1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong":"1. Height, storage location, condition of internal shelves","2. Chiều sâu, tiếng ồn, vị trí để đồ":"2. Depth, noise, storage location","3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong":"3. Depth, storage location, condition of internal shelves","4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong":"4. Depth, power consumption, storage location, condition of internal shelves","Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?":"Question 2: In case you often use frozen foods and want to place the refrigerator in line with the kitchen counter, which manufacturer should you buy a refrigerator from?","1. Công ty A":"1. Company A","2. Công ty B":"2. Company B","3. Công ty C":"3. Company C","4. Công ty nào cũng được":"4. Any company is fine","Dịch & Giải thích":"Translation & Interpretation","Đặc điểm":"Characteristic","Giải thích":"Explain","Kích cỡ":"Size","Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm. Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.":"Products from most manufacturers are 60cm wide and 179cm high. The depth is different, that of company A and company B is 65cm, that of another company is 70cm. The 65cm thin type is suitable for placing the refrigerator next to the kitchen shelf or washing shelf.","Mức tiêu thụ điện":"Electricity consumption","Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.":"Consumption is very little, only 340 - 370 kWh / year. Manufacturers display annual electricity consumption on the inside of the door, please confirm.","Tiếng ồn":"Noise","Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.":"Manufacturers' products are all at 20dB. Depending on the location of the cabinet, the sound of the cabinet's motor can be transmitted to the wall or floor and echo, so handle it by lining the bottom with a rubber layer.","Vị trí ngăn để rau, ngăn lạnh, ngăn đông":"Location of vegetable compartment, refrigerator compartment, freezer compartment","Khác nhau tùy theo nhà sản xuất.":"Varies by manufacturer.","1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông":"1. Above is the refrigerator, in the middle is the vegetable compartment, and below is the freezer","…Thích hợp cho người thường xuyên sử dụng rau củ.":"…Suitable for people who often use vegetables.","2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ":"2. Above is the refrigerator, in the middle is the freezer, and below is the vegetable compartment","…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.":"...Suitable for people who often use frozen foods and preserve processed foods.","3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ":"3. Above is the freezer, in the middle is the refrigerator, and below is the vegetable compartment","…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.":"...Suitable for people with many types and quantities of drinks and spices.","Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.":"All manufacturers have product model 1. Currently company B does not produce model 2, company C does not produce model 3.","Sự thuận tiện của ngăn chứa bên trong":"Convenience of internal storage","Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng. Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt. Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.":"Company A's products have more shelves and partitions than those of other manufacturers, so they are easy to use. Company C's products can adjust the shelf height with a lever. However, the product capacity is relatively small when compared to other companies.","Mobile View: Lướt trái phải để xem hết nội dung.":"Mobile View: Swipe left and right to see all content.","Kết Quả":"Result","Làm Lại":"Redo","Đáp Án":"Answer"},"idMap":{"仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách":"仕切り(Partisi): suatu benda seperti papan yang digunakan untuk memisahkan","Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?":"Pertanyaan 1: Apakah ada perbedaan tergantung pada produsennya?","1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong":"1. Tinggi, lokasi penyimpanan, kondisi rak internal","2. Chiều sâu, tiếng ồn, vị trí để đồ":"2. Kedalaman, kebisingan, lokasi penyimpanan","3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong":"3. Kedalaman, lokasi penyimpanan, kondisi rak internal","4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong":"4. Kedalaman, konsumsi daya, lokasi penyimpanan, kondisi rak internal","Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?":"Pertanyaan 2: Jika Anda sering menggunakan makanan beku dan ingin meletakkan lemari es sejajar dengan meja dapur, dari produsen mana sebaiknya Anda membeli lemari es?","1. Công ty A":"1. Perusahaan A","2. Công ty B":"2. Perusahaan B","3. Công ty C":"3. Perusahaan C","4. Công ty nào cũng được":"4. Perusahaan mana pun baik-baik saja","Dịch & Giải thích":"Terjemahan & Interpretasi","Đặc điểm":"Ciri","Giải thích":"Menjelaskan","Kích cỡ":"Ukuran","Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm. Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.":"Produk dari sebagian besar produsen memiliki lebar 60cm dan tinggi 179cm. Kedalamannya berbeda, perusahaan A dan perusahaan B 65cm, perusahaan lain 70cm. Tipe tipis 65cm cocok untuk meletakkan kulkas di samping rak dapur atau rak cuci.","Mức tiêu thụ điện":"Konsumsi listrik","Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.":"Konsumsinya sangat sedikit, hanya 340 – 370 kWh/tahun. Produsen menampilkan konsumsi listrik tahunan di bagian dalam pintu, harap konfirmasi.","Tiếng ồn":"Kebisingan","Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.":"Produk pabrikan semuanya berada pada 20dB. Tergantung pada lokasi kabinet, suara motor kabinet dapat diteruskan ke dinding atau lantai dan bergema, jadi tangani dengan melapisi bagian bawah dengan lapisan karet.","Vị trí ngăn để rau, ngăn lạnh, ngăn đông":"Lokasi kompartemen sayuran, kompartemen lemari es, kompartemen freezer","Khác nhau tùy theo nhà sản xuất.":"Bervariasi menurut produsen.","1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông":"1. Di atas adalah lemari es, di tengah adalah kompartemen sayuran, dan di bawah adalah freezer","…Thích hợp cho người thường xuyên sử dụng rau củ.":"…Cocok untuk orang yang sering menggunakan sayuran.","2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ":"2. Di atas ada lemari es, di tengah ada freezer, dan di bawah ada tempat sayur","…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.":"...Cocok untuk orang yang sering menggunakan makanan beku dan mengawetkan makanan olahan.","3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ":"3. Di atas ada freezer, di tengah kulkas, dan di bawah ada tempat sayur","…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.":"...Cocok untuk orang dengan banyak jenis dan jumlah minuman dan bumbu.","Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.":"Semua produsen memiliki model produk 1. Saat ini perusahaan B tidak memproduksi model 2, perusahaan C tidak memproduksi model 3.","Sự thuận tiện của ngăn chứa bên trong":"Kenyamanan penyimpanan internal","Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng. Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt. Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.":"Produk Perusahaan A memiliki lebih banyak rak dan partisi dibandingkan produsen lain, sehingga mudah digunakan. Produk Perusahaan C dapat mengatur ketinggian rak dengan tuas. Namun kapasitas produknya relatif kecil jika dibandingkan dengan perusahaan lain.","Mobile View: Lướt trái phải để xem hết nội dung.":"Tampilan Seluler: Gesek ke kiri dan kanan untuk melihat semua konten.","Kết Quả":"Hasil","Làm Lại":"Mengulangi","Đáp Án":"Menjawab"},"neMap":{"仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách":"仕切り(विभाजन): एउटा वस्तु जस्तै बोर्ड अलग गर्न प्रयोग गरिन्छ","Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?":"प्रश्न 1: त्यहाँ निर्माता मा निर्भर कुनै भिन्नता छ?","1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong":"1. उचाइ, भण्डारण स्थान, आन्तरिक सेल्फहरूको अवस्था","2. Chiều sâu, tiếng ồn, vị trí để đồ":"2. गहिराई, आवाज, भण्डारण स्थान","3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong":"3. गहिराई, भण्डारण स्थान, आन्तरिक सेल्फहरूको अवस्था","4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong":"4. गहिराई, बिजुली खपत, भण्डारण स्थान, आन्तरिक सेल्फहरूको अवस्था","Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?":"प्रश्न 2: यदि तपाइँ प्रायः फ्रिज गरिएको खानाहरू प्रयोग गर्नुहुन्छ र किचन काउन्टरसँग लाइनमा फ्रिज राख्न चाहनुहुन्छ भने, तपाइँ कुन निर्माताबाट रेफ्रिजरेटर किन्नु पर्छ?","1. Công ty A":"1. कम्पनी ए","2. Công ty B":"२. कम्पनी बि","3. Công ty C":"3. कम्पनी सी","4. Công ty nào cũng được":"4. कुनै पनि कम्पनी ठीक छ","Dịch & Giải thích":"अनुवाद र व्याख्या","Đặc điểm":"विशेषता","Giải thích":"व्याख्या गर्नुहोस्","Kích cỡ":"साइज","Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm. Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.":"धेरै निर्माताहरु को उत्पादनहरु 60cm चौडा र 179cm उच्च छन्। गहिराई फरक छ, कम्पनी A र कम्पनी B को 65 सेमी छ, अर्को कम्पनीको 70 सेमी छ। 65 सेमी पातलो प्रकार किचन शेल्फ वा धुने शेल्फ छेउमा फ्रिज राख्नको लागि उपयुक्त छ।","Mức tiêu thụ điện":"बिजुली खपत","Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.":"खपत धेरै कम छ, केवल 340 - 370 kWh / वर्ष। निर्माताहरूले ढोका भित्र वार्षिक बिजुली खपत प्रदर्शन गर्छन्, कृपया पुष्टि गर्नुहोस्।","Tiếng ồn":"कोलाहल","Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.":"निर्माताका उत्पादनहरू सबै 20dB मा छन्। क्याबिनेटको स्थानमा निर्भर गर्दै, क्याबिनेटको मोटरको आवाज पर्खाल वा भुइँमा प्रसारित गर्न सकिन्छ र प्रतिध्वनित गर्न सकिन्छ, त्यसैले यसलाई रबर तहको साथ तल अस्तर गरेर ह्यान्डल गर्नुहोस्।","Vị trí ngăn để rau, ngăn lạnh, ngăn đông":"तरकारी डिब्बा, रेफ्रिजरेटर डिब्बा, फ्रीजर डिब्बा को स्थान","Khác nhau tùy theo nhà sản xuất.":"निर्माता अनुसार फरक हुन्छ।","1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông":"1. माथि रेफ्रिजरेटर छ, बीचमा तरकारीको डिब्बा छ, र तल फ्रीजर छ","…Thích hợp cho người thường xuyên sử dụng rau củ.":"... प्रायः तरकारीहरू प्रयोग गर्ने मानिसहरूका लागि उपयुक्त।","2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ":"2. माथि रेफ्रिजरेटर छ, बीचमा फ्रीजर छ, र तल तरकारी डिब्बा छ","…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.":"... प्रायः जमे भएका खानाहरू प्रयोग गर्ने र प्रशोधित खानाहरू सुरक्षित गर्ने मानिसहरूका लागि उपयुक्त।","3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ":"3. माथि फ्रीजर छ, बीचमा फ्रिज छ, र तल तरकारी डिब्बा छ","…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.":"... धेरै प्रकारका र पेय पदार्थ र मसलाको मात्रा भएका मानिसहरूका लागि उपयुक्त।","Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.":"सबै निर्माताहरूसँग उत्पादन मोडेल 1 छ। हाल कम्पनी B ले मोडेल 2 उत्पादन गर्दैन, कम्पनी C ले मोडेल 3 उत्पादन गर्दैन।","Sự thuận tiện của ngăn chứa bên trong":"आन्तरिक भण्डारणको सुविधा","Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng. Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt. Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.":"कम्पनी A का उत्पादनहरूमा अन्य निर्माताहरूको तुलनामा धेरै सेल्फहरू र विभाजनहरू छन्, त्यसैले तिनीहरू प्रयोग गर्न सजिलो छन्। कम्पनी C का उत्पादनहरूले लीभरको साथ शेल्फको उचाइ समायोजन गर्न सक्छ। यद्यपि, अन्य कम्पनीहरूको तुलनामा उत्पादन क्षमता अपेक्षाकृत सानो छ।","Mobile View: Lướt trái phải để xem hết nội dung.":"मोबाइल दृश्य: सबै सामग्री हेर्न बायाँ र दायाँ स्वाइप गर्नुहोस्।","Kết Quả":"नतिजा","Làm Lại":"पुन: गर्नुहोस्","Đáp Án":"जवाफ"},"myMap":{"仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách":"仕切り(Partition) : ခွဲထုတ်ရန် အသုံးပြုသော board ကဲ့သို့သော အရာဝတ္ထု","Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?":"မေးခွန်း 1- ထုတ်လုပ်သူအပေါ် မူတည်ပြီး ကွဲပြားမှုရှိပါသလား။","1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong":"1. အမြင့်၊ သိုလှောင်မှုတည်နေရာ၊ အတွင်းပိုင်းစင်များအခြေအနေ","2. Chiều sâu, tiếng ồn, vị trí để đồ":"2. အနက်၊ ဆူညံမှု၊ သိုလှောင်မှုတည်နေရာ","3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong":"3. အနက်၊ သိုလှောင်မှုတည်နေရာ၊ အတွင်းပိုင်းစင်များအခြေအနေ","4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong":"4. အနက်၊ ပါဝါသုံးစွဲမှု၊ သိုလှောင်မှုတည်နေရာ၊ အတွင်းစင်များ၏ အခြေအနေ","Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?":"မေးခွန်း 2- အေးခဲထားသော အစားအစာများကို မကြာခဏသုံး၍ မီးဖိုချောင်ကောင်တာနှင့် လိုက်လျောညီထွေဖြစ်စေရန် ရေခဲသေတ္တာကို မည်သည့်ထုတ်လုပ်သူထံမှ ဝယ်ယူသင့်သနည်း။","1. Công ty A":"1. ကုမ္ပဏီ A","2. Công ty B":"2. ကုမ္ပဏီ B","3. Công ty C":"3. ကုမ္ပဏီ C","4. Công ty nào cũng được":"4. မည်သည့်ကုမ္ပဏီမဆို အဆင်ပြေပါသည်။","Dịch & Giải thích":"ဘာသာပြန်နှင့် စကားပြန်","Đặc điểm":"ဝိသေသ","Giải thích":"ရှင်းပြပါ။","Kích cỡ":"အရွယ်အစား","Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm. Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.":"ထုတ်လုပ်သူအများစု၏ ထုတ်ကုန်များသည် အကျယ် 60 စင်တီမီတာနှင့် အမြင့် 179 စင်တီမီတာရှိသည်။ အတိမ်အနက်သည် ကွဲပြားသည်၊ ကုမ္ပဏီ A နှင့် ကုမ္ပဏီ B သည် ၆၅ စင်တီမီတာ၊ အခြားကုမ္ပဏီတစ်ခု၏ ၇၀ စင်တီမီတာဖြစ်သည်။ 65 စင်တီမီတာ ပါးလွှာသော အမျိုးအစားသည် ရေခဲသေတ္တာကို မီးဖိုချောင် စင် သို့မဟုတ် အဝတ်လျှော်စင်ဘေးတွင် ထားရှိရန် သင့်လျော်သည်။","Mức tiêu thụ điện":"လျှပ်စစ်သုံးစွဲမှု","Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.":"စားသုံးမှု အလွန်နည်းပြီး တစ်နှစ်လျှင် ၃၄၀ - ၃၇၀ kWh သာရှိသည်။ ထုတ်လုပ်သူများသည် တံခါး၏အတွင်းပိုင်း၌ နှစ်စဉ် လျှပ်စစ်သုံးစွဲမှုကို ပြသသည်၊ ကျေးဇူးပြု၍ အတည်ပြုပါ။","Tiếng ồn":"ဆူညံသံ","Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.":"ထုတ်လုပ်သူ၏ထုတ်ကုန်အားလုံးသည် 20dB တွင်ရှိသည်။ ကက်ဘိနက်တည်နေရာပေါ်မူတည်၍ ကက်ဘိနက်မော်တာ၏အသံသည် နံရံ သို့မဟုတ် ကြမ်းပြင်သို့ ပဲ့တင်ထပ်နိုင်သည်၊ ထို့ကြောင့် အောက်ခြေကို ရော်ဘာအလွှာဖြင့် စည်းပြီးကိုင်တွယ်ပါ။","Vị trí ngăn để rau, ngăn lạnh, ngăn đông":"ဟင်းသီးဟင်းရွက်အခန်း၊ ရေခဲသေတ္တာခန်း၊ ရေခဲသေတ္တာခန်း၊ တည်နေရာ","Khác nhau tùy theo nhà sản xuất.":"ထုတ်လုပ်သူအလိုက်ကွဲပြားသည်။","1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông":"1. အပေါ်က ရေခဲသေတ္တာပါ၊ အလယ်မှာ ဟင်းသီးဟင်းရွက်ထည့်တဲ့ အခန်းဖြစ်ပြီး အောက်မှာတော့ ရေခဲသေတ္တာပါ။","…Thích hợp cho người thường xuyên sử dụng rau củ.":"… အသီးအရွက်ကို မကြာခဏသုံးတတ်သူများအတွက် အထူးသင့်လျော်ပါသည်။","2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ":"2. အပေါ်က ရေခဲသေတ္တာ၊ အလယ်မှာ ရေခဲသေတ္တာဖြစ်ပြီး၊ အောက်ခြေမှာ အသီးအရွက်ခန်းပါ။","…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.":"...အေးခဲထားသော အစားအစာများကို မကြာခဏ အသုံးပြုပြီး ပြုပြင်ထားသော အစားအစာများကို ထိန်းသိမ်းထားသူများအတွက် သင့်တော်ပါသည်။","3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ":"3. အပေါ်ကရေခဲသေတ္တာဖြစ်ပြီး အလယ်မှာ ရေခဲသေတ္တာဖြစ်ပြီး အောက်ခြေမှာ ဟင်းသီးဟင်းရွက်ထည့်တဲ့အခန်းဖြစ်ပါတယ်။","…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.":"...အချိုရည်နှင့် ဟင်းခတ်အမွှေးအကြိုင် အမျိုးအစားများစွာရှိသူများအတွက် သင့်တော်ပါသည်။","Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.":"ထုတ်လုပ်သူအားလုံးတွင် ထုတ်ကုန်မော်ဒယ် 1 ရှိသည်။ လက်ရှိတွင် ကုမ္ပဏီ B သည် မော်ဒယ် 2 ကို မထုတ်လုပ်သေးပါ၊ ကုမ္ပဏီ C သည် မော်ဒယ် 3 ကို မထုတ်လုပ်ပါ။","Sự thuận tiện của ngăn chứa bên trong":"အတွင်းပိုင်းသိုလှောင်မှုအဆင်ပြေခြင်း။","Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng. Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt. Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.":"ကုမ္ပဏီ A ၏ ထုတ်ကုန်များသည် အခြားထုတ်လုပ်သူများထက် စင်များနှင့် အခန်းကန့်များ ပိုများသောကြောင့် ၎င်းတို့ကို အသုံးပြုရလွယ်ကူသည်။ ကုမ္ပဏီ C ၏ ထုတ်ကုန်များသည် စင်အမြင့်ကို လီဗာဖြင့် ချိန်ညှိနိုင်သည်။ သို့သော် အခြားကုမ္ပဏီများနှင့် နှိုင်းယှဉ်ပါက ထုတ်ကုန်စွမ်းရည်မှာ နည်းပါးပါသည်။","Mobile View: Lướt trái phải để xem hết nội dung.":"မိုဘိုင်းမြင်ကွင်း- အကြောင်းအရာအားလုံးကို ကြည့်ရန် ဘယ်ညာ ပွတ်ဆွဲပါ။","Kết Quả":"ရလဒ်","Làm Lại":"ပြန်လုပ်ပါ။","Đáp Án":"ဖြေ"},"bnMap":{"仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách":"仕切り(পার্টিশন): একটি বস্তু যেমন একটি বোর্ড আলাদা করতে ব্যবহৃত হয়","Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?":"প্রশ্ন 1: প্রস্তুতকারকের উপর নির্ভর করে কোন পার্থক্য আছে?","1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong":"1. উচ্চতা, স্টোরেজ অবস্থান, অভ্যন্তরীণ তাকগুলির অবস্থা","2. Chiều sâu, tiếng ồn, vị trí để đồ":"2. গভীরতা, শব্দ, স্টোরেজ অবস্থান","3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong":"3. গভীরতা, স্টোরেজ অবস্থান, অভ্যন্তরীণ তাকগুলির অবস্থা","4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong":"4. গভীরতা, শক্তি খরচ, স্টোরেজ অবস্থান, অভ্যন্তরীণ তাক অবস্থা","Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?":"প্রশ্ন 2: আপনি যদি প্রায়ই হিমায়িত খাবার ব্যবহার করেন এবং রান্নাঘরের কাউন্টারের সাথে রেফ্রিজারেটর রাখতে চান, তাহলে আপনার কোন প্রস্তুতকারকের থেকে ফ্রিজ কেনা উচিত?","1. Công ty A":"1. কোম্পানি A","2. Công ty B":"2. কোম্পানি বি","3. Công ty C":"3. কোম্পানি সি","4. Công ty nào cũng được":"4. কোন কোম্পানি জরিমানা","Dịch & Giải thích":"অনুবাদ ও ব্যাখ্যা","Đặc điểm":"চারিত্রিক","Giải thích":"ব্যাখ্যা কর","Kích cỡ":"আকার","Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm. Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.":"বেশিরভাগ নির্মাতার পণ্যগুলি 60 সেমি চওড়া এবং 179 সেমি উচ্চ। গভীরতা আলাদা, কোম্পানি A এবং কোম্পানি B এর 65 সেমি, অন্য কোম্পানির 70 সেমি। রান্নাঘরের বালুচর বা ওয়াশিং শেলফের পাশে রেফ্রিজারেটর রাখার জন্য 65cm পাতলা টাইপ উপযুক্ত।","Mức tiêu thụ điện":"বিদ্যুৎ খরচ","Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.":"খরচ খুব কম, শুধুমাত্র 340 - 370 kWh / বছর। নির্মাতারা দরজার অভ্যন্তরে বার্ষিক বিদ্যুৎ খরচ প্রদর্শন করে, দয়া করে নিশ্চিত করুন।","Tiếng ồn":"গোলমাল","Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.":"নির্মাতাদের পণ্য সব 20dB হয়. ক্যাবিনেটের অবস্থানের উপর নির্ভর করে, ক্যাবিনেটের মোটরের শব্দ প্রাচীর বা মেঝেতে প্রেরণ করা যেতে পারে এবং প্রতিধ্বনি হতে পারে, তাই একটি রাবার স্তর দিয়ে নীচে আস্তরণ দিয়ে এটি পরিচালনা করুন।","Vị trí ngăn để rau, ngăn lạnh, ngăn đông":"সবজির বগি, রেফ্রিজারেটর বগি, ফ্রিজার বগির অবস্থান","Khác nhau tùy theo nhà sản xuất.":"প্রস্তুতকারকের দ্বারা পরিবর্তিত হয়।","1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông":"1. উপরে রেফ্রিজারেটর, মাঝখানে সবজির বগি এবং নীচে ফ্রিজার","…Thích hợp cho người thường xuyên sử dụng rau củ.":"… যারা প্রায়ই সবজি ব্যবহার করেন তাদের জন্য উপযুক্ত।","2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ":"2. উপরে রেফ্রিজারেটর, মাঝখানে ফ্রিজার এবং নীচে সবজির বগি","…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.":"...যারা প্রায়ই হিমায়িত খাবার ব্যবহার করেন এবং প্রক্রিয়াজাত খাবার সংরক্ষণ করেন তাদের জন্য উপযুক্ত।","3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ":"3. উপরে ফ্রিজার, মাঝখানে রেফ্রিজারেটর এবং নীচে সবজির বগি","…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.":"...অনেক ধরনের এবং পরিমাণে পানীয় এবং মশলা সহ লোকেদের জন্য উপযুক্ত।","Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.":"সমস্ত নির্মাতার পণ্যের মডেল 1 আছে। বর্তমানে কোম্পানি B মডেল 2 তৈরি করে না, কোম্পানি C মডেল 3 তৈরি করে না।","Sự thuận tiện của ngăn chứa bên trong":"অভ্যন্তরীণ স্টোরেজ সুবিধা","Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng. Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt. Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.":"কোম্পানি A-এর পণ্যগুলিতে অন্যান্য নির্মাতার পণ্যগুলির তুলনায় বেশি তাক এবং পার্টিশন রয়েছে, তাই সেগুলি ব্যবহার করা সহজ। কোম্পানি C এর পণ্য একটি লিভারের সাহায্যে শেল্ফের উচ্চতা সামঞ্জস্য করতে পারে। তবে, অন্যান্য কোম্পানির তুলনায় পণ্যের ক্ষমতা তুলনামূলকভাবে কম।","Mobile View: Lướt trái phải để xem hết nội dung.":"মোবাইল ভিউ: সমস্ত সামগ্রী দেখতে বাম এবং ডানদিকে সোয়াইপ করুন৷","Kết Quả":"ফলাফল","Làm Lại":"আবার করুন","Đáp Án":"উত্তর"},"hiMap":{"仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách":"仕切り(विभाजन): एक वस्तु जैसे कि बोर्ड को अलग करने के लिए उपयोग किया जाता है","Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?":"प्रश्न 1: क्या निर्माता के आधार पर कोई अंतर है?","1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong":"1. ऊंचाई, भंडारण स्थान, आंतरिक अलमारियों की स्थिति","2. Chiều sâu, tiếng ồn, vị trí để đồ":"2. गहराई, शोर, भंडारण स्थान","3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong":"3. गहराई, भंडारण स्थान, आंतरिक अलमारियों की स्थिति","4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong":"4. गहराई, बिजली की खपत, भंडारण स्थान, आंतरिक अलमारियों की स्थिति","Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?":"प्रश्न 2: यदि आप अक्सर जमे हुए खाद्य पदार्थों का उपयोग करते हैं और रेफ्रिजरेटर को रसोई काउंटर के साथ रखना चाहते हैं, तो आपको किस निर्माता से रेफ्रिजरेटर खरीदना चाहिए?","1. Công ty A":"1. कंपनी ए","2. Công ty B":"2. कंपनी बी","3. Công ty C":"3. कंपनी सी","4. Công ty nào cũng được":"4. कोई भी कंपनी ठीक है","Dịch & Giải thích":"अनुवाद एवं व्याख्या","Đặc điểm":"विशेषता","Giải thích":"व्याख्या करना","Kích cỡ":"आकार","Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm. Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.":"अधिकांश निर्माताओं के उत्पाद 60 सेमी चौड़े और 179 सेमी ऊंचे होते हैं। गहराई अलग-अलग है, कंपनी ए और कंपनी बी की गहराई 65 सेमी है, दूसरी कंपनी की 70 सेमी है। 65 सेमी पतला प्रकार रेफ्रिजरेटर को रसोई शेल्फ या वॉशिंग शेल्फ के बगल में रखने के लिए उपयुक्त है।","Mức tiêu thụ điện":"बिजली की खपत","Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.":"खपत बहुत कम है, केवल 340 - 370 kWh/वर्ष। निर्माता दरवाजे के अंदर वार्षिक बिजली खपत प्रदर्शित करते हैं, कृपया पुष्टि करें।","Tiếng ồn":"शोर","Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.":"निर्माताओं के सभी उत्पाद 20dB पर हैं। कैबिनेट के स्थान के आधार पर, कैबिनेट की मोटर की आवाज़ दीवार या फर्श तक प्रसारित हो सकती है और गूंज सकती है, इसलिए नीचे रबर की परत लगाकर इसे संभालें।","Vị trí ngăn để rau, ngăn lạnh, ngăn đông":"सब्जी डिब्बे, रेफ्रिजरेटर डिब्बे, फ्रीजर डिब्बे का स्थान","Khác nhau tùy theo nhà sản xuất.":"निर्माता के अनुसार भिन्न होता है।","1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông":"1. ऊपर रेफ्रिजरेटर है, बीच में सब्जी का डिब्बा है, और नीचे फ्रीजर है","…Thích hợp cho người thường xuyên sử dụng rau củ.":"...उन लोगों के लिए उपयुक्त जो अक्सर सब्जियों का उपयोग करते हैं।","2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ":"2. ऊपर रेफ्रिजरेटर है, बीच में फ्रीजर है, और नीचे सब्जी का डिब्बा है","…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.":"...उन लोगों के लिए उपयुक्त जो अक्सर जमे हुए खाद्य पदार्थों का उपयोग करते हैं और प्रसंस्कृत खाद्य पदार्थों को संरक्षित करते हैं।","3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ":"3. ऊपर फ्रीजर है, बीच में रेफ्रिजरेटर है और नीचे सब्जी का डिब्बा है","…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.":"...कई प्रकार और मात्रा में पेय और मसालों वाले लोगों के लिए उपयुक्त।","Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.":"सभी निर्माताओं के पास उत्पाद मॉडल 1 है। वर्तमान में कंपनी बी मॉडल 2 का उत्पादन नहीं करती है, कंपनी सी मॉडल 3 का उत्पादन नहीं करती है।","Sự thuận tiện của ngăn chứa bên trong":"आंतरिक भंडारण की सुविधा","Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng. Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt. Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.":"कंपनी ए के उत्पादों में अन्य निर्माताओं की तुलना में अधिक अलमारियाँ और विभाजन हैं, इसलिए उनका उपयोग करना आसान है। कंपनी सी के उत्पाद लीवर के साथ शेल्फ की ऊंचाई को समायोजित कर सकते हैं। हालाँकि, अन्य कंपनियों की तुलना में उत्पाद क्षमता अपेक्षाकृत कम है।","Mobile View: Lướt trái phải để xem hết nội dung.":"मोबाइल दृश्य: सभी सामग्री देखने के लिए बाएँ और दाएँ स्वाइप करें।","Kết Quả":"परिणाम","Làm Lại":"फिर से करना","Đáp Án":"उत्तर"},"thMap":{"仕切り(Vách ngăn): đồ vật như tấm ván dùng để ngăn cách":"仕切り (ฉากกั้น): วัตถุเช่นกระดานที่ใช้แยกออกจากกัน","Câu hỏi 1: Có sự khác nhau ở điểm nào tùy vào nhà sản xuất?":"คำถามที่ 1: มีความแตกต่างหรือไม่ขึ้นอยู่กับผู้ผลิต?","1. Độ cao, vị trí để đồ, tình trạng các kệ bên trong":"1. ความสูง สถานที่จัดเก็บ สภาพของชั้นวางภายใน","2. Chiều sâu, tiếng ồn, vị trí để đồ":"2.ความลึก เสียง สถานที่จัดเก็บ","3. Chiều sâu, vị trí để đồ, tình trạng các kệ bên trong":"3. ความลึก สถานที่จัดเก็บ สภาพของชั้นวางภายใน","4. Chiều sâu, mức tiêu thụ điện, vị trí để đồ, tình trạng các kệ bên trong":"4. ความลึก การใช้พลังงาน สถานที่จัดเก็บ สภาพของชั้นวางภายใน","Câu hỏi 2: Trong trường hợp hay sử dụng thực phẩm đông lạnh và muốn đặt tủ lạnh xếp thẳng hàng với bàn làm bếp của nhà bếp thì nên mua tủ lạnh của nhà sản xuất nào?":"คำถามที่ 2 กรณีที่ใช้อาหารแช่แข็งบ่อยๆ และต้องการวางตู้เย็นแนวเดียวกับเคาน์เตอร์ครัว ควรซื้อตู้เย็นจากผู้ผลิตรายใด","1. Công ty A":"1. บริษัท ก","2. Công ty B":"2. บริษัท บี","3. Công ty C":"3. บริษัท ค","4. Công ty nào cũng được":"4.บริษัทไหนก็ได้","Dịch & Giải thích":"การแปลและการตีความ","Đặc điểm":"ลักษณะเฉพาะ","Giải thích":"อธิบาย","Kích cỡ":"ขนาด","Sản phẩm của hầu hết các nhà sản xuất có kích cỡ rộng 60cm, cao 179cm. Chiều sâu có sự khác biệt, của công ty A và công ty B là 65cm, của công ty khác là 70cm. Loại mỏng 65cm thích hợp khi để tủ lạnh cạnh kệ làm bếp hoặc kệ rửa.":"สินค้าจากผู้ผลิตส่วนใหญ่มีขนาดกว้าง 60 ซม. สูง 179 ซม. ความลึกนั้นแตกต่างกัน ความลึกของบริษัท A และบริษัท B คือ 65 ซม. ส่วนความลึกของบริษัทอื่นคือ 70 ซม. แบบบางขนาด 65 ซม. เหมาะสำหรับวางตู้เย็นติดกับชั้นวางของในครัวหรือชั้นวางซักผ้า","Mức tiêu thụ điện":"ปริมาณการใช้ไฟฟ้า","Mức tiêu thụ rất ít, chỉ 340 - 370 kWh / năm. Các nhà sản xuất đều hiển thị mức tiêu thụ điện theo năm ở bên trong cánh cửa, vui lòng xác nhận.":"ปริมาณการใช้น้อยมากเพียง 340 - 370 kWh/ปี ผู้ผลิตแสดงปริมาณการใช้ไฟฟ้าต่อปีที่ด้านในประตู โปรดยืนยัน","Tiếng ồn":"เสียงรบกวน","Sản phẩm của các nhà sản xuất đều ở mức 20dB. Tùy vào vị trí đặt tủ mà âm thanh mô tơ của tủ có thể truyền sang tường hay sàn nhà rồi vang vọng, vậy nên hãy xử lý bằng cách lót lớp cao su ở bên dưới.":"ผลิตภัณฑ์ของผู้ผลิตทั้งหมดอยู่ที่ 20dB เสียงของมอเตอร์ของตู้สามารถส่งผ่านไปยังผนังหรือพื้นและเสียงก้องได้ ทั้งนี้ขึ้นอยู่กับตำแหน่งของตู้ ดังนั้นให้จัดการโดยบุด้านล่างด้วยชั้นยาง","Vị trí ngăn để rau, ngăn lạnh, ngăn đông":"ตำแหน่งของช่องแช่ผัก ช่องแช่เย็น ช่องแช่แข็ง","Khác nhau tùy theo nhà sản xuất.":"แตกต่างกันไปตามผู้ผลิต","1. Phía trên là ngăn lạnh, ở giữa là ngăn để rau củ, phía dưới là ngăn đông":"1.ด้านบนเป็นตู้เย็น ตรงกลางเป็นช่องแช่ผัก และด้านล่างเป็นช่องแช่แข็ง","…Thích hợp cho người thường xuyên sử dụng rau củ.":"…เหมาะสำหรับคนชอบทานผักบ่อยๆ","2. Phía trên là ngăn lạnh, ở giữa là ngăn đông, phía dưới là ngăn để rau củ":"2.ด้านบนเป็นตู้เย็น ตรงกลางเป็นช่องแช่แข็ง และด้านล่างเป็นช่องแช่ผัก","…Thích hợp cho người thường xuyên sử dụng thực phẩm đông lạnh, bảo quản thức ăn đã chế biến.":"...เหมาะสำหรับผู้ที่มักใช้อาหารแช่แข็งและถนอมอาหารแปรรูปบ่อยๆ","3. Phía trên là ngăn đông, ở giữa là ngăn lạnh, phía dưới là ngăn để rau củ":"3.ด้านบนเป็นช่องแช่แข็ง ตรงกลางเป็นตู้เย็น และด้านล่างเป็นช่องแช่ผัก","…Thích hợp cho người có đồ uống, gia vị nhiều về chủng loại và số lượng.":"...เหมาะสำหรับผู้ที่มีเครื่องดื่มและเครื่องเทศหลายประเภทและปริมาณ","Các nhà sản xuất đều có mẫu sản phẩm 1. Hiện tại công ty B không sản xuất mẫu 2, công ty C không sản xuất mẫu 3.":"ผู้ผลิตทุกรายมีผลิตภัณฑ์รุ่น 1 ปัจจุบันบริษัท B ไม่ได้ผลิตรุ่น 2 บริษัท C ไม่มีผลิตรุ่น 3","Sự thuận tiện của ngăn chứa bên trong":"ความสะดวกสบายในการจัดเก็บข้อมูลภายใน","Sản phẩm của công ty A có nhiều kệ vách ngăn hơn so với của các nhà sản xuất khác nên dễ sử dụng. Sản phẩm của công ty C có thể điều chỉnh chiều cao của kệ bằng cần gạt. Tuy nhiên dung tích sản phẩm tương đối nhỏ khi so với các công ty khác.":"สินค้าของบริษัท A มีชั้นวางและฉากกั้นมากกว่าผู้ผลิตรายอื่น จึงใช้งานง่าย สินค้าของบริษัท C สามารถปรับความสูงของชั้นวางได้ด้วยคันโยก อย่างไรก็ตาม กำลังการผลิตสินค้าค่อนข้างน้อยเมื่อเทียบกับบริษัทอื่นๆ","Mobile View: Lướt trái phải để xem hết nội dung.":"มุมมองบนมือถือ: ปัดไปทางซ้ายและขวาเพื่อดูเนื้อหาทั้งหมด","Kết Quả":"ผลลัพธ์","Làm Lại":"ทำซ้ำ","Đáp Án":"คำตอบ"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<script src="speed-quiz.js"></script>
+<link rel="stylesheet" href="style.css">

@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">市</div></div><div class="kcell k-hv"><span class="vi-tr">thị</span></div><div class="kcell k-read"><div class="on">シ</div><div>いち</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>市場<rp>（</rp><rt>いちば</rt><rp>）</rp></ruby><div class="sentence"><ruby>市場<rp>（</rp><rt>いちば</rt><rp>）</rp></ruby>で<ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>を<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>う</div></div><div class="vi"><span class="vi-tr">mua hoa ở chợ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">世</div></div><div class="kcell k-hv"><span class="vi-tr">thế</span></div><div class="kcell k-read"><div class="on">セ／セイ</div><div>よ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>世<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby><div class="sentence"><ruby>世<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>の<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>き</div></div><div class="vi"><span class="vi-tr">động thái trong xã hội</span> </div></div><div class="kitem"><div class="jp"><ruby>二世<rp>（</rp><rt>にせい</rt><rp>）</rp></ruby><div class="sentence"><ruby>二世<rp>（</rp><rt>にせい</rt><rp>）</rp></ruby>の<ruby>政治家<rp>（</rp><rt>せいじか</rt><rp>）</rp></ruby></div></div><div class="vi"><span class="vi-tr">chính trị gia đời thứ hai</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">半</div></div><div class="kcell k-hv"><span class="vi-tr">bán</span></div><div class="kcell k-read"><div class="on">ハン</div><div>なかーば</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>半<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>ば<div class="sentence"><ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>の<ruby>半<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>ば</div></div><div class="vi"><span class="vi-tr">giữa tuần</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">元</div></div><div class="kcell k-hv"><span class="vi-tr">nguyên</span></div><div class="kcell k-read"><div class="on">ゲン</div><div>もと</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>元<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>～<div class="sentence"><ruby>元大統領<rp>（</rp><rt>もとだいとうりょう</rt><rp>）</rp></ruby></div></div><div class="vi"><span class="vi-tr">cựu tổng thống</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">共</div></div><div class="kcell k-hv"><span class="vi-tr">cộng</span></div><div class="kcell k-read"><div class="on">キョウ</div><div>とも</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>共<rp>（</rp><rt>とも</rt><rp>）</rp></ruby>に<div class="sentence"><ruby>父<rp>（</rp><rt>ちち</rt><rp>）</rp></ruby>と<ruby>共<rp>（</rp><rt>とも</rt><rp>）</rp></ruby>に<ruby>働<rp>（</rp><rt>はたら</rt><rp>）</rp></ruby>いている</div></div><div class="vi"><span class="vi-tr">làm việc cùng cha</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">全</div></div><div class="kcell k-hv"><span class="vi-tr">toàn</span></div><div class="kcell k-read"><div class="on">ｾﾞﾝ</div><div>まったーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>全<rp>（</rp><rt>まった</rt><rp>）</rp></ruby>く<div class="sentence"><ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>が<ruby>全<rp>（</rp><rt>まった</rt><rp>）</rp></ruby>くない</div></div><div class="vi"><span class="vi-tr">hoàn toàn không có thời gian</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">幸</div></div><div class="kcell k-hv"><span class="vi-tr">hạnh</span></div><div class="kcell k-read"><div class="on">コウ</div><div>さいわーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>幸<rp>（</rp><rt>さいわ</rt><rp>）</rp></ruby>い<div class="sentence">お<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>に<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>てて<ruby>幸<rp>（</rp><rt>さいわ</rt><rp>）</rp></ruby>いです</div></div><div class="vi"><span class="vi-tr">thật may giúp ích được</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">夜</div></div><div class="kcell k-hv"><span class="vi-tr">dạ</span></div><div class="kcell k-read"><div class="on">ヤ</div><div>よる／よ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>夜中<rp>（</rp><rt>よなか</rt><rp>）</rp></ruby><div class="sentence"><ruby>夜中<rp>（</rp><rt>よなか</rt><rp>）</rp></ruby>にさわぐ</div></div><div class="vi"><span class="vi-tr">ầm ĩ lúc nửa đêm</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">飯</div></div><div class="kcell k-hv"><span class="vi-tr">phạn</span></div><div class="kcell k-read"><div class="on">ハン</div><div>めし</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>昼飯<rp>（</rp><rt>ひるめし</rt><rp>）</rp></ruby><div class="sentence"><ruby>昼飯<rp>（</rp><rt>ひるめし</rt><rp>）</rp></ruby>・<ruby>飯<rp>（</rp><rt>めし</rt><rp>）</rp></ruby>を<ruby>炊<rp>（</rp><rt>た</rt><rp>）</rp></ruby>く</div></div><div class="vi"><span class="vi-tr">cơm trưa, nấu cơm</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">便</div></div><div class="kcell k-hv"><span class="vi-tr">tiện</span></div><div class="kcell k-read"><div class="on">ベン／ビン</div><div>たよーり</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>便<rp>（</rp><rt>たよ</rt><rp>）</rp></ruby>り<div class="sentence"><ruby>娘<rp>（</rp><rt>むすめ</rt><rp>）</rp></ruby>からの<ruby>便<rp>（</rp><rt>たよ</rt><rp>）</rp></ruby>り</div></div><div class="vi"><span class="vi-tr">thư từ con gái</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">旅</div></div><div class="kcell k-hv"><span class="vi-tr">lữ</span></div><div class="kcell k-read"><div class="on">ﾘｮ</div><div>たび</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>旅<rp>（</rp><rt>たび</rt><rp>）</rp></ruby>（する）<div class="sentence"><ruby>旅<rp>（</rp><rt>たび</rt><rp>）</rp></ruby>に<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>る</div></div><div class="vi"><span class="vi-tr">đi du lịch</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">宿</div></div><div class="kcell k-hv"><span class="vi-tr">túc</span></div><div class="kcell k-read"><div class="on">シュク</div><div>やど</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>宿<rp>（</rp><rt>やど</rt><rp>）</rp></ruby><div class="sentence"><ruby>宿<rp>（</rp><rt>やど</rt><rp>）</rp></ruby>をとる</div></div><div class="vi"><span class="vi-tr">thuê phòng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">帯</div></div><div class="kcell k-hv"><span class="vi-tr">đới</span></div><div class="kcell k-read"><div class="on">タイ</div><div>おび</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>帯<rp>（</rp><rt>おび</rt><rp>）</rp></ruby><div class="sentence"><ruby>着物<rp>（</rp><rt>きもの</rt><rp>）</rp></ruby>の<ruby>帯<rp>（</rp><rt>おび</rt><rp>）</rp></ruby></div></div><div class="vi"><span class="vi-tr">đai áo kimono</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">都</div></div><div class="kcell k-hv"><span class="vi-tr">đô</span></div><div class="kcell k-read"><div class="on">ト</div><div>みやこ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>都<rp>（</rp><rt>みやこ</rt><rp>）</rp></ruby><div class="sentence"><ruby>古<rp>（</rp><rt>ふる</rt><rp>）</rp></ruby>い<ruby>都<rp>（</rp><rt>みやこ</rt><rp>）</rp></ruby></div></div><div class="vi"><span class="vi-tr">kinh đô cũ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">野</div></div><div class="kcell k-hv"><span class="vi-tr">dã</span></div><div class="kcell k-read"><div class="on">ヤ</div><div>の</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>野原<rp>（</rp><rt>のはら</rt><rp>）</rp></ruby><div class="sentence"><ruby>野原<rp>（</rp><rt>のはら</rt><rp>）</rp></ruby>に<ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>が<ruby>咲<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>いている</div></div><div class="vi"><span class="vi-tr">hoa nở trên đồng cỏ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">家</div></div><div class="kcell k-hv">gia</div><div class="kcell k-read"><div class="on">カ</div><div>いえ／や</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>家賃<rp>（</rp><rt>やちん</rt><rp>）</rp></ruby><div class="sentence"><ruby>家賃<rp>（</rp><rt>やちん</rt><rp>）</rp></ruby>を<ruby>大家<rp>（</rp><rt>おおや</rt><rp>）</rp></ruby>に<ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>う</div></div><div class="vi"><span class="vi-tr">trả tiền thuê nhà cho chủ nhà</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>昼<rp>（</rp><rt>ひる</rt><rp>）</rp></ruby>ごはんのことを<u><ruby>昼飯<rp>（</rp><rt>ひるめし</rt><rp>）</rp></ruby></u>ということがある。</td><td>a. ちゅうはん</td><td>b. ひるめし</td></tr><tr><td>2. <ruby>来月<rp>（</rp><rt>らいげつ</rt><rp>）</rp></ruby>から<u><ruby>家賃<rp>（</rp><rt>やちん</rt><rp>）</rp></ruby></u>が<ruby>値上<rp>（</rp><rt>ねあ</rt><rp>）</rp></ruby>がりするそうだ。</td><td>a. かちん</td><td>b. やちん</td></tr><tr><td>3. この<ruby>自然公園<rp>（</rp><rt>しぜんこうえん</rt><rp>）</rp></ruby>には<ruby>広<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>い<u><ruby>野原<rp>（</rp><rt>のはら</rt><rp>）</rp></ruby></u>があります。</td><td>a. のはら</td><td>b. やげん</td></tr><tr><td>4. <ruby>息子<rp>（</rp><rt>むすこ</rt><rp>）</rp></ruby>からしばらく<u><ruby>便<rp>（</rp><rt>たよ</rt><rp>）</rp></ruby>り</u>がない。</td><td>a. べんり</td><td>b. たより</td></tr><tr><td>5. <ruby>紙<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>は２<u><ruby>世紀<rp>（</rp><rt>せいき</rt><rp>）</rp></ruby></u>ごろに<ruby>発明<rp>（</rp><rt>はつめい</rt><rp>）</rp></ruby>されたという。</td><td>a. せいき</td><td>b. せき</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>昼<rp>（</rp><rt>ひる</rt><rp>）</rp></ruby>ごはんのことを<u><ruby>昼飯<rp>（</rp><rt>ひるめし</rt><rp>）</rp></ruby></u>ということがある。</td><td><b>ひるめし</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>来月<rp>（</rp><rt>らいげつ</rt><rp>）</rp></ruby>から<u><ruby>家賃<rp>（</rp><rt>やちん</rt><rp>）</rp></ruby></u>が<ruby>値上<rp>（</rp><rt>ねあ</rt><rp>）</rp></ruby>がりするそうだ。</td><td><b>やちん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<ruby>自然公園<rp>（</rp><rt>しぜんこうえん</rt><rp>）</rp></ruby>には<ruby>広<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>い<u><ruby>野原<rp>（</rp><rt>のはら</rt><rp>）</rp></ruby></u>があります。</td><td><b>のはら</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>息子<rp>（</rp><rt>むすこ</rt><rp>）</rp></ruby>からしばらく<u><ruby>便<rp>（</rp><rt>たよ</rt><rp>）</rp></ruby>り</u>がない。</td><td><b>たより</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>紙<rp>（</rp><rt>かみ</rt><rp>）</rp></ruby>は２<u><ruby>世紀<rp>（</rp><rt>せいき</rt><rp>）</rp></ruby></u>ごろに<ruby>発明<rp>（</rp><rt>はつめい</rt><rp>）</rp></ruby>されたという。</td><td><b>せいき</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>もと</u><ruby>大臣<rp>（</rp><rt>だいじん</rt><rp>）</rp></ruby>が<ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>に<ruby>出席<rp>（</rp><rt>しゅっせき</rt><rp>）</rp></ruby>した。</td><td>a. 前</td><td>b. 基</td><td>c. 元</td></tr><tr><td>2. <ruby>長年<rp>（</rp><rt>ながねん</rt><rp>）</rp></ruby>、<ruby>仲間<rp>（</rp><rt>なかま</rt><rp>）</rp></ruby>と<u>とも</u>にがんばってきました。</td><td>a. 友</td><td>b. 共</td><td>c. 供</td></tr><tr><td>3. <ruby>喜<rp>（</rp><rt>よろこ</rt><rp>）</rp></ruby>んでいただけて、<u>さいわ</u>いです。</td><td>a. 嬉</td><td>b. 幸</td><td>c. 辛</td></tr><tr><td>4. <ruby>家<rp>（</rp><rt>いえ</rt><rp>）</rp></ruby>や<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>を<ruby>貸<rp>（</rp><rt>か</rt><rp>）</rp></ruby>している<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>を<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby><u>や</u>という。</td><td>a. 家</td><td>b. 屋</td><td>c. 野</td></tr><tr><td>5. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>は、<ruby>月<rp>（</rp><rt>つき</rt><rp>）</rp></ruby>の<u>なか</u>ばが<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>忙<rp>（</rp><rt>いそが</rt><rp>）</rp></ruby>しい。</td><td>a. 仲</td><td>b. 中</td><td>c. 半</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>もと</u><ruby>大臣<rp>（</rp><rt>だいじん</rt><rp>）</rp></ruby>が<ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>に<ruby>出席<rp>（</rp><rt>しゅっせき</rt><rp>）</rp></ruby>した。</td><td><b>元</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>長年<rp>（</rp><rt>ながねん</rt><rp>）</rp></ruby>、<ruby>仲間<rp>（</rp><rt>なかま</rt><rp>）</rp></ruby>と<u>とも</u>にがんばってきました。</td><td><b>共</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>喜<rp>（</rp><rt>よろこ</rt><rp>）</rp></ruby>んでいただけて、<u>さいわ</u>いです。</td><td><b>幸</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>家<rp>（</rp><rt>いえ</rt><rp>）</rp></ruby>や<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>を<ruby>貸<rp>（</rp><rt>か</rt><rp>）</rp></ruby>している<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>を<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby><u>や</u>という。</td><td><b>家</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>は、<ruby>月<rp>（</rp><rt>つき</rt><rp>）</rp></ruby>の<u>なか</u>ばが<ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby><ruby>忙<rp>（</rp><rt>いそが</rt><rp>）</rp></ruby>しい。</td><td><b>半</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>昔<rp>（</rp><rt>むかし</rt><rp>）</rp></ruby>は<ruby>京都<rp>（</rp><rt>きょうと</rt><rp>）</rp></ruby>が（　　　）だった。</td><td>a. 帯</td><td>b. 都</td></tr><tr><td>2. <ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>をするようになって、（　　　）の<ruby>厳<rp>（</rp><rt>きび</rt><rp>）</rp></ruby>しさを<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>った。</td><td>a. 世の中</td><td>b. 宿</td></tr><tr><td>3. この（　　　）は、<ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby>でよく<ruby>紹介<rp>（</rp><rt>しょうかい</rt><rp>）</rp></ruby>されている。</td><td>a. 市場</td><td>b. 夜中</td></tr><tr><td>4. ときどき、<ruby>急<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby>に（　　　）に<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>たくなる。</td><td>a. 便り</td><td>b. 旅</td></tr><tr><td>5. それについては、<ruby>残念<rp>（</rp><rt>ざんねん</rt><rp>）</rp></ruby>ながら（　　　）<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>せない。</td><td>a. 幸い</td><td>b. 全く</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>昔<rp>（</rp><rt>むかし</rt><rp>）</rp></ruby>は<ruby>京都<rp>（</rp><rt>きょうと</rt><rp>）</rp></ruby>が（　　　）だった。</td><td><b>都</b> (みやこ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>をするようになって、（　　　）の<ruby>厳<rp>（</rp><rt>きび</rt><rp>）</rp></ruby>しさを<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>った。</td><td><b>世の中</b> (よのなか)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. この（　　　）は、<ruby>雑誌<rp>（</rp><rt>ざっし</rt><rp>）</rp></ruby>でよく<ruby>紹介<rp>（</rp><rt>しょうかい</rt><rp>）</rp></ruby>されている。</td><td><b>市場</b> (いちば)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. ときどき、<ruby>急<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby>に（　　　）に<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>たくなる。</td><td><b>旅</b> (たび)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. それについては、<ruby>残念<rp>（</rp><rt>ざんねん</rt><rp>）</rp></ruby>ながら（　　　）<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>せない。</td><td><b>全く</b> (まったく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-10-5"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-10-bai-5.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","thị":"town","mua hoa ở chợ":"buy flowers at the market","thế":"position","động thái trong xã hội":"movements in society","chính trị gia đời thứ hai":"Second generation politician","bán":"sell","giữa tuần":"midweek","nguyên":"original","cựu tổng thống":"former president","cộng":"add","làm việc cùng cha":"work with father","toàn":"full","hoàn toàn không có thời gian":"Absolutely no time","hạnh":"happiness","thật may giúp ích được":"Luckily it was helpful","dạ":"Yes","ầm ĩ lúc nửa đêm":"noisy at midnight","phạn":"Sanskrit","cơm trưa, nấu cơm":"lunch, cook rice","tiện":"convenient","thư từ con gái":"letter from daughter","lữ":"travel","đi du lịch":"traveling","túc":"complete","thuê phòng":"rent a room","đới":"zone","đai áo kimono":"kimono belt","đô":"dollar","kinh đô cũ":"old capital","dã":"wild","hoa nở trên đồng cỏ":"flowers bloom in the meadow","trả tiền thuê nhà cho chủ nhà":"pay rent to the landlord","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","thị":"kota","mua hoa ở chợ":"membeli bunga di pasar","thế":"posisi","động thái trong xã hội":"gerakan-gerakan di masyarakat","chính trị gia đời thứ hai":"Politisi generasi kedua","bán":"menjual","giữa tuần":"pertengahan minggu","nguyên":"asli","cựu tổng thống":"mantan presiden","cộng":"menambahkan","làm việc cùng cha":"bekerja dengan ayah","toàn":"penuh","hoàn toàn không có thời gian":"Sama sekali tidak ada waktu","hạnh":"kebahagiaan","thật may giúp ích được":"Untungnya itu membantu","dạ":"Ya","ầm ĩ lúc nửa đêm":"berisik di tengah malam","phạn":"Sansekerta","cơm trưa, nấu cơm":"makan siang, masak nasi","tiện":"nyaman","thư từ con gái":"surat dari putri","lữ":"bepergian","đi du lịch":"bepergian","túc":"menyelesaikan","thuê phòng":"menyewa kamar","đới":"daerah","đai áo kimono":"sabuk kimono","đô":"dolar","kinh đô cũ":"modal lama","dã":"liar","hoa nở trên đồng cỏ":"bunga mekar di padang rumput","trả tiền thuê nhà cho chủ nhà":"membayar sewa kepada pemiliknya","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","thị":"सहर","mua hoa ở chợ":"बजारमा फूलहरू किन्नुहोस्","thế":"स्थिति","động thái trong xã hội":"समाजमा आन्दोलनहरू","chính trị gia đời thứ hai":"दोस्रो पुस्ताको राजनीतिज्ञ","bán":"बेच्नुहोस्","giữa tuần":"मध्य हप्ता","nguyên":"मौलिक","cựu tổng thống":"पूर्व राष्ट्रपति","cộng":"थप्नुहोस्","làm việc cùng cha":"बुबा संग काम","toàn":"पूर्ण","hoàn toàn không có thời gian":"बिल्कुल समय छैन","hạnh":"खुशी","thật may giúp ích được":"सौभाग्य देखि यो उपयोगी थियो","dạ":"हो","ầm ĩ lúc nửa đêm":"मध्यरातमा कोलाहल","phạn":"संस्कृत","cơm trưa, nấu cơm":"लंच, भात पकाउनुहोस्","tiện":"सुविधाजनक","thư từ con gái":"छोरीको पत्र","lữ":"यात्रा","đi du lịch":"यात्रा गर्दै","túc":"पूरा","thuê phòng":"एउटा कोठा भाडामा लिनुहोस्","đới":"क्षेत्र","đai áo kimono":"किमोनो बेल्ट","đô":"डलर","kinh đô cũ":"पुरानो राजधानी","dã":"जंगली","hoa nở trên đồng cỏ":"घाँसे मैदानमा फूलहरू फुल्छन्","trả tiền thuê nhà cho chủ nhà":"घरधनीलाई भाडा तिर्नुहोस्","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","thị":"မြို့","mua hoa ở chợ":"ဈေးမှာ ပန်းတွေဝယ်တယ်။","thế":"ရာထူး","động thái trong xã hội":"လူ့အဖွဲ့အစည်းအတွင်း လှုပ်ရှားမှုများ","chính trị gia đời thứ hai":"ဒုတိယမျိုးဆက် နိုင်ငံရေးသမား","bán":"ရောင်း","giữa tuần":"သီတင်းပတ်လယ်","nguyên":"မူရင်း","cựu tổng thống":"သမ္မတဟောင်း","cộng":"ထည့်ပါ။","làm việc cùng cha":"ဖခင်နှင့်အတူအလုပ်လုပ်","toàn":"အပြည့်","hoàn toàn không có thời gian":"လုံးဝအချိန်မရှိဘူး။","hạnh":"ပျော်ရွှင်မှု","thật may giúp ích được":"ကံကောင်းစွာနဲ့ပဲ အထောက်အကူဖြစ်ခဲ့ပါတယ်။","dạ":"ဟုတ်ကဲ့","ầm ĩ lúc nửa đêm":"ညသန်းခေါင်မှာ ဆူညံနေတယ်။","phạn":"သက္ကတ","cơm trưa, nấu cơm":"နေ့လယ်စာ၊ ထမင်းချက်","tiện":"အဆင်ပြေတယ်။","thư từ con gái":"သမီးထံမှစာ","lữ":"ခရီးသွား","đi du lịch":"ခရီးသွား","túc":"ပြီးပါပြီ။","thuê phòng":"အခန်းငှား","đới":"ဇုန်","đai áo kimono":"ကီမိုနိုခါးပတ်","đô":"ဒေါ်လာ","kinh đô cũ":"မြို့တော်ဟောင်း","dã":"တော","hoa nở trên đồng cỏ":"မြက်ခင်းပြင်တွင် ပန်းများပွင့်သည်။","trả tiền thuê nhà cho chủ nhà":"အိမ်ရှင်ကို ငှားပေးတယ်။","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","thị":"শহর","mua hoa ở chợ":"বাজারে ফুল কিনুন","thế":"অবস্থান","động thái trong xã hội":"সমাজে আন্দোলন","chính trị gia đời thứ hai":"দ্বিতীয় প্রজন্মের রাজনীতিবিদ","bán":"বিক্রি","giữa tuần":"মধ্য সপ্তাহ","nguyên":"মূল","cựu tổng thống":"সাবেক রাষ্ট্রপতি","cộng":"যোগ করুন","làm việc cùng cha":"বাবার সাথে কাজ","toàn":"পূর্ণ","hoàn toàn không có thời gian":"একদম সময় নেই","hạnh":"সুখ","thật may giúp ích được":"ভাগ্যক্রমে এটা সহায়ক ছিল","dạ":"হ্যাঁ","ầm ĩ lúc nửa đêm":"মধ্যরাতে শোরগোল","phạn":"সংস্কৃত","cơm trưa, nấu cơm":"দুপুরের খাবার, ভাত রান্না","tiện":"সুবিধাজনক","thư từ con gái":"মেয়ের চিঠি","lữ":"ভ্রমণ","đi du lịch":"ভ্রমণ","túc":"সম্পূর্ণ","thuê phòng":"একটি রুম ভাড়া","đới":"অঞ্চল","đai áo kimono":"কিমোনো বেল্ট","đô":"ডলার","kinh đô cũ":"পুরাতন রাজধানী","dã":"বন্য","hoa nở trên đồng cỏ":"তৃণভূমিতে ফুল ফোটে","trả tiền thuê nhà cho chủ nhà":"বাড়িওয়ালাকে ভাড়া দিন","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","thị":"शहर","mua hoa ở chợ":"बाज़ार से फूल ख़रीदें","thế":"पद","động thái trong xã hội":"समाज में आंदोलन","chính trị gia đời thứ hai":"दूसरी पीढ़ी के राजनेता","bán":"बेचना","giữa tuần":"मध्य सप्ताह","nguyên":"मूल","cựu tổng thống":"पूर्व राष्ट्रपति","cộng":"जोड़ना","làm việc cùng cha":"पिता के साथ काम करें","toàn":"भरा हुआ","hoàn toàn không có thời gian":"बिल्कुल समय नहीं है","hạnh":"ख़ुशी","thật may giúp ích được":"सौभाग्य से यह मददगार था","dạ":"हाँ","ầm ĩ lúc nửa đêm":"आधी रात को शोर","phạn":"संस्कृत","cơm trưa, nấu cơm":"दोपहर का खाना, चावल पकाना","tiện":"सुविधाजनक","thư từ con gái":"बेटी का पत्र","lữ":"यात्रा","đi du lịch":"यात्रा का","túc":"पूरा","thuê phòng":"एक कमरा किराए पर लें","đới":"क्षेत्र","đai áo kimono":"किमोनो बेल्ट","đô":"डॉलर","kinh đô cũ":"पुरानी राजधानी","dã":"जंगली","hoa nở trên đồng cỏ":"घास के मैदान में फूल खिलते हैं","trả tiền thuê nhà cho chủ nhà":"मकान मालिक को किराया देना","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","thị":"เมือง","mua hoa ở chợ":"ซื้อดอกไม้ที่ตลาด","thế":"ตำแหน่ง","động thái trong xã hội":"ความเคลื่อนไหวในสังคม","chính trị gia đời thứ hai":"นักการเมืองรุ่นที่สอง","bán":"ขาย","giữa tuần":"กลางสัปดาห์","nguyên":"ต้นฉบับ","cựu tổng thống":"อดีตประธานาธิบดี","cộng":"เพิ่ม","làm việc cùng cha":"ทำงานร่วมกับพ่อ","toàn":"เต็ม","hoàn toàn không có thời gian":"ไม่มีเวลาอย่างแน่นอน","hạnh":"ความสุข","thật may giúp ích được":"โชคดีที่มันมีประโยชน์","dạ":"ใช่","ầm ĩ lúc nửa đêm":"มีเสียงดังตอนเที่ยงคืน","phạn":"ภาษาสันสกฤต","cơm trưa, nấu cơm":"เที่ยง หุงข้าว","tiện":"สะดวก","thư từ con gái":"จดหมายจากลูกสาว","lữ":"การท่องเที่ยว","đi du lịch":"การเดินทาง","túc":"สมบูรณ์","thuê phòng":"เช่าห้อง","đới":"โซน","đai áo kimono":"เข็มขัดชุดกิโมโน","đô":"ดอลลาร์","kinh đô cũ":"เมืองหลวงเก่า","dã":"ป่า","hoa nở trên đồng cỏ":"ดอกไม้บานในทุ่งหญ้า","trả tiền thuê nhà cho chủ nhà":"จ่ายค่าเช่าให้กับเจ้าของบ้าน","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

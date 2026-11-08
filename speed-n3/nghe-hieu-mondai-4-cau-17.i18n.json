@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Tại hội trường buổi hòa nhạc, người đang đội mũ lớn đang ngồi phía trước bạn. Thì sẽ nói gì?": "At the concert hall, the person wearing the big hat is sitting in front of you. So what will you say?",
+    "Xin lỗi, mũ làm tôi không thấy rõ phía trước.....": "Sorry, the hat makes it hard for me to see the front clearly....."
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Tại hội trường buổi hòa nhạc, người đang đội mũ lớn đang ngồi phía trước bạn. Thì sẽ nói gì?": "Jika Anda ingin melakukan hal ini, Anda dapat menggunakan aplikasi ini untuk melakukan hal yang sama. Jadi apa yang akan kamu katakan?",
+    "Xin lỗi, mũ làm tôi không thấy rõ phía trước.....": "Maaf, topinya membuatku sulit melihat bagian depan dengan jelas....."
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Tại hội trường buổi hòa nhạc, người đang đội mũ lớn đang ngồi phía trước bạn. Thì sẽ nói gì?": "कन्सर्ट हलमा, ठूलो टोपी लगाएको व्यक्ति तपाईंको अगाडि बसिरहेको छ। त्यसोभए के भन्नुहुन्छ?",
+    "Xin lỗi, mũ làm tôi không thấy rõ phía trước.....": "माफ गर्नुहोस्, टोपीले मलाई अगाडि स्पष्ट रूपमा हेर्न गाह्रो बनाउँछ ....."
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Tại hội trường buổi hòa nhạc, người đang đội mũ lớn đang ngồi phía trước bạn. Thì sẽ nói gì?": "ပွဲရုံမှာ ဦးထုပ်ကြီးကြီး ဆောင်းထားသူက မင်းရှေ့မှာ ထိုင်နေတယ်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Xin lỗi, mũ làm tôi không thấy rõ phía trước.....": "တောင်းပန်ပါတယ် ဦးထုပ်က ရှေ့ကို ရှင်းရှင်းလင်းလင်းမြင်ရခက်စေတယ်....."
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Tại hội trường buổi hòa nhạc, người đang đội mũ lớn đang ngồi phía trước bạn. Thì sẽ nói gì?": "কনসার্ট হলে, বড় টুপি পরা ব্যক্তিটি আপনার সামনে বসে আছে। তাহলে কি বলবেন?",
+    "Xin lỗi, mũ làm tôi không thấy rõ phía trước.....": "দুঃখিত, টুপিটি আমার জন্য সামনে পরিষ্কারভাবে দেখতে কঠিন করে তোলে....."
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Tại hội trường buổi hòa nhạc, người đang đội mũ lớn đang ngồi phía trước bạn. Thì sẽ nói gì?": "कॉन्सर्ट हॉल में आपके सामने बड़ी टोपी पहने व्यक्ति बैठा है. तो आप क्या कहेंगे?",
+    "Xin lỗi, mũ làm tôi không thấy rõ phía trước.....": "क्षमा करें, टोपी के कारण मुझे सामने का दृश्य स्पष्ट रूप से देखने में कठिनाई होती है..."
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Tại hội trường buổi hòa nhạc, người đang đội mũ lớn đang ngồi phía trước bạn. Thì sẽ nói gì?": "ที่คอนเสิร์ต คนสวมหมวกใบใหญ่กำลังนั่งอยู่ตรงหน้าคุณ แล้วคุณจะว่าอย่างไร?",
+    "Xin lỗi, mũ làm tôi không thấy rõ phía trước.....": "ขออภัยหมวกทำให้มองเห็นด้านหน้าไม่ชัดเจน....."
+  }
+}

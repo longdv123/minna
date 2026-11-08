@@ -1,0 +1,191 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N3 HANTU - ONE HTML (SEO + nhẹ)
+   >768: giống hình rộng (3 ô header, body nhìn như 3 cột với cột phải trống)
+   <=768 : giống hình mobile (card center + list item JP/VI)
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+/* ===== BODY (ONE LIST) =====
+   Desktop: item là grid 2 cột (JP | VI),
+   và chừa khoảng trống bên phải = cột 3 (blank) để nhìn như mẫu ảnh.
+*/
+.kbody{
+  padding:14px 18px 16px;
+  /* tạo cảm giác có cột phải trống */
+  padding-right: calc(18px + 1fr);
+}
+@media (min-width: 768px){
+  .kbody{
+    padding-right: 18px; /* reset */
+    display:block;
+  }
+  .kbody-inner{
+    /* chừa cột phải trống giống 3 cột: 240 | 260 | blank */
+    padding-right: 0;
+  }
+  .kbody-inner{
+    /* mô phỏng 3 cột bằng cách giới hạn vùng nội dung 2 cột */
+    width: 100%;
+  }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+}
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+  .kbody-inner{ width:auto; }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">満</div></div><div class="kcell k-hv"><span class="vi-tr">mãn</span></div><div class="kcell k-read"><div class="on">マン</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>満席<rp>（</rp><rt>まんせき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hết chỗ</span></div></div><div class="kitem"><div class="jp"><ruby>満員<rp>（</rp><rt>まんいん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đủ người</span></div></div><div class="kitem"><div class="jp"><ruby>満室<rp>（</rp><rt>まんしつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hết phòng</span></div></div><div class="kitem"><div class="jp"><ruby>満足<rp>（</rp><rt>まんぞく</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">mãn nguyện</span></div></div><div class="kitem"><div class="jp"><ruby>満足<rp>（</rp><rt>まんぞく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thỏa mãn</span></div></div><div class="kitem"><div class="jp"><ruby>不満<rp>（</rp><rt>ふまん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bất mãn</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">席</div></div><div class="kcell k-hv"><span class="vi-tr">tịch</span></div><div class="kcell k-read"><div class="on">セキ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>席<rp>（</rp><rt>せき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chỗ của tôi</span></div></div><div class="kitem"><div class="jp"><ruby>出席<rp>（</rp><rt>しゅっせき</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">có mặt</span></div></div><div class="kitem"><div class="jp"><ruby>欠席<rp>（</rp><rt>けっせき</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">vắng mặt</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">番</div></div><div class="kcell k-hv"><span class="vi-tr">phiên</span></div><div class="kcell k-read"><div class="on">バン</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>一番<rp>（</rp><rt>いちばん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nhất</span></div></div><div class="kitem"><div class="jp">～<ruby>番目<rp>（</rp><rt>ばんめ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thứ ~</span></div></div><div class="kitem"><div class="jp">9<ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thứ 9</span></div></div><div class="kitem"><div class="jp"><ruby>交番<rp>（</rp><rt>こうばん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đồn cảnh sát</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">号</div></div><div class="kcell k-hv"><span class="vi-tr">hiệu</span></div><div class="kcell k-read"><div class="on">ゴウ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>番号<rp>（</rp><rt>ばんごう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">số</span></div></div><div class="kitem"><div class="jp">3<ruby>号車<rp>（</rp><rt>ごうしゃ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">toa thứ 3</span></div></div><div class="kitem"><div class="jp"><ruby>信号<rp>（</rp><rt>しんごう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đèn tín hiệu</span></div></div><div class="kitem"><div class="jp"><ruby>記号<rp>（</rp><rt>きごう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">kí hiệu</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">路</div></div><div class="kcell k-hv"><span class="vi-tr">lộ</span></div><div class="kcell k-read"><div class="on">ロ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>通路<rp>（</rp><rt>つうろ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lối đi</span></div></div><div class="kitem"><div class="jp"><ruby>道路<rp>（</rp><rt>どうろ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đường đi</span></div></div><div class="kitem"><div class="jp"><ruby>線路<rp>（</rp><rt>せんろ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đường ray</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">側</div></div><div class="kcell k-hv"><span class="vi-tr">trắc</span></div><div class="kcell k-read"><div>がわ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>右側<rp>（</rp><rt>みぎがわ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bên phải</span></div></div><div class="kitem"><div class="jp"><ruby>外側<rp>（</rp><rt>そとがわ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bên ngoài</span></div></div><div class="kitem"><div class="jp"><ruby>通路<rp>（</rp><rt>つうろ</rt><rp>）</rp></ruby><ruby>側<rp>（</rp><rt>がわ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phía lối đi</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">座</div></div><div class="kcell k-hv"><span class="vi-tr">toạ</span></div><div class="kcell k-read"><div class="on">ザ</div><div>すわーる</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp">（～に）<ruby>座<rp>（</rp><rt>すわ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">ngồi</span></div></div><div class="kitem"><div class="jp"><ruby>座席<rp>（</rp><rt>ざせき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chỗ ngồi</span></div></div><div class="kitem"><div class="jp"><ruby>口座<rp>（</rp><rt>こうざ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tài khoản</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">窓</div></div><div class="kcell k-hv">song</div><div class="kcell k-read"><div>まど</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>窓<rp>（</rp><rt>まど</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cửa sổ</span></div></div><div class="kitem"><div class="jp"><ruby>窓側<rp>（</rp><rt>まどがわ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phía cạnh cửa sổ</span></div></div><div class="kitem"><div class="jp"><ruby>窓口<rp>（</rp><rt>まどぐち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">quầy</span></div></div><div class="kitem"><div class="jp"><ruby>窓<rp>（</rp><rt>まど</rt><rp>）</rp></ruby>ガラス</div><div class="vi"><span class="vi-tr">cửa sổ kính</span></div></div></div></div></div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+<p><b>ドリルA</b></p><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>銀行<rp>（</rp><rt>ぎんこう</rt><rp>）</rp></ruby>は、まっすぐ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って<u><ruby>右側<rp>（</rp><rt>みぎがわ</rt><rp>）</rp></ruby></u>にあります。</td><td>a. みぎがわ</td><td>b. みぎかた</td></tr><tr><td>2. <ruby>先生<rp>（</rp><rt>せんせい</rt><rp>）</rp></ruby>も<u><ruby>出席<rp>（</rp><rt>しゅっせき</rt><rp>）</rp></ruby></u>なさるそうです。</td><td>a. しゅっせき</td><td>b. しゅせき</td></tr><tr><td>3. あの<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>は<u><ruby>満員<rp>（</rp><rt>まんいん</rt><rp>）</rp></ruby></u>で、<ruby>入<rp>（</rp><rt>はい</rt><rp>）</rp></ruby>れない。</td><td>a. まいいん</td><td>b. まんいん</td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>は３<u><ruby>番目<rp>（</rp><rt>ばんめ</rt><rp>）</rp></ruby></u>にスピーチをします。</td><td>a. ばんめ</td><td>b. かいめ</td></tr><tr><td>5. いいスマホが<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えて<u><ruby>満足<rp>（</rp><rt>まんぞく</rt><rp>）</rp></ruby></u>だ。</td><td>a. まんぞく</td><td>b. まんそく</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>銀行<rp>（</rp><rt>ぎんこう</rt><rp>）</rp></ruby>は、まっすぐ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>って<u><ruby>右側<rp>（</rp><rt>みぎがわ</rt><rp>）</rp></ruby></u>にあります。</td><td><b>みぎがわ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Ngân hàng thì đi thẳng, nằm phía bên phải.</span></td></tr><tr><td>2. <ruby>先生<rp>（</rp><rt>せんせい</rt><rp>）</rp></ruby>も<u><ruby>出席<rp>（</rp><rt>しゅっせき</rt><rp>）</rp></ruby></u>なさるそうです。</td><td><b>しゅっせき</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nghe nói thầy cũng sẽ tham dự.</span></td></tr><tr><td>3. あの<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>は<u><ruby>満員<rp>（</rp><rt>まんいん</rt><rp>）</rp></ruby></u>で、<ruby>入<rp>（</rp><rt>はい</rt><rp>）</rp></ruby>れない。</td><td><b>まんいん</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.</span></td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>は３<u><ruby>番目<rp>（</rp><rt>ばんめ</rt><rp>）</rp></ruby></u>にスピーチをします。</td><td><b>ばんめ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi sẽ phát biểu theo thứ tự thứ ba.</span></td></tr><tr><td>5. いいスマホが<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えて<u><ruby>満足<rp>（</rp><rt>まんぞく</rt><rp>）</rp></ruby></u>だ。</td><td><b>まんぞく</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルB</b></p><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>すわ</u>ってください。</td><td>a. 席</td><td>b. 座</td><td>c. 度</td></tr><tr><td>2. あなたの<u>せき</u>はどこですか。</td><td>a. 座</td><td>b. 度</td><td>c. 席</td></tr><tr><td>3. かばんの<ruby>内<rp>（</rp><rt>うち</rt><rp>）</rp></ruby><u>がわ</u>にポケットがある。</td><td>a. 則</td><td>b. 測</td><td>c. 側</td></tr><tr><td>4. この<ruby>道<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><u>ろ</u>は、いま<ruby>工事中<rp>（</rp><rt>こうじちゅう</rt><rp>）</rp></ruby>です。</td><td>a. 路</td><td>b. 号</td><td>c. 歩</td></tr><tr><td>5. <u>まど</u>を<ruby>開<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>けてください。</td><td>a. 空</td><td>b. 室</td><td>c. 窓</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <u>すわ</u>ってください。</td><td><b>座</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy ngồi xuống nào.</span></td></tr><tr><td>2. あなたの<u>せき</u>はどこですか。</td><td><b>席</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Chỗ ngồi của bạn ở đâu?</span></td></tr><tr><td>3. かばんの<ruby>内<rp>（</rp><rt>うち</rt><rp>）</rp></ruby><u>がわ</u>にポケットがある。</td><td><b>側</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Ở phía bên trong chiếc cặp có chiếc túi.</span></td></tr><tr><td>4. この<ruby>道<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><u>ろ</u>は、いま<ruby>工事中<rp>（</rp><rt>こうじちゅう</rt><rp>）</rp></ruby>です。</td><td><b>路</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Con đường này hiện tại đang được thi công.</span></td></tr><tr><td>5. <u>まど</u>を<ruby>開<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>けてください。</td><td><b>窓</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy mở cửa sổ ra.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルC</b></p><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>銀行<rp>（</rp><rt>ぎんこう</rt><rp>）</rp></ruby>に（　　　）を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>って<ruby>預金<rp>（</rp><rt>よきん</rt><rp>）</rp></ruby>した。</td><td>a. 満席</td><td>b. 口座</td></tr><tr><td>2. <ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>るなら、<ruby>座席<rp>（</rp><rt>ざせき</rt><rp>）</rp></ruby>は（　　　）<ruby>側<rp>（</rp><rt>がわ</rt><rp>）</rp></ruby>がいい。</td><td>a. 通路</td><td>b. 道路</td></tr><tr><td>3. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>はこの<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>に（　　　）がある。せますぎる。</td><td>a. 満足</td><td>b. 不満</td></tr><tr><td>4. こたえは、a,b,ｃの（　　　）で<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いてください。</td><td>a. 信号</td><td>b. 記号</td></tr><tr><td>5. <ruby>銀行<rp>（</rp><rt>ぎんこう</rt><rp>）</rp></ruby>の（　　）でカードについて<ruby>質問<rp>（</rp><rt>しつもん</rt><rp>）</rp></ruby>した。</td><td>a. 窓口</td><td>b. 窓ガラス</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>銀行<rp>（</rp><rt>ぎんこう</rt><rp>）</rp></ruby>に（　　　）を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>って<ruby>預金<rp>（</rp><rt>よきん</rt><rp>）</rp></ruby>した。</td><td><b>口座</b>　(こうざ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.</span></td></tr><tr><td>2. <ruby>飛行機<rp>（</rp><rt>ひこうき</rt><rp>）</rp></ruby>に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>るなら、<ruby>座席<rp>（</rp><rt>ざせき</rt><rp>）</rp></ruby>は（　　　）<ruby>側<rp>（</rp><rt>がわ</rt><rp>）</rp></ruby>がいい。</td><td><b>通路</b>　(つうろ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.</span></td></tr><tr><td>3. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>はこの<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>に（　　　）がある。せますぎる。</td><td><b>不満</b>　(ふまん)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi không hài lòng với căn phòng này. Nó quá chật.</span></td></tr><tr><td>4. こたえは、a,b,ｃの（　　　）で<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いてください。</td><td><b>記号</b>　(きごう)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy viết câu trả lời bằng các ký hiệu a, b, c.</span></td></tr><tr><td>5. <ruby>銀行<rp>（</rp><rt>ぎんこう</rt><rp>）</rp></ruby>の（　　）でカードについて<ruby>質問<rp>（</rp><rt>しつもん</rt><rp>）</rp></ruby>した。</td><td><b>窓口</b>　(まどぐち)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.</span></td></tr></tbody></table></div></div></div>
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed3-1-2"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-1-bai-2.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","mãn":"satisfied","hết chỗ":"out of space","đủ người":"enough people","hết phòng":"out of room","mãn nguyện":"contented","thỏa mãn":"satisfied","bất mãn":"dissatisfied","tịch":"President","chỗ của tôi":"my place","có mặt":"present","vắng mặt":"absent","phiên":"session","nhất":"best","thứ ~":"stuff ~","thứ 9":"9th","đồn cảnh sát":"police station","hiệu":"signal","số":"number","toa thứ 3":"3rd prescription","đèn tín hiệu":"signal lights","kí hiệu":"symbol","lộ":"highway","lối đi":"way","đường đi":"way","đường ray":"track","trắc":"survey","bên phải":"right","bên ngoài":"outside","phía lối đi":"walkway side","toạ":"sitting","ngồi":"sit","chỗ ngồi":"seat","tài khoản":"account","cửa sổ":"window","phía cạnh cửa sổ":"next to the window","quầy":"counter","cửa sổ kính":"glass windows","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ngân hàng thì đi thẳng, nằm phía bên phải.":"The bank goes straight, on the right.","Nghe nói thầy cũng sẽ tham dự.":"I heard that the teacher will also attend.","Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.":"That store was full so it was impossible to get in.","Tôi sẽ phát biểu theo thứ tự thứ ba.":"I will speak in the third order.","Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.":"I feel satisfied because I can buy a good phone.","Hãy ngồi xuống nào.":"Let's sit down.","Chỗ ngồi của bạn ở đâu?":"Where is your seat?","Ở phía bên trong chiếc cặp có chiếc túi.":"Inside the briefcase there is a pocket.","Con đường này hiện tại đang được thi công.":"This road is currently under construction.","Hãy mở cửa sổ ra.":"Please open the window.","Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.":"I opened a bank account and deposited money.","Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.":"If I fly, I like to sit in the aisle seat.","Tôi không hài lòng với căn phòng này. Nó quá chật.":"I am not satisfied with this room. It's too tight.","Hãy viết câu trả lời bằng các ký hiệu a, b, c.":"Write your answer using symbols a, b, c.","Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.":"I asked about the card issue at the bank's transaction counter.","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","mãn":"puas","hết chỗ":"keluar dari ruang","đủ người":"cukup banyak orang","hết phòng":"keluar dari ruangan","mãn nguyện":"puas","thỏa mãn":"puas","bất mãn":"tidak puas","tịch":"Presiden","chỗ của tôi":"tempatku","có mặt":"hadiah","vắng mặt":"absen","phiên":"sidang","nhất":"terbaik","thứ ~":"barang ~","thứ 9":"tanggal 9","đồn cảnh sát":"kantor polisi","hiệu":"sinyal","số":"nomor","toa thứ 3":"resep ke-3","đèn tín hiệu":"lampu sinyal","kí hiệu":"simbol","lộ":"jalan raya","lối đi":"jalan","đường đi":"jalan","đường ray":"melacak","trắc":"survei","bên phải":"Kanan","bên ngoài":"di luar","phía lối đi":"sisi jalan setapak","toạ":"duduk","ngồi":"duduk","chỗ ngồi":"kursi","tài khoản":"akun","cửa sổ":"jendela","phía cạnh cửa sổ":"di sebelah jendela","quầy":"menangkal","cửa sổ kính":"jendela kaca","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ngân hàng thì đi thẳng, nằm phía bên phải.":"Banknya lurus, ke kanan.","Nghe nói thầy cũng sẽ tham dự.":"Saya mendengar bahwa guru juga akan hadir.","Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.":"Toko itu penuh sehingga tidak mungkin untuk masuk.","Tôi sẽ phát biểu theo thứ tự thứ ba.":"Saya akan berbicara di urutan ketiga.","Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.":"Saya merasa puas karena dapat membeli ponsel yang bagus.","Hãy ngồi xuống nào.":"Ayo duduk.","Chỗ ngồi của bạn ở đâu?":"Dimana tempat dudukmu?","Ở phía bên trong chiếc cặp có chiếc túi.":"Di dalam tas kerja terdapat saku.","Con đường này hiện tại đang được thi công.":"Jalan ini sedang dalam tahap pembangunan.","Hãy mở cửa sổ ra.":"Silakan buka jendelanya.","Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.":"Saya membuka rekening bank dan menyetor uang.","Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.":"Jika saya terbang, saya suka duduk di kursi lorong.","Tôi không hài lòng với căn phòng này. Nó quá chật.":"Saya tidak puas dengan ruangan ini. Itu terlalu ketat.","Hãy viết câu trả lời bằng các ký hiệu a, b, c.":"Tuliskan jawabanmu dengan menggunakan simbol a, b, c.","Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.":"Saya bertanya tentang masalah kartu di konter transaksi bank.","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","mãn":"सन्तुष्ट","hết chỗ":"ठाउँ बाहिर","đủ người":"पर्याप्त मान्छे","hết phòng":"कोठा बाहिर","mãn nguyện":"सन्तुष्ट","thỏa mãn":"सन्तुष्ट","bất mãn":"असन्तुष्ट","tịch":"राष्ट्रपति","chỗ của tôi":"मेरो ठाउँ","có mặt":"वर्तमान","vắng mặt":"अनुपस्थित","phiên":"सत्र","nhất":"सबै भन्दा राम्रो","thứ ~":"सामान ~","thứ 9":"९ औं","đồn cảnh sát":"प्रहरी चौकी","hiệu":"संकेत","số":"संख्या","toa thứ 3":"तेस्रो नुस्खा","đèn tín hiệu":"सिग्नल बत्तीहरू","kí hiệu":"प्रतीक","lộ":"राजमार्ग","lối đi":"बाटो","đường đi":"बाटो","đường ray":"ट्र्याक","trắc":"सर्वेक्षण","bên phải":"सही","bên ngoài":"बाहिर","phía lối đi":"पैदल बाटो पक्ष","toạ":"बसिरहेको","ngồi":"बस्नु","chỗ ngồi":"सीट","tài khoản":"खाता","cửa sổ":"झ्याल","phía cạnh cửa sổ":"झ्यालको छेउमा","quầy":"काउन्टर","cửa sổ kính":"काँचका झ्यालहरू","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ngân hàng thì đi thẳng, nằm phía bên phải.":"बैंक सिधा जान्छ, दाँयामा।","Nghe nói thầy cũng sẽ tham dự.":"शिक्षक पनि उपस्थित हुने कुरा सुनेको छु ।","Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.":"त्यो पसल भरिभराउ थियो त्यसैले भित्र पस्न असम्भव थियो।","Tôi sẽ phát biểu theo thứ tự thứ ba.":"म तेस्रो क्रममा बोल्छु।","Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.":"म सन्तुष्ट छु किनभने म राम्रो फोन किन्न सक्छु।","Hãy ngồi xuống nào.":"बसौं।","Chỗ ngồi của bạn ở đâu?":"तपाईको सिट कहाँ छ?","Ở phía bên trong chiếc cặp có chiếc túi.":"ब्रीफकेस भित्र एक खल्ती छ।","Con đường này hiện tại đang được thi công.":"यो सडक अहिले निर्माणाधीन छ ।","Hãy mở cửa sổ ra.":"कृपया झ्याल खोल्नुहोस्।","Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.":"मैले बैंक खाता खोलेर पैसा जम्मा गरें।","Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.":"यदि म उड्छु भने, मलाई गल्लीको सिटमा बस्न मन पर्छ।","Tôi không hài lòng với căn phòng này. Nó quá chật.":"म यो कोठाबाट सन्तुष्ट छैन। यो धेरै टाइट छ।","Hãy viết câu trả lời bằng các ký hiệu a, b, c.":"a, b, c चिन्हहरू प्रयोग गरेर आफ्नो जवाफ लेख्नुहोस्।","Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.":"मैले बैंकको लेनदेन काउन्टरमा कार्ड मुद्दाको बारेमा सोधें।","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","mãn":"ကျေနပ်သည်။","hết chỗ":"အာကာသထဲက","đủ người":"လုံလောက်သောလူ","hết phòng":"အခန်းထဲက","mãn nguyện":"ကျေနပ်သည်။","thỏa mãn":"ကျေနပ်သည်။","bất mãn":"မကျေနပ်","tịch":"သမ္မတ","chỗ của tôi":"ငါ့နေရာ","có mặt":"ပစ္စုပ္ပန်","vắng mặt":"ပျက်ကွက်","phiên":"အပိုင်း","nhất":"အကောင်းဆုံး","thứ ~":"ပစ္စည်း~","thứ 9":"၉ ရက်နေ့","đồn cảnh sát":"ရဲစခန်း","hiệu":"အချက်ပြ","số":"နံပါတ်","toa thứ 3":"3rd ဆေးညွှန်း","đèn tín hiệu":"အချက်ပြမီးများ","kí hiệu":"သင်္ကေတ","lộ":"အဝေးပြေးလမ်း","lối đi":"နည်းလမ်း","đường đi":"နည်းလမ်း","đường ray":"တစ်ပုဒ်","trắc":"စစ်တမ်း","bên phải":"မှန်တယ်","bên ngoài":"အပြင်မှာ","phía lối đi":"လူသွားလမ်းဘက်","toạ":"ထိုင်သည်။","ngồi":"ထိုင်","chỗ ngồi":"ထိုင်ခုံ","tài khoản":"အကောင့်","cửa sổ":"ပြတင်းပေါက်","phía cạnh cửa sổ":"ပြတင်းပေါက်ဘေးမှာ","quầy":"တန်ပြန်","cửa sổ kính":"မှန်ပြတင်းပေါက်","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ngân hàng thì đi thẳng, nằm phía bên phải.":"ဘဏ်သည် ညာဘက်၊ ဖြောင့်တန်းသည်။","Nghe nói thầy cũng sẽ tham dự.":"ဆရာမတွေလည်း တက်မယ်လို့ ကြားတယ်။","Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.":"အဲဒီဆိုင်က လူပြည့်နေတော့ ဝင်လို့မရတော့ဘူး။","Tôi sẽ phát biểu theo thứ tự thứ ba.":"တတိယအကြိမ်မြောက် ဟောပြောပါမည်။","Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.":"ဖုန်းကောင်းကောင်းတစ်လုံးဝယ်နိုင်လို့ ကျေနပ်ပါတယ်။","Hãy ngồi xuống nào.":"ထိုင်ကြရအောင်။","Chỗ ngồi của bạn ở đâu?":"မင်းထိုင်ခုံဘယ်မှာလဲ","Ở phía bên trong chiếc cặp có chiếc túi.":"လက်ဆွဲအိတ်အတွင်းတွင် အိတ်ကပ်တစ်ခုရှိသည်။","Con đường này hiện tại đang được thi công.":"ဒီလမ်းဟာ လက်ရှိ ဖောက်လုပ်နေပါတယ်။","Hãy mở cửa sổ ra.":"ပြတင်းပေါက်ကိုဖွင့်ပါ။","Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.":"ဘဏ်အကောင့်ဖွင့်ပြီး ငွေသွင်းတယ်။","Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.":"ပျံသန်းရင် ခုံတန်းမှာ ထိုင်ရတာ ကြိုက်တယ်။","Tôi không hài lòng với căn phòng này. Nó quá chật.":"ဒီအခန်းကို ကျွန်တော် မကျေနပ်ဘူး။ ဒီဟာအရမ်းကြပ်တယ်။","Hãy viết câu trả lời bằng các ký hiệu a, b, c.":"သင်္ကေတ a,b,c သုံးပြီး သင့်အဖြေကို ရေးပါ။","Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.":"ဘဏ်ငွေလွှဲကောင်တာမှာ ကတ်ပြဿနာအကြောင်း မေးပါတယ်။","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","mãn":"সন্তুষ্ট","hết chỗ":"স্থানের বাইরে","đủ người":"যথেষ্ট মানুষ","hết phòng":"ঘরের বাইরে","mãn nguyện":"সন্তুষ্ট","thỏa mãn":"সন্তুষ্ট","bất mãn":"অসন্তুষ্ট","tịch":"রাষ্ট্রপতি","chỗ của tôi":"আমার জায়গা","có mặt":"বর্তমান","vắng mặt":"অনুপস্থিত","phiên":"অধিবেশন","nhất":"সেরা","thứ ~":"জিনিসপত্র ~","thứ 9":"9তম","đồn cảnh sát":"থানা","hiệu":"সংকেত","số":"সংখ্যা","toa thứ 3":"3য় প্রেসক্রিপশন","đèn tín hiệu":"সিগন্যাল লাইট","kí hiệu":"প্রতীক","lộ":"হাইওয়ে","lối đi":"উপায়","đường đi":"উপায়","đường ray":"ট্র্যাক","trắc":"জরিপ","bên phải":"অধিকার","bên ngoài":"বাইরে","phía lối đi":"হাঁটার পাশ","toạ":"বসা","ngồi":"বসা","chỗ ngồi":"আসন","tài khoản":"অ্যাকাউন্ট","cửa sổ":"জানালা","phía cạnh cửa sổ":"জানালার পাশে","quầy":"পাল্টা","cửa sổ kính":"কাচের জানালা","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ngân hàng thì đi thẳng, nằm phía bên phải.":"ব্যাঙ্ক সোজা যায়, ডানদিকে।","Nghe nói thầy cũng sẽ tham dự.":"শিক্ষকও উপস্থিত থাকবেন বলে শুনেছি।","Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.":"দোকানটি পূর্ণ ছিল তাই ভিতরে প্রবেশ করা অসম্ভব ছিল।","Tôi sẽ phát biểu theo thứ tự thứ ba.":"আমি তৃতীয় ক্রমে কথা বলব।","Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.":"আমি সন্তুষ্ট বোধ করি কারণ আমি একটি ভাল ফোন কিনতে পারি।","Hãy ngồi xuống nào.":"চল বসি।","Chỗ ngồi của bạn ở đâu?":"আপনার সিট কোথায়?","Ở phía bên trong chiếc cặp có chiếc túi.":"ব্রিফকেসের ভিতরে একটি পকেট আছে।","Con đường này hiện tại đang được thi công.":"এই সড়কটি বর্তমানে নির্মাণাধীন।","Hãy mở cửa sổ ra.":"জানালা খুলুন.","Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.":"ব্যাংক একাউন্ট খুলে টাকা জমা দিয়েছি।","Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.":"আমি যদি উড়ে যাই, আমি করিডোর সিটে বসতে পছন্দ করি।","Tôi không hài lòng với căn phòng này. Nó quá chật.":"আমি এই রুমে সন্তুষ্ট নই. এটা খুব টাইট.","Hãy viết câu trả lời bằng các ký hiệu a, b, c.":"a, b, c চিহ্ন ব্যবহার করে আপনার উত্তর লিখুন।","Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.":"আমি ব্যাঙ্কের লেনদেন কাউন্টারে কার্ডের সমস্যা সম্পর্কে জিজ্ঞাসা করেছি।","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","mãn":"संतुष्ट","hết chỗ":"अंतरिक्ष से बाहर","đủ người":"पर्याप्त लोग","hết phòng":"कमरे से बाहर","mãn nguyện":"संतुष्ट","thỏa mãn":"संतुष्ट","bất mãn":"असंतुष्ट","tịch":"अध्यक्ष","chỗ của tôi":"मेरी जगह","có mặt":"उपस्थित","vắng mặt":"अनुपस्थित","phiên":"सत्र","nhất":"श्रेष्ठ","thứ ~":"सामान~","thứ 9":"9","đồn cảnh sát":"पुलिस स्टेशन","hiệu":"संकेत","số":"संख्या","toa thứ 3":"तीसरा नुस्खा","đèn tín hiệu":"सिग्नल लाइटें","kí hiệu":"प्रतीक","lộ":"राजमार्ग","lối đi":"रास्ता","đường đi":"रास्ता","đường ray":"रास्ता","trắc":"सर्वे","bên phải":"सही","bên ngoài":"बाहर","phía lối đi":"पैदल मार्ग की ओर","toạ":"बैठक","ngồi":"बैठना","chỗ ngồi":"सीट","tài khoản":"खाता","cửa sổ":"खिड़की","phía cạnh cửa sổ":"खिड़की के बगल में","quầy":"विरोध करना","cửa sổ kính":"कांच की खिड़कियाँ","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ngân hàng thì đi thẳng, nằm phía bên phải.":"बैंक सीधे, दाहिनी ओर जाता है।","Nghe nói thầy cũng sẽ tham dự.":"सुना है अध्यापक भी आयेंगे।","Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.":"वह दुकान भरी हुई थी इसलिए अंदर जाना असंभव था।","Tôi sẽ phát biểu theo thứ tự thứ ba.":"मैं तीसरे क्रम में बोलूंगा.","Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.":"मैं संतुष्ट महसूस करता हूं क्योंकि मैं एक अच्छा फोन खरीद सकता हूं।","Hãy ngồi xuống nào.":"चलो बैठो.","Chỗ ngồi của bạn ở đâu?":"आपकी सीट कहाँ है?","Ở phía bên trong chiếc cặp có chiếc túi.":"ब्रीफकेस के अंदर एक जेब होती है.","Con đường này hiện tại đang được thi công.":"यह सड़क अभी निर्माणाधीन है।","Hãy mở cửa sổ ra.":"कृपया खिड़की खोल दें।","Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.":"मैंने एक बैंक खाता खोला और पैसे जमा किये।","Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.":"अगर मैं उड़ता हूं तो मुझे गलियारे वाली सीट पर बैठना पसंद है।","Tôi không hài lòng với căn phòng này. Nó quá chật.":"मैं इस कमरे से संतुष्ट नहीं हूं. यह बहुत तंग है.","Hãy viết câu trả lời bằng các ký hiệu a, b, c.":"अपना उत्तर a, b, c चिन्हों का प्रयोग करके लिखें।","Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.":"मैंने बैंक के ट्रांजेक्शन काउंटर पर कार्ड संबंधी समस्या के बारे में पूछा।","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","mãn":"พอใจ","hết chỗ":"ออกจากพื้นที่","đủ người":"คนเพียงพอ","hết phòng":"ออกจากห้อง","mãn nguyện":"พอใจ","thỏa mãn":"พอใจ","bất mãn":"ไม่พอใจ","tịch":"ประธาน","chỗ của tôi":"สถานที่ของฉัน","có mặt":"ปัจจุบัน","vắng mặt":"ไม่มา","phiên":"การประชุม","nhất":"ดีที่สุด","thứ ~":"ของ~","thứ 9":"9","đồn cảnh sát":"สถานีตำรวจ","hiệu":"สัญญาณ","số":"ตัวเลข","toa thứ 3":"ใบสั่งยาครั้งที่ 3","đèn tín hiệu":"ไฟสัญญาณ","kí hiệu":"เครื่องหมาย","lộ":"ทางหลวง","lối đi":"ทาง","đường đi":"ทาง","đường ray":"ติดตาม","trắc":"สำรวจ","bên phải":"ขวา","bên ngoài":"ข้างนอก","phía lối đi":"ด้านทางเดิน","toạ":"นั่ง","ngồi":"นั่ง","chỗ ngồi":"ที่นั่ง","tài khoản":"บัญชี","cửa sổ":"หน้าต่าง","phía cạnh cửa sổ":"ถัดจากหน้าต่าง","quầy":"เคาน์เตอร์","cửa sổ kính":"หน้าต่างกระจก","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ngân hàng thì đi thẳng, nằm phía bên phải.":"ธนาคารตรงไปทางด้านขวามือ","Nghe nói thầy cũng sẽ tham dự.":"ได้ยินมาว่าอาจารย์จะมาด้วย","Cửa hàng đó đã kín chỗ ngồi nên không thể vào được.":"ร้านนั้นเต็มจึงเข้าไม่ได้","Tôi sẽ phát biểu theo thứ tự thứ ba.":"ฉันจะพูดในลำดับที่สาม","Tôi cảm thấy hài lòng vì có thể mua được chiếc điện thoại tốt.":"ฉันรู้สึกพอใจเพราะฉันสามารถซื้อโทรศัพท์ที่ดีได้","Hãy ngồi xuống nào.":"มานั่งกัน","Chỗ ngồi của bạn ở đâu?":"ที่นั่งของคุณอยู่ที่ไหน?","Ở phía bên trong chiếc cặp có chiếc túi.":"ภายในกระเป๋าเอกสารมีช่องกระเป๋า","Con đường này hiện tại đang được thi công.":"ถนนสายนี้อยู่ระหว่างการก่อสร้าง","Hãy mở cửa sổ ra.":"กรุณาเปิดหน้าต่าง.","Tôi đã mở tài khoản ngân hàng và gửi tiền tiết kiệm.":"ฉันเปิดบัญชีธนาคารและฝากเงิน","Nếu đi máy bay, tôi thích ngồi ở hàng ghế cạnh lối đi.":"ถ้าฉันบินฉันชอบนั่งตรงที่นั่งริมทางเดิน","Tôi không hài lòng với căn phòng này. Nó quá chật.":"ฉันไม่พอใจกับห้องนี้ มันแน่นเกินไป","Hãy viết câu trả lời bằng các ký hiệu a, b, c.":"เขียนคำตอบโดยใช้สัญลักษณ์ a, b, c","Tôi đã hỏi về vấn đề thẻ tại quầy giao dịch của ngân hàng.":"ฉันสอบถามเกี่ยวกับปัญหาบัตรที่เคาน์เตอร์ทำธุรกรรมของธนาคาร","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

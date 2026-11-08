@@ -1,0 +1,191 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N3 HANTU - ONE HTML (SEO + nhẹ)
+   >768: giống hình rộng (3 ô header, body nhìn như 3 cột với cột phải trống)
+   <=768 : giống hình mobile (card center + list item JP/VI)
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+/* ===== BODY (ONE LIST) =====
+   Desktop: item là grid 2 cột (JP | VI),
+   và chừa khoảng trống bên phải = cột 3 (blank) để nhìn như mẫu ảnh.
+*/
+.kbody{
+  padding:14px 18px 16px;
+  /* tạo cảm giác có cột phải trống */
+  padding-right: calc(18px + 1fr);
+}
+@media (min-width: 768px){
+  .kbody{
+    padding-right: 18px; /* reset */
+    display:block;
+  }
+  .kbody-inner{
+    /* chừa cột phải trống giống 3 cột: 240 | 260 | blank */
+    padding-right: 0;
+  }
+  .kbody-inner{
+    /* mô phỏng 3 cột bằng cách giới hạn vùng nội dung 2 cột */
+    width: 100%;
+  }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+}
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+  .kbody-inner{ width:auto; }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">足</div></div><div class="kcell k-hv"><span class="vi-tr">túc</span></div><div class="kcell k-read"><div class="on">ソク／ゾク</div><div>あし／たーりる／たーす</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>手足<rp>（</rp><rt>てあし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chân tay</span></div></div><div class="kitem"><div class="jp"><ruby>足<rp>（</rp><rt>た</rt><rp>）</rp></ruby>りる</div><div class="vi"><span class="vi-tr">đủ</span></div></div><div class="kitem"><div class="jp"><ruby>足<rp>（</rp><rt>た</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">thêm vào</span></div></div><div class="kitem"><div class="jp"><ruby>足<rp>（</rp><rt>た</rt><rp>）</rp></ruby>し<ruby>算<rp>（</rp><rt>ざん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">phép tính cộng</span></div></div><div class="kitem"><div class="jp"><ruby>不足<rp>（</rp><rt>ふそく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thiếu</span></div></div><div class="kitem"><div class="jp">１<ruby>足<rp>（</rp><rt>そく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">một đôi giày</span></div></div><div class="kitem"><div class="jp"><ruby>満足<rp>（</rp><rt>まんぞく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thỏa mãn</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">支</div></div><div class="kcell k-hv">chi</div><div class="kcell k-read"><div class="on">シ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>支払<rp>（</rp><rt>しはら</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">chi trả</span></div></div><div class="kitem"><div class="jp"><ruby>支出<rp>（</rp><rt>ししゅつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khoản chi</span></div></div><div class="kitem"><div class="jp"><ruby>支店<rp>（</rp><rt>してん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chi nhánh</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">払</div></div><div class="kcell k-hv"><span class="vi-tr">phất</span></div><div class="kcell k-read"><div>はらーう</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">trả</span></div></div><div class="kitem"><div class="jp"><ruby>支払<rp>（</rp><rt>しはら</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">trả tiền</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">引</div></div><div class="kcell k-hv"><span class="vi-tr">dẫn</span></div><div class="kcell k-read"><div>ひーく／－びーき</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">kéo, trừ</span></div></div><div class="kitem"><div class="jp"><ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>き<ruby>算<rp>（</rp><rt>ざん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">phép trừ</span></div></div><div class="kitem"><div class="jp"><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby><ruby>引<rp>（</rp><rt>び</rt><rp>）</rp></ruby>（き）（する）</div><div class="vi"><span class="vi-tr">giảm giá</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">算</div></div><div class="kcell k-hv"><span class="vi-tr">toán</span></div><div class="kcell k-read"><div class="on">サン</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>計算<rp>（</rp><rt>けいさん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tính toán</span></div></div><div class="kitem"><div class="jp"><ruby>予算<rp>（</rp><rt>よさん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngân sách</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">費</div></div><div class="kcell k-hv"><span class="vi-tr">phí</span></div><div class="kcell k-read"><div class="on">ヒ</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>費用<rp>（</rp><rt>ひよう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chi phí</span></div></div><div class="kitem"><div class="jp"><ruby>会費<rp>（</rp><rt>かいひ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hội phí</span></div></div><div class="kitem"><div class="jp"><ruby>学費<rp>（</rp><rt>がくひ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">học phí</span></div></div><div class="kitem"><div class="jp"><ruby>食費<rp>（</rp><rt>しょくひ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tiền ăn</span></div></div><div class="kitem"><div class="jp"><ruby>交通費<rp>（</rp><rt>こうつうひ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phí giao thông</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">追</div></div><div class="kcell k-hv">truy</div><div class="kcell k-read"><div class="on">ツイ</div><div>おーう</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>追<rp>（</rp><rt>お</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">đuổi</span></div></div><div class="kitem"><div class="jp"><ruby>追<rp>（</rp><rt>お</rt><rp>）</rp></ruby>いかける</div><div class="vi"><span class="vi-tr">đuổi theo</span></div></div><div class="kitem"><div class="jp"><ruby>追<rp>（</rp><rt>お</rt><rp>）</rp></ruby>い<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">vượt</span></div></div><div class="kitem"><div class="jp"><ruby>追<rp>（</rp><rt>お</rt><rp>）</rp></ruby>いつく</div><div class="vi"><span class="vi-tr">đuổi kịp</span></div></div><div class="kitem"><div class="jp"><ruby>追加<rp>（</rp><rt>ついか</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thêm vào</span></div></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">越</div></div><div class="kcell k-hv"><span class="vi-tr">việt</span></div><div class="kcell k-read"><div>こーえる／こーす</div></div></div><div class="kbody"><div class="kbody-inner"><div class="kitem"><div class="jp"><ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">vượt qua, trèo qua</span></div></div><div class="kitem"><div class="jp"><ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">chuyển nhà</span></div></div><div class="kitem"><div class="jp"><ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>し</div><div class="vi"><span class="vi-tr">việc chuyển nhà</span></div></div></div></div></div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+<p><b>ドリルA</b></p><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>料金<rp>（</rp><rt>りょうきん</rt><rp>）</rp></ruby>が<u><ruby>不足<rp>（</rp><rt>ふそく</rt><rp>）</rp></ruby></u>しています。</td><td>a. ふそく</td><td>b. ふぞく</td></tr><tr><td>2. １０００<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>を８００<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>に<u><ruby>割引<rp>（</rp><rt>わりびき</rt><rp>）</rp></ruby></u>してくれた。</td><td>a. わりひき</td><td>b. わりびき</td></tr><tr><td>3. この<ruby>高校<rp>（</rp><rt>こうこう</rt><rp>）</rp></ruby>は<u><ruby>学費<rp>（</rp><rt>がくひ</rt><rp>）</rp></ruby></u>が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>い。</td><td>a. がっぴ</td><td>b. がくひ</td></tr><tr><td>4. ちゃんと<u><ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>って</u>くださいね。</td><td>a. あらって</td><td>b. はらって</td></tr><tr><td>5. <ruby>新<rp>（</rp><rt>あたら</rt><rp>）</rp></ruby>しいくつを<u><ruby>一足<rp>（</rp><rt>いっそく</rt><rp>）</rp></ruby></u><ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>った。</td><td>a. ひとあし</td><td>b. いっそく</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>料金<rp>（</rp><rt>りょうきん</rt><rp>）</rp></ruby>が<u><ruby>不足<rp>（</rp><rt>ふそく</rt><rp>）</rp></ruby></u>しています。</td><td><b>ふそく</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Số tiền thanh toán không đủ.</span></td></tr><tr><td>2. １０００<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>を８００<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>に<u><ruby>割引<rp>（</rp><rt>わりびき</rt><rp>）</rp></ruby></u>してくれた。</td><td><b>わりびき</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Họ đã giảm giá 1000 yên xuống còn 800 yên.</span></td></tr><tr><td>3. この<ruby>高校<rp>（</rp><rt>こうこう</rt><rp>）</rp></ruby>は<u><ruby>学費<rp>（</rp><rt>がくひ</rt><rp>）</rp></ruby></u>が<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>い。</td><td><b>がくひ</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Trường trung học này học phí cao.</span></td></tr><tr><td>4. ちゃんと<u><ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>って</u>くださいね。</td><td><b>はらって</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Hãy thanh toán đầy đủ nhé.</span></td></tr><tr><td>5. <ruby>新<rp>（</rp><rt>あたら</rt><rp>）</rp></ruby>しいくつを<u><ruby>一足<rp>（</rp><rt>いっそく</rt><rp>）</rp></ruby></u><ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>った。</td><td><b>いっそく</b></td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã mua một đôi giày mới.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルB</b></p><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>、<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<u>こ</u>しをする。</td><td>a. 来</td><td>b. 込</td><td>c. 越</td></tr><tr><td>2. アメリカに<u>し</u><ruby>店<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>を<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>すことになった。</td><td>a. 私</td><td>b. 支</td><td>c. 子</td></tr><tr><td>3. パーティーの<ruby>会<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>ひ</u>は、いくらですか。</td><td>a. 日</td><td>b. 用</td><td>c. 費</td></tr><tr><td>4. <ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>を<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>っている<ruby>選手<rp>（</rp><rt>せんしゅ</rt><rp>）</rp></ruby>に<u>お</u>いついた。</td><td>a. 追</td><td>b. 返</td><td>c. 込</td></tr><tr><td>5. <ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><u>さん</u>が<ruby>足<rp>（</rp><rt>た</rt><rp>）</rp></ruby>りなくて、これ<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えない。</td><td>a. 参</td><td>b. 産</td><td>c. 算</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>、<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<u>こ</u>しをする。</td><td><b>越</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tuần sau, tôi sẽ chuyển nhà.</span></td></tr><tr><td>2. アメリカに<u>し</u><ruby>店<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>を<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>すことになった。</td><td><b>支</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã quyết định mở chi nhánh ở Mỹ.</span></td></tr><tr><td>3. パーティーの<ruby>会<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>ひ</u>は、いくらですか。</td><td><b>費</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Phí tham gia buổi tiệc là bao nhiêu?</span></td></tr><tr><td>4. <ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>を<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp></ruby>っている<ruby>選手<rp>（</rp><rt>せんしゅ</rt><rp>）</rp></ruby>に<u>お</u>いついた。</td><td><b>追</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã đuổi kịp vận động viên đang chạy phía trước.</span></td></tr><tr><td>5. <ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><u>さん</u>が<ruby>足<rp>（</rp><rt>た</rt><rp>）</rp></ruby>りなくて、これ<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えない。</td><td><b>算</b></td></tr><tr><td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi không đủ ngân sách, không thể mua cái này.</span></td></tr></tbody></table></div></div></div><p><br><b>ドリルC</b></p><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. このサービスには（　　　）<ruby>料金<rp>（</rp><rt>りょうきん</rt><rp>）</rp></ruby>がかかります。</td><td>a. 追加</td><td>b. 費用</td></tr><tr><td>2. （　　　）をすればいいんだよ。7-2=5でしょ？</td><td>a. 引き算</td><td>b. 足し算</td></tr><tr><td>3. カードでもお（　　　）いただけます。</td><td>a. 支払い</td><td>b. 追い越し</td></tr><tr><td>4. （　　　）たけど、バスに<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>っちゃったみたいです。</td><td>a. 追いかけ</td><td>b. 計算し</td></tr><tr><td>5. <ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>がなくなったら、（　　　）ください。</td><td>a. 足りて</td><td>b. 足して</td></tr></tbody></table></div><div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. このサービスには（　　　）<ruby>料金<rp>（</rp><rt>りょうきん</rt><rp>）</rp></ruby>がかかります。</td><td><b>追加</b>　(ついか)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Dịch vụ này sẽ có phí phụ thu.</span></td></tr><tr><td>2. （　　　）をすればいいんだよ。7-2=5でしょ？</td><td><b>引き算</b>　(ひきざん)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?</span></td></tr><tr><td>3. カードでもお（　　　）いただけます。</td><td><b>支払い</b>　(しはらい)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Bạn cũng có thể thanh toán bằng thẻ.</span></td></tr><tr><td>4. （　　　）たけど、バスに<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>っちゃったみたいです。</td><td><b>追いかけ</b>　(おいかけ)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.</span></td></tr><tr><td>5. <ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>がなくなったら、（　　　）ください。</td><td><b>足して</b>　(たして)　</td></tr><tr><td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vi-tr">Nếu hết nước, thì hãy thêm vào.</span></td></tr></tbody></table></div></div></div>
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed3-2-3"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-2-bai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","túc":"complete","chân tay":"limb","đủ":"enough","thêm vào":"add","phép tính cộng":"addition","thiếu":"lack","một đôi giày":"a pair of shoes","thỏa mãn":"satisfied","chi trả":"pay","khoản chi":"expense","chi nhánh":"branch","phất":"flutter","trả":"pay","trả tiền":"pay","dẫn":"guide","kéo, trừ":"pull, subtract","phép trừ":"subtraction","giảm giá":"discount","toán":"maths","tính toán":"calculate","ngân sách":"budget","phí":"fee","chi phí":"expense","hội phí":"membership fees","học phí":"tuition","tiền ăn":"food money","phí giao thông":"traffic fees","đuổi":"chase","đuổi theo":"chase","vượt":"pass","đuổi kịp":"catch up","việt":"Vietnamese","vượt qua, trèo qua":"get over, climb over","chuyển nhà":"move house","việc chuyển nhà":"moving house","☞ Đáp Án + Dịch":"☞ Answer + Translation","Số tiền thanh toán không đủ.":"Payment amount is not enough.","Họ đã giảm giá 1000 yên xuống còn 800 yên.":"They reduced the price by 1000 yen to 800 yen.","Trường trung học này học phí cao.":"This high school has high tuition fees.","Hãy thanh toán đầy đủ nhé.":"Please pay in full.","Tôi đã mua một đôi giày mới.":"I bought a new pair of shoes.","Tuần sau, tôi sẽ chuyển nhà.":"Next week, I will move house.","Tôi đã quyết định mở chi nhánh ở Mỹ.":"I decided to open a branch in America.","Phí tham gia buổi tiệc là bao nhiêu?":"How much is the party participation fee?","Tôi đã đuổi kịp vận động viên đang chạy phía trước.":"I caught up to the runner running ahead.","Tôi không đủ ngân sách, không thể mua cái này.":"I don't have enough budget, can't buy this.","Dịch vụ này sẽ có phí phụ thu.":"This service will have an additional fee.","Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?":"Just use subtraction. 7 minus 2 equals 5, right?","Bạn cũng có thể thanh toán bằng thẻ.":"You can also pay by card.","Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.":"I chased after him, but it seemed that person had already gotten on the bus.","Nếu hết nước, thì hãy thêm vào.":"If you run out of water, add more.","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","túc":"menyelesaikan","chân tay":"dahan","đủ":"cukup","thêm vào":"menambahkan","phép tính cộng":"tambahan","thiếu":"kekurangan","một đôi giày":"sepasang sepatu","thỏa mãn":"puas","chi trả":"membayar","khoản chi":"pengeluaran","chi nhánh":"cabang","phất":"berdebar","trả":"membayar","trả tiền":"membayar","dẫn":"memandu","kéo, trừ":"tarik, kurangi","phép trừ":"pengurangan","giảm giá":"diskon","toán":"matematika","tính toán":"menghitung","ngân sách":"anggaran","phí":"biaya","chi phí":"pengeluaran","hội phí":"biaya keanggotaan","học phí":"biaya pendidikan","tiền ăn":"uang makanan","phí giao thông":"biaya lalu lintas","đuổi":"mengejar","đuổi theo":"mengejar","vượt":"lulus","đuổi kịp":"mengejar","việt":"Vietnam","vượt qua, trèo qua":"minggir, memanjat","chuyển nhà":"pindah rumah","việc chuyển nhà":"pindah rumah","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Số tiền thanh toán không đủ.":"Jumlah pembayaran tidak cukup.","Họ đã giảm giá 1000 yên xuống còn 800 yên.":"Mereka menurunkan harga sebesar 1000 yen menjadi 800 yen.","Trường trung học này học phí cao.":"Sekolah menengah ini memiliki biaya sekolah yang tinggi.","Hãy thanh toán đầy đủ nhé.":"Silakan membayar penuh.","Tôi đã mua một đôi giày mới.":"Saya membeli sepasang sepatu baru.","Tuần sau, tôi sẽ chuyển nhà.":"Minggu depan aku akan pindah rumah.","Tôi đã quyết định mở chi nhánh ở Mỹ.":"Saya memutuskan untuk membuka cabang di Amerika.","Phí tham gia buổi tiệc là bao nhiêu?":"Berapa biaya partisipasi partai?","Tôi đã đuổi kịp vận động viên đang chạy phía trước.":"Aku mengejar pelari yang berlari di depan.","Tôi không đủ ngân sách, không thể mua cái này.":"Saya tidak punya cukup anggaran, tidak bisa membeli ini.","Dịch vụ này sẽ có phí phụ thu.":"Layanan ini akan dikenakan biaya tambahan.","Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?":"Gunakan saja pengurangan. 7 dikurangi 2 sama dengan 5, kan?","Bạn cũng có thể thanh toán bằng thẻ.":"Anda juga dapat membayar dengan kartu.","Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.":"Aku mengejarnya, tapi sepertinya orang itu sudah masuk ke dalam bus.","Nếu hết nước, thì hãy thêm vào.":"Jika Anda kehabisan air, tambahkan lagi.","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","túc":"पूरा","chân tay":"अंग","đủ":"पर्याप्त","thêm vào":"थप्नुहोस्","phép tính cộng":"थप","thiếu":"अभाव","một đôi giày":"जुत्ताको एक जोडी","thỏa mãn":"सन्तुष्ट","chi trả":"भुक्तान","khoản chi":"खर्च","chi nhánh":"शाखा","phất":"फटफट","trả":"भुक्तान","trả tiền":"भुक्तान","dẫn":"गाइड","kéo, trừ":"तान्नु, घटाउनु","phép trừ":"घटाउ","giảm giá":"छुट","toán":"गणित","tính toán":"गणना गर्नुहोस्","ngân sách":"बजेट","phí":"शुल्क","chi phí":"खर्च","hội phí":"सदस्यता शुल्क","học phí":"ट्युसन","tiền ăn":"खाना पैसा","phí giao thông":"यातायात शुल्क","đuổi":"पीछा","đuổi theo":"पीछा","vượt":"पास","đuổi kịp":"समात्नुहोस्","việt":"भियतनामी","vượt qua, trèo qua":"माथि जानुहोस्, माथि चढ्नुहोस्","chuyển nhà":"घर सार्नुहोस्","việc chuyển nhà":"सर्दै घर","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Số tiền thanh toán không đủ.":"भुक्तानी रकम पर्याप्त छैन।","Họ đã giảm giá 1000 yên xuống còn 800 yên.":"तिनीहरूले 1000 येन द्वारा 800 येन मूल्य घटाए।","Trường trung học này học phí cao.":"यो हाई स्कूल उच्च शिक्षण शुल्क छ।","Hãy thanh toán đầy đủ nhé.":"कृपया पूरा भुक्तान गर्नुहोस्।","Tôi đã mua một đôi giày mới.":"मैले नयाँ जोडी जुत्ता किनें।","Tuần sau, tôi sẽ chuyển nhà.":"अर्को हप्ता, म घर सर्छु।","Tôi đã quyết định mở chi nhánh ở Mỹ.":"मैले अमेरिकामा शाखा खोल्ने निर्णय गरें।","Phí tham gia buổi tiệc là bao nhiêu?":"पार्टी सहभागिता शुल्क कति छ?","Tôi đã đuổi kịp vận động viên đang chạy phía trước.":"मैले अगाडि दौडिरहेको धावकलाई समातें।","Tôi không đủ ngân sách, không thể mua cái này.":"मसँग पर्याप्त बजेट छैन, यो किन्न सक्दिन।","Dịch vụ này sẽ có phí phụ thu.":"यो सेवामा अतिरिक्त शुल्क लाग्नेछ।","Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?":"केवल घटाव प्रयोग गर्नुहोस्। ७ माइनस २ बराबर ५, हैन?","Bạn cũng có thể thanh toán bằng thẻ.":"तपाईं कार्ड द्वारा पनि भुक्तानी गर्न सक्नुहुन्छ।","Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.":"मैले उसलाई पछ्याएँ, तर त्यो मान्छे पहिले नै बसमा चढेको जस्तो लाग्यो।","Nếu hết nước, thì hãy thêm vào.":"यदि तपाईंसँग पानी सकियो भने, थप थप्नुहोस्।","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","túc":"ပြီးပါပြီ။","chân tay":"ခြေလက်","đủ":"လုံလောက်ပါတယ်။","thêm vào":"ထည့်ပါ။","phép tính cộng":"ထပ်လောင်း","thiếu":"မရှိခြင်း။","một đôi giày":"ဖိနပ်တစ်ရံ","thỏa mãn":"ကျေနပ်သည်။","chi trả":"ပေးဆောင်","khoản chi":"ကုန်ကျစရိတ်","chi nhánh":"အခက်","phất":"လေလွင့်ခြင်း။","trả":"ပေးဆောင်","trả tiền":"ပေးဆောင်","dẫn":"လမ်းညွှန်","kéo, trừ":"ဆွဲ၊နုတ်","phép trừ":"နုတ်","giảm giá":"လျှော့စျေး","toán":"သင်္ချာ","tính toán":"တွက်ချက်","ngân sách":"ဘတ်ဂျက်","phí":"အခကြေးငွေ","chi phí":"ကုန်ကျစရိတ်","hội phí":"အသင်းဝင်ကြေး","học phí":"ကျူရှင်","tiền ăn":"စားစရာပိုက်ဆံ","phí giao thông":"ယာဉ်အသွားအလာအခကြေးငွေ","đuổi":"ပြေးသည်။","đuổi theo":"ပြေးသည်။","vượt":"ဖြတ်သန်းပါ။","đuổi kịp":"မီအောင်သွားသည်","việt":"ဗီယက်နမ်","vượt qua, trèo qua":"ကျော်တက်၊ ကျော်တက်","chuyển nhà":"အိမ်ပြောင်း","việc chuyển nhà":"အိမ်ပြောင်း","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Số tiền thanh toán không đủ.":"ပေးချေမှုပမာဏက မလုံလောက်ပါဘူး။","Họ đã giảm giá 1000 yên xuống còn 800 yên.":"သူတို့က ယန်း ၁၀၀၀ မှ ၈၀၀ ယန်းကို လျှော့လိုက်တယ်။","Trường trung học này học phí cao.":"ဤအထက်တန်းကျောင်းတွင် ကျူရှင်ခ မြင့်မားသည်။","Hãy thanh toán đầy đủ nhé.":"ကျေးဇူးပြု၍ အပြည့်ပေးချေပါ။","Tôi đã mua một đôi giày mới.":"ဖိနပ်အသစ်တစ်ရံဝယ်ခဲ့တယ်။","Tuần sau, tôi sẽ chuyển nhà.":"နောက်တစ်ပတ်ကျရင် အိမ်ပြောင်းမယ်။","Tôi đã quyết định mở chi nhánh ở Mỹ.":"အမေရိကမှာ ရုံးခွဲဖွင့်ဖို့ ဆုံးဖြတ်လိုက်တယ်။","Phí tham gia buổi tiệc là bao nhiêu?":"ပါတီဝင်ကြေး ဘယ်လောက်လဲ။","Tôi đã đuổi kịp vận động viên đang chạy phía trước.":"အပြေးသမားက ရှေ့ကို ပြေးတက်သွားတယ်။","Tôi không đủ ngân sách, không thể mua cái này.":"ငါ့မှာ ဘတ်ဂျက်မလောက်ဘူး၊ ဒါကို မဝယ်နိုင်ဘူး။","Dịch vụ này sẽ có phí phụ thu.":"ဤဝန်ဆောင်မှုသည် အပိုအခကြေးငွေ ပေးဆောင်ရမည်ဖြစ်သည်။","Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?":"အနုတ်ကိုသာသုံးပါ။ 7 အနှုတ် 2 နှင့် 5 ၊ မှန်ပါသလား။","Bạn cũng có thể thanh toán bằng thẻ.":"ကတ်ဖြင့်လည်း ပေးချေနိုင်သည်။","Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.":"ကျွန်တော် သူ့နောက်ကို လိုက်ခဲ့ပေမဲ့ အဲဒီလူက ဘတ်စ်ကားပေါ် ရောက်နေပြီလို့ ထင်ရတယ်။","Nếu hết nước, thì hãy thêm vào.":"ရေကုန်သွားရင် ထပ်ထည့်ပါ။","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","túc":"সম্পূর্ণ","chân tay":"অঙ্গ","đủ":"যথেষ্ট","thêm vào":"যোগ করুন","phép tính cộng":"সংযোজন","thiếu":"অভাব","một đôi giày":"এক জোড়া জুতা","thỏa mãn":"সন্তুষ্ট","chi trả":"বেতন","khoản chi":"খরচ","chi nhánh":"শাখা","phất":"ফ্লাটার","trả":"বেতন","trả tiền":"বেতন","dẫn":"গাইড","kéo, trừ":"টান, বিয়োগ","phép trừ":"বিয়োগ","giảm giá":"ডিসকাউন্ট","toán":"গণিত","tính toán":"গণনা করা","ngân sách":"বাজেট","phí":"ফি","chi phí":"খরচ","hội phí":"সদস্যতা ফি","học phí":"শিক্ষাদান","tiền ăn":"খাবারের টাকা","phí giao thông":"ট্রাফিক ফি","đuổi":"তাড়া","đuổi theo":"তাড়া","vượt":"পাস","đuổi kịp":"ধরা","việt":"ভিয়েতনামী","vượt qua, trèo qua":"ওভার, উপরে আরোহণ","chuyển nhà":"বাড়ি সরান","việc chuyển nhà":"চলন্ত বাড়ি","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Số tiền thanh toán không đủ.":"অর্থপ্রদানের পরিমাণ যথেষ্ট নয়।","Họ đã giảm giá 1000 yên xuống còn 800 yên.":"তারা দাম 1000 ইয়েন কমিয়ে 800 ইয়েন করেছে।","Trường trung học này học phí cao.":"এই উচ্চ বিদ্যালয় উচ্চ টিউশন ফি আছে.","Hãy thanh toán đầy đủ nhé.":"সম্পূর্ণ অর্থ প্রদান করুন.","Tôi đã mua một đôi giày mới.":"নতুন এক জোড়া জুতা কিনলাম।","Tuần sau, tôi sẽ chuyển nhà.":"পরের সপ্তাহে, আমি বাড়ি পাল্টাবো।","Tôi đã quyết định mở chi nhánh ở Mỹ.":"আমি আমেরিকায় একটি শাখা খোলার সিদ্ধান্ত নিয়েছি।","Phí tham gia buổi tiệc là bao nhiêu?":"পার্টি অংশগ্রহণ ফি কত?","Tôi đã đuổi kịp vận động viên đang chạy phía trước.":"আমি এগিয়ে চলমান রানার ধরা.","Tôi không đủ ngân sách, không thể mua cái này.":"আমার পর্যাপ্ত বাজেট নেই, এটা কিনতে পারছি না।","Dịch vụ này sẽ có phí phụ thu.":"এই পরিষেবার অতিরিক্ত ফি দিতে হবে।","Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?":"শুধু বিয়োগ ব্যবহার করুন। 7 বিয়োগ 2 সমান 5, তাই না?","Bạn cũng có thể thanh toán bằng thẻ.":"এছাড়াও আপনি কার্ড দ্বারা অর্থ প্রদান করতে পারেন।","Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.":"আমি তার পিছু পিছু ধাওয়া করলাম, কিন্তু মনে হল লোকটা ইতিমধ্যেই বাসে উঠে গেছে।","Nếu hết nước, thì hãy thêm vào.":"আপনার জল ফুরিয়ে গেলে, আরও যোগ করুন।","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","túc":"पूरा","chân tay":"अंग","đủ":"पर्याप्त","thêm vào":"जोड़ना","phép tính cộng":"जोड़ना","thiếu":"कमी","một đôi giày":"जूते की एक जोड़ी","thỏa mãn":"संतुष्ट","chi trả":"वेतन","khoản chi":"व्यय","chi nhánh":"शाखा","phất":"स्पंदन","trả":"वेतन","trả tiền":"वेतन","dẫn":"मार्गदर्शक","kéo, trừ":"खींचना, घटाना","phép trừ":"घटाव","giảm giá":"छूट","toán":"गणित","tính toán":"calculate","ngân sách":"बजट","phí":"शुल्क","chi phí":"व्यय","hội phí":"सदस्यता शुल्क","học phí":"ट्यूशन","tiền ăn":"भोजन का पैसा","phí giao thông":"यातायात शुल्क","đuổi":"पीछा करना","đuổi theo":"पीछा करना","vượt":"उत्तीर्ण","đuổi kịp":"पकड़ो","việt":"वियतनामी","vượt qua, trèo qua":"पार हो जाओ, ऊपर चढ़ जाओ","chuyển nhà":"बस जाना","việc chuyển nhà":"चलती घर","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Số tiền thanh toán không đủ.":"भुगतान राशि पर्याप्त नहीं है.","Họ đã giảm giá 1000 yên xuống còn 800 yên.":"उन्होंने कीमत 1000 येन से घटाकर 800 येन कर दी।","Trường trung học này học phí cao.":"इस हाई स्कूल में ट्यूशन फीस अधिक है।","Hãy thanh toán đầy đủ nhé.":"कृपया पूरा भुगतान करें.","Tôi đã mua một đôi giày mới.":"मैंने जूतों की एक नई जोड़ी खरीदी।","Tuần sau, tôi sẽ chuyển nhà.":"अगले सप्ताह, मैं घर बदल लूँगा।","Tôi đã quyết định mở chi nhánh ở Mỹ.":"मैंने अमेरिका में एक शाखा खोलने का निर्णय लिया।","Phí tham gia buổi tiệc là bao nhiêu?":"पार्टी भागीदारी शुल्क कितना है?","Tôi đã đuổi kịp vận động viên đang chạy phía trước.":"मैंने आगे दौड़ते हुए धावक को पकड़ लिया।","Tôi không đủ ngân sách, không thể mua cái này.":"मेरे पास पर्याप्त बजट नहीं है, मैं इसे नहीं खरीद सकता।","Dịch vụ này sẽ có phí phụ thu.":"इस सेवा पर अतिरिक्त शुल्क लगेगा.","Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?":"बस घटाव का प्रयोग करें. 7 घटा 2 बराबर 5, है ना?","Bạn cũng có thể thanh toán bằng thẻ.":"आप कार्ड से भी भुगतान कर सकते हैं.","Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.":"मैंने उसका पीछा किया, लेकिन ऐसा लगा कि वह व्यक्ति पहले ही बस में चढ़ चुका था।","Nếu hết nước, thì hãy thêm vào.":"यदि आपका पानी ख़त्म हो जाए तो और डालें।","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","túc":"สมบูรณ์","chân tay":"แขนขา","đủ":"เพียงพอ","thêm vào":"เพิ่ม","phép tính cộng":"ส่วนที่เพิ่มเข้าไป","thiếu":"ขาด","một đôi giày":"รองเท้าคู่หนึ่ง","thỏa mãn":"พอใจ","chi trả":"จ่าย","khoản chi":"ค่าใช้จ่าย","chi nhánh":"สาขา","phất":"กระพือปีก","trả":"จ่าย","trả tiền":"จ่าย","dẫn":"แนะนำ","kéo, trừ":"ดึง, ลบ","phép trừ":"การลบ","giảm giá":"การลดราคา","toán":"คณิตศาสตร์","tính toán":"คำนวณ","ngân sách":"งบประมาณ","phí":"ค่าธรรมเนียม","chi phí":"ค่าใช้จ่าย","hội phí":"ค่าธรรมเนียมสมาชิก","học phí":"ค่าเล่าเรียน","tiền ăn":"เงินค่าอาหาร","phí giao thông":"ค่าธรรมเนียมการจราจร","đuổi":"ไล่ล่า","đuổi theo":"ไล่ล่า","vượt":"ผ่าน","đuổi kịp":"ตามทัน","việt":"ภาษาเวียดนาม","vượt qua, trèo qua":"ข้ามไป ปีนข้ามไป","chuyển nhà":"ย้ายบ้าน","việc chuyển nhà":"ย้ายบ้าน","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Số tiền thanh toán không đủ.":"จำนวนเงินที่ชำระไม่เพียงพอ","Họ đã giảm giá 1000 yên xuống còn 800 yên.":"พวกเขาลดราคาลง 1,000 เยนเหลือ 800 เยน","Trường trung học này học phí cao.":"โรงเรียนมัธยมแห่งนี้มีค่าเล่าเรียนสูง","Hãy thanh toán đầy đủ nhé.":"กรุณาชำระเงินเต็มจำนวน","Tôi đã mua một đôi giày mới.":"ฉันซื้อรองเท้าคู่ใหม่","Tuần sau, tôi sẽ chuyển nhà.":"อาทิตย์หน้าฉันจะย้ายบ้าน","Tôi đã quyết định mở chi nhánh ở Mỹ.":"ฉันตัดสินใจเปิดสาขาที่อเมริกา","Phí tham gia buổi tiệc là bao nhiêu?":"ค่าธรรมเนียมเข้าร่วมปาร์ตี้เท่าไหร่?","Tôi đã đuổi kịp vận động viên đang chạy phía trước.":"ฉันตามทันนักวิ่งที่วิ่งไปข้างหน้า","Tôi không đủ ngân sách, không thể mua cái này.":"ฉันมีงบประมาณไม่เพียงพอไม่สามารถซื้อสิ่งนี้ได้","Dịch vụ này sẽ có phí phụ thu.":"บริการนี้จะมีค่าธรรมเนียมเพิ่มเติม","Chỉ cần dùng phép trừ là được. 7 trừ 2 bằng 5, đúng không?":"เพียงแค่ใช้การลบ 7 ลบ 2 เท่ากับ 5, จริงไหม?","Bạn cũng có thể thanh toán bằng thẻ.":"คุณยังสามารถชำระเงินด้วยบัตร","Tôi đã đuổi theo, nhưng hình như người đó đã lên xe buýt mất rồi.":"ฉันไล่ตามเขาไป แต่ดูเหมือนว่าคนนั้นจะขึ้นรถบัสไปแล้ว","Nếu hết nước, thì hãy thêm vào.":"หากน้ำหมดให้เติมเพิ่ม","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

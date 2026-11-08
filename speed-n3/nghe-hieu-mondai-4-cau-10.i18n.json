@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Muốn nhờ cấp trên kéo dài hạn cuối nộp báo cáo thêm 1 ngày. Thì sẽ nói gì?": "I want to ask my superiors to extend the report submission deadline by 1 more day. So what will you say?",
+    "Hạn cuối nộp báo cáo có thể kéo dài thêm 1 ngày giúp tôi được không ạ?": "Can the report submission deadline be extended by 1 day for me?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Muốn nhờ cấp trên kéo dài hạn cuối nộp báo cáo thêm 1 ngày. Thì sẽ nói gì?": "Saya ingin meminta kepada atasan saya untuk memperpanjang batas waktu penyampaian laporan 1 hari lagi. Jadi apa yang akan kamu katakan?",
+    "Hạn cuối nộp báo cáo có thể kéo dài thêm 1 ngày giúp tôi được không ạ?": "Apakah batas waktu penyampaian laporan dapat diperpanjang 1 hari bagi saya?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Muốn nhờ cấp trên kéo dài hạn cuối nộp báo cáo thêm 1 ngày. Thì sẽ nói gì?": "म मेरा उच्च अधिकारीहरूलाई प्रतिवेदन पेस गर्ने म्याद थप १ दिन थप गर्न अनुरोध गर्न चाहन्छु। त्यसोभए तपाई के भन्नुहुन्छ?",
+    "Hạn cuối nộp báo cáo có thể kéo dài thêm 1 ngày giúp tôi được không ạ?": "के मेरो लागि प्रतिवेदन पेस गर्ने म्याद १ दिनले बढाउन सकिन्छ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Muốn nhờ cấp trên kéo dài hạn cuối nộp báo cáo thêm 1 ngày. Thì sẽ nói gì?": "အစီရင်ခံစာတင်သွင်းမှု နောက်ဆုံးရက်ကို နောက်ထပ် ၁ ရက် သက်တမ်းတိုးပေးရန် ကျွန်ုပ်၏ အထက်အရာရှိများကို တောင်းဆိုလိုပါသည်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Hạn cuối nộp báo cáo có thể kéo dài thêm 1 ngày giúp tôi được không ạ?": "အစီရင်ခံစာတင်သွင်းမှု နောက်ဆုံးရက်ကို ကျွန်ုပ်အတွက် ၁ ရက် တိုးနိုင်ပါသလား။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Muốn nhờ cấp trên kéo dài hạn cuối nộp báo cáo thêm 1 ngày. Thì sẽ nói gì?": "আমি আমার ঊর্ধ্বতনদের কাছে রিপোর্ট জমা দেওয়ার সময়সীমা আরও 1 দিন বাড়ানোর জন্য বলতে চাই। তাহলে কি বলবেন?",
+    "Hạn cuối nộp báo cáo có thể kéo dài thêm 1 ngày giúp tôi được không ạ?": "রিপোর্ট জমা দেওয়ার সময়সীমা কি আমার জন্য 1 দিন বাড়ানো যেতে পারে?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Muốn nhờ cấp trên kéo dài hạn cuối nộp báo cáo thêm 1 ngày. Thì sẽ nói gì?": "मैं अपने वरिष्ठों से रिपोर्ट जमा करने की समय सीमा 1 दिन और बढ़ाने के लिए कहना चाहता हूं। तो आप क्या कहेंगे?",
+    "Hạn cuối nộp báo cáo có thể kéo dài thêm 1 ngày giúp tôi được không ạ?": "क्या मेरे लिए रिपोर्ट जमा करने की समय सीमा 1 दिन बढ़ाई जा सकती है?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Muốn nhờ cấp trên kéo dài hạn cuối nộp báo cáo thêm 1 ngày. Thì sẽ nói gì?": "ฉันต้องการขอให้ผู้บังคับบัญชาขยายกำหนดเวลาการส่งรายงานออกไปอีก 1 วัน แล้วคุณจะว่าอย่างไร?",
+    "Hạn cuối nộp báo cáo có thể kéo dài thêm 1 ngày giúp tôi được không ạ?": "ฉันสามารถขยายกำหนดเวลาการส่งรายงานออกไปอีก 1 วันได้หรือไม่"
+  }
+}

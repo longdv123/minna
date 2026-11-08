@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Đề nghị mang hành lý cho giáo viên. Thì sẽ nói gì?": "Offer to carry luggage for the teacher. So what will you say?",
+    "Cô ơi, cái này để em xách cho nhé ạ!": "Miss, let me carry this for you!"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Đề nghị mang hành lý cho giáo viên. Thì sẽ nói gì?": "Tawarkan untuk membawakan barang bawaan untuk guru. Jadi apa yang akan kamu katakan?",
+    "Cô ơi, cái này để em xách cho nhé ạ!": "Nona, biarkan aku membawakan ini untukmu!"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Đề nghị mang hành lý cho giáo viên. Thì sẽ nói gì?": "शिक्षकको लागि सामान बोक्न प्रस्ताव गर्नुहोस्। त्यसोभए तपाई के भन्नुहुन्छ?",
+    "Cô ơi, cái này để em xách cho nhé ạ!": "मिस, मलाई यो तपाईंको लागि बोक्न दिनुहोस्!"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Đề nghị mang hành lý cho giáo viên. Thì sẽ nói gì?": "ဆရာ့အတွက် အထုပ်အပိုးတွေ သယ်ပေးတယ်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Cô ơi, cái này để em xách cho nhé ạ!": "Miss ၊ ဒီဟာကို မင်းအတွက် ဆောင်ထားပါရစေ။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Đề nghị mang hành lý cho giáo viên. Thì sẽ nói gì?": "শিক্ষকের জন্য লাগেজ বহন করার প্রস্তাব। তাহলে কি বলবেন?",
+    "Cô ơi, cái này để em xách cho nhé ạ!": "মিস, আমাকে আপনার জন্য এটি বহন করতে দিন!"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Đề nghị mang hành lý cho giáo viên. Thì sẽ nói gì?": "शिक्षक के लिए सामान ले जाने की पेशकश करें। तो आप क्या कहेंगे?",
+    "Cô ơi, cái này để em xách cho nhé ạ!": "मिस, मुझे इसे आपके लिए ले जाने दीजिए!"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Đề nghị mang hành lý cho giáo viên. Thì sẽ nói gì?": "เสนอที่จะขนสัมภาระให้ครู แล้วคุณจะว่าอย่างไร?",
+    "Cô ơi, cái này để em xách cho nhé ạ!": "คุณหนูให้ฉันถือสิ่งนี้ให้คุณ!"
+  }
+}

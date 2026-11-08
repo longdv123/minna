@@ -1,0 +1,93 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Người phụ nữ đang nói về món ăn.": "The woman is talking about food.",
+    "Món lẩu thì bạn đã ăn rồi nhỉ. Là món bỏ thịt, cá, rau… vào nồi rồi vừa nấu vừa ăn. Mọi người thường quây quanh một nồi lớn và ăn từ từ. Sukiyaki cũng là một món lẩu. Tuy nhiên, nếu nói đến \"udon nấu trong nồi\" thì đó là món dành cho một người, được phục vụ trong nồi nhỏ cá nhân. Trong đó có udon, rau, thịt, đậu phụ chiên và cả mochi. Vì được dọn nguyên trong nồi nên khó nguội, nên rất hợp cho những ngày như hôm nay.": "You have already eaten hot pot, right? It's a dish that puts meat, fish, vegetables... in a pot and cooks while eating. People often gather around a large pot and eat slowly. Sukiyaki is also a hot pot dish. However, if we talk about \"udon cooked in a pot\", it is a dish for one person, served in a small individual pot. Including udon, vegetables, meat, fried tofu and mochi. Because it is served whole in the pot, it is difficult to cool, so it is very suitable for days like today.",
+    "Người phụ nữ giải thích món udon nấu trong nồi là món ăn như thế nào?": "The woman explains what kind of dish is udon cooked in a pot?",
+    "Món ăn sang trọng": "Luxurious dish",
+    "Món ăn làm ấm cơ thể": "Food that warms the body",
+    "Món ăn để ăn chung với mọi người": "Food to eat with everyone",
+    "Món ăn có cân bằng dinh dưỡng tốt": "The dish has good nutritional balance",
+    "Đáp án đúng": "Correct answer"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Người phụ nữ đang nói về món ăn.": "Wanita itu sedang berbicara tentang makanan.",
+    "Món lẩu thì bạn đã ăn rồi nhỉ. Là món bỏ thịt, cá, rau… vào nồi rồi vừa nấu vừa ăn. Mọi người thường quây quanh một nồi lớn và ăn từ từ. Sukiyaki cũng là một món lẩu. Tuy nhiên, nếu nói đến \"udon nấu trong nồi\" thì đó là món dành cho một người, được phục vụ trong nồi nhỏ cá nhân. Trong đó có udon, rau, thịt, đậu phụ chiên và cả mochi. Vì được dọn nguyên trong nồi nên khó nguội, nên rất hợp cho những ngày như hôm nay.": "Anda sudah makan hot pot kan? Ini adalah hidangan yang memasukkan daging, ikan, sayuran... ke dalam panci dan dimasak sambil dimakan. Orang sering berkumpul di sekitar panci besar dan makan perlahan. Sukiyaki juga merupakan hidangan hot pot. Namun, jika kita berbicara tentang \"udon yang dimasak dalam panci\", itu adalah hidangan untuk satu orang, disajikan dalam panci kecil. Termasuk udon, sayur mayur, daging, tahu goreng, dan mochi. Karena disajikan utuh di dalam panci, sulit untuk didinginkan sehingga sangat cocok untuk hari-hari seperti sekarang ini.",
+    "Người phụ nữ giải thích món udon nấu trong nồi là món ăn như thế nào?": "Wanita itu menjelaskan jenis hidangan apa yang dimasak udon dalam panci?",
+    "Món ăn sang trọng": "Hidangan mewah",
+    "Món ăn làm ấm cơ thể": "Makanan yang menghangatkan tubuh",
+    "Món ăn để ăn chung với mọi người": "Makanan untuk dimakan bersama semua orang",
+    "Món ăn có cân bằng dinh dưỡng tốt": "Hidangan ini memiliki keseimbangan nutrisi yang baik",
+    "Đáp án đúng": "Jawaban yang benar"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Người phụ nữ đang nói về món ăn.": "महिला खानाको बारेमा कुरा गरिरहेकी छिन्।",
+    "Món lẩu thì bạn đã ăn rồi nhỉ. Là món bỏ thịt, cá, rau… vào nồi rồi vừa nấu vừa ăn. Mọi người thường quây quanh một nồi lớn và ăn từ từ. Sukiyaki cũng là một món lẩu. Tuy nhiên, nếu nói đến \"udon nấu trong nồi\" thì đó là món dành cho một người, được phục vụ trong nồi nhỏ cá nhân. Trong đó có udon, rau, thịt, đậu phụ chiên và cả mochi. Vì được dọn nguyên trong nồi nên khó nguội, nên rất hợp cho những ngày như hôm nay.": "तपाईंले पहिले नै तातो भाँडो खाइसक्नुभएको छ, हैन? यो एउटा भाँडो हो जसले मासु, माछा, तरकारी... भाँडोमा राख्छ र खाँदा पकाउँछ। मानिसहरू प्रायः ठूलो भाँडोको वरिपरि भेला हुन्छन् र बिस्तारै खान्छन्। सुकियाकी पनि तातो भाँडो परिकार हो। यद्यपि, यदि हामी \"उडोन भाँडामा पकाइएको\" को बारेमा कुरा गर्छौं, यो एक व्यक्तिको लागि एक सानो भाँडोमा सेवा गरिएको पकवान हो। उडोन, तरकारी, मासु, फ्राइड टोफु र मोची सहित। यो बर्तनमा पुरै परोसिएको हुनाले, यसलाई चिसो गर्न गाह्रो हुन्छ, त्यसैले यो आजका दिनहरूका लागि धेरै उपयुक्त छ।",
+    "Người phụ nữ giải thích món udon nấu trong nồi là món ăn như thế nào?": "युवतीले भाँडामा उदोन पकाएको कस्तो परिकार भनिन् ?",
+    "Món ăn sang trọng": "विलासी परिकार",
+    "Món ăn làm ấm cơ thể": "शरीरलाई न्यानो बनाउने खानेकुरा",
+    "Món ăn để ăn chung với mọi người": "सबैसँग खाने खाना",
+    "Món ăn có cân bằng dinh dưỡng tốt": "डिशमा राम्रो पोषण सन्तुलन छ",
+    "Đáp án đúng": "सहि उत्तर"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Người phụ nữ đang nói về món ăn.": "အမျိုးသမီးက အစားအသောက်အကြောင်း ပြောနေတယ်။",
+    "Món lẩu thì bạn đã ăn rồi nhỉ. Là món bỏ thịt, cá, rau… vào nồi rồi vừa nấu vừa ăn. Mọi người thường quây quanh một nồi lớn và ăn từ từ. Sukiyaki cũng là một món lẩu. Tuy nhiên, nếu nói đến \"udon nấu trong nồi\" thì đó là món dành cho một người, được phục vụ trong nồi nhỏ cá nhân. Trong đó có udon, rau, thịt, đậu phụ chiên và cả mochi. Vì được dọn nguyên trong nồi nên khó nguội, nên rất hợp cho những ngày như hôm nay.": "ဟော့ပေါ့ စားပြီးပြီလား။ အသား ၊ ငါး ​​၊ အသီးအရွက် တွေကို အိုးထဲ ထည့် ပြီး စား ရင်း ချက်ပြုတ် တဲ့ ဟင်း တစ်မျိုး ပါ ။ လူတွေက အိုးကြီးတစ်လုံးမှာ စုပြီး ဖြည်းညှင်းစွာ စားသောက်လေ့ရှိပါတယ်။ Sukiyaki သည် ဟော့ပေါ့ဟင်းတစ်မျိုးလည်းဖြစ်သည်။ သို့သော် \"အိုးထဲတွင်ပြုတ်ထားသောအူဒွန်\" အကြောင်းပြောလျှင်၎င်းသည် လူတစ်ဦးချင်းအတွက် သေးငယ်သောအိုးတစ်လုံးတွင် ကျွေးသောဟင်းဖြစ်သည်။ အူဒွန်၊ ဟင်းသီးဟင်းရွက်များ၊ အသားများ၊ တို့ဟူးကြော်နှင့် မိုချီတို့ ပါဝင်သည်။ အိုးထဲမှာ အကုန်ထည့်ထားတာကြောင့် အအေးရခက်တဲ့အတွက် ဒီနေ့လို နေ့မျိုးတွေအတွက် အရမ်းသင့်တော်ပါတယ်။",
+    "Người phụ nữ giải thích món udon nấu trong nồi là món ăn như thế nào?": "အိုးတစ်လုံးထဲမှာ အူဒွန်ပြုတ်ထားတဲ့ ဟင်းအမျိုးအစားကို အမျိုးသမီးက ရှင်းပြတယ်။",
+    "Món ăn sang trọng": "ဇိမ်ခံဟင်း",
+    "Món ăn làm ấm cơ thể": "ခန္ဓာကိုယ်ကို နွေးထွေးစေသော အစားအစာများ",
+    "Món ăn để ăn chung với mọi người": "အစားအသောက်ကို လူတိုင်းနဲ့ တွဲစားပါ။",
+    "Món ăn có cân bằng dinh dưỡng tốt": "ဟင်းလျာသည် ကောင်းမွန်သော အာဟာရမျှတမှုရှိသည်။",
+    "Đáp án đúng": "အဖြေမှန်"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Người phụ nữ đang nói về món ăn.": "মহিলা খাবারের কথা বলছেন।",
+    "Món lẩu thì bạn đã ăn rồi nhỉ. Là món bỏ thịt, cá, rau… vào nồi rồi vừa nấu vừa ăn. Mọi người thường quây quanh một nồi lớn và ăn từ từ. Sukiyaki cũng là một món lẩu. Tuy nhiên, nếu nói đến \"udon nấu trong nồi\" thì đó là món dành cho một người, được phục vụ trong nồi nhỏ cá nhân. Trong đó có udon, rau, thịt, đậu phụ chiên và cả mochi. Vì được dọn nguyên trong nồi nên khó nguội, nên rất hợp cho những ngày như hôm nay.": "আপনি ইতিমধ্যে গরম পাত্র খেয়েছেন, তাই না? এটি এমন একটি খাবার যা মাংস, মাছ, শাকসবজি... একটি পাত্রে রাখে এবং খাওয়ার সময় রান্না করে। লোকেরা প্রায়শই একটি বড় পাত্রের চারপাশে জড়ো হয় এবং ধীরে ধীরে খায়। সুকিয়াকিও একটি গরম পাত্রের খাবার। যাইহোক, যদি আমরা \"একটি পাত্রে রান্না করা উদন\" সম্পর্কে কথা বলি, এটি একজন ব্যক্তির জন্য একটি খাবার, একটি ছোট পৃথক পাত্রে পরিবেশন করা হয়। উদন, সবজি, মাংস, ভাজা তোফু এবং মোচি সহ। যেহেতু এটি পাত্রে পুরো পরিবেশন করা হয়, এটি ঠান্ডা করা কঠিন, তাই এটি আজকের মতো দিনের জন্য খুব উপযুক্ত।",
+    "Người phụ nữ giải thích món udon nấu trong nồi là món ăn như thế nào?": "মহিলা বুঝিয়ে দিলেন উদন কোন পাত্রে রান্না করা হয়?",
+    "Món ăn sang trọng": "বিলাসবহুল থালা",
+    "Món ăn làm ấm cơ thể": "শরীর গরম করে এমন খাবার",
+    "Món ăn để ăn chung với mọi người": "সবার সাথে খাওয়ার খাবার",
+    "Món ăn có cân bằng dinh dưỡng tốt": "থালাটির পুষ্টির ভারসাম্য ভাল",
+    "Đáp án đúng": "সঠিক উত্তর"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Người phụ nữ đang nói về món ăn.": "महिला खाने के बारे में बात कर रही है.",
+    "Món lẩu thì bạn đã ăn rồi nhỉ. Là món bỏ thịt, cá, rau… vào nồi rồi vừa nấu vừa ăn. Mọi người thường quây quanh một nồi lớn và ăn từ từ. Sukiyaki cũng là một món lẩu. Tuy nhiên, nếu nói đến \"udon nấu trong nồi\" thì đó là món dành cho một người, được phục vụ trong nồi nhỏ cá nhân. Trong đó có udon, rau, thịt, đậu phụ chiên và cả mochi. Vì được dọn nguyên trong nồi nên khó nguội, nên rất hợp cho những ngày như hôm nay.": "आप पहले ही हॉट पॉट खा चुके हैं, है ना? यह एक ऐसा व्यंजन है जो मांस, मछली, सब्जियाँ... एक बर्तन में डालता है और खाते समय पक जाता है। लोग अक्सर एक बड़े बर्तन के आसपास इकट्ठा होते हैं और धीरे-धीरे खाना खाते हैं। सुकियाकी भी एक हॉट पॉट डिश है। हालाँकि, अगर हम \"बर्तन में पकाए गए उडोन\" के बारे में बात करते हैं, तो यह एक व्यक्ति के लिए एक व्यंजन है, जिसे एक छोटे व्यक्तिगत बर्तन में परोसा जाता है। जिसमें उडोन, सब्जियां, मांस, तला हुआ टोफू और मोची शामिल हैं। क्योंकि इसे बर्तन में पूरा परोसा जाता है, इसलिए इसे ठंडा करना मुश्किल होता है, इसलिए यह आज जैसे दिनों के लिए बहुत उपयुक्त है।",
+    "Người phụ nữ giải thích món udon nấu trong nồi là món ăn như thế nào?": "महिला बताती है कि बर्तन में उडॉन किस तरह का व्यंजन पकाया जाता है?",
+    "Món ăn sang trọng": "शानदार व्यंजन",
+    "Món ăn làm ấm cơ thể": "भोजन जो शरीर को गर्म करता है",
+    "Món ăn để ăn chung với mọi người": "सबके साथ खाना खाना",
+    "Món ăn có cân bằng dinh dưỡng tốt": "इस व्यंजन में अच्छा पोषण संतुलन है",
+    "Đáp án đúng": "सही जवाब"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Người phụ nữ đang nói về món ăn.": "ผู้หญิงกำลังพูดถึงเรื่องอาหาร",
+    "Món lẩu thì bạn đã ăn rồi nhỉ. Là món bỏ thịt, cá, rau… vào nồi rồi vừa nấu vừa ăn. Mọi người thường quây quanh một nồi lớn và ăn từ từ. Sukiyaki cũng là một món lẩu. Tuy nhiên, nếu nói đến \"udon nấu trong nồi\" thì đó là món dành cho một người, được phục vụ trong nồi nhỏ cá nhân. Trong đó có udon, rau, thịt, đậu phụ chiên và cả mochi. Vì được dọn nguyên trong nồi nên khó nguội, nên rất hợp cho những ngày như hôm nay.": "คุณได้กินหม้อไฟแล้วใช่ไหม? เป็นอาหารที่ใส่เนื้อ ปลา ผัก...ลงหม้อแล้วปรุงขณะรับประทาน ผู้คนมักจะรวมตัวกันรอบหม้อขนาดใหญ่และรับประทานอาหารช้าๆ สุกี้ยากี้ก็เป็นอาหารจานร้อนเช่นกัน อย่างไรก็ตาม หากเราพูดถึง \"อูด้งปรุงในหม้อ\" ก็คืออาหารสำหรับ 1 คน โดยเสิร์ฟในหม้อเล็กๆ ทั้งอุด้ง ผัก เนื้อ เต้าหู้ทอด และโมจิ เนื่องจากเสิร์ฟทั้งหม้อจึงทำให้เย็นยาก จึงเหมาะกับวันเช่นวันนี้มาก",
+    "Người phụ nữ giải thích món udon nấu trong nồi là món ăn như thế nào?": "ผู้หญิงคนนั้นอธิบายว่าอุด้งในหม้อเป็นเมนูประเภทไหน?",
+    "Món ăn sang trọng": "จานหรู",
+    "Món ăn làm ấm cơ thể": "อาหารที่ทำให้ร่างกายอบอุ่น",
+    "Món ăn để ăn chung với mọi người": "ของกินกับทุกคน.",
+    "Món ăn có cân bằng dinh dưỡng tốt": "จานนี้มีสมดุลทางโภชนาการที่ดี",
+    "Đáp án đúng": "คำตอบที่ถูกต้อง"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Hỏi nhân viên cửa hàng có size khác không? Thì sẽ nói gì?": "Ask the store staff if there are other sizes? So what will you say?",
+    "Xin lỗi, có size M của cái này không ạ?": "Sorry, is there size M for this?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Hỏi nhân viên cửa hàng có size khác không? Thì sẽ nói gì?": "Tanyakan kepada staf toko apakah ada ukuran lain? Jadi apa yang akan kamu katakan?",
+    "Xin lỗi, có size M của cái này không ạ?": "Maaf, apakah ada ukuran M untuk ini?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Hỏi nhân viên cửa hàng có size khác không? Thì sẽ nói gì?": "पसल कर्मचारीलाई सोध्नुहोस् यदि त्यहाँ अन्य आकारहरू छन्? त्यसोभए के भन्नुहुन्छ?",
+    "Xin lỗi, có size M của cái này không ạ?": "माफ गर्नुहोस्, यसको लागि M आकार छ?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Hỏi nhân viên cửa hàng có size khác không? Thì sẽ nói gì?": "အခြားအရွယ်အစားရှိမရှိကို စတိုးဆိုင်ဝန်ထမ်းများကို မေးပါ။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Xin lỗi, có size M của cái này không ạ?": "ဝမ်းနည်းပါတယ်၊ ဒီအတွက် အရွယ်အစား M ရှိပါသလား။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Hỏi nhân viên cửa hàng có size khác không? Thì sẽ nói gì?": "দোকানের কর্মীদের জিজ্ঞাসা করুন অন্য মাপ আছে কিনা? তাহলে কি বলবেন?",
+    "Xin lỗi, có size M của cái này không ạ?": "দুঃখিত, এর জন্য M আকার আছে?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Hỏi nhân viên cửa hàng có size khác không? Thì sẽ nói gì?": "स्टोर स्टाफ से पूछें कि क्या अन्य आकार हैं? तो आप क्या कहेंगे?",
+    "Xin lỗi, có size M của cái này không ạ?": "क्षमा करें, क्या इसके लिए कोई आकार M है?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Hỏi nhân viên cửa hàng có size khác không? Thì sẽ nói gì?": "ถามพนักงานร้านว่ามีไซส์อื่นมั้ย? แล้วคุณจะว่าอย่างไร?",
+    "Xin lỗi, có size M của cái này không ạ?": "ขออภัย มีไซส์ M สำหรับสินค้านี้ไหม"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Muốn bạn cho mượn từ điển khoảng 30 phút. Thì sẽ nói gì?": "I want you to lend me your dictionary for about 30 minutes. So what will you say?",
+    "Này, tôi có thể mượn cái đó một chút không?": "Hey, can I borrow that for a bit?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Muốn bạn cho mượn từ điển khoảng 30 phút. Thì sẽ nói gì?": "Saya ingin Anda meminjamkan saya kamus Anda selama sekitar 30 menit. Jadi apa yang akan kamu katakan?",
+    "Này, tôi có thể mượn cái đó một chút không?": "Hei, bisakah aku meminjamnya sebentar?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Muốn bạn cho mượn từ điển khoảng 30 phút. Thì sẽ nói gì?": "म चाहन्छु कि तपाईले मलाई लगभग 30 मिनेटको लागि तपाईको शब्दकोश उधारो दिनुहोस्। त्यसोभए तपाई के भन्नुहुन्छ?",
+    "Này, tôi có thể mượn cái đó một chút không?": "हे, के म त्यो अलिकति उधारो लिन सक्छु?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Muốn bạn cho mượn từ điển khoảng 30 phút. Thì sẽ nói gì?": "မင်းရဲ့အဘိဓာန်ကို မိနစ် 30 လောက် ငှားစေချင်တယ်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Này, tôi có thể mượn cái đó một chút không?": "ဟေး အဲဒါကို ခဏလောက် ငှားလို့ရမလား"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Muốn bạn cho mượn từ điển khoảng 30 phút. Thì sẽ nói gì?": "আমি চাই আপনি আমাকে প্রায় 30 মিনিটের জন্য আপনার অভিধান ধার দিন। তাহলে কি বলবেন?",
+    "Này, tôi có thể mượn cái đó một chút không?": "আরে, আমি কি একটু ধার নিতে পারি?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Muốn bạn cho mượn từ điển khoảng 30 phút. Thì sẽ nói gì?": "मैं चाहता हूं कि आप मुझे लगभग 30 मिनट के लिए अपना शब्दकोश उधार दें। तो आप क्या कहेंगे?",
+    "Này, tôi có thể mượn cái đó một chút không?": "अरे, क्या मैं इसे कुछ समय के लिए उधार ले सकता हूँ?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Muốn bạn cho mượn từ điển khoảng 30 phút. Thì sẽ nói gì?": "ฉันอยากให้คุณยืมพจนานุกรมของคุณสัก 30 นาที แล้วคุณจะว่าอย่างไร?",
+    "Này, tôi có thể mượn cái đó một chút không?": "เฮ้ ฉันขอยืมมันสักหน่อยได้ไหม?"
+  }
+}

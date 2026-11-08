@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Bây giờ, tình trạng cơ thể không tốt. Muốn về từ buổi chiều. Thì sẽ nói gì với cấp trên?": "Now, the body condition is not good. Wanted to return in the afternoon. What will you say to your superiors?",
+    "Xin lỗi, vì không được khỏe, xin phép cho tôi trở về nhà vào buổi chiều ạ.": "Sorry, I'm not feeling well, please allow me to return home in the afternoon."
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Bây giờ, tình trạng cơ thể không tốt. Muốn về từ buổi chiều. Thì sẽ nói gì với cấp trên?": "Kini kondisi badannya kurang baik. Ingin kembali pada sore hari. Apa yang akan Anda katakan kepada atasan Anda?",
+    "Xin lỗi, vì không được khỏe, xin phép cho tôi trở về nhà vào buổi chiều ạ.": "Maaf, saya sedang tidak enak badan, izinkan saya pulang ke rumah pada sore hari."
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Bây giờ, tình trạng cơ thể không tốt. Muốn về từ buổi chiều. Thì sẽ nói gì với cấp trên?": "अहिले शरीरको अवस्था राम्रो छैन । दिउँसो फर्किन मन लाग्यो । तपाई आफ्नो माथिल्लो निकायलाई के भन्नुहुन्छ?",
+    "Xin lỗi, vì không được khỏe, xin phép cho tôi trở về nhà vào buổi chiều ạ.": "माफ गर्नुहोस्, म ठिक छैन, कृपया मलाई दिउँसो घर फर्कन अनुमति दिनुहोस्।"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Bây giờ, tình trạng cơ thể không tốt. Muốn về từ buổi chiều. Thì sẽ nói gì với cấp trên?": "အခုတော့ ခန္ဓာကိုယ် အခြေအနေက မကောင်းတော့ဘူး။ နေ့လည်က ပြန်လာချင်သည်။ မင်းရဲ့ အထက်အရာရှိတွေကို မင်းဘာပြောမလဲ။",
+    "Xin lỗi, vì không được khỏe, xin phép cho tôi trở về nhà vào buổi chiều ạ.": "တောင်းပန်ပါတယ် ငါနေမကောင်းဘူး၊ နေ့ခင်းမှာ အိမ်ပြန်ခွင့်ပြုပါ။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Bây giờ, tình trạng cơ thể không tốt. Muốn về từ buổi chiều. Thì sẽ nói gì với cấp trên?": "এখন শরীরের অবস্থা ভালো না। বিকেলে ফিরতে চাইল। আপনি আপনার উর্ধ্বতনদের কি বলবেন?",
+    "Xin lỗi, vì không được khỏe, xin phép cho tôi trở về nhà vào buổi chiều ạ.": "দুঃখিত, আমি ভালো বোধ করছি না, দয়া করে আমাকে বিকেলে বাড়ি ফিরতে দিন।"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Bây giờ, tình trạng cơ thể không tốt. Muốn về từ buổi chiều. Thì sẽ nói gì với cấp trên?": "अभी शरीर की स्थिति ठीक नहीं है. दोपहर को लौटना था. आप अपने वरिष्ठों से क्या कहेंगे?",
+    "Xin lỗi, vì không được khỏe, xin phép cho tôi trở về nhà vào buổi chiều ạ.": "क्षमा करें, मेरी तबियत ठीक नहीं है, कृपया मुझे दोपहर में घर लौटने की अनुमति दें।"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Bây giờ, tình trạng cơ thể không tốt. Muốn về từ buổi chiều. Thì sẽ nói gì với cấp trên?": "ตอนนี้สภาพร่างกายไม่ค่อยดี ต้องการกลับช่วงบ่าย คุณจะพูดอะไรกับผู้บังคับบัญชาของคุณ?",
+    "Xin lỗi, vì không được khỏe, xin phép cho tôi trở về nhà vào buổi chiều ạ.": "ขอโทษที ฉันไม่สบาย ขออนุญาตกลับบ้านตอนบ่ายนะ"
+  }
+}

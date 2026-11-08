@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Đã quên mang bài báo cáo. Thì sẽ nói gì với giáo viên?": "Forgot to bring the report. So what will you say to the teacher?",
+    "Xin lỗi ngày mai em nộp báo cáo có được không ạ?": "Sorry, can I submit the report tomorrow?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Đã quên mang bài báo cáo. Thì sẽ nói gì với giáo viên?": "Lupa membawa laporan. Jadi apa yang akan kamu katakan kepada guru?",
+    "Xin lỗi ngày mai em nộp báo cáo có được không ạ?": "Maaf, bisakah saya mengirimkan laporannya besok?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Đã quên mang bài báo cáo. Thì sẽ nói gì với giáo viên?": "रिपोर्ट ल्याउन बिर्सियो। त्यसोभए तपाई शिक्षकलाई के भन्नुहुन्छ?",
+    "Xin lỗi ngày mai em nộp báo cáo có được không ạ?": "माफ गर्नुहोस्, के म भोलि रिपोर्ट पेश गर्न सक्छु?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Đã quên mang bài báo cáo. Thì sẽ nói gì với giáo viên?": "အစီရင်ခံစာ ယူလာဖို့ မေ့သွားတယ်။ ဒါနဲ့ ဆရာ့ကို ဘာပြောမလဲ။",
+    "Xin lỗi ngày mai em nộp báo cáo có được không ạ?": "ဝမ်းနည်းပါတယ်၊ မနက်ဖြန် အစီရင်ခံစာကို တင်သွင်းလို့ရမလား။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Đã quên mang bài báo cáo. Thì sẽ nói gì với giáo viên?": "রিপোর্ট আনতে ভুলে গেছি। তাহলে শিক্ষককে কী বলবেন?",
+    "Xin lỗi ngày mai em nộp báo cáo có được không ạ?": "দুঃখিত, আমি কি আগামীকাল রিপোর্ট জমা দিতে পারি?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Đã quên mang bài báo cáo. Thì sẽ nói gì với giáo viên?": "रिपोर्ट लाना भूल गये. तो आप टीचर से क्या कहेंगे?",
+    "Xin lỗi ngày mai em nộp báo cáo có được không ạ?": "क्षमा करें, क्या मैं कल रिपोर्ट प्रस्तुत कर सकता हूँ?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Đã quên mang bài báo cáo. Thì sẽ nói gì với giáo viên?": "ลืมเอารายงานมาครับ.. แล้วจะพูดอะไรกับอาจารย์ล่ะ?",
+    "Xin lỗi ngày mai em nộp báo cáo có được không ạ?": "ขออภัย ฉันสามารถส่งรายงานพรุ่งนี้ได้ไหม"
+  }
+}

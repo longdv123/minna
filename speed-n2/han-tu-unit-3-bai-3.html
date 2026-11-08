@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">悩</div></div><div class="kcell k-hv"><span class="vi-tr">não</span></div><div class="kcell k-read"><div class="on">ノウ</div><div>なやーむ／なやーみ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>悩<rp>（</rp><rt>なや</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">ưu phiền</span></div></div><div class="kitem"><div class="jp"><ruby>悩<rp>（</rp><rt>なや</rt><rp>）</rp></ruby>み</div><div class="vi"><span class="vi-tr">sự ưu phiền</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">叫</div></div><div class="kcell k-hv"><span class="vi-tr">khiếu</span></div><div class="kcell k-read"><div>さけーぶ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>叫<rp>（</rp><rt>さけ</rt><rp>）</rp></ruby>ぶ</div><div class="vi"><span class="vi-tr">gào</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">嫌</div></div><div class="kcell k-hv"><span class="vi-tr">hiềⅿ</span></div><div class="kcell k-read"><div class="on">（ケン）／ゲン</div><div>きらーう／きらーい／いや</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>嫌<rp>（</rp><rt>きら</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">ghét</span></div></div><div class="kitem"><div class="jp"><ruby>嫌<rp>（</rp><rt>いや</rt><rp>）</rp></ruby>がる</div><div class="vi"><span class="vi-tr">khó chịu</span> </div></div><div class="kitem"><div class="jp"><ruby>嫌<rp>（</rp><rt>きら</rt><rp>）</rp></ruby>い（な）</div><div class="vi"><span class="vi-tr">ghét</span> </div></div><div class="kitem"><div class="jp"><ruby>嫌<rp>（</rp><rt>いや</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">khó chịu</span> </div></div><div class="kitem"><div class="jp"><ruby>機嫌<rp>（</rp><rt>きげん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tâm trạng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">言</div></div><div class="kcell k-hv"><span class="vi-tr">ngôn</span></div><div class="kcell k-read"><div class="on">ゲン／ゴン</div><div>いーう／こと</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>言葉<rp>（</rp><rt>ことば</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lời nói</span> </div></div><div class="kitem"><div class="jp"><ruby>独<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>りごと</div><div class="vi"><span class="vi-tr">nói một mình</span> </div></div><div class="kitem"><div class="jp"><ruby>言語<rp>（</rp><rt>げんご</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngôn ngữ</span></div></div><div class="kitem"><div class="jp"><ruby>方言<rp>（</rp><rt>ほうげん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">từ địa phương</span> </div></div><div class="kitem"><div class="jp"><ruby>伝言<rp>（</rp><rt>でんごん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lời nhắn</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">彼</div></div><div class="kcell k-hv"><span class="vi-tr">bỉ</span></div><div class="kcell k-read"><div>かれ／かの</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">anh ấy</span> </div></div><div class="kitem"><div class="jp"><ruby>彼女<rp>（</rp><rt>かのじょ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cô ấy</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">精</div></div><div class="kcell k-hv">tinh</div><div class="kcell k-read"><div class="on">セイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>精神<rp>（</rp><rt>せいしん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tinh thần</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">状</div></div><div class="kcell k-hv"><span class="vi-tr">trạng</span> </div><div class="kcell k-read"><div class="on">ジョウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>状態<rp>（</rp><rt>じょうたい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trạng thái</span></div></div><div class="kitem"><div class="jp"><ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tình trạng</span> </div></div><div class="kitem"><div class="jp"><ruby>現状<rp>（</rp><rt>げんじょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hiện trạng</span> </div></div><div class="kitem"><div class="jp"><ruby>招待状<rp>（</rp><rt>しょうたいじょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giấy mời</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">怒</div></div><div class="kcell k-hv"><span class="vi-tr">nộ</span></div><div class="kcell k-read"><div>（いかーる）／（いかーり）／おこーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>怒<rp>（</rp><rt>おこ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">giận</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">笑</div></div><div class="kcell k-hv"><span class="vi-tr">tiếu</span></div><div class="kcell k-read"><div class="on">（ショウ）</div><div>わらーう／えーむ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>笑<rp>（</rp><rt>わら</rt><rp>）</rp></ruby>う　cf．<ruby>泣<rp>（</rp><rt>な</rt><rp>）</rp></ruby>く</div><div class="vi"><span class="vi-tr">cười cf. khóc</span></div></div><div class="kitem"><div class="jp"><ruby>笑顔<rp>（</rp><rt>えがお</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nụ cười</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">恋</div></div><div class="kcell k-hv"><span class="vi-tr">luyến</span></div><div class="kcell k-read"><div class="on">レン</div><div>こい／こいーしい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>恋<rp>（</rp><rt>こい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tình yêu</span> </div></div><div class="kitem"><div class="jp"><ruby>恋<rp>（</rp><rt>こい</rt><rp>）</rp></ruby>しい</div><div class="vi"><span class="vi-tr">nhớ nhung</span></div></div><div class="kitem"><div class="jp"><ruby>恋人<rp>（</rp><rt>こいびと</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">người yêu</span></div></div><div class="kitem"><div class="jp"><ruby>失恋<rp>（</rp><rt>しつれん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thất tình</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">愛</div></div><div class="kcell k-hv"><span class="vi-tr">ái</span></div><div class="kcell k-read"><div class="on">アイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>愛<rp>（</rp><rt>あい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">yêu</span></div></div><div class="kitem"><div class="jp"><ruby>愛情<rp>（</rp><rt>あいじょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tình cảm</span> </div></div><div class="kitem"><div class="jp"><ruby>恋愛<rp>（</rp><rt>れんあい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">yêu</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">憎</div></div><div class="kcell k-hv"><span class="vi-tr">tăng</span></div><div class="kcell k-read"><div>にくーむ／にくーい／にくーらしい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>憎<rp>（</rp><rt>にく</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">hận</span> </div></div><div class="kitem"><div class="jp"><ruby>憎<rp>（</rp><rt>にく</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">đáng hận</span> </div></div><div class="kitem"><div class="jp"><ruby>憎<rp>（</rp><rt>にく</rt><rp>）</rp></ruby>らしい</div><div class="vi"><span class="vi-tr">hận</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>の<u><ruby>笑顔<rp>（</rp><rt>えがお</rt><rp>）</rp></ruby></u>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>ると、<ruby>幸<rp>（</rp><rt>しあわ</rt><rp>）</rp></ruby>せな<ruby>気持<rp>（</rp><rt>きも</rt><rp>）</rp></ruby>ちになる。</td><td>a. わらがお</td><td>b. えがお</td></tr><tr><td>2. すみませんが、<ruby>田中<rp>（</rp><rt>たなか</rt><rp>）</rp></ruby>さんに<u><ruby>伝言<rp>（</rp><rt>でんごん</rt><rp>）</rp></ruby></u>をお<ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>いします。</td><td>a. でんげん</td><td>b. でんごん</td></tr><tr><td>3. <ruby>今日<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>は<ruby>課長<rp>（</rp><rt>かちょう</rt><rp>）</rp></ruby>の<u><ruby>機嫌<rp>（</rp><rt>きげん</rt><rp>）</rp></ruby></u>が<ruby>悪<rp>（</rp><rt>わる</rt><rp>）</rp></ruby>かった。</td><td>a. きけん</td><td>b. きげん</td></tr><tr><td>4. <ruby>怖<rp>（</rp><rt>こわ</rt><rp>）</rp></ruby>い<ruby>夢<rp>（</rp><rt>ゆめ</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>て、<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きな<ruby>声<rp>（</rp><rt>こえ</rt><rp>）</rp></ruby>で<u><ruby>叫<rp>（</rp><rt>さけ</rt><rp>）</rp></ruby>んで</u>しまった。</td><td>a. さけんで</td><td>b. さかんで</td></tr><tr><td>5. <ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>を<u><ruby>憎<rp>（</rp><rt>にく</rt><rp>）</rp></ruby>んで</u>ばかりいると、つらくなるよ。</td><td>a. なやんで</td><td>b. にくんで</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>の<u><ruby>笑顔<rp>（</rp><rt>えがお</rt><rp>）</rp></ruby></u>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>ると、<ruby>幸<rp>（</rp><rt>しあわ</rt><rp>）</rp></ruby>せな<ruby>気持<rp>（</rp><rt>きも</rt><rp>）</rp></ruby>ちになる。</td><td><b>えがお</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. すみませんが、<ruby>田中<rp>（</rp><rt>たなか</rt><rp>）</rp></ruby>さんに<u><ruby>伝言<rp>（</rp><rt>でんごん</rt><rp>）</rp></ruby></u>をお<ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>いします。</td><td><b>でんごん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>今日<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>は<ruby>課長<rp>（</rp><rt>かちょう</rt><rp>）</rp></ruby>の<u><ruby>機嫌<rp>（</rp><rt>きげん</rt><rp>）</rp></ruby></u>が<ruby>悪<rp>（</rp><rt>わる</rt><rp>）</rp></ruby>かった。</td><td><b>きげん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>怖<rp>（</rp><rt>こわ</rt><rp>）</rp></ruby>い<ruby>夢<rp>（</rp><rt>ゆめ</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>て、<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きな<ruby>声<rp>（</rp><rt>こえ</rt><rp>）</rp></ruby>で<u><ruby>叫<rp>（</rp><rt>さけ</rt><rp>）</rp></ruby>んで</u>しまった。</td><td><b>さけんで</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>を<u><ruby>憎<rp>（</rp><rt>にく</rt><rp>）</rp></ruby>んで</u>ばかりいると、つらくなるよ。</td><td><b>にくんで</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>も<ruby>早<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>く<u>こい</u><ruby>人<rp>（</rp><rt>びと</rt><rp>）</rp></ruby>がほしいなあ。</td><td>a. 変</td><td>b. 愛</td><td>c. 恋</td></tr><tr><td>2. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>を<u>おこ</u>りすぎるのはよくないよ。</td><td>a. 憎</td><td>b. 起</td><td>c. 怒</td></tr><tr><td>3. <ruby>各自<rp>（</rp><rt>かくじ</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>の<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><u>じょう</u>を<ruby>報告<rp>（</rp><rt>ほうこく</rt><rp>）</rp></ruby>してください。</td><td>a. 状</td><td>b. 情</td><td>c. 精</td></tr><tr><td>4. テレビを<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>ながらよく<ruby>独<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>り<u>ごと</u>を<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ってしまう。</td><td>a. 事</td><td>b. 言</td><td>c. 答</td></tr><tr><td>5. <u>なや</u>みがあったらいつでも<ruby>相談<rp>（</rp><rt>そうだん</rt><rp>）</rp></ruby>してください。</td><td>a. 悩</td><td>b. 憎</td><td>c. 脳</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>も<ruby>早<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>く<u>こい</u><ruby>人<rp>（</rp><rt>びと</rt><rp>）</rp></ruby>がほしいなあ。</td><td><b>恋</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby>を<u>おこ</u>りすぎるのはよくないよ。</td><td><b>怒</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>各自<rp>（</rp><rt>かくじ</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>の<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><u>じょう</u>を<ruby>報告<rp>（</rp><rt>ほうこく</rt><rp>）</rp></ruby>してください。</td><td><b>状</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. テレビを<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>ながらよく<ruby>独<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>り<u>ごと</u>を<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ってしまう。</td><td><b>言</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <u>なや</u>みがあったらいつでも<ruby>相談<rp>（</rp><rt>そうだん</rt><rp>）</rp></ruby>してください。</td><td><b>悩</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>面接<rp>（</rp><rt>めんせつ</rt><rp>）</rp></ruby>で、<ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>の<ruby>健康<rp>（</rp><rt>けんこう</rt><rp>）</rp></ruby>（　　　）を<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>かれた。</td><td>a. 状態</td><td>b. 精神</td></tr><tr><td>2. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>父<rp>（</rp><rt>ちち</rt><rp>）</rp></ruby>は<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>に（　　　）<ruby>深<rp>（</rp><rt>ぶか</rt><rp>）</rp></ruby>い<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>でした。</td><td>a. 愛情</td><td>b. 恋愛</td></tr><tr><td>3. <ruby>爪<rp>（</rp><rt>つめ</rt><rp>）</rp></ruby>が<ruby>窓<rp>（</rp><rt>まど</rt><rp>）</rp></ruby>ガラスに<ruby>当<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>たって「キーッ」と（　　　）<ruby>音<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>がした。</td><td>a. 嫌な</td><td>b. 憎らしい</td></tr><tr><td>4. <ruby>世界<rp>（</rp><rt>せかい</rt><rp>）</rp></ruby>の（　　　）の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>で、スペイン<ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>とポルトガル<ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>は<ruby>比較的<rp>（</rp><rt>ひかくてき</rt><rp>）</rp></ruby><ruby>似<rp>（</rp><rt>に</rt><rp>）</rp></ruby>ている。</td><td>a. 言語</td><td>b. 方言</td></tr><tr><td>5. <ruby>結婚<rp>（</rp><rt>けっこん</rt><rp>）</rp></ruby><ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>の（　　　）が<ruby>届<rp>（</rp><rt>とど</rt><rp>）</rp></ruby>いた。</td><td>a. 状況</td><td>b. 招待状</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>面接<rp>（</rp><rt>めんせつ</rt><rp>）</rp></ruby>で、<ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>の<ruby>健康<rp>（</rp><rt>けんこう</rt><rp>）</rp></ruby>（　　　）を<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>かれた。</td><td><b>状態</b> (じょうたい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>父<rp>（</rp><rt>ちち</rt><rp>）</rp></ruby>は<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>に（　　　）<ruby>深<rp>（</rp><rt>ぶか</rt><rp>）</rp></ruby>い<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>でした。</td><td><b>愛情</b> (あいじょう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>爪<rp>（</rp><rt>つめ</rt><rp>）</rp></ruby>が<ruby>窓<rp>（</rp><rt>まど</rt><rp>）</rp></ruby>ガラスに<ruby>当<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>たって「キーッ」と（　　　）<ruby>音<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>がした。</td><td><b>嫌な</b> (いやな)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>世界<rp>（</rp><rt>せかい</rt><rp>）</rp></ruby>の（　　　）の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>で、スペイン<ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>とポルトガル<ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>は<ruby>比較的<rp>（</rp><rt>ひかくてき</rt><rp>）</rp></ruby><ruby>似<rp>（</rp><rt>に</rt><rp>）</rp></ruby>ている。</td><td><b>言語</b> (げんご)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>結婚<rp>（</rp><rt>けっこん</rt><rp>）</rp></ruby><ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>の（　　　）が<ruby>届<rp>（</rp><rt>とど</rt><rp>）</rp></ruby>いた。</td><td><b>招待状</b> (しょうたいじょう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-3-3"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-3-bai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","não":"brain","ưu phiền":"sorrow","sự ưu phiền":"sorrow","khiếu":"aptitude","gào":"scream","hiềⅿ":"hinhⅿ","ghét":"hate","khó chịu":"uncomfortable","tâm trạng":"mood","ngôn":"language","lời nói":"speech","nói một mình":"soliloquize","ngôn ngữ":"language","từ địa phương":"from local","lời nhắn":"message","bỉ":"belgium","anh ấy":"he","cô ấy":"she","tinh thần":"spirit","trạng":"status","trạng thái":"status","tình trạng":"status","hiện trạng":"Current Status","giấy mời":"invitation","nộ":"angry","giận":"angry","tiếu":"laugh","cười cf. khóc":"laugh cf. cry","nụ cười":"smile","luyến":"attachment","tình yêu":"love","nhớ nhung":"miss","người yêu":"lover","thất tình":"love sick","ái":"love","yêu":"Love","tình cảm":"emotional","tăng":"increase","hận":"hate","đáng hận":"hateful","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","não":"otak","ưu phiền":"duka","sự ưu phiền":"duka","khiếu":"bakat","gào":"berteriak","hiềⅿ":"hinhⅿ","ghét":"membenci","khó chịu":"tidak nyaman","tâm trạng":"suasana hati","ngôn":"bahasa","lời nói":"pidato","nói một mình":"berbicara diri saja","ngôn ngữ":"bahasa","từ địa phương":"dari lokal","lời nhắn":"pesan","bỉ":"Belgia","anh ấy":"Dia","cô ấy":"dia","tinh thần":"roh","trạng":"status","trạng thái":"status","tình trạng":"status","hiện trạng":"Status Saat Ini","giấy mời":"undangan","nộ":"marah","giận":"marah","tiếu":"tertawa","cười cf. khóc":"tertawa lih. menangis","nụ cười":"senyum","luyến":"lampiran","tình yêu":"Cinta","nhớ nhung":"merindukan","người yêu":"kekasih","thất tình":"cinta sakit","ái":"Cinta","yêu":"Cinta","tình cảm":"emosional","tăng":"meningkatkan","hận":"membenci","đáng hận":"penuh kebencian","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","não":"मस्तिष्क","ưu phiền":"दु:ख","sự ưu phiền":"दु:ख","khiếu":"योग्यता","gào":"चिच्याउने","hiềⅿ":"hinhⅿ","ghét":"घृणा","khó chịu":"असहज","tâm trạng":"मूड","ngôn":"भाषा","lời nói":"भाषण","nói một mình":"स्वगत","ngôn ngữ":"भाषा","từ địa phương":"स्थानीय बाट","lời nhắn":"सन्देश","bỉ":"बेल्जियम","anh ấy":"उहाँ","cô ấy":"उनी","tinh thần":"आत्मा","trạng":"स्थिति","trạng thái":"स्थिति","tình trạng":"स्थिति","hiện trạng":"हालको स्थिति","giấy mời":"निमन्त्रणा","nộ":"क्रोधित","giận":"क्रोधित","tiếu":"हाँस्न","cười cf. khóc":"हाँसो cf। रुनु","nụ cười":"मुस्कान","luyến":"संलग्नक","tình yêu":"प्रेम","nhớ nhung":"मिस","người yêu":"प्रेमी","thất tình":"माया बिरामी","ái":"प्रेम","yêu":"माया","tình cảm":"भावनात्मक","tăng":"वृद्धि","hận":"घृणा","đáng hận":"घृणित","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","não":"ဦးနှောက်","ưu phiền":"ဝမ်းနည်းခြင်း","sự ưu phiền":"ဝမ်းနည်းခြင်း","khiếu":"အရည်အချင်း","gào":"ဟစ်အော်","hiềⅿ":"Hinhⅿ","ghét":"မုန်းတယ်။","khó chịu":"အဆင်မပြေ","tâm trạng":"စိတ်ခံစားချက်","ngôn":"ဘာသာစကား","lời nói":"မိန့်ခွန်း","nói một mình":"တစ်ကိုယ်တော်","ngôn ngữ":"ဘာသာစကား","từ địa phương":"ပြည်တွင်းမှ","lời nhắn":"သတင်းစကား","bỉ":"ဘယ်လ်ဂျီယံ","anh ấy":"သူ","cô ấy":"သူမ","tinh thần":"စိတ်ဝိညာဉ်","trạng":"အခြေအနေ","trạng thái":"အခြေအနေ","tình trạng":"အခြေအနေ","hiện trạng":"လက်ရှိအခြေအနေ","giấy mời":"ဖိတ်ကြားချက်","nộ":"စိတ်ဆိုး","giận":"စိတ်ဆိုး","tiếu":"ရယ်ပါ။","cười cf. khóc":"cf ရယ်။ ငိုပါ။","nụ cười":"ပြုံးပါ။","luyến":"တွယ်တာမှု","tình yêu":"အချစ်","nhớ nhung":"လွမ်းတယ်","người yêu":"ချစ်သူ","thất tình":"အချစ်ဖျားတယ်။","ái":"အချစ်","yêu":"အချစ်","tình cảm":"စိတ်ခံစားမှု","tăng":"တိုးမြှင့်လာသည်","hận":"မုန်းတယ်။","đáng hận":"မုန်းစရာကောင်းသော","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","não":"মস্তিষ্ক","ưu phiền":"দুঃখ","sự ưu phiền":"দুঃখ","khiếu":"যোগ্যতা","gào":"চিৎকার","hiềⅿ":"hinhⅿ","ghét":"ঘৃণা","khó chịu":"অস্বস্তিকর","tâm trạng":"মেজাজ","ngôn":"ভাষা","lời nói":"বক্তৃতা","nói một mình":"স্বগতোক্তি","ngôn ngữ":"ভাষা","từ địa phương":"স্থানীয় থেকে","lời nhắn":"বার্তা","bỉ":"বেলজিয়াম","anh ấy":"তিনি","cô ấy":"সে","tinh thần":"আত্মা","trạng":"অবস্থা","trạng thái":"অবস্থা","tình trạng":"অবস্থা","hiện trạng":"বর্তমান অবস্থা","giấy mời":"আমন্ত্রণ","nộ":"রাগান্বিত","giận":"রাগান্বিত","tiếu":"হাসি","cười cf. khóc":"হাসি cf. কান্না","nụ cười":"হাসি","luyến":"সংযুক্তি","tình yêu":"প্রেম","nhớ nhung":"মিস","người yêu":"প্রেমিক","thất tình":"ভালোবাসি অসুস্থ","ái":"প্রেম","yêu":"প্রেম","tình cảm":"আবেগপূর্ণ","tăng":"বৃদ্ধি","hận":"ঘৃণা","đáng hận":"ঘৃণ্য","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","não":"दिमाग","ưu phiền":"दु: ख","sự ưu phiền":"दु: ख","khiếu":"कौशल","gào":"चीख","hiềⅿ":"हिन्हⅿ","ghét":"घृणा","khó chịu":"असुविधाजनक","tâm trạng":"मनोदशा","ngôn":"भाषा","lời nói":"भाषण","nói một mình":"आत्मभाषण","ngôn ngữ":"भाषा","từ địa phương":"स्थानीय से","lời nhắn":"संदेश","bỉ":"बेल्जियम","anh ấy":"वह","cô ấy":"वह","tinh thần":"आत्मा","trạng":"स्थिति","trạng thái":"स्थिति","tình trạng":"स्थिति","hiện trạng":"वर्तमान स्थिति","giấy mời":"आमंत्रण","nộ":"गुस्सा","giận":"गुस्सा","tiếu":"हँसना","cười cf. khóc":"हँसो सी.एफ. चिल्लाना","nụ cười":"मुस्कान","luyến":"लगाव","tình yêu":"प्यार","nhớ nhung":"याद","người yêu":"प्रेम करनेवाला","thất tình":"प्यार बीमार","ái":"प्यार","yêu":"प्यार","tình cảm":"भावनात्मक","tăng":"बढ़ोतरी","hận":"घृणा","đáng hận":"घृणित","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","não":"สมอง","ưu phiền":"ความเศร้าโศก","sự ưu phiền":"ความเศร้าโศก","khiếu":"ความถนัด","gào":"กรีดร้อง","hiềⅿ":"ฮิฮิⅿ","ghét":"เกลียด","khó chịu":"อึดอัด","tâm trạng":"อารมณ์","ngôn":"ภาษา","lời nói":"คำพูด","nói một mình":"โซโลควิซ","ngôn ngữ":"ภาษา","từ địa phương":"จากท้องถิ่น","lời nhắn":"ข้อความ","bỉ":"เบลเยียม","anh ấy":"เขา","cô ấy":"เธอ","tinh thần":"วิญญาณ","trạng":"สถานะ","trạng thái":"สถานะ","tình trạng":"สถานะ","hiện trạng":"สถานะปัจจุบัน","giấy mời":"การเชิญ","nộ":"โกรธ","giận":"โกรธ","tiếu":"หัวเราะ","cười cf. khóc":"หัวเราะ ร้องไห้","nụ cười":"รอยยิ้ม","luyến":"สิ่งที่แนบมา","tình yêu":"รัก","nhớ nhung":"นางสาว","người yêu":"คนรัก","thất tình":"รักป่วย","ái":"รัก","yêu":"รัก","tình cảm":"ทางอารมณ์","tăng":"เพิ่มขึ้น","hận":"เกลียด","đáng hận":"น่ารังเกียจ","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

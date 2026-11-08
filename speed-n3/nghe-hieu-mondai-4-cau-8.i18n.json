@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Muốn mượn từ điển ở thư viện. Thì sẽ nói gì?": "Want to borrow a dictionary from the library. So what will you say?",
+    "Xin lỗi, cuốn từ điển này có thể cho tôi mượn được không ạ?": "Excuse me, can I borrow this dictionary?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Muốn mượn từ điển ở thư viện. Thì sẽ nói gì?": "Ingin meminjam kamus dari perpustakaan. Jadi apa yang akan kamu katakan?",
+    "Xin lỗi, cuốn từ điển này có thể cho tôi mượn được không ạ?": "Permisi, bolehkah saya meminjam kamus ini?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Muốn mượn từ điển ở thư viện. Thì sẽ nói gì?": "पुस्तकालयबाट शब्दकोश उधारो लिन चाहनुहुन्छ। त्यसोभए के भन्नुहुन्छ?",
+    "Xin lỗi, cuốn từ điển này có thể cho tôi mượn được không ạ?": "माफ गर्नुहोस्, के म यो शब्दकोश उधारो लिन सक्छु?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Muốn mượn từ điển ở thư viện. Thì sẽ nói gì?": "စာကြည့်တိုက်မှ အဘိဓာန် ငှားလိုပါသည်။ ဒါဆို မင်းဘာပြောမလဲ။",
+    "Xin lỗi, cuốn từ điển này có thể cho tôi mượn được không ạ?": "ခွင့်လွှတ်ပါ၊ ဒီအဘိဓာန်ကို ငှားလို့ရပါသလား။"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Muốn mượn từ điển ở thư viện. Thì sẽ nói gì?": "লাইব্রেরি থেকে একটি অভিধান ধার করতে চান। তাহলে কি বলবেন?",
+    "Xin lỗi, cuốn từ điển này có thể cho tôi mượn được không ạ?": "ক্ষমা করবেন, আমি কি এই অভিধান ধার করতে পারি?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Muốn mượn từ điển ở thư viện. Thì sẽ nói gì?": "पुस्तकालय से एक शब्दकोष उधार लेना चाहता हूँ। तो आप क्या कहेंगे?",
+    "Xin lỗi, cuốn từ điển này có thể cho tôi mượn được không ạ?": "क्षमा करें, क्या मैं यह शब्दकोश उधार ले सकता हूँ?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Muốn mượn từ điển ở thư viện. Thì sẽ nói gì?": "ต้องการยืมพจนานุกรมจากห้องสมุด แล้วคุณจะว่าอย่างไร?",
+    "Xin lỗi, cuốn từ điển này có thể cho tôi mượn được không ạ?": "ขอโทษ ฉันขอยืมพจนานุกรมเล่มนี้ได้ไหม"
+  }
+}

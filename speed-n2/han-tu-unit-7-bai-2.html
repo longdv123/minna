@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">経</div></div><div class="kcell k-hv">kinh </div><div class="kcell k-read"><div class="on">ケイ</div><div>たーつ</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>経<rp>（</rp><rt>た</rt><rp>）</rp></ruby>つ</div><div class="vi"><span class="vi-tr">trải qua ~</span></div></div><div class="kitem"><div class="jp"><ruby>経営<rp>（</rp><rt>けいえい</rt><rp>）</rp></ruby>(する）</div><div class="vi">kinh doanh</div></div><div class="kitem"><div class="jp"><ruby>経験<rp>（</rp><rt>けいけん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">kinh nghiệm</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">改</div></div><div class="kcell k-hv"><span class="vi-tr">cải</span></div><div class="kcell k-read"><div class="on">カイ</div><div>あらたーめる／（あらたーまる）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>改<rp>（</rp><rt>あらた</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">làm lại</span></div></div><div class="kitem"><div class="jp"><ruby>改<rp>（</rp><rt>あらた</rt><rp>）</rp></ruby>めて</div><div class="vi"><span class="vi-tr">lại lần nữa</span></div></div><div class="kitem"><div class="jp"><ruby>改正<rp>（</rp><rt>かいせい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">sửa đổi, tu chính</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">販</div></div><div class="kcell k-hv"><span class="vi-tr">phán</span></div><div class="kcell k-read"><div class="on">ハン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>販売<rp>（</rp><rt>はんばい</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">bán</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">済</div></div><div class="kcell k-hv"><span class="vi-tr">tế</span> </div><div class="kcell k-read"><div class="on">ザイ</div><div>すーむ／（すーます）</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>済<rp>（</rp><rt>す</rt><rp>）</rp></ruby>む</div><div class="vi">xong ~</div></div><div class="kitem"><div class="jp"><ruby>経済<rp>（</rp><rt>けいざい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">kinh tế</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">要</div></div><div class="kcell k-hv"><span class="vi-tr">yếu</span></div><div class="kcell k-read"><div class="on">ヨウ</div><div>いーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>要<rp>（</rp><rt>い</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">cần ~</span></div></div><div class="kitem"><div class="jp"><ruby>要点<rp>（</rp><rt>ようてん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">điểm chính</span> </div></div><div class="kitem"><div class="jp"><ruby>需要<rp>（</rp><rt>じゅよう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nhu cầu</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">供</div></div><div class="kcell k-hv">cung</div><div class="kcell k-read"><div class="on">キョウ</div><div>とも</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>子供<rp>（</rp><rt>こども</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trẻ con</span> </div></div><div class="kitem"><div class="jp"><ruby>供給<rp>（</rp><rt>きょうきゅう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">cung cấp</span> </div></div><div class="kitem"><div class="jp"><ruby>提供<rp>（</rp><rt>ていきょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">cung cấp</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">回</div></div><div class="kcell k-hv"><span class="vi-tr">hồi</span></div><div class="kcell k-read"><div class="on">カイ</div><div>まわーる／まわーす</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>上回<rp>（</rp><rt>うわまわ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">vượt lên</span> </div></div><div class="kitem"><div class="jp"><ruby>下回<rp>（</rp><rt>したまわ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">thấp hơn mức</span> </div></div><div class="kitem"><div class="jp"><ruby>回転<rp>（</rp><rt>かいてん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">quay vòng</span> </div></div><div class="kitem"><div class="jp"><ruby>回答<rp>（</rp><rt>かいとう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">trả lời</span></div></div><div class="kitem"><div class="jp"><ruby>回復<rp>（</rp><rt>かいふく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hồi phục</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">価</div></div><div class="kcell k-hv"><span class="vi-tr">giá</span></div><div class="kcell k-read"><div class="on">カ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>価格<rp>（</rp><rt>かかく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giá cả</span> </div></div><div class="kitem"><div class="jp"><ruby>価値<rp>（</rp><rt>かち</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">giá trị</span> </div></div><div class="kitem"><div class="jp"><ruby>物価<rp>（</rp><rt>ぶっか</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vật giá</span></div></div><div class="kitem"><div class="jp"><ruby>高価<rp>（</rp><rt>こうか</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">đắt đỏ</span></div></div><div class="kitem"><div class="jp"><ruby>評価<rp>（</rp><rt>ひょうか</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đánh giá</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">昇</div></div><div class="kcell k-hv"><span class="vi-tr">thăng</span></div><div class="kcell k-read"><div class="on">ショウ</div><div>のぼーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>昇<rp>（</rp><rt>のぼ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">lên, mọc</span>  </div></div><div class="kitem"><div class="jp">（～が）<ruby>上昇<rp>（</rp><rt>じょうしょう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tăng</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">降</div></div><div class="kcell k-hv"><span class="vi-tr">giáng</span></div><div class="kcell k-read"><div class="on">コウ</div><div>おーりる／おーろす／ふーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>降水量<rp>（</rp><rt>こうすいりょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lượng mưa</span> </div></div><div class="kitem"><div class="jp">（～が）<ruby>下降<rp>（</rp><rt>かこう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">đi xuống</span> </div></div><div class="kitem"><div class="jp"><ruby>来年以降<rp>（</rp><rt>らいねんいこう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">từ năm sau</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">損</div></div><div class="kcell k-hv"><span class="vi-tr">tổn</span> </div><div class="kcell k-read"><div class="on">ソン</div><div>（そこーなう）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>損<rp>（</rp><rt>そん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">thiệt</span>  </div></div><div class="kitem"><div class="jp"><ruby>損害<rp>（</rp><rt>そんがい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thiệt hại</span> </div></div><div class="kitem"><div class="jp"><ruby>損得<rp>（</rp><rt>そんとく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">được mất</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>予定<rp>（</rp><rt>よてい</rt><rp>）</rp></ruby>については、<ruby>後<rp>（</rp><rt>のち</rt><rp>）</rp></ruby>ほど<u><ruby>改<rp>（</rp><rt>あらた</rt><rp>）</rp></ruby>めて</u>ご<ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby>いたします。</td><td>a. あたためて</td><td>b. あらためて</td></tr><tr><td>2. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>には<ruby>宝石<rp>（</rp><rt>ほうせき</rt><rp>）</rp></ruby>の<u><ruby>価値<rp>（</rp><rt>かち</rt><rp>）</rp></ruby></u>なんて<ruby>判断<rp>（</rp><rt>はんだん</rt><rp>）</rp></ruby>できない。</td><td>a. かかく</td><td>b. かち</td></tr><tr><td>3. <ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>を<ruby>読<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>んでいるうちに３<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>も<u><ruby>経<rp>（</rp><rt>た</rt><rp>）</rp></ruby>って</u>しまった。</td><td>a. かかって</td><td>b. たって</td></tr><tr><td>4. この<ruby>登山道<rp>（</rp><rt>とざんどう</rt><rp>）</rp></ruby>は、１１<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby><u><ruby>以降<rp>（</rp><rt>いこう</rt><rp>）</rp></ruby></u>は<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>れなくなります。</td><td>a. いこう</td><td>b. いごう</td></tr><tr><td>5. <ruby>情報<rp>（</rp><rt>じょうほう</rt><rp>）</rp></ruby>をご<u><ruby>提供<rp>（</rp><rt>ていきょう</rt><rp>）</rp></ruby></u>くださり、ありがとうございます。</td><td>a. ていきゅう</td><td>b. ていきょう</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>予定<rp>（</rp><rt>よてい</rt><rp>）</rp></ruby>については、<ruby>後<rp>（</rp><rt>のち</rt><rp>）</rp></ruby>ほど<u><ruby>改<rp>（</rp><rt>あらた</rt><rp>）</rp></ruby>めて</u>ご<ruby>連絡<rp>（</rp><rt>れんらく</rt><rp>）</rp></ruby>いたします。</td><td><b>あらためて</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>には<ruby>宝石<rp>（</rp><rt>ほうせき</rt><rp>）</rp></ruby>の<u><ruby>価値<rp>（</rp><rt>かち</rt><rp>）</rp></ruby></u>なんて<ruby>判断<rp>（</rp><rt>はんだん</rt><rp>）</rp></ruby>できない。</td><td><b>かち</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>を<ruby>読<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>んでいるうちに３<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>も<u><ruby>経<rp>（</rp><rt>た</rt><rp>）</rp></ruby>って</u>しまった。</td><td><b>たって</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. この<ruby>登山道<rp>（</rp><rt>とざんどう</rt><rp>）</rp></ruby>は、１１<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby><u><ruby>以降<rp>（</rp><rt>いこう</rt><rp>）</rp></ruby></u>は<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>れなくなります。</td><td><b>いこう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>情報<rp>（</rp><rt>じょうほう</rt><rp>）</rp></ruby>をご<u><ruby>提供<rp>（</rp><rt>ていきょう</rt><rp>）</rp></ruby></u>くださり、ありがとうございます。</td><td><b>ていきょう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>の<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><u>ざい</u>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby>が<ruby>心配<rp>（</rp><rt>しんぱい</rt><rp>）</rp></ruby>だ。</td><td>a. 財</td><td>b. 剤</td><td>c. 済</td></tr><tr><td>2. <ruby>新商品<rp>（</rp><rt>しんしょうひん</rt><rp>）</rp></ruby>の<u>はん</u><ruby>売<rp>（</rp><rt>ばい</rt><rp>）</rp></ruby>が<ruby>始<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>まった。</td><td>a. 般</td><td>b. 判</td><td>c. 販</td></tr><tr><td>3. <ruby>電力<rp>（</rp><rt>でんりょく</rt><rp>）</rp></ruby>の<u>きょう</u><ruby>給<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby>が<ruby>安定<rp>（</rp><rt>あんてい</rt><rp>）</rp></ruby>しないと<ruby>困<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>る。</td><td>a. 共</td><td>b. 供</td><td>c. 洪</td></tr><tr><td>4. <ruby>東<rp>（</rp><rt>ひがし</rt><rp>）</rp></ruby>の<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>に<ruby>日<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>が<u>のぼ</u>ってきた。</td><td>a. 昇</td><td>b. 暮</td><td>c. 曇</td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は<ruby>頭<rp>（</rp><rt>あたま</rt><rp>）</rp></ruby>の<u>かい</u><ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>が<ruby>速<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>く、<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>でもすぐ<ruby>理解<rp>（</rp><rt>りかい</rt><rp>）</rp></ruby>する。</td><td>a. 解</td><td>b. 回</td><td>c. 改</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>の<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><u>ざい</u>の<ruby>状況<rp>（</rp><rt>じょうきょう</rt><rp>）</rp></ruby>が<ruby>心配<rp>（</rp><rt>しんぱい</rt><rp>）</rp></ruby>だ。</td><td><b>済</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>新商品<rp>（</rp><rt>しんしょうひん</rt><rp>）</rp></ruby>の<u>はん</u><ruby>売<rp>（</rp><rt>ばい</rt><rp>）</rp></ruby>が<ruby>始<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>まった。</td><td><b>販</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>電力<rp>（</rp><rt>でんりょく</rt><rp>）</rp></ruby>の<u>きょう</u><ruby>給<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby>が<ruby>安定<rp>（</rp><rt>あんてい</rt><rp>）</rp></ruby>しないと<ruby>困<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>る。</td><td><b>供</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>東<rp>（</rp><rt>ひがし</rt><rp>）</rp></ruby>の<ruby>空<rp>（</rp><rt>そら</rt><rp>）</rp></ruby>に<ruby>日<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>が<u>のぼ</u>ってきた。</td><td><b>昇</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>は<ruby>頭<rp>（</rp><rt>あたま</rt><rp>）</rp></ruby>の<u>かい</u><ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>が<ruby>速<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>く、<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>でもすぐ<ruby>理解<rp>（</rp><rt>りかい</rt><rp>）</rp></ruby>する。</td><td><b>回</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>の<ruby>火事<rp>（</rp><rt>かじ</rt><rp>）</rp></ruby>による（　　　）は<ruby>一千万円<rp>（</rp><rt>いっせんまんえん</rt><rp>）</rp></ruby>に<ruby>達<rp>（</rp><rt>たっ</rt><rp>）</rp></ruby>するだろう。</td><td>a. 損害</td><td>b. 物価</td></tr><tr><td>2. <ruby>用事<rp>（</rp><rt>ようじ</rt><rp>）</rp></ruby>が（　　　）、<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>食事<rp>（</rp><rt>しょくじ</rt><rp>）</rp></ruby>をしよう。</td><td>a. 要ったら</td><td>b. 済んだら</td></tr><tr><td>3. （　　　）をメモしながら<ruby>説明<rp>（</rp><rt>せつめい</rt><rp>）</rp></ruby>を<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いた</td><td>a. 要点</td><td>b. 需要</td></tr><tr><td>4. <ruby>遅<rp>（</rp><rt>おそ</rt><rp>）</rp></ruby>くまでお<ruby>酒<rp>（</rp><rt>さけ</rt><rp>）</rp></ruby>を<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>む<ruby>習慣<rp>（</rp><rt>しゅうかん</rt><rp>）</rp></ruby>は（　　　）ほうがいい。</td><td>a. 改めた</td><td>b. 回復</td></tr><tr><td>5. このホテルは、<ruby>利用者<rp>（</rp><rt>りようしゃ</rt><rp>）</rp></ruby>から<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>く（　　　）されている。</td><td>a. 評価</td><td>b. 上昇</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>の<ruby>火事<rp>（</rp><rt>かじ</rt><rp>）</rp></ruby>による（　　　）は<ruby>一千万円<rp>（</rp><rt>いっせんまんえん</rt><rp>）</rp></ruby>に<ruby>達<rp>（</rp><rt>たっ</rt><rp>）</rp></ruby>するだろう。</td><td><b>損害</b> (そんがい)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>用事<rp>（</rp><rt>ようじ</rt><rp>）</rp></ruby>が（　　　）、<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>食事<rp>（</rp><rt>しょくじ</rt><rp>）</rp></ruby>をしよう。</td><td><b>済んだら</b> (すんだら)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. （　　　）をメモしながら<ruby>説明<rp>（</rp><rt>せつめい</rt><rp>）</rp></ruby>を<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いた</td><td><b>要点</b> (ようてん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>遅<rp>（</rp><rt>おそ</rt><rp>）</rp></ruby>くまでお<ruby>酒<rp>（</rp><rt>さけ</rt><rp>）</rp></ruby>を<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>む<ruby>習慣<rp>（</rp><rt>しゅうかん</rt><rp>）</rp></ruby>は（　　　）ほうがいい。</td><td><b>改めた</b> (あらためた)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. このホテルは、<ruby>利用者<rp>（</rp><rt>りようしゃ</rt><rp>）</rp></ruby>から<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>く（　　　）されている。</td><td><b>評価</b> (ひょうか)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-7-2"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-7-bai-2.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","trải qua ~":"going through ~","kinh nghiệm":"experience","cải":"cabbage","làm lại":"redo","lại lần nữa":"again","sửa đổi, tu chính":"amend, amend","phán":"judge","bán":"sell","tế":"international","kinh tế":"economy","yếu":"weak","cần ~":"need ~","điểm chính":"main point","nhu cầu":"demand","trẻ con":"children","cung cấp":"provide","hồi":"Anise","vượt lên":"surpass","thấp hơn mức":"lower level","quay vòng":"turn around","trả lời":"reply","hồi phục":"recovery","giá":"price","giá cả":"price","giá trị":"value","vật giá":"price","đắt đỏ":"expensive","đánh giá":"Evaluate","thăng":"promotion","lên, mọc":"rise, grow","tăng":"increase","giáng":"descend","lượng mưa":"rainfall","đi xuống":"downward","từ năm sau":"from next year","tổn":"damage","thiệt":"really","thiệt hại":"damages","được mất":"gain or loss","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","trải qua ~":"melewati ~","kinh nghiệm":"pengalaman","cải":"kubis","làm lại":"mengulangi","lại lần nữa":"lagi","sửa đổi, tu chính":"mengubah, mengubah","phán":"hakim","bán":"menjual","tế":"internasional","kinh tế":"ekonomi","yếu":"lemah","cần ~":"perlu ~","điểm chính":"poin utama","nhu cầu":"tuntutan","trẻ con":"anak-anak","cung cấp":"menyediakan","hồi":"Adas manis","vượt lên":"melampaui","thấp hơn mức":"tingkat yang lebih rendah","quay vòng":"berbalik","trả lời":"membalas","hồi phục":"pemulihan","giá":"harga","giá cả":"harga","giá trị":"nilai","vật giá":"harga","đắt đỏ":"mahal","đánh giá":"Mengevaluasi","thăng":"promosi","lên, mọc":"bangkit, tumbuh","tăng":"meningkatkan","giáng":"turun","lượng mưa":"curah hujan","đi xuống":"ke bawah","từ năm sau":"mulai tahun depan","tổn":"kerusakan","thiệt":"Sungguh","thiệt hại":"ganti rugi","được mất":"keuntungan atau kerugian","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","trải qua ~":"~ मार्फत जाँदैछ","kinh nghiệm":"अनुभव","cải":"गोभी","làm lại":"पुनः गर्नुहोस्","lại lần nữa":"फेरि","sửa đổi, tu chính":"परिमार्जन, परिमार्जन","phán":"न्यायाधीश","bán":"बेच्नुहोस्","tế":"अन्तर्राष्ट्रिय","kinh tế":"अर्थव्यवस्था","yếu":"कमजोर","cần ~":"आवश्यकता ~","điểm chính":"मुख्य बिन्दु","nhu cầu":"माग","trẻ con":"बच्चाहरु","cung cấp":"प्रदान गर्ने","hồi":"सनी","vượt lên":"पार","thấp hơn mức":"तल्लो तह","quay vòng":"घुमाउनुहोस्","trả lời":"जवाफ","hồi phục":"रिकभरी","giá":"मूल्य","giá cả":"मूल्य","giá trị":"मूल्य","vật giá":"मूल्य","đắt đỏ":"महँगो","đánh giá":"मूल्याङ्कन गर्नुहोस्","thăng":"पदोन्नति","lên, mọc":"उठ्नु, बढ्नु","tăng":"वृद्धि","giáng":"अवतरण","lượng mưa":"वर्षा","đi xuống":"तलतिर","từ năm sau":"अर्को वर्ष देखि","tổn":"क्षति","thiệt":"साँच्चै","thiệt hại":"क्षति","được mất":"लाभ वा हानि","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","trải qua ~":"ဖြတ်သန်းမယ် ~","kinh nghiệm":"အတွေ့အကြုံ","cải":"ဂေါ်ဖီထုပ်","làm lại":"ပြန်လုပ်ပါ။","lại lần nữa":"တဖန်","sửa đổi, tu chính":"ပြင်ဆင်ရန်၊ ပြင်ဆင်ပါ။","phán":"တရားသူကြီး","bán":"ရောင်း","tế":"နိုင်ငံတကာ","kinh tế":"စီးပွားရေး","yếu":"အားနည်းတယ်။","cần ~":"လိုတယ်~","điểm chính":"အဓိကအချက်","nhu cầu":"တောင်းဆိုမှု","trẻ con":"ကလေးတွေ","cung cấp":"ပေးသည်။","hồi":"စမုန်နက်","vượt lên":"ကျော်တက်သည်။","thấp hơn mức":"အောက်ခြေအဆင့်","quay vòng":"ပြန်လှည့်သည်","trả lời":"အကြောင်းပြန်ပါ။","hồi phục":"ပြန်လည်ထူထောင်ရေး","giá":"စျေးနှုန်း","giá cả":"စျေးနှုန်း","giá trị":"တန်ဖိုး","vật giá":"စျေးနှုန်း","đắt đỏ":"ဈေးကြီးတယ်။","đánh giá":"အကဲဖြတ်ပါ။","thăng":"ပရိုမိုးရှင်း","lên, mọc":"တိုး၊ တိုး","tăng":"တိုးမြှင့်လာသည်","giáng":"ဆင်း","lượng mưa":"မိုးရေချိန်","đi xuống":"အောက်ဘက်","từ năm sau":"နောက်နှစ်မှ","tổn":"ပျက်စီးခြင်း။","thiệt":"တကယ်","thiệt hại":"ပျက်စီးမှုများ","được mất":"အမြတ် သို့မဟုတ် အရှုံး","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","trải qua ~":"~ মাধ্যমে যাচ্ছে","kinh nghiệm":"অভিজ্ঞতা","cải":"বাঁধাকপি","làm lại":"পুনরায় করা","lại lần nữa":"আবার","sửa đổi, tu chính":"সংশোধন করা, সংশোধন করা","phán":"বিচারক","bán":"বিক্রি","tế":"আন্তর্জাতিক","kinh tế":"অর্থনীতি","yếu":"দুর্বল","cần ~":"প্রয়োজন ~","điểm chính":"প্রধান পয়েন্ট","nhu cầu":"চাহিদা","trẻ con":"শিশুদের","cung cấp":"প্রদান","hồi":"মৌরি","vượt lên":"অতিক্রম","thấp hơn mức":"নিম্ন স্তর","quay vòng":"ঘুরে","trả lời":"উত্তর","hồi phục":"পুনরুদ্ধার","giá":"মূল্য","giá cả":"মূল্য","giá trị":"মান","vật giá":"মূল্য","đắt đỏ":"ব্যয়বহুল","đánh giá":"মূল্যায়ন করুন","thăng":"প্রচার","lên, mọc":"বৃদ্ধি, বৃদ্ধি","tăng":"বৃদ্ধি","giáng":"অবতরণ","lượng mưa":"বৃষ্টিপাত","đi xuống":"নিম্নগামী","từ năm sau":"পরের বছর থেকে","tổn":"ক্ষতি","thiệt":"সত্যিই","thiệt hại":"ক্ষতি","được mất":"লাভ বা ক্ষতি","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","trải qua ~":"के माध्यम से जा रहा हूँ~","kinh nghiệm":"अनुभव","cải":"पत्ता गोभी","làm lại":"फिर से करना","lại lần nữa":"दोबारा","sửa đổi, tu chính":"संशोधन करो, संशोधन करो","phán":"न्यायाधीश","bán":"बेचना","tế":"अंतरराष्ट्रीय","kinh tế":"अर्थव्यवस्था","yếu":"कमज़ोर","cần ~":"जरुरत~","điểm chính":"मुख्य मुद्दा","nhu cầu":"माँग","trẻ con":"बच्चे","cung cấp":"उपलब्ध करवाना","hồi":"सौंफ़","vượt lên":"पार","thấp hơn mức":"निचले स्तर","quay vòng":"मुड़ो","trả lời":"जवाब","hồi phục":"वसूली","giá":"कीमत","giá cả":"कीमत","giá trị":"कीमत","vật giá":"कीमत","đắt đỏ":"महँगा","đánh giá":"मूल्यांकन करना","thăng":"पदोन्नति","lên, mọc":"उठो, बढ़ो","tăng":"बढ़ोतरी","giáng":"उतरना","lượng mưa":"वर्षा","đi xuống":"नीचे","từ năm sau":"अगले साल से","tổn":"हानि","thiệt":"वास्तव में","thiệt hại":"क्षतियों","được mất":"लाभ या हानि","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","trải qua ~":"กำลังผ่านไป~","kinh nghiệm":"ประสบการณ์","cải":"กะหล่ำปลี","làm lại":"ทำซ้ำ","lại lần nữa":"อีกครั้ง","sửa đổi, tu chính":"แก้ไข, แก้ไข","phán":"ผู้พิพากษา","bán":"ขาย","tế":"ระหว่างประเทศ","kinh tế":"เศรษฐกิจ","yếu":"อ่อนแอ","cần ~":"ต้อง~","điểm chính":"จุดหลัก","nhu cầu":"ความต้องการ","trẻ con":"เด็ก","cung cấp":"จัดเตรียม","hồi":"โป๊ยกั๊ก","vượt lên":"เกิน","thấp hơn mức":"ระดับล่าง","quay vòng":"หันหลังกลับ","trả lời":"ตอบ","hồi phục":"การกู้คืน","giá":"ราคา","giá cả":"ราคา","giá trị":"ค่า","vật giá":"ราคา","đắt đỏ":"แพง","đánh giá":"ประเมิน","thăng":"การส่งเสริม","lên, mọc":"เพิ่มขึ้นเติบโต","tăng":"เพิ่มขึ้น","giáng":"ลงมา","lượng mưa":"ปริมาณน้ำฝน","đi xuống":"ลง","từ năm sau":"จากปีหน้า","tổn":"ความเสียหาย","thiệt":"จริงหรือ","thiệt hại":"ความเสียหาย","được mất":"กำไรหรือขาดทุน","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

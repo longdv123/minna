@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">環</div></div><div class="kcell k-hv"><span class="vi-tr">hoàn</span></div><div class="kcell k-read"><div class="on">カン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>環境<rp>（</rp><rt>かんきょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">môi trường</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">態</div></div><div class="kcell k-hv"><span class="vi-tr">thái</span> </div><div class="kcell k-read"><div class="on">タイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>態度<rp>（</rp><rt>たいど</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thái độ</span> </div></div><div class="kitem"><div class="jp"><ruby>事態<rp>（</rp><rt>じたい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tình hình, tình trạng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">群</div></div><div class="kcell k-hv"><span class="vi-tr">quần</span> </div><div class="kcell k-read"><div class="on">（グン）</div><div>むーれる／むーれ</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（<ruby>動物<rp>（</rp><rt>どうぶつ</rt><rp>）</rp></ruby>の）<ruby>群<rp>（</rp><rt>む</rt><rp>）</rp></ruby>れ</div><div class="vi"><span class="vi-tr">nhóm, đám, đàn</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">羽</div></div><div class="kcell k-hv"><span class="vi-tr">vũ</span></div><div class="kcell k-read"><div>はね／は</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>羽<rp>（</rp><rt>はね</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">cánh</span>  </div></div><div class="kitem"><div class="jp"><ruby>羽根<rp>（</rp><rt>はね</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lông (chim)</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">守</div></div><div class="kcell k-hv"><span class="vi-tr">thủ</span> </div><div class="kcell k-read"><div class="on">（シュ）</div><div>まもーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>守<rp>（</rp><rt>まも</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">bảo vệ</span> </div></div><div class="kitem"><div class="jp"><ruby>留守<rp>（</rp><rt>るす</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vắng nhà</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">然</div></div><div class="kcell k-hv"><span class="vi-tr">nhiên</span> </div><div class="kcell k-read"><div class="on">ゼン／ネン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>自然<rp>（</rp><rt>しぜん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tự nhiên</span> </div></div><div class="kitem"><div class="jp"><ruby>偶然<rp>（</rp><rt>ぐうぜん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ngẫu nhiên</span> </div></div><div class="kitem"><div class="jp"><ruby>天然<rp>（</rp><rt>てんねん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thiên nhiên</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">伝</div></div><div class="kcell k-hv"><span class="vi-tr">truyền</span> </div><div class="kcell k-read"><div class="on">デン</div><div>つたーわる／つたーえる</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～が）<ruby>伝<rp>（</rp><rt>つた</rt><rp>）</rp></ruby>わる</div><div class="vi"><span class="vi-tr">~ lan tỏa</span></div></div><div class="kitem"><div class="jp">（～を）<ruby>伝<rp>（</rp><rt>つた</rt><rp>）</rp></ruby>える</div><div class="vi"><span class="vi-tr">truyền đạt ~</span></div></div><div class="kitem"><div class="jp"><ruby>手伝<rp>（</rp><rt>てつだ</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">giúp đỡ</span></div></div><div class="kitem"><div class="jp"><ruby>伝言<rp>（</rp><rt>でんごん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">lời nhắn</span> </div></div><div class="kitem"><div class="jp"><ruby>伝統<rp>（</rp><rt>でんとう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">truyền thống</span> </div></div><div class="kitem"><div class="jp"><ruby>伝染<rp>（</rp><rt>でんせん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">truyền nhiễm</span> </div></div><div class="kitem"><div class="jp"><ruby>宣伝<rp>（</rp><rt>せんでん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tuyên truyền</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">汚</div></div><div class="kcell k-hv"><span class="vi-tr">ô</span></div><div class="kcell k-read"><div class="on">オ</div><div>（けがーらわしい）／よごーす／よごーれる／きたなーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>汚<rp>（</rp><rt>よご</rt><rp>）</rp></ruby>す</div><div class="vi"><span class="vi-tr">làm bẩn</span> </div></div><div class="kitem"><div class="jp"><ruby>汚<rp>（</rp><rt>きたな</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">bẩn</span> </div></div><div class="kitem"><div class="jp"><ruby>汚染<rp>（</rp><rt>おせん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">ô nhiễm</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">費</div></div><div class="kcell k-hv"><span class="vi-tr">phí</span></div><div class="kcell k-read"><div class="on">ヒ</div><div>（ついーやす）</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>費用<rp>（</rp><rt>ひよう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chi phí</span> </div></div><div class="kitem"><div class="jp"><ruby>消費<rp>（</rp><rt>しょうひ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">tiêu dùng</span> </div></div><div class="kitem"><div class="jp"><ruby>交通費<rp>（</rp><rt>こうつうひ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phí đi lại</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">適</div></div><div class="kcell k-hv"><span class="vi-tr">thích</span></div><div class="kcell k-read"><div class="on">テキ</div></div></div><div class="kbody"><div class="kitem"><div class="jp">（～に）<ruby>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>する</div><div class="vi"><span class="vi-tr">phù hợp</span> </div></div><div class="kitem"><div class="jp"><ruby>適切<rp>（</rp><rt>てきせつ</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">đúng, chuẩn</span> </div></div><div class="kitem"><div class="jp"><ruby>快適<rp>（</rp><rt>かいてき</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">thoải mái</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">管</div></div><div class="kcell k-hv"><span class="vi-tr">quản</span> </div><div class="kcell k-read"><div class="on">カン</div><div>くだ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>管<rp>（</rp><rt>くだ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">ống</span> </div></div><div class="kitem"><div class="jp"><ruby>管理<rp>（</rp><rt>かんり</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">quản lí</span> </div></div><div class="kitem"><div class="jp"><ruby>保管<rp>（</rp><rt>ほかん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">bảo quản</span> </div></div><div class="kitem"><div class="jp"><ruby>水道管<rp>（</rp><rt>すいどうかん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đường ống nước</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">永</div></div><div class="kcell k-hv"><span class="vi-tr">vĩnh</span> </div><div class="kcell k-read"><div class="on">エイ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>永久<rp>（</rp><rt>えいきゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vĩnh cửu</span> </div></div><div class="kitem"><div class="jp"><ruby>永遠<rp>（</rp><rt>えいえん</rt><rp>）</rp></ruby>に</div><div class="vi"><span class="vi-tr">vĩnh viễn</span> </div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. インターネットによる<ruby>効果的<rp>（</rp><rt>こうかてき</rt><rp>）</rp></ruby>な<u><ruby>宣伝<rp>（</rp><rt>せんでん</rt><rp>）</rp></ruby></u><ruby>方法<rp>（</rp><rt>ほうほう</rt><rp>）</rp></ruby>を<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えたい。</td><td>a. せんてん</td><td>b. せんでん</td></tr><tr><td>2. <ruby>鳥<rp>（</rp><rt>とり</rt><rp>）</rp></ruby>が<u><ruby>群<rp>（</rp><rt>む</rt><rp>）</rp></ruby>れ</u>を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>って<ruby>木<rp>（</rp><rt>き</rt><rp>）</rp></ruby>にとまっている。</td><td>a. まれ</td><td>b. むれ</td></tr><tr><td>3. これは<ruby>鳥<rp>（</rp><rt>とり</rt><rp>）</rp></ruby>の<u><ruby>羽<rp>（</rp><rt>はね</rt><rp>）</rp></ruby></u>を<ruby>細<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>かく<ruby>描<rp>（</rp><rt>えが</rt><rp>）</rp></ruby>いた<ruby>絵<rp>（</rp><rt>え</rt><rp>）</rp></ruby>です。</td><td>a. う</td><td>b. はね</td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>いたいことがうまく<ruby>相手<rp>（</rp><rt>あいて</rt><rp>）</rp></ruby>に<u><ruby>伝<rp>（</rp><rt>つた</rt><rp>）</rp></ruby>わら</u>なかったようだ。</td><td>a. つたわら</td><td>b. つだわら</td></tr><tr><td>5. <ruby>各家庭<rp>（</rp><rt>かくかてい</rt><rp>）</rp></ruby>から<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>る<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>が<ruby>環境<rp>（</rp><rt>かんきょう</rt><rp>）</rp></ruby>を<u><ruby>汚染<rp>（</rp><rt>おせん</rt><rp>）</rp></ruby></u>している。</td><td>a. おせん</td><td>b. よせん</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. インターネットによる<ruby>効果的<rp>（</rp><rt>こうかてき</rt><rp>）</rp></ruby>な<u><ruby>宣伝<rp>（</rp><rt>せんでん</rt><rp>）</rp></ruby></u><ruby>方法<rp>（</rp><rt>ほうほう</rt><rp>）</rp></ruby>を<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えたい。</td><td><b>せんでん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>鳥<rp>（</rp><rt>とり</rt><rp>）</rp></ruby>が<u><ruby>群<rp>（</rp><rt>む</rt><rp>）</rp></ruby>れ</u>を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>って<ruby>木<rp>（</rp><rt>き</rt><rp>）</rp></ruby>にとまっている。</td><td><b>むれ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. これは<ruby>鳥<rp>（</rp><rt>とり</rt><rp>）</rp></ruby>の<u><ruby>羽<rp>（</rp><rt>はね</rt><rp>）</rp></ruby></u>を<ruby>細<rp>（</rp><rt>こま</rt><rp>）</rp></ruby>かく<ruby>描<rp>（</rp><rt>えが</rt><rp>）</rp></ruby>いた<ruby>絵<rp>（</rp><rt>え</rt><rp>）</rp></ruby>です。</td><td><b>はね</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>いたいことがうまく<ruby>相手<rp>（</rp><rt>あいて</rt><rp>）</rp></ruby>に<u><ruby>伝<rp>（</rp><rt>つた</rt><rp>）</rp></ruby>わら</u>なかったようだ。</td><td><b>つたわら</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>各家庭<rp>（</rp><rt>かくかてい</rt><rp>）</rp></ruby>から<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>る<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>が<ruby>環境<rp>（</rp><rt>かんきょう</rt><rp>）</rp></ruby>を<u><ruby>汚染<rp>（</rp><rt>おせん</rt><rp>）</rp></ruby></u>している。</td><td><b>おせん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>の<ruby>快<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>てき</u>な<ruby>温度<rp>（</rp><rt>おんど</rt><rp>）</rp></ruby>は、<ruby>冬<rp>（</rp><rt>ふゆ</rt><rp>）</rp></ruby>は２０<ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>ぐらいだそうだ。</td><td>a. 適</td><td>b. 敵</td><td>c. 滴</td></tr><tr><td>2. <ruby>資料<rp>（</rp><rt>しりょう</rt><rp>）</rp></ruby>を<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby><u>かん</u>するための<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>が<ruby>必要<rp>（</rp><rt>ひつよう</rt><rp>）</rp></ruby>だ。</td><td>a. 管</td><td>b. 官</td><td>c. 菅</td></tr><tr><td>3. そんな<u>たい</u><ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>では、<ruby>皆<rp>（</rp><rt>みな</rt><rp>）</rp></ruby>に<ruby>嫌<rp>（</rp><rt>きら</rt><rp>）</rp></ruby>われるよ。</td><td>a. 熊</td><td>b. 能</td><td>c. 態</td></tr><tr><td>4. <ruby>交通<rp>（</rp><rt>こうつう</rt><rp>）</rp></ruby><u>ひ</u>は<ruby>全額<rp>（</rp><rt>ぜんがく</rt><rp>）</rp></ruby>、<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>から<ruby>支払<rp>（</rp><rt>しはら</rt><rp>）</rp></ruby>われる。</td><td>a. 貸</td><td>b. 費</td><td>c. 貨</td></tr><tr><td>5. やっぱり<ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>は<ruby>天<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><u>ねん</u>のほうがおいしいと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>う。</td><td>a. 念</td><td>b. 燃</td><td>c. 然</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>の<ruby>快<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>てき</u>な<ruby>温度<rp>（</rp><rt>おんど</rt><rp>）</rp></ruby>は、<ruby>冬<rp>（</rp><rt>ふゆ</rt><rp>）</rp></ruby>は２０<ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>ぐらいだそうだ。</td><td><b>適</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>資料<rp>（</rp><rt>しりょう</rt><rp>）</rp></ruby>を<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby><u>かん</u>するための<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>が<ruby>必要<rp>（</rp><rt>ひつよう</rt><rp>）</rp></ruby>だ。</td><td><b>管</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. そんな<u>たい</u><ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>では、<ruby>皆<rp>（</rp><rt>みな</rt><rp>）</rp></ruby>に<ruby>嫌<rp>（</rp><rt>きら</rt><rp>）</rp></ruby>われるよ。</td><td><b>態</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>交通<rp>（</rp><rt>こうつう</rt><rp>）</rp></ruby><u>ひ</u>は<ruby>全額<rp>（</rp><rt>ぜんがく</rt><rp>）</rp></ruby>、<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>から<ruby>支払<rp>（</rp><rt>しはら</rt><rp>）</rp></ruby>われる。</td><td><b>費</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. やっぱり<ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>は<ruby>天<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><u>ねん</u>のほうがおいしいと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>う。</td><td><b>然</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. （　　　）<ruby>環境<rp>（</rp><rt>かんきょう</rt><rp>）</rp></ruby>を<ruby>守<rp>（</rp><rt>まも</rt><rp>）</rp></ruby>るために<ruby>何<rp>(</rp><rt>なに</rt><rp>)</rp></ruby>ができるだろうか。</td><td>a. 偶然</td><td>b. 自然</td></tr><tr><td>2. <ruby>山田<rp>（</rp><rt>やまだ</rt><rp>）</rp></ruby>は<ruby>会議中<rp>（</rp><rt>かいぎちゅう</rt><rp>）</rp></ruby>ですが、（　　　）を<ruby>承<rp>（</rp><rt>うけたまわ</rt><rp>）</rp></ruby>ります。</td><td>a. お留守</td><td>b. ご伝言</td></tr><tr><td>3. この<ruby>美<rp>（</rp><rt>うつく</rt><rp>）</rp></ruby>しい<ruby>景色<rp>（</rp><rt>けしき</rt><rp>）</rp></ruby>が（　　　）<ruby>続<rp>（</rp><rt>つづ</rt><rp>）</rp></ruby>くといいな。</td><td>a. 永遠に</td><td>b. 伝統に</td></tr><tr><td>4. その<ruby>書類<rp>（</rp><rt>しょるい</rt><rp>）</rp></ruby>、<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>なので（　　　）ないようにしてください。</td><td>a. 汚さ</td><td>b. 汚染し</td></tr><tr><td>5. このまま<ruby>石油<rp>（</rp><rt>せきゆ</rt><rp>）</rp></ruby>を（　　　）し<ruby>続<rp>（</rp><rt>つづ</rt><rp>）</rp></ruby>ければ、いずれなくなってしまう。</td><td>a. 消費</td><td>b. 費用</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. （　　　）<ruby>環境<rp>（</rp><rt>かんきょう</rt><rp>）</rp></ruby>を<ruby>守<rp>（</rp><rt>まも</rt><rp>）</rp></ruby>るために<ruby>何<rp>(</rp><rt>なに</rt><rp>)</rp></ruby>ができるだろうか。</td><td><b>自然</b> (しぜん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>山田<rp>（</rp><rt>やまだ</rt><rp>）</rp></ruby>は<ruby>会議中<rp>（</rp><rt>かいぎちゅう</rt><rp>）</rp></ruby>ですが、（　　　）を<ruby>承<rp>（</rp><rt>うけたまわ</rt><rp>）</rp></ruby>ります。</td><td><b>ご伝言</b> (ごでんごん)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<ruby>美<rp>（</rp><rt>うつく</rt><rp>）</rp></ruby>しい<ruby>景色<rp>（</rp><rt>けしき</rt><rp>）</rp></ruby>が（　　　）<ruby>続<rp>（</rp><rt>つづ</rt><rp>）</rp></ruby>くといいな。</td><td><b>永遠に</b> (えいえんに)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. その<ruby>書類<rp>（</rp><rt>しょるい</rt><rp>）</rp></ruby>、<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>なので（　　　）ないようにしてください。</td><td><b>汚さ</b> (よごさ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. このまま<ruby>石油<rp>（</rp><rt>せきゆ</rt><rp>）</rp></ruby>を（　　　）し<ruby>続<rp>（</rp><rt>つづ</rt><rp>）</rp></ruby>ければ、いずれなくなってしまう。</td><td><b>消費</b> (しょうひ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-5-3"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-5-bai-3.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","hoàn":"complete","môi trường":"environment","thái":"Thai","thái độ":"attitude","tình hình, tình trạng":"situation, condition","quần":"trousers","nhóm, đám, đàn":"group, crowd, herd","vũ":"Vu","cánh":"wing","lông (chim)":"feather)","thủ":"defense","bảo vệ":"protect","vắng nhà":"absent from home","nhiên":"course","tự nhiên":"nature","ngẫu nhiên":"random","thiên nhiên":"nature","truyền":"transmit","~ lan tỏa":"~ spread","truyền đạt ~":"convey ~","giúp đỡ":"help","lời nhắn":"message","truyền thống":"traditional","truyền nhiễm":"infectious","tuyên truyền":"propagate","ô":"Umbrella","làm bẩn":"dirty","bẩn":"dirty","ô nhiễm":"polluted","phí":"fee","chi phí":"expense","tiêu dùng":"consumption","phí đi lại":"travel fees","thích":"prefer","phù hợp":"Fit","đúng, chuẩn":"correct, correct","thoải mái":"comfortable","quản":"management","ống":"tube","quản lí":"manager","bảo quản":"preserve","đường ống nước":"water pipes","vĩnh":"forever","vĩnh cửu":"ageless","vĩnh viễn":"forever","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","hoàn":"menyelesaikan","môi trường":"lingkungan","thái":"Thai","thái độ":"sikap","tình hình, tình trạng":"situasi, kondisi","quần":"celana panjang","nhóm, đám, đàn":"kelompok, kerumunan, kawanan","vũ":"Vu","cánh":"sayap","lông (chim)":"bulu)","thủ":"pertahanan","bảo vệ":"melindungi","vắng nhà":"absen dari rumah","nhiên":"kursus","tự nhiên":"alam","ngẫu nhiên":"acak","thiên nhiên":"alam","truyền":"mengirimkan","~ lan tỏa":"~ menyebar","truyền đạt ~":"menyampaikan ~","giúp đỡ":"membantu","lời nhắn":"pesan","truyền thống":"tradisional","truyền nhiễm":"menular","tuyên truyền":"menyebarkan","ô":"Payung","làm bẩn":"kotor","bẩn":"kotor","ô nhiễm":"tercemar","phí":"biaya","chi phí":"pengeluaran","tiêu dùng":"konsumsi","phí đi lại":"biaya perjalanan","thích":"lebih menyukai","phù hợp":"Bugar","đúng, chuẩn":"benar, benar","thoải mái":"nyaman","quản":"pengelolaan","ống":"tabung","quản lí":"manajer","bảo quản":"melestarikan","đường ống nước":"pipa air","vĩnh":"selamanya","vĩnh cửu":"awet muda","vĩnh viễn":"selamanya","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","hoàn":"पूरा","môi trường":"वातावरण","thái":"थाई","thái độ":"मनोवृत्ति","tình hình, tình trạng":"अवस्था, अवस्था","quần":"पतलून","nhóm, đám, đàn":"समूह, भीड, बथान","vũ":"Vu","cánh":"पखेटा","lông (chim)":"प्वाँख)","thủ":"रक्षा","bảo vệ":"रक्षा गर्नुहोस्","vắng nhà":"घरबाट अनुपस्थित","nhiên":"पाठ्यक्रम","tự nhiên":"प्रकृति","ngẫu nhiên":"अनियमित","thiên nhiên":"प्रकृति","truyền":"प्रसारण","~ lan tỏa":"~ फैलियो","truyền đạt ~":"पठाउनुहोस् ~","giúp đỡ":"मद्दत","lời nhắn":"सन्देश","truyền thống":"परम्परागत","truyền nhiễm":"संक्रामक","tuyên truyền":"प्रचार गर्ने","ô":"छाता","làm bẩn":"फोहोर","bẩn":"फोहोर","ô nhiễm":"प्रदूषित","phí":"शुल्क","chi phí":"खर्च","tiêu dùng":"खपत","phí đi lại":"यात्रा शुल्क","thích":"रुचाउँछन्","phù hợp":"फिट","đúng, chuẩn":"सही, सही","thoải mái":"सहज","quản":"व्यवस्थापन","ống":"ट्यूब","quản lí":"प्रबन्धक","bảo quản":"जोगाउनु","đường ống nước":"पानी पाइपहरू","vĩnh":"सधैंभरि","vĩnh cửu":"उमेर नभएको","vĩnh viễn":"सधैंभरि","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","hoàn":"ပြီးပါပြီ။","môi trường":"ပတ်ဝန်းကျင်","thái":"ထိုင်း","thái độ":"သဘောထား","tình hình, tình trạng":"အခြေအနေ၊ အခြေအနေ","quần":"ဘောင်းဘီရှည်","nhóm, đám, đàn":"အုပ်စု၊ လူအုပ်၊ နွား","vũ":"Vu","cánh":"တောင်ပံ","lông (chim)":"အမွေး)","thủ":"ကာကွယ်ရေး","bảo vệ":"ကာကွယ်ပါ။","vắng nhà":"အိမ်မှ မရှိတော့","nhiên":"သင်တန်း","tự nhiên":"သဘာဝ","ngẫu nhiên":"ကျပန်း","thiên nhiên":"သဘာဝ","truyền":"ပို့လွှတ်ပါ။","~ lan tỏa":"~ ပြန့်နှံ့","truyền đạt ~":"ပို့ဆောင် ~","giúp đỡ":"ကူညီကြပါ","lời nhắn":"သတင်းစကား","truyền thống":"ရိုးရာ","truyền nhiễm":"ကူးစက်သည်။","tuyên truyền":"ဖြန့်သည်။","ô":"ထီး","làm bẩn":"ညစ်ပတ်သည်။","bẩn":"ညစ်ပတ်သည်။","ô nhiễm":"ညစ်ညမ်းသည်။","phí":"အခကြေးငွေ","chi phí":"ကုန်ကျစရိတ်","tiêu dùng":"စားသုံးမှု","phí đi lại":"ခရီးစရိတ်","thích":"ပိုကြိုက်တယ်။","phù hợp":"အံ","đúng, chuẩn":"မှန်တယ်၊ မှန်တယ်။","thoải mái":"အဆင်ပြေတယ်။","quản":"စီမံခန့်ခွဲမှု","ống":"tube","quản lí":"မန်နေဂျာ","bảo quản":"ထိန်းသိမ်းပါ။","đường ống nước":"ရေပိုက်များ","vĩnh":"ထာဝရ","vĩnh cửu":"အသက်မဲ့","vĩnh viễn":"ထာဝရ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","hoàn":"সম্পূর্ণ","môi trường":"পরিবেশ","thái":"থাই","thái độ":"মনোভাব","tình hình, tình trạng":"পরিস্থিতি, অবস্থা","quần":"ট্রাউজার্স","nhóm, đám, đàn":"দল, ভিড়, পশুপাল","vũ":"ভু","cánh":"উইং","lông (chim)":"পালক)","thủ":"প্রতিরক্ষা","bảo vệ":"রক্ষা","vắng nhà":"বাড়ি থেকে অনুপস্থিত","nhiên":"অবশ্যই","tự nhiên":"প্রকৃতি","ngẫu nhiên":"এলোমেলো","thiên nhiên":"প্রকৃতি","truyền":"প্রেরণ","~ lan tỏa":"~ বিস্তার","truyền đạt ~":"বোঝানো ~","giúp đỡ":"সাহায্য","lời nhắn":"বার্তা","truyền thống":"ঐতিহ্যগত","truyền nhiễm":"সংক্রামক","tuyên truyền":"প্রচার করা","ô":"ছাতা","làm bẩn":"নোংরা","bẩn":"নোংরা","ô nhiễm":"দূষিত","phí":"ফি","chi phí":"খরচ","tiêu dùng":"খরচ","phí đi lại":"ভ্রমণ ফি","thích":"পছন্দ","phù hợp":"ফিট","đúng, chuẩn":"সঠিক, সঠিক","thoải mái":"আরামদায়ক","quản":"ব্যবস্থাপনা","ống":"নল","quản lí":"ম্যানেজার","bảo quản":"সংরক্ষণ করা","đường ống nước":"জলের পাইপ","vĩnh":"চিরকাল","vĩnh cửu":"বয়সহীন","vĩnh viễn":"চিরকাল","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","hoàn":"पूरा","môi trường":"पर्यावरण","thái":"थाई","thái độ":"नज़रिया","tình hình, tình trạng":"स्थिति, स्थिति","quần":"पैजामा","nhóm, đám, đàn":"समूह, भीड़, झुण्ड","vũ":"वु","cánh":"विंग","lông (chim)":"पंख)","thủ":"रक्षा","bảo vệ":"रक्षा करना","vắng nhà":"घर से अनुपस्थित","nhiên":"अवधि","tự nhiên":"प्रकृति","ngẫu nhiên":"यादृच्छिक","thiên nhiên":"प्रकृति","truyền":"संचारित","~ lan tỏa":"~फैलना","truyền đạt ~":"संप्रेषित करें~","giúp đỡ":"मदद","lời nhắn":"संदेश","truyền thống":"परंपरागत","truyền nhiễm":"संक्रामक","tuyên truyền":"प्रचार","ô":"छाता","làm bẩn":"गंदा","bẩn":"गंदा","ô nhiễm":"प्रदूषित","phí":"शुल्क","chi phí":"व्यय","tiêu dùng":"उपभोग","phí đi lại":"यात्रा शुल्क","thích":"पसंद करना","phù hợp":"उपयुक्त","đúng, chuẩn":"सही, सही","thoải mái":"आरामदायक","quản":"प्रबंध","ống":"नली","quản lí":"प्रबंधक","bảo quản":"संरक्षित करना","đường ống nước":"पानी के पाइप","vĩnh":"हमेशा के लिए","vĩnh cửu":"वृद्ध न होनेवाला","vĩnh viễn":"हमेशा के लिए","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","hoàn":"สมบูรณ์","môi trường":"สิ่งแวดล้อม","thái":"แบบไทย","thái độ":"ทัศนคติ","tình hình, tình trạng":"สถานการณ์สภาพ","quần":"กางเกงขายาว","nhóm, đám, đàn":"กลุ่ม, ฝูงชน, ฝูง","vũ":"วู","cánh":"ปีก","lông (chim)":"ขนนก)","thủ":"การป้องกัน","bảo vệ":"ปกป้อง","vắng nhà":"ไม่ออกจากบ้าน","nhiên":"คอร์ส","tự nhiên":"ธรรมชาติ","ngẫu nhiên":"สุ่ม","thiên nhiên":"ธรรมชาติ","truyền":"ส่ง","~ lan tỏa":"~ แพร่กระจาย","truyền đạt ~":"ถ่ายทอด ~","giúp đỡ":"ช่วย","lời nhắn":"ข้อความ","truyền thống":"แบบดั้งเดิม","truyền nhiễm":"ติดเชื้อ","tuyên truyền":"เผยแพร่","ô":"ร่ม","làm bẩn":"สกปรก","bẩn":"สกปรก","ô nhiễm":"ปนเปื้อน","phí":"ค่าธรรมเนียม","chi phí":"ค่าใช้จ่าย","tiêu dùng":"การบริโภค","phí đi lại":"ค่าธรรมเนียมการเดินทาง","thích":"ชอบมากกว่า","phù hợp":"พอดี","đúng, chuẩn":"ถูกต้องถูกต้อง","thoải mái":"สะดวกสบาย","quản":"การจัดการ","ống":"หลอด","quản lí":"ผู้จัดการ","bảo quản":"อนุรักษ์","đường ống nước":"ท่อน้ำ","vĩnh":"ตลอดไป","vĩnh cửu":"อมตะ","vĩnh viễn":"ตลอดไป","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

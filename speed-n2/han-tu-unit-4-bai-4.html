@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">寄</div></div><div class="kcell k-hv"><span class="vi-tr">ký</span></div><div class="kcell k-read"><div class="on">キ</div><div>よーる／よーせる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>寄<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>る</div><div class="vi"><span class="vi-tr">ghé vào</span> </div></div><div class="kitem"><div class="jp">お<ruby>年寄<rp>（</rp><rt>としよ</rt><rp>）</rp></ruby>り</div><div class="vi"><span class="vi-tr">người già</span></div></div><div class="kitem"><div class="jp"><ruby>寄付<rp>（</rp><rt>きふ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">quyên góp tiền</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">難</div></div><div class="kcell k-hv">nan</div><div class="kcell k-read"><div class="on">ナン</div><div>むずかーしい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>困難<rp>（</rp><rt>こんなん</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">khó khăn</span> </div></div><div class="kitem"><div class="jp"><ruby>避難<rp>（</rp><rt>ひなん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">lánh nạn</span></div></div><div class="kitem"><div class="jp"><ruby>盗難<rp>（</rp><rt>とうなん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">trộm</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">福</div></div><div class="kcell k-hv"><span class="vi-tr">phúc</span></div><div class="kcell k-read"><div class="on">フク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>幸福<rp>（</rp><rt>こうふく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hạnh phúc</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">将</div></div><div class="kcell k-hv"><span class="vi-tr">tướng</span></div><div class="kcell k-read"><div class="on">ショウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>将来<rp>（</rp><rt>しょうらい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tương lai</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">願</div></div><div class="kcell k-hv"><span class="vi-tr">nguyện</span></div><div class="kcell k-read"><div class="on">ガン</div><div>ねがーう</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">cầu mong</span></div></div><div class="kitem"><div class="jp"><ruby>願書<rp>（</rp><rt>がんしょ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đơn</span> </div></div><div class="kitem"><div class="jp"><ruby>出願<rp>（</rp><rt>しゅつがん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">nộp đơn</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">付</div></div><div class="kcell k-hv"><span class="vi-tr">phó</span> </div><div class="kcell k-read"><div class="on">フ　</div><div>つーける／つーく</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>付録<rp>（</rp><rt>ふろく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phụ lục</span></div></div><div class="kitem"><div class="jp"><ruby>付近<rp>（</rp><rt>ふきん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phụ cận</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">貧</div></div><div class="kcell k-hv"><span class="vi-tr">bần</span> </div><div class="kcell k-read"><div class="on">（ヒン）／ビン</div><div>まずーしい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>貧<rp>（</rp><rt>まず</rt><rp>）</rp></ruby>しい</div><div class="vi"><span class="vi-tr">nghèo</span> </div></div><div class="kitem"><div class="jp"><ruby>貧乏<rp>（</rp><rt>びんぼう</rt><rp>）</rp></ruby>（な）</div><div class="vi"><span class="vi-tr">nghèo</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">困</div></div><div class="kcell k-hv"><span class="vi-tr">khốn</span> </div><div class="kcell k-read"><div class="on">コン</div><div>こまーる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>貧困<rp>（</rp><rt>ひんこん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nghèo khổ</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">苦</div></div><div class="kcell k-hv"><span class="vi-tr">khổ</span> </div><div class="kcell k-read"><div class="on">ク</div><div>くるーしい／くるーしむ／にがーい</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>苦<rp>（</rp><rt>くる</rt><rp>）</rp></ruby>しむ</div><div class="vi"><span class="vi-tr">khổ sở</span> </div></div><div class="kitem"><div class="jp"><ruby>苦<rp>（</rp><rt>にが</rt><rp>）</rp></ruby>い</div><div class="vi"><span class="vi-tr">đắng</span> </div></div><div class="kitem"><div class="jp"><ruby>苦情<rp>（</rp><rt>くじょう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phàn nàn</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">救</div></div><div class="kcell k-hv"><span class="vi-tr">cứu</span></div><div class="kcell k-read"><div class="on">キュウ</div><div>すくーう</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>救<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>う</div><div class="vi"><span class="vi-tr">cứu</span> </div></div><div class="kitem"><div class="jp"><ruby>救助<rp>（</rp><rt>きゅうじょ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">cứu trợ</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">認</div></div><div class="kcell k-hv"><span class="vi-tr">nhận</span> </div><div class="kcell k-read"><div class="on">ニン</div><div>みとーめる</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>認<rp>（</rp><rt>みと</rt><rp>）</rp></ruby>める</div><div class="vi"><span class="vi-tr">chấp nhận, thừa nhận</span></div></div><div class="kitem"><div class="jp"><ruby>確認<rp>（</rp><rt>かくにん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">xác nhận</span> </div></div><div class="kitem"><div class="jp"><ruby>承認<rp>（</rp><rt>しょうにん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">chấp nhận</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">組</div></div><div class="kcell k-hv"><span class="vi-tr">tổ</span> </div><div class="kcell k-read"><div class="on">ソ</div><div>くーむ／くみ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby>む</div><div class="vi"><span class="vi-tr">kết hợp</span> </div></div><div class="kitem"><div class="jp"><ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby>み<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>てる</div><div class="vi"><span class="vi-tr">lắp ghép</span></div></div><div class="kitem"><div class="jp"><ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby>み<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせ</div><div class="vi"><span class="vi-tr">kết hợp</span> </div></div><div class="kitem"><div class="jp"><ruby>組合<rp>（</rp><rt>くみあい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">nghiệp đoàn</span></div></div><div class="kitem"><div class="jp"><ruby>番組<rp>（</rp><rt>ばんぐみ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">chương trình</span></div></div><div class="kitem"><div class="jp"><ruby>組織<rp>（</rp><rt>そしき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tổ chức</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">協</div></div><div class="kcell k-hv"><span class="vi-tr">hiệp</span> </div><div class="kcell k-read"><div class="on">キョウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>協力<rp>（</rp><rt>きょうりょく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hợp tác</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>は<u><ruby>貧<rp>（</rp><rt>まず</rt><rp>）</rp></ruby>しい</u><ruby>暮<rp>（</rp><rt>く</rt><rp>）</rp></ruby>らしをしている<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>を<ruby>助<rp>（</rp><rt>たす</rt><rp>）</rp></ruby>けるべきだと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>います。</td><td>a. まぶしい</td><td>b. まずしい</td></tr><tr><td>2. <ruby>環境悪化<rp>（</rp><rt>かんきょうあっか</rt><rp>）</rp></ruby>から<ruby>地球<rp>（</rp><rt>ちきゅう</rt><rp>）</rp></ruby>を<u><ruby>救<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>う</u>ために、<ruby>世界<rp>（</rp><rt>せかい</rt><rp>）</rp></ruby>の<ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>が<ruby>集<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>まって<ruby>議論<rp>（</rp><rt>ぎろん</rt><rp>）</rp></ruby>した。</td><td>a. くう</td><td>b. すくう</td></tr><tr><td>3. <ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>がよくなるように<u><ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>って</u>います。</td><td>a. ねがって</td><td>b. いのって</td></tr><tr><td>4. <u><ruby>組織<rp>（</rp><rt>そしき</rt><rp>）</rp></ruby></u>で<ruby>働<rp>（</rp><rt>はたら</rt><rp>）</rp></ruby>く<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>はお<ruby>互<rp>（</rp><rt>たが</rt><rp>）</rp></ruby>いに<ruby>協力<rp>（</rp><rt>きょうりょく</rt><rp>）</rp></ruby>し<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>うことが<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>だ。</td><td>a. そしき</td><td>b. くみしき</td></tr><tr><td>5. この<ruby>薬<rp>（</rp><rt>くすり</rt><rp>）</rp></ruby>は、<ruby>味<rp>（</rp><rt>あじ</rt><rp>）</rp></ruby>は<u><ruby>苦<rp>（</rp><rt>にが</rt><rp>）</rp></ruby>い</u>がよく<ruby>効<rp>（</rp><rt>き</rt><rp>）</rp></ruby>く。</td><td>a. くるしい</td><td>b. にがい</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>は<u><ruby>貧<rp>（</rp><rt>まず</rt><rp>）</rp></ruby>しい</u><ruby>暮<rp>（</rp><rt>く</rt><rp>）</rp></ruby>らしをしている<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>を<ruby>助<rp>（</rp><rt>たす</rt><rp>）</rp></ruby>けるべきだと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>います。</td><td><b>まずしい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>環境悪化<rp>（</rp><rt>かんきょうあっか</rt><rp>）</rp></ruby>から<ruby>地球<rp>（</rp><rt>ちきゅう</rt><rp>）</rp></ruby>を<u><ruby>救<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>う</u>ために、<ruby>世界<rp>（</rp><rt>せかい</rt><rp>）</rp></ruby>の<ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>が<ruby>集<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>まって<ruby>議論<rp>（</rp><rt>ぎろん</rt><rp>）</rp></ruby>した。</td><td><b>すくう</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>がよくなるように<u><ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>って</u>います。</td><td><b>ねがって</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <u><ruby>組織<rp>（</rp><rt>そしき</rt><rp>）</rp></ruby></u>で<ruby>働<rp>（</rp><rt>はたら</rt><rp>）</rp></ruby>く<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>はお<ruby>互<rp>（</rp><rt>たが</rt><rp>）</rp></ruby>いに<ruby>協力<rp>（</rp><rt>きょうりょく</rt><rp>）</rp></ruby>し<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>うことが<ruby>大切<rp>（</rp><rt>たいせつ</rt><rp>）</rp></ruby>だ。</td><td><b>そしき</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. この<ruby>薬<rp>（</rp><rt>くすり</rt><rp>）</rp></ruby>は、<ruby>味<rp>（</rp><rt>あじ</rt><rp>）</rp></ruby>は<u><ruby>苦<rp>（</rp><rt>にが</rt><rp>）</rp></ruby>い</u>がよく<ruby>効<rp>（</rp><rt>き</rt><rp>）</rp></ruby>く。</td><td><b>にがい</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>申請<rp>（</rp><rt>しんせい</rt><rp>）</rp></ruby>した<ruby>奨学金<rp>（</rp><rt>しょうがくきん</rt><rp>）</rp></ruby>が<ruby>承<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><u>にん</u>された。</td><td>a. 認</td><td>b. 任</td><td>c. 忍</td></tr><tr><td>2. <ruby>卒業<rp>（</rp><rt>そつぎょう</rt><rp>）</rp></ruby>した<ruby>大学<rp>（</rp><rt>だいがく</rt><rp>）</rp></ruby>に１０<ruby>万円<rp>（</rp><rt>まんえん</rt><rp>）</rp></ruby><u>き</u><ruby>付<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>をした。</td><td>a. 季</td><td>b. 奇</td><td>c. 寄</td></tr><tr><td>3. この<u>ふ</u><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>にコンビニが３<ruby>軒<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>あります。</td><td>a. 負</td><td>b. 付</td><td>c. 附</td></tr><tr><td>4. <ruby>幼<rp>（</rp><rt>おさな</rt><rp>）</rp></ruby>いころは、<u>びん</u><ruby>乏<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>な<ruby>家庭<rp>（</rp><rt>かてい</rt><rp>）</rp></ruby>で<ruby>育<rp>（</rp><rt>そだ</rt><rp>）</rp></ruby>った。</td><td>a. 貪</td><td>b. 貧</td><td>c. 貸</td></tr><tr><td>5. <u>しょう</u><ruby>来<rp>（</rp><rt>らい</rt><rp>）</rp></ruby>は、<ruby>海外<rp>（</rp><rt>かいがい</rt><rp>）</rp></ruby>で<ruby>就職<rp>（</rp><rt>しゅうしょく</rt><rp>）</rp></ruby>したいです。</td><td>a. 承</td><td>b. 招</td><td>c. 将</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. <ruby>申請<rp>（</rp><rt>しんせい</rt><rp>）</rp></ruby>した<ruby>奨学金<rp>（</rp><rt>しょうがくきん</rt><rp>）</rp></ruby>が<ruby>承<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><u>にん</u>された。</td><td><b>認</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>卒業<rp>（</rp><rt>そつぎょう</rt><rp>）</rp></ruby>した<ruby>大学<rp>（</rp><rt>だいがく</rt><rp>）</rp></ruby>に１０<ruby>万円<rp>（</rp><rt>まんえん</rt><rp>）</rp></ruby><u>き</u><ruby>付<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>をした。</td><td><b>寄</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. この<u>ふ</u><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>にコンビニが３<ruby>軒<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>あります。</td><td><b>付</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>幼<rp>（</rp><rt>おさな</rt><rp>）</rp></ruby>いころは、<u>びん</u><ruby>乏<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>な<ruby>家庭<rp>（</rp><rt>かてい</rt><rp>）</rp></ruby>で<ruby>育<rp>（</rp><rt>そだ</rt><rp>）</rp></ruby>った。</td><td><b>貧</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. <u>しょう</u><ruby>来<rp>（</rp><rt>らい</rt><rp>）</rp></ruby>は、<ruby>海外<rp>（</rp><rt>かいがい</rt><rp>）</rp></ruby>で<ruby>就職<rp>（</rp><rt>しゅうしょく</rt><rp>）</rp></ruby>したいです。</td><td><b>将</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>はこの<ruby>公害<rp>（</rp><rt>こうがい</rt><rp>）</rp></ruby>の<ruby>責任<rp>（</rp><rt>せきにん</rt><rp>）</rp></ruby>は<ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>にあることを（　　　）。</td><td>a. 認めた</td><td>b. 出願した</td></tr><tr><td>2. <ruby>夜<rp>（</rp><rt>よる</rt><rp>）</rp></ruby>、<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>でギターの<ruby>練習<rp>（</rp><rt>れんしゅう</rt><rp>）</rp></ruby>をしていたら、となりの<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>から（　　　）が<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>た。</td><td>a. 確認</td><td>b. 苦情</td></tr><tr><td>3. <ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>は、<ruby>誰<rp>（</rp><rt>だれ</rt><rp>）</rp></ruby>かの<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>に<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>ったときに（　　　）を<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じるようだ。</td><td>a. 幸福</td><td>b. 貧困</td></tr><tr><td>4. この<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>は<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>で（　　　）なければならないので<ruby>大変<rp>（</rp><rt>たいへん</rt><rp>）</rp></ruby>だ。</td><td>a. 寄ら</td><td>b. 組み立て</td></tr><tr><td>5. <ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>でけがをした<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>をヘリコプターで（　　　）した。</td><td>a. 救助</td><td>b. 避難</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. <ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>はこの<ruby>公害<rp>（</rp><rt>こうがい</rt><rp>）</rp></ruby>の<ruby>責任<rp>（</rp><rt>せきにん</rt><rp>）</rp></ruby>は<ruby>国<rp>（</rp><rt>くに</rt><rp>）</rp></ruby>にあることを（　　　）。</td><td><b>認めた</b> (みとめた)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>夜<rp>（</rp><rt>よる</rt><rp>）</rp></ruby>、<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>でギターの<ruby>練習<rp>（</rp><rt>れんしゅう</rt><rp>）</rp></ruby>をしていたら、となりの<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>から（　　　）が<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>た。</td><td><b>苦情</b> (くじょう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>は、<ruby>誰<rp>（</rp><rt>だれ</rt><rp>）</rp></ruby>かの<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>に<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>ったときに（　　　）を<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じるようだ。</td><td><b>幸福</b> (こうふく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. この<ruby>棚<rp>（</rp><rt>たな</rt><rp>）</rp></ruby>は<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>で（　　　）なければならないので<ruby>大変<rp>（</rp><rt>たいへん</rt><rp>）</rp></ruby>だ。</td><td><b>組み立て</b> (くみたて)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>でけがをした<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>をヘリコプターで（　　　）した。</td><td><b>救助</b> (きゅうじょ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-4-4"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-4-bai-4.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","ký":"sign","ghé vào":"drop in","người già":"old person","quyên góp tiền":"donate money","khó khăn":"hard","lánh nạn":"take refuge","trộm":"thief","phúc":"happiness","hạnh phúc":"happy","tướng":"General","tương lai":"future","nguyện":"wish","cầu mong":"pray","đơn":"single","nộp đơn":"apply","phó":"deputy","phụ lục":"appendix","phụ cận":"vicinity","bần":"cork","nghèo":"poor","khốn":"bastard","nghèo khổ":"poverty","khổ":"suffering","khổ sở":"miserable","đắng":"bitter","phàn nàn":"complain","cứu":"rescue","cứu trợ":"relief","nhận":"receive","chấp nhận, thừa nhận":"accept, acknowledge","xác nhận":"confirm","chấp nhận":"accept","tổ":"nest","kết hợp":"combine","lắp ghép":"assembly","nghiệp đoàn":"union","chương trình":"programme","tổ chức":"organization","hiệp":"union","hợp tác":"cooperate","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","ký":"tanda","ghé vào":"mampir","người già":"orang tua","quyên góp tiền":"menyumbangkan uang","khó khăn":"keras","lánh nạn":"berlindung","trộm":"maling","phúc":"kebahagiaan","hạnh phúc":"senang","tướng":"Umum","tương lai":"masa depan","nguyện":"mengharapkan","cầu mong":"berdoa","đơn":"lajang","nộp đơn":"menerapkan","phó":"wakil","phụ lục":"lampiran","phụ cận":"sekitarnya","bần":"gabus","nghèo":"miskin","khốn":"bajingan","nghèo khổ":"kemiskinan","khổ":"menderita","khổ sở":"menderita","đắng":"pahit","phàn nàn":"mengeluh","cứu":"menyelamatkan","cứu trợ":"lega","nhận":"menerima","chấp nhận, thừa nhận":"terima, akui","xác nhận":"mengonfirmasi","chấp nhận":"menerima","tổ":"sarang","kết hợp":"menggabungkan","lắp ghép":"perakitan","nghiệp đoàn":"serikat","chương trình":"program","tổ chức":"organisasi","hiệp":"serikat","hợp tác":"bekerja sama","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","ký":"चिन्ह","ghé vào":"भित्र छोड्नुहोस्","người già":"वृद्ध व्यक्ति","quyên góp tiền":"पैसा दान गर्नुहोस्","khó khăn":"कडा","lánh nạn":"शरण लिन","trộm":"चोर","phúc":"खुशी","hạnh phúc":"खुशी","tướng":"सामान्य","tương lai":"भविष्य","nguyện":"इच्छा","cầu mong":"प्रार्थना","đơn":"एकल","nộp đơn":"लागू गर्नुहोस्","phó":"उप","phụ lục":"परिशिष्ट","phụ cận":"वरपर","bần":"कर्क","nghèo":"गरिब","khốn":"हरामी","nghèo khổ":"गरिबी","khổ":"कष्ट","khổ sở":"दुखी","đắng":"तीतो","phàn nàn":"गुनासो","cứu":"उद्धार","cứu trợ":"राहत","nhận":"प्राप्त गर्नुहोस्","chấp nhận, thừa nhận":"स्वीकार, स्वीकार","xác nhận":"पुष्टि गर्नुहोस्","chấp nhận":"स्वीकार गर्नुहोस्","tổ":"गुँड","kết hợp":"जोड्नुहोस्","lắp ghép":"सभा","nghiệp đoàn":"संघ","chương trình":"कार्यक्रम","tổ chức":"संगठन","hiệp":"संघ","hợp tác":"सहयोग गर्ने","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","ký":"လက္ခဏာ","ghé vào":"ကျဆင်း","người già":"လူဟောင်း","quyên góp tiền":"ငွေလှူပါ။","khó khăn":"ခက်တယ်။","lánh nạn":"ခိုလှုံပါ။","trộm":"သူခိုး","phúc":"ပျော်ရွှင်မှု","hạnh phúc":"ပျော်တယ်။","tướng":"အထွေထွေ","tương lai":"အနာဂတ်","nguyện":"ဆန္ဒ","cầu mong":"ဆုတောင်းပါ။","đơn":"တစ်ခုတည်း","nộp đơn":"လျှောက်ထားပါ။","phó":"ဒု","phụ lục":"နောက်ဆက်တွဲ","phụ cận":"အနီးတစ်ဝိုက်","bần":"ဖော့","nghèo":"ဆင်းရဲ","khốn":"ခွေးကောင်","nghèo khổ":"ဆင်းရဲခြင်း","khổ":"ဆင်းရဲဒုက္ခ","khổ sở":"စိတ်ဆင်းရဲ","đắng":"ခါး","phàn nàn":"တိုင်ကြားပါ။","cứu":"ကယ်ဆယ်ရေး","cứu trợ":"ကယ်ဆယ်ရေး","nhận":"လက်ခံသည်။","chấp nhận, thừa nhận":"လက်ခံပါ၊ အသိအမှတ်ပြုပါ။","xác nhận":"အတည်ပြုပါ။","chấp nhận":"လက်ခံ","tổ":"အသိုက်","kết hợp":"ပေါင်းစပ်","lắp ghép":"စည်းဝေးပွဲ","nghiệp đoàn":"ပြည်ထောင်စု","chương trình":"အစီအစဉ်","tổ chức":"အဖွဲ့အစည်း","hiệp":"ပြည်ထောင်စု","hợp tác":"ပူးပေါင်းဆောင်ရွက်ပါ။","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","ký":"চিহ্ন","ghé vào":"ড্রপ ইন","người già":"বৃদ্ধ ব্যক্তি","quyên góp tiền":"অর্থ দান","khó khăn":"কঠিন","lánh nạn":"আশ্রয় নিতে","trộm":"চোর","phúc":"সুখ","hạnh phúc":"খুশি","tướng":"সাধারণ","tương lai":"ভবিষ্যৎ","nguyện":"ইচ্ছা","cầu mong":"প্রার্থনা","đơn":"একক","nộp đơn":"আবেদন","phó":"ডেপুটি","phụ lục":"পরিশিষ্ট","phụ cận":"কাছাকাছি","bần":"কর্ক","nghèo":"দরিদ্র","khốn":"জারজ","nghèo khổ":"দারিদ্র্য","khổ":"কষ্ট","khổ sở":"দুঃখজনক","đắng":"তিক্ত","phàn nàn":"অভিযোগ","cứu":"উদ্ধার","cứu trợ":"ত্রাণ","nhận":"গ্রহণ","chấp nhận, thừa nhận":"স্বীকার করা, স্বীকার করা","xác nhận":"নিশ্চিত করুন","chấp nhận":"গ্রহণ","tổ":"নীড়","kết hợp":"একত্রিত করা","lắp ghép":"সমাবেশ","nghiệp đoàn":"ইউনিয়ন","chương trình":"প্রোগ্রাম","tổ chức":"সংগঠন","hiệp":"ইউনিয়ন","hợp tác":"সহযোগিতা","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","ký":"संकेत","ghé vào":"झांकना","người già":"बूढ़े व्यक्ति","quyên góp tiền":"पैसे दान करो","khó khăn":"मुश्किल","lánh nạn":"शरण लो","trộm":"चोर","phúc":"ख़ुशी","hạnh phúc":"खुश","tướng":"सामान्य","tương lai":"भविष्य","nguyện":"इच्छा","cầu mong":"प्रार्थना करना","đơn":"अकेला","nộp đơn":"आवेदन करना","phó":"उप","phụ lục":"परिशिष्ट","phụ cận":"आस-पास","bần":"कॉर्क","nghèo":"गरीब","khốn":"हरामी","nghèo khổ":"गरीबी","khổ":"कष्ट","khổ sở":"दुखी","đắng":"कड़वा","phàn nàn":"शिकायत करना","cứu":"बचाव","cứu trợ":"राहत","nhận":"प्राप्त करें","chấp nhận, thừa nhận":"स्वीकार करना, स्वीकार करना","xác nhận":"पुष्टि करना","chấp nhận":"स्वीकार करना","tổ":"घोंसला","kết hợp":"मिलाना","lắp ghép":"विधानसभा","nghiệp đoàn":"मिलन","chương trình":"program'","tổ chức":"संगठन","hiệp":"मिलन","hợp tác":"सहयोग","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","ký":"เข้าสู่ระบบ","ghé vào":"แวะเข้ามา","người già":"คนแก่","quyên góp tiền":"บริจาคเงิน","khó khăn":"แข็ง","lánh nạn":"หลบภัย","trộm":"ขโมย","phúc":"ความสุข","hạnh phúc":"มีความสุข","tướng":"ทั่วไป","tương lai":"อนาคต","nguyện":"ปรารถนา","cầu mong":"อธิษฐาน","đơn":"เดี่ยว","nộp đơn":"นำมาใช้","phó":"รอง","phụ lục":"ภาคผนวก","phụ cận":"บริเวณใกล้เคียง","bần":"ไม้ก๊อก","nghèo":"ยากจน","khốn":"ไอ้สารเลว","nghèo khổ":"ความยากจน","khổ":"ความทุกข์","khổ sở":"น่าเวทนา","đắng":"ขม","phàn nàn":"ร้องทุกข์","cứu":"กู้ภัย","cứu trợ":"การบรรเทา","nhận":"รับ","chấp nhận, thừa nhận":"ยอมรับ, รับทราบ","xác nhận":"ยืนยัน","chấp nhận":"ยอมรับ","tổ":"รัง","kết hợp":"รวมกัน","lắp ghép":"การประกอบ","nghiệp đoàn":"สหภาพแรงงาน","chương trình":"โปรแกรม","tổ chức":"องค์กร","hiệp":"สหภาพแรงงาน","hợp tác":"ให้ความร่วมมือ","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">

@@ -1,0 +1,51 @@
+{
+  "en": [],
+  "id": [],
+  "ne": [],
+  "my": [],
+  "bn": [],
+  "hi": [],
+  "th": [],
+  "enMap": {
+    "☞ Script + Đáp Án": "☞ Script + Answers",
+    "☞ Script + Dịch": "☞ Script + Translation",
+    "Thích cái chân váy này nhưng mà muốn mặc thử trước khi mua. Thì sẽ nói gì với nhân viên cửa hàng?": "I like this skirt but want to try it on before buying. What will you say to the store staff?",
+    "À này.... tôi có thể mặc thử cái váy này được không ạ?": "Hey....can I try this dress on?"
+  },
+  "idMap": {
+    "☞ Script + Đáp Án": "☞ Naskah + Jawaban",
+    "☞ Script + Dịch": "☞ Naskah + Terjemahan",
+    "Thích cái chân váy này nhưng mà muốn mặc thử trước khi mua. Thì sẽ nói gì với nhân viên cửa hàng?": "Saya suka rok ini tetapi ingin mencobanya sebelum membeli. Apa yang akan Anda katakan kepada staf toko?",
+    "À này.... tôi có thể mặc thử cái váy này được không ạ?": "Hei....bolehkah aku mencoba gaun ini?"
+  },
+  "neMap": {
+    "☞ Script + Đáp Án": "☞ लिपि + उत्तरहरू",
+    "☞ Script + Dịch": "☞ लिपि + अनुवाद",
+    "Thích cái chân váy này nhưng mà muốn mặc thử trước khi mua. Thì sẽ nói gì với nhân viên cửa hàng?": "मलाई यो स्कर्ट मन पर्छ तर किन्नु अघि यसलाई प्रयास गर्न चाहन्छु। पसलका कर्मचारीलाई के भन्नुहुन्छ ?",
+    "À này.... tôi có thể mặc thử cái váy này được không ạ?": "हे.... के म यो लुगा लगाउन सक्छु?"
+  },
+  "myMap": {
+    "☞ Script + Đáp Án": "☞ ဇာတ်ညွှန်း + အဖြေများ",
+    "☞ Script + Dịch": "☞ ဇာတ်ညွှန်း + ဘာသာပြန်ခြင်း။",
+    "Thích cái chân váy này nhưng mà muốn mặc thử trước khi mua. Thì sẽ nói gì với nhân viên cửa hàng?": "ဒီစကတ်ကိုကြိုက်ပေမယ့် မဝယ်ခင် စမ်းသုံးကြည့်စေချင်ပါတယ်။ ဆိုင်ဝန်ထမ်းကို ဘာပြောမလဲ။",
+    "À này.... tôi có thể mặc thử cái váy này được không ạ?": "ဟေး....ဒီဝတ်စုံကို စမ်းကြည့်လို့ရမလား"
+  },
+  "bnMap": {
+    "☞ Script + Đáp Án": "☞ স্ক্রিপ্ট + উত্তর",
+    "☞ Script + Dịch": "☞ স্ক্রিপ্ট + অনুবাদ",
+    "Thích cái chân váy này nhưng mà muốn mặc thử trước khi mua. Thì sẽ nói gì với nhân viên cửa hàng?": "আমি এই স্কার্টটি পছন্দ করি তবে কেনার আগে এটি চেষ্টা করে দেখতে চাই। দোকানের কর্মীদের কী বলবেন?",
+    "À này.... tôi có thể mặc thử cái váy này được không ạ?": "আরে....আমি কি এই পোশাকটি ব্যবহার করতে পারি?"
+  },
+  "hiMap": {
+    "☞ Script + Đáp Án": "☞ स्क्रिप्ट + उत्तर",
+    "☞ Script + Dịch": "☞ स्क्रिप्ट + अनुवाद",
+    "Thích cái chân váy này nhưng mà muốn mặc thử trước khi mua. Thì sẽ nói gì với nhân viên cửa hàng?": "मुझे यह स्कर्ट पसंद है लेकिन खरीदने से पहले इसे आज़माना चाहती हूं। आप स्टोर स्टाफ से क्या कहेंगे?",
+    "À này.... tôi có thể mặc thử cái váy này được không ạ?": "अरे....क्या मैं यह पोशाक पहन कर देख सकता हूँ?"
+  },
+  "thMap": {
+    "☞ Script + Đáp Án": "☞ สคริปต์ + คำตอบ",
+    "☞ Script + Dịch": "☞ สคริปต์ + การแปล",
+    "Thích cái chân váy này nhưng mà muốn mặc thử trước khi mua. Thì sẽ nói gì với nhân viên cửa hàng?": "ฉันชอบกระโปรงตัวนี้แต่อยากลองก่อนซื้อ คุณจะพูดอะไรกับพนักงานร้าน?",
+    "À này.... tôi có thể mặc thử cái váy này được không ạ?": "เฮ้....ฉันขอลองชุดนี้ได้ไหม?"
+  }
+}

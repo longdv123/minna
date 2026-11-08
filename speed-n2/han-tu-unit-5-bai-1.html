@@ -1,0 +1,203 @@
+<meta charset="UTF-8">
+<style>
+
+/* =========================================================
+   SPEED N2 HANTU - ONE HTML (giống SPEED N3)
+   Desktop: header 3 ô + body 2 cột (JP | VI)
+   Mobile : card center + item stack
+   ========================================================= */
+
+.kbox{
+  border:1px solid rgba(0,0,0,.25);
+  border-left:4px solid #8c7373;
+  background:#fff;
+  margin:14px 0;
+}
+
+/* ===== HEADER ===== */
+.khead{
+  display:grid;
+  grid-template-columns: 150px 150px 1fr;
+  border-bottom:1px solid rgba(0,0,0,.25);
+}
+.kcell{ padding:18px; min-height:120px; }
+.kcell + .kcell{ border-left:1px solid rgba(0,0,0,.25); }
+
+.k-kanji{ display:flex; align-items:center; justify-content:center; }
+.k-kanji .kchar{ font-size:50px; font-weight:500; line-height:1; margin:0; }
+
+.k-hv{ display:flex; align-items:center; font-size:18px; font-weight:600; }
+.k-read{ font-size:16px; line-height:1.8; }
+.k-read .on{ font-weight:600; }
+
+.vnjp-pre {
+    margin-left: 20px;
+}
+/* ===== BODY ===== */
+@media (min-width: 768px){
+  .kbody{ padding:14px 18px 16px; }
+  .kitem{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:0;
+    padding:4px 0;
+    line-height:1.6;
+  }
+  .kitem .jp{ font-weight:500; word-break:break-word; padding-right:12px; }
+  .kitem .vi{ font-weight:500; word-break:break-word; }
+
+  /* nếu có câu ví dụ (unit10 b4/5) -> hiển thị thêm dòng sentence trong cột JP */
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+  }
+}
+
+
+/* ===== MOBILE (<=768) ===== */
+@media (max-width: 768px){
+  .kbox{ border-radius:8px; overflow:hidden; }
+
+  .khead{
+    display:block;
+    padding:14px 12px 12px;
+    text-align:center;
+  }
+  .kcell{ min-height:auto; padding:0; }
+  .kcell + .kcell{ border-left:none; }
+
+  .k-kanji{ display:block; }
+  .k-kanji .kchar{ font-size:50px; margin:4px 0 8px; }
+
+  .k-hv{
+    display:block;
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+    justify-content:center;
+  }
+  .k-read{ font-size:15px; line-height:1.8; opacity:.95; }
+
+  .kbody{
+    padding:0;
+    border-top:1px solid rgba(0,0,0,.18);
+  }
+
+  .kitem{
+    padding:12px 12px;
+    border-top:1px solid rgba(0,0,0,.14);
+  }
+  .kitem:first-child{ border-top:none; }
+
+  .kitem .jp{
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+    word-break:break-word;
+  }
+  .kitem .jp .sentence{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:500;
+    opacity:.95;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
+  .kitem .vi{
+    margin-top:6px;
+    font-size:16px;
+    opacity:.95;
+    word-break:break-word;
+  }
+}
+
+/* ===== TAB2: doriru chống vỡ mobile ===== */
+.doriru-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doriru{ width:100%; border-collapse:collapse; margin:8px 0 12px; }
+.doriru td{
+  padding:8px;
+  border:1px solid rgba(0,0,0,.12);
+  vertical-align:top;
+  word-break:break-word;
+}
+
+
+/* ===== BỎ BORDER BẢNG DORIRU ===== */
+.doriru,
+.doriru tr,
+.doriru td{
+  border: none !important;
+}
+
+/* nếu còn đường kẻ do collapse */
+.doriru{
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* giãn dòng cho dễ đọc hơn */
+.doriru td{
+  padding: 10px 12px;
+}
+@media (max-width: 768px){
+    /* ===== DORIRU: ĐƯA LỰA CHỌN XUỐNG DÒNG ===== */
+    .doriru tr{
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .doriru td{
+      display:block;
+      width:100% !important;
+      padding:6px 0;
+    }
+
+    /* Các lựa chọn a b c */
+    .doriru td:not(:first-child){
+      padding-left:18px;
+    }
+}
+
+.vnjp-kjl-cta{clear:both;margin:24px 0 8px}.vnjp-kjl-cta__link{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #dbeafe;border-radius:14px;background:#fff;color:#18181b;text-decoration:none!important;box-shadow:0 1px 3px rgba(15,23,42,.06)}.vnjp-kjl-cta__link:hover{border-color:#2563eb;background:#f8fbff}.vnjp-kjl-cta__icon{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#2563eb;color:#fff;font:700 20px/1 "Noto Sans JP",sans-serif}.vnjp-kjl-cta__text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.vnjp-kjl-cta__text b{font-weight:700;color:#18181b}.vnjp-kjl-cta__text small{font-size:.82rem;color:#52525b;line-height:1.35}.vnjp-kjl-cta__go{flex:none;color:#2563eb;font-weight:700;font-size:1.2rem}html.vnjp-dark .vnjp-kjl-cta__link{background:#1a2332;border-color:#2d3a4f;color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__link:hover{border-color:#7eb8ff;background:#1e3048}html.vnjp-dark .vnjp-kjl-cta__text b{color:#e8edf4}html.vnjp-dark .vnjp-kjl-cta__text small{color:#9aa8bc}html.vnjp-dark .vnjp-kjl-cta__go{color:#7eb8ff}</style>
+<div class="tab_container speed-page">
+
+<div class="tab_container">
+
+  <!-- TAB 1 -->
+  <ul class="tabs"><li class="active"><a href="#" rel="#tab1"><span class="vi-tr">Hán Tự</span></a></li><li><a href="#" rel="#tab2"><span class="vi-tr">Luyện Tập</span></a></li></ul><div class="tab_content" id="tab1" style="">
+    
+
+<div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">湾</div></div><div class="kcell k-hv">loan</div><div class="kcell k-read"><div class="on">ワン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>東京湾<rp>（</rp><rt>とうきょうわん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vịnh Tokyo</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">谷</div></div><div class="kcell k-hv"><span class="vi-tr">cốc</span></div><div class="kcell k-read"><div>たに</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>谷<rp>（</rp><rt>たに</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">thung lũng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">州</div></div><div class="kcell k-hv"><span class="vi-tr">châu</span> </div><div class="kcell k-read"><div class="on">シュウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>州<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby></div><div class="vi">bang</div></div><div class="kitem"><div class="jp"><ruby>九州<rp>（</rp><rt>きゅうしゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Đảo Kyushu</span></div></div><div class="kitem"><div class="jp"><ruby>本州<rp>（</rp><rt>ほんしゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Đảo Honshu</span></div></div><div class="kitem"><div class="jp">オハイオ<ruby>州<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby></div><div class="vi">bang Ohio</div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">陸</div></div><div class="kcell k-hv"><span class="vi-tr">lục</span> </div><div class="kcell k-read"><div class="on">リク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>陸<rp>（</rp><rt>りく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">đất liền</span> </div></div><div class="kitem"><div class="jp"><ruby>着陸<rp>（</rp><rt>ちゃくりく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">hạ cánh</span> </div></div><div class="kitem"><div class="jp">アフリカ<ruby>大陸<rp>（</rp><rt>たいりく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lục địa Châu Phi</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">海</div></div><div class="kcell k-hv"><span class="vi-tr">hải</span> </div><div class="kcell k-read"><div class="on">カイ</div><div>うみ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>海外<rp>（</rp><rt>かいがい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hải ngoại, nước ngoài</span></div></div><div class="kitem"><div class="jp"><ruby>海洋<rp>（</rp><rt>かいよう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">hải dương</span></div></div><div class="kitem"><div class="jp"><ruby>海水浴<rp>（</rp><rt>かいすいよく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">tắm biển</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">岸</div></div><div class="kcell k-hv"><span class="vi-tr">ngạn</span> </div><div class="kcell k-read"><div class="on">ガン</div><div>きし</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>岸<rp>（</rp><rt>きし</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bờ</span> </div></div><div class="kitem"><div class="jp"><ruby>海岸<rp>（</rp><rt>かいがん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">bờ biển</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">複</div></div><div class="kcell k-hv"><span class="vi-tr">phức</span></div><div class="kcell k-read"><div class="on">フク</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>複雑<rp>（</rp><rt>ふくざつ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">phức tạp</span> </div></div><div class="kitem"><div class="jp"><ruby>複数<rp>（</rp><rt>ふくすう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">số nhiều</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">観</div></div><div class="kcell k-hv">quan </div><div class="kcell k-read"><div class="on">カン</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>観光<rp>（</rp><rt>かんこう</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">du lịch</span> </div></div><div class="kitem"><div class="jp"><ruby>観光客<rp>（</rp><rt>かんこうきゃく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khách du lịch</span></div></div><div class="kitem"><div class="jp"><ruby>観客<rp>（</rp><rt>かんきゃく</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">người xem</span> </div></div><div class="kitem"><div class="jp"><ruby>観察<rp>（</rp><rt>かんさつ</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">quan sát</span></div></div><div class="kitem"><div class="jp"><ruby>観測<rp>（</rp><rt>かんそく</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">quan trắc, đo</span></div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">山</div></div><div class="kcell k-hv"><span class="vi-tr">sơn</span></div><div class="kcell k-read"><div class="on">サン</div><div>やま</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>火山<rp>（</rp><rt>かざん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">núi lửa</span> </div></div><div class="kitem"><div class="jp"><ruby>登山<rp>（</rp><rt>とざん</rt><rp>）</rp></ruby>（する）</div><div class="vi"><span class="vi-tr">leo núi</span></div></div><div class="kitem"><div class="jp"><ruby>山林<rp>（</rp><rt>さんりん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">rừng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">域</div></div><div class="kcell k-hv"><span class="vi-tr">vực</span></div><div class="kcell k-read"><div class="on">イキ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>地域<rp>（</rp><rt>ちいき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">vùng</span> </div></div><div class="kitem"><div class="jp"><ruby>区域<rp>（</rp><rt>くいき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">khu vực</span></div></div><div class="kitem"><div class="jp"><ruby>流域<rp>（</rp><rt>りゅういき</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">lưu vực</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">泉</div></div><div class="kcell k-hv"><span class="vi-tr">tuyền</span> </div><div class="kcell k-read"><div class="on">セン</div><div>いずみ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>泉<rp>（</rp><rt>いずみ</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">suối</span> </div></div><div class="kitem"><div class="jp"><ruby>温泉<rp>（</rp><rt>おんせん</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">suối nước nóng</span> </div></div></div></div><div class="kbox"><div class="khead"><div class="kcell k-kanji"><div class="kchar">欧</div></div><div class="kcell k-hv"><span class="vi-tr">âu</span> </div><div class="kcell k-read"><div class="on">オウ</div></div></div><div class="kbody"><div class="kitem"><div class="jp"><ruby>欧米<rp>（</rp><rt>おうべい</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Âu Mỹ</span></div></div><div class="kitem"><div class="jp"><ruby>欧州<rp>（</rp><rt>おうしゅう</rt><rp>）</rp></ruby></div><div class="vi"><span class="vi-tr">Châu Âu</span></div></div></div></div>
+  </div>
+
+
+  <!-- TAB 2 -->
+  <div class="tab_content" id="tab2" style="display: none;">
+    
+
+    <p><b>ドリルA</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<ruby>地図<rp>(</rp><rt>ちず</rt><rp>)</rp></ruby>の<ruby>茶色<rp>(</rp><rt>ちゃいろ</rt><rp>)</rp></ruby>の<ruby>部分<rp>(</rp><rt>ぶぶん</rt><rp>)</rp></ruby>が<u>陸</u>です。</td><td>a. ろく</td><td>b. りく</td></tr><tr><td>2. <u><ruby>泉<rp>（</rp><rt>いずみ</rt><rp>）</rp></ruby></u>とは<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>が<ruby>湧<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>いて<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>ているところです。</td><td>a. いずみ</td><td>b. いみず</td></tr><tr><td>3. <ruby>船<rp>（</rp><rt>ふね</rt><rp>）</rp></ruby>が<u><ruby>岸<rp>（</rp><rt>きし</rt><rp>）</rp></ruby></u>に<ruby>着<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>いた。</td><td>a. ぎし</td><td>b. きし</td></tr><tr><td>4. <ruby>東京<rp>（</rp><rt>とうきょう</rt><rp>）</rp></ruby><u>湾</u>にはさまざまな<ruby>種類<rp>（</rp><rt>しゅるい</rt><rp>）</rp></ruby>の<ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>がいるそうだ。</td><td>a. がん</td><td>b. わん</td></tr><tr><td>5. <ruby>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby>と<ruby>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby>の<ruby>間<rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby>の<ruby>低<rp>(</rp><rt>ひく</rt><rp>)</rp></ruby>いところを<u><ruby>谷<rp>(</rp><rp>)</rp></ruby></u>と<ruby>言<rp>(</rp><rt>い</rt><rp>)</rp></ruby>います。</td><td>a. たに</td><td>b. こく</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_a"><tbody><tr><td>1. この<ruby>地図<rp>(</rp><rt>ちず</rt><rp>)</rp></ruby>の<ruby>茶色<rp>(</rp><rt>ちゃいろ</rt><rp>)</rp></ruby>の<ruby>部分<rp>(</rp><rt>ぶぶん</rt><rp>)</rp></ruby>が<u>陸</u>です。</td><td><b>りく</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. <u><ruby>泉<rp>（</rp><rt>いずみ</rt><rp>）</rp></ruby></u>とは<ruby>水<rp>（</rp><rt>みず</rt><rp>）</rp></ruby>が<ruby>湧<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>いて<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>ているところです。</td><td><b>いずみ</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>船<rp>（</rp><rt>ふね</rt><rp>）</rp></ruby>が<u><ruby>岸<rp>（</rp><rt>きし</rt><rp>）</rp></ruby></u>に<ruby>着<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>いた。</td><td><b>きし</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>東京<rp>（</rp><rt>とうきょう</rt><rp>）</rp></ruby><u>湾</u>にはさまざまな<ruby>種類<rp>（</rp><rt>しゅるい</rt><rp>）</rp></ruby>の<ruby>魚<rp>（</rp><rt>さかな</rt><rp>）</rp></ruby>がいるそうだ。</td><td><b>わん</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. <ruby>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby>と<ruby>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby>の<ruby>間<rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby>の<ruby>低<rp>(</rp><rt>ひく</rt><rp>)</rp></ruby>いところを<u><ruby>谷<rp>(</rp><rp>)</rp></ruby></u>と<ruby>言<rp>(</rp><rt>い</rt><rp>)</rp></ruby>います。</td><td><b>たに</b></td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルB</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. このカメラは<ruby>操作<rp>（</rp><rt>そうさ</rt><rp>）</rp></ruby>が<u>ふく</u><ruby>雑<rp>（</rp><rt>ざつ</rt><rp>）</rp></ruby>で、お<ruby>年寄<rp>（</rp><rt>としよ</rt><rp>）</rp></ruby>りには<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いにくい。</td><td>a. 福</td><td>b. 復</td><td>c. 複</td></tr><tr><td>2. <ruby>海<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>がん</u>に<ruby>沿<rp>（</rp><rt>そ</rt><rp>）</rp></ruby>った<ruby>道<rp>（</rp><rt>みち</rt><rp>）</rp></ruby>をドライブするのは<ruby>気持<rp>（</rp><rt>きも</rt><rp>）</rp></ruby>ちいい。</td><td>a. 岩</td><td>b. 岸</td><td>c. 嵐</td></tr><tr><td>3. <u>おう</u><ruby>米<rp>（</rp><rt>べい</rt><rp>）</rp></ruby>では、<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>と<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い<ruby>休暇<rp>（</rp><rt>きゅうか</rt><rp>）</rp></ruby>をとることが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td>a. 洋</td><td>b. 王</td><td>c. 欧</td></tr><tr><td>4. この<ruby>試合<rp>（</rp><rt>しあい</rt><rp>）</rp></ruby>、<u>かん</u><ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby>がずいぶん<ruby>少<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>ないねえ。</td><td>a. 看</td><td>b. 観</td><td>c. 視</td></tr><tr><td>5. アメリカは５０の<u>しゅう</u>からなる。</td><td>a. 集</td><td>b. 州</td><td>c. 宗</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_b"><tbody><tr><td>1. このカメラは<ruby>操作<rp>（</rp><rt>そうさ</rt><rp>）</rp></ruby>が<u>ふく</u><ruby>雑<rp>（</rp><rt>ざつ</rt><rp>）</rp></ruby>で、お<ruby>年寄<rp>（</rp><rt>としよ</rt><rp>）</rp></ruby>りには<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いにくい。</td><td><b>複</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>2. <ruby>海<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><u>がん</u>に<ruby>沿<rp>（</rp><rt>そ</rt><rp>）</rp></ruby>った<ruby>道<rp>（</rp><rt>みち</rt><rp>）</rp></ruby>をドライブするのは<ruby>気持<rp>（</rp><rt>きも</rt><rp>）</rp></ruby>ちいい。</td><td><b>岸</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>3. <u>おう</u><ruby>米<rp>（</rp><rt>べい</rt><rp>）</rp></ruby>では、<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>と<ruby>一緒<rp>（</rp><rt>いっしょ</rt><rp>）</rp></ruby>に<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い<ruby>休暇<rp>（</rp><rt>きゅうか</rt><rp>）</rp></ruby>をとることが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>い。</td><td><b>欧</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>4. この<ruby>試合<rp>（</rp><rt>しあい</rt><rp>）</rp></ruby>、<u>かん</u><ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby>がずいぶん<ruby>少<rp>（</rp><rt>すく</rt><rp>）</rp></ruby>ないねえ。</td><td><b>観</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr><tr><td>5. アメリカは５０の<u>しゅう</u>からなる。</td><td><b>州</b></td></tr><tr><td colspan="4"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+    <p><br><b>ドリルC</b></p>
+    <div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. ここは<ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>く<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>ち<ruby>並<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>ぶ（　　　）です。</td><td>a. 海外</td><td>b. 地域</td></tr><tr><td>2. アンケートの<ruby>答<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>えは（　　　）<ruby>選択<rp>（</rp><rt>せんたく</rt><rp>）</rp></ruby>することもできます。</td><td>a. 複数</td><td>b. 区域</td></tr><tr><td>3. <ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>はよく<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>で（　　　）に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ったものだ。</td><td>a. 海水浴</td><td>b. 海洋</td></tr><tr><td>4. <ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>もなく（　　　）いたします。シートベルトをお<ruby>締<rp>（</rp><rt>し</rt><rp>）</rp></ruby>めください。</td><td>a. 登山</td><td>b. 着陸</td></tr><tr><td>5. ここは<ruby>空気<rp>（</rp><rt>くうき</rt><rp>）</rp></ruby>がきれいだから、<ruby>夜<rp>（</rp><rt>よる</rt><rp>）</rp></ruby>は<ruby>星空<rp>（</rp><rt>ほしぞら</rt><rp>）</rp></ruby>（　　　）ができるね。</td><td>a. 観光</td><td>b. 観察</td></tr></tbody></table></div>
+    <div class="slide"><div class="slide-title sl2"><span><span class="vi-tr">☞  Đáp Án + Dịch</span> </span></div><div class="slide-content sl2"><div class="doriru-wrap"><table class="doriru doriru_c"><tbody><tr><td>1. ここは<ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>く<ruby>立<rp>（</rp><rt>た</rt><rp>）</rp></ruby>ち<ruby>並<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>ぶ（　　　）です。</td><td><b>地域</b> (ちいき)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>2. アンケートの<ruby>答<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>えは（　　　）<ruby>選択<rp>（</rp><rt>せんたく</rt><rp>）</rp></ruby>することもできます。</td><td><b>複数</b> (ふくすう)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>3. <ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>はよく<ruby>家族<rp>（</rp><rt>かぞく</rt><rp>）</rp></ruby>で（　　　）に<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ったものだ。</td><td><b>海水浴</b> (かいすいよく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>4. <ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>もなく（　　　）いたします。シートベルトをお<ruby>締<rp>（</rp><rt>し</rt><rp>）</rp></ruby>めください。</td><td><b>着陸</b> (ちゃくりく)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr><tr><td>5. ここは<ruby>空気<rp>（</rp><rt>くうき</rt><rp>）</rp></ruby>がきれいだから、<ruby>夜<rp>（</rp><rt>よる</rt><rp>）</rp></ruby>は<ruby>星空<rp>（</rp><rt>ほしぞら</rt><rp>）</rp></ruby>（　　　）ができるね。</td><td><b>観察</b> (かんさつ)</td></tr><tr><td colspan="3"><span class="vnjp-pre"></span></td></tr></tbody></table></div></div></div>
+
+  </div>
+</div>
+
+<aside class="vnjp-kjl-cta"><a class="vnjp-kjl-cta__link" href="https://www.vnjpclub.com/kanji-srs/?kjl_lesson=speed2-5-1"><span class="vnjp-kjl-cta__icon" aria-hidden="true">漢</span><span class="vnjp-kjl-cta__text"><b><span class="vi-tr">Ôn chữ Hán bài này bằng Kanji SRS</span></b><small><span class="vi-tr">Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm</span></small></span><span class="vnjp-kjl-cta__go" aria-hidden="true">→</span></a></aside>
+</div>
+<script src="jquery.min.js"></script>
+<script src="scriptminnamoi.js"></script>
+<script id="minna-i18n" type="application/json" data-src="han-tu-unit-5-bai-1.i18n.json">{"en":[],"id":[],"ne":[],"my":[],"bn":[],"hi":[],"th":[],"enMap":{"Hán Tự":"Han Tu","Luyện Tập":"Practice","vịnh Tokyo":"Tokyo Bay","cốc":"glass","thung lũng":"valley","châu":"Asia","Đảo Kyushu":"Kyushu Island","Đảo Honshu":"Honshu Island","lục":"green","đất liền":"mainland","hạ cánh":"landing","lục địa Châu Phi":"African continent","hải":"sea","hải ngoại, nước ngoài":"overseas, abroad","hải dương":"ocean","tắm biển":"swimming","ngạn":"bank","bờ":"edge","bờ biển":"coast","phức":"complex","phức tạp":"complicated","số nhiều":"many","du lịch":"tourism","khách du lịch":"tourists","người xem":"viewers","quan sát":"observe","quan trắc, đo":"monitoring, measuring","sơn":"paint","núi lửa":"volcano","leo núi":"climbing","rừng":"forest","vực":"area","vùng":"region","khu vực":"area","lưu vực":"basin","tuyền":"Tuyen","suối":"stream","suối nước nóng":"hot springs","âu":"Europe","Âu Mỹ":"Europe and America","Châu Âu":"Europe","☞ Đáp Án + Dịch":"☞ Answer + Translation","Ôn chữ Hán bài này bằng Kanji SRS":"Review Chinese characters for this lesson using Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Open the correct lesson · study according to a schedule of intermittent review, self-writing, and multiple-choice tests"},"idMap":{"Hán Tự":"Han Tu","Luyện Tập":"Praktik","vịnh Tokyo":"Teluk Tokyo","cốc":"kaca","thung lũng":"lembah","châu":"Asia","Đảo Kyushu":"Pulau Kyushu","Đảo Honshu":"Pulau Honshu","lục":"hijau","đất liền":"daratan","hạ cánh":"pendaratan","lục địa Châu Phi":"benua Afrika","hải":"laut","hải ngoại, nước ngoài":"di luar negeri, di luar negeri","hải dương":"laut","tắm biển":"renang","ngạn":"bank","bờ":"tepian","bờ biển":"pesisir","phức":"kompleks","phức tạp":"rumit","số nhiều":"banyak","du lịch":"pariwisata","khách du lịch":"wisatawan","người xem":"pemirsa","quan sát":"mengamati","quan trắc, đo":"pemantauan, pengukuran","sơn":"cat","núi lửa":"gunung berapi","leo núi":"pendakian","rừng":"hutan","vực":"daerah","vùng":"wilayah","khu vực":"daerah","lưu vực":"baskom","tuyền":"Tuyen","suối":"sungai kecil","suối nước nóng":"sumber air panas","âu":"Eropa","Âu Mỹ":"Eropa dan Amerika","Châu Âu":"Eropa","☞ Đáp Án + Dịch":"☞ Jawaban + Terjemahan","Ôn chữ Hán bài này bằng Kanji SRS":"Tinjau karakter Cina untuk pelajaran ini menggunakan Kanji SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"Buka pelajaran yang benar · belajar sesuai jadwal review intermiten, menulis sendiri, dan tes pilihan ganda"},"neMap":{"Hán Tự":"हान तु","Luyện Tập":"अभ्यास गर्नुहोस्","vịnh Tokyo":"टोकियो खाडी","cốc":"गिलास","thung lũng":"उपत्यका","châu":"एशिया","Đảo Kyushu":"क्युशु टापु","Đảo Honshu":"होन्शु टापु","lục":"हरियो","đất liền":"मुख्य भूमि","hạ cánh":"अवतरण","lục địa Châu Phi":"अफ्रिकी महादेश","hải":"समुद्र","hải ngoại, nước ngoài":"विदेशमा, विदेशमा","hải dương":"महासागर","tắm biển":"पौडी खेल्ने","ngạn":"बैंक","bờ":"किनारा","bờ biển":"तट","phức":"जटिल","phức tạp":"जटिल","số nhiều":"धेरै","du lịch":"पर्यटन","khách du lịch":"पर्यटकहरू","người xem":"दर्शकहरू","quan sát":"अवलोकन गर्नुहोस्","quan trắc, đo":"निगरानी, ​​मापन","sơn":"रंग","núi lửa":"ज्वालामुखी","leo núi":"आरोहण","rừng":"जंगल","vực":"क्षेत्र","vùng":"क्षेत्र","khu vực":"क्षेत्र","lưu vực":"बेसिन","tuyền":"Tuyen","suối":"प्रवाह","suối nước nóng":"तातो मुहानहरू","âu":"युरोप","Âu Mỹ":"युरोप र अमेरिका","Châu Âu":"युरोप","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कान्जी SRS प्रयोग गरेर यस पाठको लागि चिनियाँ क्यारेक्टरहरूको समीक्षा गर्नुहोस्","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोल्नुहोस् · रुकावट समीक्षा, स्व-लेखन, र बहु-विकल्प परीक्षणहरूको तालिका अनुसार अध्ययन गर्नुहोस्"},"myMap":{"Hán Tự":"ဟန်တူး","Luyện Tập":"အလေ့အကျင့်","vịnh Tokyo":"တိုကျိုပင်လယ်အော်","cốc":"ဖန်","thung lũng":"ချိုင့်","châu":"အာရှ","Đảo Kyushu":"ရှူးကျွန်း","Đảo Honshu":"ဟွန်ရှူးကျွန်း","lục":"အစိမ်းရောင်","đất liền":"ပြည်မကြီး","hạ cánh":"ဆင်းသက်","lục địa Châu Phi":"အာဖရိကတိုက်","hải":"ပင်လယ်","hải ngoại, nước ngoài":"နိုင်ငံရပ်ခြား၊ပြည်ပ","hải dương":"သမုဒ္ဒရာ","tắm biển":"ရေကူး","ngạn":"ဘဏ်","bờ":"အစွန်း","bờ biển":"ကမ်းခြေ","phức":"ရှုပ်ထွေးသည်။","phức tạp":"ရှုပ်ထွေးသည်။","số nhiều":"အများကြီး","du lịch":"ခရီးသွား","khách du lịch":"ခရီးသွားများ","người xem":"ကြည့်ရှုသူများ","quan sát":"စောင့်ကြည့်ပါ။","quan trắc, đo":"စောင့်ကြည့်ခြင်း၊ တိုင်းတာခြင်း။","sơn":"ဆေးသုတ်","núi lửa":"မီးတောင်","leo núi":"တောင်တက်ခြင်း။","rừng":"တော","vực":"ဧရိယာ","vùng":"ဒေသ","khu vực":"ဧရိယာ","lưu vực":"အင်တုံ","tuyền":"Tuyen","suối":"စမ်းချောင်း","suối nước nóng":"ရေပူစမ်း","âu":"ဥရောပ","Âu Mỹ":"ဥရောပနှင့် အမေရိက","Châu Âu":"ဥရောပ","☞ Đáp Án + Dịch":"☞ အဖြေ + ဘာသာပြန်","Ôn chữ Hán bài này bằng Kanji SRS":"Kanji SRS ကို အသုံးပြု၍ ဤသင်ခန်းစာအတွက် တရုတ်စာလုံးများကို ပြန်လည်သုံးသပ်ပါ။","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"မှန်ကန်သောသင်ခန်းစာကိုဖွင့်ပါ · အဆက်မပြတ်ပြန်လည်သုံးသပ်ခြင်း၊ ကိုယ်တိုင်ရေးခြင်း၊ နှင့် မျိုးစုံရွေးချယ်မှုစာမေးပွဲများ၏ အချိန်ဇယားအတိုင်း လေ့လာပါ။"},"bnMap":{"Hán Tự":"হান তু","Luyện Tập":"অনুশীলন করুন","vịnh Tokyo":"টোকিও বে","cốc":"গ্লাস","thung lũng":"উপত্যকা","châu":"এশিয়া","Đảo Kyushu":"কিউশু দ্বীপ","Đảo Honshu":"হোনশু দ্বীপ","lục":"সবুজ","đất liền":"মূল ভূখণ্ড","hạ cánh":"অবতরণ","lục địa Châu Phi":"আফ্রিকা মহাদেশ","hải":"সমুদ্র","hải ngoại, nước ngoài":"বিদেশে, বিদেশে","hải dương":"মহাসাগর","tắm biển":"সাঁতার","ngạn":"ব্যাংক","bờ":"প্রান্ত","bờ biển":"উপকূল","phức":"জটিল","phức tạp":"জটিল","số nhiều":"অনেক","du lịch":"পর্যটন","khách du lịch":"পর্যটকদের","người xem":"দর্শক","quan sát":"পর্যবেক্ষণ","quan trắc, đo":"পর্যবেক্ষণ, পরিমাপ","sơn":"পেইন্ট","núi lửa":"আগ্নেয়গিরি","leo núi":"আরোহণ","rừng":"বন","vực":"এলাকা","vùng":"অঞ্চল","khu vực":"এলাকা","lưu vực":"বেসিন","tuyền":"টুয়েন","suối":"প্রবাহ","suối nước nóng":"উষ্ণ প্রস্রবণ","âu":"ইউরোপ","Âu Mỹ":"ইউরোপ এবং আমেরিকা","Châu Âu":"ইউরোপ","☞ Đáp Án + Dịch":"☞ উত্তর + অনুবাদ","Ôn chữ Hán bài này bằng Kanji SRS":"কাঞ্জি এসআরএস ব্যবহার করে এই পাঠের জন্য চীনা অক্ষর পর্যালোচনা করুন","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"সঠিক পাঠ খুলুন · বিরতিমূলক পর্যালোচনা, স্ব-লেখা এবং একাধিক-পছন্দের পরীক্ষার সময়সূচী অনুসারে অধ্যয়ন করুন"},"hiMap":{"Hán Tự":"हान तू","Luyện Tập":"अभ्यास","vịnh Tokyo":"टोक्यो खाड़ी","cốc":"काँच","thung lũng":"घाटी","châu":"एशिया","Đảo Kyushu":"क्यूशू द्वीप","Đảo Honshu":"होंशू द्वीप","lục":"हरा","đất liền":"मुख्य भूमि","hạ cánh":"अवतरण","lục địa Châu Phi":"अफ़्रीकी महाद्वीप","hải":"समुद्र","hải ngoại, nước ngoài":"विदेश में, विदेश में","hải dương":"महासागर","tắm biển":"तैरना","ngạn":"किनारा","bờ":"किनारा","bờ biển":"तट","phức":"जटिल","phức tạp":"उलझा हुआ","số nhiều":"अनेक","du lịch":"पर्यटन","khách du lịch":"पर्यटकों","người xem":"दर्शकों","quan sát":"निरीक्षण","quan trắc, đo":"निगरानी करना, मापना","sơn":"रँगना","núi lửa":"ज्वालामुखी","leo núi":"आरोहण","rừng":"जंगल","vực":"क्षेत्र","vùng":"क्षेत्र","khu vực":"क्षेत्र","lưu vực":"बेसिन","tuyền":"टुयेन","suối":"धारा","suối nước nóng":"हॉट स्प्रिंग्स","âu":"यूरोप","Âu Mỹ":"यूरोप और अमेरिका","Châu Âu":"यूरोप","☞ Đáp Án + Dịch":"☞ उत्तर + अनुवाद","Ôn chữ Hán bài này bằng Kanji SRS":"कांजी एसआरएस का उपयोग करके इस पाठ के लिए चीनी अक्षरों की समीक्षा करें","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"सही पाठ खोलें · रुक-रुक कर समीक्षा, स्व-लेखन और बहुविकल्पीय परीक्षणों की अनुसूची के अनुसार अध्ययन करें"},"thMap":{"Hán Tự":"ฮั่นตู่","Luyện Tập":"ฝึกฝน","vịnh Tokyo":"อ่าวโตเกียว","cốc":"กระจก","thung lũng":"หุบเขา","châu":"เอเชีย","Đảo Kyushu":"เกาะคิวชู","Đảo Honshu":"เกาะฮอนชู","lục":"สีเขียว","đất liền":"แผ่นดินใหญ่","hạ cánh":"ลงจอด","lục địa Châu Phi":"ทวีปแอฟริกา","hải":"ทะเล","hải ngoại, nước ngoài":"ต่างประเทศต่างประเทศ","hải dương":"มหาสมุทร","tắm biển":"การว่ายน้ำ","ngạn":"ธนาคาร","bờ":"ขอบ","bờ biển":"ชายฝั่ง","phức":"ซับซ้อน","phức tạp":"ที่ซับซ้อน","số nhiều":"มากมาย","du lịch":"การท่องเที่ยว","khách du lịch":"นักท่องเที่ยว","người xem":"ผู้ชม","quan sát":"สังเกต","quan trắc, đo":"การตรวจสอบการวัด","sơn":"สี","núi lửa":"ภูเขาไฟ","leo núi":"การปีนป่าย","rừng":"ป่า","vực":"พื้นที่","vùng":"ภูมิภาค","khu vực":"พื้นที่","lưu vực":"อ่าง","tuyền":"เตวียน","suối":"ลำธาร","suối nước nóng":"น้ำพุร้อน","âu":"ยุโรป","Âu Mỹ":"ยุโรปและอเมริกา","Châu Âu":"ยุโรป","☞ Đáp Án + Dịch":"☞ คำตอบ + การแปล","Ôn chữ Hán bài này bằng Kanji SRS":"ทบทวนอักขระภาษาจีนสำหรับบทเรียนนี้โดยใช้คันจิ SRS","Mở sẵn đúng bài · học theo lịch ôn ngắt quãng, tự viết, trắc nghiệm":"เปิดบทเรียนที่ถูกต้อง · เรียนตามตารางทบทวนเป็นระยะๆ การเขียนด้วยตนเอง และแบบทดสอบปรนัย"}}</script>
+<script src="minna-ux.js" charset="UTF-8"></script>
+<script src="marugoto-extra.js"></script>
+<link rel="stylesheet" href="style.css">
